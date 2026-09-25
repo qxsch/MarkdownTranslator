@@ -1,0 +1,36 @@
+{
+  "$comment": "Target languages. 'defaultTargets' is used when a request does not name languages. Add entries (e.g. zh-Hans, ja) to extend. 'translator' is the Azure Translator code used for the NMT fallback.",
+  "defaultTargets": ["bg", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "ga", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "sk", "sl", "sv"],
+  "languages": {
+    "bg": { "name": "Bulgarian", "translator": "bg", "formal": "Address the reader with the polite plural (Вие forms).", "informal": "Address the reader with ти forms.", "style": "Use „…“ quotation marks and a decimal comma." },
+    "cs": { "name": "Czech", "translator": "cs", "formal": "Use vykání (vy forms).", "informal": "Use tykání (ty forms).", "style": "Use „…“ quotation marks and a decimal comma." },
+    "da": { "name": "Danish", "translator": "da", "formal": "Use 'du'; it is the standard professional form in Danish ('De' is archaic).", "informal": "Use 'du'.", "style": "Use a decimal comma." },
+    "de": { "name": "German", "translator": "de", "formal": "Address the reader with 'Sie'.", "informal": "Address the reader with 'du' (lowercase).", "style": "Use „…“ quotation marks and a decimal comma. Hyphenate compounds with product names or English terms (e.g. 'Azure-Ressource')." },
+    "el": { "name": "Greek", "translator": "el", "formal": "Use the polite plural (εσείς forms).", "informal": "Use εσύ forms.", "style": "Use «…» quotation marks, a decimal comma and ';' as the question mark." },
+    "en": { "name": "English (British spelling)", "translator": "en", "formal": "Use a neutral, professional register.", "informal": "Use a friendly, conversational register.", "style": "Use British spelling (colour, organise)." },
+    "es": { "name": "Spanish (Spain)", "translator": "es", "formal": "Address the reader with 'usted'.", "informal": "Address the reader with 'tú'.", "style": "Use opening ¿ and ¡, «…» or \"…\" quotation marks and a decimal comma." },
+    "et": { "name": "Estonian", "translator": "et", "formal": "Use 'teie' forms.", "informal": "Use 'sina' forms.", "style": "Use „…“ quotation marks and a decimal comma." },
+    "fi": { "name": "Finnish", "translator": "fi", "formal": "Prefer neutral passive or imperative constructions; avoid overly familiar tone.", "informal": "Use sinä forms.", "style": "Use ”…” quotation marks and a decimal comma." },
+    "fr": { "name": "French (France)", "translator": "fr", "formal": "Address the reader with 'vous'.", "informal": "Address the reader with 'tu'.", "style": "Use « … » quotation marks, a non-breaking space before : ; ! ? and a decimal comma." },
+    "ga": { "name": "Irish", "translator": "ga", "formal": "Use standard Irish (An Caighdeán Oifigiúil) in a professional register; address one reader with 'tú'.", "informal": "Use standard Irish in a friendly register; address one reader with 'tú'.", "style": "Keep established English technical terms only where no accepted Irish term exists." },
+    "hr": { "name": "Croatian", "translator": "hr", "formal": "Use the polite 'Vi' forms.", "informal": "Use 'ti' forms.", "style": "Use „…“ quotation marks and a decimal comma." },
+    "hu": { "name": "Hungarian", "translator": "hu", "formal": "Use 'Ön' forms.", "informal": "Use 'te' forms.", "style": "Use „…” quotation marks and a decimal comma." },
+    "it": { "name": "Italian", "translator": "it", "formal": "Address the reader with 'Lei'.", "informal": "Address the reader with 'tu'.", "style": "Use «…» or \"…\" quotation marks and a decimal comma." },
+    "lt": { "name": "Lithuanian", "translator": "lt", "formal": "Use 'jūs' forms.", "informal": "Use 'tu' forms.", "style": "Use „…“ quotation marks and a decimal comma." },
+    "lv": { "name": "Latvian", "translator": "lv", "formal": "Use 'jūs' forms.", "informal": "Use 'tu' forms.", "style": "Use a decimal comma." },
+    "mt": { "name": "Maltese", "translator": "mt", "formal": "Use a neutral, professional register.", "informal": "Use a friendly register.", "style": "Use correct Maltese orthography (ċ, ġ, ħ, ż, għ). Prefer established Maltese terms; keep English technical loanwords only where they are standard." },
+    "nl": { "name": "Dutch (Netherlands)", "translator": "nl", "formal": "Address the reader with 'u'.", "informal": "Address the reader with 'je/jij'.", "style": "Use a decimal comma." },
+    "pl": { "name": "Polish", "translator": "pl", "formal": "Avoid 'ty'; use impersonal constructions or polite forms.", "informal": "Use 'ty' forms.", "style": "Use „…” quotation marks and a decimal comma." },
+    "pt": { "name": "Portuguese (Portugal)", "translator": "pt-pt", "formal": "Use formal European Portuguese, third-person address; avoid 'tu'.", "informal": "Use 'tu' forms.", "style": "European Portuguese vocabulary and spelling, never Brazilian (ficheiro, ecrã, utilizador, transferir). Use «…» quotation marks and a decimal comma." },
+    "ro": { "name": "Romanian", "translator": "ro", "formal": "Use 'dumneavoastră' forms.", "informal": "Use 'tu' forms.", "style": "Use ș and ț with comma below (not cedilla), „…” quotation marks and a decimal comma." },
+    "sk": { "name": "Slovak", "translator": "sk", "formal": "Use vykanie (vy forms).", "informal": "Use tykanie (ty forms).", "style": "Use „…“ quotation marks and a decimal comma." },
+    "sl": { "name": "Slovenian", "translator": "sl", "formal": "Use 'vi' forms.", "informal": "Use 'ti' forms.", "style": "Use »…« or „…“ quotation marks and a decimal comma." },
+    "sv": { "name": "Swedish", "translator": "sv", "formal": "Use 'du'; it is the standard even in formal Swedish ('ni' as polite singular sounds dated).", "informal": "Use 'du'.", "style": "Use ”…” quotation marks, a decimal comma and a space as thousands separator." },
+
+    "nb": { "name": "Norwegian Bokmål", "translator": "nb", "formal": "Use 'du'; it is the standard professional form.", "informal": "Use 'du'.", "style": "Use «…» quotation marks and a decimal comma." },
+    "uk": { "name": "Ukrainian", "translator": "uk", "formal": "Use 'ви' forms.", "informal": "Use 'ти' forms.", "style": "Use «…» quotation marks and a decimal comma." },
+    "zh-Hans": { "name": "Chinese (Simplified)", "translator": "zh-Hans", "formal": "Use a neutral, professional register (您 where direct address is needed).", "informal": "Use 你 for direct address.", "style": "Use full-width Chinese punctuation; keep a space between Chinese and Latin text only where it aids readability.", "wrap": "none", "lengthRatio": [0.15, 1.6] },
+    "ja": { "name": "Japanese", "translator": "ja", "formal": "Use です/ます style.", "informal": "Use plain form (だ/である) in a friendly tone.", "style": "Use Japanese punctuation (、。「」).", "wrap": "none", "lengthRatio": [0.15, 1.6] },
+    "ko": { "name": "Korean", "translator": "ko", "formal": "Use 합니다 style.", "informal": "Use 해요 style.", "style": "Use standard Korean spacing.", "lengthRatio": [0.2, 1.8] }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$comment": "doNotTranslate: exact terms that are always protected. terms: preferred translations per language, given to the model as guidance.",
+  "doNotTranslate": [
+    "Azure", "Microsoft", "Microsoft Foundry", "Azure AI Foundry", "Azure OpenAI", "Azure Translator", "Azure Container Apps", "Azure Container Registry",
+    "Azure Kubernetes Service", "AKS", "Azure Functions", "Azure App Service", "Azure Key Vault", "Azure Monitor", "Log Analytics", "Application Insights",
+    "Microsoft Entra ID", "Entra ID", "GitHub", "GitHub Actions", "GitHub Copilot", "Visual Studio Code", "VS Code", "Visual Studio", "PowerShell", "Bicep",
+    "Terraform", "Docker", "Kubernetes", "Node.js", "npm", "TypeScript", "JavaScript", "Python", ".NET", "C#", "Markdown", "JSON", "YAML", "REST", "OAuth",
+    "OpenAI", "GPT", "Windows", "Linux", "macOS"
+  ],
+  "terms": {
+    "resource group": { "de": "Ressourcengruppe", "fr": "groupe de ressources", "es": "grupo de recursos", "it": "gruppo di risorse", "nl": "resourcegroep", "pt": "grupo de recursos", "sv": "resursgrupp", "pl": "grupa zasobów" },
+    "subscription": { "de": "Abonnement", "fr": "abonnement", "es": "suscripción", "it": "sottoscrizione", "nl": "abonnement", "pt": "subscrição", "sv": "prenumeration", "pl": "subskrypcja" },
+    "managed identity": { "de": "verwaltete Identität", "fr": "identité managée", "es": "identidad administrada", "it": "identità gestita", "nl": "beheerde identiteit", "pt": "identidade gerida", "sv": "hanterad identitet", "pl": "tożsamość zarządzana" }
+  }
+}
