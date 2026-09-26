@@ -10,7 +10,7 @@ using Contoso.Sync;
 /// <returns><c>true</c>, wenn der Upload erfolgreich war; andernfalls <c>false</c>.</returns>
 public static async Task<bool> UploadExportAsync(string path)
 {
-    // Ein Client pro Anwendung reicht aus
+    // Ein Client pro Anwendung genügt
     var client = new SyncClient(new Uri("https://sync.contoso.example"));
 
     /* Große Exporte werden automatisch in Blöcke

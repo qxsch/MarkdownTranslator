@@ -15,7 +15,7 @@
 |---|---|---|
 | Upload-Limit | Keine, Fest, Adaptiv | Adaptiv |
 | Download-Limit | Keine, Fest | Keine |
-| Proxy | Kein, System, Manuell | System |
+| Proxy | Kein Proxy, System, Manuell | System |
 | Getaktete Netzwerke | Anhalten, Fortsetzen | Anhalten |
 
 ## <a id="files"></a>Dateien
@@ -23,13 +23,13 @@
 | Einstellung | Werte | Standard |
 |---|---|---|
 | Dateien bei Bedarf | Ein, Aus | Ein |
-| Speicherplatz freigeben | Nie, Nach 30 Tagen, Nach 60 Tagen | Nie |
+| Speicherplatz freigeben | Nie, nach 30 Tagen, nach 60 Tagen | Nie |
 | Konflikte | Beide behalten, Neueste behalten, Nachfragen | Beide behalten |
 | Ausgeblendete Dateien | Synchronisieren, Überspringen | Überspringen |
 
 ## <a id="privacy"></a>Datenschutz
 
-| Einstellung | Werte | Standard |
+| Einstellung | Werte | Standardwert |
 |---|---|---|
 | Diagnosedaten | Erforderlich, Optional | Erforderlich |
 | Absturzberichte | Senden, Nachfragen, Nie | Nachfragen |

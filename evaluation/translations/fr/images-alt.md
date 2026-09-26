@@ -12,6 +12,6 @@ Image de type référence : ![Diagramme du flux de rétention][retention-diagra
 
 Image incorporée dans une phrase : sélectionnez l’![icône d’engrenage](images/gear.svg) pour ouvrir les paramètres.
 
-![Graphique : chargements par heure, pic à 14:00](charts/uploads_per_hour.jpeg)
+![Graphique : téléversements par heure, pic à 14 h 00](charts/uploads_per_hour.jpeg)
 
 [retention-diagram]: diagrams/retention-flow.drawio.png "Flux de rétention"

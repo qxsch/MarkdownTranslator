@@ -1,8 +1,8 @@
 ---
 title: "Gelöschte Dateien wiederherstellen"
 summary: |
-  Gelöschte Dateien bleiben 93 Tage lang im Papierkorb.
-  Danach kann nur ein Administrator sie wiederherstellen.
+  Gelöschte Dateien verbleiben 93 Tage lang im Papierkorb.
+  Danach können nur Administratoren sie wiederherstellen.
 description: >
   In diesem Artikel wird erläutert, wie Sie gelöschte Dateien aus dem
   Papierkorb wiederherstellen und wie Sie eine frühere Version einer
@@ -25,7 +25,7 @@ related_ids: [1042, 1043]
 
 ## <a id="recycle-bin"></a>Papierkorb
 
-Öffnen Sie den Papierkorb in der Web-App, wählen Sie die Dateien aus, und wählen Sie **Wiederherstellen**.
+Öffnen Sie den Papierkorb in der Web-App, wählen Sie die Dateien aus und wählen Sie **Wiederherstellen** aus.
 
 ## <a id="version-history"></a>Versionsverlauf
 

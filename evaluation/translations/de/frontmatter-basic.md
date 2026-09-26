@@ -17,9 +17,9 @@ Klicken Sie mit der rechten Maustaste auf den Ordner, und wählen Sie **Freigebe
 ## <a id="permissions"></a>Berechtigungen
 
 - **Kann anzeigen**: Personen können Dateien öffnen und herunterladen.
-- **Kann bearbeiten**: Personen können Dateien außerdem ändern, hinzufügen und löschen.
-- **Besitzer**: Personen können außerdem die Freigabe verwalten.
+- **Kann bearbeiten**: Personen können Dateien auch ändern, hinzufügen und löschen.
+- **Besitzer**: Personen können auch die Freigabe verwalten.
 
 ## <a id="external-users"></a>Externe Benutzer
 
-Externe Benutzer erhalten eine E-Mail mit einem Link. Sie müssen ihre E-Mail-Adresse mit einem Einmalcode verifizieren.
+Externe Benutzer erhalten eine E-Mail mit einem Link. Sie müssen ihre E-Mail-Adresse mit einem Einmalcode überprüfen.

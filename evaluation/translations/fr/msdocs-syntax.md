@@ -20,7 +20,7 @@ ms.service: contoso-sync
 
 1. Connectez-vous au portail.
 2. Sélectionnez **Stockage** > **Connecter**.
-3. Entrez le nom du compte, puis sélectionnez **Enregistrer**.
+3. Entrez le nom du compte et sélectionnez **Enregistrer**.
 
 ::: zone-end
 

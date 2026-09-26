@@ -6,14 +6,14 @@ Wählen Sie **Abgleichen** aus, um Datensätze mit derselben E-Mail-Adresse zu f
 
 ## <a id="scale"></a>Skalieren
 
-Verwenden Sie **Skalieren**, um die Anzahl der Worker zu ändern. Mit einer höheren Skalierung werden mehr Datensätze gleichzeitig verarbeitet.
+Verwenden Sie **Skalieren**, um die Anzahl der Worker zu ändern. Bei einer höheren Skalierung werden mehr Datensätze gleichzeitig verarbeitet.
 
 ## <a id="table"></a>Tabelle
 
-- **Fixieren**: Hält die erste Spalte beim Scrollen sichtbar.
+- **Einfrieren**: Sorgt dafür, dass die erste Spalte beim Scrollen sichtbar bleibt.
 - **Löschen**: Entfernt die Tabelle und alle darin enthaltenen Datensätze.
-- **Sortieren**: Ordnet die Zeilen nach der ausgewählten Spalte.
-- **Filter**: Zeigt nur Zeilen an, die eine Bedingung erfüllen.
+- **Sortieren**: Sortiert die Zeilen nach der ausgewählten Spalte.
+- **Filtern**: Zeigt nur Zeilen an, die eine Bedingung erfüllen.
 
 ## <a id="record"></a>Aufzeichnen
 
@@ -33,4 +33,4 @@ Wenn ein Datensatz nicht verarbeitet werden kann, wird er geparkt. Geparkte Date
 
 ## <a id="post"></a>Buchen
 
-Mit **Buchen** wird der Datensatz in das Hauptbuch gebucht. Sie können eine Buchung nicht rückgängig machen, aber Sie können eine Stornobuchung buchen.
+**Buchen** sendet den Datensatz an das Hauptbuch. Sie können eine Buchung nicht rückgängig machen, aber Sie können eine Stornobuchung buchen.

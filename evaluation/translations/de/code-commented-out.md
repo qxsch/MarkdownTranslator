@@ -1,12 +1,12 @@
 # <a id="debugging-notes"></a>Debugging-Hinweise
 
-Einige Kommentare enthalten auskommentierten Code. Er muss genau so bleiben, wie er ist.
+Einige Kommentare enthalten Code, der deaktiviert ist. Er muss exakt unverändert bleiben.
 
 ```python
 def sync(folder):
     # print(folder.files)
     # folder.refresh(force=True)
-    # Nur aktualisieren, wenn der Ordner seit dem letzten Lauf geändert wurde
+    # Nur aktualisieren, wenn sich der Ordner seit der letzten Ausführung geändert hat
     if folder.changed:
         folder.refresh()
     # return None
@@ -33,7 +33,7 @@ ctsync status
 ```csharp
 // var client = new SyncClient(uri);
 // client.Dispose();
-// Gemeinsam genutzten Client wiederverwenden, statt einen neuen zu erstellen
+// Gemeinsam genutzten Client wiederverwenden, anstatt einen neuen zu erstellen
 var client = SyncClientFactory.Shared;
 ```
 

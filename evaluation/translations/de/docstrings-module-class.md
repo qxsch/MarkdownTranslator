@@ -10,16 +10,16 @@ import sqlite3
 
 
 class BlockCache:
-    """Eine persistente Zuordnung von Block-Hashwerten zu Uploadstatus."""
+    """Eine persistente Zuordnung von Block-Hashwerten zum Uploadstatus."""
 
     def __init__(self, path):
         """Öffnet oder erstellt die Cache-Datenbank unter ``path``."""
         self._db = sqlite3.connect(path)
 
     def seen(self, digest):
-        r"""Gibt True zurück, wenn der Block mit diesem Digest zuvor hochgeladen wurde.
+        r"""Gibt True zurück, wenn der Block mit diesem Digest bereits zuvor hochgeladen wurde.
 
-        Der Digest ist eine Hexadezimalzeichenfolge wie ``a3f\x00``; Raw-String-Literale behalten den Backslash bei.
+        Der Digest ist eine Hexadezimalzeichenfolge wie ``a3f\x00``; Raw-Strings behalten den Backslash bei.
         """
         row = self._db.execute("SELECT 1 FROM blocks WHERE digest = ?", (digest,)).fetchone()
         return row is not None

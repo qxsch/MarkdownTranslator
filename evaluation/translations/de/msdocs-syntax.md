@@ -1,6 +1,6 @@
 ---
 title: Speicherkonto verbinden
-description: Hier erfahren Sie, wie Sie ein vorhandenes Speicherkonto mit Contoso Sync verbinden.
+description: Erfahren Sie, wie Sie ein vorhandenes Speicherkonto mit Contoso Sync verbinden.
 ms.date: 08/14/2026
 ms.topic: how-to
 author: contoso-docs

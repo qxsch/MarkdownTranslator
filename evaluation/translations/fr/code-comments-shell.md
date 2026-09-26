@@ -1,21 +1,21 @@
 # <a id="scripts-for-administrators"></a>Scripts pour les administrateurs
 
-Un script Bash qui vérifie chaque appareil :
+Un script Bash qui vérifie chaque appareil :
 
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
 
-# S’arrêter au premier appareil en échec
+# Arrêter au premier appareil qui échoue
 for host in $(cat hosts.txt); do
   ssh "$host" ctsync status --json > "status-$host.json"  # un fichier par appareil
 done
 
-# Afficher un résumé
+# Afficher un récapitulatif
 jq -s 'map(.state) | group_by(.) | map({state: .[0], count: length})' status-*.json
 ```
 
-La même vérification dans PowerShell :
+La même vérification dans PowerShell :
 
 ```powershell
 <#
@@ -32,7 +32,7 @@ $results = foreach ($h in Get-Content $HostFile) {
 $results | ConvertTo-Json | Set-Content summary.json
 ```
 
-Un fichier de commandes Windows :
+Un fichier de commandes Windows :
 
 ```bat
 @echo off

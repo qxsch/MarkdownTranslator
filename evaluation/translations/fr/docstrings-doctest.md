@@ -12,7 +12,7 @@ def normalize(path):
     >>> normalize("")
     ''
 
-    Utilisez-la avant de comparer deux chemins::
+    Utilisez cette fonction avant de comparer deux chemins ::
 
         if normalize(a) == normalize(b):
             print("same file")
@@ -22,6 +22,6 @@ def normalize(path):
 
 
 def is_hidden(name):
-    '''Vérifie si un nom de fichier est masqué sur la plateforme actuelle.'''
+    '''Vérifie si un nom de fichier est caché sur la plateforme actuelle.'''
     return name.startswith(".")
 ```

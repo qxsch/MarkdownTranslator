@@ -1,6 +1,6 @@
 # <a id="ctsync-command-reference"></a>`ctsync`-Befehlsreferenz
 
-`ctsync` ist das Befehlszeilen-Begleittool von Contoso Sync.
+`ctsync` ist das Befehlszeilen-Gegenstück zu Contoso Sync.
 
 ## <a id="synopsis"></a>Syntax
 
@@ -16,12 +16,12 @@ ctsync <command> [--profile <name>] [--verbose]
 | `ctsync pause --minutes 30` | Hält die Synchronisierung für die angegebene Zeit an |
 | `ctsync resume` | Setzt eine angehaltene Synchronisierung fort |
 | `ctsync reset --force` | Löscht den lokalen Cache und lädt alles erneut herunter |
-| `ctsync logs --tail` | Streamt die Protokolldatei `ctsync.log` |
+| `ctsync logs --tail` | Gibt die Protokolldatei `ctsync.log` fortlaufend aus |
 
 ## <a id="global-options"></a>Globale Optionen
 
 - `--profile <name>`: Verwendet das benannte Profil aus `~/.ctsync/config.toml`.
-- `--verbose`: Gibt Debug-Ausgabe aus. Kombinieren Sie diese Option mit `--no-color`, wenn Sie die Ausgabe in eine Datei umleiten.
+- `--verbose`: Gibt Debug-Ausgaben aus. Kombinieren Sie die Option mit `--no-color`, wenn Sie die Ausgabe in eine Datei umleiten.
 - `--json`: Gibt maschinenlesbare Ausgabe aus.
 
 ## Exit-Codes
@@ -35,13 +35,13 @@ ctsync <command> [--profile <name>] [--verbose]
 
 ## <a id="examples"></a>Beispiele
 
-Halten Sie die Synchronisierung während einer Präsentation an:
+Synchronisierung während einer Präsentation anhalten:
 
 ```bash
 ctsync pause --minutes 60
 ```
 
-Überprüfen Sie den Status eines einzelnen Ordners, und speichern Sie ihn als JSON:
+Den Status eines einzelnen Ordners prüfen und als JSON speichern:
 
 ```bash
 ctsync status --json > status.json

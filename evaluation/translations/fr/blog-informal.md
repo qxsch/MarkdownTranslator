@@ -1,16 +1,16 @@
-# <a id="why-we-rewrote-our-sync-engine-and-what-went-wrong"></a>Pourquoi nous avons réécrit notre moteur de synchronisation (et ce qui s’est mal passé)
+# <a id="why-we-rewrote-our-sync-engine-and-what-went-wrong"></a>Pourquoi on a réécrit notre moteur de synchronisation (et ce qui a mal tourné)
 
-Soyons honnêtes : l’ancien moteur était une vraie galère. Il fonctionnait, plus ou moins, mais chaque nouvelle fonctionnalité était un calvaire à ajouter. Alors, au printemps dernier, nous avons pris notre courage à deux mains et sommes repartis de zéro.
+Soyons honnêtes : l’ancien moteur était une vraie galère. Il fonctionnait, plus ou moins, mais chaque nouvelle fonctionnalité relevait du parcours du combattant. Alors, au printemps dernier, on a pris notre courage à deux mains et on est repartis de zéro.
 
 ## <a id="the-first-attempt-was-a-flop"></a>La première tentative a fait un flop
 
-Nous pensions boucler ça en trois mois. Spoiler : ça n’a pas été le cas. Notre premier prototype était ultrarapide sur nos ordinateurs portables, puis s’est effondré dès que nous lui avons donné de vraies données client à traiter. Des dossiers avec 200 000 fichiers ? C’était fini.
+On pensait boucler ça en trois mois. Spoiler : ça n’a pas été le cas. Notre premier prototype était ultra-rapide sur nos ordinateurs portables et s’est effondré dès qu’on lui a soumis de vraies données client. Des dossiers avec 200 000 fichiers ? Partie terminée.
 
 ## <a id="what-finally-clicked"></a>Le déclic
 
-Le déclic est venu quand nous avons arrêté de comparer les fichiers un par un et commencé à comparer les hachages de dossiers entiers. Si le hachage correspond, nous ignorons le dossier. Simple, non ? Il nous a fallu beaucoup trop de temps pour nous en rendre compte.
+La percée est arrivée quand on a arrêté de comparer les fichiers un par un pour commencer à comparer les hachages de dossiers entiers. Si le hachage correspond, on ignore le dossier. Simple, non ? Il nous a fallu beaucoup trop longtemps pour le voir.
 
-## <a id="numbers-because-you-asked"></a>Les chiffres, puisque tu les as demandés
+## <a id="numbers-because-you-asked"></a>Des chiffres, puisque tu l’as demandé
 
 - Analyse initiale de 1 million de fichiers : 41 minutes avant, 6 minutes maintenant
 - Utilisation de la mémoire : passée de 1,2 Go à 300 Mo
@@ -18,4 +18,4 @@ Le déclic est venu quand nous avons arrêté de comparer les fichiers un par un
 
 ## <a id="whats-next"></a>La suite
 
-Nous n’avons pas encore terminé. La prochaine étape, c’est la synchronisation pair à pair sur le réseau local, pour que tes fichiers ne fassent pas l’aller-retour par le cloud quand ton collègue est assis juste à côté de toi. Reste à l’écoute, et si tu tombes sur un bug, fais-nous signe !
+On n’a pas encore terminé. La prochaine étape, c’est la synchronisation pair à pair sur le réseau local, pour que tes fichiers ne fassent pas un aller-retour par le cloud quand ton collègue est assis juste à côté de toi. Reste à l’écoute, et si tu tombes sur un bug, fais-nous signe !

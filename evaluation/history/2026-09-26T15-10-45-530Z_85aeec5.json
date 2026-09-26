@@ -1,0 +1,135 @@
+{
+  "createdAt": "2026-09-26T15:10:45.530Z",
+  "commit": "85aeec5",
+  "langs": [
+    "de",
+    "fr"
+  ],
+  "documents": 68,
+  "judges": [
+    "translate-alt",
+    "translate",
+    "copilot:claude-opus-5.5",
+    "copilot:gpt-6-sol"
+  ],
+  "scorecard": {
+    "documents": 136,
+    "keepPass": 1,
+    "translatePass": 1,
+    "cleanDocuments": 1,
+    "structureBroken": 0,
+    "codeChanged": 0,
+    "linksBroken": 0,
+    "errors": 0,
+    "reverted": 0,
+    "keptSource": 0,
+    "nmtFallbacks": 0,
+    "englishSegments": 2,
+    "tokensMean": 5923.242647058823,
+    "secondsMedian": 130.86,
+    "secondsP90": 197.3155
+  },
+  "features": {
+    "review": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 190,
+      "losses": 1,
+      "pAdj": 8.564462114248223e-55,
+      "reduction": 27.603191584202552,
+      "problemsOn": 2,
+      "problemsOff": 28
+    },
+    "structuralContext": {
+      "recommendation": "off",
+      "quality": "no significant difference",
+      "wins": 126,
+      "losses": 97,
+      "pAdj": 0.12109423870942443,
+      "reduction": 0.40676577314760626,
+      "problemsOn": 2,
+      "problemsOff": 2
+    },
+    "nmtFallback": {
+      "recommendation": "not exercised",
+      "quality": "not judged",
+      "wins": 0,
+      "losses": 0,
+      "pAdj": null,
+      "reduction": null,
+      "problemsOn": 2,
+      "problemsOff": 2
+    },
+    "preserveAnchors": {
+      "recommendation": "on",
+      "quality": "not judged",
+      "wins": 0,
+      "losses": 0,
+      "pAdj": null,
+      "reduction": null,
+      "problemsOn": 2,
+      "problemsOff": 56
+    },
+    "codeComments": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 57,
+      "losses": 5,
+      "pAdj": 1.5327628489353292e-11,
+      "reduction": 30.59344462540717,
+      "problemsOn": 2,
+      "problemsOff": 336
+    },
+    "docstrings": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 12,
+      "losses": 1,
+      "pAdj": 0.010253906250000003,
+      "reduction": 25.11415525114155,
+      "problemsOn": 2,
+      "problemsOff": 150
+    },
+    "frontMatter": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 17,
+      "losses": 0,
+      "pAdj": 0.00006103515625000001,
+      "reduction": 44.0552016985138,
+      "problemsOn": 2,
+      "problemsOff": 72
+    },
+    "mdx (.md files)": {
+      "recommendation": "off",
+      "quality": "worse",
+      "wins": 2,
+      "losses": 144,
+      "pAdj": 1.4437185714368517e-39,
+      "reduction": -44.66649694501018,
+      "problemsOn": 304,
+      "problemsOff": 2
+    },
+    "mathSingleDollar": {
+      "recommendation": "not exercised",
+      "quality": "not judged",
+      "wins": 0,
+      "losses": 0,
+      "pAdj": null,
+      "reduction": null,
+      "problemsOn": 2,
+      "problemsOff": 2
+    },
+    "mdx (.mdx files)": {
+      "recommendation": "on",
+      "quality": "no significant difference",
+      "wins": 6,
+      "losses": 3,
+      "pAdj": 0.5078125,
+      "reduction": 8.231707317073171,
+      "problemsOn": 0,
+      "problemsOff": 16
+    }
+  },
+  "defects": []
+}

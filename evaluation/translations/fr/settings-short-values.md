@@ -7,7 +7,7 @@
 | Démarrer avec Windows | Activé, Désactivé | Activé |
 | Langue | Automatique, Anglais, Allemand, Français | Automatique |
 | Thème | Clair, Sombre, Système | Système |
-| Mises à jour | Automatique, Notifier, Jamais | Automatique |
+| Mises à jour | Automatique, M’avertir, Jamais | Automatique |
 
 ## <a id="network"></a>Réseau
 
@@ -25,11 +25,11 @@
 | Fichiers à la demande | Activé, Désactivé | Activé |
 | Libérer de l’espace | Jamais, Après 30 jours, Après 60 jours | Jamais |
 | Conflits | Conserver les deux, Conserver le plus récent, Demander | Conserver les deux |
-| Fichiers cachés | Synchroniser, Ignorer | Ignorer |
+| Fichiers masqués | Synchroniser, Ignorer | Ignorer |
 
 ## <a id="privacy"></a>Confidentialité
 
-| Paramètre | Valeurs | Valeur par défaut |
+| Paramètre | Valeurs | Par défaut |
 |---|---|---|
 | Données de diagnostic | Obligatoires, Facultatives | Obligatoires |
 | Rapports d’incident | Envoyer, Demander, Jamais | Demander |

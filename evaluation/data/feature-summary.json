@@ -1,7 +1,7 @@
 {
   "meta": {
-    "createdAt": "2026-09-26T14:08:46.016Z",
-    "commit": "d72dbf7+dirty",
+    "createdAt": "2026-09-26T15:10:45.530Z",
+    "commit": "85aeec5",
     "langs": [
       "de",
       "fr"
@@ -126,7 +126,7 @@
       "reviewReasoning": "high",
       "defaults": {
         "review": true,
-        "structuralContext": true,
+        "structuralContext": false,
         "nmtFallback": true,
         "preserveAnchors": true,
         "codeComments": true,
@@ -139,9 +139,9 @@
   },
   "scorecard": {
     "documents": 136,
-    "keepPass": 0.9827213822894169,
-    "translatePass": 0.9970845481049563,
-    "cleanDocuments": 0.9044117647058824,
+    "keepPass": 1,
+    "translatePass": 1,
+    "cleanDocuments": 1,
     "structureBroken": 0,
     "codeChanged": 0,
     "linksBroken": 0,
@@ -149,10 +149,10 @@
     "reverted": 0,
     "keptSource": 0,
     "nmtFallbacks": 0,
-    "englishSegments": 4,
-    "tokensMean": 6698.580882352941,
-    "secondsMedian": 134.0245,
-    "secondsP90": 225.16899999999998
+    "englishSegments": 2,
+    "tokensMean": 5923.242647058823,
+    "secondsMedian": 130.86,
+    "secondsP90": 197.3155
   },
   "byCategory": [
     {
@@ -165,9 +165,9 @@
     {
       "category": "prose and UI",
       "documents": 28,
-      "keepPass": 0.9456521739130435,
+      "keepPass": 1,
       "translatePass": 1,
-      "defects": 5
+      "defects": 0
     },
     {
       "category": "links and anchors",
@@ -180,22 +180,22 @@
       "category": "code",
       "documents": 16,
       "keepPass": 1,
-      "translatePass": 0.9761904761904762,
-      "defects": 2
+      "translatePass": 1,
+      "defects": 0
     },
     {
       "category": "syntax edge cases",
       "documents": 30,
-      "keepPass": 0.9557522123893806,
+      "keepPass": 1,
       "translatePass": 1,
-      "defects": 10
+      "defects": 0
     },
     {
       "category": "docstrings",
       "documents": 10,
-      "keepPass": 0.9893617021276596,
+      "keepPass": 1,
       "translatePass": 1,
-      "defects": 1
+      "defects": 0
     },
     {
       "category": "front matter",
@@ -239,145 +239,144 @@
       "feature": "review",
       "shippedDefault": "on",
       "documents": 136,
-      "affected": 99,
-      "items": 211,
+      "affected": 92,
+      "items": 192,
       "panel": {
-        "wins": 203,
-        "losses": 7,
+        "wins": 190,
+        "losses": 1,
         "ties": 1,
-        "p": 4.064761633905571e-51,
-        "pAdj": 2.8453331437338998e-50,
-        "winRate": 0.9666666666666667,
+        "p": 1.2234945877497462e-55,
+        "pAdj": 8.564462114248223e-55,
+        "winRate": 0.9947643979057592,
         "ci": [
-          0.9328047959061996,
-          0.9837614849297089
+          0.9709435100708343,
+          0.9990752128302298
         ]
       },
       "independent": {
-        "wins": 183,
-        "losses": 7,
-        "ties": 21,
-        "p": 2.1006962057688965e-45,
+        "wins": 168,
+        "losses": 1,
+        "ties": 22,
+        "p": 4.5437000071567174e-49,
         "judges": [
           "copilot:claude-opus-5.5"
         ]
       },
       "mqm": {
-        "on": 2.7078454332552693,
-        "off": 29.00468384074941,
+        "on": 1.3974324685744852,
+        "off": 29.000624052777038,
         "reduction": {
-          "estimate": 26.296838407494143,
-          "lo": 22.272639202860354,
-          "hi": 31.170280132361437
+          "estimate": 27.603191584202552,
+          "lo": 23.406618740544246,
+          "hi": 32.16380527791752
         }
       },
       "byJudge": {
         "translate-alt": {
-          "wins": 198,
-          "losses": 6,
-          "ties": 4,
+          "wins": 186,
+          "losses": 0,
+          "ties": 3,
           "inconsistent": 3,
-          "p": 7.453494699774396e-51
+          "p": 2.0391576462495274e-56
         },
         "translate": {
-          "wins": 196,
-          "losses": 6,
-          "ties": 7,
-          "inconsistent": 2,
-          "p": 2.8090582131195194e-50
+          "wins": 187,
+          "losses": 0,
+          "ties": 4,
+          "inconsistent": 1,
+          "p": 1.0195788231247618e-56
         },
         "copilot:claude-opus-5.5": {
-          "wins": 183,
-          "losses": 7,
-          "ties": 21,
+          "wins": 168,
+          "losses": 1,
+          "ties": 22,
           "inconsistent": 0,
-          "p": 2.1006962057688965e-45
+          "p": 4.5437000071567174e-49
         },
         "copilot:gpt-6-sol": {
-          "wins": 197,
-          "losses": 7,
-          "ties": 4,
-          "inconsistent": 3,
-          "p": 2.1195769778903834e-49
+          "wins": 183,
+          "losses": 2,
+          "ties": 6,
+          "inconsistent": 1,
+          "p": 7.017149292273891e-52
         }
       },
       "byLang": {
         "de": {
-          "wins": 95,
-          "losses": 5,
-          "items": 100,
-          "reduction": 27.586920529801322
+          "wins": 91,
+          "losses": 1,
+          "items": 92,
+          "reduction": 28.687572590011612
         },
         "fr": {
-          "wins": 108,
-          "losses": 2,
-          "items": 111,
-          "reduction": 25.345809601301873
+          "wins": 99,
+          "losses": 0,
+          "items": 100,
+          "reduction": 26.677408692778048
         }
       },
       "categoriesOn": {
-        "terminology": 0.17271662763466042,
-        "fluency": 0.029274004683840747,
-        "style": 0.020491803278688523,
-        "punctuation": 0.0058548009367681494,
-        "untranslated": 0.6323185011709601,
-        "mistranslation": 0.22540983606557374,
-        "overtranslation": 0.5415690866510539,
-        "markup": 0.9718969555035128,
-        "locale": 0.08489461358313817,
-        "grammar": 0.014637002341920374,
-        "spelling": 0.008782201405152224
+        "terminology": 0.21396095212623695,
+        "style": 0.03343139876972453,
+        "mistranslation": 0.16381385397165016,
+        "fluency": 0.05683337790853169,
+        "markup": 0.44129446376036374,
+        "overtranslation": 0.2039315324953196,
+        "spelling": 0.0033431398769724523,
+        "locale": 0.1470981545867879,
+        "punctuation": 0.010029419630917358,
+        "untranslated": 0.11700989569403583,
+        "addition": 0.006686279753944905
       },
       "categoriesOff": {
-        "fluency": 0.5181498829039812,
-        "mistranslation": 0.825526932084309,
-        "terminology": 0.667447306791569,
-        "untranslated": 25.65573770491803,
-        "locale": 0.49473067915690866,
-        "spelling": 0.07611241217798595,
-        "style": 0.20491803278688522,
-        "grammar": 0.046838407494145196,
-        "punctuation": 0.0351288056206089,
-        "addition": 0.0029274004683840747,
-        "markup": 0.4742388758782201,
-        "omission": 0.0029274004683840747
+        "fluency": 0.3644022465899973,
+        "mistranslation": 0.8926183471516448,
+        "terminology": 0.5783631987162343,
+        "grammar": 0.2540786306499064,
+        "untranslated": 25.060176517785504,
+        "style": 0.22733351163412677,
+        "locale": 0.6184808772399037,
+        "omission": 0.016715699384862264,
+        "markup": 0.6218240171168762,
+        "spelling": 0.07354907729339395,
+        "punctuation": 0.08357849692431131,
+        "overtranslation": 0.17050013372559508
       },
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "off": {
-        "keepMissing": 9,
-        "translateLeft": 9,
+        "keepMissing": 0,
+        "translateLeft": 12,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 18,
+        "englishLeft": 16,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 402793
+        "tokens": 375568
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
-        "prose": 12,
+        "prose": 10,
         "attribute": 6
       },
-      "problemsOn": 22,
-      "problemsOff": 36,
+      "problemsOn": 2,
+      "problemsOff": 28,
       "quality": "better",
       "correctness": "better",
       "recommendation": "on",
@@ -386,156 +385,154 @@
     {
       "comparison": "structuralContext",
       "feature": "structuralContext",
-      "shippedDefault": "on",
+      "shippedDefault": "off",
       "documents": 136,
-      "affected": 127,
-      "items": 450,
+      "affected": 125,
+      "items": 428,
       "panel": {
-        "wins": 108,
-        "losses": 128,
-        "ties": 214,
-        "p": 0.21607809408138146,
-        "pAdj": 0.4321561881627629,
-        "winRate": 0.4576271186440678,
+        "wins": 126,
+        "losses": 97,
+        "ties": 205,
+        "p": 0.060547119354712214,
+        "pAdj": 0.12109423870942443,
+        "winRate": 0.5650224215246636,
         "ci": [
-          0.3952501904222967,
-          0.5213614399203962
+          0.4993968153201974,
+          0.628445696811616
         ]
       },
       "independent": {
-        "wins": 43,
-        "losses": 49,
-        "ties": 358,
-        "p": 0.6024122776961582,
+        "wins": 51,
+        "losses": 42,
+        "ties": 335,
+        "p": 0.4069243680461351,
         "judges": [
           "copilot:claude-opus-5.5"
         ]
       },
       "mqm": {
-        "on": 3.345650938032973,
-        "off": 2.748720864127345,
+        "on": 3.157555893714152,
+        "off": 3.564321666861758,
         "reduction": {
-          "estimate": -0.5969300739056281,
-          "lo": -1.1040474182943165,
-          "hi": -0.10643942400193572
+          "estimate": 0.40676577314760626,
+          "lo": -0.22601583677852213,
+          "hi": 0.9921488141777425
         }
       },
       "byJudge": {
         "translate-alt": {
-          "wins": 65,
-          "losses": 83,
-          "ties": 297,
-          "inconsistent": 5,
-          "p": 0.16207156803056988
+          "wins": 83,
+          "losses": 60,
+          "ties": 275,
+          "inconsistent": 10,
+          "p": 0.06543081048245035
         },
         "translate": {
-          "wins": 86,
-          "losses": 112,
-          "ties": 233,
-          "inconsistent": 19,
-          "p": 0.07535614736054158
+          "wins": 96,
+          "losses": 72,
+          "ties": 248,
+          "inconsistent": 12,
+          "p": 0.07566911610226254
         },
         "copilot:claude-opus-5.5": {
-          "wins": 43,
-          "losses": 49,
-          "ties": 357,
-          "inconsistent": 1,
-          "p": 0.6024122776961582
+          "wins": 51,
+          "losses": 42,
+          "ties": 332,
+          "inconsistent": 3,
+          "p": 0.4069243680461351
         },
         "copilot:gpt-6-sol": {
-          "wins": 52,
-          "losses": 71,
-          "ties": 319,
-          "inconsistent": 8,
-          "p": 0.10420386640532453
+          "wins": 63,
+          "losses": 63,
+          "ties": 297,
+          "inconsistent": 5,
+          "p": 1
         }
       },
       "byLang": {
         "de": {
-          "wins": 52,
-          "losses": 52,
-          "items": 232,
-          "reduction": -0.27975037658704544
+          "wins": 63,
+          "losses": 41,
+          "items": 231,
+          "reduction": 0.5815229317533465
         },
         "fr": {
-          "wins": 56,
-          "losses": 76,
-          "items": 218,
-          "reduction": -0.9522661523625844
+          "wins": 63,
+          "losses": 56,
+          "items": 197,
+          "reduction": 0.20697441043652787
         }
       },
       "categoriesOn": {
-        "terminology": 0.6154064809550881,
-        "mistranslation": 0.35247299602046617,
-        "fluency": 0.2828311540648095,
-        "grammar": 0.05969300739056282,
-        "style": 0.0923820352472996,
-        "locale": 0.2956225127913587,
-        "addition": 0.012791358726549176,
-        "punctuation": 0.04548038658328596,
-        "untranslated": 0.4633314383172257,
-        "omission": 0.01137009664582149,
-        "register": 0.11085844229675952,
-        "markup": 0.8456509380329732,
-        "spelling": 0.005685048322910745,
-        "overtranslation": 0.15207504263786242
+        "terminology": 0.34092239260213036,
+        "untranslated": 0.5574739552850286,
+        "fluency": 0.2648367084162472,
+        "mistranslation": 0.38042842092941587,
+        "spelling": 0.01609504857778298,
+        "locale": 0.28971087440009363,
+        "style": 0.09510710523235397,
+        "register": 0.021947793515158607,
+        "punctuation": 0.03072691092122205,
+        "markup": 0.9657029146669788,
+        "overtranslation": 0.16095048577782978,
+        "omission": 0.004389558703031721,
+        "grammar": 0.027800538452534235,
+        "addition": 0.0014631862343439071
       },
       "categoriesOff": {
-        "untranslated": 0.39084707220011367,
-        "terminology": 0.44769755542922113,
-        "fluency": 0.30272882319499717,
-        "style": 0.06679931779420124,
-        "punctuation": 0.051165434906196704,
-        "locale": 0.19897669130187606,
-        "addition": 0.01137009664582149,
-        "mistranslation": 0.24303581580443434,
-        "omission": 0.0014212620807276862,
-        "register": 0.02274019329164298,
-        "spelling": 0.017055144968732235,
-        "markup": 0.8399658897100625,
-        "grammar": 0.04832291074474133,
-        "overtranslation": 0.10659465605457646
+        "fluency": 0.32921690272737913,
+        "mistranslation": 0.38189160716375975,
+        "terminology": 0.8106051738265245,
+        "register": 0.02633735221819033,
+        "style": 0.0819384291232588,
+        "omission": 0.01024230364040735,
+        "spelling": 0.007315931171719536,
+        "locale": 0.23118342502633735,
+        "punctuation": 0.03657965585859768,
+        "grammar": 0.05267470443638066,
+        "markup": 1.072515509774084,
+        "untranslated": 0.4067657731476062,
+        "addition": 0.004389558703031721,
+        "overtranslation": 0.11266534004448085
       },
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 877160
       },
       "off": {
-        "keepMissing": 15,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 850561
+        "tokens": 805561
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
-        "comment": 2,
         "attribute": 2
       },
-      "problemsOn": 22,
-      "problemsOff": 21,
+      "problemsOn": 2,
+      "problemsOff": 2,
       "quality": "no significant difference",
-      "correctness": "worse",
+      "correctness": "same",
       "recommendation": "off",
-      "matchesDefault": false
+      "matchesDefault": true
     },
     {
       "comparison": "nmtFallback",
@@ -621,41 +618,39 @@
       "categoriesOn": {},
       "categoriesOff": {},
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "off": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
-        "comment": 2,
         "attribute": 2
       },
-      "problemsOn": 22,
-      "problemsOff": 22,
+      "problemsOn": 2,
+      "problemsOff": 2,
       "quality": "not judged",
       "correctness": "same",
       "recommendation": "not exercised",
@@ -745,41 +740,39 @@
       "categoriesOn": {},
       "categoriesOff": {},
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "off": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 54,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
-        "comment": 2,
         "attribute": 2
       },
-      "problemsOn": 22,
-      "problemsOff": 76,
+      "problemsOn": 2,
+      "problemsOff": 56,
       "quality": "not judged",
       "correctness": "better",
       "recommendation": "on",
@@ -790,115 +783,113 @@
       "feature": "codeComments",
       "shippedDefault": "on",
       "documents": 136,
-      "affected": 29,
-      "items": 72,
+      "affected": 30,
+      "items": 71,
       "panel": {
-        "wins": 56,
-        "losses": 12,
-        "ties": 4,
-        "p": 6.209495737562189e-8,
-        "pAdj": 3.104747868781094e-7,
-        "winRate": 0.8235294117647058,
+        "wins": 57,
+        "losses": 5,
+        "ties": 9,
+        "p": 3.0655256978706583e-12,
+        "pAdj": 1.5327628489353292e-11,
+        "winRate": 0.9193548387096774,
         "ci": [
-          0.7163933737056788,
-          0.8960651461491128
+          0.824712077925188,
+          0.9650621681441662
         ]
       },
       "independent": {
-        "wins": 55,
+        "wins": 57,
         "losses": 2,
-        "ties": 15,
-        "p": 2.295386103412507e-14,
+        "ties": 12,
+        "p": 6.144390551909873e-15,
         "judges": [
           "copilot:claude-opus-5.5"
         ]
       },
       "mqm": {
-        "on": 2.82719836400818,
-        "off": 32.944785276073624,
+        "on": 2.315757328990228,
+        "off": 32.909201954397396,
         "reduction": {
-          "estimate": 30.11758691206544,
-          "lo": 27.490712851405622,
-          "hi": 32.631691876810116
+          "estimate": 30.59344462540717,
+          "lo": 27.7625203332413,
+          "hi": 33.50354317678621
         }
       },
       "byJudge": {
         "translate-alt": {
-          "wins": 56,
-          "losses": 12,
-          "ties": 4,
+          "wins": 57,
+          "losses": 5,
+          "ties": 9,
           "inconsistent": 0,
-          "p": 6.209495737562189e-8
+          "p": 3.0655256978706583e-12
         },
         "translate": {
-          "wins": 58,
-          "losses": 10,
-          "ties": 4,
-          "inconsistent": 0,
-          "p": 2.3616271110460174e-9
+          "wins": 57,
+          "losses": 3,
+          "ties": 10,
+          "inconsistent": 1,
+          "p": 6.253851603243996e-14
         },
         "copilot:claude-opus-5.5": {
-          "wins": 55,
+          "wins": 57,
           "losses": 2,
-          "ties": 12,
-          "inconsistent": 3,
-          "p": 2.295386103412507e-14
+          "ties": 11,
+          "inconsistent": 1,
+          "p": 6.144390551909873e-15
         },
         "copilot:gpt-6-sol": {
           "wins": 56,
-          "losses": 12,
-          "ties": 4,
-          "inconsistent": 0,
-          "p": 6.209495737562189e-8
+          "losses": 5,
+          "ties": 9,
+          "inconsistent": 1,
+          "p": 5.645556938604903e-12
         }
       },
       "byLang": {
         "de": {
           "wins": 28,
-          "losses": 3,
+          "losses": 2,
           "items": 35,
-          "reduction": 31.362889983579638
+          "reduction": 31.15321923390383
         },
         "fr": {
-          "wins": 28,
-          "losses": 9,
-          "items": 37,
-          "reduction": 28.881418092909534
+          "wins": 29,
+          "losses": 3,
+          "items": 36,
+          "reduction": 30.034580960130185
         }
       },
       "categoriesOn": {
-        "overtranslation": 0.35787321063394684,
-        "markup": 1.7893660531697342,
-        "fluency": 0.03578732106339468,
-        "locale": 0.28118609406952966,
-        "terminology": 0.1278118609406953,
-        "punctuation": 0.010224948875255624,
-        "untranslated": 0.10224948875255624,
-        "mistranslation": 0.0408997955010225,
-        "register": 0.046012269938650305,
-        "grammar": 0.015337423312883436,
-        "style": 0.02044989775051125
+        "overtranslation": 0.40716612377850164,
+        "markup": 1.3131107491856677,
+        "grammar": 0.015268729641693813,
+        "terminology": 0.244299674267101,
+        "style": 0.030537459283387625,
+        "fluency": 0.06616449511400652,
+        "locale": 0.08143322475570033,
+        "untranslated": 0.050895765472312705,
+        "mistranslation": 0.10688110749185668
       },
       "categoriesOff": {
-        "untranslated": 32.90899795501023,
-        "terminology": 0.010224948875255624,
-        "fluency": 0.02556237218813906
+        "untranslated": 32.87866449511401,
+        "style": 0.010179153094462542,
+        "terminology": 0.020358306188925084
       },
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "off": {
-        "keepMissing": 15,
+        "keepMissing": 0,
         "translateLeft": 140,
         "structureBroken": 0,
         "codeChanged": 0,
@@ -908,10 +899,9 @@
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 812522
+        "tokens": 728884
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
@@ -919,8 +909,8 @@
         "docstring": 90,
         "attribute": 2
       },
-      "problemsOn": 22,
-      "problemsOff": 351,
+      "problemsOn": 2,
+      "problemsOff": 336,
       "quality": "better",
       "correctness": "better",
       "recommendation": "on",
@@ -934,130 +924,128 @@
       "affected": 12,
       "items": 14,
       "panel": {
-        "wins": 13,
+        "wins": 12,
         "losses": 1,
-        "ties": 0,
-        "p": 0.0018310546875000013,
-        "pAdj": 0.0054931640625000035,
-        "winRate": 0.9285714285714286,
+        "ties": 1,
+        "p": 0.003417968750000001,
+        "pAdj": 0.010253906250000003,
+        "winRate": 0.9230769230769231,
         "ci": [
-          0.6853073044604219,
-          0.9872781138877085
+          0.6668546607175265,
+          0.9862899336203037
         ]
       },
       "independent": {
-        "wins": 14,
+        "wins": 13,
         "losses": 0,
-        "ties": 0,
-        "p": 0.00012207031250000005,
+        "ties": 1,
+        "p": 0.00024414062500000016,
         "judges": [
           "copilot:claude-opus-5.5"
         ]
       },
       "mqm": {
-        "on": 1.3926940639269407,
-        "off": 28.698630136986303,
+        "on": 1.3356164383561644,
+        "off": 26.44977168949772,
         "reduction": {
-          "estimate": 27.30593607305936,
-          "lo": 23.643070236206395,
-          "hi": 31.047651580986905
+          "estimate": 25.11415525114155,
+          "lo": 20.315865474334355,
+          "hi": 29.421597892888496
         }
       },
       "byJudge": {
         "translate-alt": {
-          "wins": 13,
+          "wins": 12,
           "losses": 1,
-          "ties": 0,
+          "ties": 1,
           "inconsistent": 0,
-          "p": 0.0018310546875000013
+          "p": 0.003417968750000001
         },
         "translate": {
-          "wins": 13,
-          "losses": 1,
+          "wins": 12,
+          "losses": 2,
           "ties": 0,
           "inconsistent": 0,
-          "p": 0.0018310546875000013
+          "p": 0.012939453125000005
         },
         "copilot:claude-opus-5.5": {
-          "wins": 14,
+          "wins": 13,
           "losses": 0,
-          "ties": 0,
+          "ties": 1,
           "inconsistent": 0,
-          "p": 0.00012207031250000005
+          "p": 0.00024414062500000016
         },
         "copilot:gpt-6-sol": {
-          "wins": 13,
+          "wins": 12,
           "losses": 1,
-          "ties": 0,
+          "ties": 1,
           "inconsistent": 0,
-          "p": 0.0018310546875000013
+          "p": 0.003417968750000001
         }
       },
       "byLang": {
         "de": {
-          "wins": 7,
-          "losses": 1,
-          "items": 8,
-          "reduction": 28.039927404718696
+          "wins": 6,
+          "losses": 0,
+          "items": 7,
+          "reduction": 26.94241316270567
         },
         "fr": {
           "wins": 6,
-          "losses": 0,
-          "items": 6,
-          "reduction": 26.5625
+          "losses": 1,
+          "items": 7,
+          "reduction": 23.289233576642335
         }
       },
       "categoriesOn": {
-        "grammar": 0.022831050228310504,
-        "terminology": 0.05707762557077626,
-        "fluency": 0.03424657534246576,
-        "style": 0.07990867579908677,
-        "register": 0.011415525114155252,
-        "locale": 0.06849315068493152,
-        "markup": 1.0844748858447488,
-        "mistranslation": 0.03424657534246576
+        "terminology": 0.3881278538812786,
+        "punctuation": 0.011415525114155252,
+        "fluency": 0.09132420091324202,
+        "style": 0.09132420091324202,
+        "markup": 0.6963470319634704,
+        "locale": 0.022831050228310504,
+        "grammar": 0.011415525114155252,
+        "register": 0.022831050228310504
       },
       "categoriesOff": {
-        "untranslated": 28.675799086757994,
+        "untranslated": 26.426940639269407,
         "style": 0.022831050228310504
       },
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "off": {
-        "keepMissing": 15,
-        "translateLeft": 60,
+        "keepMissing": 0,
+        "translateLeft": 58,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 94,
+        "englishLeft": 92,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 835086
+        "tokens": 741294
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
-        "comment": 2,
         "docstring": 90,
         "attribute": 2
       },
-      "problemsOn": 22,
-      "problemsOff": 169,
+      "problemsOn": 2,
+      "problemsOff": 150,
       "quality": "better",
       "correctness": "better",
       "recommendation": "on",
@@ -1069,11 +1057,11 @@
       "shippedDefault": "on",
       "documents": 136,
       "affected": 17,
-      "items": 18,
+      "items": 20,
       "panel": {
         "wins": 17,
         "losses": 0,
-        "ties": 1,
+        "ties": 3,
         "p": 0.000015258789062500003,
         "pAdj": 0.00006103515625000001,
         "winRate": 1,
@@ -1085,47 +1073,47 @@
       "independent": {
         "wins": 17,
         "losses": 0,
-        "ties": 1,
+        "ties": 3,
         "p": 0.000015258789062500003,
         "judges": [
           "copilot:claude-opus-5.5"
         ]
       },
       "mqm": {
-        "on": 0.1075268817204301,
-        "off": 44.38172043010752,
+        "on": 0.18577494692144375,
+        "off": 44.240976645435246,
         "reduction": {
-          "estimate": 44.274193548387096,
-          "lo": 39.17358029871105,
-          "hi": 52.565225856697815
+          "estimate": 44.0552016985138,
+          "lo": 38.701636904761905,
+          "hi": 52.61445338066997
         }
       },
       "byJudge": {
         "translate-alt": {
           "wins": 17,
           "losses": 0,
-          "ties": 1,
+          "ties": 3,
           "inconsistent": 0,
           "p": 0.000015258789062500003
         },
         "translate": {
           "wins": 17,
           "losses": 0,
-          "ties": 1,
+          "ties": 3,
           "inconsistent": 0,
           "p": 0.000015258789062500003
         },
         "copilot:claude-opus-5.5": {
           "wins": 17,
           "losses": 0,
-          "ties": 1,
+          "ties": 3,
           "inconsistent": 0,
           "p": 0.000015258789062500003
         },
         "copilot:gpt-6-sol": {
           "wins": 17,
           "losses": 0,
-          "ties": 1,
+          "ties": 3,
           "inconsistent": 0,
           "p": 0.000015258789062500003
         }
@@ -1134,63 +1122,59 @@
         "de": {
           "wins": 9,
           "losses": 0,
-          "items": 10,
-          "reduction": 45.74579831932773
+          "items": 11,
+          "reduction": 44.81327800829876
         },
         "fr": {
           "wins": 8,
           "losses": 0,
-          "items": 8,
-          "reduction": 42.731277533039645
+          "items": 9,
+          "reduction": 43.26086956521739
         }
       },
       "categoriesOn": {
-        "style": 0.05376344086021505,
-        "spelling": 0.026881720430107524,
-        "locale": 0.026881720430107524
+        "style": 0.07961783439490445,
+        "fluency": 0.05307855626326964,
+        "locale": 0.05307855626326964
       },
       "categoriesOff": {
-        "untranslated": 44.3010752688172,
-        "style": 0.026881720430107524,
-        "terminology": 0.05376344086021505
+        "untranslated": 44.240976645435246
       },
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "off": {
-        "keepMissing": 16,
-        "translateLeft": 38,
+        "keepMissing": 0,
+        "translateLeft": 36,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 38,
+        "englishLeft": 36,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 849731
+        "tokens": 753538
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
-        "comment": 2,
         "frontMatter": 34,
         "attribute": 2
       },
-      "problemsOn": 22,
-      "problemsOff": 92,
+      "problemsOn": 2,
+      "problemsOff": 72,
       "quality": "better",
       "correctness": "better",
       "recommendation": "on",
@@ -1202,140 +1186,138 @@
       "shippedDefault": "off",
       "documents": 130,
       "affected": 22,
-      "items": 153,
+      "items": 146,
       "panel": {
-        "wins": 5,
-        "losses": 146,
-        "ties": 2,
-        "p": 4.436832059608492e-37,
-        "pAdj": 2.6620992357650954e-36,
-        "winRate": 0.033112582781456956,
+        "wins": 2,
+        "losses": 144,
+        "ties": 0,
+        "p": 2.4061976190614197e-40,
+        "pAdj": 1.4437185714368517e-39,
+        "winRate": 0.0136986301369863,
         "ci": [
-          0.014224835577160273,
-          0.07516716243887676
+          0.0037646536254598156,
+          0.04856794292983591
         ]
       },
       "independent": {
-        "wins": 0,
-        "losses": 146,
-        "ties": 7,
-        "p": 2.2420775429197023e-44,
+        "wins": 1,
+        "losses": 143,
+        "ties": 2,
+        "p": 1.3004049748934358e-41,
         "judges": [
           "copilot:claude-opus-5.5"
         ]
       },
       "mqm": {
-        "on": 46.694472111553786,
-        "off": 1.5375996015936255,
+        "on": 46.085794297352344,
+        "off": 1.4192973523421588,
         "reduction": {
-          "estimate": -45.15687250996016,
-          "lo": -50.67976362037972,
-          "hi": -40.639110792062255
+          "estimate": -44.66649694501018,
+          "lo": -50.021925512651805,
+          "hi": -40.48389004715825
         }
       },
       "byJudge": {
         "translate-alt": {
-          "wins": 5,
-          "losses": 144,
-          "ties": 4,
-          "inconsistent": 0,
-          "p": 1.6595619191433506e-36
+          "wins": 2,
+          "losses": 142,
+          "ties": 1,
+          "inconsistent": 1,
+          "p": 9.363812650249902e-40
         },
         "translate": {
-          "wins": 5,
-          "losses": 145,
-          "ties": 3,
+          "wins": 2,
+          "losses": 144,
+          "ties": 0,
           "inconsistent": 0,
-          "p": 8.581873127275992e-37
+          "p": 2.4061976190614197e-40
         },
         "copilot:claude-opus-5.5": {
-          "wins": 0,
-          "losses": 146,
-          "ties": 5,
-          "inconsistent": 2,
-          "p": 2.2420775429197023e-44
+          "wins": 1,
+          "losses": 143,
+          "ties": 2,
+          "inconsistent": 0,
+          "p": 1.3004049748934358e-41
         },
         "copilot:gpt-6-sol": {
-          "wins": 5,
-          "losses": 145,
-          "ties": 3,
-          "inconsistent": 0,
-          "p": 8.581873127275992e-37
+          "wins": 1,
+          "losses": 144,
+          "ties": 0,
+          "inconsistent": 1,
+          "p": 6.546866425325566e-42
         }
       },
       "byLang": {
         "de": {
-          "wins": 0,
-          "losses": 75,
-          "items": 77,
-          "reduction": -47.074203187250994
+          "wins": 1,
+          "losses": 73,
+          "items": 74,
+          "reduction": -46.95121951219512
         },
         "fr": {
-          "wins": 5,
+          "wins": 1,
           "losses": 71,
-          "items": 76,
-          "reduction": -43.23954183266932
+          "items": 72,
+          "reduction": -42.37244897959184
         }
       },
       "categoriesOn": {
-        "terminology": 0.11205179282868527,
-        "untranslated": 45.673555776892435,
-        "overtranslation": 0.7470119521912352,
-        "markup": 0.12450199203187252,
-        "locale": 0.024900398406374504,
-        "punctuation": 0.012450199203187252
+        "untranslated": 45.98396130346232,
+        "terminology": 0.03818737270875763,
+        "locale": 0.05091649694501018,
+        "fluency": 0.012729124236252545
       },
       "categoriesOff": {
-        "terminology": 0.25522908366533864,
-        "locale": 0.2925796812749004,
-        "untranslated": 0.5664840637450199,
-        "spelling": 0.024900398406374504,
-        "fluency": 0.11205179282868527,
-        "mistranslation": 0.06847609561752989,
-        "punctuation": 0.012450199203187252,
-        "style": 0.06225099601593626,
-        "markup": 0.10582669322709164,
-        "overtranslation": 0.037350597609561755
+        "terminology": 0.33095723014256617,
+        "untranslated": 0.5728105906313645,
+        "spelling": 0.03182281059063136,
+        "locale": 0.06364562118126273,
+        "markup": 0.08273930753564154,
+        "fluency": 0.10183299389002036,
+        "grammar": 0.019093686354378817,
+        "addition": 0.012729124236252545,
+        "register": 0.0063645621181262725,
+        "overtranslation": 0.17184317718940936,
+        "mistranslation": 0.02545824847250509
       },
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 112,
-        "structureBroken": 2,
-        "codeChanged": 2,
+        "keepMissing": 0,
+        "translateLeft": 110,
+        "structureBroken": 0,
+        "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 178,
+        "englishLeft": 176,
         "errors": 18,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 745267
+        "tokens": 646734
       },
       "off": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 883063
+        "tokens": 779041
       },
       "englishOn": {
-        "comment": 4,
         "attribute": 12,
         "prose": 150,
         "frontMatter": 4,
-        "docstring": 8
+        "docstring": 8,
+        "comment": 2
       },
       "englishOff": {
-        "comment": 2,
         "attribute": 2
       },
-      "problemsOn": 328,
-      "problemsOff": 22,
+      "problemsOn": 304,
+      "problemsOff": 2,
       "quality": "worse",
       "correctness": "worse",
       "recommendation": "off",
@@ -1346,12 +1328,12 @@
       "feature": "mathSingleDollar",
       "shippedDefault": "off",
       "documents": 136,
-      "affected": 1,
-      "items": 1,
+      "affected": 0,
+      "items": 0,
       "panel": {
         "wins": 0,
         "losses": 0,
-        "ties": 1,
+        "ties": 0,
         "p": 1,
         "pAdj": null,
         "winRate": null,
@@ -1362,7 +1344,7 @@
       },
       "independent": {
         "wins": 0,
-        "losses": 1,
+        "losses": 0,
         "ties": 0,
         "p": 1,
         "judges": [
@@ -1370,24 +1352,24 @@
         ]
       },
       "mqm": {
-        "on": 2.0833333333333335,
-        "off": 10.416666666666668,
+        "on": 0,
+        "off": 0,
         "reduction": {
-          "estimate": 8.333333333333332,
-          "lo": 8.333333333333332,
-          "hi": 8.333333333333332
+          "estimate": null,
+          "lo": null,
+          "hi": null
         }
       },
       "byJudge": {
         "translate-alt": {
-          "wins": 1,
+          "wins": 0,
           "losses": 0,
           "ties": 0,
           "inconsistent": 0,
           "p": 1
         },
         "translate": {
-          "wins": 1,
+          "wins": 0,
           "losses": 0,
           "ties": 0,
           "inconsistent": 0,
@@ -1395,14 +1377,14 @@
         },
         "copilot:claude-opus-5.5": {
           "wins": 0,
-          "losses": 1,
+          "losses": 0,
           "ties": 0,
           "inconsistent": 0,
           "p": 1
         },
         "copilot:gpt-6-sol": {
           "wins": 0,
-          "losses": 1,
+          "losses": 0,
           "ties": 0,
           "inconsistent": 0,
           "p": 1
@@ -1412,8 +1394,8 @@
         "de": {
           "wins": 0,
           "losses": 0,
-          "items": 1,
-          "reduction": 8.333333333333332
+          "items": 0,
+          "reduction": null
         },
         "fr": {
           "wins": 0,
@@ -1422,52 +1404,45 @@
           "reduction": null
         }
       },
-      "categoriesOn": {
-        "terminology": 2.0833333333333335
-      },
-      "categoriesOff": {
-        "terminology": 5.208333333333334,
-        "mistranslation": 5.208333333333334
-      },
+      "categoriesOn": {},
+      "categoriesOff": {},
       "on": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 900184
+        "tokens": 790491
       },
       "off": {
-        "keepMissing": 16,
-        "translateLeft": 2,
+        "keepMissing": 0,
+        "translateLeft": 0,
         "structureBroken": 0,
         "codeChanged": 0,
         "linksBroken": 0,
-        "englishLeft": 4,
+        "englishLeft": 2,
         "errors": 0,
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 911007
+        "tokens": 805561
       },
       "englishOn": {
-        "comment": 2,
         "attribute": 2
       },
       "englishOff": {
-        "comment": 2,
         "attribute": 2
       },
-      "problemsOn": 22,
-      "problemsOff": 22,
-      "quality": "no significant difference",
+      "problemsOn": 2,
+      "problemsOff": 2,
+      "quality": "not judged",
       "correctness": "same",
-      "recommendation": "off",
+      "recommendation": "not exercised",
       "matchesDefault": true
     },
     {
@@ -1475,93 +1450,93 @@
       "feature": "mdx",
       "shippedDefault": "on",
       "documents": 6,
-      "affected": 6,
-      "items": 15,
+      "affected": 4,
+      "items": 17,
       "panel": {
-        "wins": 7,
+        "wins": 6,
         "losses": 3,
-        "ties": 5,
-        "p": 0.3437500000000002,
-        "pAdj": 0.4321561881627629,
-        "winRate": 0.7,
+        "ties": 8,
+        "p": 0.5078125,
+        "pAdj": 0.5078125,
+        "winRate": 0.6666666666666666,
         "ci": [
-          0.39677321997956516,
-          0.892210712513788
+          0.35419734749908977,
+          0.879418401317257
         ]
       },
       "independent": {
         "wins": 6,
         "losses": 2,
-        "ties": 7,
+        "ties": 9,
         "p": 0.2890625,
         "judges": [
           "copilot:claude-opus-5.5"
         ]
       },
       "mqm": {
-        "on": 5.108173076923077,
-        "off": 15.144230769230768,
+        "on": 6.707317073170732,
+        "off": 14.939024390243905,
         "reduction": {
-          "estimate": 10.036057692307693,
-          "lo": -2.4175724637681157,
-          "hi": 27.547233860955924
+          "estimate": 8.231707317073171,
+          "lo": -5.027798998387233,
+          "hi": 23.80119117381896
         }
       },
       "byJudge": {
         "translate-alt": {
-          "wins": 7,
-          "losses": 3,
-          "ties": 5,
-          "inconsistent": 0,
-          "p": 0.3437500000000002
+          "wins": 6,
+          "losses": 2,
+          "ties": 8,
+          "inconsistent": 1,
+          "p": 0.2890625
         },
         "translate": {
           "wins": 6,
-          "losses": 2,
-          "ties": 7,
+          "losses": 3,
+          "ties": 8,
           "inconsistent": 0,
-          "p": 0.2890625
+          "p": 0.5078125
         },
         "copilot:claude-opus-5.5": {
           "wins": 6,
           "losses": 2,
-          "ties": 7,
+          "ties": 9,
           "inconsistent": 0,
           "p": 0.2890625
         },
         "copilot:gpt-6-sol": {
           "wins": 6,
-          "losses": 2,
-          "ties": 7,
+          "losses": 3,
+          "ties": 8,
           "inconsistent": 0,
-          "p": 0.2890625
+          "p": 0.5078125
         }
       },
       "byLang": {
         "de": {
-          "wins": 4,
-          "losses": 2,
+          "wins": 3,
+          "losses": 1,
           "items": 8,
-          "reduction": 11.527777777777779
+          "reduction": 10.286458333333332
         },
         "fr": {
           "wins": 3,
-          "losses": 1,
-          "items": 7,
-          "reduction": 8.898305084745763
+          "losses": 2,
+          "items": 9,
+          "reduction": 6.422018348623854
         }
       },
       "categoriesOn": {
-        "untranslated": 4.627403846153846,
-        "fluency": 0.3004807692307692,
-        "register": 0.06009615384615384,
-        "markup": 0.06009615384615384,
-        "terminology": 0.06009615384615384
+        "untranslated": 4.878048780487806,
+        "fluency": 0.1829268292682927,
+        "mistranslation": 1.2195121951219514,
+        "terminology": 0.3658536585365854,
+        "markup": 0.06097560975609757
       },
       "categoriesOff": {
-        "untranslated": 14.723557692307692,
-        "fluency": 0.24038461538461536,
-        "terminology": 0.18028846153846154
+        "fluency": 0.24390243902439027,
+        "untranslated": 14.634146341463415,
+        "locale": 0.06097560975609757
       },
       "on": {
         "keepMissing": 0,
@@ -1574,7 +1549,7 @@
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 27944
+        "tokens": 26520
       },
       "off": {
         "keepMissing": 2,
@@ -1587,7 +1562,7 @@
         "reverted": 0,
         "keptSource": 0,
         "nmt": 0,
-        "tokens": 34317
+        "tokens": 31811
       },
       "englishOn": {},
       "englishOff": {
@@ -1606,52 +1581,231 @@
       "judge": "translate-alt",
       "provider": "foundry",
       "family": "openai",
-      "judgements": 934,
+      "judgements": 888,
       "failed": 0,
-      "decisive": 0.6541755888650964,
-      "positionConsistency": 0.9870759289176091,
-      "agreementWithOthers": 0.8704496788008566,
-      "kappaWithOthers": 0.8040285354595048
+      "decisive": 0.6452702702702703,
+      "positionConsistency": 0.9744897959183674,
+      "agreementWithOthers": 0.8682432432432432,
+      "kappaWithOthers": 0.7985281712673433
     },
     {
       "judge": "translate",
       "provider": "foundry",
       "family": "openai",
-      "judgements": 934,
+      "judgements": 888,
       "failed": 0,
-      "decisive": 0.7044967880085653,
-      "positionConsistency": 0.9690721649484536,
-      "agreementWithOthers": 0.8683083511777302,
-      "kappaWithOthers": 0.7997371246879663
+      "decisive": 0.6768018018018018,
+      "positionConsistency": 0.9772357723577236,
+      "agreementWithOthers": 0.8817567567567568,
+      "kappaWithOthers": 0.8184388545524647
     },
     {
       "judge": "copilot:claude-opus-5.5",
       "provider": "copilot",
       "family": "anthropic",
-      "judgements": 934,
-      "failed": 0,
-      "decisive": 0.5620985010706638,
-      "positionConsistency": 0.9887005649717514,
-      "agreementWithOthers": 0.7751605995717344,
-      "kappaWithOthers": 0.6655765879741246
+      "judgements": 887,
+      "failed": 1,
+      "decisive": 0.5670800450958287,
+      "positionConsistency": 0.9921104536489151,
+      "agreementWithOthers": 0.8038331454340474,
+      "kappaWithOthers": 0.7045455850681981
     },
     {
       "judge": "copilot:gpt-6-sol",
       "provider": "copilot",
       "family": "openai",
-      "judgements": 934,
+      "judgements": 888,
       "failed": 0,
-      "decisive": 0.6263383297644539,
-      "positionConsistency": 0.9815436241610738,
-      "agreementWithOthers": 0.8511777301927195,
-      "kappaWithOthers": 0.7760524118706401
+      "decisive": 0.6261261261261262,
+      "positionConsistency": 0.9858156028368794,
+      "agreementWithOthers": 0.8569819819819819,
+      "kappaWithOthers": 0.7827930895013577
     }
   ],
-  "fleissKappa": 0.7807679198352756,
+  "fleissKappa": 0.7927083749205183,
   "regression": {
-    "previous": null,
-    "changes": [],
+    "previous": {
+      "createdAt": "2026-09-26T14:08:46.016Z",
+      "commit": "d72dbf7+dirty"
+    },
+    "changes": [
+      {
+        "area": "default configuration",
+        "metric": "protected content kept",
+        "before": "98.3%",
+        "after": "100.0%",
+        "status": "improvement"
+      },
+      {
+        "area": "default configuration",
+        "metric": "expected text translated",
+        "before": "99.7%",
+        "after": "100.0%",
+        "status": "unchanged"
+      },
+      {
+        "area": "default configuration",
+        "metric": "documents without defects",
+        "before": "90.4%",
+        "after": "100.0%",
+        "status": "improvement"
+      },
+      {
+        "area": "default configuration",
+        "metric": "structure breaks",
+        "before": "0",
+        "after": "0",
+        "status": "unchanged"
+      },
+      {
+        "area": "default configuration",
+        "metric": "code blocks changed",
+        "before": "0",
+        "after": "0",
+        "status": "unchanged"
+      },
+      {
+        "area": "default configuration",
+        "metric": "broken links",
+        "before": "0",
+        "after": "0",
+        "status": "unchanged"
+      },
+      {
+        "area": "default configuration",
+        "metric": "failed documents",
+        "before": "0",
+        "after": "0",
+        "status": "unchanged"
+      },
+      {
+        "area": "default configuration",
+        "metric": "reverted blocks",
+        "before": "0",
+        "after": "0",
+        "status": "unchanged"
+      },
+      {
+        "area": "default configuration",
+        "metric": "segments kept in English",
+        "before": "0",
+        "after": "0",
+        "status": "unchanged"
+      },
+      {
+        "area": "default configuration",
+        "metric": "English segments left",
+        "before": "4",
+        "after": "2",
+        "status": "improvement"
+      },
+      {
+        "area": "cost",
+        "metric": "tokens per document",
+        "before": "6699",
+        "after": "5923",
+        "status": "improvement"
+      },
+      {
+        "area": "review",
+        "metric": "judged quality",
+        "before": "better (203/7)",
+        "after": "better (190/1)",
+        "status": "unchanged"
+      },
+      {
+        "area": "structuralContext",
+        "metric": "judged quality",
+        "before": "no significant difference (108/128)",
+        "after": "no significant difference (126/97)",
+        "status": "unchanged"
+      },
+      {
+        "area": "nmtFallback",
+        "metric": "judged quality",
+        "before": "not judged (0/0)",
+        "after": "not judged (0/0)",
+        "status": "unchanged"
+      },
+      {
+        "area": "preserveAnchors",
+        "metric": "judged quality",
+        "before": "not judged (0/0)",
+        "after": "not judged (0/0)",
+        "status": "unchanged"
+      },
+      {
+        "area": "codeComments",
+        "metric": "judged quality",
+        "before": "better (56/12)",
+        "after": "better (57/5)",
+        "status": "unchanged"
+      },
+      {
+        "area": "docstrings",
+        "metric": "judged quality",
+        "before": "better (13/1)",
+        "after": "better (12/1)",
+        "status": "unchanged"
+      },
+      {
+        "area": "frontMatter",
+        "metric": "judged quality",
+        "before": "better (17/0)",
+        "after": "better (17/0)",
+        "status": "unchanged"
+      },
+      {
+        "area": "mdx (.md files)",
+        "metric": "judged quality",
+        "before": "worse (5/146)",
+        "after": "worse (2/144)",
+        "status": "unchanged"
+      },
+      {
+        "area": "mathSingleDollar",
+        "metric": "judged quality",
+        "before": "no significant difference (0/0)",
+        "after": "not judged (0/0)",
+        "status": "unchanged"
+      },
+      {
+        "area": "mathSingleDollar",
+        "metric": "recommendation",
+        "before": "off",
+        "after": "not exercised",
+        "status": "changed"
+      },
+      {
+        "area": "mdx (.mdx files)",
+        "metric": "judged quality",
+        "before": "no significant difference (7/3)",
+        "after": "no significant difference (6/3)",
+        "status": "unchanged"
+      }
+    ],
     "newDefects": [],
-    "fixedDefects": []
+    "fixedDefects": [
+      "de|code-no-lang.md|untranslated|Show the version",
+      "fr|code-no-lang.md|untranslated|Show the version",
+      "fr|docstrings-numpy.md|overtranslated|quota_report : "
+    ],
+    "retiredDefects": [
+      "de|blog-informal.md|overtranslated|200,000",
+      "fr|blog-informal.md|overtranslated|200,000",
+      "de|escapes-entities.md|overtranslated|\\`backticks\\`",
+      "de|escapes-entities.md|overtranslated|\\[brackets\\]",
+      "de|escapes-entities.md|overtranslated|&lt;tag&gt;",
+      "fr|escapes-entities.md|overtranslated|\\`backticks\\`",
+      "fr|escapes-entities.md|overtranslated|\\[brackets\\]",
+      "fr|escapes-entities.md|overtranslated|&lt;tag&gt;",
+      "de|filenames-paths.md|overtranslated|settings.json and restart",
+      "fr|filenames-paths.md|overtranslated|settings.json and restart",
+      "de|tables-complex.md|overtranslated|[Audit log](#audit-log)",
+      "fr|tables-complex.md|overtranslated|[Audit log](#audit-log)",
+      "de|ui-labels-table.md|overtranslated|Shift+F5",
+      "de|ui-labels-table.md|overtranslated|Ctrl+B",
+      "fr|ui-labels-table.md|overtranslated|Shift+F5"
+    ]
   }
 }

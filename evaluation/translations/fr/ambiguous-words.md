@@ -6,11 +6,11 @@ Sélectionnez **Correspondance** pour rechercher les enregistrements ayant la m�
 
 ## <a id="scale"></a>Mise à l’échelle
 
-Utilisez **Mise à l’échelle** pour modifier le nombre d’agents de traitement. Un niveau de mise à l’échelle plus élevé permet de traiter davantage d’enregistrements simultanément.
+Utilisez **Mise à l’échelle** pour modifier le nombre d’unités de traitement. Un niveau de mise à l’échelle plus élevé permet de traiter davantage d’enregistrements en même temps.
 
 ## <a id="table"></a>Tableau
 
-- **Figer** : maintient la première colonne visible pendant que vous faites défiler le tableau.
+- **Figer** : maintient la première colonne visible pendant le défilement.
 - **Supprimer** : supprime le tableau et tous les enregistrements qu’il contient.
 - **Trier** : trie les lignes selon la colonne sélectionnée.
 - **Filtrer** : affiche uniquement les lignes qui répondent à une condition.
@@ -18,7 +18,7 @@ Utilisez **Mise à l’échelle** pour modifier le nombre d’agents de traiteme
 ## <a id="record"></a>Enregistrer
 
 1. Sélectionnez **Enregistrer**.
-2. Effectuez les étapes que vous voulez répéter.
+2. Effectuez les étapes que vous souhaitez répéter.
 3. Sélectionnez **Arrêter**.
 
 Les étapes enregistrées sont sauvegardées sous forme de macro.
@@ -29,8 +29,8 @@ Lorsqu’un enregistrement ne peut pas être traité, il est mis en attente. Les
 
 ## <a id="close"></a>Clôturer
 
-L’action **Clôturer** met fin à la période. Une fois que vous avez clôturé une période, les enregistrements qu’elle contient sont en lecture seule.
+La commande **Clôturer** met fin à la période. Après avoir clôturé une période, les enregistrements qu’elle contient sont en lecture seule.
 
 ## <a id="post"></a>Comptabiliser
 
-L’action **Comptabiliser** envoie l’enregistrement au grand livre. Vous ne pouvez pas annuler une comptabilisation, mais vous pouvez comptabiliser une extourne.
+La commande **Comptabiliser** envoie l’enregistrement au grand livre. Vous ne pouvez pas annuler une comptabilisation, mais vous pouvez comptabiliser une extourne.

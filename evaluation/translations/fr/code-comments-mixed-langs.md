@@ -17,7 +17,7 @@ Rust :
 ```rust
 /// Calcule le hachage d’un bloc.
 fn hash_block(data: &[u8]) -> [u8; 32] {
-    // SHA-256 est assez rapide pour les blocs de 4 Mo
+    // SHA-256 est assez rapide pour des blocs de 4 Mo
     sha256(data)
 }
 ```
@@ -26,10 +26,10 @@ Java :
 
 ```java
 /**
- * Écoute les modifications et les place en file d’attente pour chargement.
+ * Surveille les modifications et les place en file d’attente pour chargement.
  */
 public class ChangeListener {
-    // Les modifications sont traitées par lots toutes les 500 ms
+    // Les modifications sont regroupées par lots toutes les 500 ms
     private static final int BATCH_MS = 500;
 }
 ```
@@ -37,10 +37,10 @@ public class ChangeListener {
 SQL :
 
 ```sql
--- Rechercher les appareils qui ne se sont pas synchronisés depuis une semaine
+-- Trouver les appareils qui ne se sont pas synchronisés depuis une semaine
 SELECT device_id, last_sync
 FROM devices
-WHERE last_sync < DATEADD(day, -7, GETUTCDATE()); /* UTC intentionnellement */
+WHERE last_sync < DATEADD(day, -7, GETUTCDATE()); /* UTC volontairement */
 ```
 
 YAML:
@@ -48,7 +48,7 @@ YAML:
 ```yaml
 # Paramètres de l’agent de synchronisation
 agent:
-  workers: 8 # un par cœur de processeur est un bon début
+  workers: 8 # un par cœur de processeur est un bon point de départ
   log_level: info
 ```
 

@@ -3,23 +3,23 @@
 **Partage** : dossier cloud auquel plusieurs
 personnes peuvent accéder.
 
-**Épingler** : conserve un fichier sur l’appareil, même lorsque les
-fichiers à la demande sont activés.
+**Épingler** : conserve un fichier sur l’appareil, même lorsque la
+fonctionnalité de fichiers à la demande est activée.
 
 **Espace réservé** : entrée de fichier qui affiche le nom et la taille, mais dont
 le contenu n’est pas encore présent sur l’appareil.
 
-**Copie conflictuelle** : deuxième version d’un fichier créée lorsque deux personnes modifient le fichier en même temps. Son
-nom se termine par `-conflict`.
+**Copie en conflit** : seconde version d’un fichier créée lorsque deux personnes modifient le fichier en même temps. Son nom
+se termine par `-conflict`.
 
-**Locataire** : organisation qui possède les comptes et le
-stockage.
+**Locataire** : organisation propriétaire des comptes et
+du stockage.
 
 **Poste** : licence payante pour un
 utilisateur.
 
-**Drainage** : cesse d’accepter de nouveaux chargements sur un
-serveur afin qu’il puisse être mis à jour.
+**Drainage** : empêche un serveur d’accepter de nouveaux chargements
+afin qu’il puisse être mis à jour.
 
-**Limitation** : ralentit les requêtes d’un client qui
-en envoie trop.
+**Limitation du débit** : ralentit les requêtes d’un
+client qui en envoie trop.

@@ -1,7 +1,7 @@
 ---
 title: Synchronisierungsintegrität überwachen
 titleSuffix: Contoso Sync-Dokumentation
-description: Verwenden Sie das Integritätsdashboard und Warnungen, um Synchronisierungsprobleme zu finden, bevor Ihre Benutzer sie bemerken.
+description: Verwenden Sie das Integritätsdashboard und Warnungen, um Synchronisierungsprobleme zu erkennen, bevor Ihre Benutzer sie bemerken.
 ms.date: 08/14/2026
 ms.topic: how-to
 ms.service: contoso-sync
@@ -21,7 +21,7 @@ Das Integritätsdashboard zeigt den Synchronisierungsstatus aller Geräte in Ihr
 
 1. Wählen Sie im Admin Center **Integrität** > **Warnungen** aus.
 2. Wählen Sie **Neue Warnungsregel** aus.
-3. Wählen Sie eine Bedingung aus, z. B. *Bei mehr als 5 % der Geräte treten Fehler auf*.
+3. Wählen Sie eine Bedingung aus, z. B. *Mehr als 5 % der Geräte weisen Fehler auf*.
 4. Fügen Sie eine Aktionsgruppe hinzu, und wählen Sie **Erstellen** aus.
 
 ## <a id="query-the-data"></a>Daten abfragen

@@ -4,23 +4,23 @@ La présente politique décrit la manière dont Contoso Ltd. (« Contoso », �
 
 ## <a id="1-scope"></a>1. Champ d’application
 
-La présente politique s’applique à tous les clients qui utilisent le Service dans le cadre d’un contrat commercial. Elle ne s’applique pas aux services tiers que les clients connectent au Service.
+La présente politique s’applique à tous les clients qui utilisent le Service dans le cadre d’un accord commercial. Elle ne s’applique pas aux services tiers que les clients connectent au Service.
 
 ## <a id="2-categories-of-data"></a>2. Catégories de données
 
-Nous traitons les catégories de données personnelles suivantes :
+Nous traitons les catégories suivantes de données personnelles :
 
 1. Données de compte, telles que le nom, l’adresse e-mail et l’organisation.
 2. Données d’utilisation, telles que les heures de connexion et le nombre de fichiers synchronisés.
-3. Contenu client, que nous traitons uniquement pour fournir le Service.
+3. Contenu du client, que nous traitons uniquement pour fournir le Service.
 
 ## <a id="3-retention"></a>3. Conservation
 
-Le contenu client est supprimé dans les 30 jours suivant la fin de l’abonnement, sauf si le client demande par écrit une suppression anticipée.
+Le contenu du client est supprimé dans les 30 jours suivant la fin de l’abonnement, sauf si le client demande par écrit une suppression anticipée.
 
 ## <a id="4-subprocessors"></a>4. Sous-traitants ultérieurs
 
-Nous faisons appel à des sous-traitants ultérieurs uniquement dans le cadre d’accords écrits imposant des obligations équivalentes à celles prévues par la présente politique. Une liste à jour est disponible sur demande.
+Nous faisons appel à des sous-traitants ultérieurs uniquement dans le cadre d’accords écrits qui imposent des obligations équivalentes à celles prévues dans la présente politique. Une liste à jour est disponible sur demande.
 
 ## <a id="5-rights-of-data-subjects"></a>5. Droits des personnes concernées
 

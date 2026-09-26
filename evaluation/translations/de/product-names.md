@@ -4,8 +4,8 @@ Contoso Sync funktioniert mit Microsoft Teams, SharePoint und OneDrive. Dateien,
 
 Azure Active Directory heißt jetzt Microsoft Entra ID. Melden Sie sich mit Ihrem Entra ID-Konto an.
 
-Verwenden Sie GitHub Actions oder Azure Pipelines, um den Agent bereitzustellen. Das Docker-Image wird in GitHub Container Registry veröffentlicht.
+Verwenden Sie GitHub Actions oder Azure Pipelines, um den Agenten bereitzustellen. Das Docker-Image wird in der GitHub Container Registry veröffentlicht.
 
-Kubernetes-Benutzer können das Helm-Chart `contoso/sync-agent` bereitstellen. Es funktioniert unter Azure Kubernetes Service, Amazon EKS und Google Kubernetes Engine.
+Kubernetes-Benutzer können das Helm-Chart `contoso/sync-agent` bereitstellen. Es funktioniert in Azure Kubernetes Service, Amazon EKS und Google Kubernetes Engine.
 
 Visual Studio Code verfügt über eine Erweiterung namens *Contoso Sync Explorer*.

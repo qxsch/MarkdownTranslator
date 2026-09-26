@@ -4,7 +4,7 @@ Die Klasse `UploadQueue` stellt `maxParallel`, `retryDelayMs` und `onProgress` b
 
 Rufen Sie `queue.pause()` auf, bevor Sie `queue.flush()` aufrufen, andernfalls löst `flush()` `QueueBusyError` aus.
 
-Die Ereignisse `upload:start`, `upload:done` und `upload:error` werden in dieser Reihenfolge ausgelöst. Registrieren Sie mit `queue.on('upload:error', handler)` einen Listener für `upload:error`.
+Die Ereignisse `upload:start`, `upload:done` und `upload:error` werden in dieser Reihenfolge ausgegeben. Registrieren Sie mit `queue.on('upload:error', handler)` einen Listener für `upload:error`.
 
 Wenn `retryDelayMs` `null` ist, wird der Standardwert `500` verwendet. Werte über `60000` werden begrenzt.
 

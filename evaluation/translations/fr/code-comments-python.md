@@ -4,10 +4,10 @@
 import os
 from contoso_sync import SyncClient
 
-# Lire le point de terminaison dans l’environnement afin que le script fonctionne à chaque étape
+# Lire le point de terminaison depuis les variables d’environnement afin que le script fonctionne dans chaque environnement
 client = SyncClient(endpoint=os.environ["CTSYNC_ENDPOINT"])
 
-# Charger chaque fichier CSV du dossier courant
+# Charger chaque fichier CSV dans le dossier actuel
 for name in os.listdir("."):
     if name.endswith(".csv"):  # ignorer tout le reste
         client.upload(name)
@@ -18,12 +18,12 @@ for name in os.listdir("."):
 client.wait()
 ```
 
-Gérez explicitement les erreurs :
+Gérez explicitement les erreurs :
 
 ```python
 try:
     client.upload("big.iso")
 except QuotaExceededError:
-    # L’espace de stockage est plein : avertir l’utilisateur au lieu de réessayer
+    # Le stockage est plein : informez l’utilisateur au lieu de réessayer
     print("Storage quota exceeded")
 ```

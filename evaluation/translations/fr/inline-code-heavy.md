@@ -4,8 +4,8 @@ La classe `UploadQueue` expose `maxParallel`, `retryDelayMs` et `onProgress`. D�
 
 Appelez `queue.pause()` avant d’appeler `queue.flush()` ; sinon, `flush()` lève `QueueBusyError`.
 
-Les événements `upload:start`, `upload:done` et `upload:error` sont émis dans cet ordre. Écoutez `upload:error` avec `queue.on('upload:error', handler)`.
+Les événements `upload:start`, `upload:done` et `upload:error` sont émis dans cet ordre. Abonnez-vous à `upload:error` avec `queue.on('upload:error', handler)`.
 
-Si `retryDelayMs` vaut `null`, la valeur par défaut de `500` est utilisée. Les valeurs supérieures à `60000` sont plafonnées.
+Si `retryDelayMs` est `null`, la valeur par défaut de `500` est utilisée. Les valeurs supérieures à `60000` sont plafonnées.
 
-L’option `--queue-size` et la variable `CTSYNC_QUEUE_SIZE` remplacent la valeur de `queueSize` dans `config.toml`.
+L’indicateur `--queue-size` et la variable `CTSYNC_QUEUE_SIZE` remplacent la valeur de `queueSize` définie dans `config.toml`.

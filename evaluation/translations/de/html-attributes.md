@@ -4,7 +4,7 @@
 
 <a href="https://contoso.example/help" title="Hilfe-Center in einer neuen Registerkarte öffnen" aria-label="Hilfe-Center">Hilfe</a>
 
-<button type="button" aria-label="Dialogfeld schließen" data-action="close">×</button>
+<button type="button" aria-label="Dialog schließen" data-action="close">×</button>
 
 <input type="search" placeholder="Dateien suchen" aria-describedby="search-hint">
 <p id="search-hint">Geben Sie mindestens drei Zeichen ein.</p>

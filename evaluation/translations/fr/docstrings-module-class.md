@@ -10,16 +10,16 @@ import sqlite3
 
 
 class BlockCache:
-    """Un mappage persistant entre hachage de bloc et état de téléversement."""
+    """Mappage persistant du hachage de bloc vers l’état de téléversement."""
 
     def __init__(self, path):
         """Ouvre ou crée la base de données du cache à l’emplacement ``path``."""
         self._db = sqlite3.connect(path)
 
     def seen(self, digest):
-        r"""Renvoie True si le bloc associé à cette empreinte a déjà été téléversé.
+        r"""Retourne True si le bloc avec ce digest a déjà été téléversé.
 
-        L’empreinte est une chaîne hexadécimale telle que ``a3f\x00`` ; les chaînes brutes conservent la barre oblique inverse.
+        Le digest est une chaîne hexadécimale telle que ``a3f\x00`` ; les chaînes brutes conservent la barre oblique inverse.
         """
         row = self._db.execute("SELECT 1 FROM blocks WHERE digest = ?", (digest,)).fetchone()
         return row is not None

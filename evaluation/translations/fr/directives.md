@@ -5,7 +5,7 @@
 :::details[Afficher la configuration requise]
 - 4 Go de RAM
 - Processeur 64 bits
-- Une connexion Internet lors de la première connexion
+- Une connexion Internet pour la première connexion
 :::
 
 :::aside{.highlight}

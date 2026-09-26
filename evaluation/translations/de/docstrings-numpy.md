@@ -4,16 +4,16 @@
 def usage_report(share, start, end):
     """Berechnet die Speichernutzung für eine Freigabe.
 
-    Gibt eine Zeile pro Tag mit dem belegten Speicherplatz und der Anzahl der Dateien zurück.
+    Gibt eine Zeile pro Tag mit dem genutzten Speicherplatz und der Anzahl der Dateien zurück.
 
     Parameters
     ----------
     share : str
         Name der Freigabe.
     start : datetime.date
-        Erster Tag des Berichts, einschließlich dieses Tages.
+        Erster Tag des Berichts, inklusive.
     end : datetime.date
-        Letzter Tag des Berichts, einschließlich dieses Tages.
+        Letzter Tag des Berichts, inklusive.
 
     Returns
     -------
@@ -31,7 +31,7 @@ def usage_report(share, start, end):
 
     Notes
     -----
-    Tage ohne Aktivität werden mit den Werten des vorherigen Tages einbezogen.
+    Tage ohne Aktivität werden mit den Werten des Vortags einbezogen.
 
     Examples
     --------

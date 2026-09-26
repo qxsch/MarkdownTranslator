@@ -1,4 +1,4 @@
-# <a id="infrastructure-and-service-code"></a>Infrastruktur- und Service-Code
+# <a id="infrastructure-and-service-code"></a>Infrastruktur- und Dienstcode
 
 Go:
 
@@ -26,7 +26,7 @@ Java:
 
 ```java
 /**
- * Überwacht Änderungen und stellt sie für den Upload in eine Warteschlange.
+ * Lauscht auf Änderungen und stellt sie für den Upload in die Warteschlange.
  */
 public class ChangeListener {
     // Änderungen werden alle 500 ms gebündelt
@@ -37,10 +37,10 @@ public class ChangeListener {
 SQL:
 
 ```sql
--- Geräte suchen, die seit einer Woche nicht synchronisiert wurden
+-- Geräte suchen, die seit einer Woche nicht mehr synchronisiert wurden
 SELECT device_id, last_sync
 FROM devices
-WHERE last_sync < DATEADD(day, -7, GETUTCDATE()); /* bewusst UTC */
+WHERE last_sync < DATEADD(day, -7, GETUTCDATE()); /* absichtlich UTC */
 ```
 
 YAML:
@@ -48,7 +48,7 @@ YAML:
 ```yaml
 # Einstellungen für den Synchronisierungs-Agenten
 agent:
-  workers: 8 # Einer pro CPU-Kern ist ein guter Ausgangspunkt
+  workers: 8 # Einer pro CPU-Kern ist ein guter Anfang
   log_level: info
 ```
 
@@ -67,7 +67,7 @@ resource storage 'Microsoft.Storage/storageAccounts@2023-05-01' = {
 Dockerfile:
 
 ```dockerfile
-# Kleines Basis-Image für den Agenten
+# Kleines Basisimage für den Agenten
 FROM node:24-slim
 # Nur Produktionsabhängigkeiten installieren
 RUN npm ci --omit=dev

@@ -1,10 +1,10 @@
 # <a id="administrator-guide"></a>Administratorhandbuch
 
-In diesem Handbuch wird häufig auf eigene Abschnitte verlinkt. Beginnen Sie mit [Rollout planen](#plan-the-rollout), und lesen Sie anschließend [Lizenzen zuweisen](#assign-licenses).
+In diesem Handbuch finden Sie viele Links auf Abschnitte innerhalb des Handbuchs. Beginnen Sie mit [Planen des Rollouts](#plan-the-rollout) und lesen Sie anschließend [Lizenzen zuweisen](#assign-licenses).
 
-## <a id="plan-the-rollout"></a>Rollout planen
+## <a id="plan-the-rollout"></a>Planen des Rollouts
 
-Entscheiden Sie, welche Gruppen den Client zuerst erhalten. Empfehlungen finden Sie unter [Pilotgruppen](#pilot-groups); Informationen für den Fall, dass etwas schiefgeht, finden Sie unter [Rollback ausführen](#roll-back).
+Entscheiden Sie, welche Gruppen den Client zuerst erhalten. Empfehlungen finden Sie unter [Pilotgruppen](#pilot-groups). Falls etwas schiefgeht, lesen Sie den Abschnitt [Rollback durchführen](#roll-back).
 
 ### <a id="pilot-groups"></a>Pilotgruppen
 
@@ -16,12 +16,12 @@ Lizenzen werden pro Benutzer zugewiesen. Die gruppenbasierte Zuweisung wird unte
 
 ### <a id="automate-assignment"></a>Zuweisung automatisieren
 
-Verwenden Sie die Admin-API, um Lizenzen aus Ihrem HR-System zuzuweisen. Die API ist in der [Fehlerreferenz](api-errors-table.md#handling-conflicts) beschrieben.
+Verwenden Sie die Admin-API, um Lizenzen aus Ihrem HR-System zuzuweisen. Die API wird in der [Fehlerreferenz](api-errors-table.md#handling-conflicts) beschrieben.
 
 ## <a id="default-settings"></a>Standardeinstellungen
 
-Stellen Sie Standardeinstellungen über Ihr Geräteverwaltungstool bereit. Einstellungen, die Benutzer nicht ändern können, sind als **gesperrt** gekennzeichnet.
+Verteilen Sie Standardeinstellungen mit Ihrem Geräteverwaltungstool. Einstellungen, die Benutzer nicht ändern können, sind als **gesperrt** gekennzeichnet.
 
-## <a id="roll-back"></a>Rollback ausführen
+## <a id="roll-back"></a>Rollback durchführen
 
-Um ein Rollback auszuführen, deinstallieren Sie den Client, und entfernen Sie die Richtlinie. Dateien verbleiben in der Cloud. Kehren Sie zum [Anfang](#administrator-guide) zurück.
+Um ein Rollback durchzuführen, deinstallieren Sie den Client und entfernen Sie die Richtlinie. Dateien verbleiben in der Cloud. Kehren Sie zum [Anfang](#administrator-guide) zurück.
