@@ -13,7 +13,7 @@
 
 ## <a id="overview"></a>Übersicht
 
-In dieser Baseline sind die empfohlenen Sicherheitseinstellungen für Contoso Sync aufgeführt.
+Diese Sicherheitsbaseline führt die empfohlenen Sicherheitseinstellungen für Contoso Sync auf.
 
 ## <a id="identity"></a>Identität
 
@@ -29,11 +29,11 @@ Lassen Sie Anmeldungen nur von verwalteten Geräten zu.
 
 ### <a id="encryption"></a>Verschlüsselung
 
-Verschlüsselung ruhender Daten ist immer aktiviert. Kundenseitig verwaltete Schlüssel sind optional.
+Die Verschlüsselung ruhender Daten ist immer aktiviert. Kundenseitig verwaltete Schlüssel sind optional.
 
 ### <a id="sharing-links"></a>Freigabelinks
 
-Legen Sie als Standardlinktyp **Personen in Ihrer Organisation** fest. Anonyme Links sollten nach 7 Tagen ablaufen.
+Legen Sie den Standardlinktyp auf **Personen in Ihrer Organisation** fest. Anonyme Links sollten nach 7 Tagen ablaufen.
 
 ## <a id="monitoring"></a>Überwachung
 

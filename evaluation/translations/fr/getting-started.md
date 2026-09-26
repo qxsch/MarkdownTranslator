@@ -1,10 +1,10 @@
 # <a id="getting-started-with-contoso-sync"></a>Bien démarrer avec Contoso Sync
 
-Contoso Sync maintient la synchronisation entre un dossier local et un partage dans le cloud. Il vous faudra environ dix minutes pour suivre ce guide.
+Contoso Sync synchronise un dossier local et un partage cloud. Il faut environ dix minutes pour suivre ce guide.
 
 ## <a id="prerequisites"></a>Prérequis
 
-Avant de commencer, assurez-vous de disposer des éléments suivants :
+Avant de commencer, vérifiez que vous disposez des éléments suivants :
 
 - Un compte Contoso avec le rôle **Contributeur**
 - Windows 11 ou macOS 14 ou version ultérieure
@@ -12,7 +12,7 @@ Avant de commencer, assurez-vous de disposer des éléments suivants :
 
 ## <a id="install-the-client"></a>Installer le client
 
-1. Téléchargez `ContosoSync-Setup.exe` depuis la [page de téléchargement](https://contoso.example/download).
+1. Téléchargez `ContosoSync-Setup.exe` à partir de la [page de téléchargement](https://contoso.example/download).
 2. Exécutez le programme d’installation et sélectionnez **Suivant**.
 3. Lorsque vous êtes invité à choisir un dossier, conservez le dossier par défaut `C:\Users\<you>\ContosoSync` ou sélectionnez **Parcourir**.
 4. Sélectionnez **Installer**, puis **Terminer**.
@@ -28,8 +28,8 @@ Ouvrez l’application à partir du menu Démarrer. Entrez votre adresse e-mail 
 
 | Option | Par défaut | Description |
 |---|---|---|
-| Fichiers à la demande | Activé | Les fichiers sont téléchargés uniquement lorsque vous les ouvrez |
-| Synchroniser sur les réseaux limités | Désactivé | Suspend la synchronisation sur les points d’accès mobiles |
+| Fichiers à la demande | Activé | Les fichiers ne sont téléchargés que lorsque vous les ouvrez |
+| Synchroniser sur les réseaux limités | Désactivé | Met en pause la synchronisation sur les points d’accès mobiles |
 | Conserver | 30 jours | Durée pendant laquelle les fichiers supprimés restent dans la Corbeille |
 
 ## <a id="next-steps"></a>Étapes suivantes

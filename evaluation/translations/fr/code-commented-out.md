@@ -1,12 +1,12 @@
 # <a id="debugging-notes"></a>Notes de débogage
 
-Certains commentaires contiennent du code désactivé. Il doit rester exactement tel quel.
+Certains commentaires contiennent du code qui est désactivé. Il doit rester exactement tel quel.
 
 ```python
 def sync(folder):
     # print(folder.files)
     # folder.refresh(force=True)
-    # Actualiser uniquement si le dossier a changé depuis la dernière exécution
+    # Actualiser uniquement lorsque le dossier a changé depuis la dernière exécution
     if folder.changed:
         folder.refresh()
     # return None

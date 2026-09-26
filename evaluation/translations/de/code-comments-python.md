@@ -18,7 +18,7 @@ for name in os.listdir("."):
 client.wait()
 ```
 
-Fehler explizit behandeln:
+Behandeln Sie Fehler explizit:
 
 ```python
 try:

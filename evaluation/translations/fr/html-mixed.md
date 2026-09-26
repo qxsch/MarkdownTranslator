@@ -3,7 +3,7 @@
 Appuyez sur <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> pour ouvrir la palette de commandes.
 
 <details>
-<summary>Afficher tous les raccourcis clavier</summary>
+<summary>Afficher tous les raccourcis</summary>
 
 | Raccourci | Action |
 |---|---|
@@ -13,13 +13,13 @@ Appuyez sur <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> pour ouvrir la palette
 </details>
 
 <div class="warning">
-  <p>La modification de ces options peut <strong>ralentir</strong> la synchronisation. Ne les modifiez que lorsque le support vous le demande.</p>
+  <p>La modification de ces options peut <strong>ralentir</strong> la synchronisation. Ne les modifiez que si le support vous le demande.</p>
 </div>
 
 <table>
   <tr><th>Option</th><th>Effet</th></tr>
-  <tr><td><code>max_workers</code></td><td>Nombre de chargements parallèles</td></tr>
-  <tr><td><code>chunk_size</code></td><td>Taille de chaque bloc de chargement en octets</td></tr>
+  <tr><td><code>max_workers</code></td><td>Nombre de téléversements parallèles</td></tr>
+  <tr><td><code>chunk_size</code></td><td>Taille de chaque bloc de téléversement en octets</td></tr>
 </table>
 
 <p align="center">

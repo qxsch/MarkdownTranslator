@@ -14,16 +14,16 @@ Ein rotes Symbol bedeutet, dass mindestens eine Datei nicht synchronisiert werde
 
 ## <a id="how-much-does-it-cost"></a>Wie viel kostet es?
 
-Der kostenlose Plan umfasst 5 GB. Der Team-Plan kostet 4 Euro pro Benutzer und Monat und umfasst 1 TB pro Benutzer.
+Der kostenlose Tarif umfasst 5 GB. Der Team-Tarif kostet 4 Euro pro Benutzer und Monat und umfasst 1 TB pro Benutzer.
 
 ## <a id="what-happens-when-i-run-out-of-space"></a>Was passiert, wenn mein Speicherplatz aufgebraucht ist?
 
-Die Synchronisierung wird für neue Dateien beendet. Vorhandene Dateien bleiben verfügbar, und Sie können jederzeit Speicherplatz freigeben oder ein Upgrade durchführen.
+Für neue Dateien wird die Synchronisierung angehalten. Vorhandene Dateien bleiben verfügbar, und Sie können jederzeit Speicherplatz freigeben oder ein Upgrade durchführen.
 
 ## <a id="does-it-work-offline"></a>Funktioniert es offline?
 
-Dateien, die als **Immer auf diesem Gerät behalten** gekennzeichnet sind, sind offline verfügbar. Änderungen werden hochgeladen, sobald Sie wieder online sind.
+Dateien, die als **Immer auf diesem Gerät behalten** markiert sind, sind offline verfügbar. Änderungen werden hochgeladen, sobald Sie wieder online sind.
 
 ## <a id="who-can-see-my-files"></a>Wer kann meine Dateien sehen?
 
-Nur Sie, es sei denn, Sie geben einen Ordner frei. Administratoren können Dateinamen im Überwachungsprotokoll sehen, jedoch nicht den Inhalt.
+Nur Sie, es sei denn, Sie geben einen Ordner frei. Administratoren können Dateinamen im Überwachungsprotokoll sehen, aber nicht den Inhalt.

@@ -361,6 +361,7 @@ export function buildReport(resultsFile: string, outDir = process.env.EVAL_REPOR
   const changes: Change[] = [];
   let newDefects: string[] = [];
   let fixedDefects: string[] = [];
+  let retiredDefects: string[] = [];
   if (previous) {
     const rate = (m: 'keepPass' | 'translatePass' | 'cleanDocuments', label: string) => {
       const a = previous.scorecard[m];
@@ -389,7 +390,17 @@ export function buildReport(resultsFile: string, outDir = process.env.EVAL_REPOR
     const before = new Set(previous.defects);
     const after = new Set(snapshot.defects);
     newDefects = snapshot.defects.filter((x) => !before.has(x));
-    fixedDefects = previous.defects.filter((x) => !after.has(x));
+    // A missing defect is only a fix if its expectation still exists; otherwise the expectation was changed.
+    const stillExpected = (x: string) => {
+      const [, doc, type, ...rest] = x.split('|');
+      const detail = rest.join('|');
+      if (type === 'overtranslated') return !!expectations[doc]?.keep.includes(detail);
+      if (type === 'untranslated') return !!expectations[doc]?.translate.includes(detail);
+      return meta.docs.includes(doc);
+    };
+    const gone = previous.defects.filter((x) => !after.has(x));
+    fixedDefects = gone.filter(stillExpected);
+    retiredDefects = gone.filter((x) => !stillExpected(x));
   }
   const regressions = changes.filter((c) => c.status === 'regression');
 
@@ -464,7 +475,7 @@ export function buildReport(resultsFile: string, outDir = process.env.EVAL_REPOR
     mkdirSync(join(translations, lang), { recursive: true });
     for (const f of readdirSync(src).filter((x) => /\.mdx?$/.test(x))) copyFileSync(join(src, f), join(translations, lang, f));
   }
-  writeFileSync(join(data, 'feature-summary.json'), JSON.stringify({ meta, scorecard, byCategory, stats, reliability, fleissKappa: fleiss, regression: { previous: previous ? { createdAt: previous.createdAt, commit: previous.commit } : null, changes, newDefects, fixedDefects } }, null, 2));
+  writeFileSync(join(data, 'feature-summary.json'), JSON.stringify({ meta, scorecard, byCategory, stats, reliability, fleissKappa: fleiss, regression: { previous: previous ? { createdAt: previous.createdAt, commit: previous.commit } : null, changes, newDefects, fixedDefects, retiredDefects } }, null, 2));
   writeFileSync(join(data, 'judgements.csv'), csv(r.judgements.map((j) => ({ comparison: j.comparison, doc: j.doc, category: categoryOf(j.doc), lang: j.lang, judge: j.judge, item: j.item, words: j.words, order1: j.order1, order2: j.order2, verdict: j.verdict, mqmOn: j.mqmOn, mqmOff: j.mqmOff }))));
   writeFileSync(join(data, 'records.csv'), csv(r.records.map((x) => ({
     comparison: x.comparison, doc: x.doc, category: categoryOf(x.doc), lang: x.lang, defaultOn: x.defaultOn, changed: x.changed,
@@ -562,8 +573,8 @@ export function buildReport(resultsFile: string, outDir = process.env.EVAL_REPOR
     L.push('| Area | Metric | Before | After | Status |', '|---|---|---|---|---|');
     for (const c of changes.filter((x) => x.status !== 'unchanged')) L.push(`| ${c.area} | ${c.metric} | ${c.before} | ${c.after} | ${c.status === 'regression' ? '**regression**' : c.status} |`);
     if (!changes.some((x) => x.status !== 'unchanged')) L.push('| all | all tracked metrics | | | unchanged |');
-    L.push('', `New defects: ${newDefects.length}. Fixed defects: ${fixedDefects.length}.`, '');
-    for (const [title, list] of [['New defects', newDefects], ['Fixed defects', fixedDefects]] as const) {
+    L.push('', `New defects: ${newDefects.length}. Fixed defects: ${fixedDefects.length}. No longer checked because the expectation was changed: ${retiredDefects.length}.`, '');
+    for (const [title, list] of [['New defects', newDefects], ['Fixed defects', fixedDefects], ['No longer checked (expectation changed)', retiredDefects]] as const) {
       if (!list.length) continue;
       L.push(`${title}:`, '');
       for (const x of list.slice(0, 30)) {

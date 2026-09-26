@@ -1,6 +1,6 @@
-# <a id="platform-notes"></a>Notes relatives aux plateformes
+# <a id="platform-notes"></a>Notes sur les plateformes
 
-Aller à : [Installation sous Windows](#setup) · [Installation sous macOS](#setup-1) · [Installation sous Linux](#setup-2) · [Options de `ctsync`](#ctsync-options) · [FAQ](#faq-)
+Accéder à : [Installation sous Windows](#setup) · [Installation sous macOS](#setup-1) · [Installation sous Linux](#setup-2) · [Options de `ctsync`](#ctsync-options) · [FAQ](#faq-)
 
 ## Windows
 
@@ -16,7 +16,7 @@ Le logiciel antivirus peut retarder la première analyse.
 
 ### <a id="setup-1"></a>Installation
 
-Faites glisser l’app vers le dossier **Applications**.
+Faites glisser l’application dans le dossier **Applications**.
 
 ### <a id="known-issues-1"></a>Problèmes connus
 
@@ -40,6 +40,6 @@ Toutes les plateformes prennent en charge les mêmes options.
 
 Consultez les [problèmes connus sous Windows](#known-issues), sous [macOS](#known-issues-1) et sous [Linux](#known-issues-2).
 
-## <a id="heading-with-emphasis-and-a-link"></a>Titre avec *mise en évidence* et un [lien](https://example.com)
+## <a id="heading-with-emphasis-and-a-link"></a>Titre avec *emphase* et un [lien](https://example.com)
 
 Les titres contenant du balisage génèrent eux aussi un slug : [accéder](#heading-with-emphasis-and-a-link).

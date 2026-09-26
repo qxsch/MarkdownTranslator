@@ -2,7 +2,7 @@
 
 ```python
 def usage_report(share, start, end):
-    """Calcule l’utilisation du stockage pour un partage.
+    """Calcule l’utilisation du stockage d’un partage.
 
     Renvoie une ligne par jour avec l’espace utilisé et le nombre de fichiers.
 
@@ -27,7 +27,7 @@ def usage_report(share, start, end):
 
     See Also
     --------
-    quota_report : Compare l’utilisation avec le quota.
+    quota_report : Compare l’utilisation avec le quota.
 
     Notes
     -----

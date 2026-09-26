@@ -3,9 +3,9 @@ export const meta = { owner: 'sre-team', reviewed: '2026-08-14' };
 
 # <a id="sync-statistics"></a>Statistiques de synchronisation
 
-Cette page affiche des données en direct. Sa dernière révision date du {meta.reviewed}.
+Cette page affiche des données en direct. Elle a été vérifiée pour la dernière fois le {meta.reviewed}.
 
-<Chart source="/api/stats/uploads" title="Téléversements par heure" height={320} />
+<Chart source="/api/stats/uploads" title="Chargements par heure" height={320} />
 
 Le graphique ci-dessus est mis à jour toutes les {60} secondes. Survolez une barre pour afficher la valeur exacte.
 
@@ -13,7 +13,7 @@ Le graphique ci-dessus est mis à jour toutes les {60} secondes. Survolez une ba
 
 ## <a id="top-folders"></a>Principaux dossiers
 
-Les dossiers ayant enregistré le plus de modifications aujourd’hui sont répertoriés ci-dessous.
+Les dossiers comptant le plus de modifications aujourd’hui sont répertoriés ci-dessous.
 
 <FolderTable limit={10} sortBy="changes" emptyText="Aucune modification aujourd’hui" />
 

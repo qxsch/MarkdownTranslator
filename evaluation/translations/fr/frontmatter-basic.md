@@ -1,6 +1,6 @@
 ---
 title: Partager un dossier
-description: Découvrez comment partager un dossier avec des personnes au sein et en dehors de votre organisation.
+description: Découvrez comment partager un dossier avec des personnes à l’intérieur et à l’extérieur de votre organisation.
 keywords:
   - partage
   - autorisations
@@ -12,7 +12,7 @@ draft: false
 
 # <a id="share-a-folder"></a>Partager un dossier
 
-Cliquez avec le bouton droit sur le dossier et sélectionnez **Partager**. Saisissez les noms ou adresses e-mail des personnes avec lesquelles vous souhaitez le partager.
+Cliquez avec le bouton droit sur le dossier et sélectionnez **Partager**. Entrez les noms ou les adresses e-mail des personnes avec lesquelles vous souhaitez le partager.
 
 ## <a id="permissions"></a>Autorisations
 

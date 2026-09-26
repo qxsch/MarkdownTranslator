@@ -22,6 +22,6 @@ Installieren Sie das Paket mit `winget install Contoso.Sync`.
 {{< /tab >}}
 {{< /tabs >}}
 
-{{< youtube id="abc123" title="Architektur-Walkthrough" >}}
+{{< youtube id="abc123" title="Einführung in die Architektur" >}}
 
-Weitere Hinweise zur Skalierung finden Sie auch unter {{< ref "operations/scaling.md" >}}.
+Hinweise zur Skalierung finden Sie auch unter {{< ref "operations/scaling.md" >}}.

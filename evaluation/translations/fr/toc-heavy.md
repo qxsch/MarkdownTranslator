@@ -33,7 +33,7 @@ Le chiffrement au repos est toujours activé. Les clés gérées par le client s
 
 ### <a id="sharing-links"></a>Liens de partage
 
-Définissez le type de lien par défaut sur **Personnes dans votre organisation**. Les liens anonymes doivent expirer au bout de 7 jours.
+Définissez le type de lien par défaut sur **Personnes de votre organisation**. Les liens anonymes doivent expirer après 7 jours.
 
 ## <a id="monitoring"></a>Surveillance
 

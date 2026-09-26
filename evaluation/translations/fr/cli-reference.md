@@ -1,6 +1,6 @@
 # <a id="ctsync-command-reference"></a>Référence de la commande `ctsync`
 
-`ctsync` est l’outil en ligne de commande associé à Contoso Sync.
+`ctsync` est l’équivalent en ligne de commande de Contoso Sync.
 
 ## Synopsis
 
@@ -16,13 +16,13 @@ ctsync <command> [--profile <name>] [--verbose]
 | `ctsync pause --minutes 30` | Suspend la synchronisation pendant la durée indiquée |
 | `ctsync resume` | Reprend une synchronisation suspendue |
 | `ctsync reset --force` | Supprime le cache local et télécharge à nouveau tout le contenu |
-| `ctsync logs --tail` | Diffuse en continu le fichier journal `ctsync.log` |
+| `ctsync logs --tail` | Affiche en continu le fichier journal `ctsync.log` |
 
 ## <a id="global-options"></a>Options globales
 
-- `--profile <name>` : utilise le profil portant le nom indiqué, défini dans `~/.ctsync/config.toml`.
-- `--verbose` : affiche la sortie de débogage. Associez cette option à `--no-color` lorsque vous redirigez la sortie vers un fichier.
-- `--json` : affiche une sortie lisible par machine.
+- `--profile <name>` : utilise le profil nommé défini dans `~/.ctsync/config.toml`.
+- `--verbose` : affiche la sortie de débogage. Combinez cette option avec `--no-color` lorsque vous redirigez la sortie vers un fichier.
+- `--json` : affiche une sortie lisible par ordinateur.
 
 ## <a id="exit-codes"></a>Codes de sortie
 
@@ -35,13 +35,13 @@ ctsync <command> [--profile <name>] [--verbose]
 
 ## <a id="examples"></a>Exemples
 
-Suspendre la synchronisation pendant une présentation :
+Suspendez la synchronisation pendant une présentation :
 
 ```bash
 ctsync pause --minutes 60
 ```
 
-Vérifier l’état d’un seul dossier et l’enregistrer au format JSON :
+Vérifiez l’état d’un seul dossier et enregistrez-le au format JSON :
 
 ```bash
 ctsync status --json > status.json

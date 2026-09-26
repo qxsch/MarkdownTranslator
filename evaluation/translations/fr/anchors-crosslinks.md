@@ -4,11 +4,11 @@ Ce guide contient de nombreux liens vers ses propres sections. Commencez par [Pl
 
 ## <a id="plan-the-rollout"></a>Planifier le déploiement
 
-Déterminez quels groupes recevront le client en premier. Consultez [Groupes pilotes](#pilot-groups) pour obtenir des recommandations et [Revenir en arrière](#roll-back) en cas de problème.
+Déterminez les groupes qui recevront le client en premier. Consultez [Groupes pilotes](#pilot-groups) pour obtenir des recommandations et [Revenir en arrière](#roll-back) en cas de problème.
 
 ### <a id="pilot-groups"></a>Groupes pilotes
 
-Commencez par un groupe de 20 à 50 utilisateurs. Leurs commentaires vous aident à ajuster les [paramètres par défaut](#default-settings).
+Commencez avec un groupe de 20 à 50 utilisateurs. Leurs commentaires vous aident à ajuster les [paramètres par défaut](#default-settings).
 
 ## <a id="assign-licenses"></a>Attribuer des licences
 
@@ -20,7 +20,7 @@ Utilisez l’API d’administration pour attribuer des licences à partir de vot
 
 ## <a id="default-settings"></a>Paramètres par défaut
 
-Déployez les paramètres par défaut avec votre outil de gestion des appareils. Les paramètres que les utilisateurs ne peuvent pas modifier sont indiqués comme **verrouillés**.
+Déployez les paramètres par défaut avec votre outil de gestion des appareils. Les paramètres que les utilisateurs ne peuvent pas modifier sont marqués comme **verrouillés**.
 
 ## <a id="roll-back"></a>Revenir en arrière
 

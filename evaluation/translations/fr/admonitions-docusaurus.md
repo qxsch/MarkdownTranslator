@@ -9,12 +9,12 @@ sidebar_position: 3
 La rétention s’applique aux fichiers supprimés et aux anciennes versions.
 :::
 
-:::tip Libérer de l’espace
-Définissez une période de rétention courte pour les dossiers contenant de grands fichiers multimédias.
+:::tip Gagner de l’espace
+Définissez une courte durée de rétention pour les dossiers contenant de gros fichiers multimédias.
 :::
 
 :::info[Rétention et conservation légale]
-Les fichiers soumis à une **conservation légale** sont conservés même lorsque la période de rétention prend fin.
+Les fichiers soumis à une **conservation légale** sont conservés même lorsque la durée de rétention prend fin.
 :::
 
 :::warning
@@ -29,4 +29,4 @@ Les fichiers supprimés par la stratégie de rétention ne peuvent pas être res
 
 ## <a id="choose-a-period"></a>Choisir une période
 
-La plupart des équipes conservent les versions pendant 30 jours. Les secteurs réglementés ont souvent besoin d’une durée de rétention de 7 ans.
+La plupart des équipes conservent les versions pendant 30 jours. Dans les secteurs réglementés, une durée de 7 ans est souvent nécessaire.

@@ -12,11 +12,11 @@
 - [ ] Geler les modifications sur l’ancien serveur
 - [ ] Exécuter `ctsync migrate --source \\oldserver\shares`
   - [ ] Surveiller la progression dans le centre d’administration
-  - [ ] Noter tous les fichiers en échec
+  - [ ] Noter tout fichier en échec
 - [ ] Comparer le nombre de fichiers
 
 ## <a id="after-the-migration"></a>Après la migration
 
-1. [ ] Éteindre l’ancien serveur après deux semaines
+1. [ ] Éteindre l’ancien serveur au bout de deux semaines
 2. [ ] Archiver le journal de migration `migrate.log`
 3. [x] Célébrer

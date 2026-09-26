@@ -4,7 +4,7 @@ Diese Datei verwendet CRLF-Zeilenenden. Sie müssen bei der Übersetzung Byte f�
 
 ## <a id="steps"></a>Schritte
 
-1. Öffnen Sie die **Systemsteuerung**.
+1. Öffnen Sie **Systemsteuerung**.
 2. Wählen Sie **Programme** > **Programm deinstallieren** aus.
 3. Wählen Sie *Contoso Sync* und dann **Deinstallieren** aus.
 

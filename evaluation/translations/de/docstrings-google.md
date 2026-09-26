@@ -2,7 +2,7 @@
 
 ```python
 def upload(path, retries=3, overwrite=False):
-    """Lädt eine Datei in den Sync-Share hoch.
+    """Lädt eine Datei in die Synchronisierungsfreigabe hoch.
 
     Der Upload wird mit exponentiellem Backoff wiederholt, wenn der
     Dienst einen vorübergehenden Fehler zurückgibt.
@@ -19,10 +19,10 @@ def upload(path, retries=3, overwrite=False):
 
     Raises:
         FileNotFoundError: Wenn die lokale Datei nicht vorhanden ist.
-        QuotaExceededError: Wenn der Sync-Share voll ist.
+        QuotaExceededError: Wenn die Freigabe voll ist.
 
     Example:
-        Einen Bericht hochladen und seine Version ausgeben.
+        Laden Sie einen Bericht hoch, und geben Sie seine Version aus.
 
         >>> result = upload("report.pdf")
         >>> print(result.version)

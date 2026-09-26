@@ -12,8 +12,8 @@ Pfeile und Symbole: Einstellungen → Netzwerk → Proxy, © Contoso, ™, ±5 %
 
 Namen mit Akzenten bleiben unverändert: Zoë Müller, François Nguyễn und Łukasz Żółć arbeiten im Team.
 
-Rechts-nach-links-Text in einem Satz: Das arabische Wort مرحبا bedeutet Hallo.
+Von rechts nach links geschriebener Text in einem Satz: Das arabische Wort مرحبا bedeutet „Hallo“.
 
 Zero-Width-Joiner-Sequenzen: 👩‍💻 und 🏳️‍🌈.
 
-Mathematische Symbole im Fließtext: ≤ 5 Minuten, ≥ 99,9% Verfügbarkeit, × 3 schneller.
+Mathematische Symbole im Fließtext: ≤ 5 Minuten, ≥ 99,9 % Verfügbarkeit, × 3 schneller.

@@ -1,21 +1,21 @@
-# <a id="formatting-edge-cases"></a>Grenzfälle bei der Formatierung
+# <a id="formatting-edge-cases"></a>Randfälle bei der Formatierung
 
-Dieser Satz enthält **fett formatierten Text mit *verschachtelter Kursivschrift* darin** und endet normal.
+Dieser Satz enthält **fetten Text mit *verschachtelter Kursivschrift* darin** und endet normal.
 
-Hervorhebung innerhalb eines Worts: un**glaub**lich sowie snake_case_names_stay und file_name.txt bleiben unverändert.
+Hervorhebung innerhalb eines Wortes: ung**laub**lich sowie snake_case_names_stay und file_name.txt bleiben unverändert.
 
-Gemischter ***fett und kursiv formatierter*** Text, ~~durchgestrichene Wörter~~ und `inline code` in einer Zeile.
+Gemischter ***fetter und kursiver*** Text, ~~durchgestrichene Wörter~~ und `inline code` in einer Zeile.
 
 **Fett am Anfang** eines Satzes und *kursiv am Ende*.
 
-Ein Satz, der einen **fett formatierten [Link](https://example.com)** enthält.
+Ein Satz mit einem **fett formatierten [Link](https://example.com)** darin.
 
-Mehrere Spans: **Öffnen**, **Bearbeiten** und **Speichern** befinden sich im Menü **Datei**.
+Mehrere Bereiche: **Öffnen**, **Bearbeiten** und **Speichern** befinden sich im Menü **Datei**.
 
-Unterstrich-Hervorhebung: _dies ist hervorgehoben_ und __dies ist fett formatiert__.
+Hervorhebung mit Unterstrichen: _Dies ist hervorgehoben_ und __dies ist fett__.
 
-Ein literaler Asteriskus \* und ein literaler Unterstrich \_ müssen maskiert bleiben.
+Ein literaler Stern \* und ein literaler Unterstrich \_ müssen mit Escapezeichen versehen bleiben.
 
-Aneinandergrenzende Spans: **eins**_zwei_ und `code`**fett**.
+Angrenzende Bereiche: **eins**_zwei_ und `code`**fett**.
 
 Ein hervorgehobener Dateiname: *settings.json* und ein fett formatierter Pfad: **C:\Temp\sync**.

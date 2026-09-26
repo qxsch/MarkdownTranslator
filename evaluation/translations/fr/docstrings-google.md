@@ -4,15 +4,14 @@
 def upload(path, retries=3, overwrite=False):
     """Charge un fichier dans le partage de synchronisation.
 
-    Le chargement fait l’objet de nouvelles tentatives avec
-    temporisation exponentielle lorsque le service renvoie une
-    erreur transitoire.
+    Le chargement est retenté avec une temporisation exponentielle
+    lorsque le service renvoie une erreur transitoire.
 
     Args:
         path (str): Chemin local du fichier à charger.
-        retries (int): Nombre de réessais pour un bloc ayant échoué.
+        retries (int): Nombre de nouvelles tentatives pour un bloc en échec.
         overwrite (bool, optional): Remplace un fichier existant
-            portant le même nom. La valeur par défaut est False.
+            portant le même nom. Valeur par défaut : False.
 
     Returns:
         UploadResult: Détails sur le fichier chargé, y compris son

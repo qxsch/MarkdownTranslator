@@ -22,13 +22,13 @@ Get-Content "$env:LOCALAPPDATA\ContosoSync\logs\ctsync.log" -Tail 50
 
 ## <a id="sync-is-slow"></a>La synchronisation est lente
 
-- Les fichiers volumineux sont chargés par blocs de 4 Mo. Un fichier de 10 Go prend un certain temps.
-- Le logiciel antivirus peut analyser chaque fichier deux fois. Excluez le dossier de synchronisation de l’analyse en temps réel.
+- Les fichiers volumineux sont chargés par blocs de 4 Mo. Un fichier de 10 Go prend du temps.
+- Les logiciels antivirus peuvent analyser chaque fichier deux fois. Excluez le dossier de synchronisation de l’analyse en temps réel.
 - Vérifiez la limite de bande passante sous **Paramètres** > **Réseau**.
 
-## <a id="the-app-crashes-at-startup"></a>L’application se ferme de manière inattendue au démarrage
+## <a id="the-app-crashes-at-startup"></a>L’application se ferme de façon inattendue au démarrage
 
-Supprimez le fichier de paramètres `settings.json` dans `%APPDATA%\ContosoSync`, puis relancez l’application. Vos fichiers ne sont pas affectés.
+Supprimez le fichier de paramètres `settings.json` dans `%APPDATA%\ContosoSync` et relancez l’application. Vos fichiers ne sont pas affectés.
 
 ## <a id="still-stuck"></a>Le problème persiste ?
 

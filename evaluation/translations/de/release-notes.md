@@ -4,15 +4,15 @@
 
 ### <a id="new-features"></a>Neue Funktionen
 
-- **Selektive Synchronisierung von Unterordnern.** Sie können jetzt einzelne Unterordner statt ganzer Freigaben ausschließen.
-- Ein neues `--dry-run`-Flag für `ctsync reset` zeigt an, was gelöscht würde.
-- Der dunkle Modus richtet sich nach der Systemeinstellung.
+- **Selektive Synchronisierung für Unterordner.** Sie können jetzt einzelne Unterordner statt ganzer Freigaben ausschließen.
+- Ein neues `--dry-run`-Flag für `ctsync reset` zeigt, was gelöscht würde.
+- Der Dunkelmodus folgt der Systemeinstellung.
 
 ### <a id="fixed-issues"></a>Behobene Probleme
 
-- Ein Absturz wurde behoben, der auftrat, wenn ein Dateiname ein Emoji enthielt.
-- Das Symbol im Infobereich flackert bei großen Uploads nicht mehr.
-- Wenn ein Ordner während der Synchronisierung umbenannt wurde, wurde ein Duplikat erstellt. Dies wurde behoben.
+- Es wurde ein Absturz behoben, der auftrat, wenn ein Dateiname ein Emoji enthielt.
+- Das Taskleistensymbol flackert bei großen Uploads nicht mehr.
+- Wurde ein Ordner während der Synchronisierung umbenannt, wurde ein Duplikat erstellt. Dies ist behoben.
 
 ### <a id="known-issues"></a>Bekannte Probleme
 
@@ -25,7 +25,7 @@
 
 ## Version 3.1.0 (2026-04-20)
 
-### <a id="breaking-changes"></a>Nicht abwärtskompatible Änderungen
+### <a id="breaking-changes"></a>Kompatibilitätsbeeinträchtigende Änderungen
 
 - Die Konfigurationsdatei wurde von `config.ini` nach `config.toml` verschoben. Die App migriert sie beim ersten Start automatisch.
 - Die Unterstützung für Windows 10 Version 1809 wurde eingestellt.
