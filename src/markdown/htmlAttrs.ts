@@ -1,6 +1,11 @@
 /** Attributes whose values are human-readable text and get translated. */
 export const TRANSLATABLE_ATTRS = new Set(['alt', 'title', 'aria-label', 'aria-description', 'aria-placeholder', 'placeholder', 'label', 'summary', 'abbr']);
 
+/** Props of MDX/JSX components that carry prose (compared lower-cased). */
+export const TRANSLATABLE_JSX_PROPS = new Set([
+  ...TRANSLATABLE_ATTRS, 'description', 'caption', 'heading', 'subtitle', 'tooltip', 'message', 'emptytext', 'helptext', 'hint', 'buttontext', 'linktext',
+]);
+
 /** Elements whose content is never translated. */
 export const NO_TRANSLATE_ELEMENTS = new Set(['script', 'style', 'pre', 'code', 'kbd', 'samp', 'var', 'tt', 'textarea', 'svg', 'math', 'template', 'noscript', 'iframe', 'object']);
 

@@ -12,6 +12,7 @@ import { validateSegment } from '../src/translate/validate.js';
 import type { ExtractOptions } from '../src/markdown/context.js';
 import { LANG, pseudoMap, pseudoWords } from './helpers.js';
 import { BadRequest, options } from '../src/server.js';
+import { findDollarMath } from '../src/markdown/mathSpans.js';
 
 await initCodeParsers();
 
@@ -139,11 +140,32 @@ describe('3. Markdown dialects', () => {
     expect(checkTags(seg, bad).join()).toMatch(/original order/);
   });
 
-  it('treats $...$ as math only when enabled', () => {
-    const on = extract('Costs $5 and $10 per unit.\n', [], { parse: { mathSingleDollar: true } });
-    expect(on.segments[0].masked).not.toContain(' and ');
-    const off = extract('Costs $5 and $10 per unit.\n', []);
+  it('treats $...$ as math only when it looks like a formula', () => {
+    const on = extract('Costs $5 and $10 per unit, the weight is $\\alpha = 0.7$.\n', [], { parse: { mathSingleDollar: true } });
+    expect(on.segments[0].masked).toContain(' and ');
+    expect(on.segments[0].masked).not.toContain('alpha');
+    // Switch off: the formula is still protected by masking, prices stay prose.
+    const off = extract('Costs $5 and $10 per unit, the weight is $\\alpha = 0.7$.\n', []);
     expect(off.segments[0].masked).toContain(' and ');
+    expect(off.segments[0].masked).not.toContain('alpha');
+  });
+
+  it.each([
+    ['Costs $5 and $10 per unit', []],
+    ['$20,000 and $30,000', []],
+    ['between $5 and $12 per seat', []],
+    ['$2.50 instead of $5.', []],
+    ['from $5-$10', []],
+    ['price $5$ only', []],
+    ['store it in $PRICE for later', []],
+    ['escaped \\$x$ stays', []],
+    ['weight $\\alpha = 0.7$ and server $s$', ['$\\alpha = 0.7$', '$s$']],
+    ['you need $n = \\lceil R / r \\rceil$ gateways', ['$n = \\lceil R / r \\rceil$']],
+    ['classic $E = mc^2$.', ['$E = mc^2$']],
+    ['index $x_1$ and $a+b$', ['$x_1$', '$a+b$']],
+    ['$v = 0.3$, at $20 per TB costs $260', ['$v = 0.3$']],
+  ])('findDollarMath(%j)', (text, expected) => {
+    expect(findDollarMath(text).map((m) => text.slice(m.start, m.end))).toEqual(expected);
   });
 
   it('parses MDX (JSX, expressions, ESM) and translates text and prose attributes', () => {

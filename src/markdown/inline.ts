@@ -2,7 +2,7 @@ import type { Nodes, PhrasingContent } from 'mdast';
 import type { MaskBuilder } from '../mask/masking.js';
 import type { ExtractContext } from './context.js';
 import { endOf, startOf } from './parse.js';
-import { NO_TRANSLATE_ELEMENTS, TRANSLATABLE_ATTRS, VOID_ELEMENTS, hasNoTranslateMarker, isClosingTag, isSelfClosing, tagName, tagSkeleton } from './htmlAttrs.js';
+import { NO_TRANSLATE_ELEMENTS, TRANSLATABLE_ATTRS, TRANSLATABLE_JSX_PROPS, VOID_ELEMENTS, hasNoTranslateMarker, isClosingTag, isSelfClosing, tagName, tagSkeleton } from './htmlAttrs.js';
 import type { TMap } from './types.js';
 
 /** Index of the `]` matching the `[` at `open`, honoring escapes and code spans; -1 if none. */
@@ -114,13 +114,13 @@ export function walkPhrasing(ctx: ExtractContext, nodes: PhrasingContent[], from
         const tagEnd = node.children.length ? startOf(node.children[0]) : e;
         const tag = src.slice(s, tagEnd);
         if ((node.name && NO_TRANSLATE_ELEMENTS.has(node.name.toLowerCase())) || hasNoTranslateMarker(tag) || !node.children.length) {
-          const t = node.children.length ? { render: () => src.slice(s, e), ids: [] as string[] } : ctx.tagWithAttributes(tag, `<${node.name}> component`);
+          const t = node.children.length ? { render: () => src.slice(s, e), ids: [] as string[] } : ctx.tagWithAttributes(tag, `<${node.name}> component`, TRANSLATABLE_JSX_PROPS);
           deps.push(...t.ids);
           mb.placeholder(t.render, src.slice(s, e));
           break;
         }
         const ce = endOf(node.children[node.children.length - 1]);
-        const t = ctx.tagWithAttributes(tag, `<${node.name}> component`);
+        const t = ctx.tagWithAttributes(tag, `<${node.name}> component`, TRANSLATABLE_JSX_PROPS);
         deps.push(...t.ids);
         const n = mb.open('html', t.render, src.slice(ce, e), `<${node.name}> component`);
         walkPhrasing(ctx, node.children, tagEnd, ce, mb, deps);
@@ -225,7 +225,7 @@ export function jsxSkeleton(n: { name?: string | null; attributes: unknown[] }):
   const attrs = n.attributes.map((a) => {
     const at = a as { type: string; name?: string; value?: unknown };
     if (at.type !== 'mdxJsxAttribute') return `{${String((at.value as string) ?? '')}}`;
-    const v = typeof at.value === 'string' ? (TRANSLATABLE_ATTRS.has(at.name!.toLowerCase()) ? '…' : at.value) : at.value == null ? '' : `{${String((at.value as { value?: string }).value)}}`;
+    const v = typeof at.value === 'string' ? (TRANSLATABLE_JSX_PROPS.has(at.name!.toLowerCase()) ? '…' : at.value) : at.value == null ? '' : `{${String((at.value as { value?: string }).value)}}`;
     return `${at.name}=${v}`;
   });
   return `${n.name ?? ''} ${attrs.join(' ')}`;

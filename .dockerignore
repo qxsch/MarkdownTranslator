@@ -3,7 +3,8 @@ dist
 .cache
 .env
 .git
-eval/results
+eval
+evaluation
 test
 infra
 *.log

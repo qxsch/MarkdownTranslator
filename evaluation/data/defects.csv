@@ -1,0 +1,19 @@
+lang,doc,category,type,detail
+de,blog-informal.md,prose and UI,protected content changed,"200,000"
+fr,blog-informal.md,prose and UI,protected content changed,"200,000"
+de,code-no-lang.md,code,expected text not translated,Show the version
+fr,code-no-lang.md,code,expected text not translated,Show the version
+fr,docstrings-numpy.md,docstrings,protected content changed,quota_report : 
+de,escapes-entities.md,syntax edge cases,protected content changed,\`backticks\`
+de,escapes-entities.md,syntax edge cases,protected content changed,\[brackets\]
+de,escapes-entities.md,syntax edge cases,protected content changed,&lt;tag&gt;
+fr,escapes-entities.md,syntax edge cases,protected content changed,\`backticks\`
+fr,escapes-entities.md,syntax edge cases,protected content changed,\[brackets\]
+fr,escapes-entities.md,syntax edge cases,protected content changed,&lt;tag&gt;
+de,filenames-paths.md,syntax edge cases,protected content changed,settings.json and restart
+fr,filenames-paths.md,syntax edge cases,protected content changed,settings.json and restart
+de,tables-complex.md,syntax edge cases,protected content changed,[Audit log](#audit-log)
+fr,tables-complex.md,syntax edge cases,protected content changed,[Audit log](#audit-log)
+de,ui-labels-table.md,prose and UI,protected content changed,Shift+F5
+de,ui-labels-table.md,prose and UI,protected content changed,Ctrl+B
+fr,ui-labels-table.md,prose and UI,protected content changed,Shift+F5

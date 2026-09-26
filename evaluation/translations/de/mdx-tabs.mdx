@@ -1,0 +1,28 @@
+---
+title: Client installieren
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# <a id="install-the-client"></a>Client installieren
+
+Wählen Sie Ihr Betriebssystem aus.
+
+<Tabs groupId="os">
+  <TabItem value="win" label="Windows" default>
+    Installieren Sie den **Client** mit winget: `winget install Contoso.Sync`.
+  </TabItem>
+  <TabItem value="mac" label="macOS">
+    Installieren Sie den Client mit Homebrew: `brew install --cask contoso-sync`.
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+    Laden Sie das Paket von der Release-Seite herunter.
+  </TabItem>
+</Tabs>
+
+<Callout type="warning" title="Neustart erforderlich">
+Starten Sie Ihren Computer nach der Installation neu.
+</Callout>
+
+Die aktuelle Version ist {props.version}.

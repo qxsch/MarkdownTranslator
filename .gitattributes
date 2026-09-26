@@ -1,0 +1,4 @@
+# Keep evaluation and test fixtures byte-exact (line endings are part of what is tested).
+eval/features/** -text
+test/fixtures/** -text
+evaluation/translations/** -text

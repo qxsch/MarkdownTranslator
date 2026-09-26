@@ -43,7 +43,7 @@ export interface SegmentOutcome {
   via: 'cache' | 'gpt' | 'nmt' | 'source';
   retries: number;
   errors?: string[];
-  review?: { category: string; severity: string; explanation: string };
+  review?: { category: string; severity: string; explanation: string; before?: string };
   untranslated?: boolean;
 }
 
@@ -240,10 +240,11 @@ export async function reviewPass(deps: EngineDeps, task: TranslateTask, tm: Map<
         if (!seg) continue;
         const text = sanitize(seg, edit.text);
         if (text === tm.get(seg.id) || validateSegment(seg, text, task.ex, task.lang).length) continue;
+        const before = tm.get(seg.id);
         tm.set(seg.id, text);
         const o = outcomes.get(seg.id);
         if (!o) continue;
-        o.review = { category: edit.category, severity: edit.severity, explanation: edit.explanation };
+        o.review = { category: edit.category, severity: edit.severity, explanation: edit.explanation, before };
         o.untranslated = looksUntranslated(seg, text) || undefined;
       }
     }),

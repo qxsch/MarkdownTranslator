@@ -1,0 +1,154 @@
+{
+  "createdAt": "2026-09-26T14:08:46.016Z",
+  "commit": "d72dbf7+dirty",
+  "langs": [
+    "de",
+    "fr"
+  ],
+  "documents": 68,
+  "judges": [
+    "translate-alt",
+    "translate",
+    "copilot:claude-opus-5.5",
+    "copilot:gpt-6-sol"
+  ],
+  "scorecard": {
+    "documents": 136,
+    "keepPass": 0.9827213822894169,
+    "translatePass": 0.9970845481049563,
+    "cleanDocuments": 0.9044117647058824,
+    "structureBroken": 0,
+    "codeChanged": 0,
+    "linksBroken": 0,
+    "errors": 0,
+    "reverted": 0,
+    "keptSource": 0,
+    "nmtFallbacks": 0,
+    "englishSegments": 4,
+    "tokensMean": 6698.580882352941,
+    "secondsMedian": 134.0245,
+    "secondsP90": 225.16899999999998
+  },
+  "features": {
+    "review": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 203,
+      "losses": 7,
+      "pAdj": 2.8453331437338998e-50,
+      "reduction": 26.296838407494143,
+      "problemsOn": 22,
+      "problemsOff": 36
+    },
+    "structuralContext": {
+      "recommendation": "off",
+      "quality": "no significant difference",
+      "wins": 108,
+      "losses": 128,
+      "pAdj": 0.4321561881627629,
+      "reduction": -0.5969300739056281,
+      "problemsOn": 22,
+      "problemsOff": 21
+    },
+    "nmtFallback": {
+      "recommendation": "not exercised",
+      "quality": "not judged",
+      "wins": 0,
+      "losses": 0,
+      "pAdj": null,
+      "reduction": null,
+      "problemsOn": 22,
+      "problemsOff": 22
+    },
+    "preserveAnchors": {
+      "recommendation": "on",
+      "quality": "not judged",
+      "wins": 0,
+      "losses": 0,
+      "pAdj": null,
+      "reduction": null,
+      "problemsOn": 22,
+      "problemsOff": 76
+    },
+    "codeComments": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 56,
+      "losses": 12,
+      "pAdj": 3.104747868781094e-7,
+      "reduction": 30.11758691206544,
+      "problemsOn": 22,
+      "problemsOff": 351
+    },
+    "docstrings": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 13,
+      "losses": 1,
+      "pAdj": 0.0054931640625000035,
+      "reduction": 27.30593607305936,
+      "problemsOn": 22,
+      "problemsOff": 169
+    },
+    "frontMatter": {
+      "recommendation": "on",
+      "quality": "better",
+      "wins": 17,
+      "losses": 0,
+      "pAdj": 0.00006103515625000001,
+      "reduction": 44.274193548387096,
+      "problemsOn": 22,
+      "problemsOff": 92
+    },
+    "mdx (.md files)": {
+      "recommendation": "off",
+      "quality": "worse",
+      "wins": 5,
+      "losses": 146,
+      "pAdj": 2.6620992357650954e-36,
+      "reduction": -45.15687250996016,
+      "problemsOn": 328,
+      "problemsOff": 22
+    },
+    "mathSingleDollar": {
+      "recommendation": "off",
+      "quality": "no significant difference",
+      "wins": 0,
+      "losses": 0,
+      "pAdj": null,
+      "reduction": 8.333333333333332,
+      "problemsOn": 22,
+      "problemsOff": 22
+    },
+    "mdx (.mdx files)": {
+      "recommendation": "on",
+      "quality": "no significant difference",
+      "wins": 7,
+      "losses": 3,
+      "pAdj": 0.4321561881627629,
+      "reduction": 10.036057692307693,
+      "problemsOn": 0,
+      "problemsOff": 16
+    }
+  },
+  "defects": [
+    "de|blog-informal.md|overtranslated|200,000",
+    "fr|blog-informal.md|overtranslated|200,000",
+    "de|code-no-lang.md|untranslated|Show the version",
+    "fr|code-no-lang.md|untranslated|Show the version",
+    "fr|docstrings-numpy.md|overtranslated|quota_report : ",
+    "de|escapes-entities.md|overtranslated|\\`backticks\\`",
+    "de|escapes-entities.md|overtranslated|\\[brackets\\]",
+    "de|escapes-entities.md|overtranslated|&lt;tag&gt;",
+    "fr|escapes-entities.md|overtranslated|\\`backticks\\`",
+    "fr|escapes-entities.md|overtranslated|\\[brackets\\]",
+    "fr|escapes-entities.md|overtranslated|&lt;tag&gt;",
+    "de|filenames-paths.md|overtranslated|settings.json and restart",
+    "fr|filenames-paths.md|overtranslated|settings.json and restart",
+    "de|tables-complex.md|overtranslated|[Audit log](#audit-log)",
+    "fr|tables-complex.md|overtranslated|[Audit log](#audit-log)",
+    "de|ui-labels-table.md|overtranslated|Shift+F5",
+    "de|ui-labels-table.md|overtranslated|Ctrl+B",
+    "fr|ui-labels-table.md|overtranslated|Shift+F5"
+  ]
+}

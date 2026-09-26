@@ -92,10 +92,10 @@ export class ExtractContext {
    * Makes translatable attributes (alt, title, aria-label...) of a single tag into embedded segments.
    * Returns a renderer producing the tag with translated values, plus the embedded segment ids.
    */
-  tagWithAttributes(tag: string, note: string): { render: (tm: TMap) => string; ids: string[] } {
+  tagWithAttributes(tag: string, note: string, names: ReadonlySet<string> = TRANSLATABLE_ATTRS): { render: (tm: TMap) => string; ids: string[] } {
     const parts: { start: number; end: number; seg: Segment }[] = [];
     for (const a of parseAttributes(tag)) {
-      if (!TRANSLATABLE_ATTRS.has(a.name)) continue;
+      if (!names.has(a.name.toLowerCase())) continue;
       const value = tag.slice(a.start, a.end);
       const mb = this.builder();
       mb.source(value, 'html');

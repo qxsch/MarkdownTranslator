@@ -6,7 +6,7 @@ import { endOf, startOf } from './parse.js';
 
 /** Front matter keys (at any nesting depth) whose string values are prose. */
 export const FRONTMATTER_KEYS = new Set([
-  'title', 'subtitle', 'description', 'summary', 'excerpt', 'abstract', 'caption', 'heading', 'lead', 'teaser', 'tagline',
+  'title', 'subtitle', 'titlesuffix', 'description', 'summary', 'excerpt', 'abstract', 'caption', 'heading', 'lead', 'teaser', 'tagline',
   'seo_title', 'seotitle', 'seo_description', 'og_title', 'og_description', 'twitter_title', 'twitter_description', 'sidebar_label', 'nav_title', 'linktitle', 'menu_title',
 ]);
 

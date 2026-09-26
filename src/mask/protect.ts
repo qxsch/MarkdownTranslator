@@ -2,6 +2,7 @@
  * Detection of spans that must never be translated inside running text:
  * URLs, file names, paths, identifiers, variables, CLI flags, versions, etc.
  */
+import { findDollarMath } from '../markdown/mathSpans.js';
 
 const FILE_EXTENSIONS = [
   'md', 'mdx', 'markdown', 'txt', 'rst', 'adoc', 'pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'csv', 'tsv', 'rtf', 'odt',
@@ -113,6 +114,8 @@ export function findProtected(text: string, doNotTranslate: readonly string[] = 
     }
   };
   for (const r of RULES) collect(r.re, r.name);
+  // Formulas such as $\alpha = 0.7$ stay verbatim even when single-dollar math is not parsed.
+  for (const m of findDollarMath(text)) spans.push({ ...m, rule: 'math' });
   for (const term of doNotTranslate) {
     if (!term.trim()) continue;
     const re = new RegExp(String.raw`(?<![\p{L}\p{N}_])${esc(term)}(?![\p{L}\p{N}_])`, 'gu');

@@ -1,0 +1,20 @@
+import { Chart } from '../components/Chart';
+export const meta = { owner: 'sre-team', reviewed: '2026-08-14' };
+
+# <a id="sync-statistics"></a>Statistiques de synchronisation
+
+Cette page affiche des données en direct. Sa dernière révision date du {meta.reviewed}.
+
+<Chart source="/api/stats/uploads" title="Téléversements par heure" height={320} />
+
+Le graphique ci-dessus est mis à jour toutes les {60} secondes. Survolez une barre pour afficher la valeur exacte.
+
+{/* Editors: the next section is generated, don't edit it by hand. */}
+
+## <a id="top-folders"></a>Principaux dossiers
+
+Les dossiers ayant enregistré le plus de modifications aujourd’hui sont répertoriés ci-dessous.
+
+<FolderTable limit={10} sortBy="changes" emptyText="Aucune modification aujourd’hui" />
+
+Les valeurs sont arrondies à {2} décimales.

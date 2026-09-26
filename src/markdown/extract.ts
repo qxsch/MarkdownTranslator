@@ -3,6 +3,7 @@ import { toString } from 'mdast-util-to-string';
 import { ExtractContext, type ExtractOptions } from './context.js';
 import { inlineSignature, walkPhrasing } from './inline.js';
 import { processHtmlBlock } from './html.js';
+import { TRANSLATABLE_JSX_PROPS } from './htmlAttrs.js';
 import { processFrontmatter } from './frontmatter.js';
 import { processCodeBlock } from '../code/comments.js';
 import { lineStartOf, maxLineWidth } from './lineMap.js';
@@ -112,7 +113,7 @@ export function extract(input: string, doNotTranslate: readonly string[] = [], o
         if (tagEnd !== -1) {
           setStructure(...local);
           const tag = source.slice(s, tagEnd);
-          const t = ctx.tagWithAttributes(tag, `<${node.name}> component`);
+          const t = ctx.tagWithAttributes(tag, `<${node.name}> component`, TRANSLATABLE_JSX_PROPS);
           if (t.ids.length) {
             const mb = ctx.builder();
             mb.placeholder(t.render, tag);

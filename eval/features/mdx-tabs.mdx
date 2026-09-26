@@ -1,0 +1,28 @@
+---
+title: Install the client
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Install the client
+
+Pick your operating system.
+
+<Tabs groupId="os">
+  <TabItem value="win" label="Windows" default>
+    Install the **client** with winget: `winget install Contoso.Sync`.
+  </TabItem>
+  <TabItem value="mac" label="macOS">
+    Install the client with Homebrew: `brew install --cask contoso-sync`.
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+    Download the package from the release page.
+  </TabItem>
+</Tabs>
+
+<Callout type="warning" title="Restart required">
+After the installation, restart your computer.
+</Callout>
+
+The current version is {props.version}.

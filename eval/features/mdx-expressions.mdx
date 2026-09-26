@@ -1,0 +1,20 @@
+import { Chart } from '../components/Chart';
+export const meta = { owner: 'sre-team', reviewed: '2026-08-14' };
+
+# Sync statistics
+
+This page shows live data. It was last reviewed on {meta.reviewed}.
+
+<Chart source="/api/stats/uploads" title="Uploads per hour" height={320} />
+
+The chart above updates every {60} seconds. Hover over a bar to see the exact value.
+
+{/* Editors: the next section is generated, don't edit it by hand. */}
+
+## Top folders
+
+The folders with the most changes today are listed below.
+
+<FolderTable limit={10} sortBy="changes" emptyText="No changes today" />
+
+Values are rounded to {2} decimal places.

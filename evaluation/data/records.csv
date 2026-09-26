@@ -1,0 +1,1225 @@
+comparison,doc,category,lang,defaultOn,changed,keepMissingOn,keepMissingOff,translateLeftOn,translateLeftOff,structureBrokenOn,structureBrokenOff,codeChangedOn,codeChangedOff,linksBrokenOn,linksBrokenOff,englishLeftOn,englishLeftOff,errorsOn,errorsOff,tokensOn,tokensOff
+review,admonitions-docusaurus.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,2330
+review,admonitions-docusaurus.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,2428
+review,admonitions-github.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,3249
+review,admonitions-github.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,2753
+review,ambiguous-words.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,3237
+review,ambiguous-words.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,3765
+review,anchors-crosslinks.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,3489
+review,anchors-crosslinks.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,2967
+review,anchors-duplicate-headings.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,3690
+review,anchors-duplicate-headings.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,3760
+review,api-errors-table.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,3411
+review,api-errors-table.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,3413
+review,blog-informal.md,prose and UI,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,2786
+review,blog-informal.md,prose and UI,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,3426
+review,cli-reference.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,3469
+review,cli-reference.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,3837
+review,code-commented-out.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,2138
+review,code-commented-out.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,2104
+review,code-comments-csharp.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,2291
+review,code-comments-csharp.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,2333
+review,code-comments-js.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,2900
+review,code-comments-js.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,3410
+review,code-comments-mixed-langs.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,3818
+review,code-comments-mixed-langs.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,3299
+review,code-comments-python.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,1976
+review,code-comments-python.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,2062
+review,code-comments-shell.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,2391
+review,code-comments-shell.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,2320
+review,code-no-lang.md,code,de,true,true,0,0,1,0,0,0,0,0,0,0,1,0,0,0,3860,1928
+review,code-no-lang.md,code,fr,true,true,0,0,1,0,0,0,0,0,0,0,1,0,0,0,4673,2707
+review,code-only.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+review,code-only.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+review,crlf-windows.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,2115
+review,crlf-windows.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,2019
+review,directives.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,2232
+review,directives.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,2251
+review,docstrings-doctest.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5259,1981
+review,docstrings-doctest.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4020,1973
+review,docstrings-google.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6498,3056
+review,docstrings-google.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8784,4793
+review,docstrings-module-class.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5248,2605
+review,docstrings-module-class.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6279,2628
+review,docstrings-numpy.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,2503
+review,docstrings-numpy.md,docstrings,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,4730,2556
+review,docstrings-rest.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8531,3546
+review,docstrings-rest.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6806,3782
+review,emphasis-edge.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,4022
+review,emphasis-edge.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,3590
+review,escapes-entities.md,syntax edge cases,de,true,true,3,2,0,0,0,0,0,0,0,0,0,0,0,0,8836,3757
+review,escapes-entities.md,syntax edge cases,fr,true,true,3,2,0,0,0,0,0,0,0,0,0,0,0,0,8778,3722
+review,faq.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,2965
+review,faq.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,2989
+review,filenames-paths.md,syntax edge cases,de,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,2914
+review,filenames-paths.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,2906
+review,footnotes.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,2436
+review,footnotes.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,2451
+review,formal-policy.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,2763
+review,formal-policy.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,2941
+review,frontmatter-basic.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,2432
+review,frontmatter-basic.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,2105
+review,frontmatter-docs.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5592,2604
+review,frontmatter-docs.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4962,2484
+review,frontmatter-informal.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,2454
+review,frontmatter-informal.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,2447
+review,frontmatter-nested.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,2457
+review,frontmatter-nested.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,2536
+review,getting-started.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,2,0,0,14384,4790
+review,getting-started.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,2,0,0,11567,4768
+review,glossary-terms.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,2938
+review,glossary-terms.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,2414
+review,html-attributes.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,2613
+review,html-attributes.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,2379
+review,html-mixed.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,2636
+review,html-mixed.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,2627
+review,hugo-shortcodes.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,2812
+review,hugo-shortcodes.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,2645
+review,identifiers-env.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,2889
+review,identifiers-env.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,3186
+review,images-alt.md,HTML and images,de,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,5982,2309
+review,images-alt.md,HTML and images,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,5885,2306
+review,inline-code-heavy.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,2503
+review,inline-code-heavy.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,2504
+review,line-breaks.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,2186
+review,line-breaks.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,2197
+review,links-and-references.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,3132
+review,links-and-references.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,3208
+review,math-inline-dense.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8042,4064
+review,math-inline-dense.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10731,3552
+review,math-mixed.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,2189
+review,math-mixed.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,2197
+review,math-prices-edge.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,2309
+review,math-prices-edge.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,2342
+review,math-prices.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,2271
+review,math-prices.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,2300
+review,math-real.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,2518
+review,math-real.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,2534
+review,mdx-expressions.mdx,MDX,de,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,4087,1914
+review,mdx-expressions.mdx,MDX,fr,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,5378,1928
+review,mdx-jsx-attrs.mdx,MDX,de,true,true,0,0,0,1,0,0,0,0,0,0,0,0,0,0,6377,2394
+review,mdx-jsx-attrs.mdx,MDX,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5067,2644
+review,mdx-like-plain.md,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,2411
+review,mdx-like-plain.md,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,2646
+review,mdx-tabs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,1663
+review,mdx-tabs.mdx,MDX,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,0,0,0,3714,1958
+review,mixed-everything.md,mixed,de,true,true,0,0,0,0,0,0,0,0,0,0,0,1,0,0,9425,4583
+review,mixed-everything.md,mixed,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,1,0,0,11515,4568
+review,msdocs-syntax.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,1,0,0,5488,2521
+review,msdocs-syntax.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,1,0,0,5347,2436
+review,nested-lists.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,4781
+review,nested-lists.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,4274
+review,numbers-units-dates.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,2695
+review,numbers-units-dates.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,3213
+review,product-names.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,2618
+review,product-names.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,2302
+review,release-notes.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,3915
+review,release-notes.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,4016
+review,settings-short-values.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,6148
+review,settings-short-values.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,6573
+review,single-word.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,836
+review,single-word.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,813
+review,tables-complex.md,syntax edge cases,de,true,true,1,0,0,0,0,0,0,0,0,0,0,0,0,0,12828,6321
+review,tables-complex.md,syntax edge cases,fr,true,true,1,0,0,0,0,0,0,0,0,0,0,0,0,0,13857,5949
+review,task-lists.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,2284
+review,task-lists.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,2464
+review,toc-heavy.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,3147
+review,toc-heavy.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,3131
+review,troubleshooting.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,3780
+review,troubleshooting.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,3868
+review,tutorial-long.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,4424
+review,tutorial-long.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,5100
+review,ui-labels-table.md,prose and UI,de,true,true,2,0,0,0,0,0,0,0,0,0,0,1,0,0,14327,5671
+review,ui-labels-table.md,prose and UI,fr,true,true,1,0,0,0,0,0,0,0,0,0,0,1,0,0,15053,5649
+review,ui-walkthrough.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,2820
+review,ui-walkthrough.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,2792
+review,unicode-emoji.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,2497
+review,unicode-emoji.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,3026
+structuralContext,admonitions-docusaurus.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,4457
+structuralContext,admonitions-docusaurus.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,6062
+structuralContext,admonitions-github.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,7608
+structuralContext,admonitions-github.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,5971
+structuralContext,ambiguous-words.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,13313
+structuralContext,ambiguous-words.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,11980
+structuralContext,anchors-crosslinks.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,5811
+structuralContext,anchors-crosslinks.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,7072
+structuralContext,anchors-duplicate-headings.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,7971
+structuralContext,anchors-duplicate-headings.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,9838
+structuralContext,api-errors-table.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,5769
+structuralContext,api-errors-table.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,7364
+structuralContext,blog-informal.md,prose and UI,de,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,6549
+structuralContext,blog-informal.md,prose and UI,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,8372
+structuralContext,cli-reference.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,9839
+structuralContext,cli-reference.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,6404
+structuralContext,code-commented-out.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,4129
+structuralContext,code-commented-out.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,3866
+structuralContext,code-comments-csharp.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,4038
+structuralContext,code-comments-csharp.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,4854
+structuralContext,code-comments-js.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,5522
+structuralContext,code-comments-js.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,7354
+structuralContext,code-comments-mixed-langs.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,7135
+structuralContext,code-comments-mixed-langs.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,7707
+structuralContext,code-comments-python.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,3723
+structuralContext,code-comments-python.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,4616
+structuralContext,code-comments-shell.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,4018
+structuralContext,code-comments-shell.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,4070
+structuralContext,code-no-lang.md,code,de,true,true,0,0,1,1,0,0,0,0,0,0,1,1,0,0,3860,3531
+structuralContext,code-no-lang.md,code,fr,true,true,0,0,1,1,0,0,0,0,0,0,1,1,0,0,4673,3812
+structuralContext,code-only.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+structuralContext,code-only.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+structuralContext,crlf-windows.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,3894
+structuralContext,crlf-windows.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,4535
+structuralContext,directives.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3494
+structuralContext,directives.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,3873
+structuralContext,docstrings-doctest.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5259,3623
+structuralContext,docstrings-doctest.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4020,3496
+structuralContext,docstrings-google.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6498,7375
+structuralContext,docstrings-google.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8784,6830
+structuralContext,docstrings-module-class.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5248,5186
+structuralContext,docstrings-module-class.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6279,4819
+structuralContext,docstrings-numpy.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5687
+structuralContext,docstrings-numpy.md,docstrings,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,4730,5421
+structuralContext,docstrings-rest.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8531,5919
+structuralContext,docstrings-rest.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6806,7120
+structuralContext,emphasis-edge.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9744
+structuralContext,emphasis-edge.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,9343
+structuralContext,escapes-entities.md,syntax edge cases,de,true,true,3,2,0,0,0,0,0,0,0,0,0,0,0,0,8836,8570
+structuralContext,escapes-entities.md,syntax edge cases,fr,true,true,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,7975
+structuralContext,faq.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6277
+structuralContext,faq.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6260
+structuralContext,filenames-paths.md,syntax edge cases,de,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5961
+structuralContext,filenames-paths.md,syntax edge cases,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,7211
+structuralContext,footnotes.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5521
+structuralContext,footnotes.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,4972
+structuralContext,formal-policy.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,6024
+structuralContext,formal-policy.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5593
+structuralContext,frontmatter-basic.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,4971
+structuralContext,frontmatter-basic.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,4488
+structuralContext,frontmatter-docs.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5592,5566
+structuralContext,frontmatter-docs.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4962,5323
+structuralContext,frontmatter-informal.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,4432
+structuralContext,frontmatter-informal.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,4426
+structuralContext,frontmatter-nested.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,4445
+structuralContext,frontmatter-nested.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,4172
+structuralContext,getting-started.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14384,16080
+structuralContext,getting-started.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11567,11336
+structuralContext,glossary-terms.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,4458
+structuralContext,glossary-terms.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,5017
+structuralContext,html-attributes.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,4348
+structuralContext,html-attributes.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,4192
+structuralContext,html-mixed.md,HTML and images,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,5076
+structuralContext,html-mixed.md,HTML and images,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,6534
+structuralContext,hugo-shortcodes.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,6140
+structuralContext,hugo-shortcodes.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,5710
+structuralContext,identifiers-env.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4796
+structuralContext,identifiers-env.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,5721
+structuralContext,images-alt.md,HTML and images,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5653
+structuralContext,images-alt.md,HTML and images,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5462
+structuralContext,inline-code-heavy.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,4617
+structuralContext,inline-code-heavy.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5691
+structuralContext,line-breaks.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,4000
+structuralContext,line-breaks.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,5082
+structuralContext,links-and-references.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,9298
+structuralContext,links-and-references.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,7214
+structuralContext,math-inline-dense.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8042,7262
+structuralContext,math-inline-dense.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10731,13316
+structuralContext,math-mixed.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4035
+structuralContext,math-mixed.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4124
+structuralContext,math-prices-edge.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,5208
+structuralContext,math-prices-edge.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4858
+structuralContext,math-prices.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,5316
+structuralContext,math-prices.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4180
+structuralContext,math-real.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,5139
+structuralContext,math-real.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,5114
+structuralContext,mdx-expressions.mdx,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4087,3795
+structuralContext,mdx-expressions.mdx,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5378,4256
+structuralContext,mdx-jsx-attrs.mdx,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6377,6113
+structuralContext,mdx-jsx-attrs.mdx,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5067,5127
+structuralContext,mdx-like-plain.md,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,4273
+structuralContext,mdx-like-plain.md,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5071
+structuralContext,mdx-tabs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,3289
+structuralContext,mdx-tabs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3714,3658
+structuralContext,mixed-everything.md,mixed,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9425,10674
+structuralContext,mixed-everything.md,mixed,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11515,9122
+structuralContext,msdocs-syntax.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5488,4668
+structuralContext,msdocs-syntax.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5347,4563
+structuralContext,nested-lists.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,10661
+structuralContext,nested-lists.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8689
+structuralContext,numbers-units-dates.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,5594
+structuralContext,numbers-units-dates.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,6963
+structuralContext,product-names.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,10036
+structuralContext,product-names.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4805
+structuralContext,release-notes.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,6699
+structuralContext,release-notes.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7116
+structuralContext,settings-short-values.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,11896
+structuralContext,settings-short-values.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,13439
+structuralContext,single-word.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1595
+structuralContext,single-word.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1589
+structuralContext,tables-complex.md,syntax edge cases,de,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,12828,10830
+structuralContext,tables-complex.md,syntax edge cases,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,13857,10060
+structuralContext,task-lists.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,4489
+structuralContext,task-lists.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4088
+structuralContext,toc-heavy.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,5443
+structuralContext,toc-heavy.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,5317
+structuralContext,troubleshooting.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,5777
+structuralContext,troubleshooting.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7292
+structuralContext,tutorial-long.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,11042
+structuralContext,tutorial-long.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,9891
+structuralContext,ui-labels-table.md,prose and UI,de,true,true,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,13303
+structuralContext,ui-labels-table.md,prose and UI,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,11940
+structuralContext,ui-walkthrough.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,6216
+structuralContext,ui-walkthrough.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,5692
+structuralContext,unicode-emoji.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,6431
+structuralContext,unicode-emoji.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,8781
+nmtFallback,admonitions-docusaurus.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,4509
+nmtFallback,admonitions-docusaurus.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,8282
+nmtFallback,admonitions-github.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,6838
+nmtFallback,admonitions-github.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,6274
+nmtFallback,ambiguous-words.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,11571
+nmtFallback,ambiguous-words.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,13754
+nmtFallback,anchors-crosslinks.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,6698
+nmtFallback,anchors-crosslinks.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,5883
+nmtFallback,anchors-duplicate-headings.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,10852
+nmtFallback,anchors-duplicate-headings.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,9233
+nmtFallback,api-errors-table.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,6854
+nmtFallback,api-errors-table.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,8724
+nmtFallback,blog-informal.md,prose and UI,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,5908
+nmtFallback,blog-informal.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,6651
+nmtFallback,cli-reference.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,10200
+nmtFallback,cli-reference.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,8466
+nmtFallback,code-commented-out.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,3997
+nmtFallback,code-commented-out.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,3954
+nmtFallback,code-comments-csharp.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,4318
+nmtFallback,code-comments-csharp.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,4341
+nmtFallback,code-comments-js.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,6397
+nmtFallback,code-comments-js.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,11227
+nmtFallback,code-comments-mixed-langs.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,10681
+nmtFallback,code-comments-mixed-langs.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,6802
+nmtFallback,code-comments-python.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,4002
+nmtFallback,code-comments-python.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,4998
+nmtFallback,code-comments-shell.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,4540
+nmtFallback,code-comments-shell.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,7048
+nmtFallback,code-no-lang.md,code,de,true,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,3860,3860
+nmtFallback,code-no-lang.md,code,fr,true,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,4673,4673
+nmtFallback,code-only.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+nmtFallback,code-only.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+nmtFallback,crlf-windows.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,4234
+nmtFallback,crlf-windows.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,4335
+nmtFallback,directives.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3747
+nmtFallback,directives.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262
+nmtFallback,docstrings-doctest.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5259,5259
+nmtFallback,docstrings-doctest.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4020,4020
+nmtFallback,docstrings-google.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6498,6498
+nmtFallback,docstrings-google.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8784,8784
+nmtFallback,docstrings-module-class.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5248,5248
+nmtFallback,docstrings-module-class.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6279,6279
+nmtFallback,docstrings-numpy.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+nmtFallback,docstrings-numpy.md,docstrings,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,4730,4730
+nmtFallback,docstrings-rest.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8531,8531
+nmtFallback,docstrings-rest.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6806,6806
+nmtFallback,emphasis-edge.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467
+nmtFallback,emphasis-edge.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,7387
+nmtFallback,escapes-entities.md,syntax edge cases,de,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8836,8836
+nmtFallback,escapes-entities.md,syntax edge cases,fr,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,8778
+nmtFallback,faq.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6126
+nmtFallback,faq.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6173
+nmtFallback,filenames-paths.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5439
+nmtFallback,filenames-paths.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,5846
+nmtFallback,footnotes.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5139
+nmtFallback,footnotes.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,5075
+nmtFallback,formal-policy.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,5302
+nmtFallback,formal-policy.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5937
+nmtFallback,frontmatter-basic.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,4836
+nmtFallback,frontmatter-basic.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,4487
+nmtFallback,frontmatter-docs.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5592,5592
+nmtFallback,frontmatter-docs.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4962,4962
+nmtFallback,frontmatter-informal.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,4951
+nmtFallback,frontmatter-informal.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,5250
+nmtFallback,frontmatter-nested.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,4384
+nmtFallback,frontmatter-nested.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,4590
+nmtFallback,getting-started.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14384,14384
+nmtFallback,getting-started.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11567,11567
+nmtFallback,glossary-terms.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,9338
+nmtFallback,glossary-terms.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,7230
+nmtFallback,html-attributes.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,4614
+nmtFallback,html-attributes.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,5512
+nmtFallback,html-mixed.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,6031
+nmtFallback,html-mixed.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,5485
+nmtFallback,hugo-shortcodes.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,5826
+nmtFallback,hugo-shortcodes.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,6132
+nmtFallback,identifiers-env.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4717
+nmtFallback,identifiers-env.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,6085
+nmtFallback,images-alt.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5982
+nmtFallback,images-alt.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5885
+nmtFallback,inline-code-heavy.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,5228
+nmtFallback,inline-code-heavy.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5214
+nmtFallback,line-breaks.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,4660
+nmtFallback,line-breaks.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,5233
+nmtFallback,links-and-references.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,8870
+nmtFallback,links-and-references.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,7832
+nmtFallback,math-inline-dense.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8042,8042
+nmtFallback,math-inline-dense.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10731,10731
+nmtFallback,math-mixed.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4138
+nmtFallback,math-mixed.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4144
+nmtFallback,math-prices-edge.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,4256
+nmtFallback,math-prices-edge.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4942
+nmtFallback,math-prices.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,4301
+nmtFallback,math-prices.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4333
+nmtFallback,math-real.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,5750
+nmtFallback,math-real.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,6780
+nmtFallback,mdx-expressions.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4087,4087
+nmtFallback,mdx-expressions.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5378,5378
+nmtFallback,mdx-jsx-attrs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6377,6377
+nmtFallback,mdx-jsx-attrs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5067,5067
+nmtFallback,mdx-like-plain.md,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,4987
+nmtFallback,mdx-like-plain.md,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+nmtFallback,mdx-tabs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,3321
+nmtFallback,mdx-tabs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3714,3714
+nmtFallback,mixed-everything.md,mixed,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9425,9425
+nmtFallback,mixed-everything.md,mixed,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11515,11515
+nmtFallback,msdocs-syntax.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5488,5488
+nmtFallback,msdocs-syntax.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5347,5347
+nmtFallback,nested-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,14828
+nmtFallback,nested-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8614
+nmtFallback,numbers-units-dates.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,6249
+nmtFallback,numbers-units-dates.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,7159
+nmtFallback,product-names.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,6320
+nmtFallback,product-names.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4756
+nmtFallback,release-notes.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,7989
+nmtFallback,release-notes.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7553
+nmtFallback,settings-short-values.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,13164
+nmtFallback,settings-short-values.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,15264
+nmtFallback,single-word.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1610
+nmtFallback,single-word.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1579
+nmtFallback,tables-complex.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,12828,12828
+nmtFallback,tables-complex.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,13857,13857
+nmtFallback,task-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,6628
+nmtFallback,task-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4604
+nmtFallback,toc-heavy.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,5994
+nmtFallback,toc-heavy.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,5452
+nmtFallback,troubleshooting.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,6967
+nmtFallback,troubleshooting.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7358
+nmtFallback,tutorial-long.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,13369
+nmtFallback,tutorial-long.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,10710
+nmtFallback,ui-labels-table.md,prose and UI,de,true,false,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,14327
+nmtFallback,ui-labels-table.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,15053
+nmtFallback,ui-walkthrough.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,8027
+nmtFallback,ui-walkthrough.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,8443
+nmtFallback,unicode-emoji.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,4225
+nmtFallback,unicode-emoji.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,6805
+preserveAnchors,admonitions-docusaurus.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,4509
+preserveAnchors,admonitions-docusaurus.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,8282
+preserveAnchors,admonitions-github.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,6838
+preserveAnchors,admonitions-github.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,6274
+preserveAnchors,ambiguous-words.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,11571
+preserveAnchors,ambiguous-words.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,13754
+preserveAnchors,anchors-crosslinks.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,7,0,0,0,0,6698,6698
+preserveAnchors,anchors-crosslinks.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,7,0,0,0,0,5883,5883
+preserveAnchors,anchors-duplicate-headings.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,8,0,0,0,0,10852,10852
+preserveAnchors,anchors-duplicate-headings.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,8,0,0,0,0,9233,9233
+preserveAnchors,api-errors-table.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,6854
+preserveAnchors,api-errors-table.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,8724
+preserveAnchors,blog-informal.md,prose and UI,de,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,5908
+preserveAnchors,blog-informal.md,prose and UI,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,6651
+preserveAnchors,cli-reference.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,10200
+preserveAnchors,cli-reference.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,8466
+preserveAnchors,code-commented-out.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,3997
+preserveAnchors,code-commented-out.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,3954
+preserveAnchors,code-comments-csharp.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,4318
+preserveAnchors,code-comments-csharp.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,4341
+preserveAnchors,code-comments-js.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,6397
+preserveAnchors,code-comments-js.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,11227
+preserveAnchors,code-comments-mixed-langs.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,10681
+preserveAnchors,code-comments-mixed-langs.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,6802
+preserveAnchors,code-comments-python.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,4002
+preserveAnchors,code-comments-python.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,4998
+preserveAnchors,code-comments-shell.md,code,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,4540
+preserveAnchors,code-comments-shell.md,code,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,7048
+preserveAnchors,code-no-lang.md,code,de,true,true,0,0,1,1,0,0,0,0,0,0,1,1,0,0,3860,3860
+preserveAnchors,code-no-lang.md,code,fr,true,true,0,0,1,1,0,0,0,0,0,0,1,1,0,0,4673,4673
+preserveAnchors,code-only.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+preserveAnchors,code-only.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+preserveAnchors,crlf-windows.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,4234
+preserveAnchors,crlf-windows.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,4335
+preserveAnchors,directives.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3747
+preserveAnchors,directives.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262
+preserveAnchors,docstrings-doctest.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5259,5259
+preserveAnchors,docstrings-doctest.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4020,4020
+preserveAnchors,docstrings-google.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6498,6498
+preserveAnchors,docstrings-google.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8784,8784
+preserveAnchors,docstrings-module-class.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5248,5248
+preserveAnchors,docstrings-module-class.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6279,6279
+preserveAnchors,docstrings-numpy.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+preserveAnchors,docstrings-numpy.md,docstrings,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,4730,4730
+preserveAnchors,docstrings-rest.md,docstrings,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8531,8531
+preserveAnchors,docstrings-rest.md,docstrings,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6806,6806
+preserveAnchors,emphasis-edge.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467
+preserveAnchors,emphasis-edge.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,7387
+preserveAnchors,escapes-entities.md,syntax edge cases,de,true,true,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8836,8836
+preserveAnchors,escapes-entities.md,syntax edge cases,fr,true,true,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,8778
+preserveAnchors,faq.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6126
+preserveAnchors,faq.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6173
+preserveAnchors,filenames-paths.md,syntax edge cases,de,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5439
+preserveAnchors,filenames-paths.md,syntax edge cases,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,5846
+preserveAnchors,footnotes.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5139
+preserveAnchors,footnotes.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,5075
+preserveAnchors,formal-policy.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,5302
+preserveAnchors,formal-policy.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5937
+preserveAnchors,frontmatter-basic.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,4836
+preserveAnchors,frontmatter-basic.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,4487
+preserveAnchors,frontmatter-docs.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5592,5592
+preserveAnchors,frontmatter-docs.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4962,4962
+preserveAnchors,frontmatter-informal.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,4951
+preserveAnchors,frontmatter-informal.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,5250
+preserveAnchors,frontmatter-nested.md,front matter,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,4384
+preserveAnchors,frontmatter-nested.md,front matter,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,4590
+preserveAnchors,getting-started.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,1,0,0,0,0,14384,14384
+preserveAnchors,getting-started.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,1,0,0,0,0,11567,11567
+preserveAnchors,glossary-terms.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,9338
+preserveAnchors,glossary-terms.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,7230
+preserveAnchors,html-attributes.md,HTML and images,de,true,true,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,4614
+preserveAnchors,html-attributes.md,HTML and images,fr,true,true,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,5512
+preserveAnchors,html-mixed.md,HTML and images,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,6031
+preserveAnchors,html-mixed.md,HTML and images,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,5485
+preserveAnchors,hugo-shortcodes.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,5826
+preserveAnchors,hugo-shortcodes.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,6132
+preserveAnchors,identifiers-env.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4717
+preserveAnchors,identifiers-env.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,6085
+preserveAnchors,images-alt.md,HTML and images,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5982
+preserveAnchors,images-alt.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5885
+preserveAnchors,inline-code-heavy.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,5228
+preserveAnchors,inline-code-heavy.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5214
+preserveAnchors,line-breaks.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,4660
+preserveAnchors,line-breaks.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,5233
+preserveAnchors,links-and-references.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,8870
+preserveAnchors,links-and-references.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,7832
+preserveAnchors,math-inline-dense.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8042,8042
+preserveAnchors,math-inline-dense.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10731,10731
+preserveAnchors,math-mixed.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4138
+preserveAnchors,math-mixed.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4144
+preserveAnchors,math-prices-edge.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,4256
+preserveAnchors,math-prices-edge.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4942
+preserveAnchors,math-prices.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,4301
+preserveAnchors,math-prices.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4333
+preserveAnchors,math-real.md,math,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,5750
+preserveAnchors,math-real.md,math,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,6780
+preserveAnchors,mdx-expressions.mdx,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4087,4087
+preserveAnchors,mdx-expressions.mdx,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5378,5378
+preserveAnchors,mdx-jsx-attrs.mdx,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6377,6377
+preserveAnchors,mdx-jsx-attrs.mdx,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5067,5067
+preserveAnchors,mdx-like-plain.md,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,4987
+preserveAnchors,mdx-like-plain.md,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+preserveAnchors,mdx-tabs.mdx,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,3321
+preserveAnchors,mdx-tabs.mdx,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3714,3714
+preserveAnchors,mixed-everything.md,mixed,de,true,true,0,0,0,0,0,0,0,0,0,1,0,0,0,0,9425,9425
+preserveAnchors,mixed-everything.md,mixed,fr,true,true,0,0,0,0,0,0,0,0,0,1,0,0,0,0,11515,11515
+preserveAnchors,msdocs-syntax.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5488,5488
+preserveAnchors,msdocs-syntax.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5347,5347
+preserveAnchors,nested-lists.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,14828
+preserveAnchors,nested-lists.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8614
+preserveAnchors,numbers-units-dates.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,6249
+preserveAnchors,numbers-units-dates.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,7159
+preserveAnchors,product-names.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,6320
+preserveAnchors,product-names.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4756
+preserveAnchors,release-notes.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,7989
+preserveAnchors,release-notes.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7553
+preserveAnchors,settings-short-values.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,13164
+preserveAnchors,settings-short-values.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,15264
+preserveAnchors,single-word.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1610
+preserveAnchors,single-word.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1579
+preserveAnchors,tables-complex.md,syntax edge cases,de,true,true,1,1,0,0,0,0,0,0,0,1,0,0,0,0,12828,12828
+preserveAnchors,tables-complex.md,syntax edge cases,fr,true,true,1,1,0,0,0,0,0,0,0,1,0,0,0,0,13857,13857
+preserveAnchors,task-lists.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,6628
+preserveAnchors,task-lists.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4604
+preserveAnchors,toc-heavy.md,links and anchors,de,true,true,0,0,0,0,0,0,0,0,0,9,0,0,0,0,5994,5994
+preserveAnchors,toc-heavy.md,links and anchors,fr,true,true,0,0,0,0,0,0,0,0,0,9,0,0,0,0,5452,5452
+preserveAnchors,troubleshooting.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,6967
+preserveAnchors,troubleshooting.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7358
+preserveAnchors,tutorial-long.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,13369
+preserveAnchors,tutorial-long.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,10710
+preserveAnchors,ui-labels-table.md,prose and UI,de,true,true,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,14327
+preserveAnchors,ui-labels-table.md,prose and UI,fr,true,true,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,15053
+preserveAnchors,ui-walkthrough.md,prose and UI,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,8027
+preserveAnchors,ui-walkthrough.md,prose and UI,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,8443
+preserveAnchors,unicode-emoji.md,syntax edge cases,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,4225
+preserveAnchors,unicode-emoji.md,syntax edge cases,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,6805
+codeComments,admonitions-docusaurus.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,4509
+codeComments,admonitions-docusaurus.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,8282
+codeComments,admonitions-github.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,6838
+codeComments,admonitions-github.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,6274
+codeComments,ambiguous-words.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,11571
+codeComments,ambiguous-words.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,13754
+codeComments,anchors-crosslinks.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,6698
+codeComments,anchors-crosslinks.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,5883
+codeComments,anchors-duplicate-headings.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,10852
+codeComments,anchors-duplicate-headings.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,9233
+codeComments,api-errors-table.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,6854
+codeComments,api-errors-table.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,8724
+codeComments,blog-informal.md,prose and UI,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,5908
+codeComments,blog-informal.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,6651
+codeComments,cli-reference.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,10200
+codeComments,cli-reference.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,8466
+codeComments,code-commented-out.md,code,de,true,true,0,0,0,4,0,0,0,0,0,0,0,4,0,0,3997,2595
+codeComments,code-commented-out.md,code,fr,true,true,0,0,0,4,0,0,0,0,0,0,0,4,0,0,3954,2504
+codeComments,code-comments-csharp.md,code,de,true,true,0,0,0,5,0,0,0,0,0,0,0,6,0,0,4318,3214
+codeComments,code-comments-csharp.md,code,fr,true,true,0,0,0,5,0,0,0,0,0,0,0,6,0,0,4341,2941
+codeComments,code-comments-js.md,code,de,true,true,0,0,0,7,0,0,0,0,0,0,0,11,0,0,6397,3265
+codeComments,code-comments-js.md,code,fr,true,true,0,0,0,7,0,0,0,0,0,0,0,11,0,0,11227,3473
+codeComments,code-comments-mixed-langs.md,code,de,true,true,0,0,0,9,0,0,0,0,0,0,0,17,0,0,10681,3106
+codeComments,code-comments-mixed-langs.md,code,fr,true,true,0,0,0,9,0,0,0,0,0,0,0,17,0,0,6802,3343
+codeComments,code-comments-python.md,code,de,true,true,0,0,0,5,0,0,0,0,0,0,0,5,0,0,4002,2584
+codeComments,code-comments-python.md,code,fr,true,true,0,0,0,5,0,0,0,0,0,0,0,5,0,0,4998,2419
+codeComments,code-comments-shell.md,code,de,true,true,0,0,0,7,0,0,0,0,0,0,0,5,0,0,4540,2813
+codeComments,code-comments-shell.md,code,fr,true,true,0,0,0,7,0,0,0,0,0,0,0,5,0,0,7048,3250
+codeComments,code-no-lang.md,code,de,true,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,3860,2430
+codeComments,code-no-lang.md,code,fr,true,true,0,0,1,1,0,0,0,0,0,0,1,1,0,0,4673,2506
+codeComments,code-only.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+codeComments,code-only.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+codeComments,crlf-windows.md,syntax edge cases,de,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,4234,2721
+codeComments,crlf-windows.md,syntax edge cases,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,4335,2645
+codeComments,directives.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3747
+codeComments,directives.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262
+codeComments,docstrings-doctest.md,docstrings,de,true,true,0,0,0,5,0,0,0,0,0,0,0,5,0,0,5259,2280
+codeComments,docstrings-doctest.md,docstrings,fr,true,true,0,0,0,5,0,0,0,0,0,0,0,5,0,0,4020,2542
+codeComments,docstrings-google.md,docstrings,de,true,true,0,0,0,7,0,0,0,0,0,0,0,12,0,0,6498,2596
+codeComments,docstrings-google.md,docstrings,fr,true,true,0,0,0,7,0,0,0,0,0,0,0,12,0,0,8784,3176
+codeComments,docstrings-module-class.md,docstrings,de,true,true,0,0,0,5,0,0,0,0,0,0,0,6,0,0,5248,2656
+codeComments,docstrings-module-class.md,docstrings,fr,true,true,0,0,0,5,0,0,0,0,0,0,0,6,0,0,6279,2911
+codeComments,docstrings-numpy.md,docstrings,de,true,true,0,0,0,5,0,0,0,0,0,0,0,9,0,0,5251,3084
+codeComments,docstrings-numpy.md,docstrings,fr,true,true,1,0,0,5,0,0,0,0,0,0,0,9,0,0,4730,2659
+codeComments,docstrings-rest.md,docstrings,de,true,true,0,0,0,6,0,0,0,0,0,0,0,9,0,0,8531,2611
+codeComments,docstrings-rest.md,docstrings,fr,true,true,0,0,0,6,0,0,0,0,0,0,0,9,0,0,6806,2922
+codeComments,emphasis-edge.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467
+codeComments,emphasis-edge.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,7387
+codeComments,escapes-entities.md,syntax edge cases,de,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8836,8836
+codeComments,escapes-entities.md,syntax edge cases,fr,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,8778
+codeComments,faq.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6126
+codeComments,faq.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6173
+codeComments,filenames-paths.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5439
+codeComments,filenames-paths.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,5846
+codeComments,footnotes.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5139
+codeComments,footnotes.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,5075
+codeComments,formal-policy.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,5302
+codeComments,formal-policy.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5937
+codeComments,frontmatter-basic.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,4836
+codeComments,frontmatter-basic.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,4487
+codeComments,frontmatter-docs.md,front matter,de,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,5592,2407
+codeComments,frontmatter-docs.md,front matter,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,4962,2427
+codeComments,frontmatter-informal.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,4951
+codeComments,frontmatter-informal.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,5250
+codeComments,frontmatter-nested.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,4384
+codeComments,frontmatter-nested.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,4590
+codeComments,getting-started.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14384,14384
+codeComments,getting-started.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11567,11567
+codeComments,glossary-terms.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,9338
+codeComments,glossary-terms.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,7230
+codeComments,html-attributes.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,4614
+codeComments,html-attributes.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,5512
+codeComments,html-mixed.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,6031
+codeComments,html-mixed.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,5485
+codeComments,hugo-shortcodes.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,5826
+codeComments,hugo-shortcodes.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,6132
+codeComments,identifiers-env.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4717
+codeComments,identifiers-env.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,6085
+codeComments,images-alt.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5982
+codeComments,images-alt.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5885
+codeComments,inline-code-heavy.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,5228
+codeComments,inline-code-heavy.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5214
+codeComments,line-breaks.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,4660
+codeComments,line-breaks.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,5233
+codeComments,links-and-references.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,8870
+codeComments,links-and-references.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,7832
+codeComments,math-inline-dense.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8042,8042
+codeComments,math-inline-dense.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10731,10731
+codeComments,math-mixed.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4138
+codeComments,math-mixed.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4144
+codeComments,math-prices-edge.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,4256
+codeComments,math-prices-edge.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4942
+codeComments,math-prices.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,4301
+codeComments,math-prices.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4333
+codeComments,math-real.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,5750
+codeComments,math-real.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,6780
+codeComments,mdx-expressions.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4087,4087
+codeComments,mdx-expressions.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5378,5378
+codeComments,mdx-jsx-attrs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6377,6377
+codeComments,mdx-jsx-attrs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5067,5067
+codeComments,mdx-like-plain.md,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,4987
+codeComments,mdx-like-plain.md,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+codeComments,mdx-tabs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,3321
+codeComments,mdx-tabs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3714,3714
+codeComments,mixed-everything.md,mixed,de,true,true,0,0,0,2,0,0,0,0,0,0,0,5,0,0,9425,2910
+codeComments,mixed-everything.md,mixed,fr,true,true,0,0,0,2,0,0,0,0,0,0,0,5,0,0,11515,2832
+codeComments,msdocs-syntax.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5488,5488
+codeComments,msdocs-syntax.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5347,5347
+codeComments,nested-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,14828
+codeComments,nested-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8614
+codeComments,numbers-units-dates.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,6249
+codeComments,numbers-units-dates.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,7159
+codeComments,product-names.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,6320
+codeComments,product-names.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4756
+codeComments,release-notes.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,7989
+codeComments,release-notes.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7553
+codeComments,settings-short-values.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,13164
+codeComments,settings-short-values.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,15264
+codeComments,single-word.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1610
+codeComments,single-word.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1579
+codeComments,tables-complex.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,12828,12828
+codeComments,tables-complex.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,13857,13857
+codeComments,task-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,6628
+codeComments,task-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4604
+codeComments,toc-heavy.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,5994
+codeComments,toc-heavy.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,5452
+codeComments,troubleshooting.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,6967
+codeComments,troubleshooting.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7358
+codeComments,tutorial-long.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,13369
+codeComments,tutorial-long.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,10710
+codeComments,ui-labels-table.md,prose and UI,de,true,false,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,14327
+codeComments,ui-labels-table.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,15053
+codeComments,ui-walkthrough.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,8027
+codeComments,ui-walkthrough.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,8443
+codeComments,unicode-emoji.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,4225
+codeComments,unicode-emoji.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,6805
+docstrings,admonitions-docusaurus.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,4509
+docstrings,admonitions-docusaurus.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,8282
+docstrings,admonitions-github.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,6838
+docstrings,admonitions-github.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,6274
+docstrings,ambiguous-words.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,11571
+docstrings,ambiguous-words.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,13754
+docstrings,anchors-crosslinks.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,6698
+docstrings,anchors-crosslinks.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,5883
+docstrings,anchors-duplicate-headings.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,10852
+docstrings,anchors-duplicate-headings.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,9233
+docstrings,api-errors-table.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,6854
+docstrings,api-errors-table.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,8724
+docstrings,blog-informal.md,prose and UI,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,5908
+docstrings,blog-informal.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,6651
+docstrings,cli-reference.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,10200
+docstrings,cli-reference.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,8466
+docstrings,code-commented-out.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,3997
+docstrings,code-commented-out.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,3954
+docstrings,code-comments-csharp.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,4318
+docstrings,code-comments-csharp.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,4341
+docstrings,code-comments-js.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,6397
+docstrings,code-comments-js.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,11227
+docstrings,code-comments-mixed-langs.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,10681
+docstrings,code-comments-mixed-langs.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,6802
+docstrings,code-comments-python.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,4002
+docstrings,code-comments-python.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,4998
+docstrings,code-comments-shell.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,4540
+docstrings,code-comments-shell.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,7048
+docstrings,code-no-lang.md,code,de,true,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,3860,3860
+docstrings,code-no-lang.md,code,fr,true,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,4673,4673
+docstrings,code-only.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+docstrings,code-only.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+docstrings,crlf-windows.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,4234
+docstrings,crlf-windows.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,4335
+docstrings,directives.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3747
+docstrings,directives.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262
+docstrings,docstrings-doctest.md,docstrings,de,true,true,0,0,0,5,0,0,0,0,0,0,0,5,0,0,5259,0
+docstrings,docstrings-doctest.md,docstrings,fr,true,true,0,0,0,5,0,0,0,0,0,0,0,5,0,0,4020,0
+docstrings,docstrings-google.md,docstrings,de,true,true,0,0,0,7,0,0,0,0,0,0,0,12,0,0,6498,0
+docstrings,docstrings-google.md,docstrings,fr,true,true,0,0,0,7,0,0,0,0,0,0,0,12,0,0,8784,0
+docstrings,docstrings-module-class.md,docstrings,de,true,true,0,0,0,5,0,0,0,0,0,0,0,6,0,0,5248,0
+docstrings,docstrings-module-class.md,docstrings,fr,true,true,0,0,0,5,0,0,0,0,0,0,0,6,0,0,6279,0
+docstrings,docstrings-numpy.md,docstrings,de,true,true,0,0,0,5,0,0,0,0,0,0,0,9,0,0,5251,0
+docstrings,docstrings-numpy.md,docstrings,fr,true,true,1,0,0,5,0,0,0,0,0,0,0,9,0,0,4730,0
+docstrings,docstrings-rest.md,docstrings,de,true,true,0,0,0,6,0,0,0,0,0,0,0,9,0,0,8531,0
+docstrings,docstrings-rest.md,docstrings,fr,true,true,0,0,0,6,0,0,0,0,0,0,0,9,0,0,6806,0
+docstrings,emphasis-edge.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467
+docstrings,emphasis-edge.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,7387
+docstrings,escapes-entities.md,syntax edge cases,de,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8836,8836
+docstrings,escapes-entities.md,syntax edge cases,fr,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,8778
+docstrings,faq.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6126
+docstrings,faq.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6173
+docstrings,filenames-paths.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5439
+docstrings,filenames-paths.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,5846
+docstrings,footnotes.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5139
+docstrings,footnotes.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,5075
+docstrings,formal-policy.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,5302
+docstrings,formal-policy.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5937
+docstrings,frontmatter-basic.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,4836
+docstrings,frontmatter-basic.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,4487
+docstrings,frontmatter-docs.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5592,5592
+docstrings,frontmatter-docs.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4962,4962
+docstrings,frontmatter-informal.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,4951
+docstrings,frontmatter-informal.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,5250
+docstrings,frontmatter-nested.md,front matter,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,4384
+docstrings,frontmatter-nested.md,front matter,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,4590
+docstrings,getting-started.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14384,14384
+docstrings,getting-started.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11567,11567
+docstrings,glossary-terms.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,9338
+docstrings,glossary-terms.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,7230
+docstrings,html-attributes.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,4614
+docstrings,html-attributes.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,5512
+docstrings,html-mixed.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,6031
+docstrings,html-mixed.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,5485
+docstrings,hugo-shortcodes.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,5826
+docstrings,hugo-shortcodes.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,6132
+docstrings,identifiers-env.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4717
+docstrings,identifiers-env.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,6085
+docstrings,images-alt.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5982
+docstrings,images-alt.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5885
+docstrings,inline-code-heavy.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,5228
+docstrings,inline-code-heavy.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5214
+docstrings,line-breaks.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,4660
+docstrings,line-breaks.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,5233
+docstrings,links-and-references.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,8870
+docstrings,links-and-references.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,7832
+docstrings,math-inline-dense.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8042,8042
+docstrings,math-inline-dense.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10731,10731
+docstrings,math-mixed.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4138
+docstrings,math-mixed.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4144
+docstrings,math-prices-edge.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,4256
+docstrings,math-prices-edge.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4942
+docstrings,math-prices.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,4301
+docstrings,math-prices.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4333
+docstrings,math-real.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,5750
+docstrings,math-real.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,6780
+docstrings,mdx-expressions.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4087,4087
+docstrings,mdx-expressions.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5378,5378
+docstrings,mdx-jsx-attrs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6377,6377
+docstrings,mdx-jsx-attrs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5067,5067
+docstrings,mdx-like-plain.md,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,4987
+docstrings,mdx-like-plain.md,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+docstrings,mdx-tabs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,3321
+docstrings,mdx-tabs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3714,3714
+docstrings,mixed-everything.md,mixed,de,true,true,0,0,0,1,0,0,0,0,0,0,0,4,0,0,9425,3125
+docstrings,mixed-everything.md,mixed,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,4,0,0,11515,3300
+docstrings,msdocs-syntax.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5488,5488
+docstrings,msdocs-syntax.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5347,5347
+docstrings,nested-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,14828
+docstrings,nested-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8614
+docstrings,numbers-units-dates.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,6249
+docstrings,numbers-units-dates.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,7159
+docstrings,product-names.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,6320
+docstrings,product-names.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4756
+docstrings,release-notes.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,7989
+docstrings,release-notes.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7553
+docstrings,settings-short-values.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,13164
+docstrings,settings-short-values.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,15264
+docstrings,single-word.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1610
+docstrings,single-word.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1579
+docstrings,tables-complex.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,12828,12828
+docstrings,tables-complex.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,13857,13857
+docstrings,task-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,6628
+docstrings,task-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4604
+docstrings,toc-heavy.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,5994
+docstrings,toc-heavy.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,5452
+docstrings,troubleshooting.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,6967
+docstrings,troubleshooting.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7358
+docstrings,tutorial-long.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,13369
+docstrings,tutorial-long.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,10710
+docstrings,ui-labels-table.md,prose and UI,de,true,false,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,14327
+docstrings,ui-labels-table.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,15053
+docstrings,ui-walkthrough.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,8027
+docstrings,ui-walkthrough.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,8443
+docstrings,unicode-emoji.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,4225
+docstrings,unicode-emoji.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,6805
+frontMatter,admonitions-docusaurus.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,2083
+frontMatter,admonitions-docusaurus.md,dialects,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,2055
+frontMatter,admonitions-github.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,6838
+frontMatter,admonitions-github.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,6274
+frontMatter,ambiguous-words.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,11571
+frontMatter,ambiguous-words.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,13754
+frontMatter,anchors-crosslinks.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,6698
+frontMatter,anchors-crosslinks.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,5883
+frontMatter,anchors-duplicate-headings.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,10852
+frontMatter,anchors-duplicate-headings.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,9233
+frontMatter,api-errors-table.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,6854
+frontMatter,api-errors-table.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,8724
+frontMatter,blog-informal.md,prose and UI,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,5908
+frontMatter,blog-informal.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,6651
+frontMatter,cli-reference.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,10200
+frontMatter,cli-reference.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,8466
+frontMatter,code-commented-out.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,3997
+frontMatter,code-commented-out.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,3954
+frontMatter,code-comments-csharp.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,4318
+frontMatter,code-comments-csharp.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,4341
+frontMatter,code-comments-js.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,6397
+frontMatter,code-comments-js.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,11227
+frontMatter,code-comments-mixed-langs.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,10681
+frontMatter,code-comments-mixed-langs.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,6802
+frontMatter,code-comments-python.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,4002
+frontMatter,code-comments-python.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,4998
+frontMatter,code-comments-shell.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,4540
+frontMatter,code-comments-shell.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,7048
+frontMatter,code-no-lang.md,code,de,true,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,3860,3860
+frontMatter,code-no-lang.md,code,fr,true,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,4673,4673
+frontMatter,code-only.md,code,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+frontMatter,code-only.md,code,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+frontMatter,crlf-windows.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,4234
+frontMatter,crlf-windows.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,4335
+frontMatter,directives.md,dialects,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3747
+frontMatter,directives.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262
+frontMatter,docstrings-doctest.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5259,5259
+frontMatter,docstrings-doctest.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4020,4020
+frontMatter,docstrings-google.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6498,6498
+frontMatter,docstrings-google.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8784,8784
+frontMatter,docstrings-module-class.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5248,5248
+frontMatter,docstrings-module-class.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6279,6279
+frontMatter,docstrings-numpy.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+frontMatter,docstrings-numpy.md,docstrings,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,4730,4730
+frontMatter,docstrings-rest.md,docstrings,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8531,8531
+frontMatter,docstrings-rest.md,docstrings,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6806,6806
+frontMatter,emphasis-edge.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467
+frontMatter,emphasis-edge.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,7387
+frontMatter,escapes-entities.md,syntax edge cases,de,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8836,8836
+frontMatter,escapes-entities.md,syntax edge cases,fr,true,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,8778
+frontMatter,faq.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6126
+frontMatter,faq.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6173
+frontMatter,filenames-paths.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5439
+frontMatter,filenames-paths.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,5846
+frontMatter,footnotes.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5139
+frontMatter,footnotes.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,5075
+frontMatter,formal-policy.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,5302
+frontMatter,formal-policy.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5937
+frontMatter,frontmatter-basic.md,front matter,de,true,true,0,0,0,3,0,0,0,0,0,0,0,1,0,0,4836,2085
+frontMatter,frontmatter-basic.md,front matter,fr,true,true,0,0,0,3,0,0,0,0,0,0,0,1,0,0,4487,2147
+frontMatter,frontmatter-docs.md,front matter,de,true,true,0,0,0,3,0,0,0,0,0,0,0,3,0,0,5592,2455
+frontMatter,frontmatter-docs.md,front matter,fr,true,true,0,0,0,3,0,0,0,0,0,0,0,3,0,0,4962,2431
+frontMatter,frontmatter-informal.md,front matter,de,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,4951,2146
+frontMatter,frontmatter-informal.md,front matter,fr,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,5250,2124
+frontMatter,frontmatter-nested.md,front matter,de,true,true,0,0,0,6,0,0,0,0,0,0,0,6,0,0,4384,2342
+frontMatter,frontmatter-nested.md,front matter,fr,true,true,0,0,0,6,0,0,0,0,0,0,0,6,0,0,4590,2326
+frontMatter,getting-started.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14384,14384
+frontMatter,getting-started.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11567,11567
+frontMatter,glossary-terms.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,9338
+frontMatter,glossary-terms.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,7230
+frontMatter,html-attributes.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,4614
+frontMatter,html-attributes.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,5512
+frontMatter,html-mixed.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,6031
+frontMatter,html-mixed.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,5485
+frontMatter,hugo-shortcodes.md,dialects,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,2231
+frontMatter,hugo-shortcodes.md,dialects,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,2155
+frontMatter,identifiers-env.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4717
+frontMatter,identifiers-env.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,6085
+frontMatter,images-alt.md,HTML and images,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5982
+frontMatter,images-alt.md,HTML and images,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5885
+frontMatter,inline-code-heavy.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,5228
+frontMatter,inline-code-heavy.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5214
+frontMatter,line-breaks.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,4660
+frontMatter,line-breaks.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,5233
+frontMatter,links-and-references.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,8870
+frontMatter,links-and-references.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,7832
+frontMatter,math-inline-dense.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8042,8042
+frontMatter,math-inline-dense.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10731,10731
+frontMatter,math-mixed.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4138
+frontMatter,math-mixed.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4144
+frontMatter,math-prices-edge.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,4256
+frontMatter,math-prices-edge.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4942
+frontMatter,math-prices.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,4301
+frontMatter,math-prices.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4333
+frontMatter,math-real.md,math,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,5750
+frontMatter,math-real.md,math,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,6780
+frontMatter,mdx-expressions.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4087,4087
+frontMatter,mdx-expressions.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5378,5378
+frontMatter,mdx-jsx-attrs.mdx,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6377,6377
+frontMatter,mdx-jsx-attrs.mdx,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5067,5067
+frontMatter,mdx-like-plain.md,MDX,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,4987
+frontMatter,mdx-like-plain.md,MDX,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+frontMatter,mdx-tabs.mdx,MDX,de,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,3321,2181
+frontMatter,mdx-tabs.mdx,MDX,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,1,0,0,3714,2176
+frontMatter,mixed-everything.md,mixed,de,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,9425,3059
+frontMatter,mixed-everything.md,mixed,fr,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,11515,2799
+frontMatter,msdocs-syntax.md,dialects,de,true,true,0,0,0,1,0,0,0,0,0,0,0,2,0,0,5488,2249
+frontMatter,msdocs-syntax.md,dialects,fr,true,true,0,0,0,1,0,0,0,0,0,0,0,2,0,0,5347,2291
+frontMatter,nested-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,14828
+frontMatter,nested-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8614
+frontMatter,numbers-units-dates.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,6249
+frontMatter,numbers-units-dates.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,7159
+frontMatter,product-names.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,6320
+frontMatter,product-names.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4756
+frontMatter,release-notes.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,7989
+frontMatter,release-notes.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7553
+frontMatter,settings-short-values.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,13164
+frontMatter,settings-short-values.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,15264
+frontMatter,single-word.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1610
+frontMatter,single-word.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1579
+frontMatter,tables-complex.md,syntax edge cases,de,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,12828,12828
+frontMatter,tables-complex.md,syntax edge cases,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,13857,13857
+frontMatter,task-lists.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,6628
+frontMatter,task-lists.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4604
+frontMatter,toc-heavy.md,links and anchors,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,5994
+frontMatter,toc-heavy.md,links and anchors,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,5452
+frontMatter,troubleshooting.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,6967
+frontMatter,troubleshooting.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7358
+frontMatter,tutorial-long.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,13369
+frontMatter,tutorial-long.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,10710
+frontMatter,ui-labels-table.md,prose and UI,de,true,false,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,14327
+frontMatter,ui-labels-table.md,prose and UI,fr,true,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,15053
+frontMatter,ui-walkthrough.md,prose and UI,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,8027
+frontMatter,ui-walkthrough.md,prose and UI,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,8443
+frontMatter,unicode-emoji.md,syntax edge cases,de,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,4225
+frontMatter,unicode-emoji.md,syntax edge cases,fr,true,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,6805
+mdx (.md files),admonitions-docusaurus.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,4509
+mdx (.md files),admonitions-docusaurus.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,8282
+mdx (.md files),admonitions-github.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,6838
+mdx (.md files),admonitions-github.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,6274
+mdx (.md files),ambiguous-words.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,11571
+mdx (.md files),ambiguous-words.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,13754
+mdx (.md files),anchors-crosslinks.md,links and anchors,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,6698
+mdx (.md files),anchors-crosslinks.md,links and anchors,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,5883
+mdx (.md files),anchors-duplicate-headings.md,links and anchors,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,10852
+mdx (.md files),anchors-duplicate-headings.md,links and anchors,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,9233
+mdx (.md files),api-errors-table.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,6854
+mdx (.md files),api-errors-table.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,8724
+mdx (.md files),blog-informal.md,prose and UI,de,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,5908
+mdx (.md files),blog-informal.md,prose and UI,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,6651
+mdx (.md files),cli-reference.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,10200
+mdx (.md files),cli-reference.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,8466
+mdx (.md files),code-commented-out.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,3997
+mdx (.md files),code-commented-out.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,3954
+mdx (.md files),code-comments-csharp.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,4318
+mdx (.md files),code-comments-csharp.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,4341
+mdx (.md files),code-comments-js.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,6397
+mdx (.md files),code-comments-js.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,11227
+mdx (.md files),code-comments-mixed-langs.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,10681
+mdx (.md files),code-comments-mixed-langs.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,6802
+mdx (.md files),code-comments-python.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,4002
+mdx (.md files),code-comments-python.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,4998
+mdx (.md files),code-comments-shell.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,4540
+mdx (.md files),code-comments-shell.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,7048
+mdx (.md files),code-no-lang.md,code,de,false,true,0,0,1,1,0,0,0,0,0,0,1,1,0,0,6355,3860
+mdx (.md files),code-no-lang.md,code,fr,false,true,0,0,1,1,0,0,0,0,0,0,1,1,0,0,6261,4673
+mdx (.md files),code-only.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mdx (.md files),code-only.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mdx (.md files),crlf-windows.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,4234
+mdx (.md files),crlf-windows.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,4335
+mdx (.md files),directives.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3747
+mdx (.md files),directives.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262
+mdx (.md files),docstrings-doctest.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5259,5259
+mdx (.md files),docstrings-doctest.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4020,4020
+mdx (.md files),docstrings-google.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6498,6498
+mdx (.md files),docstrings-google.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8784,8784
+mdx (.md files),docstrings-module-class.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5248,5248
+mdx (.md files),docstrings-module-class.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6279,6279
+mdx (.md files),docstrings-numpy.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+mdx (.md files),docstrings-numpy.md,docstrings,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,4730,4730
+mdx (.md files),docstrings-rest.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8531,8531
+mdx (.md files),docstrings-rest.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6806,6806
+mdx (.md files),emphasis-edge.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467
+mdx (.md files),emphasis-edge.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,7387
+mdx (.md files),escapes-entities.md,syntax edge cases,de,false,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8836,8836
+mdx (.md files),escapes-entities.md,syntax edge cases,fr,false,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,8778
+mdx (.md files),faq.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6126
+mdx (.md files),faq.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6173
+mdx (.md files),filenames-paths.md,syntax edge cases,de,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5439
+mdx (.md files),filenames-paths.md,syntax edge cases,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,5846
+mdx (.md files),footnotes.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5139
+mdx (.md files),footnotes.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,5075
+mdx (.md files),formal-policy.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,5302
+mdx (.md files),formal-policy.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5937
+mdx (.md files),frontmatter-basic.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,4836
+mdx (.md files),frontmatter-basic.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,4487
+mdx (.md files),frontmatter-docs.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5592,5592
+mdx (.md files),frontmatter-docs.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4962,4962
+mdx (.md files),frontmatter-informal.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,4951
+mdx (.md files),frontmatter-informal.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,5250
+mdx (.md files),frontmatter-nested.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,4384
+mdx (.md files),frontmatter-nested.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,4590
+mdx (.md files),getting-started.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14384,14384
+mdx (.md files),getting-started.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11567,11567
+mdx (.md files),glossary-terms.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,9338
+mdx (.md files),glossary-terms.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,7230
+mdx (.md files),html-attributes.md,HTML and images,de,false,true,0,0,7,0,0,0,0,0,0,0,8,1,1,0,0,4614
+mdx (.md files),html-attributes.md,HTML and images,fr,false,true,0,0,7,0,0,0,0,0,0,0,8,1,1,0,0,5512
+mdx (.md files),html-mixed.md,HTML and images,de,false,true,0,0,6,0,0,0,0,0,0,0,10,0,1,0,0,6031
+mdx (.md files),html-mixed.md,HTML and images,fr,false,true,0,0,6,0,0,0,0,0,0,0,10,0,1,0,0,5485
+mdx (.md files),hugo-shortcodes.md,dialects,de,false,true,0,0,5,0,0,0,0,0,0,0,5,0,1,0,0,5826
+mdx (.md files),hugo-shortcodes.md,dialects,fr,false,true,0,0,5,0,0,0,0,0,0,0,5,0,1,0,0,6132
+mdx (.md files),identifiers-env.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4717
+mdx (.md files),identifiers-env.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,6085
+mdx (.md files),images-alt.md,HTML and images,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5982
+mdx (.md files),images-alt.md,HTML and images,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5885
+mdx (.md files),inline-code-heavy.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,5228
+mdx (.md files),inline-code-heavy.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5214
+mdx (.md files),line-breaks.md,syntax edge cases,de,false,true,1,0,0,0,1,0,1,0,0,0,0,0,0,0,3717,4660
+mdx (.md files),line-breaks.md,syntax edge cases,fr,false,true,1,0,0,0,1,0,1,0,0,0,0,0,0,0,3765,5233
+mdx (.md files),links-and-references.md,links and anchors,de,false,true,0,0,5,0,0,0,0,0,0,0,11,0,1,0,0,8870
+mdx (.md files),links-and-references.md,links and anchors,fr,false,true,0,0,5,0,0,0,0,0,0,0,11,0,1,0,0,7832
+mdx (.md files),math-inline-dense.md,math,de,false,true,0,0,8,0,0,0,0,0,0,0,12,0,1,0,0,8042
+mdx (.md files),math-inline-dense.md,math,fr,false,true,0,0,8,0,0,0,0,0,0,0,12,0,1,0,0,10731
+mdx (.md files),math-mixed.md,math,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4138
+mdx (.md files),math-mixed.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4144
+mdx (.md files),math-prices-edge.md,math,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,4256
+mdx (.md files),math-prices-edge.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4942
+mdx (.md files),math-prices.md,math,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,4301
+mdx (.md files),math-prices.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4333
+mdx (.md files),math-real.md,math,de,false,true,0,0,5,0,0,0,0,0,0,0,7,0,1,0,0,5750
+mdx (.md files),math-real.md,math,fr,false,true,0,0,5,0,0,0,0,0,0,0,7,0,1,0,0,6780
+mdx (.md files),mdx-like-plain.md,MDX,de,false,true,0,0,5,0,0,0,0,0,0,0,6,0,1,0,0,4987
+mdx (.md files),mdx-like-plain.md,MDX,fr,false,true,0,0,5,0,0,0,0,0,0,0,6,0,1,0,0,5251
+mdx (.md files),mixed-everything.md,mixed,de,false,true,0,0,7,0,0,0,0,0,0,0,14,0,1,0,0,9425
+mdx (.md files),mixed-everything.md,mixed,fr,false,true,0,0,7,0,0,0,0,0,0,0,14,0,1,0,0,11515
+mdx (.md files),msdocs-syntax.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5488,5488
+mdx (.md files),msdocs-syntax.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5347,5347
+mdx (.md files),nested-lists.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,14828
+mdx (.md files),nested-lists.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8614
+mdx (.md files),numbers-units-dates.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,6249
+mdx (.md files),numbers-units-dates.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,7159
+mdx (.md files),product-names.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,6320
+mdx (.md files),product-names.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4756
+mdx (.md files),release-notes.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,7989
+mdx (.md files),release-notes.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7553
+mdx (.md files),settings-short-values.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,13164
+mdx (.md files),settings-short-values.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,15264
+mdx (.md files),single-word.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1610
+mdx (.md files),single-word.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1579
+mdx (.md files),tables-complex.md,syntax edge cases,de,false,true,0,1,7,0,0,0,0,0,0,0,15,0,1,0,0,12828
+mdx (.md files),tables-complex.md,syntax edge cases,fr,false,true,0,1,7,0,0,0,0,0,0,0,15,0,1,0,0,13857
+mdx (.md files),task-lists.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,6628
+mdx (.md files),task-lists.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4604
+mdx (.md files),toc-heavy.md,links and anchors,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,5994
+mdx (.md files),toc-heavy.md,links and anchors,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,5452
+mdx (.md files),troubleshooting.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,6967
+mdx (.md files),troubleshooting.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7358
+mdx (.md files),tutorial-long.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,13369
+mdx (.md files),tutorial-long.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,10710
+mdx (.md files),ui-labels-table.md,prose and UI,de,false,false,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,14327
+mdx (.md files),ui-labels-table.md,prose and UI,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,15053
+mdx (.md files),ui-walkthrough.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,8027
+mdx (.md files),ui-walkthrough.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,8443
+mdx (.md files),unicode-emoji.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,4225
+mdx (.md files),unicode-emoji.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,6805
+mathSingleDollar,admonitions-docusaurus.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4509,4509
+mathSingleDollar,admonitions-docusaurus.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8282,8282
+mathSingleDollar,admonitions-github.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6838,6838
+mathSingleDollar,admonitions-github.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6274,6274
+mathSingleDollar,ambiguous-words.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11571,11571
+mathSingleDollar,ambiguous-words.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13754,13754
+mathSingleDollar,anchors-crosslinks.md,links and anchors,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6698,6698
+mathSingleDollar,anchors-crosslinks.md,links and anchors,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5883,5883
+mathSingleDollar,anchors-duplicate-headings.md,links and anchors,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10852,10852
+mathSingleDollar,anchors-duplicate-headings.md,links and anchors,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9233,9233
+mathSingleDollar,api-errors-table.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6854,6854
+mathSingleDollar,api-errors-table.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8724,8724
+mathSingleDollar,blog-informal.md,prose and UI,de,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5908,5908
+mathSingleDollar,blog-informal.md,prose and UI,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,6651,6651
+mathSingleDollar,cli-reference.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10200,10200
+mathSingleDollar,cli-reference.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8466,8466
+mathSingleDollar,code-commented-out.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3997,3997
+mathSingleDollar,code-commented-out.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3954,3954
+mathSingleDollar,code-comments-csharp.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4318,4318
+mathSingleDollar,code-comments-csharp.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4341,4341
+mathSingleDollar,code-comments-js.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6397,6397
+mathSingleDollar,code-comments-js.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11227,11227
+mathSingleDollar,code-comments-mixed-langs.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10681,10681
+mathSingleDollar,code-comments-mixed-langs.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6802,6802
+mathSingleDollar,code-comments-python.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4002,4002
+mathSingleDollar,code-comments-python.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4998,4998
+mathSingleDollar,code-comments-shell.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4540,4540
+mathSingleDollar,code-comments-shell.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7048,7048
+mathSingleDollar,code-no-lang.md,code,de,false,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,3860,3860
+mathSingleDollar,code-no-lang.md,code,fr,false,false,0,0,1,1,0,0,0,0,0,0,1,1,0,0,4673,4673
+mathSingleDollar,code-only.md,code,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mathSingleDollar,code-only.md,code,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mathSingleDollar,crlf-windows.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4234,4234
+mathSingleDollar,crlf-windows.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4335,4335
+mathSingleDollar,directives.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3747,3747
+mathSingleDollar,directives.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4262,4262
+mathSingleDollar,docstrings-doctest.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5259,5259
+mathSingleDollar,docstrings-doctest.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4020,4020
+mathSingleDollar,docstrings-google.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6498,6498
+mathSingleDollar,docstrings-google.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8784,8784
+mathSingleDollar,docstrings-module-class.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5248,5248
+mathSingleDollar,docstrings-module-class.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6279,6279
+mathSingleDollar,docstrings-numpy.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+mathSingleDollar,docstrings-numpy.md,docstrings,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,4730,4730
+mathSingleDollar,docstrings-rest.md,docstrings,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8531,8531
+mathSingleDollar,docstrings-rest.md,docstrings,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6806,6806
+mathSingleDollar,emphasis-edge.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9467,9467
+mathSingleDollar,emphasis-edge.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7387,7387
+mathSingleDollar,escapes-entities.md,syntax edge cases,de,false,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8836,8836
+mathSingleDollar,escapes-entities.md,syntax edge cases,fr,false,false,3,3,0,0,0,0,0,0,0,0,0,0,0,0,8778,8778
+mathSingleDollar,faq.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6126,6126
+mathSingleDollar,faq.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6173,6173
+mathSingleDollar,filenames-paths.md,syntax edge cases,de,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5439,5439
+mathSingleDollar,filenames-paths.md,syntax edge cases,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,5846,5846
+mathSingleDollar,footnotes.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5139,5139
+mathSingleDollar,footnotes.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5075,5075
+mathSingleDollar,formal-policy.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5302,5302
+mathSingleDollar,formal-policy.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5937,5937
+mathSingleDollar,frontmatter-basic.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4836,4836
+mathSingleDollar,frontmatter-basic.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4487,4487
+mathSingleDollar,frontmatter-docs.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5592,5592
+mathSingleDollar,frontmatter-docs.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4962,4962
+mathSingleDollar,frontmatter-informal.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4951,4951
+mathSingleDollar,frontmatter-informal.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5250,5250
+mathSingleDollar,frontmatter-nested.md,front matter,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4384,4384
+mathSingleDollar,frontmatter-nested.md,front matter,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4590,4590
+mathSingleDollar,getting-started.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14384,14384
+mathSingleDollar,getting-started.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11567,11567
+mathSingleDollar,glossary-terms.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9338,9338
+mathSingleDollar,glossary-terms.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7230,7230
+mathSingleDollar,html-attributes.md,HTML and images,de,false,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,4614,4614
+mathSingleDollar,html-attributes.md,HTML and images,fr,false,false,0,0,0,0,0,0,0,0,0,0,1,1,0,0,5512,5512
+mathSingleDollar,html-mixed.md,HTML and images,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6031,6031
+mathSingleDollar,html-mixed.md,HTML and images,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5485,5485
+mathSingleDollar,hugo-shortcodes.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5826,5826
+mathSingleDollar,hugo-shortcodes.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6132,6132
+mathSingleDollar,identifiers-env.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4717,4717
+mathSingleDollar,identifiers-env.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6085,6085
+mathSingleDollar,images-alt.md,HTML and images,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5982,5982
+mathSingleDollar,images-alt.md,HTML and images,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5885,5885
+mathSingleDollar,inline-code-heavy.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5228,5228
+mathSingleDollar,inline-code-heavy.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5214,5214
+mathSingleDollar,line-breaks.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4660,4660
+mathSingleDollar,line-breaks.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5233,5233
+mathSingleDollar,links-and-references.md,links and anchors,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8870,8870
+mathSingleDollar,links-and-references.md,links and anchors,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7832,7832
+mathSingleDollar,math-inline-dense.md,math,de,false,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3610,8042
+mathSingleDollar,math-inline-dense.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4340,10731
+mathSingleDollar,math-mixed.md,math,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4138,4138
+mathSingleDollar,math-mixed.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4144,4144
+mathSingleDollar,math-prices-edge.md,math,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4256,4256
+mathSingleDollar,math-prices-edge.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4942,4942
+mathSingleDollar,math-prices.md,math,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4301,4301
+mathSingleDollar,math-prices.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4333,4333
+mathSingleDollar,math-real.md,math,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5750,5750
+mathSingleDollar,math-real.md,math,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6780,6780
+mathSingleDollar,mdx-expressions.mdx,MDX,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4087,4087
+mathSingleDollar,mdx-expressions.mdx,MDX,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5378,5378
+mathSingleDollar,mdx-jsx-attrs.mdx,MDX,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6377,6377
+mathSingleDollar,mdx-jsx-attrs.mdx,MDX,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5067,5067
+mathSingleDollar,mdx-like-plain.md,MDX,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4987,4987
+mathSingleDollar,mdx-like-plain.md,MDX,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5251,5251
+mathSingleDollar,mdx-tabs.mdx,MDX,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,3321
+mathSingleDollar,mdx-tabs.mdx,MDX,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3714,3714
+mathSingleDollar,mixed-everything.md,mixed,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9425,9425
+mathSingleDollar,mixed-everything.md,mixed,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11515,11515
+mathSingleDollar,msdocs-syntax.md,dialects,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5488,5488
+mathSingleDollar,msdocs-syntax.md,dialects,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5347,5347
+mathSingleDollar,nested-lists.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14828,14828
+mathSingleDollar,nested-lists.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8614,8614
+mathSingleDollar,numbers-units-dates.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6249,6249
+mathSingleDollar,numbers-units-dates.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7159,7159
+mathSingleDollar,product-names.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6320,6320
+mathSingleDollar,product-names.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4756,4756
+mathSingleDollar,release-notes.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7989,7989
+mathSingleDollar,release-notes.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7553,7553
+mathSingleDollar,settings-short-values.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13164,13164
+mathSingleDollar,settings-short-values.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15264,15264
+mathSingleDollar,single-word.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1610,1610
+mathSingleDollar,single-word.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1579,1579
+mathSingleDollar,tables-complex.md,syntax edge cases,de,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,12828,12828
+mathSingleDollar,tables-complex.md,syntax edge cases,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,13857,13857
+mathSingleDollar,task-lists.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6628,6628
+mathSingleDollar,task-lists.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4604,4604
+mathSingleDollar,toc-heavy.md,links and anchors,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5994,5994
+mathSingleDollar,toc-heavy.md,links and anchors,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5452,5452
+mathSingleDollar,troubleshooting.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6967,6967
+mathSingleDollar,troubleshooting.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7358,7358
+mathSingleDollar,tutorial-long.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13369,13369
+mathSingleDollar,tutorial-long.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10710,10710
+mathSingleDollar,ui-labels-table.md,prose and UI,de,false,false,2,2,0,0,0,0,0,0,0,0,0,0,0,0,14327,14327
+mathSingleDollar,ui-labels-table.md,prose and UI,fr,false,false,1,1,0,0,0,0,0,0,0,0,0,0,0,0,15053,15053
+mathSingleDollar,ui-walkthrough.md,prose and UI,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8027,8027
+mathSingleDollar,ui-walkthrough.md,prose and UI,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8443,8443
+mathSingleDollar,unicode-emoji.md,syntax edge cases,de,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4225,4225
+mathSingleDollar,unicode-emoji.md,syntax edge cases,fr,false,false,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6805,6805
+mdx (.mdx files),mdx-expressions.mdx,MDX,de,true,true,0,1,0,1,0,1,0,0,0,0,0,1,0,0,4087,4107
+mdx (.mdx files),mdx-expressions.mdx,MDX,fr,true,true,0,1,0,1,0,1,0,0,0,0,0,1,0,0,5378,4015
+mdx (.mdx files),mdx-jsx-attrs.mdx,MDX,de,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,6377,5744
+mdx (.mdx files),mdx-jsx-attrs.mdx,MDX,fr,true,true,0,0,0,2,0,0,0,0,0,0,0,2,0,0,5067,5382
+mdx (.mdx files),mdx-tabs.mdx,MDX,de,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3321,10429
+mdx (.mdx files),mdx-tabs.mdx,MDX,fr,true,true,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3714,4640

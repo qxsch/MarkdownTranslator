@@ -1,0 +1,274 @@
+{
+  "math-inline-dense.md": {
+    "keep": ["$w$", "$\\mu$", "$\\lambda$", "$\\rho = \\lambda / \\mu$", "$L = \\frac{\\rho}{1 - \\rho}$", "$W = \\frac{1}{\\mu - \\lambda}$", "$P_{wait} = \\rho^k$", "$k = 4$", "$\\rho = 120 / (4 \\cdot 40) = 0.75$", "$W \\le 50$", "$\\mu_{total} - \\lambda \\ge 20$", "$\\sigma_s^2$", "$1 + c_s^2$", "$c_s$"],
+    "translate": ["serves requests at rate", "must stay below", "Mean number of requests in the system", "Probability that a request waits", "Service rate per worker", "so the queue is stable", "add workers until", "is the coefficient of variation"]
+  },
+  "math-prices-edge.md": {
+    "keep": ["`ctsync billing show`", "$TOTAL", "$HOME/billing.csv"],
+    "translate": ["Most customers pay between", "per user each month", "is shown on the pricing page", "apply to yearly contracts", "is waived for nonprofits", "save $36 per year", "separately for each workspace"]
+  },
+  "getting-started.md": {
+    "keep": ["`ContosoSync-Setup.exe`", "https://contoso.example/download", "`C:\\Users\\<you>\\ContosoSync`", "`ContosoSync-Setup.exe /quiet`", "(#choose-what-to-sync)", "(troubleshooting.md)", "> [!TIP]"],
+    "translate": ["keeps a local folder", "make sure that you have", "Run the installer", "Files are downloaded only", "How long deleted files"]
+  },
+  "ui-labels-table.md": {
+    "keep": ["Shift+F5", "Ctrl+B", "| main |"],
+    "translate": ["Starts the current script", "Empties the output pane", "Records a macro", "Whether the file can be changed"]
+  },
+  "cli-reference.md": {
+    "keep": ["ctsync <command> [--profile <name>] [--verbose]", "`ctsync pause --minutes 30`", "`~/.ctsync/config.toml`", "`--no-color`", "ctsync status --json > status.json", "`ctsync.log`"],
+    "translate": ["is the command-line companion", "Pauses sync for the given time", "Prints machine-readable output", "The folder is locked by another process"]
+  },
+  "faq.md": {
+    "keep": ["TLS 1.3", "AES-256"],
+    "translate": ["Is my data encrypted", "Can I sync network drives", "What happens when I run out of space", "Who can see my files"]
+  },
+  "troubleshooting.md": {
+    "keep": ["0x8004de40", "`sync.contoso.example`", "`HTTPS_PROXY`", "Get-Content \"$env:LOCALAPPDATA\\ContosoSync\\logs\\ctsync.log\" -Tail 50", "`settings.json`", "`%APPDATA%\\ContosoSync`", "`diag.zip`"],
+    "translate": ["A proxy or firewall blocks", "Files stay in the", "Antivirus software can scan", "Still stuck"]
+  },
+  "release-notes.md": {
+    "keep": ["3.2.0", "`--dry-run`", "`ctsync reset`", "CVE-2026-1234", "`config.ini`", "`config.toml`"],
+    "translate": ["Selective sync for subfolders", "Fixed a crash when", "Known issues", "Breaking changes", "Update as soon as possible"]
+  },
+  "api-errors-table.md": {
+    "keep": ["{ \"error\": { \"code\": \"QuotaExceeded\", \"message\": \"The storage quota is exceeded.\" } }", "`InvalidPath`", "`TooManyRequests`", "`Retry-After`", "`ETag`", "`If-Match`"],
+    "translate": ["Every error response has the same shape", "The token is missing or expired", "You sent too many requests", "download the latest version"]
+  },
+  "glossary-terms.md": {
+    "keep": ["`-conflict`"],
+    "translate": ["A cloud folder that several people", "Keeps a file on the device", "A paid license for one user", "Slows down requests"]
+  },
+  "blog-informal.md": {
+    "keep": ["200,000"],
+    "translate": ["Let's be honest", "The first attempt was a flop", "What finally clicked", "Stay tuned", "give us a shout"]
+  },
+  "formal-policy.md": {
+    "keep": [],
+    "translate": ["This policy describes how", "Categories of data", "Customer content is deleted within", "Rights of data subjects"]
+  },
+  "tutorial-long.md": {
+    "keep": ["`projects`", "`.ctsyncignore`", "node_modules/\nbin/\n*.tmp", "\"webhook\": \"https://hooks.example.com/backup\"", "\"events\": [\"job.failed\", \"job.succeeded\"]", "(share.md)", "02:00"],
+    "translate": ["In this tutorial, you set up", "Create the backup job", "A backup is only useful", "Get notified", "Clean up"]
+  },
+  "settings-short-values.md": {
+    "keep": [],
+    "translate": ["Start with Windows", "Upload limit", "Free up space", "Keep both", "Diagnostic data", "Crash reports"]
+  },
+  "ambiguous-words.md": {
+    "keep": [],
+    "translate": ["to find records with the same", "to change the number of workers", "Keeps the first column visible", "The recorded steps are saved", "ends the period", "sends the record to the ledger"]
+  },
+  "nested-lists.md": {
+    "keep": ["`v3.2.0`", "`/healthz`", "`200`"],
+    "translate": ["Complete the following tasks", "Check the quota in the target region", "Public IP addresses", "Inform the support team", "No alerts fire"]
+  },
+  "admonitions-github.md": {
+    "keep": ["> [!NOTE]", "> [!TIP]", "> [!IMPORTANT]", "> [!WARNING]", "> [!CAUTION]", "`ctsync doctor`", "`config.toml`", "(https://example.com)"],
+    "translate": ["requires .NET 8 or later", "It lists everything that blocks", "Don't close the app", "This is a regular quote", "A nested quote with"]
+  },
+  "admonitions-docusaurus.md": {
+    "keep": ["sidebar_position: 3", ":::note\n", ":::tip ", ":::info[", ":::warning\n", ":::danger "],
+    "translate": ["Retention applies to deleted files", "Save space", "Retention and legal hold", "affects **all** members", "Choose a period"]
+  },
+  "directives.md": {
+    "keep": ["::youtube[", "]{#dQw4w9WgXcQ}", ":::details[", ":::aside{.highlight}", "::::tabs", ":::tab[", "::file{src=\"samples/demo.zip\" label=\""],
+    "translate": ["Watch the five-minute introduction", "Show the system requirements", "Send feedback to the product team", "Open the **Start** menu"]
+  },
+  "msdocs-syntax.md": {
+    "keep": ["ms.date: 08/14/2026", "ms.topic: how-to", "author: contoso-docs", "[!INCLUDE [", "](../includes/prereqs.md)]", ":::image type=\"content\" source=\"media/connect-storage/overview.png\" alt-text=\"", "::: zone pivot=\"portal\"", "::: zone-end", "ctsync storage connect --account mystorage --container sync", "> [!div class=\"nextstepaction\"]", "[!VIDEO https://learn.example/embed/connect-storage]"],
+    "translate": ["Learn how to connect an existing", "prerequisites for all how-to guides", "Diagram that shows the client", "Choose your platform", "Run the following command"]
+  },
+  "hugo-shortcodes.md": {
+    "keep": ["weight: 20", "{{< figure src=\"images/architecture.png\" title=\"", "{{% notice info %}}", "{{% /notice %}}", "{{< tab name=\"Linux\" >}}", "`apt install ctsync`", "`winget install Contoso.Sync`", "{{< youtube id=\"abc123\" title=\"", "{{< ref \"operations/scaling.md\" >}}"],
+    "translate": ["How the client talks to the service", "The client uploads changes", "The gateway is stateless", "Architecture walkthrough", "for scaling guidance"]
+  },
+  "html-mixed.md": {
+    "keep": ["<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>", "<details>", "<div class=\"warning\">", "<code>max_workers</code>", "<code>chunk_size</code>", "<img src=\"images/logo.svg\" alt=\"", "<span style=\"color:red\">", "<!-- This comment is for editors and must not change. -->"],
+    "translate": ["to open the command palette", "Show all shortcuts", "Rename the selected file", "Only change them when support asks", "Number of parallel uploads", "Contoso Sync logo"]
+  },
+  "html-attributes.md": {
+    "keep": ["src=\"images/dashboard.png\"", "href=\"https://contoso.example/help\"", "data-action=\"close\"", "aria-describedby=\"search-hint\"", "id=\"search-hint\"", "src=\"media/intro.mp4\""],
+    "translate": ["Dashboard with three charts", "Open the help center in a new tab", "Close the dialog", "Search files", "Type at least three characters", "Flow chart of the upload process", "Introduction video"]
+  },
+  "links-and-references.md": {
+    "keep": ["<https://contoso.example/status>", "https://contoso.example/docs", "mailto:support@contoso.example", "(https://admin.contoso.example)", "[`ctsync status`](cli-reference.md#commands)", "(https://ci.example/badge.svg)", "[install]: https://contoso.example/install", "[configuration guide]: ./configure.md", "[Contoso Sync]: https://contoso.example/sync"],
+    "translate": ["Read the", "Send an e-mail to support", "if you need help", "Compare the plans", "Open the portal"]
+  },
+  "images-alt.md": {
+    "keep": ["(images/settings-network.png)", "(images/sync-status.png \"", "![](images/decorative-line.png)", "(logo.svg)", "(images/gear.svg)", "(charts/uploads_per_hour.jpeg)", "[retention-diagram]: diagrams/retention-flow.drawio.png"],
+    "translate": ["Screenshot of the settings page", "shows the green icon", "Sync status icon", "Diagram of the retention flow", "to open the settings", "uploads per hour"]
+  },
+  "filenames-paths.md": {
+    "keep": ["`settings.json`", "`C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log`", "`~/.local/share/ctsync/ctsync.log`", "settings.json and restart", "sync.db", "README.md", "./scripts/install.sh", "deploy.ps1", "dist/", "logo.png", "banner@2x.jpg", "icons/app.ico", "`ctsync-2026-08-01.log.gz`"],
+    "translate": ["The client stores its settings", "To reset the client", "because it contains the list", "Template for environment variables", "Log files older than seven days"]
+  },
+  "identifiers-env.md": {
+    "keep": ["`CTSYNC_HOME`", "`%LOCALAPPDATA%\\ContosoSync`", "`$HOME/.ctsync`", "HTTPS_PROXY", "NO_PROXY", "Get-CtSyncStatus", "getSyncStatus()", "get_sync_status", "--max-retries", "maxRetries", "`Endpoint=https://sync.contoso.example;SharedAccessKey=<key>`", "`${TENANT_ID}`", "00000000-0000-0000-0000-000000000000", "3.2.0-beta.1", "`upload.parallelism`", "v3.2.1"],
+    "translate": ["to change the data folder", "ignores NO_PROXY entries that contain wildcards", "Connection strings look like", "raised its default"]
+  },
+  "anchors-crosslinks.md": {
+    "keep": ["(#plan-the-rollout)", "(#assign-licenses)", "(#pilot-groups)", "(#roll-back)", "(#default-settings)", "(#automate-assignment)", "(api-errors-table.md#handling-conflicts)", "(#administrator-guide)"],
+    "translate": ["This guide links to its own sections", "Decide which groups get the client first", "Licenses are assigned per user", "To roll back, uninstall the client"]
+  },
+  "anchors-duplicate-headings.md": {
+    "keep": ["(#setup)", "(#setup-1)", "(#setup-2)", "(#ctsync-options)", "(#faq-)", "(#known-issues)", "(#known-issues-1)", "(#known-issues-2)", "(#heading-with-emphasis-and-a-link)"],
+    "translate": ["Run the installer as a normal user", "Grant full disk access", "Some desktop environments don't show", "All platforms support the same options"]
+  },
+  "toc-heavy.md": {
+    "keep": ["(#overview)", "(#identity)", "(#multifactor-authentication)", "(#conditional-access)", "(#data-protection)", "(#encryption)", "(#sharing-links)", "(#monitoring)"],
+    "translate": ["This baseline lists the recommended", "Require multifactor authentication", "Allow sign-in only from managed devices", "Send the audit log to your SIEM"]
+  },
+  "emphasis-edge.md": {
+    "keep": ["snake_case_names_stay", "file_name.txt", "`inline code`", "\\*", "\\_", "`code`", "*settings.json*", "**C:\\Temp\\sync**"],
+    "translate": ["This sentence has", "at the start", "A sentence with a", "are on the", "must stay escaped"]
+  },
+  "escapes-entities.md": {
+    "keep": ["\\`backticks\\`", "\\[brackets\\]", "&copy;", "&nbsp;", "&lt;tag&gt;", "&amp;", "&#8364;", "&#x2192;", "`<div>`", "`&amp;`", "`a\\|b`"],
+    "translate": ["without creating a link", "creates a hard line break", "Either a or b", "Any character"]
+  },
+  "tables-complex.md": {
+    "keep": ["|:---|:---:|:---:|---:|", "[Audit log](#audit-log)", "(`/v2/*`)", "`alice@contoso.example`", "`plan.docx`", "`retention`: 30 → 90", "<br>"],
+    "translate": ["Storage per user", "Version history", "Read and write", "Community forum", "Wrong password", "Prices exclude VAT", "requires a yearly contract"]
+  },
+  "footnotes.md": {
+    "keep": ["[^1]", "[^bench]", "[^p99]", "[^cache]", "`bench/README.md`", "`ctsync reset --cache-only`"],
+    "translate": ["Sync throughput improved by", "Each run started with an empty cache", "It creates files with random content", "explains why a cold cache matters"]
+  },
+  "task-lists.md": {
+    "keep": ["- [x] ", "- [ ] ", "`ctsync migrate --source \\\\oldserver\\shares`", "`migrate.log`", "1. [ ] "],
+    "translate": ["Export the list of shares", "Inform all users by e-mail", "Watch the progress in the admin center", "Compare the file counts", "Celebrate"]
+  },
+  "line-breaks.md": {
+    "keep": ["========================", "----------------", "* * *", "___", "    This is an indented code block.\n    It must stay exactly as it is."],
+    "translate": ["This paragraph ends with two spaces", "for the same effect", "which is common in repositories", "with very short", "Final sentence"]
+  },
+  "crlf-windows.md": {
+    "keep": ["Remove-Item -Recurse \"$env:LOCALAPPDATA\\ContosoSync\"", "> [!NOTE]", "\r\n"],
+    "translate": ["This file uses CRLF line endings", "Remove the leftover data folder", "Your files in the cloud"]
+  },
+  "unicode-emoji.md": {
+    "keep": ["✅", "⚠️", "❌", "🔒", "Zoë Müller", "François Nguyễn", "Łukasz Żółć", "مرحبا", "👩‍💻", "🏳️‍🌈"],
+    "translate": ["are the two options", "are typographic characters", "Needs attention", "stay as they are", "means hello"]
+  },
+  "numbers-units-dates.md": {
+    "keep": [],
+    "translate": ["Maximum file size", "Requests per minute", "The service processes", "Retention can be set between", "billed annually"]
+  },
+  "math-real.md": {
+    "keep": ["$s$", "$c_s$", "$q_s$", "L_s = \\alpha \\cdot c_s + (1 - \\alpha) \\cdot \\frac{q_s}{q_{\\max}}", "$\\alpha = 0.7$", "$\\arg\\min_s L_s$", "$\\frac{1}{1 - \\rho}$", "$\\rho \\to 1$", "$$E = mc^2$$", "$\\sigma^2 = \\frac{1}{n}\\sum_{i=1}^{n}(x_i - \\mu)^2$"],
+    "translate": ["The scheduler estimates the load", "CPU usage dominates", "A new job goes to the server", "the waiting time is unbounded", "is the classic example"]
+  },
+  "math-prices.md": {
+    "keep": ["`curl -s $API/prices | jq .team`", "$PRICE"],
+    "translate": ["$5 per user and month", "$12 per user and month", "$2 for 100 GB and $15", "so the Team plan costs", "$2.50 instead of $5", "between $5 and $12"]
+  },
+  "math-mixed.md": {
+    "keep": ["$r = 400$", "$R$", "$n = \\lceil R / r \\rceil$", "S = u \\cdot f \\cdot (1 + v)", "$u$", "$f$", "$v$", "$v = 0.3$"],
+    "translate": ["A single gateway handles about", "costs $120 per month", "Block math for the storage estimate", "the share of old versions", "costs $260 per month"]
+  },
+  "frontmatter-basic.md": {
+    "keep": ["date: 2026-08-14", "slug: share-a-folder", "draft: false"],
+    "translate": ["title: Share a folder", "Learn how to share a folder", "- external users", "Right-click the folder"]
+  },
+  "frontmatter-nested.md": {
+    "keep": ["canonical: https://contoso.example/docs/restore", "url: /docs/restore#recycle-bin", "url: /docs/restore#version-history", "image: images/restore-hero.png", "tags: [restore, recycle-bin]", "related_ids: [1042, 1043]", "summary: |", "description: >"],
+    "translate": ["Deleted files stay in the recycle bin", "only an administrator can restore", "This article explains how to restore", "step-by-step guide", "Get back files that you deleted", "title: Recycle bin"]
+  },
+  "frontmatter-informal.md": {
+    "keep": ["formality: informal", "author: Kim", "#it-help"],
+    "translate": ["Your first week with Contoso Sync", "A quick tour for new team members", "Welcome aboard", "Pretty neat"]
+  },
+  "frontmatter-docs.md": {
+    "keep": ["ms.date: 08/14/2026", "ms.topic: how-to", "ms.service: contoso-sync", "ms.custom: devx-track-powershell", "author: contoso-docs", "ms.author: docsteam", "ms.reviewer: sre-team", "ms.collection: [admin, monitoring]", "zone_pivot_groups: operating-systems", "Get-CtSyncDevice -LastSyncBefore (Get-Date).AddDays(-3)"],
+    "translate": ["title: Monitor sync health", "Contoso Sync documentation", "Use the health dashboard and alerts", "haven't synced for three days"]
+  },
+  "code-comments-js.md": {
+    "keep": ["import { SyncClient } from '@contoso/sync';", "const client = new SyncClient({ endpoint: process.env.CTSYNC_ENDPOINT });", "await client.upload('report.pdf', { overwrite: true });", "@param path", "@param recursive", "@returns", "export function watch(path: string, recursive = true): Disposable {", "return <Badge color={state === 'ok' ? 'green' : 'red'}>{state}</Badge>;"],
+    "translate": ["Create one client per process", "The promise resolves when the last block", "overwrite existing versions", "Whether subfolders are included", "support glob patterns", "Retry three times with exponential backoff", "Re-renders whenever the sync state changes"]
+  },
+  "code-comments-python.md": {
+    "keep": ["client = SyncClient(endpoint=os.environ[\"CTSYNC_ENDPOINT\"])", "if name.endswith(\".csv\"):", "client.wait()", "except QuotaExceededError:", "print(\"Storage quota exceeded\")"],
+    "translate": ["Read the endpoint from the environment", "Upload every CSV file", "skip everything else", "This can take a few minutes", "tell the user instead of retrying"]
+  },
+  "code-comments-shell.md": {
+    "keep": ["#!/usr/bin/env bash", "set -euo pipefail", "ssh \"$host\" ctsync status --json > \"status-$host.json\"", ".SYNOPSIS", ".DESCRIPTION", "param([string]$HostFile = 'hosts.txt')", "@echo off", "net stop ContosoSync"],
+    "translate": ["Stop on the first device that fails", "one file per device", "Print a summary", "Collects the sync status from all devices", "Collect the results in a list", "runs remotely", "Restart the sync service"]
+  },
+  "code-comments-csharp.md": {
+    "keep": ["/// <summary>", "/// <param name=\"path\">", "<c>true</c>", "public static async Task<bool> UploadExportAsync(string path)", "var result = await client.UploadAsync(path);", "\"Sync\": { \"Endpoint\": \"https://sync.contoso.example\", \"Retries\": 3 }"],
+    "translate": ["Uploads the nightly export", "Full path of the export file", "One client per application is enough", "Large exports are split into blocks", "false when the quota is exceeded"]
+  },
+  "code-comments-mixed-langs.md": {
+    "keep": ["Endpoint string", "fn hash_block(data: &[u8]) -> [u8; 32] {", "private static final int BATCH_MS = 500;", "WHERE last_sync < DATEADD(day, -7, GETUTCDATE());", "workers: 8", "name: 'ctsync${uniqueString(resourceGroup().id)}'", "FROM node:24-slim", "RUN npm ci --omit=dev", "location = \"westeurope\""],
+    "translate": ["holds the settings that are read at startup", "number of parallel uploads", "Computes the hash of a block", "Listens for changes and queues them", "Find devices that have not synced", "Settings for the sync agent", "Storage account for the sync data", "Small base image for the agent", "keep data in the EU"]
+  },
+  "code-commented-out.md": {
+    "keep": ["# print(folder.files)", "# folder.refresh(force=True)", "# return None", "// console.log('starting', config);", "// await client.reset();", "// if (debug) { dumpState(); }", "# export CTSYNC_DEBUG=1", "# ctsync reset --force", "// var client = new SyncClient(uri);", "// client.Dispose();", "// eslint-disable-next-line @typescript-eslint/no-explicit-any", "// @ts-expect-error"],
+    "translate": ["Refresh only when the folder changed", "Start the watcher after the first full scan", "Show the status of every folder", "Reuse the shared client", "Some comments contain code"]
+  },
+  "code-no-lang.md": {
+    "keep": ["Documents     Synced    1,204", "[2026-08-14 10:02:14] WARN  Slow connection detected", "# This comment is in an unknown format and must stay unchanged", "    # Indented code is never translated", "> Keep this text exactly as it is."],
+    "translate": ["A fence without a language", "A fence with an unknown language", "Show the version", "Check that the output starts with"]
+  },
+  "docstrings-google.md": {
+    "keep": ["def upload(path, retries=3, overwrite=False):", "    Args:\n", "        path (str): ", "        retries (int): ", "        overwrite (bool, optional): ", "    Returns:\n", "        UploadResult: ", "    Raises:\n", "        FileNotFoundError: ", "        QuotaExceededError: ", ">>> result = upload(\"report.pdf\")\n        >>> print(result.version)\n        1\n", "    Attributes:\n", "        version (int): "],
+    "translate": ["Upload a file to the sync share", "Local path of the file to upload", "How many times to retry a failed block", "If the share is full", "Upload a report and print its version", "Result of an upload", "Size of the uploaded file in bytes"]
+  },
+  "docstrings-numpy.md": {
+    "keep": ["    Parameters\n    ----------\n    share : str\n", "    start : datetime.date\n", "    Returns\n    -------\n    pandas.DataFrame\n", "    Raises\n    ------\n    ValueError\n", "    See Also\n    --------\n", "quota_report : ", "    Notes\n    -----\n", "``date``", "``bytes``", "``files``", ">>> df = usage_report(\"finance\", date(2026, 8, 1), date(2026, 8, 7))\n    >>> len(df)\n    7\n"],
+    "translate": ["Compute storage usage for a share", "Returns one row per day", "First day of the report", "A table with the columns", "Days without activity are included"]
+  },
+  "docstrings-rest.md": {
+    "keep": [":param path:", ":type path: str", ":param recipients:", ":type recipients: list[str]", ":param role:", "``\"viewer\"``", "``\"editor\"``", ":returns:", ":rtype: ShareLink", ":raises PermissionError:", ".. note::", ".. warning::", ".. versionadded:: 3.1"],
+    "translate": ["Share a file or folder with other people", "External recipients must verify", "E-mail addresses of the people", "When the link stops working", "Links to folders include all subfolders", "Editors can delete files for everyone"]
+  },
+  "docstrings-doctest.md": {
+    "keep": [">>> normalize(\"docs\\\\\\\\reports//2026\")\n    'docs/reports/2026'\n    >>> normalize(\"\")\n    ''\n", "::\n\n        if normalize(a) == normalize(b):\n            print(\"same file\")\n", "return name.startswith(\".\")"],
+    "translate": ["Return the canonical form of a sync path", "Backslashes become forward slashes", "before you compare two paths", "The function never touches the file system", "Check whether a file name is hidden"]
+  },
+  "docstrings-module-class.md": {
+    "keep": ["import sqlite3", "self._db = sqlite3.connect(path)", "r\"\"\"", "``a3f\\x00``", "``path``", "message = f\"\"\"Clearing {self._db} is not a docstring and must stay unchanged.\"\"\"", "SELECT 1 FROM blocks WHERE digest = ?"],
+    "translate": ["Helpers for the local cache", "The cache stores block hashes", "A persistent map from block hash", "Open or create the cache database", "was uploaded before"]
+  },
+  "mdx-tabs.mdx": {
+    "keep": ["import Tabs from '@theme/Tabs';", "import TabItem from '@theme/TabItem';", "<Tabs groupId=\"os\">", "value=\"win\"", "`winget install Contoso.Sync`", "`brew install --cask contoso-sync`", "<Callout type=\"warning\" title=\"", "{props.version}"],
+    "translate": ["Install the client", "Pick your operating system", "Download the package from the release page", "Restart required", "restart your computer"]
+  },
+  "mdx-expressions.mdx": {
+    "keep": ["import { Chart } from '../components/Chart';", "export const meta = { owner: 'sre-team', reviewed: '2026-08-14' };", "{meta.reviewed}", "<Chart source=\"/api/stats/uploads\" title=\"", "height={320}", "{60}", "{/* Editors: the next section is generated, don't edit it by hand. */}", "<FolderTable limit={10} sortBy=\"changes\" emptyText=\"", "{2}"],
+    "translate": ["This page shows live data", "Uploads per hour", "Hover over a bar", "The folders with the most changes", "No changes today", "Values are rounded to"]
+  },
+  "mdx-jsx-attrs.mdx": {
+    "keep": ["<RoleCard role=\"viewer\" title=\"", "icon=\"eye\"", "<Admonition type=\"tip\" title=\"", "<Steps>", "<Step title=\"", "<Image src=\"/img/share-dialog.png\" alt=\"", "width={600}"],
+    "translate": ["Can open and download files", "Can change, add and delete files", "Least privilege", "Give people the", "Select the folder", "Right-click the folder in File Explorer", "The share dialog with two recipients"]
+  },
+  "mdx-like-plain.md": {
+    "keep": ["{name}", "{date}", "1 < 2", "a < b", "{{double braces}}", "List<string>", "Map<K, V>", "{firstName}", "{folder}", "<placeholder>"],
+    "translate": ["Templates use curly braces for placeholders", "is plain text in Markdown", "to show a literal brace", "appear in the SDK reference", "isn't a tag in the rendered page"]
+  },
+  "mixed-everything.md": {
+    "keep": ["> [!NOTE]", "`contoso-sync`", "$g$", "$g = \\frac{b_t - b_{t-1}}{b_{t-1}}$", "        client (SyncClient): ", "        share (str): ", "    Returns:\n", "rows = client.usage(share, days=30)[::-1]", "`0 6 * * * python3 /opt/report.py`", ":::tip ", "(#write-the-script)"],
+    "translate": ["Build a sync report with the Python SDK", "Combine the SDK, a scheduled job", "Return the storage growth of a share", "Fetch the last 30 days", "Start with a daily run", "if the numbers look wrong", "costs $0.02 per GB"]
+  },
+  "single-word.md": {
+    "keep": ["# "],
+    "translate": ["# Save"]
+  },
+  "code-only.md": {
+    "keep": ["\"endpoint\": \"https://sync.contoso.example\"", "ctsync config import settings.json"],
+    "translate": []
+  },
+  "inline-code-heavy.md": {
+    "keep": ["`UploadQueue`", "`maxParallel`", "`retryDelayMs`", "`onProgress`", "`queue.pause()`", "`queue.flush()`", "`QueueBusyError`", "`upload:start`", "`queue.on('upload:error', handler)`", "`null`", "`60000`", "`--queue-size`", "`CTSYNC_QUEUE_SIZE`", "`queueSize`", "`config.toml`"],
+    "translate": ["Configure the upload queue", "to use the number of CPU cores", "are emitted in that order", "the default of", "Values above"]
+  },
+  "product-names.md": {
+    "keep": ["Microsoft Teams", "SharePoint", "OneDrive", "Microsoft Entra ID", "GitHub Actions", "Azure Pipelines", "`contoso/sync-agent`", "Azure Kubernetes Service", "Visual Studio Code", "Contoso Sync Explorer"],
+    "translate": ["works with", "can be opened in", "is now called", "is published to", "has an extension called"]
+  },
+  "ui-walkthrough.md": {
+    "keep": [],
+    "translate": ["To change the default retention", "Fill in the", "you've run out of licenses", "you can assign a role", "The user gets an e-mail with the subject", "Deleted users can be restored for 30 days"]
+  }
+}

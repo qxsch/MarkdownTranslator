@@ -63,7 +63,12 @@ function treeSitterComments(grammar: string, code: string): CommentRange[] {
     root
       .descendantsOfType(COMMENT_TYPES)
       .filter((n): n is TsNode => !!n && !(n.parent && COMMENT_TYPES.includes(n.parent.type)))
-      .map((n) => ({ start: n.startIndex, end: n.endIndex }))
+      .map((n) => {
+        // Some grammars (Rust `///` doc comments) include the line ending in the comment node.
+        let end = n.endIndex;
+        while (end > n.startIndex && (code[end - 1] === '\n' || code[end - 1] === '\r')) end--;
+        return { start: n.startIndex, end };
+      })
       .sort((a, b) => a.start - b.start),
   ) ?? [];
 }

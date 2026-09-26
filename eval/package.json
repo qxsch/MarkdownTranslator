@@ -1,0 +1,9 @@
+{
+  "name": "mdtranslator-eval",
+  "private": true,
+  "type": "module",
+  "description": "Evaluation framework dependencies (runs on the host, never in the container image).",
+  "dependencies": {
+    "@github/copilot-sdk": "1.0.14"
+  }
+}

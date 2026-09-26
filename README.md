@@ -22,7 +22,7 @@ It runs as a Docker container with a small REST API and uses Azure services:
 - [Test against the container](#test-against-the-container)
 - [REST API](#rest-api)
 - [Configuration reference](#configuration-reference)
-- [Development, tests and evaluation](#development-tests-and-evaluation)
+- [Evaluation and tests](#evaluation-and-tests)
 - [Project layout](#project-layout)
 
 ## How it works
@@ -57,7 +57,7 @@ What is translated and what is kept:
 | Commented-out code, lint/pragma directives, shebangs, license headers | Unchanged. Commented-out code is detected by parsing the comment text with the block's own tree-sitter grammar (plus heuristics for lexer-only languages) |
 | Python docstrings | Translated (detected with tree-sitter); quotes and indentation are kept. Google (`Args:`, `name (type):`), NumPy (`Parameters` + `----------`, `name : type`) and reST (`.. note::`, `:param x:`) structure, `>>>` doctest blocks and `::` literal blocks stay unchanged. Disable with `docstrings=false` |
 | Front matter | Parsed as YAML: prose keys (`title`, `description`, `summary`, ...) at any depth (`seo.title`, `nav[].title`), `keywords` lists, plain, quoted, folded (`>`) and literal (`\|`) scalars. Indicators, indentation and quoting style are kept |
-| Math | `$$...$$` inline and block math unchanged; single `$...$` only with `MDT_MATH_SINGLE_DOLLAR=true` (off by default so prices like "$5 and $10" stay prose) |
+| Math | `$$...$$` inline and block math unchanged. Single-dollar spans that look like formulas (`$\alpha = 0.7$`, `$x_1$`, `$s$`) are protected even with the switch off; prices like "$5 and $10" or "$20,000 and $30,000" stay prose. `MDT_MATH_SINGLE_DOLLAR=true` additionally parses those formulas as math nodes |
 | Admonitions and directives | `:::note[Title]`, `::leaf[label]{attrs}` (remark-directive), Docusaurus `:::tip Title` and GitHub alerts `> [!NOTE]`: fences and names unchanged, titles and content translated, line structure kept |
 | Microsoft Docs syntax | `[!INCLUDE [title](path)]`, `:::image ... alt-text="..." :::`, `:::zone pivot="..."`: only the include title and `alt-text` are translated |
 | Hugo shortcodes | `{{< figure title="..." >}}`, `{{% notice %}}`: shortcode names and paths unchanged, `title` / `alt` / `caption` values translated |
@@ -72,6 +72,8 @@ Formality is discovered per document (a front matter `formality: informal` key o
 Every translated segment passes validation before it is used: all tags present exactly once and correctly nested, directive and shortcode tags in their original order, no quotes leaking into attribute values, no comment terminators such as `*/` inside comments, length ratio sanity check, and a re-parse proving the inline structure is unchanged. After splicing, the whole document is parsed again and compared node by node with the source. A block that would change the structure is reverted to the source text and listed in the report, so the output is always valid.
 
 ## Measured quality (impact of the reviewer)
+
+The complete, current evidence for every feature switch (66-document corpus, German and French, multi-model judge panel, charts, regression history) is in [evaluation/README.md](evaluation/README.md). The numbers below come from the earlier engine comparison.
 
 Measured with [eval/run.ts](eval/run.ts) on 3 documents (quickstart, informal blog post, concepts) in German, French, Swedish, Polish, Finnish and Maltese. Two GPT judges (GPT-5.5 and GPT-5.6-sol) compared the variants blind, each segment twice with swapped order; a win only counts when both orders agree. Error score is MQM style, severity weighted per 100 source words (minor 1, major 5, critical 10), lower is better.
 
@@ -125,7 +127,7 @@ Rule for the defaults: a feature that changes translation quality is on only if 
 | `docstrings` | `MDT_DOCSTRINGS` | on | Translates Python docstrings (needs `codeComments`). Off: docstrings unchanged and listed in the report | Correctness requirement, tested with Google, NumPy and reST docstrings; not scored in the evaluation (the corpus has no docstrings) |
 | `frontMatter` | `MDT_FRONT_MATTER` | on | Translates prose keys in YAML front matter. Off: front matter byte-identical; `formality:` is still read | Correctness requirement, tested |
 | `mdx` | none | on for `.mdx` files | Parses the file as MDX (JSX, `{expressions}`, `import`/`export`) | Wrong for plain Markdown (`{` and `<` would be parsed as code), so it follows the file extension; force it for MDX content in `.md` files |
-| `mathSingleDollar` | `MDT_MATH_SINGLE_DOLLAR` | off | Treats `$...$` as inline math | Degradation: prices such as "$5 and $10" become math and stay untranslated. Enable only for documents that use single-dollar math |
+| `mathSingleDollar` | `MDT_MATH_SINGLE_DOLLAR` | off | Parses `$...$` as inline math, following Pandoc's rules (opening `$` followed by a non-space, closing `$` after a non-space and not before a digit) plus a formula check (LaTeX command, operator, sub/superscript or a single variable) | The first version turned prices such as "$5 and $10" into math and left them untranslated (measured degradation). With the stricter rules prices stay prose, and formula protection no longer depends on the switch, so it stays off until the evaluation shows a benefit |
 
 Other options that are not on/off switches: `engine=nmt` (Azure Translator only, error score 26.35 vs 2.09, not recommended), `formality`, `sourceLanguage`, `doNotTranslate`. The alternative model deployment (`MDT_TRANSLATE_DEPLOYMENT`, GPT-5.6-sol) is not the default: no independent improvement and a regression in Polish.
 
@@ -399,7 +401,7 @@ $r.report | Format-Table file, language, segments, reviewEdits
 | `MDT_CODE_COMMENTS` | `true` | Translate comments in fenced code |
 | `MDT_DOCSTRINGS` | `true` | Translate Python docstrings |
 | `MDT_FRONT_MATTER` | `true` | Translate prose keys in YAML front matter |
-| `MDT_MATH_SINGLE_DOLLAR` | `false` | Treat `$...$` as inline math |
+| `MDT_MATH_SINGLE_DOLLAR` | `false` | Parse formula-like `$...$` as inline math (formulas are protected either way) |
 | `MDT_MAX_CONCURRENCY` | `16` | Parallel model calls |
 | `MDT_BATCH_MAX_SEGMENTS` | `40` | Segments per model call |
 | `MDT_BATCH_MAX_CHARS` | `12000` | Characters per model call |
@@ -417,17 +419,97 @@ Languages: add an entry to `config/languages.json` (name, Translator code, forma
 
 Glossary: `doNotTranslate` terms are always protected; `terms` maps source terms to required translations per language.
 
-## Development, tests and evaluation
+## Evaluation and tests
+
+Everything in this section runs on your machine. The evaluator imports the translator from `src/` and calls your Foundry resource directly, so no container is needed, and the evaluator is never part of the container image. The latest evaluation (German and French) is committed in [evaluation/README.md](evaluation/README.md) with charts, measurement tables, the translated corpus and the regression history.
+
+| Layer | Command | Needs | What it proves |
+|---|---|---|---|
+| Unit and fixture tests | `npm test` | nothing | Byte identity, masking, dialects, front matter, code comments and docstrings, REST switch parsing, evaluation statistics |
+| Corpus soundness | `npm test` ([test/corpus.test.ts](test/corpus.test.ts)) | nothing | Every corpus document round-trips byte-identically, a pseudo translation passes validation and the structure check, every expectation exists in its source and is extracted for translation |
+| Feature evaluation | `npm run eval:features` | Foundry, optionally GitHub Copilot | What each feature switch brings per language: judged quality, deterministic fidelity checks, cost, regression against the previous run |
+| Engine comparison | `npm run eval` | Foundry | GPT vs Azure Translator, review pass, alternative model on [eval/corpus/](eval/corpus/) |
+
+### Prerequisites
 
 ```powershell
 npm install
-npm test                                              # byte-identity, dialect, front matter and code tests, offline
-npm run dev                                           # API on :8080 with the local .env
-npx tsx scripts/translate.ts de,fr path\to\file.md    # translate files to .\out
-npx tsx eval/run.ts                                   # quality evaluation (EVAL_LANGS, EVAL_DOCS, EVAL_JUDGES)
+npm install --prefix eval          # evaluator-only dependencies (GitHub Copilot SDK); skip if you use Foundry judges only
+Connect-AzAccount -Tenant <tenant-id>
 ```
 
-Evaluation results are written to `eval/results/`; put your own documents into `eval/corpus/` to measure them.
+- `.env` with the same Foundry settings as for local development (`AZURE_OPENAI_ENDPOINT`, `AZURE_TRANSLATOR_ENDPOINT`, `AZURE_TENANT_ID`, see [Configuration reference](#configuration-reference)). The translator is always Foundry.
+- Foundry deployments: `translate` (translator and a judge) and optionally a second model as judge, for example `translate-alt`.
+- Optional GitHub Copilot judges: a Copilot subscription and a signed-in Copilot CLI, or `GH_TOKEN` / `COPILOT_GITHUB_TOKEN`. `npm run eval:judges` lists the models your account can use.
+
+### Run it with your languages
+
+German and French are the defaults. Any language code from [config/languages.json](config/languages.json) works (the EU languages plus `nb`, `uk`, `zh-Hans`, `ja`, `ko`); add an entry there for others.
+
+```powershell
+npm run eval:features                                             # de, fr, all features, Foundry judges -> evaluation/
+
+$env:EVAL_LANGS = 'es,it,pl'                                      # your languages
+$env:EVAL_REPORT_DIR = 'evaluation-es-it-pl'                      # keep a separate report and regression history per language set
+$env:EVAL_JUDGES = 'translate-alt,translate,copilot:claude-opus-5.5,copilot:gpt-6-sol'
+npm run eval:features
+
+npm run eval:report                                               # rebuild the report from the newest raw results
+Remove-Item Env:EVAL_*                                            # back to the defaults
+```
+
+| Variable | Default | Description |
+|---|---|---|
+| `EVAL_LANGS` | `de,fr` | Target languages |
+| `EVAL_DOCS` | all files in `eval/features/` | Comma-separated subset of the corpus |
+| `EVAL_FEATURES` | all nine switches | Subset, e.g. `review,docstrings` |
+| `EVAL_JUDGES` | `translate-alt,translate` | Judge panel: Foundry deployment names (optionally prefixed `foundry:`) and `copilot:<model>` |
+| `EVAL_OUT` | `eval/results/features-<timestamp>` | Raw working folder (git-ignored). Point it at an earlier run to resume without translating again |
+| `EVAL_REPORT_DIR` | `evaluation` | Report folder (committed) |
+| `EVAL_REPORT` | on | `off` skips the report after the run |
+| `EVAL_COPILOT_CONCURRENCY` | `4` | Parallel Copilot judge sessions |
+| `EVAL_COPILOT_TIMEOUT_MS` | `600000` | Timeout per Copilot judgement |
+| `EVAL_TRANSLATOR_FAMILY` | `openai` | Model family of the translator; judges of another family form the "independent judges" view |
+| `MDT_REQUEST_TIMEOUT_MS` | `600000` | Timeout per Foundry call; 240000 recovers faster from stalled calls in long runs |
+
+A full run (66 documents, 2 languages, 9 switches, 4 judges) takes roughly one to two hours.
+
+### How a run works
+
+1. Each document is translated with the shipped defaults and once more with exactly one switch flipped. Segments the switch does not change are reused from the default run, so differences come from the feature and not from sampling noise. Review off, NMT fallback off and anchors off are derived exactly from the default run.
+2. Deterministic checks run on every output: the expectations in [eval/features/expect.json](eval/features/expect.json) (`keep`: strings that must stay byte-identical, `translate`: English phrases that must disappear), Markdown structure, code bytes, in-page links and English left behind.
+3. Every block that differs between on and off is judged blind by every judge, twice with swapped order, with MQM error annotations.
+4. The report adds the statistics: panel majority, exact sign test with Holm correction, Wilson intervals, paired bootstrap intervals for the error reduction, judge agreement (Cohen's and Fleiss' kappa), and the regression comparison against the previous snapshot in `history/`.
+
+### Judges
+
+Foundry judges answer with strict JSON-schema output. GitHub Copilot judges run as agents through the [GitHub Copilot SDK](https://github.com/github/copilot-sdk) in an isolated session: an empty temporary Copilot home, no user instructions or memory, and only three read-only tools (`list_documents`, `read_document`, `search_documents`) over an in-memory set of the complete source, both blinded candidate documents and the project guidelines. They have no shell, no file system and no network, and never see the expectations. Answers are validated and retried up to three times. Use at least one judge from another model family than the translator; the report shows their verdicts separately to expose self-preference.
+
+### Outputs
+
+| Path | In git | Content |
+|---|---|---|
+| `evaluation/README.md` | yes | Summary, feature decisions, all dimensions, regression report, method, how to reproduce |
+| `evaluation/images/` | yes | SVG charts |
+| `evaluation/data/` | yes | `feature-summary.json` (every number of the report), `judgements.csv`, `records.csv`, `defects.csv` |
+| `evaluation/translations/<lang>/` | yes | The translated corpus (default configuration) |
+| `evaluation/history/` | yes | One snapshot per run for regression tracking |
+| `eval/results/` | no | Raw and intermediate files of each run |
+
+Commit the report folder after each run so the next run compares against it.
+
+### Add your own documents
+
+Put `.md` or `.mdx` files into [eval/features/](eval/features/) and add an entry to [eval/features/expect.json](eval/features/expect.json) with the strings that must survive (`keep`) and the English phrases that must be translated (`translate`). `npm test` then checks that the new document is sound before you spend model calls on it.
+
+### Development
+
+```powershell
+npm test                                              # all offline tests
+npm run typecheck
+npm run dev                                           # API on :8080 with the local .env
+npx tsx scripts/translate.ts de,fr path\to\file.md    # translate files to .\out
+```
 
 ## Project layout
 
@@ -442,5 +524,7 @@ Evaluation results are written to `eval/results/`; put your own documents into `
 | `config/` | Languages and glossary |
 | `infra/` | Bicep and parameters |
 | `test/` | Unit tests and fixtures |
-| `eval/` | Evaluation harness and corpus |
+| `eval/` | Evaluation harness (host only): feature evaluation, judges (Foundry, GitHub Copilot SDK), statistics, charts, report |
+| `eval/features/` | Evaluation corpus (66 documents) and expectations |
+| `evaluation/` | Latest evaluation report with charts, data, translations and regression history |
 | `run-container.ps1`, `send-file.ps1` | Local container helpers |
