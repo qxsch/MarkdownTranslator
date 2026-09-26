@@ -4,6 +4,7 @@
 .EXAMPLE
   ./send-file.ps1 -Port 8080 -InFile .\docs\guide.md -Target de -OutFile .\docs\guide.de.md
   ./send-file.ps1 -InFile .\README.md -Target fr -Report
+  ./send-file.ps1 -InFile .\api.md -Target sv -Disable docstrings,structuralContext
 #>
 [CmdletBinding()]
 param(
@@ -15,6 +16,11 @@ param(
     [string]$ApiKey,
     [ValidateSet('formal', 'informal')][string]$Formality,
     [switch]$NoReview,
+    # Feature switches sent as <name>=false / <name>=true (see README "Feature switches").
+    [ValidateSet('review', 'structuralContext', 'nmtFallback', 'preserveAnchors', 'docstrings', 'codeComments', 'frontMatter', 'mathSingleDollar', 'mdx')]
+    [string[]]$Disable = @(),
+    [ValidateSet('review', 'structuralContext', 'nmtFallback', 'preserveAnchors', 'docstrings', 'codeComments', 'frontMatter', 'mathSingleDollar', 'mdx')]
+    [string[]]$Enable = @(),
     [switch]$Report,
     [int]$TimeoutSec = 900
 )
@@ -38,6 +44,8 @@ $body = [Text.Encoding]::UTF8.GetBytes((@{ $name = $text } | ConvertTo-Json -Com
 $query = @()
 if ($Formality) { $query += "formality=$Formality" }
 if ($NoReview) { $query += 'review=false' }
+foreach ($f in $Disable) { $query += "$f=false" }
+foreach ($f in $Enable) { $query += "$f=true" }
 if ($Report) { $query += 'includeReport=true' }
 $uri = "http://localhost:${Port}/translate/$([uri]::EscapeDataString($Target))" + $(if ($query) { '?' + ($query -join '&') } else { '' })
 

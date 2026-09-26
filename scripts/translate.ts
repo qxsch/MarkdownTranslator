@@ -14,7 +14,7 @@ const started = Date.now();
 const res = await t.translateFiles(files, langs.split(','), {
   review: !flags.has('--no-review'),
   engine: flags.has('--nmt') ? 'nmt' : 'gpt',
-  docstrings: flags.has('--docstrings') || undefined,
+  docstrings: flags.has('--no-docstrings') ? false : undefined,
   structuralContext: flags.has('--no-structure') ? false : undefined,
 });
 mkdirSync('out', { recursive: true });

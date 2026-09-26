@@ -21,7 +21,7 @@ function needsQuotes(s: string): boolean {
 
 const dq = (s: string) => JSON.stringify(s);
 
-export function processFrontmatter(ctx: ExtractContext, node: Yaml): 'formal' | 'informal' | undefined {
+export function processFrontmatter(ctx: ExtractContext, node: Yaml, translate = true): 'formal' | 'informal' | undefined {
   const src = ctx.source;
   const s = startOf(node);
   const e = endOf(node);
@@ -52,6 +52,8 @@ export function processFrontmatter(ctx: ExtractContext, node: Yaml): 'formal' | 
       if (path.length === 0 && FORMALITY_KEYS.test(key) && isScalar(v)) {
         const f = String(v.value).toLowerCase();
         if (f === 'formal' || f === 'informal') formality = f;
+      } else if (!translate) {
+        continue;
       } else if (FRONTMATTER_KEYS.has(lower) && isScalar(v) && typeof v.value === 'string') {
         scalarSegments(ctx, v, base, [...path, key].join('.'));
       } else if (FRONTMATTER_LIST_KEYS.has(lower) && isSeq(v)) {

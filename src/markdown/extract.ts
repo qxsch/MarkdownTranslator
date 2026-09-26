@@ -154,11 +154,12 @@ export function extract(input: string, doNotTranslate: readonly string[] = [], o
         processHtmlBlock(ctx, node);
         return;
       case 'code':
+        if (options.codeComments === false) return;
         setStructure(...local, node.lang ? `${node.lang} code block` : undefined);
         processCodeBlock(ctx, node);
         return;
       case 'yaml':
-        frontmatterFormality = processFrontmatter(ctx, node);
+        frontmatterFormality = processFrontmatter(ctx, node, options.frontMatter !== false);
         return;
       case 'definition': {
         const s = startOf(node);

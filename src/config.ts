@@ -56,6 +56,8 @@ export interface AppConfig {
   structuralContext: boolean;
   mathSingleDollar: boolean;
   docstrings: boolean;
+  codeComments: boolean;
+  frontMatter: boolean;
 }
 
 export function loadConfig(): AppConfig {
@@ -90,7 +92,9 @@ export function loadConfig(): AppConfig {
     sourceLanguage: env('MDT_SOURCE_LANGUAGE'),
     structuralContext: bool('MDT_STRUCTURAL_CONTEXT', true),
     mathSingleDollar: bool('MDT_MATH_SINGLE_DOLLAR', false),
-    docstrings: /^(translate|on|true|1)$/i.test(env('MDT_DOCSTRINGS') ?? 'off'),
+    docstrings: !/^(off|false|0|no)$/i.test(env('MDT_DOCSTRINGS') ?? 'on'),
+    codeComments: bool('MDT_CODE_COMMENTS', true),
+    frontMatter: bool('MDT_FRONT_MATTER', true),
   };
 }
 

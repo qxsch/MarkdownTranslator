@@ -8,6 +8,8 @@ interface Line {
   bodyStart: number;
   bodyEnd: number;
   indent: number;
+  /** Absolute column of the body in its line. */
+  col: number;
 }
 
 interface CommentShape {
@@ -35,8 +37,20 @@ const TAG_PREFIX =
 
 const MARKER_PREFIX = /^(?:TODO|FIXME|HACK|XXX|NOTE|BUG|WARNING|WARN|IMPORTANT|REVIEW|OPTIMIZE|DEPRECATED|SAFETY|NB)(?:\([^)]*\))?:?\s+/;
 
+// Docstring conventions that documentation tools parse (Sphinx/Napoleon, NumPy); they must stay verbatim.
+const DOC_SECTION = /^(?:Args|Arguments|Parameters|Params|Other Parameters|Keyword Args|Keyword Arguments|Kwargs|Returns?|Yields?|Raises|Raise|Except(?:ions)?|Warns|Warnings?|See Also|Notes?|References|Examples?|Attributes|Methods|Todo)\s*:?\s*$/;
+const DOC_UNDERLINE = /^[-=~^]{3,}\s*$/;
+const DOC_ENTRY_SECTIONS = /^(?:Args|Arguments|Parameters|Params|Other Parameters|Keyword Args|Keyword Arguments|Kwargs|Returns?|Yields?|Raises|Raise|Except(?:ions)?|Warns|Attributes|Methods)$/;
+/** Google entry `name (type): ` / `Type: ` or NumPy entry `name : type` (whole line). */
+const GOOGLE_ENTRY = /^\*{0,2}[A-Za-z_][\w.]*(?:\s*\([^)]*\))?:\s+/;
+const NUMPY_ENTRY = /^\*{0,2}[A-Za-z_]\w*(?:\s*,\s*\*{0,2}[A-Za-z_]\w*)*\s+:\s+\S.*$/;
+/** A bare type line such as `bool`, `list[str]` or `int or None` (NumPy Returns/Yields). */
+const TYPE_LINE = /^[A-Za-z_][\w.]*(?:\[[^\]]*\])?(?:\s*(?:\||,|\bor\b)\s*[A-Za-z_][\w.]*(?:\[[^\]]*\])?)*$/;
+const RST_DIRECTIVE = /^\.\.\s+[\w-]+::\s*/;
+
 /** Spans inside comment text that are code, not prose. */
 const COMMENT_CODE_SPANS = [
+  /``[^`\n]+``/g,
   /`[^`\n]+`/g,
   /<(c|code|see|seealso|paramref|typeparamref|langword)\b[^>]*>[\s\S]*?<\/\1>/g,
   /<\/?[A-Za-z][\w:.-]*(?:\s[^<>]*)?\/?>/g,
@@ -90,7 +104,7 @@ function shape(code: string, c: CommentRange): CommentShape | null {
       const extra = /^[ \t]*/.exec(lineText.slice(deco.length))![0].length;
       const bodyStart = pos + deco.length + extra;
       const bodyEnd = pos + lineText.replace(/[ \t\r]+$/, '').length;
-      lines.push({ bodyStart, bodyEnd: Math.max(bodyStart, bodyEnd), indent: extra });
+      lines.push({ bodyStart, bodyEnd: Math.max(bodyStart, bodyEnd), indent: extra, col: bodyStart - (code.lastIndexOf('\n', bodyStart - 1) + 1) });
       if (nl >= innerEnd) break;
       pos = nl + 1;
     }
@@ -102,7 +116,7 @@ function shape(code: string, c: CommentRange): CommentShape | null {
   const lead = /^[ \t]*/.exec(rest)![0].length;
   const bodyStart = c.start + marker[0].length + lead;
   const bodyEnd = c.start + text.replace(/[ \t\r]+$/, '').length;
-  return { lines: [{ bodyStart, bodyEnd: Math.max(bodyStart, bodyEnd), indent: Math.max(0, lead - 1) }] };
+  return { lines: [{ bodyStart, bodyEnd: Math.max(bodyStart, bodyEnd), indent: Math.max(0, lead - 1), col: bodyStart - (code.lastIndexOf('\n', bodyStart - 1) + 1) }] };
 }
 
 /** Consecutive line comments with the same marker at the same column form one logical comment. */
@@ -151,9 +165,10 @@ export function processCodeBlock(ctx: ExtractContext, node: Code) {
     return;
   }
   const docstrings = findDocstrings(lang, value);
-  if (docstrings.length && !ctx.options.docstrings) ctx.notes.push(`${docstrings.length} docstring(s) in "${lang}" code left untranslated (MDT_DOCSTRINGS=off)`);
-  const docstringStarts = new Set(ctx.options.docstrings ? docstrings.map((d) => d.start) : []);
-  const comments = [...found, ...(ctx.options.docstrings ? docstrings : [])].sort((a, b) => a.start - b.start);
+  const withDocstrings = ctx.options.docstrings !== false;
+  if (docstrings.length && !withDocstrings) ctx.notes.push(`${docstrings.length} docstring(s) in "${lang}" code left untranslated (docstrings disabled)`);
+  const docstringStarts = new Set(withDocstrings ? docstrings.map((d) => d.start) : []);
+  const comments = [...found, ...(withDocstrings ? docstrings : [])].sort((a, b) => a.start - b.start);
   if (!comments.length) return;
   const fenceLineEnd = src.indexOf('\n', s);
   if (fenceLineEnd === -1) return;
@@ -172,33 +187,102 @@ export function processCodeBlock(ctx: ExtractContext, node: Code) {
     if (DIRECTIVE.test(value.slice(lines[0].bodyStart, lines[0].bodyEnd)) || /^#!/.test(firstText)) continue;
     let inExample = false;
     const docstring = docstringStarts.has(group[0].start);
-    for (const para of paragraphs(value, lines, lang)) {
-      const text = para.map((l) => value.slice(l.bodyStart, l.bodyEnd)).join(' ');
+    for (const para of paragraphs(value, lines, lang, docstring)) {
+      const text = para.lines.map((l) => value.slice(l.bodyStart, l.bodyEnd)).join(' ');
       if (/^@example\b/.test(text)) inExample = true;
       else if (/^@\w/.test(text)) inExample = false;
-      if (inExample || DIRECTIVE.test(text) || /^(?:>>>|\.\.\.)(?:\s|$)/.test(text) || isCode(lang, text)) continue;
-      commentSegment(ctx, value, map, para, lang, closer, docstring);
+      if (inExample || para.keep || DIRECTIVE.test(text) || /^(?:>>>|\.\.\.)(?:\s|$)/.test(text) || isCode(lang, text)) continue;
+      commentSegment(ctx, value, map, para.lines, lang, closer, docstring, para.entry);
     }
   }
 }
 
-function paragraphs(value: string, lines: Line[], lang: string): Line[][] {
-  const out: Line[][] = [];
+interface Paragraph {
+  lines: Line[];
+  /** Structure that must stay verbatim (docstring section header, underline, NumPy entry, doctest or literal block). */
+  keep?: boolean;
+  /** Inside an Args/Returns/Raises section: the entry prefix (`name (type):`) is protected. */
+  entry?: boolean;
+}
+
+function paragraphs(value: string, lines: Line[], lang: string, docstring = false): Paragraph[] {
+  const out: Paragraph[] = [];
   let cur: Line[] = [];
-  const flush = () => {
-    if (cur.length) out.push(cur);
+  let section = '';
+  let sectionIndent = -1;
+  let numpy = false;
+  let prevHeader = false;
+  // Docstrings: `>>>` doctest blocks (with their output) and reST literal blocks after `::` stay verbatim.
+  let keepCur = false;
+  let doctest = false;
+  let literal = -1;
+  const flush = (keep = false) => {
+    if (cur.length) {
+      out.push({ lines: cur, keep: keep || keepCur, entry: docstring && DOC_ENTRY_SECTIONS.test(section) });
+      const last = cur[cur.length - 1];
+      if (docstring && !keepCur && /::$/.test(value.slice(last.bodyStart, last.bodyEnd).trimEnd())) literal = cur[0].col;
+    }
     cur = [];
+    keepCur = false;
   };
   for (const l of lines) {
     const body = value.slice(l.bodyStart, l.bodyEnd);
     if (!body.trim()) {
       flush();
+      doctest = false;
       continue;
+    }
+    if (docstring) {
+      if (literal >= 0) {
+        if (l.col > literal) {
+          if (!keepCur) {
+            flush();
+            keepCur = true;
+          }
+          cur.push(l);
+          continue;
+        }
+        literal = -1;
+      }
+      if (/^>>>(?:\s|$)/.test(body.trim())) {
+        if (!doctest) flush();
+        keepCur = doctest = true;
+        cur.push(l);
+        continue;
+      }
+      if (doctest) {
+        cur.push(l);
+        continue;
+      }
+      const header = DOC_SECTION.exec(body.trim());
+      if (header || DOC_UNDERLINE.test(body)) {
+        flush();
+        if (header) {
+          section = body.trim().replace(/\s*:$/, '');
+          sectionIndent = l.col;
+          numpy = false;
+        } else if (prevHeader) numpy = true;
+        prevHeader = !!header;
+        cur.push(l);
+        flush(true);
+        continue;
+      }
+      prevHeader = false;
+      // Google style: a line back at the header's indentation ends the section (NumPy sections run to the next header).
+      if (section && !numpy && l.col <= sectionIndent) section = '';
+      const inEntries = DOC_ENTRY_SECTIONS.test(section);
+      if (inEntries && (NUMPY_ENTRY.test(body.trim()) || (numpy && TYPE_LINE.test(body.trim())))) {
+        flush();
+        cur.push(l);
+        flush(true);
+        continue;
+      }
+      if (inEntries && GOOGLE_ENTRY.test(body) && cur.length) flush();
     }
     const code = isCode(lang, body);
     // Lines that are only a doc tag (<summary>, </remarks>) delimit paragraphs.
     const tagOnly = /^<\/?[A-Za-z][^>]*>$/.test(body.trim());
-    const startsBlock = /^(?:@\w|[-*+•]\s|\d+[.)]\s|\||>|:\w+.*:|\\\w|```|~~~|<\w)/.test(body) || code || tagOnly;
+    const startsBlock = /^(?:@\w|[-*+•]\s|\d+[.)]\s|\||>|:\w+.*:|\\\w|```|~~~|<\w|\.\.\s)/.test(body) || code || tagOnly;
     if (startsBlock || (cur.length && Math.abs(l.indent - cur[0].indent) >= 2)) flush();
     cur.push(l);
     if (code || tagOnly) flush();
@@ -207,7 +291,7 @@ function paragraphs(value: string, lines: Line[], lang: string): Line[][] {
   return out;
 }
 
-function commentSegment(ctx: ExtractContext, value: string, map: (v: number) => number, para: Line[], lang: string, closer?: string, docstring = false) {
+function commentSegment(ctx: ExtractContext, value: string, map: (v: number) => number, para: Line[], lang: string, closer?: string, docstring = false, entry = false) {
   const src = ctx.source;
   const from = map(para[0].bodyStart);
   const to = map(para[para.length - 1].bodyEnd);
@@ -216,13 +300,17 @@ function commentSegment(ctx: ExtractContext, value: string, map: (v: number) => 
     if (i > 0) mb.text(' ');
     let body = value.slice(l.bodyStart, l.bodyEnd);
     if (i === 0) {
-      const tag = TAG_PREFIX.exec(body) ?? MARKER_PREFIX.exec(body);
+      const tag = TAG_PREFIX.exec(body) ?? (docstring ? RST_DIRECTIVE.exec(body) ?? (entry ? GOOGLE_ENTRY.exec(body) : null) : null) ?? MARKER_PREFIX.exec(body);
       if (tag && tag[0]) {
         mb.placeholder(tag[0], tag[0]);
         body = body.slice(tag[0].length);
       }
     }
+    // reST: a trailing `::` introduces the literal block that follows and must survive translation.
+    const literalMarker = docstring && i === para.length - 1 && body.endsWith('::');
+    if (literalMarker) body = body.slice(0, -2);
     maskComment(mb, body);
+    if (literalMarker) mb.placeholder('::', '::');
   });
   let wrap;
   if (para.length > 1) {

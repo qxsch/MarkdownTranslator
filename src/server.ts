@@ -6,7 +6,7 @@ import { MarkdownTranslator, UnknownLanguageError, type TranslateOptions } from 
 const MAX_FILES = 500;
 const MAX_NAME = 512;
 
-class BadRequest extends Error {}
+export class BadRequest extends Error {}
 
 function parseFiles(body: unknown): Record<string, string> {
   if (!body || typeof body !== 'object' || Array.isArray(body)) throw new BadRequest('body must be a JSON object: { "file.md": "markdown text" }');
@@ -22,7 +22,12 @@ function parseFiles(body: unknown): Record<string, string> {
   return files;
 }
 
-function options(q: Record<string, string | undefined>): TranslateOptions {
+/** Boolean feature switches accepted as query parameters (true/false, 1/0, yes/no, on/off). */
+export const FEATURE_SWITCHES = [
+  'review', 'structuralContext', 'nmtFallback', 'preserveAnchors', 'docstrings', 'codeComments', 'frontMatter', 'mathSingleDollar', 'mdx',
+] as const;
+
+export function options(q: Record<string, string | undefined>): TranslateOptions {
   const o: TranslateOptions = {};
   if (q.formality) {
     if (q.formality !== 'formal' && q.formality !== 'informal') throw new BadRequest('formality must be "formal" or "informal"');
@@ -32,14 +37,18 @@ function options(q: Record<string, string | undefined>): TranslateOptions {
     if (!/^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/.test(q.sourceLanguage)) throw new BadRequest('invalid sourceLanguage');
     o.sourceLanguage = q.sourceLanguage;
   }
-  if (q.review) o.review = /^(1|true|yes)$/i.test(q.review);
   if (q.engine) {
     if (q.engine !== 'gpt' && q.engine !== 'nmt') throw new BadRequest('engine must be "gpt" or "nmt"');
     o.engine = q.engine;
   }
   if (q.doNotTranslate) o.doNotTranslate = q.doNotTranslate.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 200);
-  if (q.structuralContext) o.structuralContext = /^(1|true|yes)$/i.test(q.structuralContext);
-  if (q.docstrings) o.docstrings = /^(1|true|yes|translate)$/i.test(q.docstrings);
+  for (const name of FEATURE_SWITCHES) {
+    const v = q[name];
+    if (v === undefined || v === '') continue;
+    if (/^(1|true|yes|on)$/i.test(v)) o[name] = true;
+    else if (/^(0|false|no|off)$/i.test(v)) o[name] = false;
+    else throw new BadRequest(`${name} must be true or false`);
+  }
   return o;
 }
 

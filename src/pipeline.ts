@@ -10,12 +10,20 @@ import { TranslationCache } from './translate/cache.js';
 import { translateDocument, type Engine, type SegmentOutcome } from './translate/engine.js';
 import { ANALYSIS_SCHEMA, ANALYSIS_SYSTEM, type DocAnalysis } from './translate/prompts.js';
 
+/** Per-request feature switches; anything left undefined falls back to the MDT_* environment defaults. */
 export interface TranslateOptions {
+  review?: boolean;
   structuralContext?: boolean;
+  nmtFallback?: boolean;
+  preserveAnchors?: boolean;
   docstrings?: boolean;
+  codeComments?: boolean;
+  frontMatter?: boolean;
+  mathSingleDollar?: boolean;
+  /** Force MDX parsing on or off; by default only `.mdx` files are parsed as MDX. */
+  mdx?: boolean;
   formality?: 'formal' | 'informal';
   sourceLanguage?: string;
-  review?: boolean;
   doNotTranslate?: string[];
   engine?: Engine;
   translateDeployment?: string;
@@ -111,8 +119,10 @@ export class MarkdownTranslator {
     await Promise.all(
       Object.entries(files).map(async ([file, content]) => {
         const ex = extract(content, dnt, {
-          parse: { mdx: /\.mdx$/i.test(file), mathSingleDollar: this.cfg.mathSingleDollar },
+          parse: { mdx: opts.mdx ?? /\.mdx$/i.test(file), mathSingleDollar: opts.mathSingleDollar ?? this.cfg.mathSingleDollar },
           docstrings: opts.docstrings ?? this.cfg.docstrings,
+          codeComments: opts.codeComments ?? this.cfg.codeComments,
+          frontMatter: opts.frontMatter ?? this.cfg.frontMatter,
         });
         result.extractions[file] = ex;
         const translatable = ex.segments.some((s) => !s.passive);
@@ -138,10 +148,11 @@ export class MarkdownTranslator {
                   docName: file, ex, lang, sourceLanguage: languageName(sourceCode), sourceLanguageCode: sourceCode.split('-')[0], analysis, formality,
                   glossary: this.glossary, engine: opts.engine ?? 'gpt', review: opts.review ?? this.cfg.review,
                   translateDeployment: opts.translateDeployment, reviewDeployment: opts.reviewDeployment, structuralContext: opts.structuralContext,
+                  nmtFallback: opts.nmtFallback,
                 },
               );
               result.outcomes[file][lang.code] = outcomes;
-              const assembled = assembleDocument(ex, tm, { wrap: lang.wrap !== 'none', preserveAnchors: this.cfg.preserveAnchors });
+              const assembled = assembleDocument(ex, tm, { wrap: lang.wrap !== 'none', preserveAnchors: opts.preserveAnchors ?? this.cfg.preserveAnchors });
               result.translations[lang.code][file] = assembled.text;
               report.segments = outcomes.size;
               for (const o of outcomes.values()) {

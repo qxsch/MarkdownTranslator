@@ -33,6 +33,8 @@ export interface TranslateTask {
   reviewDeployment?: string;
   /** Include each segment's structural position in model requests (default: config). */
   structuralContext?: boolean;
+  /** Use Azure Translator for segments that fail validation (default: config). */
+  nmtFallback?: boolean;
 }
 
 export interface SegmentOutcome {
@@ -178,7 +180,7 @@ export async function translateDocument(deps: EngineDeps, task: TranslateTask): 
     failures = pending.map((seg) => ({ seg, errors: [] }));
   }
 
-  if (failures.length && nmt.available && (cfg.nmtFallback || task.engine === 'nmt')) {
+  if (failures.length && nmt.available && ((task.nmtFallback ?? cfg.nmtFallback) || task.engine === 'nmt')) {
     try {
       const out = await nmt.translate(
         failures.map((f) => maskedToHtml(f.seg.masked)),

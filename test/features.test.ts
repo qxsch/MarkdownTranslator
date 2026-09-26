@@ -11,6 +11,7 @@ import { segmentPayload } from '../src/translate/prompts.js';
 import { validateSegment } from '../src/translate/validate.js';
 import type { ExtractOptions } from '../src/markdown/context.js';
 import { LANG, pseudoMap, pseudoWords } from './helpers.js';
+import { BadRequest, options } from '../src/server.js';
 
 await initCodeParsers();
 
@@ -182,19 +183,63 @@ describe('4. tree-sitter code decisions and docstrings', () => {
     }
   });
 
-  it('keeps docstrings by default and reports them', () => {
-    expect(r.out.text).toContain('"""Load the configuration file.\n\n    Returns the parsed settings.\n    """');
-    expect(r.ex.notes.join()).toMatch(/docstring/);
+  it('translates docstrings by default, keeping quotes and indentation', () => {
+    expect(r.out.text).toContain(`"""${pseudoWords('Load the configuration file.')}\n\n    ${pseudoWords('Returns the parsed settings.')}\n    """`);
+    const seg = r.ex.segments.find((s) => s.note === 'python docstring')!;
+    expect(validateSegment(seg, 'Lädt die Datei \\n', r.ex, LANG).join()).toMatch(/must not contain/);
   });
 
-  it('translates docstrings when enabled, keeping quotes and indentation', () => {
-    const d = roundTrip('structure.md', { docstrings: true });
+  it('keeps docstrings byte-identical when disabled and reports it', () => {
+    const d = roundTrip('structure.md', { docstrings: false });
     commonChecks(d);
-    expect(d.out.text).toContain(`"""${pseudoWords('Load the configuration file.')}\n\n    ${pseudoWords('Returns the parsed settings.')}\n    """`);
-    const seg = d.ex.segments.find((s) => s.note === 'python docstring')!;
-    expect(validateSegment(seg, 'Lädt die Datei \\n', d.ex, LANG).join()).toMatch(/must not contain/);
+    expect(d.out.text).toContain('"""Load the configuration file.\n\n    Returns the parsed settings.\n    """');
+    expect(d.ex.notes.join()).toMatch(/docstrings disabled/);
   });
 
+  it('handles Google, NumPy and reST docstring conventions', () => {
+    const d = roundTrip('docstrings.md');
+    commonChecks(d);
+    const t = d.out.text;
+    for (const kept of [
+      '    Args:\n', '        path (str): ', '        retries (int): ', '    Returns:\n', '        bool: ', '    Raises:\n', '        ValueError: ',
+      '    Examples:\n', '        >>> upload("data.csv")\n        True\n', '    .. note:: ',
+      '::\n\n            python upload.py data.csv --retries 5\n            python upload.py other.csv\n',
+      '    Parameters\n    ----------\n    name : str\n', '    Returns\n    -------\n    bytes\n', '    Notes\n    -----\n', '``Range``',
+    ]) expect(t).toContain(kept);
+    for (const prose of ['Upload a file to the storage account.', 'Local path of the file to upload.', 'True if the upload succeeded.', 'Large files are uploaded in blocks.', 'Name of the blob to download.', 'The content of the blob.', 'Upload a single file.', 'Or use the command line', 'Then check the result.']) {
+      expect(t).toContain(pseudoWords(prose));
+    }
+  });
+
+  it('keeps all code comments when codeComments is disabled', () => {
+    const d = roundTrip('structure.md', { codeComments: false });
+    commonChecks(d);
+    expect(d.out.text).toContain('Install the dependencies');
+    expect(d.out.text).toContain('"""Load the configuration file.');
+    expect(d.ex.segments.some((s) => s.note?.includes('comment') || s.note?.includes('docstring'))).toBe(false);
+  });
+});
+
+describe('5. feature switches', () => {
+  it('keeps front matter byte-identical when disabled but still detects formality', () => {
+    const r = roundTrip('frontmatter.md', { frontMatter: false });
+    commonChecks(r);
+    expect(r.out.text.split('---')[1]).toBe(fixture('frontmatter.md').split('---')[1]);
+    expect(r.ex.frontmatterFormality).toBe('informal');
+  });
+
+  it('parses REST query switches strictly', () => {
+    expect(options({ review: 'false', docstrings: 'off', mathSingleDollar: 'on', mdx: '1', nmtFallback: 'no', preserveAnchors: 'true' })).toEqual({
+      review: false, docstrings: false, mathSingleDollar: true, mdx: true, nmtFallback: false, preserveAnchors: true,
+    });
+    expect(options({ codeComments: 'FALSE', frontMatter: 'Yes', structuralContext: '0' })).toEqual({ codeComments: false, frontMatter: true, structuralContext: false });
+    expect(options({})).toEqual({});
+    expect(() => options({ docstrings: 'translate' })).toThrow(BadRequest);
+    expect(() => options({ review: 'maybe' })).toThrow(/review must be true or false/);
+  });
+});
+
+describe('4b. docstring code safety', () => {
   it('never lets a docstring translation change code bytes', () => {
     const d = extract(fixture('structure.md'), [], { docstrings: true });
     const seg = d.segments.find((s) => s.note === 'python docstring')!;

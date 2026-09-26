@@ -22,8 +22,12 @@ export interface SegmentOptions {
 
 export interface ExtractOptions {
   parse?: ParseOptions;
-  /** Translate Python docstrings (off by default; they are string literals, not comments). */
+  /** Translate Python docstrings (default true). */
   docstrings?: boolean;
+  /** Translate comments in fenced code blocks (default true). */
+  codeComments?: boolean;
+  /** Translate prose values in YAML front matter (default true). */
+  frontMatter?: boolean;
 }
 
 export class ExtractContext {

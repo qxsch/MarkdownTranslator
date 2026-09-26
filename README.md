@@ -14,6 +14,7 @@ It runs as a Docker container with a small REST API and uses Azure services:
 
 - [How it works](#how-it-works)
 - [Measured quality (impact of the reviewer)](#measured-quality-impact-of-the-reviewer)
+- [Feature switches](#feature-switches)
 - [Deploy the Azure side](#deploy-the-azure-side)
 - [Build the image](#build-the-image)
 - [Run the container](#run-the-container)
@@ -54,7 +55,7 @@ What is translated and what is kept:
 | File names and paths (`test.jpeg`, `./scripts/deploy.ps1`, `C:\temp`), URLs, e-mail, variables (`$HOME`, `%APPDATA%`, `${VAR}`), CLI flags, versions, GUIDs, identifiers (`camelCase`, `snake_case`, `Get-AzContext`), glossary terms | Unchanged, also inside backticks, image references and attributes |
 | Fenced code | Code bytes unchanged; comments translated (line and block comments, JSDoc/XML doc tags kept). Parsed with tree-sitter (JS, TS, Python, Bash, PowerShell, C#, C/C++, Java, Go, Rust, Ruby, PHP, CSS, INI) or a lexer (Bicep, Terraform, SQL, KQL, YAML, TOML, Dockerfile, XML/HTML, and more) |
 | Commented-out code, lint/pragma directives, shebangs, license headers | Unchanged. Commented-out code is detected by parsing the comment text with the block's own tree-sitter grammar (plus heuristics for lexer-only languages) |
-| Python docstrings | Unchanged by default (detected with tree-sitter and listed in the report); set `MDT_DOCSTRINGS=translate` or `?docstrings=true` to translate them, quotes and indentation are kept |
+| Python docstrings | Translated (detected with tree-sitter); quotes and indentation are kept. Google (`Args:`, `name (type):`), NumPy (`Parameters` + `----------`, `name : type`) and reST (`.. note::`, `:param x:`) structure, `>>>` doctest blocks and `::` literal blocks stay unchanged. Disable with `docstrings=false` |
 | Front matter | Parsed as YAML: prose keys (`title`, `description`, `summary`, ...) at any depth (`seo.title`, `nav[].title`), `keywords` lists, plain, quoted, folded (`>`) and literal (`\|`) scalars. Indicators, indentation and quoting style are kept |
 | Math | `$$...$$` inline and block math unchanged; single `$...$` only with `MDT_MATH_SINGLE_DOLLAR=true` (off by default so prices like "$5 and $10" stay prose) |
 | Admonitions and directives | `:::note[Title]`, `::leaf[label]{attrs}` (remark-directive), Docusaurus `:::tip Title` and GitHub alerts `> [!NOTE]`: fences and names unchanged, titles and content translated, line structure kept |
@@ -107,6 +108,34 @@ Impact of structural context (`MDT_STRUCTURAL_CONTEXT`), measured separately on 
 Structural context is on by default: overall it wins significantly and lowers the error score by about 18%, with the clearest gain in step-by-step documentation. The effect is smaller and less certain than the review pass: one judge does not see a significant difference, and pure prose and tables of short values show no gain. Turn it off with `MDT_STRUCTURAL_CONTEXT=false` if your own evaluation shows no benefit (`EVAL_VARIANTS=gpt,noctx npx tsx eval/run.ts`).
 
 Caveats: LLM judges instead of human linguists, and a small corpus. Re-run the evaluation on your own documents before relying on the numbers.
+
+## Feature switches
+
+Every feature can be switched per request with a query parameter and per deployment with an environment variable. The request value wins over the environment variable. Query values: `true`/`false`, `1`/`0`, `yes`/`no`, `on`/`off`; anything else returns 400.
+
+Rule for the defaults: a feature that changes translation quality is on only if the evaluation shows a significant improvement. Features with a measured degradation or no significant improvement are off and must be enabled explicitly. Features that implement a correctness requirement (code comments, docstrings, front matter, anchors) are on because turning them off leaves text untranslated or breaks links; they are covered by deterministic tests instead of a quality score.
+
+| Query parameter | Environment variable | Default | What it does | Evidence for the default |
+|---|---|---|---|---|
+| `review` | `MDT_REVIEW` | on | Second GPT pass (reasoning high) that checks every translation against the source and fixes errors | Measured: 76 / 0 wins, error score 1.98 to 0.21, independent judge 38 / 0. Doubles time and tokens |
+| `structuralContext` | `MDT_STRUCTURAL_CONTEXT` | on | Sends each segment's position (section, table column and row, list lead-in, admonition) to the model | Measured: 185 / 128 wins, p = 0.002, error score 3.68 to 3.02. Not significant for the independent judge (p = 0.54) and no gain on prose or tables of short values, so it is the weakest default; see [Measured quality](#measured-quality-impact-of-the-reviewer) |
+| `nmtFallback` | `MDT_NMT_FALLBACK` | on | Azure Translator translates a segment that failed GPT validation twice | Safety net: without it such a segment stays in the source language. Never triggered in the evaluation (0 fallbacks in 72 documents), so it cannot degrade normal output. Azure Translator is far below GPT (567 / 3), which is why it is only a fallback |
+| `preserveAnchors` | `MDT_PRESERVE_ANCHORS` | on | Inserts `<a id="old-slug"></a>` into translated headings so `#old-slug` links keep working | Correctness (links), tested; no effect on translation text |
+| `codeComments` | `MDT_CODE_COMMENTS` | on | Translates comments in fenced code. Off: code blocks stay byte-identical, including comments | Correctness requirement, tested; code bytes are unchanged either way |
+| `docstrings` | `MDT_DOCSTRINGS` | on | Translates Python docstrings (needs `codeComments`). Off: docstrings unchanged and listed in the report | Correctness requirement, tested with Google, NumPy and reST docstrings; not scored in the evaluation (the corpus has no docstrings) |
+| `frontMatter` | `MDT_FRONT_MATTER` | on | Translates prose keys in YAML front matter. Off: front matter byte-identical; `formality:` is still read | Correctness requirement, tested |
+| `mdx` | none | on for `.mdx` files | Parses the file as MDX (JSX, `{expressions}`, `import`/`export`) | Wrong for plain Markdown (`{` and `<` would be parsed as code), so it follows the file extension; force it for MDX content in `.md` files |
+| `mathSingleDollar` | `MDT_MATH_SINGLE_DOLLAR` | off | Treats `$...$` as inline math | Degradation: prices such as "$5 and $10" become math and stay untranslated. Enable only for documents that use single-dollar math |
+
+Other options that are not on/off switches: `engine=nmt` (Azure Translator only, error score 26.35 vs 2.09, not recommended), `formality`, `sourceLanguage`, `doNotTranslate`. The alternative model deployment (`MDT_TRANSLATE_DEPLOYMENT`, GPT-5.6-sol) is not the default: no independent improvement and a regression in Polish.
+
+Example: fastest run for a Python API reference that keeps docstrings and code untouched:
+
+```http
+POST /translate/de?review=false&docstrings=false&codeComments=false
+```
+
+With the test script: `./send-file.ps1 -InFile .\api.md -Target de -Disable review,docstrings -Enable mathSingleDollar`.
 
 ## Deploy the Azure side
 
@@ -265,6 +294,8 @@ Protecting the API itself: set `MDT_API_KEY`; clients then send it in the `x-api
 | `-ApiKey` | `$env:MDT_API_KEY`, then `.mdt-local-key` | API key |
 | `-Formality` | discovered | `formal` or `informal` |
 | `-NoReview` | off | Skip the review pass (faster, lower quality) |
+| `-Disable` | none | Feature switches to turn off, e.g. `review,docstrings` (see [Feature switches](#feature-switches)) |
+| `-Enable` | none | Feature switches to turn on, e.g. `mathSingleDollar,mdx` |
 | `-Report` | off | Print segments, fallbacks, review edits, reverted blocks, anchors |
 | `-TimeoutSec` | `900` | HTTP timeout |
 
@@ -307,12 +338,10 @@ Same body; translates into several languages in parallel. Without `to` all `defa
 | Option | Values | Description |
 |---|---|---|
 | `formality` | `formal`, `informal` | Override the discovered register |
-| `review` | `true`, `false` | Enable or skip the review pass (default `MDT_REVIEW`) |
 | `engine` | `gpt`, `nmt` | `nmt` uses only Azure Translator |
 | `sourceLanguage` | BCP-47, e.g. `en` | Skip source language detection |
 | `doNotTranslate` | comma-separated terms | Additional protected terms |
-| `structuralContext` | `true`, `false` | Send segment positions to the model (default `MDT_STRUCTURAL_CONTEXT`) |
-| `docstrings` | `true`, `false` | Translate Python docstrings (default `MDT_DOCSTRINGS`) |
+| `review`, `structuralContext`, `nmtFallback`, `preserveAnchors`, `codeComments`, `docstrings`, `frontMatter`, `mdx`, `mathSingleDollar` | `true`, `false` | Feature switches, see [Feature switches](#feature-switches) for defaults and evidence |
 | `includeReport` | `true` | Wrap the response: `{ "files": {...}, "report": [...], "usage": {...} }` (multi-language: `{ "translations": {...}, ... }`) |
 
 Report entry per file and language: `formality`, `segments`, `via` (gpt, nmt, cache, source), `retried`, `reviewEdits`, `keptSource` (segments left untranslated, with reasons), `revertedForStructure`, `anchorsAdded`, `untranslatedWarnings`, `notes`, `error`.
@@ -367,7 +396,9 @@ $r.report | Format-Table file, language, segments, reviewEdits
 | `MDT_PRESERVE_ANCHORS` | `true` | Insert anchors for the original heading slugs |
 | `MDT_SOURCE_LANGUAGE` | detected | Fixed source language |
 | `MDT_STRUCTURAL_CONTEXT` | `true` | Send each segment's position (section, table column/row, list lead-in) to the model |
-| `MDT_DOCSTRINGS` | `off` | `translate` to translate Python docstrings |
+| `MDT_CODE_COMMENTS` | `true` | Translate comments in fenced code |
+| `MDT_DOCSTRINGS` | `true` | Translate Python docstrings |
+| `MDT_FRONT_MATTER` | `true` | Translate prose keys in YAML front matter |
 | `MDT_MATH_SINGLE_DOLLAR` | `false` | Treat `$...$` as inline math |
 | `MDT_MAX_CONCURRENCY` | `16` | Parallel model calls |
 | `MDT_BATCH_MAX_SEGMENTS` | `40` | Segments per model call |
