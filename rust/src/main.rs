@@ -9,7 +9,7 @@ use mdtranslate::translate::prompts::DocAnalysis;
 use mdtranslate::types::{RenderOptions, TMap};
 use serde_json::{json, Value};
 use std::collections::HashMap;
-use std::io::{Read, Write};
+use std::io::{IsTerminal, Read, Write};
 use std::process::ExitCode;
 use std::time::Instant;
 
@@ -20,14 +20,18 @@ static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
 const USAGE: &str = "mdtranslate - structure-preserving Markdown translation (Azure AI Foundry / Azure Translator)
 
 USAGE:
-  mdtranslate -sourceFile <file|-> -targetFile <file|-> -lang <code>[,<code>...] [options]
+  mdtranslate [-sourceFile <file|->] [-targetFile <file|->] -lang <code>[,<code>...] [options]
+  cat guide.md | mdtranslate -lang fr > guide.fr.md
 
-  stdout carries nothing but the output of -targetFile - (and -help); progress and errors go to stderr.
+  Without -sourceFile the document is read from stdin; without -targetFile the result goes to stdout.
+  stdout carries nothing but that output (and -help); progress and errors go to stderr.
 
 INPUT / OUTPUT
-  -sourceFile, -s <file>      Markdown or MDX file to translate; - reads stdin (required)
-  -targetFile, -t <file>      where to write the translation; - writes stdout (required).
-                              With several languages the name must contain {lang}.
+  -sourceFile, -s <file>      Markdown or MDX file to translate; - reads stdin. An empty source gives an empty
+                              translation. Without -sourceFile, stdin must bring a document: when nothing is
+                              piped in or the input is empty, this usage is shown (exit code 1).
+  -targetFile, -t <file>      where to write the translation; - or no -targetFile writes stdout.
+                              With several languages it must be a file name containing {lang}.
   -lang, -l <codes>           target language code(s), comma-separated (see -listLanguages)
   -fileName <name>            logical file name for stdin input (MDX detection, prompts)
   -reportFile <file>          write a JSON report (reports, outcomes, translation memory, usage)
@@ -62,7 +66,7 @@ FEATURE FLAGS  (-flag, -no-flag, -flag=true|false; defaults from the environment
   -mathSingleDollar  parse $x$ as inline math                    MDT_MATH_SINGLE_DOLLAR  (off)
   -mdx               parse as MDX                                MDT_MDX                 (.mdx files)
 
-INSPECTION  (JSON written to -targetFile, which may be -)
+INSPECTION  (JSON written to -targetFile, else stdout)
   -dumpExtraction    the extracted segments
   -dumpGolden        extraction + pseudo translation (parity tests)
   -analyzeOnly       the document analysis
@@ -237,15 +241,40 @@ fn load_env_file(path: &str) -> Result<(), String> {
     Ok(())
 }
 
-fn read_input(path: &str) -> Result<String, String> {
-    let bytes = if path == "-" {
-        let mut buf = Vec::new();
-        std::io::stdin().read_to_end(&mut buf).map_err(|e| format!("stdin: {e}"))?;
-        buf
-    } else {
-        std::fs::read(path).map_err(|e| format!("{path}: {e}"))?
-    };
-    String::from_utf8(bytes).map_err(|_| format!("{path}: not valid UTF-8"))
+fn read_input(source: Option<&str>) -> Result<String, String> {
+    match source {
+        Some("-") => read_stdin(),
+        Some(path) => {
+            let bytes = std::fs::read(path).map_err(|e| format!("{path}: {e}"))?;
+            String::from_utf8(bytes).map_err(|_| format!("{path}: not valid UTF-8"))
+        }
+        // Without -sourceFile, stdin has to bring a document; otherwise options were probably forgotten.
+        None => {
+            if std::io::stdin().is_terminal() {
+                return Err(no_input("nothing was piped in"));
+            }
+            let text = read_stdin()?;
+            if is_blank(&text) {
+                return Err(no_input("stdin is empty"));
+            }
+            Ok(text)
+        }
+    }
+}
+
+fn read_stdin() -> Result<String, String> {
+    let mut buf = Vec::new();
+    std::io::stdin().lock().read_to_end(&mut buf).map_err(|e| format!("stdin: {e}"))?;
+    String::from_utf8(buf).map_err(|_| "stdin: not valid UTF-8".to_string())
+}
+
+/// The usage error for a missing document, followed by the usage.
+fn no_input(why: &str) -> String {
+    format!("no input: {why}; pipe a Markdown document into mdtranslate or pass -sourceFile <file>\n\n{USAGE}")
+}
+
+fn is_blank(text: &str) -> bool {
+    text.trim_start_matches('\u{feff}').trim().is_empty()
 }
 
 fn write_output(path: &str, text: &str) -> Result<(), String> {
@@ -325,9 +354,9 @@ fn main() -> ExitCode {
     }
 }
 
-/// The -targetFile value. Output never goes to stdout unless it is explicitly `-`.
-fn target_file(args: &Args) -> Result<String, String> {
-    args.value("targetfile").map(String::from).ok_or_else(|| "-targetFile is required (use -targetFile - to write to stdout)".to_string())
+/// Where output goes: the -targetFile value, else stdout.
+fn target_file(args: &Args) -> String {
+    args.value("targetfile").unwrap_or("-").to_string()
 }
 
 fn run() -> Result<ExitCode, String> {
@@ -341,7 +370,7 @@ fn run() -> Result<ExitCode, String> {
         return Ok(ExitCode::SUCCESS);
     }
     if args.value("reportfile") == Some("-") {
-        return Err("-reportFile needs a file name; stdout only carries the output of -targetFile -".into());
+        return Err("-reportFile needs a file name; stdout only carries the translated document".into());
     }
     let quiet = args.on("quiet");
     if let Some(p) = args.value("envfile") {
@@ -361,19 +390,19 @@ fn run() -> Result<ExitCode, String> {
     let catalog = load_languages(args.value("languagesfile").or(cfg.languages_file.as_deref()))?;
     let glossary = load_glossary(args.value("glossaryfile").or(cfg.glossary_file.as_deref()))?;
     if args.on("listlanguages") {
-        let target = target_file(&args)?;
+        let target = target_file(&args);
         let langs: Vec<Value> = catalog.order.iter().map(|c| serde_json::to_value(&catalog.languages[c]).unwrap()).collect();
         write_output(&target, &serde_json::to_string_pretty(&json!({ "defaultTargets": catalog.default_targets, "languages": langs })).unwrap())?;
         return Ok(ExitCode::SUCCESS);
     }
 
-    let source = args.value("sourcefile").map(String::from).ok_or("-sourceFile is required (use -sourceFile - to read stdin)")?;
-    let target = target_file(&args)?;
-    let file_name = args
-        .value("filename")
-        .map(String::from)
-        .unwrap_or_else(|| if source == "-" { "stdin.md".into() } else { std::path::Path::new(&source).file_name().map(|f| f.to_string_lossy().into_owned()).unwrap_or(source.clone()) });
-    let content = read_input(&source)?;
+    let source = args.value("sourcefile");
+    let target = target_file(&args);
+    let file_name = args.value("filename").map(String::from).unwrap_or_else(|| match source {
+        None | Some("-") => "stdin.md".into(),
+        Some(s) => std::path::Path::new(s).file_name().map(|f| f.to_string_lossy().into_owned()).unwrap_or(s.to_string()),
+    });
+    let content = read_input(source)?;
 
     let opts = TranslateOptions {
         review: args.flag("review"),
@@ -436,6 +465,8 @@ async fn translate(args: &Args, translator: &MarkdownTranslator, file_name: &str
     if args.on("analyzeonly") {
         let a = match analysis {
             Some(a) => a,
+            // Short lane: an empty document has nothing to analyze.
+            None if is_blank(content) => None,
             None => {
                 if !translator.chat.available() {
                     return Err("-analyzeOnly needs a model: set AZURE_OPENAI_ENDPOINT".into());
@@ -465,13 +496,14 @@ async fn translate(args: &Args, translator: &MarkdownTranslator, file_name: &str
     }
     let targets = translator.resolve_languages(&codes).map_err(|u| format!("unknown target language \"{}\" (see -listLanguages)", u.0))?;
     if targets.len() > 1 && !target.contains("{lang}") {
-        return Err("with several -lang values the -targetFile name must contain {lang}".into());
+        return Err("with several -lang values, -targetFile must be a file name containing {lang} (stdout takes a single translation)".into());
     }
     let memory = match args.value("tmfile") {
         Some(p) => read_memory(p, args.on("reviewtm"))?,
         None => Memory::Engine,
     };
-    if matches!(memory, Memory::Engine) && translator.engine(opts) != Engine::Pseudo {
+    // Short lane: an empty document is written through unchanged, so it needs no translation service.
+    if matches!(memory, Memory::Engine) && translator.engine(opts) != Engine::Pseudo && !is_blank(content) {
         let ready = match translator.engine(opts) {
             Engine::Gpt => translator.chat.available() || translator.nmt.available(),
             Engine::Nmt => translator.nmt.available(),

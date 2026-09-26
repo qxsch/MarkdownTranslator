@@ -150,7 +150,7 @@ export function switchArgs(s: Partial<Switches>): string[] {
 }
 
 export async function version(): Promise<string> {
-  // The binary keeps stdout for -targetFile - ; the version goes to stderr.
+  // stdout only carries output documents; the version goes to stderr.
   return (await run(['-version'])).stderr.trim();
 }
 

@@ -1,5 +1,5 @@
-//! Command line contract: stdout carries only the output of `-targetFile -` (and `-help`); progress and
-//! errors go to stderr.
+//! Command line contract: stdin and stdout are the default source and target, and stdout carries nothing but the
+//! output (and `-help`); progress and errors go to stderr. Without -sourceFile, stdin must bring a document.
 
 use std::io::Write;
 use std::path::PathBuf;
@@ -58,7 +58,7 @@ fn translation_to_a_file_keeps_stdout_empty() {
 }
 
 #[test]
-fn stdin_to_stdout_only_when_asked() {
+fn explicit_stdin_and_stdout() {
     let o = run(&["-sourceFile", "-", "-targetFile", "-", "-lang", "fr", "-engine", "pseudo", "-quiet"], Some("# Hello\n\nSome *text*.\n"));
     assert!(o.status.success(), "{}", stderr(&o));
     assert_eq!(stdout(&o), "# <a id=\"hello\"></a>ÜHELLO\n\nÜSOME *ÜTEXT*.\n");
@@ -66,15 +66,85 @@ fn stdin_to_stdout_only_when_asked() {
 }
 
 #[test]
-fn a_target_file_is_required() {
+fn stdin_and_stdout_are_the_defaults() {
+    let o = run(&["-lang", "fr", "-engine", "pseudo", "-quiet"], Some("# Hello\n\nSome *text*.\n"));
+    assert!(o.status.success(), "{}", stderr(&o));
+    assert_eq!(stdout(&o), "# <a id=\"hello\"></a>ÜHELLO\n\nÜSOME *ÜTEXT*.\n");
+    assert_eq!(stderr(&o), "");
+
     let src = fixture();
     let o = run(&["-sourceFile", src.to_str().unwrap(), "-lang", "de", "-engine", "pseudo"], None);
+    assert!(o.status.success(), "{}", stderr(&o));
+    assert!(stdout(&o).contains("ÜGETTING ÜSTARTED"), "{}", stdout(&o));
+    assert!(stderr(&o).contains("identity.md -> de"), "progress stays on stderr: {}", stderr(&o));
+
+    let out = tmp("from-stdin.de.md");
+    let o = run(&["-targetFile", out.to_str().unwrap(), "-lang", "de", "-engine", "pseudo", "-quiet"], Some("Some text.\n"));
+    assert!(o.status.success(), "{}", stderr(&o));
+    assert_eq!(stdout(&o), "");
+    assert_eq!(std::fs::read_to_string(&out).unwrap(), "ÜSOME ÜTEXT.\n");
+}
+
+#[test]
+fn without_a_source_file_stdin_must_bring_a_document() {
+    for input in [None, Some(""), Some(" \r\n\t\n"), Some("\u{feff}\n")] {
+        for args in [&["-lang", "fr", "-engine", "pseudo"][..], &["-dumpExtraction"][..]] {
+            let o = run(args, input);
+            assert_eq!(o.status.code(), Some(1), "{args:?} {input:?}");
+            assert_eq!(stdout(&o), "", "{args:?} {input:?}");
+            let err = stderr(&o);
+            assert!(err.starts_with("mdtranslate: no input: stdin is empty; pipe a Markdown document into mdtranslate or pass -sourceFile <file>"), "{args:?} {input:?}: {err}");
+            assert!(err.contains("USAGE:") && err.contains("EXIT CODES"), "the usage is shown: {err}");
+        }
+    }
+    // stdin redirected from the null device
+    let o = Command::new(BIN).args(["-lang", "fr", "-engine", "pseudo"]).stdin(Stdio::null()).output().unwrap();
+    assert_eq!(o.status.code(), Some(1), "{}", stderr(&o));
+    assert!(stderr(&o).contains("USAGE:"), "{}", stderr(&o));
+}
+
+#[test]
+fn an_explicit_empty_source_gives_an_empty_translation() {
+    // No translation service is configured here: the short lane needs none.
+    let o = run(&["-sourceFile", "-", "-lang", "fr"], Some(""));
+    assert_eq!(o.status.code(), Some(0), "{}", stderr(&o));
+    assert_eq!(stdout(&o), "");
+    let o = Command::new(BIN).args(["-sourceFile", "-", "-lang", "fr", "-quiet"]).env_remove("AZURE_OPENAI_ENDPOINT").env_remove("AZURE_TRANSLATOR_ENDPOINT").stdin(Stdio::null()).output().unwrap();
+    assert_eq!((o.status.code(), stdout(&o), stderr(&o)), (Some(0), String::new(), String::new()));
+    let o = run(&["-sourceFile", "-", "-lang", "fr", "-quiet"], Some(" \n\n"));
+    assert_eq!(o.status.code(), Some(0), "{}", stderr(&o));
+    assert_eq!(stdout(&o), " \n\n", "blank input comes back unchanged");
+
+    let empty = tmp("empty.md");
+    std::fs::write(&empty, "").unwrap();
+    let pattern = tmp("empty.{lang}.md");
+    let report = tmp("empty-report.json");
+    let o = run(&["-sourceFile", empty.to_str().unwrap(), "-targetFile", pattern.to_str().unwrap(), "-lang", "de,fr", "-reportFile", report.to_str().unwrap(), "-quiet"], None);
+    assert_eq!(o.status.code(), Some(0), "{}", stderr(&o));
+    for l in ["de", "fr"] {
+        assert_eq!(std::fs::read_to_string(pattern.to_str().unwrap().replace("{lang}", l)).unwrap(), "");
+    }
+    let rep: serde_json::Value = serde_json::from_str(&std::fs::read_to_string(&report).unwrap()).unwrap();
+    assert_eq!(rep["languages"].as_array().map(|l| l.len()), Some(2), "{rep}");
+
+    let o = run(&["-sourceFile", empty.to_str().unwrap(), "-analyzeOnly"], None);
+    assert_eq!(o.status.code(), Some(0), "{}", stderr(&o));
+    assert!(stdout(&o).contains("\"analysis\": null"), "{}", stdout(&o));
+    // Usage errors still count.
+    let o = run(&["-sourceFile", empty.to_str().unwrap()], None);
+    assert_eq!(o.status.code(), Some(1));
+    assert!(stderr(&o).contains("-lang is required"), "{}", stderr(&o));
+}
+
+#[test]
+fn a_missing_source_file_fails_without_writing() {
+    let out = tmp("never-written.md");
+    let _ = std::fs::remove_file(&out);
+    let o = run(&["-sourceFile", "does-not-exist.md", "-targetFile", out.to_str().unwrap(), "-lang", "de", "-engine", "pseudo"], None);
     assert_eq!(o.status.code(), Some(1));
     assert_eq!(stdout(&o), "");
-    assert!(stderr(&o).contains("-targetFile is required"), "{}", stderr(&o));
-    let o = run(&["-targetFile", "-", "-lang", "de", "-engine", "pseudo"], None);
-    assert_eq!(o.status.code(), Some(1));
-    assert!(stderr(&o).contains("-sourceFile is required"), "{}", stderr(&o));
+    assert!(stderr(&o).starts_with("mdtranslate: does-not-exist.md: "), "{}", stderr(&o));
+    assert!(!out.exists(), "no target is written");
 }
 
 #[test]
@@ -105,12 +175,15 @@ fn version_on_stderr_help_on_stdout() {
 }
 
 #[test]
-fn inspection_output_goes_to_the_target_file() {
+fn inspection_output_goes_to_the_target_file_or_stdout() {
     let o = run(&["-listLanguages"], None);
-    assert_eq!(o.status.code(), Some(1));
-    assert_eq!(stdout(&o), "");
+    assert!(o.status.success(), "{}", stderr(&o));
+    assert!(stdout(&o).contains("\"defaultTargets\""));
     let o = run(&["-listLanguages", "-targetFile", "-"], None);
     assert!(stdout(&o).contains("\"defaultTargets\""));
+    let o = run(&["-dumpExtraction"], Some("# Title\n\nText.\n"));
+    assert!(o.status.success(), "{}", stderr(&o));
+    assert!(stdout(&o).contains("\"segments\""), "{}", stdout(&o));
 
     let dump = tmp("extraction.json");
     let src = fixture();
@@ -123,9 +196,12 @@ fn inspection_output_goes_to_the_target_file() {
 
 #[test]
 fn several_languages_need_a_pattern() {
-    let o = run(&["-sourceFile", "-", "-targetFile", "-", "-lang", "de,fr", "-engine", "pseudo"], Some("text"));
-    assert_eq!(o.status.code(), Some(1));
-    assert_eq!(stdout(&o), "");
+    for args in [&["-sourceFile", "-", "-targetFile", "-", "-lang", "de,fr", "-engine", "pseudo"][..], &["-lang", "de,fr", "-engine", "pseudo"][..]] {
+        let o = run(args, Some("text"));
+        assert_eq!(o.status.code(), Some(1), "{args:?}");
+        assert_eq!(stdout(&o), "", "{args:?}");
+        assert!(stderr(&o).contains("containing {lang}"), "{args:?}: {}", stderr(&o));
+    }
     let pattern = tmp("multi.{lang}.md");
     let o = run(&["-sourceFile", "-", "-targetFile", pattern.to_str().unwrap(), "-lang", "de,fr", "-engine", "pseudo", "-quiet"], Some("Some text.\n"));
     assert!(o.status.success(), "{}", stderr(&o));

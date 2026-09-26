@@ -14,23 +14,36 @@ switches.
 
 ```powershell
 mdtranslate -sourceFile docs/guide.md -targetFile docs/guide.de.md -lang de
-cat guide.md | mdtranslate -sourceFile - -targetFile - -lang fr > guide.fr.md
+cat guide.md | mdtranslate -lang fr > guide.fr.md
 mdtranslate -sourceFile guide.md -targetFile "out/guide.{lang}.md" -lang de,fr,sv -reportFile out/report.json
-mdtranslate -sourceFile guide.md -targetFile - -lang de -engine pseudo       # offline, deterministic
+mdtranslate -sourceFile guide.md -lang de -engine pseudo                    # offline, deterministic
 ```
 
-`-sourceFile` and `-targetFile` are required; `-` means stdin and stdout.
+Without `-sourceFile` the document is read from stdin, and without `-targetFile` the result goes to stdout;
+`-` means the same explicitly. The two ways of reading stdin differ when there is no document:
 
-**stdout carries nothing but the output of `-targetFile -`** (and `-help`). Progress, warnings and
-errors go to stderr, and errors are printed even with `-quiet`. The inspection modes below also write
-their JSON to `-targetFile`.
+```bash
+cat /dev/null | mdtranslate -lang fr                  # usage on stderr, exit code 1
+cat /dev/null | mdtranslate -sourceFile - -lang fr    # empty output, exit code 0
+```
+
+- Without `-sourceFile`, stdin has to bring a document. When nothing is piped in (an interactive terminal) or
+  the input is empty or only whitespace, `mdtranslate` prints the usage to stderr and exits with code 1: the
+  options were probably forgotten.
+- An explicit source may be empty: `-sourceFile empty.md`, or `-sourceFile -` with empty input, writes the
+  input unchanged (an empty translation) without contacting any service, exit code 0. `-sourceFile -` reads
+  stdin even from a terminal (end the input with Ctrl+D, or Ctrl+Z and Enter on Windows).
+- A source file that does not exist is an error (exit code 1), and no target is written.
+
+**stdout carries nothing but the output** (the translation, or the JSON of an inspection mode below) and
+`-help`. Progress, warnings and errors go to stderr, and errors are printed even with `-quiet`.
 
 ### Exit codes
 
 | Code | Meaning |
 |---|---|
 | 0 | success |
-| 1 | usage, configuration or input error (bad option, unreadable file, invalid MDX, unknown language, no service configured) |
+| 1 | usage, configuration or input error (bad option, no input, unreadable file, invalid MDX, unknown language, no service configured) |
 | 2 | translation failed and the **source was written unchanged**: the structure check failed, or no segment could be translated (for example the Azure service was unreachable or rejected the credentials). Also used when `-analyzeOnly` fails. |
 | 3 | partially translated: some segments were kept in the source language after retries and the NMT fallback (details on stderr and in `-reportFile`) |
 
@@ -38,9 +51,9 @@ their JSON to `-targetFile`.
 
 | Option | Purpose |
 |---|---|
-| `-sourceFile <file\|->` | Markdown/MDX input (`-` = stdin) |
-| `-targetFile <file\|->` | output (`-` = stdout); must contain `{lang}` with several languages |
-| `-lang <codes>` | target languages, comma-separated (`-listLanguages -targetFile -` shows the catalog) |
+| `-sourceFile <file\|->` | Markdown/MDX input (default and `-`: stdin) |
+| `-targetFile <file\|->` | output (default and `-`: stdout); a file name containing `{lang}` with several languages |
+| `-lang <codes>` | target languages, comma-separated (`-listLanguages` shows the catalog) |
 | `-fileName <name>` | logical file name for stdin input (`.mdx` detection, prompts) |
 | `-engine gpt\|nmt\|pseudo` | model, Azure Translator only, or the offline pseudo translator (`MDT_ENGINE`) |
 | `-sourceLanguage <code>` | source language (`MDT_SOURCE_LANGUAGE`; default: detected, else `en`) |
@@ -56,7 +69,7 @@ their JSON to `-targetFile`.
 | `-maxConcurrency <n>` | parallel Azure requests (`MDT_MAX_CONCURRENCY`, default 16) |
 | `-languagesFile`, `-glossaryFile` | override the built-in `config/languages.json` / `config/glossary.json` (`MDT_LANGUAGES_FILE`, `MDT_GLOSSARY_FILE`) |
 | `-envFile <file>` | read variables from a `.env` file, for the configuration and the credential chain alike (real environment variables win) |
-| `-dumpExtraction`, `-dumpGolden`, `-analyzeOnly`, `-listLanguages` | inspection output as JSON to `-targetFile` |
+| `-dumpExtraction`, `-dumpGolden`, `-analyzeOnly`, `-listLanguages` | inspection output as JSON to `-targetFile` or stdout |
 | `-quiet`, `-help`, `-version` | `-version` prints to stderr |
 
 Options are case-insensitive and accept `-name value`, `-name=value`, `--name` and kebab-case

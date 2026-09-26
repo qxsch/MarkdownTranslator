@@ -387,11 +387,11 @@ $r.report | Format-Table file, language, segments, reviewEdits
 ```bash
 cargo build --release --manifest-path rust/Cargo.toml       # or download the CI artifact
 mdtranslate -sourceFile guide.md -targetFile guide.de.md -lang de
-cat guide.md | mdtranslate -sourceFile - -targetFile - -lang fr -no-review > guide.fr.md
+cat guide.md | mdtranslate -lang fr -no-review > guide.fr.md
 mdtranslate -sourceFile guide.md -targetFile 'out/{lang}/guide.md' -lang de,fr,it -structuralContext
 ```
 
-- `-sourceFile` and `-targetFile` accept `-` for stdin and stdout. Stdout carries only the translation (and `-help`); progress and errors go to stderr.
+- Without `-sourceFile` the document is read from stdin, and without `-targetFile` the translation goes to stdout (`-` also means stdin and stdout). Without `-sourceFile`, stdin has to bring a document: nothing piped in or empty input prints the usage (exit code 1). An explicit empty source (`-sourceFile empty.md`, or `-sourceFile -` with empty input) gives an empty translation. Stdout carries only the translation (and `-help`); progress and errors go to stderr.
 - Every feature switch works as an option (`-review`, `-no-review`, `-review=false`) or as the environment variable listed in [Feature switches](#feature-switches). The command line wins.
 - Exit codes: `0` translated, `1` usage, configuration or input error, `2` failed (the source was written unchanged), `3` partially translated.
 

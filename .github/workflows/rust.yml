@@ -82,6 +82,13 @@ jobs:
           "$bin" -version
           printf '# Hello\n\nSome **text** and `code`.\n' | "$bin" -sourceFile - -targetFile - -lang de -engine pseudo -quiet | tee out.md
           grep -q 'ÜHELLO' out.md
+          # stdin and stdout are the defaults; without -sourceFile, empty input is a usage error (exit code 1),
+          # while an explicit empty source gives an empty translation without any service
+          printf '# Hello\n' | "$bin" -lang de -engine pseudo -quiet | grep -q 'ÜHELLO'
+          code=0; "$bin" -lang de -engine pseudo < /dev/null || code=$?
+          [ "$code" -eq 1 ]
+          "$bin" -sourceFile - -lang de < /dev/null > empty.md
+          [ ! -s empty.md ]
 
       - uses: actions/upload-artifact@v4
         with:
