@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/docstrings-numpy.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# Python ÜSDK ÜREFERENCE: ÜSTATISTICS\n\n```python\ndef usage_report(share, start, end):\n    \"\"\"ÜCOMPUTE ÜSTORAGE ÜUSAGE ÜFOR ÜA ÜSHARE.\n\n    ÜRETURNS ÜONE ÜROW ÜPER ÜDAY ÜWITH ÜTHE ÜUSED ÜSPACE ÜAND ÜTHE ÜNUMBER ÜOF ÜFILES.\n\n    Parameters\n    ----------\n    share : str\n        ÜNAME ÜOF ÜTHE ÜSHARE.\n    start : datetime.date\n        ÜFIRST ÜDAY ÜOF ÜTHE ÜREPORT, ÜINCLUSIVE.\n    end : datetime.date\n        ÜLAST ÜDAY ÜOF ÜTHE ÜREPORT, ÜINCLUSIVE.\n\n    Returns\n    -------\n    pandas.DataFrame\n        ÜA ÜTABLE ÜWITH ÜTHE ÜCOLUMNS ``date``, ``bytes`` ÜAND ``files``.\n\n    Raises\n    ------\n    ValueError\n        ÜIF ``start`` ÜIS ÜAFTER ``end``.\n\n    See Also\n    --------\n    quota_report : ÜCOMPARES ÜUSAGE ÜWITH ÜTHE ÜQUOTA.\n\n    Notes\n    -----\n    ÜDAYS ÜWITHOUT ÜACTIVITY ÜARE ÜINCLUDED ÜWITH ÜTHE ÜVALUES ÜOF ÜTHE ÜPREVIOUS ÜDAY.\n\n    Examples\n    --------\n    >>> df = usage_report(\"finance\", date(2026, 8, 1), date(2026, 8, 7))\n    >>> len(df)\n    7\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": []
+}

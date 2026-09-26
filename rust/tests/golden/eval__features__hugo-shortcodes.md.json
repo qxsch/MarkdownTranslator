@@ -1,0 +1,265 @@
+{
+ "file": "eval/features/hugo-shortcodes.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Architecture",
+   "original": "\"Architecture\"",
+   "sourceText": "Architecture",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Architecture",
+   "original": "Architecture",
+   "sourceText": "Architecture",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Architecture\"",
+   "masked": "<x1/><g2>How the client talks to the service</g2><x3/><g4>Architecture diagram</g4><x5/>",
+   "original": "{{< figure src=\"images/architecture.png\" title=\"How the client talks to the service\" alt=\"Architecture diagram\" >}}",
+   "sourceText": "How the client talks to the serviceArchitecture diagram",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{< figure src=\"images/architecture.png\" title=\"",
+    "x3": "\" alt=\"",
+    "x5": "\" >}}",
+    "g2": "html: title attribute value [quote \"]",
+    "g4": "html: alt attribute value [quote \"]"
+   },
+   "tagGroups": [
+    "contiguous: x1 g2 x3 g4 x5",
+    "ordered: x1 g2 x3 g4 x5"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Architecture\"",
+   "masked": "The client uploads changes to the gateway. The gateway writes them to the queue.",
+   "original": "The client uploads changes to the gateway. The gateway writes them to the queue.",
+   "sourceText": "The client uploads changes to the gateway. The gateway writes them to the queue.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Architecture\"",
+   "masked": "<x1/><x2/><g3>The gateway is stateless, so you can run as many instances as you need.</g3><x4/><x5/>",
+   "original": "{{% notice info %}}\nThe gateway is stateless, so you can run as many instances as you need.\n{{% /notice %}}",
+   "sourceText": "The gateway is stateless, so you can run as many instances as you need.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{% notice info %}}",
+    "x2": "line break [break]",
+    "x4": "line break [break]",
+    "x5": "{{% /notice %}}",
+    "g3": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 x2 g3 x4 x5"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Architecture\"",
+   "masked": "<x1/><x2/><x3/><x4/><g5>Install the package with </g5><x6/><g7>.</g7><x8/><x9/><x10/><x11/><x12/><g13>Install the package with </g13><x14/><g15>.</g15><x16/><x17/><x18/><x19/>",
+   "original": "{{< tabs >}}\n{{< tab name=\"Linux\" >}}\nInstall the package with `apt install ctsync`.\n{{< /tab >}}\n{{< tab name=\"Windows\" >}}\nInstall the package with `winget install Contoso.Sync`.\n{{< /tab >}}\n{{< /tabs >}}",
+   "sourceText": "Install the package with .Install the package with .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{< tabs >}}",
+    "x2": "line break [break]",
+    "x3": "{{< tab name=\"Linux\" >}}",
+    "x4": "line break [break]",
+    "x6": "`apt install ctsync`",
+    "x8": "line break [break]",
+    "x9": "{{< /tab >}}",
+    "x10": "line break [break]",
+    "x11": "{{< tab name=\"Windows\" >}}",
+    "x12": "line break [break]",
+    "x14": "`winget install Contoso.Sync`",
+    "x16": "line break [break]",
+    "x17": "{{< /tab >}}",
+    "x18": "line break [break]",
+    "x19": "{{< /tabs >}}",
+    "g5": "html: text between directive lines",
+    "g7": "html: text between directive lines",
+    "g13": "html: text between directive lines",
+    "g15": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 x2 x3 x4 g5",
+    "ordered: g7 x8 x9 x10 x11 x12 g13",
+    "ordered: g15 x16 x17 x18 x19"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:apt install ctsync\ncode:winget install Contoso.Sync"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Architecture\"",
+   "masked": "<x1/><g2>Architecture walkthrough</g2><x3/>",
+   "original": "{{< youtube id=\"abc123\" title=\"Architecture walkthrough\" >}}",
+   "sourceText": "Architecture walkthrough",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{< youtube id=\"abc123\" title=\"",
+    "x3": "\" >}}",
+    "g2": "html: title attribute value [quote \"]"
+   },
+   "tagGroups": [
+    "contiguous: x1 g2 x3",
+    "ordered: x1 g2 x3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Architecture\"",
+   "masked": "See also <x1/> for scaling guidance.",
+   "original": "See also {{< ref \"operations/scaling.md\" >}} for scaling guidance.",
+   "sourceText": "See also  for scaling guidance.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{< ref \"operations/scaling.md\" >}}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   25,
+   "s1"
+  ],
+  [
+   44,
+   56,
+   "s2"
+  ],
+  [
+   58,
+   173,
+   "s3"
+  ],
+  [
+   175,
+   255,
+   "s4"
+  ],
+  [
+   257,
+   364,
+   "s5"
+  ],
+  [
+   366,
+   573,
+   "s6"
+  ],
+  [
+   575,
+   635,
+   "s7"
+  ],
+  [
+   637,
+   703,
+   "s8"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: \"ÜARCHITECTURE\"\nweight: 20\n---\n\n# <a id=\"architecture\"></a>ÜARCHITECTURE\n\n{{< figure src=\"images/architecture.png\" title=\"ÜHOW ÜTHE ÜCLIENT ÜTALKS ÜTO ÜTHE ÜSERVICE\" alt=\"ÜARCHITECTURE ÜDIAGRAM\" >}}\n\nÜTHE ÜCLIENT ÜUPLOADS ÜCHANGES ÜTO ÜTHE ÜGATEWAY. ÜTHE ÜGATEWAY ÜWRITES ÜTHEM ÜTO ÜTHE ÜQUEUE.\n\n{{% notice info %}}\nÜTHE ÜGATEWAY ÜIS ÜSTATELESS, ÜSO ÜYOU ÜCAN ÜRUN ÜAS ÜMANY ÜINSTANCES ÜAS ÜYOU ÜNEED.\n{{% /notice %}}\n\n{{< tabs >}}\n{{< tab name=\"Linux\" >}}\nÜINSTALL ÜTHE ÜPACKAGE ÜWITH `apt install ctsync`.\n{{< /tab >}}\n{{< tab name=\"Windows\" >}}\nÜINSTALL ÜTHE ÜPACKAGE ÜWITH `winget install Contoso.Sync`.\n{{< /tab >}}\n{{< /tabs >}}\n\n{{< youtube id=\"abc123\" title=\"ÜARCHITECTURE ÜWALKTHROUGH\" >}}\n\nÜSEE ÜALSO {{< ref \"operations/scaling.md\" >}} ÜFOR ÜSCALING ÜGUIDANCE.\n",
+ "reverted": [],
+ "anchors": [
+  "architecture"
+ ]
+}

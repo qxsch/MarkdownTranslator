@@ -1,0 +1,301 @@
+{
+ "file": "eval/features/docstrings-numpy.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: statistics",
+   "original": "Python SDK reference: statistics",
+   "sourceText": " SDK reference: statistics",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "Compute storage usage for a share.",
+   "original": "Compute storage usage for a share.",
+   "sourceText": "Compute storage usage for a share.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "Returns one row per day with the used space and the number of files.",
+   "original": "Returns one row per day with the used space and the number of files.",
+   "sourceText": "Returns one row per day with the used space and the number of files.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "Name of the share.",
+   "original": "Name of the share.",
+   "sourceText": "Name of the share.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "First day of the report, inclusive.",
+   "original": "First day of the report, inclusive.",
+   "sourceText": "First day of the report, inclusive.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "Last day of the report, inclusive.",
+   "original": "Last day of the report, inclusive.",
+   "sourceText": "Last day of the report, inclusive.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "A table with the columns <x1/>, <x2/> and <x3/>.",
+   "original": "A table with the columns ``date``, ``bytes`` and ``files``.",
+   "sourceText": "A table with the columns ,  and .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "``date``",
+    "x2": "``bytes``",
+    "x3": "``files``"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "If <x1/> is after <x2/>.",
+   "original": "If ``start`` is after ``end``.",
+   "sourceText": "If  is after .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "``start``",
+    "x2": "``end``"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "<x1/>Compares usage with the quota.",
+   "original": "quota_report : Compares usage with the quota.",
+   "sourceText": "Compares usage with the quota.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "quota_report : "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: statistics\"; python code block",
+   "masked": "Days without activity are included with the values of the previous day.",
+   "original": "Days without activity are included with the values of the previous day.",
+   "sourceText": "Days without activity are included with the values of the previous day.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   34,
+   "s1"
+  ],
+  [
+   90,
+   124,
+   "s2"
+  ],
+  [
+   130,
+   198,
+   "s3"
+  ],
+  [
+   254,
+   272,
+   "s4"
+  ],
+  [
+   307,
+   342,
+   "s5"
+  ],
+  [
+   375,
+   409,
+   "s6"
+  ],
+  [
+   464,
+   523,
+   "s7"
+  ],
+  [
+   570,
+   600,
+   "s8"
+  ],
+  [
+   632,
+   677,
+   "s9"
+  ],
+  [
+   703,
+   774,
+   "s10"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-statistics\"></a>Python ÜSDK ÜREFERENCE: ÜSTATISTICS\n\n```python\ndef usage_report(share, start, end):\n    \"\"\"ÜCOMPUTE ÜSTORAGE ÜUSAGE ÜFOR ÜA ÜSHARE.\n\n    ÜRETURNS ÜONE ÜROW ÜPER ÜDAY ÜWITH ÜTHE ÜUSED ÜSPACE ÜAND ÜTHE ÜNUMBER ÜOF ÜFILES.\n\n    Parameters\n    ----------\n    share : str\n        ÜNAME ÜOF ÜTHE ÜSHARE.\n    start : datetime.date\n        ÜFIRST ÜDAY ÜOF ÜTHE ÜREPORT, ÜINCLUSIVE.\n    end : datetime.date\n        ÜLAST ÜDAY ÜOF ÜTHE ÜREPORT, ÜINCLUSIVE.\n\n    Returns\n    -------\n    pandas.DataFrame\n        ÜA ÜTABLE ÜWITH ÜTHE ÜCOLUMNS ``date``, ``bytes`` ÜAND ``files``.\n\n    Raises\n    ------\n    ValueError\n        ÜIF ``start`` ÜIS ÜAFTER ``end``.\n\n    See Also\n    --------\n    quota_report : ÜCOMPARES ÜUSAGE ÜWITH ÜTHE ÜQUOTA.\n\n    Notes\n    -----\n    ÜDAYS ÜWITHOUT ÜACTIVITY ÜARE ÜINCLUDED ÜWITH ÜTHE ÜVALUES ÜOF ÜTHE ÜPREVIOUS ÜDAY.\n\n    Examples\n    --------\n    >>> df = usage_report(\"finance\", date(2026, 8, 1), date(2026, 8, 7))\n    >>> len(df)\n    7\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-statistics"
+ ]
+}

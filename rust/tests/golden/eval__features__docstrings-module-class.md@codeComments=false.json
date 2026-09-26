@@ -1,0 +1,49 @@
+{
+ "file": "eval/features/docstrings-module-class.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK internals",
+   "original": "Python SDK internals",
+   "sourceText": " SDK internals",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   22,
+   "s1"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-internals\"></a>Python ÜSDK ÜINTERNALS\n\n```python\n\"\"\"Helpers for the local cache.\n\nThe cache stores block hashes so that unchanged blocks are not uploaded again.\n\"\"\"\n\nimport sqlite3\n\n\nclass BlockCache:\n    \"\"\"A persistent map from block hash to upload state.\"\"\"\n\n    def __init__(self, path):\n        \"\"\"Open or create the cache database at ``path``.\"\"\"\n        self._db = sqlite3.connect(path)\n\n    def seen(self, digest):\n        r\"\"\"Return True if the block with this digest was uploaded before.\n\n        The digest is a hex string such as ``a3f\\x00``; raw strings keep the backslash.\n        \"\"\"\n        row = self._db.execute(\"SELECT 1 FROM blocks WHERE digest = ?\", (digest,)).fetchone()\n        return row is not None\n\n    def clear(self):\n        message = f\"\"\"Clearing {self._db} is not a docstring and must stay unchanged.\"\"\"\n        self._db.execute(\"DELETE FROM blocks\")\n        return message\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-internals"
+ ]
+}

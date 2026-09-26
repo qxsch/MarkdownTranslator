@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/docstrings-google.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# Python ÜSDK ÜREFERENCE: ÜUPLOADS\n\n```python\ndef upload(path, retries=3, overwrite=False):\n    \"\"\"ÜUPLOAD ÜA ÜFILE ÜTO ÜTHE ÜSYNC ÜSHARE.\n\n    ÜTHE ÜUPLOAD ÜIS ÜRETRIED ÜWITH ÜEXPONENTIAL ÜBACKOFF ÜWHEN\n    ÜTHE ÜSERVICE ÜRETURNS ÜA ÜTRANSIENT ÜERROR.\n\n    Args:\n        path (str): ÜLOCAL ÜPATH ÜOF ÜTHE ÜFILE ÜTO ÜUPLOAD.\n        retries (int): ÜHOW ÜMANY ÜTIMES ÜTO ÜRETRY ÜA ÜFAILED ÜBLOCK.\n        overwrite (bool, optional): ÜREPLACE ÜAN ÜEXISTING ÜFILE\n            ÜWITH ÜTHE ÜSAME ÜNAME. ÜDEFAULTS ÜTO ÜFALSE.\n\n    Returns:\n        UploadResult: ÜDETAILS ÜABOUT ÜTHE ÜUPLOADED ÜFILE,\n        ÜINCLUDING ÜITS ÜVERSION ÜNUMBER.\n\n    Raises:\n        FileNotFoundError: ÜIF ÜTHE ÜLOCAL ÜFILE ÜDOESN'ÜT ÜEXIST.\n        QuotaExceededError: ÜIF ÜTHE ÜSHARE ÜIS ÜFULL.\n\n    Example:\n        ÜUPLOAD ÜA ÜREPORT ÜAND ÜPRINT ÜITS ÜVERSION.\n\n        >>> result = upload(\"report.pdf\")\n        >>> print(result.version)\n        1\n    \"\"\"\n\n\nclass UploadResult:\n    \"\"\"ÜRESULT ÜOF ÜAN ÜUPLOAD.\n\n    Attributes:\n        version (int): ÜVERSION ÜNUMBER ÜASSIGNED ÜBY ÜTHE ÜSERVER.\n        size (int): ÜSIZE ÜOF ÜTHE ÜUPLOADED ÜFILE ÜIN ÜBYTES.\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": []
+}

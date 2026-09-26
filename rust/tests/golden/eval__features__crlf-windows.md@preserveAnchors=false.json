@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/crlf-windows.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# Windows ÜLINE ÜENDINGS\r\n\r\nÜTHIS ÜFILE ÜUSES ÜCRLF ÜLINE ÜENDINGS. ÜTHEY ÜMUST ÜSURVIVE ÜTRANSLATION ÜBYTE ÜFOR ÜBYTE.\r\n\r\n## ÜSTEPS\r\n\r\n1. ÜOPEN **ÜCONTROL ÜPANEL**.\r\n2. ÜSELECT **ÜPROGRAMS** > **ÜUNINSTALL ÜA ÜPROGRAM**.\r\n3. ÜSELECT *ÜCONTOSO ÜSYNC* ÜAND ÜTHEN **ÜUNINSTALL**.\r\n\r\n```powershell\r\n# ÜREMOVE ÜTHE ÜLEFTOVER ÜDATA ÜFOLDER\r\nRemove-Item -Recurse \"$env:LOCALAPPDATA\\ContosoSync\"\r\n```\r\n\r\n> [!NOTE]\r\n> ÜYOUR ÜFILES ÜIN ÜTHE ÜCLOUD ÜAREN'ÜT ÜDELETED.\r\n",
+ "reverted": [],
+ "anchors": []
+}

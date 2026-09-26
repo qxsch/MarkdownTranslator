@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/admonitions-docusaurus.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: ÜCONFIGURE ÜRETENTION\nsidebar_position: 3\n---\n\n# ÜCONFIGURE ÜRETENTION\n\n:::note\nÜRETENTION ÜAPPLIES ÜTO ÜDELETED ÜFILES ÜAND ÜTO ÜOLD ÜVERSIONS.\n:::\n\n:::tip ÜSAVE ÜSPACE\nÜSET ÜA ÜSHORT ÜRETENTION ÜFOR ÜFOLDERS ÜWITH ÜLARGE ÜMEDIA ÜFILES.\n:::\n\n:::info[ÜRETENTION ÜAND ÜLEGAL ÜHOLD]\nÜFILES ÜON **ÜLEGAL ÜHOLD** ÜARE ÜKEPT ÜEVEN ÜWHEN ÜTHE ÜRETENTION ÜPERIOD ÜENDS.\n:::\n\n:::warning\n\nÜTHE ÜRETENTION ÜSETTING ÜAFFECTS **ÜALL** ÜMEMBERS ÜOF ÜTHE ÜSHARE.\n\n:::\n\n:::danger ÜIRREVERSIBLE\nÜFILES ÜTHAT ÜARE ÜDELETED ÜBY ÜTHE ÜRETENTION ÜPOLICY ÜCAN'ÜT ÜBE ÜRESTORED.\n:::\n\n## ÜCHOOSE ÜA ÜPERIOD\n\nÜMOST ÜTEAMS ÜKEEP ÜVERSIONS ÜFOR 30 ÜDAYS. ÜREGULATED ÜINDUSTRIES ÜOFTEN ÜNEED 7 ÜYEARS.\n",
+ "reverted": [],
+ "anchors": []
+}

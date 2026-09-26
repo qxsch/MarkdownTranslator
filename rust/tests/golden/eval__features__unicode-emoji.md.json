@@ -1,0 +1,263 @@
+{
+ "file": "eval/features/unicode-emoji.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Unicode and typography",
+   "original": "Unicode and typography",
+   "sourceText": "Unicode and typography",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Smart quotes: “Keep both” and ‘Keep newest’ are the two options.",
+   "original": "Smart quotes: “Keep both” and ‘Keep newest’ are the two options.",
+   "sourceText": "Smart quotes: “Keep both” and ‘Keep newest’ are the two options.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Dashes and ellipses: 2020–2026 and “Wait…” are typographic characters.",
+   "original": "Dashes and ellipses: 2020–2026 and “Wait…” are typographic characters.",
+   "sourceText": "Dashes and ellipses: 2020–2026 and “Wait…” are typographic characters.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Non-breaking spaces: 10 GB and Contoso Sync 3.2 contain U+00A0.",
+   "original": "Non-breaking spaces: 10 GB and Contoso Sync 3.2 contain U+00A0.",
+   "sourceText": "Non-breaking spaces: 10 GB and Contoso Sync 3.2 contain U+00A0.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Emoji: ✅ Synced, ⚠️ Needs attention, ❌ Failed, 🔒 Locked.",
+   "original": "Emoji: ✅ Synced, ⚠️ Needs attention, ❌ Failed, 🔒 Locked.",
+   "sourceText": "Emoji: ✅ Synced, ⚠️ Needs attention, ❌ Failed, 🔒 Locked.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Arrows and symbols: Settings → Network → Proxy, © Contoso, ™, ±5%.",
+   "original": "Arrows and symbols: Settings → Network → Proxy, © Contoso, ™, ±5%.",
+   "sourceText": "Arrows and symbols: Settings → Network → Proxy, © Contoso, ™, ±5%.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Accented names stay as they are: Zoë Müller, François Nguyễn and Łukasz Żółć work on the team.",
+   "original": "Accented names stay as they are: Zoë Müller, François Nguyễn and Łukasz Żółć work on the team.",
+   "sourceText": "Accented names stay as they are: Zoë Müller, François Nguyễn and Łukasz Żółć work on the team.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Right-to-left text in a sentence: the Arabic word مرحبا means hello.",
+   "original": "Right-to-left text in a sentence: the Arabic word مرحبا means hello.",
+   "sourceText": "Right-to-left text in a sentence: the Arabic word مرحبا means hello.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Zero-width joiner sequences: 👩‍💻 and 🏳️‍🌈.",
+   "original": "Zero-width joiner sequences: 👩‍💻 and 🏳️‍🌈.",
+   "sourceText": "Zero-width joiner sequences: 👩‍💻 and 🏳️‍🌈.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Unicode and typography\"",
+   "masked": "Math symbols in prose: ≤ 5 minutes, ≥ 99.9% availability, × 3 faster.",
+   "original": "Math symbols in prose: ≤ 5 minutes, ≥ 99.9% availability, × 3 faster.",
+   "sourceText": "Math symbols in prose: ≤ 5 minutes, ≥ 99.9% availability, × 3 faster.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   24,
+   "s1"
+  ],
+  [
+   26,
+   98,
+   "s2"
+  ],
+  [
+   100,
+   178,
+   "s3"
+  ],
+  [
+   180,
+   246,
+   "s4"
+  ],
+  [
+   248,
+   315,
+   "s5"
+  ],
+  [
+   317,
+   391,
+   "s6"
+  ],
+  [
+   393,
+   497,
+   "s7"
+  ],
+  [
+   499,
+   572,
+   "s8"
+  ],
+  [
+   574,
+   634,
+   "s9"
+  ],
+  [
+   636,
+   710,
+   "s10"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"unicode-and-typography\"></a>ÜUNICODE ÜAND ÜTYPOGRAPHY\n\nÜSMART ÜQUOTES: “ÜKEEP ÜBOTH” ÜAND ‘ÜKEEP ÜNEWEST’ ÜARE ÜTHE ÜTWO ÜOPTIONS.\n\nÜDASHES ÜAND ÜELLIPSES: 2020–2026 ÜAND “ÜWAIT…” ÜARE ÜTYPOGRAPHIC ÜCHARACTERS.\n\nÜNON-ÜBREAKING ÜSPACES: 10 ÜGB ÜAND ÜCONTOSO ÜSYNC 3.2 ÜCONTAIN ÜU+00ÜA0.\n\nÜEMOJI: ✅ ÜSYNCED, ⚠️ ÜNEEDS ÜATTENTION, ❌ ÜFAILED, 🔒 ÜLOCKED.\n\nÜARROWS ÜAND ÜSYMBOLS: ÜSETTINGS → ÜNETWORK → ÜPROXY, © ÜCONTOSO, ™, ±5%.\n\nÜACCENTED ÜNAMES ÜSTAY ÜAS ÜTHEY ÜARE: ÜZOË ÜMÜLLER, ÜFRANÇOIS ÜNGUYỄN ÜAND ÜŁUKASZ ÜŻÓŁĆ ÜWORK ÜON ÜTHE ÜTEAM.\n\nÜRIGHT-ÜTO-ÜLEFT ÜTEXT ÜIN ÜA ÜSENTENCE: ÜTHE ÜARABIC ÜWORD Üمرحبا ÜMEANS ÜHELLO.\n\nÜZERO-ÜWIDTH ÜJOINER ÜSEQUENCES: 👩‍💻 ÜAND 🏳️‍🌈.\n\nÜMATH ÜSYMBOLS ÜIN ÜPROSE: ≤ 5 ÜMINUTES, ≥ 99.9% ÜAVAILABILITY, × 3 ÜFASTER.\n",
+ "reverted": [],
+ "anchors": [
+  "unicode-and-typography"
+ ]
+}

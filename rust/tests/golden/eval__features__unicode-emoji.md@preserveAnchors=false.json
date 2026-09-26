@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/unicode-emoji.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜUNICODE ÜAND ÜTYPOGRAPHY\n\nÜSMART ÜQUOTES: “ÜKEEP ÜBOTH” ÜAND ‘ÜKEEP ÜNEWEST’ ÜARE ÜTHE ÜTWO ÜOPTIONS.\n\nÜDASHES ÜAND ÜELLIPSES: 2020–2026 ÜAND “ÜWAIT…” ÜARE ÜTYPOGRAPHIC ÜCHARACTERS.\n\nÜNON-ÜBREAKING ÜSPACES: 10 ÜGB ÜAND ÜCONTOSO ÜSYNC 3.2 ÜCONTAIN ÜU+00ÜA0.\n\nÜEMOJI: ✅ ÜSYNCED, ⚠️ ÜNEEDS ÜATTENTION, ❌ ÜFAILED, 🔒 ÜLOCKED.\n\nÜARROWS ÜAND ÜSYMBOLS: ÜSETTINGS → ÜNETWORK → ÜPROXY, © ÜCONTOSO, ™, ±5%.\n\nÜACCENTED ÜNAMES ÜSTAY ÜAS ÜTHEY ÜARE: ÜZOË ÜMÜLLER, ÜFRANÇOIS ÜNGUYỄN ÜAND ÜŁUKASZ ÜŻÓŁĆ ÜWORK ÜON ÜTHE ÜTEAM.\n\nÜRIGHT-ÜTO-ÜLEFT ÜTEXT ÜIN ÜA ÜSENTENCE: ÜTHE ÜARABIC ÜWORD Üمرحبا ÜMEANS ÜHELLO.\n\nÜZERO-ÜWIDTH ÜJOINER ÜSEQUENCES: 👩‍💻 ÜAND 🏳️‍🌈.\n\nÜMATH ÜSYMBOLS ÜIN ÜPROSE: ≤ 5 ÜMINUTES, ≥ 99.9% ÜAVAILABILITY, × 3 ÜFASTER.\n",
+ "reverted": [],
+ "anchors": []
+}

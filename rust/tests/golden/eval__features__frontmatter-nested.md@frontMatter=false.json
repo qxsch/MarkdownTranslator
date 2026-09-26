@@ -1,0 +1,150 @@
+{
+ "file": "eval/features/frontmatter-nested.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": false,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Restore deleted files",
+   "original": "Restore deleted files",
+   "sourceText": "Restore deleted files",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Restore deleted files\"",
+   "masked": "Recycle bin",
+   "original": "Recycle bin",
+   "sourceText": "Recycle bin",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Restore deleted files > Recycle bin\"",
+   "masked": "Open the recycle bin in the web app, select the files and select <g1>Restore</g1>.",
+   "original": "Open the recycle bin in the web app, select the files and select **Restore**.",
+   "sourceText": "Open the recycle bin in the web app, select the files and select Restore.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s4",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Restore deleted files\"",
+   "masked": "Version history",
+   "original": "Version history",
+   "sourceText": "Version history",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Restore deleted files > Version history\"",
+   "masked": "Right-click a file and select <g1>Version history</g1>. Select a version and then <g2>Restore</g2>.",
+   "original": "Right-click a file and select **Version history**. Select a version and then **Restore**.",
+   "sourceText": "Right-click a file and select Version history. Select a version and then Restore.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  }
+ ],
+ "replacements": [
+  [
+   688,
+   709,
+   "s1"
+  ],
+  [
+   714,
+   725,
+   "s2"
+  ],
+  [
+   727,
+   804,
+   "s3"
+  ],
+  [
+   809,
+   824,
+   "s4"
+  ],
+  [
+   826,
+   915,
+   "s5"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: \"Restore deleted files\"\nsummary: |\n  Deleted files stay in the recycle bin for 93 days.\n  After that, only an administrator can restore them.\ndescription: >\n  This article explains how to restore deleted files from the recycle bin\n  and how to restore an earlier version of a file.\nseo:\n  title: 'Restore deleted files: step-by-step guide'\n  og_description: \"Get back files that you deleted by accident.\"\n  canonical: https://contoso.example/docs/restore\nnav:\n  - title: Recycle bin\n    url: /docs/restore#recycle-bin\n  - title: Version history\n    url: /docs/restore#version-history\nimage: images/restore-hero.png\ntags: [restore, recycle-bin]\nrelated_ids: [1042, 1043]\n---\n\n# <a id=\"restore-deleted-files\"></a>ÜRESTORE ÜDELETED ÜFILES\n\n## <a id=\"recycle-bin\"></a>ÜRECYCLE ÜBIN\n\nÜOPEN ÜTHE ÜRECYCLE ÜBIN ÜIN ÜTHE ÜWEB ÜAPP, ÜSELECT ÜTHE ÜFILES ÜAND ÜSELECT **ÜRESTORE**.\n\n## <a id=\"version-history\"></a>ÜVERSION ÜHISTORY\n\nÜRIGHT-ÜCLICK ÜA ÜFILE ÜAND ÜSELECT **ÜVERSION ÜHISTORY**. ÜSELECT ÜA ÜVERSION ÜAND ÜTHEN **ÜRESTORE**.\n",
+ "reverted": [],
+ "anchors": [
+  "restore-deleted-files",
+  "recycle-bin",
+  "version-history"
+ ]
+}

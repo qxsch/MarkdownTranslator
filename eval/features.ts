@@ -3,14 +3,20 @@
  * exactly one switch flipped; both outputs are checked deterministically (expectations in eval/features/expect.json,
  * code bytes, structure, links, English left behind) and judged blind (position-swapped, two judges, MQM style).
  *
+ * The implementation under test is the Rust binary (rust/, see eval/rust.ts): it translates, assembles, fingerprints
+ * extractions and analyzes documents. The TypeScript code in src/ only provides the independent checks and the
+ * Foundry judge client.
+ *
+ *   cargo build --release --manifest-path rust/Cargo.toml
  *   npx tsx eval/features.ts
  *   EVAL_LANGS=de EVAL_DOCS=faq.md,math-prices.md EVAL_FEATURES=review,mathSingleDollar npx tsx eval/features.ts
  *   EVAL_OUT=eval/results/features-<stamp> npx tsx eval/features.ts   # reuse translations of an earlier run
  *
- * Unchanged segments are reused from the baseline (shared segment cache), so differences come from the feature, not
- * from sampling noise. Review off, NMT fallback off and anchors off are derived exactly from the baseline run.
+ * Unchanged segments are reused from the baseline (a segment cache shared per document and language), so differences
+ * come from the feature, not from sampling noise. Review off, NMT fallback off and anchors off are derived exactly
+ * from the baseline run.
  */
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { dirname, join } from 'node:path';
@@ -19,30 +25,32 @@ import { fileURLToPath } from 'node:url';
 if (existsSync('.env')) process.loadEnvFile('.env');
 delete process.env.MDT_CACHE_DIR;
 
-const { loadConfig } = await import('../src/config.js');
-const { MarkdownTranslator } = await import('../src/pipeline.js');
+const { loadConfig, loadGlossary } = await import('../src/config.js');
 const { extract } = await import('../src/markdown/extract.js');
-const { assembleDocument } = await import('../src/assemble.js');
-const { translateDocument } = await import('../src/translate/engine.js');
-const { PROMPT_VERSION } = await import('../src/translate/prompts.js');
-const { TranslationCache } = await import('../src/translate/cache.js');
 const { parseMarkdown } = await import('../src/markdown/parse.js');
 const { skeleton, compareSkeletons } = await import('../src/markdown/document.js');
-const { codeFingerprint } = await import('../src/code/parsers.js');
+const { codeFingerprint, initCodeParsers } = await import('../src/code/parsers.js');
 const { ChatClient } = await import('../src/azure/openai.js');
-const { Semaphore } = await import('../src/azure/http.js');
+const { AzureAuth, Semaphore } = await import('../src/azure/http.js');
 const { toString } = await import('mdast-util-to-string');
 const { createJudges } = await import('./judges.js');
+const rust = await import('./rust.js');
 type Judge = import('./judges.js').Judge;
 const { default: GithubSlugger } = await import('github-slugger');
-type Outcome = import('../src/translate/engine.js').SegmentOutcome;
+type Outcome = import('./rust.js').RustOutcome;
+type RustExtraction = import('./rust.js').RustExtraction;
+type RustReport = import('./rust.js').RustReport;
 type Extraction = import('../src/markdown/types.js').Extraction;
 type ParseOptions = import('../src/markdown/parse.js').ParseOptions;
-type LanguageConfig = import('../src/config.js').LanguageConfig;
+type LanguageConfig = import('./rust.js').LanguageConfig;
 
 const cfg = loadConfig();
-const t = await MarkdownTranslator.create({ ...cfg, cacheDir: undefined });
-const translateLimiter = new Semaphore(cfg.maxConcurrency);
+// The independent checks (code fingerprints, English left behind) run the TypeScript parsers.
+await initCodeParsers();
+const glossary = loadGlossary(cfg.glossaryFile);
+const judgeChat = new ChatClient(cfg, new AzureAuth(cfg), new Semaphore(cfg.maxConcurrency));
+const catalog = await rust.languages();
+const rustVersion = await rust.version();
 
 const FEATURES = ['review', 'structuralContext', 'nmtFallback', 'preserveAnchors', 'codeComments', 'docstrings', 'frontMatter', 'mdx', 'mathSingleDollar'] as const;
 type Feature = (typeof FEATURES)[number];
@@ -80,7 +88,6 @@ interface Run {
   tokens: { translate: number; review: number };
   /** Output taken from the baseline because the switch did not change the extraction. */
   reused?: boolean;
-  ex?: Extraction;
   tm?: Map<string, string>;
   outcomes?: Map<string, Outcome>;
 }
@@ -91,57 +98,47 @@ interface Job {
   src: string;
   analysis: unknown;
   formality: 'formal' | 'informal';
-  cache: InstanceType<typeof TranslationCache>;
+  /** Segment cache of the Rust binary, shared by the baseline and the variants of this document and language. */
+  cacheDir: string;
   base?: Run;
   variants: Partial<Record<Feature, Run>>;
 }
 
 // ------------------------------------------------------------------ translate
 
-const extractFor = (job: Job, s: Settings) =>
-  extract(job.src, t.glossary.doNotTranslate, { parse: { mdx: s.mdx, mathSingleDollar: s.mathSingleDollar }, docstrings: s.docstrings, codeComments: s.codeComments, frontMatter: s.frontMatter });
+const docPath = (job: Job) => join(corpusDir, job.doc);
 
-const fingerprint = (ex: Extraction) => ex.segments.map((s) => `${s.passive ? 'p' : ''}${s.kind}\u0001${s.masked}\u0001${s.structure ?? ''}`).join('\u0000');
+const extractFor = (job: Job, s: Settings): Promise<RustExtraction> => rust.extraction(docPath(job), s);
 
-function finish(job: Job, ex: Extraction, tm: Map<string, string>, outcomes: Map<string, Outcome>, s: Settings, started: number, tokens: Run['tokens']): Run {
-  const assembled = assembleDocument(ex, tm, { wrap: job.lang.wrap !== 'none', preserveAnchors: s.preserveAnchors });
+const fingerprint = (ex: RustExtraction) => ex.segments.map((s) => `${s.passive ? 'p' : ''}${s.kind}\u0001${s.masked}\u0001${s.structure ?? ''}`).join('\u0000');
+
+function counts(outcomes: Map<string, Outcome>) {
   const via = [...outcomes.values()];
+  return { keptSource: via.filter((o) => o.via === 'source').length, nmt: via.filter((o) => o.via === 'nmt').length, reviewEdits: via.filter((o) => o.review).length };
+}
+
+function fromReport(rep: RustReport, tokens?: Run['tokens']): Run {
+  const l = rep.languages[0];
+  const outcomes = new Map(l.outcomes.map((o) => [o.id, o]));
   return {
-    text: assembled.text, reverted: assembled.reverted.length, keptSource: via.filter((o) => o.via === 'source').length, nmt: via.filter((o) => o.via === 'nmt').length,
-    reviewEdits: via.filter((o) => o.review).length, seconds: (Date.now() - started) / 1000, tokens, ex, tm, outcomes,
+    text: rep.text, error: l.error, reverted: l.revertedForStructure.length, ...counts(outcomes), seconds: rep.seconds,
+    tokens: tokens ?? { translate: rust.tokens(rep, 'translations'), review: rust.tokens(rep, 'review') }, tm: new Map(l.tm), outcomes,
   };
 }
 
-/** A chat client whose token usage is metered per run, split into translation and review calls. */
-function meteredChat() {
-  const tr = new ChatClient(t.cfg, t.auth, translateLimiter);
-  const rv = new ChatClient(t.cfg, t.auth, translateLimiter);
-  const chat = Object.create(tr) as InstanceType<typeof ChatClient>;
-  chat.json = (dep, messages, name, schema, effort) => (name === 'review' ? rv : tr).json(dep, messages, name, schema, effort);
-  const sum = (c: InstanceType<typeof ChatClient>) => [...c.usage.byDeployment.values()].reduce((n, u) => n + u.promptTokens + u.completionTokens, 0);
-  return { chat, tokens: () => ({ translate: sum(tr), review: sum(rv) }) };
-}
-
-async function translate(job: Job, s: Settings, ex?: Extraction): Promise<Run> {
+async function translate(job: Job, s: Settings): Promise<Run> {
   const started = Date.now();
-  const metered = meteredChat();
   try {
-    ex ??= extractFor(job, s);
-    const { tm, outcomes } = await translateDocument(
-      { cfg: t.cfg, chat: metered.chat, nmt: t.nmt, cache: job.cache },
-      {
-        docName: job.doc, ex, lang: job.lang, sourceLanguage: 'English', sourceLanguageCode: 'en', analysis: job.analysis as never, formality: job.formality,
-        glossary: t.glossary, engine: 'gpt', review: s.review, structuralContext: s.structuralContext, nmtFallback: s.nmtFallback,
-      },
-    );
-    return finish(job, ex, tm, outcomes, s, started, metered.tokens());
+    const rep = await rust.translate(docPath(job), job.lang.code, s, { formality: job.formality, analysis: job.analysis ?? null, sourceLanguage: 'en', cacheDir: job.cacheDir, engine: 'gpt' });
+    return fromReport(rep);
   } catch (e) {
     // Same behaviour as the API: a file that fails is returned unchanged.
-    return { text: job.src, error: (e as Error).message, reverted: 0, keptSource: 0, nmt: 0, reviewEdits: 0, seconds: (Date.now() - started) / 1000, tokens: metered.tokens() };
+    return { text: job.src, error: (e as Error).message, reverted: 0, keptSource: 0, nmt: 0, reviewEdits: 0, seconds: (Date.now() - started) / 1000, tokens: { translate: 0, review: 0 } };
   }
 }
 
-function derive(job: Job, f: Feature, s: Settings): Run {
+/** A variant computed exactly from the baseline's translation memory; the binary only assembles it. */
+async function derive(job: Job, f: Feature, s: Settings): Promise<Run> {
   const b = job.base!;
   const tm = new Map(b.tm);
   const outcomes = new Map([...b.outcomes!].map(([k, o]) => [k, { ...o }]));
@@ -153,37 +150,40 @@ function derive(job: Job, f: Feature, s: Settings): Run {
   } else if (f === 'nmtFallback') {
     for (const o of outcomes.values()) if (o.via === 'nmt') { tm.delete(o.id); o.via = 'source'; }
   }
-  return finish(job, b.ex!, tm, outcomes, s, Date.now(), f === 'review' ? { translate: b.tokens.translate, review: 0 } : b.tokens);
+  const started = Date.now();
+  const rep = await rust.translate(docPath(job), job.lang.code, s, { formality: job.formality, sourceLanguage: 'en', memory: { tm: [...tm], outcomes: [...outcomes.values()] } });
+  const run = fromReport(rep, f === 'review' ? { translate: b.tokens.translate, review: 0 } : b.tokens);
+  return { ...run, ...counts(outcomes), seconds: (Date.now() - started) / 1000, tm, outcomes };
 }
 
 const runPath = (job: Job, variant: string) => join(OUT, job.lang.code, variant, job.doc);
 const sha = (s: string) => createHash('sha256').update(s).digest('hex');
-// Saved outputs are reused only while the current code extracts the document exactly as before and prompts are unchanged.
-const extractionKey = (job: Job, s: Settings) => {
+// Saved outputs are reused only while the binary extracts the document exactly as before and its prompts are unchanged
+// (the version string names the prompt version).
+const extractionKey = async (job: Job, s: Settings) => {
   try {
-    return sha(`${PROMPT_VERSION}\u0000${fingerprint(extractFor(job, s))}`);
+    return sha(`${rustVersion}\u0000${fingerprint(await extractFor(job, s))}`);
   } catch {
     return 'error';
   }
 };
 
-function save(job: Job, variant: string, r: Run, s: Settings) {
+async function save(job: Job, variant: string, r: Run, s: Settings) {
   const p = runPath(job, variant);
   mkdirSync(dirname(p), { recursive: true });
   writeFileSync(p, r.text);
-  const meta = { fp: extractionKey(job, s), error: r.error, reverted: r.reverted, keptSource: r.keptSource, nmt: r.nmt, reviewEdits: r.reviewEdits, seconds: r.seconds, tokens: r.tokens, reused: r.reused };
+  const meta = { fp: await extractionKey(job, s), error: r.error, reverted: r.reverted, keptSource: r.keptSource, nmt: r.nmt, reviewEdits: r.reviewEdits, seconds: r.seconds, tokens: r.tokens, reused: r.reused };
   const state = r.tm && variant === 'baseline' ? { tm: [...r.tm], outcomes: [...r.outcomes!.values()] } : undefined;
   writeFileSync(`${p}.meta.json`, JSON.stringify({ ...meta, ...state }));
 }
 
-function load(job: Job, variant: string, s: Settings): Run | undefined {
+async function load(job: Job, variant: string, s: Settings): Promise<Run | undefined> {
   const p = runPath(job, variant);
   if (!existsSync(p) || !existsSync(`${p}.meta.json`)) return undefined;
   const meta = JSON.parse(readFileSync(`${p}.meta.json`, 'utf8'));
-  if (meta.fp !== extractionKey(job, s)) return undefined;
+  if (meta.fp !== (await extractionKey(job, s))) return undefined;
   const r: Run = { text: readFileSync(p, 'utf8'), tokens: { translate: 0, review: 0 }, ...meta };
   if (meta.tm) {
-    r.ex = extractFor(job, s);
     r.tm = new Map(meta.tm);
     r.outcomes = new Map((meta.outcomes as Outcome[]).map((o) => [o.id, o]));
   }
@@ -191,58 +191,61 @@ function load(job: Job, variant: string, s: Settings): Run | undefined {
 }
 
 const analyses = new Map<string, { analysis: unknown; formality: 'formal' | 'informal' }>();
-const unknown = LANGS.filter((c) => !t.catalog.languages.has(c));
-if (unknown.length) throw new Error(`unknown EVAL_LANGS ${unknown.join(', ')}; add them to config/languages.json (known: ${[...t.catalog.languages.keys()].join(', ')})`);
+const unknown = LANGS.filter((c) => !catalog.languages.has(c.toLowerCase()));
+if (unknown.length) throw new Error(`unknown EVAL_LANGS ${unknown.join(', ')}; add them to config/languages.json (known: ${[...catalog.languages.keys()].join(', ')})`);
 const analysisFile = join(OUT, 'analysis.json');
 const savedAnalyses: Record<string, { src: string; analysis: unknown }> = existsSync(analysisFile) ? JSON.parse(readFileSync(analysisFile, 'utf8')) : {};
 await Promise.all(
   DOCS.map(async (doc) => {
     const src = readFileSync(join(corpusDir, doc), 'utf8');
-    const ex = extract(src, t.glossary.doNotTranslate, { parse: naturalParse(doc) });
+    const ex = await rust.extraction(join(corpusDir, doc), defaults(doc));
     const saved = savedAnalyses[doc]?.src === sha(src) ? savedAnalyses[doc] : undefined;
-    const analysis = (saved?.analysis ?? (ex.segments.some((s) => !s.passive) ? await t.analyze(doc, ex.source) : undefined)) as { register?: string } | undefined;
+    const analysis = (saved?.analysis ?? (ex.segments.some((s) => !s.passive) ? await rust.analyze(join(corpusDir, doc)) : undefined)) as { register?: string } | undefined;
     savedAnalyses[doc] = { src: sha(src), analysis };
     analyses.set(doc, { analysis, formality: ex.frontmatterFormality ?? (analysis?.register === 'informal' ? 'informal' : 'formal') });
   }),
 );
 mkdirSync(OUT, { recursive: true });
 writeFileSync(analysisFile, JSON.stringify(savedAnalyses));
-const panel = await createJudges(JUDGES, t.chat);
-console.log(`corpus: ${DOCS.length} documents, languages ${LANGS.join(', ')}, features ${SELECTED.join(', ')}, judges ${JUDGES.join(', ')}; output ${OUT}`);
+const panel = await createJudges(JUDGES, judgeChat);
+console.log(`corpus: ${DOCS.length} documents, languages ${LANGS.join(', ')}, features ${SELECTED.join(', ')}, judges ${JUDGES.join(', ')}; implementation ${rustVersion}; output ${OUT}`);
 
 const jobs: Job[] = DOCS.flatMap((doc) =>
   LANGS.map((code) => ({
-    doc, lang: t.catalog.languages.get(code)!, src: readFileSync(join(corpusDir, doc), 'utf8'), ...analyses.get(doc)!, cache: new TranslationCache(), variants: {},
+    doc, lang: catalog.languages.get(code.toLowerCase())!, src: readFileSync(join(corpusDir, doc), 'utf8'), ...analyses.get(doc)!,
+    cacheDir: join(OUT, 'segment-cache', code, doc), variants: {},
   })),
 );
 let translated = 0;
 await Promise.all(
   jobs.map(async (job) => {
     const base = defaults(job.doc);
-    const loadedBase = load(job, 'baseline', base);
+    const loadedBase = await load(job, 'baseline', base);
+    // A new baseline starts from an empty segment cache, like a fresh translator process.
+    if (!loadedBase) rmSync(job.cacheDir, { recursive: true, force: true });
     job.base = loadedBase ?? (await translate(job, base));
-    save(job, 'baseline', job.base, base);
-    const baseEx = job.base.ex ?? extractFor(job, base);
+    await save(job, 'baseline', job.base, base);
+    const baseEx = await extractFor(job, base);
     for (const f of SELECTED) {
       const s = { ...base, [f]: !base[f] };
       const name = `${f}=${s[f]}`;
       // Variants depend on the baseline (cache reuse, derivation), so they are reused only with an unchanged baseline.
-      let r = loadedBase ? load(job, name, s) : undefined;
+      let r = loadedBase ? await load(job, name, s) : undefined;
       if (!r) {
-        if (DERIVED.includes(f) && base[f] && job.base.tm) r = derive(job, f, s);
+        if (DERIVED.includes(f) && base[f] && job.base.tm) r = await derive(job, f, s);
         else if (f === 'structuralContext' || f === 'review') r = await translate(job, s);
         else {
-          let ex: Extraction | undefined;
+          let ex: RustExtraction | undefined;
           try {
-            ex = extractFor(job, s);
+            ex = await extractFor(job, s);
           } catch {
             ex = undefined;
           }
           // Identical extraction means identical output: no need to call the model again.
-          r = ex && fingerprint(ex) === fingerprint(baseEx) ? { ...job.base, seconds: 0, reused: true } : await translate(job, s, ex);
+          r = ex && fingerprint(ex) === fingerprint(baseEx) ? { ...job.base, seconds: 0, reused: true } : await translate(job, s);
         }
       }
-      save(job, name, r, s);
+      await save(job, name, r, s);
       job.variants[f] = r;
     }
     console.log(`translated ${++translated}/${jobs.length}: ${job.doc} -> ${job.lang.code}${job.base.error ? ` (baseline error: ${job.base.error})` : ''}`);
@@ -301,7 +304,7 @@ function englishLeft(doc: string, src: string, out: string): Record<string, numb
   const opts = { parse: naturalParse(doc) };
   const counts: Record<string, number> = {};
   const pool = new Map<string, number>();
-  for (const s of extract(src, t.glossary.doNotTranslate, opts).segments) {
+  for (const s of extract(src, glossary.doNotTranslate, opts).segments) {
     const p = plain(s.masked);
     if (s.passive || (p.match(/\p{L}{2,}/gu)?.length ?? 0) < 3) continue;
     pool.set(`${kindOf(s)}\u0000${p}`, (pool.get(`${kindOf(s)}\u0000${p}`) ?? 0) + 1);
@@ -309,7 +312,7 @@ function englishLeft(doc: string, src: string, out: string): Record<string, numb
   const stripped = out.replace(/<a id="[^"]*"><\/a>/g, (m) => (src.includes(m) ? m : ''));
   let ex: Extraction;
   try {
-    ex = extract(stripped, t.glossary.doNotTranslate, opts);
+    ex = extract(stripped, glossary.doNotTranslate, opts);
   } catch {
     return { unparsable: 1 };
   }
@@ -707,16 +710,17 @@ const defects = jobs.map((j) => {
 });
 let commit = '';
 try {
-  commit = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim() + (execSync('git status --porcelain -- src', { encoding: 'utf8' }).trim() ? '+dirty' : '');
+  commit = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim() + (execSync('git status --porcelain -- src rust', { encoding: 'utf8' }).trim() ? '+dirty' : '');
 } catch {
   commit = 'unknown';
 }
 const meta = {
   createdAt: new Date().toISOString(), commit, langs: LANGS, docs: DOCS, judges: JUDGES, judgePanel: panel.judges.map((j) => ({ id: j.id, provider: j.provider, model: j.model, family: j.family })), features: SELECTED,
+  implementation: rustVersion,
   config: { translateDeployment: cfg.translateDeployment, reviewDeployment: cfg.reviewDeployment, translateReasoning: cfg.translateReasoning, reviewReasoning: cfg.reviewReasoning, defaults: defaults('x.md') },
 };
 const resultsFile = join(OUT, 'features.json');
-writeFileSync(resultsFile, JSON.stringify({ meta, summary, perDoc, records, judgements, defects, tallies, usage: t.chat.usage.toJSON(), examples }, null, 2));
+writeFileSync(resultsFile, JSON.stringify({ meta, summary, perDoc, records, judgements, defects, tallies, usage: { translator: rust.usage(), judges: judgeChat.usage.toJSON() }, examples }, null, 2));
 
 const rows = Object.entries(summary).map(([c, v]) => {
   const s = v as { affected: number; documents: number; quality: string; correctness: string; recommendation: string; problemsOn: number; problemsOff: number; judged: { overall: ReturnType<typeof summarize> } };

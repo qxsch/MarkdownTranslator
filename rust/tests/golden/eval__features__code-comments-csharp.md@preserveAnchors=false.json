@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/code-comments-csharp.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜUSING ÜTHE .NET ÜSDK\n\n```csharp\nusing Contoso.Sync;\n\n/// <summary>\n/// ÜUPLOADS ÜTHE ÜNIGHTLY ÜEXPORT ÜAND ÜREPORTS ÜTHE ÜRESULT.\n/// </summary>\n/// <param name=\"path\">ÜFULL ÜPATH ÜOF ÜTHE ÜEXPORT ÜFILE.</param>\n/// <returns><c>true</c> ÜWHEN ÜTHE ÜUPLOAD ÜSUCCEEDED; ÜOTHERWISE <c>false</c>.</returns>\npublic static async Task<bool> UploadExportAsync(string path)\n{\n    // ÜONE ÜCLIENT ÜPER ÜAPPLICATION ÜIS ÜENOUGH\n    var client = new SyncClient(new Uri(\"https://sync.contoso.example\"));\n\n    /* ÜLARGE ÜEXPORTS ÜARE ÜSPLIT ÜINTO ÜBLOCKS\n       ÜAUTOMATICALLY. ÜTHE ÜBLOCK ÜSIZE ÜCAN ÜBE ÜCHANGED\n       ÜWITH SyncClientOptions. */\n    var result = await client.UploadAsync(path);\n\n    return result.Succeeded; // ÜFALSE ÜWHEN ÜTHE ÜQUOTA ÜIS ÜEXCEEDED\n}\n```\n\nÜCONFIGURATION ÜIN `appsettings.json`:\n\n```json\n{\n  \"Sync\": { \"Endpoint\": \"https://sync.contoso.example\", \"Retries\": 3 }\n}\n```\n",
+ "reverted": [],
+ "anchors": []
+}

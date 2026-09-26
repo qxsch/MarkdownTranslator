@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/docstrings-module-class.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# Python ÜSDK ÜINTERNALS\n\n```python\n\"\"\"ÜHELPERS ÜFOR ÜTHE ÜLOCAL ÜCACHE.\n\nÜTHE ÜCACHE ÜSTORES ÜBLOCK ÜHASHES ÜSO ÜTHAT ÜUNCHANGED ÜBLOCKS ÜARE ÜNOT ÜUPLOADED ÜAGAIN.\n\"\"\"\n\nimport sqlite3\n\n\nclass BlockCache:\n    \"\"\"ÜA ÜPERSISTENT ÜMAP ÜFROM ÜBLOCK ÜHASH ÜTO ÜUPLOAD ÜSTATE.\"\"\"\n\n    def __init__(self, path):\n        \"\"\"ÜOPEN ÜOR ÜCREATE ÜTHE ÜCACHE ÜDATABASE ÜAT ``path``.\"\"\"\n        self._db = sqlite3.connect(path)\n\n    def seen(self, digest):\n        r\"\"\"ÜRETURN ÜTRUE ÜIF ÜTHE ÜBLOCK ÜWITH ÜTHIS ÜDIGEST ÜWAS ÜUPLOADED ÜBEFORE.\n\n        ÜTHE ÜDIGEST ÜIS ÜA ÜHEX ÜSTRING ÜSUCH ÜAS ``a3f\\x00``; ÜRAW ÜSTRINGS ÜKEEP ÜTHE ÜBACKSLASH.\n        \"\"\"\n        row = self._db.execute(\"SELECT 1 FROM blocks WHERE digest = ?\", (digest,)).fetchone()\n        return row is not None\n\n    def clear(self):\n        message = f\"\"\"Clearing {self._db} is not a docstring and must stay unchanged.\"\"\"\n        self._db.execute(\"DELETE FROM blocks\")\n        return message\n```\n",
+ "reverted": [],
+ "anchors": []
+}

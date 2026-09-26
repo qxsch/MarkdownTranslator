@@ -1,0 +1,556 @@
+{
+ "file": "eval/features/ambiguous-words.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Working with records",
+   "original": "Working with records",
+   "sourceText": "Working with records",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Working with records\"",
+   "masked": "Match",
+   "original": "Match",
+   "sourceText": "Match",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Working with records > Match\"",
+   "masked": "Select <g1>Match</g1> to find records with the same e-mail address. Matches are shown in a table.",
+   "original": "Select **Match** to find records with the same e-mail address. Matches are shown in a table.",
+   "sourceText": "Select Match to find records with the same e-mail address. Matches are shown in a table.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s4",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Working with records\"",
+   "masked": "Scale",
+   "original": "Scale",
+   "sourceText": "Scale",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Working with records > Scale\"",
+   "masked": "Use <g1>Scale</g1> to change the number of workers. A higher scale processes more records at the same time.",
+   "original": "Use **Scale** to change the number of workers. A higher scale processes more records at the same time.",
+   "sourceText": "Use Scale to change the number of workers. A higher scale processes more records at the same time.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s6",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Working with records\"",
+   "masked": "Table",
+   "original": "Table",
+   "sourceText": "Table",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Working with records > Table\"",
+   "masked": "<g1>Freeze</g1>: Keeps the first column visible while you scroll.",
+   "original": "**Freeze**: Keeps the first column visible while you scroll.",
+   "sourceText": "Freeze: Keeps the first column visible while you scroll.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Working with records > Table\"",
+   "masked": "<g1>Drop</g1>: Removes the table and all records in it.",
+   "original": "**Drop**: Removes the table and all records in it.",
+   "sourceText": "Drop: Removes the table and all records in it.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Working with records > Table\"",
+   "masked": "<g1>Sort</g1>: Orders the rows by the selected column.",
+   "original": "**Sort**: Orders the rows by the selected column.",
+   "sourceText": "Sort: Orders the rows by the selected column.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Working with records > Table\"",
+   "masked": "<g1>Filter</g1>: Shows only rows that meet a condition.",
+   "original": "**Filter**: Shows only rows that meet a condition.",
+   "sourceText": "Filter: Shows only rows that meet a condition.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Working with records\"",
+   "masked": "Record",
+   "original": "Record",
+   "sourceText": "Record",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Working with records > Record\"",
+   "masked": "Select <g1>Record</g1>.",
+   "original": "Select **Record**.",
+   "sourceText": "Select Record.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s13",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Working with records > Record\"",
+   "masked": "Perform the steps that you want to repeat.",
+   "original": "Perform the steps that you want to repeat.",
+   "sourceText": "Perform the steps that you want to repeat.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Working with records > Record\"",
+   "masked": "Select <g1>Stop</g1>.",
+   "original": "Select **Stop**.",
+   "sourceText": "Select Stop.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Working with records > Record\"",
+   "masked": "The recorded steps are saved as a macro.",
+   "original": "The recorded steps are saved as a macro.",
+   "sourceText": "The recorded steps are saved as a macro.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Working with records\"",
+   "masked": "Park",
+   "original": "Park",
+   "sourceText": "Park",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s17",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Working with records > Park\"",
+   "masked": "When a record can't be processed, it's parked. Parked records wait in a separate queue until you select <g1>Release</g1>.",
+   "original": "When a record can't be processed, it's parked. Parked records wait in a separate queue until you select **Release**.",
+   "sourceText": "When a record can't be processed, it's parked. Parked records wait in a separate queue until you select Release.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s18",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Working with records\"",
+   "masked": "Close",
+   "original": "Close",
+   "sourceText": "Close",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s19",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Working with records > Close\"",
+   "masked": "<g1>Close</g1> ends the period. After you close a period, records in it are read-only.",
+   "original": "**Close** ends the period. After you close a period, records in it are read-only.",
+   "sourceText": "Close ends the period. After you close a period, records in it are read-only.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s20",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Working with records\"",
+   "masked": "Post",
+   "original": "Post",
+   "sourceText": "Post",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s21",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Working with records > Post\"",
+   "masked": "<g1>Post</g1> sends the record to the ledger. You can't undo a post, but you can post a reversal.",
+   "original": "**Post** sends the record to the ledger. You can't undo a post, but you can post a reversal.",
+   "sourceText": "Post sends the record to the ledger. You can't undo a post, but you can post a reversal.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   22,
+   "s1"
+  ],
+  [
+   27,
+   32,
+   "s2"
+  ],
+  [
+   34,
+   126,
+   "s3"
+  ],
+  [
+   131,
+   136,
+   "s4"
+  ],
+  [
+   138,
+   240,
+   "s5"
+  ],
+  [
+   245,
+   250,
+   "s6"
+  ],
+  [
+   254,
+   314,
+   "s7"
+  ],
+  [
+   317,
+   367,
+   "s8"
+  ],
+  [
+   370,
+   419,
+   "s9"
+  ],
+  [
+   422,
+   472,
+   "s10"
+  ],
+  [
+   477,
+   483,
+   "s11"
+  ],
+  [
+   488,
+   506,
+   "s12"
+  ],
+  [
+   510,
+   552,
+   "s13"
+  ],
+  [
+   556,
+   572,
+   "s14"
+  ],
+  [
+   574,
+   614,
+   "s15"
+  ],
+  [
+   619,
+   623,
+   "s16"
+  ],
+  [
+   625,
+   741,
+   "s17"
+  ],
+  [
+   746,
+   751,
+   "s18"
+  ],
+  [
+   753,
+   834,
+   "s19"
+  ],
+  [
+   839,
+   843,
+   "s20"
+  ],
+  [
+   845,
+   937,
+   "s21"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"working-with-records\"></a>ÜWORKING ÜWITH ÜRECORDS\n\n## <a id=\"match\"></a>ÜMATCH\n\nÜSELECT **ÜMATCH** ÜTO ÜFIND ÜRECORDS ÜWITH ÜTHE ÜSAME ÜE-ÜMAIL ÜADDRESS. ÜMATCHES ÜARE ÜSHOWN ÜIN ÜA ÜTABLE.\n\n## <a id=\"scale\"></a>ÜSCALE\n\nÜUSE **ÜSCALE** ÜTO ÜCHANGE ÜTHE ÜNUMBER ÜOF ÜWORKERS. ÜA ÜHIGHER ÜSCALE ÜPROCESSES ÜMORE ÜRECORDS ÜAT ÜTHE ÜSAME ÜTIME.\n\n## <a id=\"table\"></a>ÜTABLE\n\n- **ÜFREEZE**: ÜKEEPS ÜTHE ÜFIRST ÜCOLUMN ÜVISIBLE ÜWHILE ÜYOU ÜSCROLL.\n- **ÜDROP**: ÜREMOVES ÜTHE ÜTABLE ÜAND ÜALL ÜRECORDS ÜIN ÜIT.\n- **ÜSORT**: ÜORDERS ÜTHE ÜROWS ÜBY ÜTHE ÜSELECTED ÜCOLUMN.\n- **ÜFILTER**: ÜSHOWS ÜONLY ÜROWS ÜTHAT ÜMEET ÜA ÜCONDITION.\n\n## <a id=\"record\"></a>ÜRECORD\n\n1. ÜSELECT **ÜRECORD**.\n2. ÜPERFORM ÜTHE ÜSTEPS ÜTHAT ÜYOU ÜWANT ÜTO ÜREPEAT.\n3. ÜSELECT **ÜSTOP**.\n\nÜTHE ÜRECORDED ÜSTEPS ÜARE ÜSAVED ÜAS ÜA ÜMACRO.\n\n## <a id=\"park\"></a>ÜPARK\n\nÜWHEN ÜA ÜRECORD ÜCAN'ÜT ÜBE ÜPROCESSED, ÜIT'ÜS ÜPARKED. ÜPARKED ÜRECORDS ÜWAIT ÜIN ÜA ÜSEPARATE ÜQUEUE ÜUNTIL ÜYOU ÜSELECT **ÜRELEASE**.\n\n## <a id=\"close\"></a>ÜCLOSE\n\n**ÜCLOSE** ÜENDS ÜTHE ÜPERIOD. ÜAFTER ÜYOU ÜCLOSE ÜA ÜPERIOD, ÜRECORDS ÜIN ÜIT ÜARE ÜREAD-ÜONLY.\n\n## <a id=\"post\"></a>ÜPOST\n\n**ÜPOST** ÜSENDS ÜTHE ÜRECORD ÜTO ÜTHE ÜLEDGER. ÜYOU ÜCAN'ÜT ÜUNDO ÜA ÜPOST, ÜBUT ÜYOU ÜCAN ÜPOST ÜA ÜREVERSAL.\n",
+ "reverted": [],
+ "anchors": [
+  "working-with-records",
+  "match",
+  "scale",
+  "table",
+  "record",
+  "park",
+  "close",
+  "post"
+ ]
+}

@@ -1,0 +1,247 @@
+{
+ "file": "eval/features/directives.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Media and embeds",
+   "original": "Media and embeds",
+   "sourceText": "Media and embeds",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "label",
+   "textContext": "markdown",
+   "note": "\"youtube\" directive label",
+   "structure": "section \"Media and embeds\"; \"youtube\" directive label",
+   "masked": "Watch the five-minute introduction",
+   "original": "Watch the five-minute introduction",
+   "sourceText": "Watch the five-minute introduction",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Media and embeds\"; inside \"details\" admonition/directive; admonition title",
+   "masked": "Show the system requirements",
+   "original": "Show the system requirements",
+   "sourceText": "Show the system requirements",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Media and embeds\"; inside \"details\" admonition/directive; list introduced by \"Show the system requirements\"",
+   "masked": "4 GB RAM",
+   "original": "4 GB RAM",
+   "sourceText": "4 GB RAM",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Media and embeds\"; inside \"details\" admonition/directive; list introduced by \"Show the system requirements\"",
+   "masked": "64-bit processor",
+   "original": "64-bit processor",
+   "sourceText": "64-bit processor",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Media and embeds\"; inside \"details\" admonition/directive; list introduced by \"Show the system requirements\"",
+   "masked": "An internet connection for the first sign-in",
+   "original": "An internet connection for the first sign-in",
+   "sourceText": "An internet connection for the first sign-in",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Media and embeds\"; inside \"aside\" admonition/directive",
+   "masked": "This feature is in <g1>preview</g1>. Send feedback to the product team.",
+   "original": "This feature is in **preview**. Send feedback to the product team.",
+   "sourceText": "This feature is in preview. Send feedback to the product team.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Media and embeds\"; inside \"tabs\" admonition/directive; inside \"tab\" admonition/directive",
+   "masked": "Open the <g1>Start</g1> menu and search for <g2>Contoso Sync</g2>.",
+   "original": "Open the **Start** menu and search for *Contoso Sync*.",
+   "sourceText": "Open the Start menu and search for Contoso Sync.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Media and embeds\"; inside \"tabs\" admonition/directive; inside \"tab\" admonition/directive",
+   "masked": "Open <g1>Launchpad</g1> and select <g2>Contoso Sync</g2>.",
+   "original": "Open **Launchpad** and select *Contoso Sync*.",
+   "sourceText": "Open Launchpad and select Contoso Sync.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   18,
+   "s1"
+  ],
+  [
+   30,
+   64,
+   "s2"
+  ],
+  [
+   92,
+   120,
+   "s3"
+  ],
+  [
+   124,
+   132,
+   "s4"
+  ],
+  [
+   135,
+   151,
+   "s5"
+  ],
+  [
+   154,
+   198,
+   "s6"
+  ],
+  [
+   225,
+   291,
+   "s7"
+  ],
+  [
+   322,
+   376,
+   "s8"
+  ],
+  [
+   395,
+   440,
+   "s9"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"media-and-embeds\"></a>ÜMEDIA ÜAND ÜEMBEDS\n\n::youtube[ÜWATCH ÜTHE ÜFIVE-ÜMINUTE ÜINTRODUCTION]{#dQw4w9WgXcQ}\n\n:::details[ÜSHOW ÜTHE ÜSYSTEM ÜREQUIREMENTS]\n- 4 ÜGB ÜRAM\n- 64-ÜBIT ÜPROCESSOR\n- ÜAN ÜINTERNET ÜCONNECTION ÜFOR ÜTHE ÜFIRST ÜSIGN-ÜIN\n:::\n\n:::aside{.highlight}\nÜTHIS ÜFEATURE ÜIS ÜIN **ÜPREVIEW**. ÜSEND ÜFEEDBACK ÜTO ÜTHE ÜPRODUCT ÜTEAM.\n:::\n\n::::tabs\n:::tab[Windows]\nÜOPEN ÜTHE **ÜSTART** ÜMENU ÜAND ÜSEARCH ÜFOR *ÜCONTOSO ÜSYNC*.\n:::\n:::tab[macOS]\nÜOPEN **ÜLAUNCHPAD** ÜAND ÜSELECT *ÜCONTOSO ÜSYNC*.\n:::\n::::\n\n::file{src=\"samples/demo.zip\" label=\"Download the sample project\"}\n",
+ "reverted": [],
+ "anchors": [
+  "media-and-embeds"
+ ]
+}

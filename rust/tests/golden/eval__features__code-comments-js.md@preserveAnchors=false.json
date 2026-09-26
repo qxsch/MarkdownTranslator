@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/code-comments-js.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜUSING ÜTHE JavaScript ÜSDK\n\nÜINSTALL ÜTHE ÜPACKAGE ÜAND ÜCREATE ÜA ÜCLIENT:\n\n```javascript\nimport { SyncClient } from '@contoso/sync';\n\n// ÜCREATE ÜONE ÜCLIENT ÜPER ÜPROCESS ÜAND ÜREUSE ÜIT.\nconst client = new SyncClient({ endpoint: process.env.CTSYNC_ENDPOINT });\n\n/*\n * ÜUPLOAD ÜA ÜFILE. ÜTHE ÜPROMISE ÜRESOLVES ÜWHEN ÜTHE\n * ÜLAST ÜBLOCK ÜHAS ÜBEEN ÜCONFIRMED ÜBY ÜTHE ÜSERVER.\n */\nawait client.upload('report.pdf', { overwrite: true }); // ÜOVERWRITE ÜEXISTING ÜVERSIONS\n```\n\nTypeScript ÜUSERS ÜGET ÜFULL ÜTYPE ÜINFORMATION:\n\n```typescript\n/**\n * ÜOPTIONS ÜFOR ÜA ÜFOLDER ÜWATCH.\n * @param path ÜTHE ÜFOLDER ÜTO ÜWATCH, ÜRELATIVE ÜTO ÜTHE ÜSYNC ÜROOT.\n * @param recursive ÜWHETHER ÜSUBFOLDERS ÜARE ÜINCLUDED.\n * @returns ÜA ÜHANDLE ÜTHAT ÜSTOPS ÜTHE ÜWATCH ÜWHEN ÜDISPOSED.\n */\nexport function watch(path: string, recursive = true): Disposable {\n  // TODO: ÜSUPPORT ÜGLOB ÜPATTERNS\n  return client.watch(path, { recursive });\n}\n\n// ÜRETRY ÜTHREE ÜTIMES ÜWITH ÜEXPONENTIAL ÜBACKOFF\nconst policy: RetryPolicy = { retries: 3, backoff: 'exponential' };\n```\n\nÜREACT ÜCOMPONENTS ÜCAN ÜUSE ÜTHE ÜHOOK:\n\n```tsx\nexport function SyncBadge() {\n  // ÜRE-ÜRENDERS ÜWHENEVER ÜTHE ÜSYNC ÜSTATE ÜCHANGES\n  const state = useSyncState();\n  return <Badge color={state === 'ok' ? 'green' : 'red'}>{state}</Badge>; {/* ÜLABEL ÜSHOWN ÜTO ÜTHE ÜUSER */}\n}\n```\n",
+ "reverted": [],
+ "anchors": []
+}

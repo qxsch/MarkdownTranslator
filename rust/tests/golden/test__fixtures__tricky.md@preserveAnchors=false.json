@@ -1,0 +1,15 @@
+{
+ "file": "test/fixtures/tricky.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜTRICKY ÜDOCUMENT\n\nÜTHIS ÜPARAGRAPH ÜIS ÜSOFT ÜWRAPPED ÜOVER ÜSEVERAL ÜLINES ÜSO ÜTHAT ÜTHE\nÜTRANSLATOR ÜHAS ÜTO ÜRE-ÜWRAP ÜTHE ÜTRANSLATED ÜTEXT ÜTO ÜA ÜSIMILAR ÜWIDTH\nÜWITHOUT ÜBREAKING ÜINLINE `code\nspans` ÜOR [ÜLINK ÜTARGETS](https://example.com/a/b \"ÜWITH ÜA ÜTITLE\") ÜIN ÜTHE\nÜMIDDLE ÜOF ÜTHE ÜPARAGRAPH.\n\n> ÜA ÜQUOTED ÜPARAGRAPH ÜTHAT ÜIS ÜALSO ÜWRAPPED\n> ÜOVER ÜMULTIPLE ÜLINES, ÜWITH **ÜBOLD ÜTEXT** ÜAND\n> ÜA ÜFILE ÜNAMED settings.local.json ÜINSIDE ÜTHE\n> ÜQUOTE.\n>\n> ```js\n> // ÜCOMMENT ÜINSIDE ÜA ÜQUOTED ÜCODE ÜBLOCK\n> const x = 1;\n> ```\n\n- ÜA ÜLIST ÜITEM ÜWITH ÜA ÜNESTED ÜPARAGRAPH\n\n  ÜAND ÜA ÜSECOND ÜPARAGRAPH ÜTHAT\n  ÜCONTINUES ÜON ÜANOTHER ÜLINE.\n\n  ```yaml\n  # ÜYAML ÜCOMMENT ÜIN ÜA ÜLIST ÜITEM\n  key: value # ÜTRAILING ÜCOMMENT\n  url: \"http://example.com/#anchor\"\n  ```\n\nÜA ÜSHORTCUT ÜREFERENCE ÜTO [ÜCONTOSO][Contoso] ÜAND ÜA ÜCOLLAPSED ÜONE ÜTO [ÜFABRIKAM][Fabrikam].\n\nSnake_case_identifier, camelCaseName ÜAND PascalCaseType ÜMUST ÜSURVIVE, ÜAS ÜMUST Get-AzContext ÜAND v1.2.3.\n\n<table>\n  <tr><th>ÜNAME</th><th>ÜMEANING</th></tr>\n  <tr><td>ÜALPHA</td><td>ÜTHE ÜFIRST ÜLETTER ÜOF ÜTHE ÜALPHABET</td></tr>\n</table>\n\n<details>\n<summary>ÜCLICK ÜTO ÜEXPAND ÜTHE ÜDETAILS</summary>\n\nÜHIDDEN ÜCONTENT ÜWITH ÜA [ÜLINK](#tricky-document) ÜBACK ÜTO ÜTHE ÜTOP.\n\n</details>\n\n```csharp\n/// <summary>\n/// ÜGETS ÜTHE ÜVALUE ÜOF ÜTHE <see cref=\"Foo\"/> ÜPROPERTY.\n/// </summary>\n/// <param name=\"id\">ÜTHE ÜIDENTIFIER ÜOF ÜTHE ÜITEM.</param>\npublic int Get(int id) => id; // ÜRETURNS ÜTHE ÜID\n```\n\n```java\n/**\n * ÜCOMPUTES ÜTHE ÜTOTAL ÜPRICE.\n *\n * @param items ÜTHE ÜITEMS ÜIN ÜTHE ÜCART\n * @return ÜTHE ÜTOTAL ÜPRICE ÜINCLUDING ÜTAX\n */\nint total(List<Item> items) { return 0; }\n```\n\n```sql\n-- ÜSELECT ÜTHE ÜACTIVE ÜUSERS\nSELECT * FROM users WHERE name = 'O''Brien -- not a comment';\n```\n\n[Contoso]: https://contoso.com\n[Fabrikam]: https://fabrikam.com\n",
+ "reverted": [],
+ "anchors": []
+}

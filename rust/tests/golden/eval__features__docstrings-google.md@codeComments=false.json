@@ -1,0 +1,49 @@
+{
+ "file": "eval/features/docstrings-google.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: uploads",
+   "original": "Python SDK reference: uploads",
+   "sourceText": " SDK reference: uploads",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   31,
+   "s1"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-uploads\"></a>Python ÜSDK ÜREFERENCE: ÜUPLOADS\n\n```python\ndef upload(path, retries=3, overwrite=False):\n    \"\"\"Upload a file to the sync share.\n\n    The upload is retried with exponential backoff when the service\n    returns a transient error.\n\n    Args:\n        path (str): Local path of the file to upload.\n        retries (int): How many times to retry a failed block.\n        overwrite (bool, optional): Replace an existing file with the\n            same name. Defaults to False.\n\n    Returns:\n        UploadResult: Details about the uploaded file, including its\n        version number.\n\n    Raises:\n        FileNotFoundError: If the local file doesn't exist.\n        QuotaExceededError: If the share is full.\n\n    Example:\n        Upload a report and print its version.\n\n        >>> result = upload(\"report.pdf\")\n        >>> print(result.version)\n        1\n    \"\"\"\n\n\nclass UploadResult:\n    \"\"\"Result of an upload.\n\n    Attributes:\n        version (int): Version number assigned by the server.\n        size (int): Size of the uploaded file in bytes.\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-uploads"
+ ]
+}

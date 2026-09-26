@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/nested-lists.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜDEPLOYMENT ÜCHECKLIST\n\nÜCOMPLETE ÜTHE ÜFOLLOWING ÜTASKS ÜBEFORE ÜA ÜPRODUCTION ÜDEPLOYMENT:\n\n- ÜINFRASTRUCTURE\n  - ÜCHECK ÜTHE ÜQUOTA ÜIN ÜTHE ÜTARGET ÜREGION:\n    - ÜCPU ÜCORES\n    - ÜPUBLIC ÜIP ÜADDRESSES\n    - ÜSTORAGE ÜACCOUNTS\n  - ÜCONFIRM ÜTHAT ÜTHE ÜNETWORK ÜRULES ÜALLOW:\n    1. ÜOUTBOUND ÜTRAFFIC ÜON ÜPORT 443\n    2. ÜINBOUND ÜTRAFFIC ÜFROM ÜTHE ÜLOAD ÜBALANCER ÜONLY\n- ÜAPPLICATION\n  - ÜRUN ÜTHE ÜTEST ÜSUITE. ÜALL ÜOF ÜTHE ÜFOLLOWING ÜMUST ÜPASS:\n    - ÜUNIT ÜTESTS\n    - ÜINTEGRATION ÜTESTS, ÜINCLUDING ÜTHE ÜSLOW ÜONES\n  - ÜTAG ÜTHE ÜRELEASE, ÜFOR ÜEXAMPLE `v3.2.0`\n- ÜPEOPLE\n  - ÜINFORM ÜTHE ÜSUPPORT ÜTEAM ÜAT ÜLEAST ÜONE ÜDAY ÜIN ÜADVANCE\n  - ÜNAME ÜAN ÜON-ÜCALL ÜENGINEER ÜWHO ÜCAN:\n    - ÜROLL ÜBACK ÜTHE ÜRELEASE\n    - ÜCONTACT ÜTHE ÜCUSTOMER\n\nÜAFTER ÜTHE ÜDEPLOYMENT, ÜCHECK ÜTHESE ÜITEMS:\n\n1. ÜTHE ÜHEALTH ÜENDPOINT `/healthz` ÜRETURNS `200`.\n2. ÜERROR ÜRATES ÜSTAY ÜBELOW ÜTHE ÜBASELINE ÜFOR 30 ÜMINUTES.\n3. ÜNO ÜALERTS ÜFIRE.\n   - ÜIF ÜAN ÜALERT ÜFIRES, ÜFOLLOW ÜTHE ÜRUNBOOK.\n   - ÜIF ÜTHE ÜRUNBOOK ÜDOESN'ÜT ÜHELP, ÜROLL ÜBACK.\n",
+ "reverted": [],
+ "anchors": []
+}

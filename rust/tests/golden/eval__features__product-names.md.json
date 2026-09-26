@@ -1,0 +1,191 @@
+{
+ "file": "eval/features/product-names.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Contoso Sync with <x1/> 365",
+   "original": "Contoso Sync with Microsoft 365",
+   "sourceText": "Contoso Sync with  365",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Microsoft"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Contoso Sync with Microsoft 365\"",
+   "masked": "Contoso Sync works with <x1/> Teams, <x2/> and <x3/>. Files that you sync with Contoso Sync can be opened in Word, Excel and <x4/> for the web.",
+   "original": "Contoso Sync works with Microsoft Teams, SharePoint and OneDrive. Files that you sync with Contoso Sync can be opened in Word, Excel and PowerPoint for the web.",
+   "sourceText": "Contoso Sync works with  Teams,  and . Files that you sync with Contoso Sync can be opened in Word, Excel and  for the web.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Microsoft",
+    "x2": "SharePoint",
+    "x3": "OneDrive",
+    "x4": "PowerPoint"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Contoso Sync with Microsoft 365\"",
+   "masked": "<x1/> Active Directory is now called <x2/>. Sign in with your <x3/> account.",
+   "original": "Azure Active Directory is now called Microsoft Entra ID. Sign in with your Entra ID account.",
+   "sourceText": " Active Directory is now called . Sign in with your  account.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure",
+    "x2": "Microsoft Entra ID",
+    "x3": "Entra ID"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Contoso Sync with Microsoft 365\"",
+   "masked": "Use <x1/> or <x2/> Pipelines to deploy the agent. The <x3/> image is published to <x4/> Container Registry.",
+   "original": "Use GitHub Actions or Azure Pipelines to deploy the agent. The Docker image is published to GitHub Container Registry.",
+   "sourceText": "Use  or  Pipelines to deploy the agent. The  image is published to  Container Registry.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "GitHub Actions",
+    "x2": "Azure",
+    "x3": "Docker",
+    "x4": "GitHub"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Contoso Sync with Microsoft 365\"",
+   "masked": "<x1/> users can deploy the Helm chart <x2/>. It works on <x3/>, Amazon EKS and Google <x4/> Engine.",
+   "original": "Kubernetes users can deploy the Helm chart `contoso/sync-agent`. It works on Azure Kubernetes Service, Amazon EKS and Google Kubernetes Engine.",
+   "sourceText": " users can deploy the Helm chart . It works on , Amazon EKS and Google  Engine.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Kubernetes",
+    "x2": "`contoso/sync-agent`",
+    "x3": "Azure Kubernetes Service",
+    "x4": "Kubernetes"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:contoso/sync-agent"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Contoso Sync with Microsoft 365\"",
+   "masked": "<x1/> has an extension called <g2>Contoso Sync Explorer</g2>.",
+   "original": "Visual Studio Code has an extension called *Contoso Sync Explorer*.",
+   "sourceText": " has an extension called Contoso Sync Explorer.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Visual Studio Code",
+    "g2": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   33,
+   "s1"
+  ],
+  [
+   35,
+   195,
+   "s2"
+  ],
+  [
+   197,
+   289,
+   "s3"
+  ],
+  [
+   291,
+   409,
+   "s4"
+  ],
+  [
+   411,
+   554,
+   "s5"
+  ],
+  [
+   556,
+   623,
+   "s6"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"contoso-sync-with-microsoft-365\"></a>ÜCONTOSO ÜSYNC ÜWITH Microsoft 365\n\nÜCONTOSO ÜSYNC ÜWORKS ÜWITH Microsoft ÜTEAMS, SharePoint ÜAND OneDrive. ÜFILES ÜTHAT ÜYOU ÜSYNC ÜWITH ÜCONTOSO ÜSYNC ÜCAN ÜBE ÜOPENED ÜIN ÜWORD, ÜEXCEL ÜAND PowerPoint ÜFOR ÜTHE ÜWEB.\n\nAzure ÜACTIVE ÜDIRECTORY ÜIS ÜNOW ÜCALLED Microsoft Entra ID. ÜSIGN ÜIN ÜWITH ÜYOUR Entra ID ÜACCOUNT.\n\nÜUSE GitHub Actions ÜOR Azure ÜPIPELINES ÜTO ÜDEPLOY ÜTHE ÜAGENT. ÜTHE Docker ÜIMAGE ÜIS ÜPUBLISHED ÜTO GitHub ÜCONTAINER ÜREGISTRY.\n\nKubernetes ÜUSERS ÜCAN ÜDEPLOY ÜTHE ÜHELM ÜCHART `contoso/sync-agent`. ÜIT ÜWORKS ÜON Azure Kubernetes Service, ÜAMAZON ÜEKS ÜAND ÜGOOGLE Kubernetes ÜENGINE.\n\nVisual Studio Code ÜHAS ÜAN ÜEXTENSION ÜCALLED *ÜCONTOSO ÜSYNC ÜEXPLORER*.\n",
+ "reverted": [],
+ "anchors": [
+  "contoso-sync-with-microsoft-365"
+ ]
+}

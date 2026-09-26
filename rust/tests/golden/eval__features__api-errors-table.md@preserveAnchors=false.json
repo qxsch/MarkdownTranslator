@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/api-errors-table.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# REST ÜAPI ÜERROR ÜCODES\n\nÜEVERY ÜERROR ÜRESPONSE ÜHAS ÜTHE ÜSAME ÜSHAPE:\n\n```json\n{ \"error\": { \"code\": \"QuotaExceeded\", \"message\": \"The storage quota is exceeded.\" } }\n```\n\n| ÜHTTP ÜSTATUS | ÜCODE | ÜDESCRIPTION | ÜRETRY? |\n|---|---|---|---|\n| 400 | `InvalidPath` | ÜTHE ÜPATH ÜCONTAINS ÜINVALID ÜCHARACTERS | ÜNO |\n| 401 | `Unauthorized` | ÜTHE ÜTOKEN ÜIS ÜMISSING ÜOR ÜEXPIRED | ÜAFTER ÜSIGN-ÜIN |\n| 403 | `Forbidden` | ÜYOU ÜDON'ÜT ÜHAVE ÜACCESS ÜTO ÜTHE ÜFOLDER | ÜNO |\n| 404 | `NotFound` | ÜTHE ÜFILE ÜDOESN'ÜT ÜEXIST | ÜNO |\n| 409 | `Conflict` | ÜTHE ÜFILE ÜWAS ÜCHANGED ÜBY ÜSOMEONE ÜELSE | ÜYES, ÜAFTER ÜA ÜREFRESH |\n| 413 | `TooLarge` | ÜTHE ÜFILE ÜIS ÜLARGER ÜTHAN 250 ÜGB | ÜNO |\n| 423 | `Locked` | ÜTHE ÜFILE ÜIS ÜCHECKED ÜOUT | ÜLATER |\n| 429 | `TooManyRequests` | ÜYOU ÜSENT ÜTOO ÜMANY ÜREQUESTS | ÜYES, ÜAFTER `Retry-After` ÜSECONDS |\n| 507 | `QuotaExceeded` | ÜTHE ÜSTORAGE ÜQUOTA ÜIS ÜEXCEEDED | ÜNO |\n\n## ÜHANDLING ÜCONFLICTS\n\nÜWHEN ÜYOU ÜGET `409 Conflict`, ÜDOWNLOAD ÜTHE ÜLATEST ÜVERSION, ÜMERGE ÜYOUR ÜCHANGES ÜAND ÜUPLOAD ÜAGAIN ÜWITH ÜTHE ÜNEW `ETag` ÜIN ÜTHE `If-Match` ÜHEADER.\n",
+ "reverted": [],
+ "anchors": []
+}

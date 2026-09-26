@@ -1,0 +1,51 @@
+{
+ "file": "eval/features/docstrings-numpy.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": false,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: statistics",
+   "original": "Python SDK reference: statistics",
+   "sourceText": " SDK reference: statistics",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   34,
+   "s1"
+  ]
+ ],
+ "notes": [
+  "1 docstring(s) in \"python\" code left untranslated (docstrings disabled)"
+ ],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-statistics\"></a>Python ÜSDK ÜREFERENCE: ÜSTATISTICS\n\n```python\ndef usage_report(share, start, end):\n    \"\"\"Compute storage usage for a share.\n\n    Returns one row per day with the used space and the number of files.\n\n    Parameters\n    ----------\n    share : str\n        Name of the share.\n    start : datetime.date\n        First day of the report, inclusive.\n    end : datetime.date\n        Last day of the report, inclusive.\n\n    Returns\n    -------\n    pandas.DataFrame\n        A table with the columns ``date``, ``bytes`` and ``files``.\n\n    Raises\n    ------\n    ValueError\n        If ``start`` is after ``end``.\n\n    See Also\n    --------\n    quota_report : Compares usage with the quota.\n\n    Notes\n    -----\n    Days without activity are included with the values of the previous day.\n\n    Examples\n    --------\n    >>> df = usage_report(\"finance\", date(2026, 8, 1), date(2026, 8, 7))\n    >>> len(df)\n    7\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-statistics"
+ ]
+}

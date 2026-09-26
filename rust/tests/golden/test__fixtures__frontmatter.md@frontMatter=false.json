@@ -1,0 +1,45 @@
+{
+ "file": "test/fixtures/frontmatter.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": false,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": null,
+   "masked": "Body text.",
+   "original": "Body text.",
+   "sourceText": "Body text.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   438,
+   448,
+   "s1"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": "informal",
+ "output": "---\ntitle: Getting started\ndescription: >\n  Learn how to deploy the service\n  and configure it for production.\n\n  A second paragraph of the description.\nsummary: |\n  First line of the summary.\n  Second line of the summary.\nseo:\n  title: \"SEO: a title with \\\"quotes\\\"\"\n  og_description: 'It''s a great tool'\nkeywords:\n  - translation\n  - markdown tools\ntags: [azure, markdown]\nnav:\n  - title: Home page\n    url: /\nformality: informal\n---\n\nÜBODY ÜTEXT.\n",
+ "reverted": [],
+ "anchors": []
+}

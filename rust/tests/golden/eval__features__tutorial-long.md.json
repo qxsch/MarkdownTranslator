@@ -1,0 +1,665 @@
+{
+ "file": "eval/features/tutorial-long.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Tutorial: Automate backups with Contoso Sync",
+   "original": "Tutorial: Automate backups with Contoso Sync",
+   "sourceText": "Tutorial: Automate backups with Contoso Sync",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync\"",
+   "masked": "In this tutorial, you set up a nightly backup of a project folder, test a restore and get notified when something fails.",
+   "original": "In this tutorial, you set up a nightly backup of a project folder, test a restore and get notified when something fails.",
+   "sourceText": "In this tutorial, you set up a nightly backup of a project folder, test a restore and get notified when something fails.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync\"",
+   "masked": "Part 1: Prepare the folder",
+   "original": "Part 1: Prepare the folder",
+   "sourceText": "Part 1: Prepare the folder",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 1: Prepare the folder\"",
+   "masked": "Create a folder named <x1/> in your home directory. Move the files that you want to back up into it. Avoid folders that contain build output, such as <x2/> or <x3/>, because they change often and use a lot of space.",
+   "original": "Create a folder named `projects` in your home directory. Move the files that you want to back up into it. Avoid folders that contain build output, such as `node_modules` or `bin`, because they change often and use a lot of space.",
+   "sourceText": "Create a folder named  in your home directory. Move the files that you want to back up into it. Avoid folders that contain build output, such as  or , because they change often and use a lot of space.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`projects`",
+    "x2": "`node_modules`",
+    "x3": "`bin`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:bin\ncode:node_modules\ncode:projects"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 1: Prepare the folder\"",
+   "masked": "Next, add a file named <x1/> to exclude patterns:",
+   "original": "Next, add a file named `.ctsyncignore` to exclude patterns:",
+   "sourceText": "Next, add a file named  to exclude patterns:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`.ctsyncignore`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:.ctsyncignore"
+  },
+  {
+   "id": "s6",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync\"",
+   "masked": "Part 2: Create the backup job",
+   "original": "Part 2: Create the backup job",
+   "sourceText": "Part 2: Create the backup job",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 2: Create the backup job\"",
+   "masked": "Open <g1>Settings</g1> &gt; <g2>Backups</g2>.",
+   "original": "Open **Settings** > **Backups**.",
+   "sourceText": "Open Settings > Backups.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 2: Create the backup job\"",
+   "masked": "Select <g1>New job</g1>.",
+   "original": "Select **New job**.",
+   "sourceText": "Select New job.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 2: Create the backup job\"",
+   "masked": "Enter a name, for example <g1>Nightly projects</g1>.",
+   "original": "Enter a name, for example *Nightly projects*.",
+   "sourceText": "Enter a name, for example Nightly projects.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis"
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 2: Create the backup job\"",
+   "masked": "Under <g1>Schedule</g1>, select <g2>Daily</g2> and set the time to 02:00.",
+   "original": "Under **Schedule**, select **Daily** and set the time to 02:00.",
+   "sourceText": "Under Schedule, select Daily and set the time to 02:00.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s11",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 2: Create the backup job\"",
+   "masked": "Under <g1>Keep</g1>, select how many versions to keep. Seven is a good start.",
+   "original": "Under **Keep**, select how many versions to keep. Seven is a good start.",
+   "sourceText": "Under Keep, select how many versions to keep. Seven is a good start.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 2: Create the backup job\"",
+   "masked": "Select <g1>Create</g1>.",
+   "original": "Select **Create**.",
+   "sourceText": "Select Create.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s13",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 2: Create the backup job\"",
+   "masked": "The job appears in the list with the status <g1>Scheduled</g1>.",
+   "original": "The job appears in the list with the status **Scheduled**.",
+   "sourceText": "The job appears in the list with the status Scheduled.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s14",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync\"",
+   "masked": "Part 3: Test a restore",
+   "original": "Part 3: Test a restore",
+   "sourceText": "Part 3: Test a restore",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 3: Test a restore\"",
+   "masked": "A backup is only useful if you can restore it. Delete a test file, then:",
+   "original": "A backup is only useful if you can restore it. Delete a test file, then:",
+   "sourceText": "A backup is only useful if you can restore it. Delete a test file, then:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 3: Test a restore\"; list introduced by \"A backup is only useful if you can restore it. Delete a test file, then:\"",
+   "masked": "Select the job and then <g1>Restore</g1>.",
+   "original": "Select the job and then **Restore**.",
+   "sourceText": "Select the job and then Restore.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s17",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 3: Test a restore\"; list introduced by \"A backup is only useful if you can restore it. Delete a test file, then:\"",
+   "masked": "Pick yesterday's version.",
+   "original": "Pick yesterday's version.",
+   "sourceText": "Pick yesterday's version.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s18",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 3: Test a restore\"; list introduced by \"A backup is only useful if you can restore it. Delete a test file, then:\"",
+   "masked": "Choose <g1>Restore to original location</g1>.",
+   "original": "Choose **Restore to original location**.",
+   "sourceText": "Choose Restore to original location.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s19",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 3: Test a restore\"",
+   "masked": "The file reappears within a few seconds.",
+   "original": "The file reappears within a few seconds.",
+   "sourceText": "The file reappears within a few seconds.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s20",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync\"",
+   "masked": "Part 4: Get notified",
+   "original": "Part 4: Get notified",
+   "sourceText": "Part 4: Get notified",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s21",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Part 4: Get notified\"",
+   "masked": "Under <g1>Notifications</g1>, turn on <g2>E-mail me when a job fails</g2>. You can also send events to a webhook:",
+   "original": "Under **Notifications**, turn on **E-mail me when a job fails**. You can also send events to a webhook:",
+   "sourceText": "Under Notifications, turn on E-mail me when a job fails. You can also send events to a webhook:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s22",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync\"",
+   "masked": "Clean up",
+   "original": "Clean up",
+   "sourceText": "Clean up",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s23",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Clean up\"",
+   "masked": "If you don't want to keep the job, select it and then <g1>Delete</g1>. Deleting the job doesn't delete existing backups; they expire according to the retention setting.",
+   "original": "If you don't want to keep the job, select it and then **Delete**. Deleting the job doesn't delete existing backups; they expire according to the retention setting.",
+   "sourceText": "If you don't want to keep the job, select it and then Delete. Deleting the job doesn't delete existing backups; they expire according to the retention setting.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s24",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync\"",
+   "masked": "Summary",
+   "original": "Summary",
+   "sourceText": "Summary",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s25",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tutorial: Automate backups with Contoso Sync > Summary\"",
+   "masked": "You created a scheduled backup, tested a restore and set up notifications. Continue with <g1>Share a folder with your team</g1>.",
+   "original": "You created a scheduled backup, tested a restore and set up notifications. Continue with [Share a folder with your team](share.md).",
+   "sourceText": "You created a scheduled backup, tested a restore and set up notifications. Continue with Share a folder with your team.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to share.md"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:share.md"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   46,
+   "s1"
+  ],
+  [
+   48,
+   168,
+   "s2"
+  ],
+  [
+   173,
+   199,
+   "s3"
+  ],
+  [
+   201,
+   430,
+   "s4"
+  ],
+  [
+   432,
+   491,
+   "s5"
+  ],
+  [
+   534,
+   563,
+   "s6"
+  ],
+  [
+   568,
+   600,
+   "s7"
+  ],
+  [
+   604,
+   623,
+   "s8"
+  ],
+  [
+   627,
+   672,
+   "s9"
+  ],
+  [
+   676,
+   739,
+   "s10"
+  ],
+  [
+   743,
+   815,
+   "s11"
+  ],
+  [
+   819,
+   837,
+   "s12"
+  ],
+  [
+   839,
+   897,
+   "s13"
+  ],
+  [
+   902,
+   924,
+   "s14"
+  ],
+  [
+   926,
+   998,
+   "s15"
+  ],
+  [
+   1003,
+   1039,
+   "s16"
+  ],
+  [
+   1043,
+   1068,
+   "s17"
+  ],
+  [
+   1072,
+   1112,
+   "s18"
+  ],
+  [
+   1114,
+   1154,
+   "s19"
+  ],
+  [
+   1159,
+   1179,
+   "s20"
+  ],
+  [
+   1181,
+   1284,
+   "s21"
+  ],
+  [
+   1399,
+   1407,
+   "s22"
+  ],
+  [
+   1409,
+   1572,
+   "s23"
+  ],
+  [
+   1577,
+   1584,
+   "s24"
+  ],
+  [
+   1586,
+   1717,
+   "s25"
+  ]
+ ],
+ "notes": [
+  "code block \"text\" left untouched (no comment parser for this language)",
+  "code block \"json\" left untouched (no comment parser for this language)"
+ ],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"tutorial-automate-backups-with-contoso-sync\"></a>ÜTUTORIAL: ÜAUTOMATE ÜBACKUPS ÜWITH ÜCONTOSO ÜSYNC\n\nÜIN ÜTHIS ÜTUTORIAL, ÜYOU ÜSET ÜUP ÜA ÜNIGHTLY ÜBACKUP ÜOF ÜA ÜPROJECT ÜFOLDER, ÜTEST ÜA ÜRESTORE ÜAND ÜGET ÜNOTIFIED ÜWHEN ÜSOMETHING ÜFAILS.\n\n## <a id=\"part-1-prepare-the-folder\"></a>ÜPART 1: ÜPREPARE ÜTHE ÜFOLDER\n\nÜCREATE ÜA ÜFOLDER ÜNAMED `projects` ÜIN ÜYOUR ÜHOME ÜDIRECTORY. ÜMOVE ÜTHE ÜFILES ÜTHAT ÜYOU ÜWANT ÜTO ÜBACK ÜUP ÜINTO ÜIT. ÜAVOID ÜFOLDERS ÜTHAT ÜCONTAIN ÜBUILD ÜOUTPUT, ÜSUCH ÜAS `node_modules` ÜOR `bin`, ÜBECAUSE ÜTHEY ÜCHANGE ÜOFTEN ÜAND ÜUSE ÜA ÜLOT ÜOF ÜSPACE.\n\nÜNEXT, ÜADD ÜA ÜFILE ÜNAMED `.ctsyncignore` ÜTO ÜEXCLUDE ÜPATTERNS:\n\n```text\nnode_modules/\nbin/\n*.tmp\n```\n\n## <a id=\"part-2-create-the-backup-job\"></a>ÜPART 2: ÜCREATE ÜTHE ÜBACKUP ÜJOB\n\n1. ÜOPEN **ÜSETTINGS** > **ÜBACKUPS**.\n2. ÜSELECT **ÜNEW ÜJOB**.\n3. ÜENTER ÜA ÜNAME, ÜFOR ÜEXAMPLE *ÜNIGHTLY ÜPROJECTS*.\n4. ÜUNDER **ÜSCHEDULE**, ÜSELECT **ÜDAILY** ÜAND ÜSET ÜTHE ÜTIME ÜTO 02:00.\n5. ÜUNDER **ÜKEEP**, ÜSELECT ÜHOW ÜMANY ÜVERSIONS ÜTO ÜKEEP. ÜSEVEN ÜIS ÜA ÜGOOD ÜSTART.\n6. ÜSELECT **ÜCREATE**.\n\nÜTHE ÜJOB ÜAPPEARS ÜIN ÜTHE ÜLIST ÜWITH ÜTHE ÜSTATUS **ÜSCHEDULED**.\n\n## <a id=\"part-3-test-a-restore\"></a>ÜPART 3: ÜTEST ÜA ÜRESTORE\n\nÜA ÜBACKUP ÜIS ÜONLY ÜUSEFUL ÜIF ÜYOU ÜCAN ÜRESTORE ÜIT. ÜDELETE ÜA ÜTEST ÜFILE, ÜTHEN:\n\n1. ÜSELECT ÜTHE ÜJOB ÜAND ÜTHEN **ÜRESTORE**.\n2. ÜPICK ÜYESTERDAY'ÜS ÜVERSION.\n3. ÜCHOOSE **ÜRESTORE ÜTO ÜORIGINAL ÜLOCATION**.\n\nÜTHE ÜFILE ÜREAPPEARS ÜWITHIN ÜA ÜFEW ÜSECONDS.\n\n## <a id=\"part-4-get-notified\"></a>ÜPART 4: ÜGET ÜNOTIFIED\n\nÜUNDER **ÜNOTIFICATIONS**, ÜTURN ÜON **ÜE-ÜMAIL ÜME ÜWHEN ÜA ÜJOB ÜFAILS**. ÜYOU ÜCAN ÜALSO ÜSEND ÜEVENTS ÜTO ÜA ÜWEBHOOK:\n\n```json\n{\n  \"webhook\": \"https://hooks.example.com/backup\",\n  \"events\": [\"job.failed\", \"job.succeeded\"]\n}\n```\n\n## <a id=\"clean-up\"></a>ÜCLEAN ÜUP\n\nÜIF ÜYOU ÜDON'ÜT ÜWANT ÜTO ÜKEEP ÜTHE ÜJOB, ÜSELECT ÜIT ÜAND ÜTHEN **ÜDELETE**. ÜDELETING ÜTHE ÜJOB ÜDOESN'ÜT ÜDELETE ÜEXISTING ÜBACKUPS; ÜTHEY ÜEXPIRE ÜACCORDING ÜTO ÜTHE ÜRETENTION ÜSETTING.\n\n## <a id=\"summary\"></a>ÜSUMMARY\n\nÜYOU ÜCREATED ÜA ÜSCHEDULED ÜBACKUP, ÜTESTED ÜA ÜRESTORE ÜAND ÜSET ÜUP ÜNOTIFICATIONS. ÜCONTINUE ÜWITH [ÜSHARE ÜA ÜFOLDER ÜWITH ÜYOUR ÜTEAM](share.md).\n",
+ "reverted": [],
+ "anchors": [
+  "tutorial-automate-backups-with-contoso-sync",
+  "part-1-prepare-the-folder",
+  "part-2-create-the-backup-job",
+  "part-3-test-a-restore",
+  "part-4-get-notified",
+  "clean-up",
+  "summary"
+ ]
+}

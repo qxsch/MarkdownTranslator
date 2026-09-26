@@ -1,0 +1,301 @@
+{
+ "file": "eval/features/mdx-tabs.mdx",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Install the client",
+   "original": "Install the client",
+   "sourceText": "Install the client",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": null,
+   "masked": "import Tabs from '<x1/>'; import <x2/> from '<x3/>';",
+   "original": "import Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';",
+   "sourceText": "import Tabs from ''; import  from '';",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "@theme/Tabs",
+    "x2": "TabItem",
+    "x3": "@theme/TabItem"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 40,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Install the client",
+   "original": "Install the client",
+   "sourceText": "Install the client",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"",
+   "masked": "Pick your operating system.",
+   "original": "Pick your operating system.",
+   "sourceText": "Pick your operating system.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Install the client\"",
+   "masked": "Install the **client** with winget: `winget install <x1/>`.",
+   "original": "Install the **client** with winget: `winget install Contoso.Sync`.",
+   "sourceText": "Install the **client** with winget: `winget install `.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Contoso.Sync"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Install the client\"",
+   "masked": "Install the client with Homebrew: `brew install <x1/> contoso-sync`.",
+   "original": "Install the client with Homebrew: `brew install --cask contoso-sync`.",
+   "sourceText": "Install the client with Homebrew: `brew install  contoso-sync`.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "--cask"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Install the client\"",
+   "masked": "Download the package from the release page.",
+   "original": "Download the package from the release page.",
+   "sourceText": "Download the package from the release page.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <callout>, HTML title attribute",
+   "structure": "section \"Install the client\"",
+   "masked": "Restart required",
+   "original": "Restart required",
+   "sourceText": "Restart required",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"Install the client\"",
+   "masked": "<x1/>",
+   "original": "<Callout type=\"warning\" title=\"Restart required\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s8"
+   ],
+   "tags": {
+    "x1": "<Callout type=\"warning\" title=\"Restart required\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Install the client\"",
+   "masked": "After the installation, restart your computer.",
+   "original": "After the installation, restart your computer.",
+   "sourceText": "After the installation, restart your computer.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"",
+   "masked": "The current version is <x1/>.",
+   "original": "The current version is {props.version}.",
+   "sourceText": "The current version is .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{props.version}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   29,
+   "s1"
+  ],
+  [
+   35,
+   104,
+   "s2"
+  ],
+  [
+   108,
+   126,
+   "s3"
+  ],
+  [
+   128,
+   155,
+   "s4"
+  ],
+  [
+   229,
+   295,
+   "s5"
+  ],
+  [
+   351,
+   420,
+   "s6"
+  ],
+  [
+   478,
+   521,
+   "s7"
+  ],
+  [
+   544,
+   593,
+   "s9"
+  ],
+  [
+   594,
+   640,
+   "s10"
+  ],
+  [
+   653,
+   692,
+   "s11"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: ÜINSTALL ÜTHE ÜCLIENT\n---\n\nÜIMPORT ÜTABS ÜFROM '@theme/Tabs';\nÜIMPORT TabItem ÜFROM '@theme/TabItem';\n\n# <a id=\"install-the-client\"></a>ÜINSTALL ÜTHE ÜCLIENT\n\nÜPICK ÜYOUR ÜOPERATING ÜSYSTEM.\n\n<Tabs groupId=\"os\">\n  <TabItem value=\"win\" label=\"Windows\" default>\n    ÜINSTALL ÜTHE **ÜCLIENT** ÜWITH ÜWINGET: `ÜWINGET ÜINSTALL Contoso.Sync`.\n  </TabItem>\n  <TabItem value=\"mac\" label=\"macOS\">\n    ÜINSTALL ÜTHE ÜCLIENT ÜWITH ÜHOMEBREW: `ÜBREW ÜINSTALL --cask ÜCONTOSO-ÜSYNC`.\n  </TabItem>\n  <TabItem value=\"linux\" label=\"Linux\">\n    ÜDOWNLOAD ÜTHE ÜPACKAGE ÜFROM ÜTHE ÜRELEASE ÜPAGE.\n  </TabItem>\n</Tabs>\n\n<Callout type=\"warning\" title=\"ÜRESTART ÜREQUIRED\">\nÜAFTER ÜTHE ÜINSTALLATION, ÜRESTART ÜYOUR ÜCOMPUTER.\n</Callout>\n\nÜTHE ÜCURRENT ÜVERSION ÜIS {props.version}.\n",
+ "reverted": [],
+ "anchors": [
+  "install-the-client"
+ ]
+}

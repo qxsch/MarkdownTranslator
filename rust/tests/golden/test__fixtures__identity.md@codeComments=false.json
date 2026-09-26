@@ -1,0 +1,816 @@
+{
+ "file": "test/fixtures/identity.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Getting started with the translator",
+   "original": "Getting started with the translator",
+   "sourceText": "Getting started with the translator",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"description\"",
+   "structure": "front matter \"description\"",
+   "masked": "Learn how to deploy the service: step by step",
+   "original": "\"Learn how to deploy the service: step by step\"",
+   "sourceText": "Learn how to deploy the service: step by step",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Getting started with <x1/>",
+   "original": "Getting started with `mdtranslator`",
+   "sourceText": "Getting started with ",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`mdtranslator`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:mdtranslator"
+  },
+  {
+   "id": "s4",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link/image title (tooltip)",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "<x1/> home page",
+   "original": "Azure home page",
+   "sourceText": " home page",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "This guide explains how to <g1>deploy</g1> the service and how to <g2>configure</g2> it for <g3><x4/></g3>.",
+   "original": "This guide explains how to **deploy** the service and how to *configure* it for [Azure](https://azure.microsoft.com \"Azure home page\").",
+   "sourceText": "This guide explains how to deploy the service and how to configure it for .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [
+    "s4"
+   ],
+   "tags": {
+    "x4": "Azure",
+    "g1": "strong: strong",
+    "g2": "emphasis: emphasis",
+    "g3": "link: link to https://azure.microsoft.com"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nlink:https://azure.microsoft.com\nstrong"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "See the file <x1/>, the folder <x2/> and <x3/> before you continue.",
+   "original": "See the file test.jpeg, the folder `docs/images/` and ./scripts/deploy.ps1 before you continue.",
+   "sourceText": "See the file , the folder  and  before you continue.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "test.jpeg",
+    "x2": "`docs/images/`",
+    "x3": "./scripts/deploy.ps1"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:docs/images/"
+  },
+  {
+   "id": "s7",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link/image title (tooltip)",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "High level architecture",
+   "original": "High level architecture",
+   "sourceText": "High level architecture",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "<g1>Architecture diagram of the solution</g1>",
+   "original": "![Architecture diagram of the solution](images/architecture.png \"High level architecture\")",
+   "sourceText": "Architecture diagram of the solution",
+   "passive": false,
+   "embedded": false,
+   "dependents": [
+    "s7"
+   ],
+   "tags": {
+    "g1": "image: image images/architecture.png"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "image:images/architecture.png"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "Use the <g1>reference link</g1> or visit <x2/> for details, e.g. <x3/>.",
+   "original": "Use the [reference link][docs] or visit <https://learn.microsoft.com> for details, e.g. www.example.com.",
+   "sourceText": "Use the reference link or visit  for details, e.g. .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "<https://learn.microsoft.com>",
+    "x3": "www.example.com",
+    "g1": "link: link [docs]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:http://www.example.com\nlink:https://learn.microsoft.com\nlinkref:docs"
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph in a blockquote",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "<g1>Note:</g1> Values such as <x2/>, <x3/> and <x4/> are never translated.",
+   "original": "**Note:** Values such as `$HOME`, %APPDATA% and ${VAR_NAME} are never translated.",
+   "sourceText": "Note: Values such as ,  and  are never translated.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "`$HOME`",
+    "x3": "%APPDATA%",
+    "x4": "${VAR_NAME}",
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:$HOME\nstrong"
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Getting started with mdtranslator\"",
+   "masked": "Prerequisites",
+   "original": "Prerequisites",
+   "sourceText": "Prerequisites",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "An <x1/> subscription with the <x2/> role",
+   "original": "An Azure subscription with the `Contributor` role",
+   "sourceText": "An  subscription with the  role",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure",
+    "x2": "`Contributor`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:Contributor"
+  },
+  {
+   "id": "s13",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "<x1/> 22 or later",
+   "original": "Node.js 22 or later",
+   "sourceText": " 22 or later",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Node.js"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "<x1/> Desktop 4.30 or later, see <x2/>",
+   "original": "Docker Desktop 4.30 or later, see README.md",
+   "sourceText": " Desktop 4.30 or later, see ",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Docker",
+    "x2": "README.md"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "Clone the repository.",
+   "original": "Clone the repository.",
+   "sourceText": "Clone the repository.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "Run <x1/> in the project folder.",
+   "original": "Run `npm install` in the project folder.",
+   "sourceText": "Run  in the project folder.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`npm install`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:npm install"
+  },
+  {
+   "id": "s17",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "Start the server with <x1/> 8080 and the <x2/> flag.",
+   "original": "Start the server with --port 8080 and the -v flag.",
+   "sourceText": "Start the server with  8080 and the  flag.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "--port",
+    "x2": "-v"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s18",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"; table header; columns: \"Setting\", \"Default\", \"Description\"",
+   "masked": "Setting",
+   "original": "Setting",
+   "sourceText": "Setting",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s19",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"; table header; columns: \"Setting\", \"Default\", \"Description\"",
+   "masked": "Default",
+   "original": "Default",
+   "sourceText": "Default",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s20",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"; table header; columns: \"Setting\", \"Default\", \"Description\"",
+   "masked": "Description",
+   "original": "Description",
+   "sourceText": "Description",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s21",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"; table column \"Description\", row \"PORT\"",
+   "masked": "Port the HTTP server listens on",
+   "original": "Port the HTTP server listens on",
+   "sourceText": "Port the HTTP server listens on",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s22",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"; table column \"Default\", row \"MDT_REVIEW\"",
+   "masked": "true",
+   "original": "true",
+   "sourceText": "true",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s23",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"; table column \"Description\", row \"MDT_REVIEW\"",
+   "masked": "Enables the second review pass <x1/> optional",
+   "original": "Enables the second review pass \\| optional",
+   "sourceText": "Enables the second review pass  optional",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "|"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s24",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "Press <x1/>+<x2/> to stop the server, or read the <g3>important</g3> notes below.",
+   "original": "Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop the server, or read the <strong>important</strong> notes below.",
+   "sourceText": "Press + to stop the server, or read the important notes below.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "<kbd>Ctrl</kbd>",
+    "x2": "<kbd>C</kbd>",
+    "g3": "html: <strong>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "html:</kbd>\nhtml:</kbd>\nhtml:</strong>\nhtml:<kbd>\nhtml:<kbd>\nhtml:<strong>"
+  },
+  {
+   "id": "s25",
+   "kind": "alt",
+   "textContext": "attr",
+   "note": "inline HTML <img>, HTML alt attribute",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "Company logo",
+   "original": "Company logo",
+   "sourceText": "Company logo",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s26",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "<x1/>",
+   "original": "<img src=\"images/logo.svg\" alt=\"Company logo\" width=\"120\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s25"
+   ],
+   "tags": {
+    "x1": "<img src=\"images/logo.svg\" alt=\"Company logo\" width=\"120\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s27",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "This paragraph is inside an <g1>HTML block</g1> and should be translated.",
+   "original": "This paragraph is inside an <em>HTML block</em> and should be translated.",
+   "sourceText": "This paragraph is inside an HTML block and should be translated.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "html: <em>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s28",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "Here is a footnote reference<x1/> and a hard line break at the end of this line<x2/>followed by the next line.",
+   "original": "Here is a footnote reference[^1] and a hard line break at the end of this line\\\nfollowed by the next line.",
+   "sourceText": "Here is a footnote reference and a hard line break at the end of this linefollowed by the next line.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[^1]",
+    "x2": "line break [break]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "break\nfn:1"
+  },
+  {
+   "id": "s29",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "Entities like <x1/> and <x2/> and escaped <x3/>stars<x4/> stay as they are.",
+   "original": "Entities like &copy; and &nbsp; and escaped \\*stars\\* stay as they are.",
+   "sourceText": "Entities like  and  and escaped stars stay as they are.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "&copy;",
+    "x2": "&nbsp;",
+    "x3": "*",
+    "x4": "*"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s30",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link title (tooltip)",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"",
+   "masked": "<x1/> documentation",
+   "original": "Azure documentation",
+   "sourceText": " documentation",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s31",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "footnote",
+   "structure": "section \"Getting started with mdtranslator > Prerequisites\"; footnote",
+   "masked": "The footnote text is translated as well.",
+   "original": "The footnote text is translated as well.",
+   "sourceText": "The footnote text is translated as well.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   46,
+   "s1"
+  ],
+  [
+   60,
+   107,
+   "s2"
+  ],
+  [
+   156,
+   191,
+   "s3"
+  ],
+  [
+   193,
+   328,
+   "s5"
+  ],
+  [
+   330,
+   425,
+   "s6"
+  ],
+  [
+   427,
+   517,
+   "s8"
+  ],
+  [
+   519,
+   623,
+   "s9"
+  ],
+  [
+   627,
+   708,
+   "s10"
+  ],
+  [
+   713,
+   726,
+   "s11"
+  ],
+  [
+   730,
+   779,
+   "s12"
+  ],
+  [
+   786,
+   805,
+   "s13"
+  ],
+  [
+   812,
+   855,
+   "s14"
+  ],
+  [
+   860,
+   881,
+   "s15"
+  ],
+  [
+   885,
+   925,
+   "s16"
+  ],
+  [
+   929,
+   979,
+   "s17"
+  ],
+  [
+   983,
+   990,
+   "s18"
+  ],
+  [
+   993,
+   1000,
+   "s19"
+  ],
+  [
+   1003,
+   1014,
+   "s20"
+  ],
+  [
+   1071,
+   1102,
+   "s21"
+  ],
+  [
+   1122,
+   1126,
+   "s22"
+  ],
+  [
+   1129,
+   1171,
+   "s23"
+  ],
+  [
+   1175,
+   1281,
+   "s24"
+  ],
+  [
+   1306,
+   1364,
+   "s26"
+  ],
+  [
+   1370,
+   1443,
+   "s27"
+  ],
+  [
+   2300,
+   2406,
+   "s28"
+  ],
+  [
+   2408,
+   2479,
+   "s29"
+  ],
+  [
+   2524,
+   2543,
+   "s30"
+  ],
+  [
+   2551,
+   2591,
+   "s31"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "[docs]: https://learn.microsoft.com/azure \"Azure documentation\"\n[^1]: x",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: ÜGETTING ÜSTARTED ÜWITH ÜTHE ÜTRANSLATOR\ndescription: \"ÜLEARN ÜHOW ÜTO ÜDEPLOY ÜTHE ÜSERVICE: ÜSTEP ÜBY ÜSTEP\"\nauthor: Jane Doe\ntags: [azure, markdown]\n---\n\n# <a id=\"getting-started-with-mdtranslator\"></a>ÜGETTING ÜSTARTED ÜWITH `mdtranslator`\n\nÜTHIS ÜGUIDE ÜEXPLAINS ÜHOW ÜTO **ÜDEPLOY** ÜTHE ÜSERVICE ÜAND ÜHOW ÜTO *ÜCONFIGURE* ÜIT ÜFOR [Azure](https://azure.microsoft.com \"Azure ÜHOME ÜPAGE\").\n\nÜSEE ÜTHE ÜFILE test.jpeg, ÜTHE ÜFOLDER `docs/images/` ÜAND ./scripts/deploy.ps1 ÜBEFORE ÜYOU ÜCONTINUE.\n\n![ÜARCHITECTURE ÜDIAGRAM ÜOF ÜTHE ÜSOLUTION](images/architecture.png \"ÜHIGH ÜLEVEL ÜARCHITECTURE\")\n\nÜUSE ÜTHE [ÜREFERENCE ÜLINK][docs] ÜOR ÜVISIT <https://learn.microsoft.com> ÜFOR ÜDETAILS, ÜE.ÜG. www.example.com.\n\n> **ÜNOTE:** ÜVALUES ÜSUCH ÜAS `$HOME`, %APPDATA% ÜAND ${VAR_NAME} ÜARE ÜNEVER ÜTRANSLATED.\n\n## <a id=\"prerequisites\"></a>ÜPREREQUISITES\n\n- ÜAN Azure ÜSUBSCRIPTION ÜWITH ÜTHE `Contributor` ÜROLE\n- [x] Node.js 22 ÜOR ÜLATER\n- [ ] Docker ÜDESKTOP 4.30 ÜOR ÜLATER, ÜSEE README.md\n\n1. ÜCLONE ÜTHE ÜREPOSITORY.\n2. ÜRUN `npm install` ÜIN ÜTHE ÜPROJECT ÜFOLDER.\n3. ÜSTART ÜTHE ÜSERVER ÜWITH --port 8080 ÜAND ÜTHE -v ÜFLAG.\n\n| ÜSETTING | ÜDEFAULT | ÜDESCRIPTION |\n|:--------|:-------:|------------:|\n| `PORT` | 8080 | ÜPORT ÜTHE ÜHTTP ÜSERVER ÜLISTENS ÜON |\n| `MDT_REVIEW` | ÜTRUE | ÜENABLES ÜTHE ÜSECOND ÜREVIEW ÜPASS \\| ÜOPTIONAL |\n\nÜPRESS <kbd>Ctrl</kbd>+<kbd>C</kbd> ÜTO ÜSTOP ÜTHE ÜSERVER, ÜOR ÜREAD ÜTHE <strong>ÜIMPORTANT</strong> ÜNOTES ÜBELOW.\n\n<div align=\"center\">\n  <img src=\"images/logo.svg\" alt=\"ÜCOMPANY ÜLOGO\" width=\"120\">\n  <p>ÜTHIS ÜPARAGRAPH ÜIS ÜINSIDE ÜAN <em>ÜHTML ÜBLOCK</em> ÜAND ÜSHOULD ÜBE ÜTRANSLATED.</p>\n</div>\n\n<!-- This HTML comment stays untouched -->\n\n```typescript\n// Create the client for the translation service\nconst client = new TranslatorClient(endpoint); // inline comment\n/* Multi-line block\n   comment explaining the retry policy */\nconst url = \"https://example.com // not a comment\";\n```\n\n```python\ndef main():\n    # Read the configuration file first\n    cfg = load(\"config.yaml\")  # load settings\n    return cfg\n```\n\n```bash\n#!/usr/bin/env bash\n# Install the dependencies\nnpm ci # quiet install\necho \"# not a comment\"\n```\n\n```powershell\n<#\n  Deploys the infrastructure to the resource group.\n#>\nNew-AzResourceGroupDeployment -ResourceGroupName rg -TemplateFile main.bicep # deploy\n```\n\n```bicep\n// Storage account for the translation cache\nparam location string = resourceGroup().location\n```\n\n```json\n{ \"name\": \"no comments in json\" }\n```\n\nÜHERE ÜIS ÜA ÜFOOTNOTE ÜREFERENCE[^1] ÜAND ÜA ÜHARD ÜLINE ÜBREAK ÜAT ÜTHE ÜEND ÜOF ÜTHIS ÜLINE\\\nÜFOLLOWED ÜBY ÜTHE ÜNEXT ÜLINE.\n\nÜENTITIES ÜLIKE &copy; ÜAND &nbsp; ÜAND ÜESCAPED \\*ÜSTARS\\* ÜSTAY ÜAS ÜTHEY ÜARE.\n\n[docs]: https://learn.microsoft.com/azure \"Azure ÜDOCUMENTATION\"\n[^1]: ÜTHE ÜFOOTNOTE ÜTEXT ÜIS ÜTRANSLATED ÜAS ÜWELL.\n",
+ "reverted": [],
+ "anchors": [
+  "getting-started-with-mdtranslator",
+  "prerequisites"
+ ]
+}

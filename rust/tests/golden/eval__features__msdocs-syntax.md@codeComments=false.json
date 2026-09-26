@@ -1,0 +1,311 @@
+{
+ "file": "eval/features/msdocs-syntax.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Connect a storage account",
+   "original": "Connect a storage account",
+   "sourceText": "Connect a storage account",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"description\"",
+   "structure": "front matter \"description\"",
+   "masked": "Learn how to connect an existing storage account to Contoso Sync.",
+   "original": "Learn how to connect an existing storage account to Contoso Sync.",
+   "sourceText": "Learn how to connect an existing storage account to Contoso Sync.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Connect a storage account",
+   "original": "Connect a storage account",
+   "sourceText": "Connect a storage account",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Connect a storage account\"",
+   "masked": "<x1/><g2>prerequisites for all how-to guides</g2>]",
+   "original": "[!INCLUDE [prerequisites for all how-to guides](../includes/prereqs.md)]",
+   "sourceText": "prerequisites for all how-to guides]",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[!INCLUDE ",
+    "g2": "link: link to ../includes/prereqs.md"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:../includes/prereqs.md"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Connect a storage account\"",
+   "masked": "<x1/><g2>Diagram that shows the client, the sync service and the storage account.</g2><x3/>",
+   "original": ":::image type=\"content\" source=\"media/connect-storage/overview.png\" alt-text=\"Diagram that shows the client, the sync service and the storage account.\":::",
+   "sourceText": "Diagram that shows the client, the sync service and the storage account.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":::image type=\"content\" source=\"media/connect-storage/overview.png\" alt-text=\"",
+    "x3": "\":::",
+    "g2": "html: alt-text attribute value [quote \"]"
+   },
+   "tagGroups": [
+    "contiguous: x1 g2 x3",
+    "ordered: x1 g2 x3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Connect a storage account\"",
+   "masked": "Choose your platform",
+   "original": "Choose your platform",
+   "sourceText": "Choose your platform",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Connect a storage account > Choose your platform\"; list introduced by \"::: zone pivot=\"portal\"\"",
+   "masked": "Sign in to the portal.",
+   "original": "Sign in to the portal.",
+   "sourceText": "Sign in to the portal.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Connect a storage account > Choose your platform\"; list introduced by \"::: zone pivot=\"portal\"\"",
+   "masked": "Select <g1>Storage</g1> &gt; <g2>Connect</g2>.",
+   "original": "Select **Storage** > **Connect**.",
+   "sourceText": "Select Storage > Connect.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Connect a storage account > Choose your platform\"; list introduced by \"::: zone pivot=\"portal\"\"",
+   "masked": "Enter the account name and select <g1>Save</g1>.",
+   "original": "Enter the account name and select **Save**.",
+   "sourceText": "Enter the account name and select Save.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Connect a storage account > Choose your platform\"",
+   "masked": "Run the following command:",
+   "original": "Run the following command:",
+   "sourceText": "Run the following command:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph in a blockquote",
+   "structure": "section \"Connect a storage account > Choose your platform\"",
+   "masked": "<x1/> &gt; <g2>Configure retention</g2>",
+   "original": "[!div class=\"nextstepaction\"]\n> [Configure retention](retention.md)",
+   "sourceText": " > Configure retention",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[!div class=\"nextstepaction\"]",
+    "g2": "link: link to retention.md"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 40,
+    "firstColumn": 2,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:retention.md"
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   36,
+   "s1"
+  ],
+  [
+   50,
+   115,
+   "s2"
+  ],
+  [
+   226,
+   251,
+   "s3"
+  ],
+  [
+   253,
+   325,
+   "s4"
+  ],
+  [
+   327,
+   481,
+   "s5"
+  ],
+  [
+   486,
+   506,
+   "s6"
+  ],
+  [
+   536,
+   558,
+   "s7"
+  ],
+  [
+   562,
+   595,
+   "s8"
+  ],
+  [
+   599,
+   642,
+   "s9"
+  ],
+  [
+   680,
+   706,
+   "s10"
+  ],
+  [
+   801,
+   868,
+   "s11"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: ÜCONNECT ÜA ÜSTORAGE ÜACCOUNT\ndescription: ÜLEARN ÜHOW ÜTO ÜCONNECT ÜAN ÜEXISTING ÜSTORAGE ÜACCOUNT ÜTO ÜCONTOSO ÜSYNC.\nms.date: 08/14/2026\nms.topic: how-to\nauthor: contoso-docs\nms.author: docsteam\nms.service: contoso-sync\n---\n\n# <a id=\"connect-a-storage-account\"></a>ÜCONNECT ÜA ÜSTORAGE ÜACCOUNT\n\n[!INCLUDE [ÜPREREQUISITES ÜFOR ÜALL ÜHOW-ÜTO ÜGUIDES](../includes/prereqs.md)]\n\n:::image type=\"content\" source=\"media/connect-storage/overview.png\" alt-text=\"ÜDIAGRAM ÜTHAT ÜSHOWS ÜTHE ÜCLIENT, ÜTHE ÜSYNC ÜSERVICE ÜAND ÜTHE ÜSTORAGE ÜACCOUNT.\":::\n\n## <a id=\"choose-your-platform\"></a>ÜCHOOSE ÜYOUR ÜPLATFORM\n\n::: zone pivot=\"portal\"\n\n1. ÜSIGN ÜIN ÜTO ÜTHE ÜPORTAL.\n2. ÜSELECT **ÜSTORAGE** > **ÜCONNECT**.\n3. ÜENTER ÜTHE ÜACCOUNT ÜNAME ÜAND ÜSELECT **ÜSAVE**.\n\n::: zone-end\n\n::: zone pivot=\"cli\"\n\nÜRUN ÜTHE ÜFOLLOWING ÜCOMMAND:\n\n```azurecli\nctsync storage connect --account mystorage --container sync\n```\n\n::: zone-end\n\n> [!div class=\"nextstepaction\"] >\n[ÜCONFIGURE ÜRETENTION](retention.md)\n\n[!VIDEO https://learn.example/embed/connect-storage]\n",
+ "reverted": [],
+ "anchors": [
+  "connect-a-storage-account",
+  "choose-your-platform"
+ ]
+}

@@ -1,0 +1,209 @@
+{
+ "file": "eval/features/math-real.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "How the scheduler picks a server",
+   "original": "How the scheduler picks a server",
+   "sourceText": "How the scheduler picks a server",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"How the scheduler picks a server\"",
+   "masked": "The scheduler estimates the load of each server <x1/> as a weighted sum of its CPU usage <x2/> and its queue length <x3/>:",
+   "original": "The scheduler estimates the load of each server $s$ as a weighted sum of its CPU usage $c_s$ and its queue length $q_s$:",
+   "sourceText": "The scheduler estimates the load of each server  as a weighted sum of its CPU usage  and its queue length :",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$s$",
+    "x2": "$c_s$",
+    "x3": "$q_s$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"How the scheduler picks a server\"",
+   "masked": "The weight <x1/> is between $0$ and $1$. With <x2/>, CPU usage dominates.",
+   "original": "The weight $\\alpha$ is between $0$ and $1$. With $\\alpha = 0.7$, CPU usage dominates.",
+   "sourceText": "The weight  is between $0$ and $1$. With , CPU usage dominates.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$\\alpha$",
+    "x2": "$\\alpha = 0.7$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"How the scheduler picks a server\"",
+   "masked": "A new job goes to the server with the smallest load, <x1/>. If two servers have the same load, the one with the lower index <x2/> wins.",
+   "original": "A new job goes to the server with the smallest load, $\\arg\\min_s L_s$. If two servers have the same load, the one with the lower index $i$ wins.",
+   "sourceText": "A new job goes to the server with the smallest load, . If two servers have the same load, the one with the lower index  wins.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$\\arg\\min_s L_s$",
+    "x2": "$i$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"How the scheduler picks a server\"",
+   "masked": "The expected waiting time grows with <x1/>, where <x2/> is the utilization. For <x3/> the waiting time is unbounded.",
+   "original": "The expected waiting time grows with $\\frac{1}{1 - \\rho}$, where $\\rho$ is the utilization. For $\\rho \\to 1$ the waiting time is unbounded.",
+   "sourceText": "The expected waiting time grows with , where  is the utilization. For  the waiting time is unbounded.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$\\frac{1}{1 - \\rho}$",
+    "x2": "$\\rho$",
+    "x3": "$\\rho \\to 1$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"How the scheduler picks a server\"",
+   "masked": "Inline display math also works: <x1/> is the classic example.",
+   "original": "Inline display math also works: $$E = mc^2$$ is the classic example.",
+   "sourceText": "Inline display math also works:  is the classic example.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$$E = mc^2$$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:E = mc^2"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"How the scheduler picks a server\"",
+   "masked": "The variance is <x1/>.",
+   "original": "The variance is $\\sigma^2 = \\frac{1}{n}\\sum_{i=1}^{n}(x_i - \\mu)^2$.",
+   "sourceText": "The variance is .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$\\sigma^2 = \\frac{1}{n}\\sum_{i=1}^{n}(x_i - \\mu)^2$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   34,
+   "s1"
+  ],
+  [
+   36,
+   156,
+   "s2"
+  ],
+  [
+   230,
+   315,
+   "s3"
+  ],
+  [
+   317,
+   461,
+   "s4"
+  ],
+  [
+   463,
+   602,
+   "s5"
+  ],
+  [
+   604,
+   672,
+   "s6"
+  ],
+  [
+   674,
+   742,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"how-the-scheduler-picks-a-server\"></a>ÜHOW ÜTHE ÜSCHEDULER ÜPICKS ÜA ÜSERVER\n\nÜTHE ÜSCHEDULER ÜESTIMATES ÜTHE ÜLOAD ÜOF ÜEACH ÜSERVER $s$ ÜAS ÜA ÜWEIGHTED ÜSUM ÜOF ÜITS ÜCPU ÜUSAGE $c_s$ ÜAND ÜITS ÜQUEUE ÜLENGTH $q_s$:\n\n$$\nL_s = \\alpha \\cdot c_s + (1 - \\alpha) \\cdot \\frac{q_s}{q_{\\max}}\n$$\n\nÜTHE ÜWEIGHT $\\alpha$ ÜIS ÜBETWEEN $0$ ÜAND $1$. ÜWITH $\\alpha = 0.7$, ÜCPU ÜUSAGE ÜDOMINATES.\n\nÜA ÜNEW ÜJOB ÜGOES ÜTO ÜTHE ÜSERVER ÜWITH ÜTHE ÜSMALLEST ÜLOAD, $\\arg\\min_s L_s$. ÜIF ÜTWO ÜSERVERS ÜHAVE ÜTHE ÜSAME ÜLOAD, ÜTHE ÜONE ÜWITH ÜTHE ÜLOWER ÜINDEX $i$ ÜWINS.\n\nÜTHE ÜEXPECTED ÜWAITING ÜTIME ÜGROWS ÜWITH $\\frac{1}{1 - \\rho}$, ÜWHERE $\\rho$ ÜIS ÜTHE ÜUTILIZATION. ÜFOR $\\rho \\to 1$ ÜTHE ÜWAITING ÜTIME ÜIS ÜUNBOUNDED.\n\nÜINLINE ÜDISPLAY ÜMATH ÜALSO ÜWORKS: $$E = mc^2$$ ÜIS ÜTHE ÜCLASSIC ÜEXAMPLE.\n\nÜTHE ÜVARIANCE ÜIS $\\sigma^2 = \\frac{1}{n}\\sum_{i=1}^{n}(x_i - \\mu)^2$.\n",
+ "reverted": [],
+ "anchors": [
+  "how-the-scheduler-picks-a-server"
+ ]
+}

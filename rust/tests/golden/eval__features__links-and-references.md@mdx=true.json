@@ -1,0 +1,12 @@
+{
+ "file": "eval/features/links-and-references.md",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "error": "extract: Unexpected character `/` (U+002F) before local name, expected a character that can start a name, such as a letter, `$`, or `_` (note: to create a link in MDX, use `[text](url)`)"
+}

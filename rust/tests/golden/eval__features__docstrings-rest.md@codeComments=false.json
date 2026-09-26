@@ -1,0 +1,49 @@
+{
+ "file": "eval/features/docstrings-rest.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: sharing",
+   "original": "Python SDK reference: sharing",
+   "sourceText": " SDK reference: sharing",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   31,
+   "s1"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-sharing\"></a>Python ÜSDK ÜREFERENCE: ÜSHARING\n\n```python\ndef share(path, recipients, role=\"viewer\", expires=None):\n    \"\"\"Share a file or folder with other people.\n\n    Recipients get an e-mail with a link. External recipients must verify\n    their address before they can open the link.\n\n    :param path: Path of the file or folder, relative to the sync root.\n    :type path: str\n    :param recipients: E-mail addresses of the people to share with.\n    :type recipients: list[str]\n    :param role: Either ``\"viewer\"`` or ``\"editor\"``.\n    :param expires: When the link stops working. ``None`` means never.\n    :returns: The created sharing link.\n    :rtype: ShareLink\n    :raises PermissionError: If you aren't the owner of the item.\n\n    .. note:: Links to folders include all subfolders.\n\n    .. warning::\n       Editors can delete files for everyone.\n\n    .. versionadded:: 3.1\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-sharing"
+ ]
+}

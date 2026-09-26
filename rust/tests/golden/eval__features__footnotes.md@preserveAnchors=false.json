@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/footnotes.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜPERFORMANCE ÜRESULTS\n\nÜSYNC ÜTHROUGHPUT ÜIMPROVED ÜBY 40%[^1] ÜCOMPARED ÜWITH ÜTHE ÜPREVIOUS ÜRELEASE. ÜTHE ÜTEST ÜUSED ÜTHE ÜSTANDARD ÜBENCHMARK[^bench] ÜON ÜTHREE ÜMACHINES.\n\nÜLATENCY ÜSTAYED ÜBELOW 200 ÜMS ÜFOR 99% ÜOF ÜREQUESTS[^p99].\n\n## ÜMETHOD\n\nÜEACH ÜRUN ÜSTARTED ÜWITH ÜAN ÜEMPTY ÜCACHE.[^cache] ÜWE ÜREPEATED ÜEVERY ÜMEASUREMENT ÜFIVE ÜTIMES ÜAND ÜREPORT ÜTHE ÜMEDIAN.\n\n[^1]: ÜMEASURED ÜON ÜA 1 ÜGBIT/ÜS ÜCONNECTION ÜWITH 10,000 ÜFILES ÜOF 1 ÜMB ÜEACH.\n[^bench]: ÜTHE ÜBENCHMARK ÜIS ÜDESCRIBED ÜIN `bench/README.md`. ÜIT ÜCREATES ÜFILES ÜWITH ÜRANDOM ÜCONTENT.\n[^p99]: ÜTHE 99ÜTH ÜPERCENTILE, ÜMEASURED ÜAT ÜTHE ÜGATEWAY.\n[^cache]: ÜTO ÜCLEAR ÜTHE ÜCACHE, ÜRUN `ctsync reset --cache-only`. ÜA ÜSECOND ÜPARAGRAPH ÜIN ÜTHE\n    ÜFOOTNOTE ÜEXPLAINS ÜWHY ÜA ÜCOLD ÜCACHE ÜMATTERS: ÜTHE ÜFIRST ÜSCAN ÜREADS ÜEVERY ÜFILE.\n",
+ "reverted": [],
+ "anchors": []
+}

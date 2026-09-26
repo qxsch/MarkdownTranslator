@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/getting-started.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜGETTING ÜSTARTED ÜWITH ÜCONTOSO ÜSYNC\n\nÜCONTOSO ÜSYNC ÜKEEPS ÜA ÜLOCAL ÜFOLDER ÜAND ÜA ÜCLOUD ÜSHARE ÜIN ÜSYNC. ÜTHIS ÜGUIDE ÜTAKES ÜABOUT ÜTEN ÜMINUTES.\n\n## ÜPREREQUISITES\n\nÜBEFORE ÜYOU ÜBEGIN, ÜMAKE ÜSURE ÜTHAT ÜYOU ÜHAVE:\n\n- ÜA ÜCONTOSO ÜACCOUNT ÜWITH ÜTHE **ÜCONTRIBUTOR** ÜROLE\n- Windows 11 ÜOR macOS 14 ÜOR ÜLATER\n- ÜAT ÜLEAST 2 ÜGB ÜOF ÜFREE ÜDISK ÜSPACE\n\n## ÜINSTALL ÜTHE ÜCLIENT\n\n1. ÜDOWNLOAD `ContosoSync-Setup.exe` ÜFROM ÜTHE [ÜDOWNLOAD ÜPAGE](https://contoso.example/download).\n2. ÜRUN ÜTHE ÜINSTALLER ÜAND ÜSELECT **ÜNEXT**.\n3. ÜWHEN ÜYOU'ÜRE ÜASKED ÜFOR ÜA ÜFOLDER, ÜKEEP ÜTHE ÜDEFAULT `C:\\Users\\<you>\\ContosoSync` ÜOR ÜSELECT **ÜBROWSE**.\n4. ÜSELECT **ÜINSTALL**, ÜTHEN **ÜFINISH**.\n\n> [!TIP]\n> ÜYOU ÜCAN ÜINSTALL ÜTHE ÜCLIENT ÜSILENTLY ÜWITH `ContosoSync-Setup.exe /quiet`.\n\n## ÜSIGN ÜIN\n\nÜOPEN ÜTHE ÜAPP ÜFROM ÜTHE ÜSTART ÜMENU. ÜENTER ÜYOUR ÜWORK ÜE-ÜMAIL ÜADDRESS ÜAND ÜSELECT **ÜSIGN ÜIN**. ÜIF ÜYOUR ÜORGANIZATION ÜUSES ÜMULTIFACTOR ÜAUTHENTICATION, ÜAPPROVE ÜTHE ÜREQUEST ÜON ÜYOUR ÜPHONE.\n\n## ÜCHOOSE ÜWHAT ÜTO ÜSYNC\n\n| ÜOPTION | ÜDEFAULT | ÜDESCRIPTION |\n|---|---|---|\n| ÜFILES ÜON ÜDEMAND | ÜON | ÜFILES ÜARE ÜDOWNLOADED ÜONLY ÜWHEN ÜYOU ÜOPEN ÜTHEM |\n| ÜSYNC ÜON ÜMETERED ÜNETWORKS | ÜOFF | ÜPAUSES ÜSYNC ÜON ÜMOBILE ÜHOTSPOTS |\n| ÜKEEP | 30 ÜDAYS | ÜHOW ÜLONG ÜDELETED ÜFILES ÜSTAY ÜIN ÜTHE ÜRECYCLE ÜBIN |\n\n## ÜNEXT ÜSTEPS\n\n- [ÜSHARE ÜA ÜFOLDER](#choose-what-to-sync) ÜWITH ÜYOUR ÜTEAM\n- ÜREAD ÜTHE [ÜTROUBLESHOOTING ÜGUIDE](troubleshooting.md)\n",
+ "reverted": [],
+ "anchors": []
+}

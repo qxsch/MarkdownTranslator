@@ -21,6 +21,7 @@ It runs as a Docker container with a small REST API and uses Azure services:
 - [Authentication and managed identity](#authentication-and-managed-identity)
 - [Test against the container](#test-against-the-container)
 - [REST API](#rest-api)
+- [Command-line binary (Rust)](#command-line-binary-rust)
 - [Configuration reference](#configuration-reference)
 - [Evaluation and tests](#evaluation-and-tests)
 - [Project layout](#project-layout)
@@ -379,6 +380,23 @@ $r.translations.fr.'main.md'
 $r.report | Format-Table file, language, segments, reviewEdits
 ```
 
+## Command-line binary (Rust)
+
+[`rust/`](rust/) contains the translator as a single self-contained executable, without Node.js or a container: statically linked for Linux x64 (musl) and Windows x64. It is a port of `src/` that produces byte-identical extractions and assembled documents (golden files checked in CI). It uses the same prompts, cache, Foundry and Translator calls, and `MDT_*` switches. It does not include the REST API.
+
+```bash
+cargo build --release --manifest-path rust/Cargo.toml       # or download the CI artifact
+mdtranslate -sourceFile guide.md -targetFile guide.de.md -lang de
+cat guide.md | mdtranslate -sourceFile - -targetFile - -lang fr -no-review > guide.fr.md
+mdtranslate -sourceFile guide.md -targetFile 'out/{lang}/guide.md' -lang de,fr,it -structuralContext
+```
+
+- `-sourceFile` and `-targetFile` accept `-` for stdin and stdout. Stdout carries only the translation (and `-help`); progress and errors go to stderr.
+- Every feature switch works as an option (`-review`, `-no-review`, `-review=false`) or as the environment variable listed in [Feature switches](#feature-switches). The command line wins.
+- Exit codes: `0` translated, `1` usage, configuration or input error, `2` failed (the source was written unchanged), `3` partially translated.
+
+All options, authentication, the static builds and the parity tooling are described in [rust/README.md](rust/README.md).
+
 ## Configuration reference
 
 | Variable | Default | Description |
@@ -423,11 +441,12 @@ Glossary: `doNotTranslate` terms are always protected; `terms` maps source terms
 
 ## Evaluation and tests
 
-Everything in this section runs on your machine. The evaluator imports the translator from `src/` and calls your Foundry resource directly, so no container is needed, and the evaluator is never part of the container image. The latest evaluation (German and French) is committed in [evaluation/README.md](evaluation/README.md) with charts, measurement tables, the translated corpus and the regression history.
+Everything in this section runs on your machine; no container is needed, and the evaluator is never part of the container image. The implementation under test is the Rust binary ([rust/](rust/)): the evaluator runs it for every translation, derived variant, extraction fingerprint and document analysis, and the binary calls your Foundry resource directly. The deterministic checks and the judges stay in TypeScript. The latest evaluation (German and French) is committed in [evaluation/README.md](evaluation/README.md) with charts, measurement tables, the translated corpus and the regression history.
 
 | Layer | Command | Needs | What it proves |
 |---|---|---|---|
 | Unit and fixture tests | `npm test` | nothing | Byte identity, masking, dialects, front matter, code comments and docstrings, REST switch parsing, evaluation statistics |
+| Rust parity | `cargo test --manifest-path rust/Cargo.toml` | Rust toolchain | The binary reproduces the TypeScript extraction and assembly byte for byte (golden files), stdout and exit-code contract |
 | Corpus soundness | `npm test` ([test/corpus.test.ts](test/corpus.test.ts)) | nothing | Every corpus document round-trips byte-identically, a pseudo translation passes validation and the structure check, every expectation exists in its source and is extracted for translation |
 | Feature evaluation | `npm run eval:features` | Foundry, optionally GitHub Copilot | What each feature switch brings per language: judged quality, deterministic fidelity checks, cost, regression against the previous run |
 | Engine comparison | `npm run eval` | Foundry | GPT vs Azure Translator, review pass, alternative model on [eval/corpus/](eval/corpus/) |
@@ -437,6 +456,7 @@ Everything in this section runs on your machine. The evaluator imports the trans
 ```powershell
 npm install
 npm install --prefix eval          # evaluator-only dependencies (GitHub Copilot SDK); skip if you use Foundry judges only
+cargo build --release --manifest-path rust/Cargo.toml   # the binary under test (Rust from https://rustup.rs); rebuild after changes
 Connect-AzAccount -Tenant <tenant-id>
 ```
 
@@ -472,6 +492,8 @@ Remove-Item Env:EVAL_*                                            # back to the 
 | `EVAL_COPILOT_CONCURRENCY` | `4` | Parallel Copilot judge sessions |
 | `EVAL_COPILOT_TIMEOUT_MS` | `600000` | Timeout per Copilot judgement |
 | `EVAL_TRANSLATOR_FAMILY` | `openai` | Model family of the translator; judges of another family form the "independent judges" view |
+| `MDT_RUST_BIN` | `rust/target/release/mdtranslate` | The binary under test, e.g. a CI artifact |
+| `EVAL_PARALLEL` | `8` | Binary processes running at once; `MDT_MAX_CONCURRENCY` (16) is split between them |
 | `MDT_REQUEST_TIMEOUT_MS` | `600000` | Timeout per Foundry call; 240000 recovers faster from stalled calls in long runs |
 
 A full run (66 documents, 2 languages, 9 switches, 4 judges) takes roughly one to two hours.
@@ -509,6 +531,8 @@ Put `.md` or `.mdx` files into [eval/features/](eval/features/) and add an entry
 ```powershell
 npm test                                              # all offline tests
 npm run typecheck
+cargo test --manifest-path rust/Cargo.toml            # Rust unit tests, CLI contract and golden files
+npx tsx rust/tools/golden.ts                          # regenerate the golden files after changing extraction or assembly in src/
 npm run dev                                           # API on :8080 with the local .env
 npx tsx scripts/translate.ts de,fr path\to\file.md    # translate files to .\out
 ```
@@ -523,6 +547,7 @@ npx tsx scripts/translate.ts de,fr path\to\file.md    # translate files to .\out
 | `src/translate/` | Prompts, engine (batching, retries, fallback, review), validation, cache |
 | `src/azure/` | Auth (key, token, managed identity), Foundry chat client, Translator client |
 | `src/pipeline.ts`, `src/server.ts` | Orchestration and REST API |
+| `rust/` | Static command-line binary (port of `src/`), golden files, parity tools, vendored markdown-rs |
 | `config/` | Languages and glossary |
 | `infra/` | Bicep and parameters |
 | `test/` | Unit tests and fixtures |

@@ -1,0 +1,238 @@
+{
+ "file": "eval/features/code-comments-csharp.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Using the <x1/> SDK",
+   "original": "Using the .NET SDK",
+   "sourceText": "Using the  SDK",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ".NET"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "csharp source code comment",
+   "structure": "section \"Using the .NET SDK\"; csharp code block",
+   "masked": "Uploads the nightly export and reports the result.",
+   "original": "Uploads the nightly export and reports the result.",
+   "sourceText": "Uploads the nightly export and reports the result.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "csharp source code comment",
+   "structure": "section \"Using the .NET SDK\"; csharp code block",
+   "masked": "<x1/>Full path of the export file.<x2/>",
+   "original": "<param name=\"path\">Full path of the export file.</param>",
+   "sourceText": "Full path of the export file.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "<param name=\"path\">",
+    "x2": "</param>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "csharp source code comment",
+   "structure": "section \"Using the .NET SDK\"; csharp code block",
+   "masked": "<x1/><x2/> when the upload succeeded; otherwise <x3/>.<x4/>",
+   "original": "<returns><c>true</c> when the upload succeeded; otherwise <c>false</c>.</returns>",
+   "sourceText": " when the upload succeeded; otherwise .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "<returns>",
+    "x2": "<c>true</c>",
+    "x3": "<c>false</c>",
+    "x4": "</returns>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "csharp source code comment",
+   "structure": "section \"Using the .NET SDK\"; csharp code block",
+   "masked": "One client per application is enough",
+   "original": "One client per application is enough",
+   "sourceText": "One client per application is enough",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "csharp source code comment",
+   "structure": "section \"Using the .NET SDK\"; csharp code block",
+   "masked": "Large exports are split into blocks automatically. The block size can be changed with <x1/>.",
+   "original": "Large exports are split into blocks automatically.\n       The block size can be changed with SyncClientOptions.",
+   "sourceText": "Large exports are split into blocks automatically. The block size can be changed with .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "SyncClientOptions"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 60,
+    "firstColumn": 7,
+    "prefix": "       ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "csharp source code comment",
+   "structure": "section \"Using the .NET SDK\"; csharp code block",
+   "masked": "false when the quota is exceeded",
+   "original": "false when the quota is exceeded",
+   "sourceText": "false when the quota is exceeded",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Using the .NET SDK\"",
+   "masked": "Configuration in <x1/>:",
+   "original": "Configuration in `appsettings.json`:",
+   "sourceText": "Configuration in :",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`appsettings.json`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:appsettings.json"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   20,
+   "s1"
+  ],
+  [
+   71,
+   121,
+   "s2"
+  ],
+  [
+   141,
+   197,
+   "s3"
+  ],
+  [
+   202,
+   283,
+   "s4"
+  ],
+  [
+   355,
+   391,
+   "s5"
+  ],
+  [
+   474,
+   585,
+   "s6"
+  ],
+  [
+   671,
+   703,
+   "s7"
+  ],
+  [
+   711,
+   747,
+   "s8"
+  ]
+ ],
+ "notes": [
+  "code block \"json\" left untouched (no comment parser for this language)"
+ ],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"using-the-net-sdk\"></a>ÜUSING ÜTHE .NET ÜSDK\n\n```csharp\nusing Contoso.Sync;\n\n/// <summary>\n/// ÜUPLOADS ÜTHE ÜNIGHTLY ÜEXPORT ÜAND ÜREPORTS ÜTHE ÜRESULT.\n/// </summary>\n/// <param name=\"path\">ÜFULL ÜPATH ÜOF ÜTHE ÜEXPORT ÜFILE.</param>\n/// <returns><c>true</c> ÜWHEN ÜTHE ÜUPLOAD ÜSUCCEEDED; ÜOTHERWISE <c>false</c>.</returns>\npublic static async Task<bool> UploadExportAsync(string path)\n{\n    // ÜONE ÜCLIENT ÜPER ÜAPPLICATION ÜIS ÜENOUGH\n    var client = new SyncClient(new Uri(\"https://sync.contoso.example\"));\n\n    /* ÜLARGE ÜEXPORTS ÜARE ÜSPLIT ÜINTO ÜBLOCKS\n       ÜAUTOMATICALLY. ÜTHE ÜBLOCK ÜSIZE ÜCAN ÜBE ÜCHANGED\n       ÜWITH SyncClientOptions. */\n    var result = await client.UploadAsync(path);\n\n    return result.Succeeded; // ÜFALSE ÜWHEN ÜTHE ÜQUOTA ÜIS ÜEXCEEDED\n}\n```\n\nÜCONFIGURATION ÜIN `appsettings.json`:\n\n```json\n{\n  \"Sync\": { \"Endpoint\": \"https://sync.contoso.example\", \"Retries\": 3 }\n}\n```\n",
+ "reverted": [],
+ "anchors": [
+  "using-the-net-sdk"
+ ]
+}

@@ -1,0 +1,269 @@
+{
+ "file": "eval/features/frontmatter-informal.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": false,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Your first week with Contoso Sync",
+   "original": "Your first week with Contoso Sync",
+   "sourceText": "Your first week with Contoso Sync",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Your first week with Contoso Sync\"",
+   "masked": "Welcome aboard! This page shows you everything you need to get going.",
+   "original": "Welcome aboard! This page shows you everything you need to get going.",
+   "sourceText": "Welcome aboard! This page shows you everything you need to get going.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Your first week with Contoso Sync\"",
+   "masked": "Day 1: Install the app",
+   "original": "Day 1: Install the app",
+   "sourceText": "Day 1: Install the app",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Your first week with Contoso Sync > Day 1: Install the app\"",
+   "masked": "Grab the installer from the intranet and run it. Sign in with your new work account, and you're done.",
+   "original": "Grab the installer from the intranet and run it. Sign in with your new work account, and you're done.",
+   "sourceText": "Grab the installer from the intranet and run it. Sign in with your new work account, and you're done.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Your first week with Contoso Sync\"",
+   "masked": "Day 2: Find your team folder",
+   "original": "Day 2: Find your team folder",
+   "sourceText": "Day 2: Find your team folder",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Your first week with Contoso Sync > Day 2: Find your team folder\"",
+   "masked": "Your manager has already shared the team folder with you. Look for it under <g1>Shared with me</g1> and pin it so it shows up in File Explorer.",
+   "original": "Your manager has already shared the team folder with you. Look for it under **Shared with me** and pin it so it shows up in File Explorer.",
+   "sourceText": "Your manager has already shared the team folder with you. Look for it under Shared with me and pin it so it shows up in File Explorer.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s7",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Your first week with Contoso Sync\"",
+   "masked": "Day 3: Try it out",
+   "original": "Day 3: Try it out",
+   "sourceText": "Day 3: Try it out",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Your first week with Contoso Sync > Day 3: Try it out\"",
+   "masked": "Drop a file into the folder and watch it sync. Ask a colleague to open it. Pretty neat, huh?",
+   "original": "Drop a file into the folder and watch it sync. Ask a colleague to open it. Pretty neat, huh?",
+   "sourceText": "Drop a file into the folder and watch it sync. Ask a colleague to open it. Pretty neat, huh?",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Your first week with Contoso Sync\"",
+   "masked": "Stuck?",
+   "original": "Stuck?",
+   "sourceText": "Stuck?",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Your first week with Contoso Sync > Stuck?\"",
+   "masked": "Ping the help desk in the #it-help channel. They're quick.",
+   "original": "Ping the help desk in the #it-help channel. They're quick.",
+   "sourceText": "Ping the help desk in the #it-help channel. They're quick.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   132,
+   165,
+   "s1"
+  ],
+  [
+   167,
+   236,
+   "s2"
+  ],
+  [
+   241,
+   263,
+   "s3"
+  ],
+  [
+   265,
+   366,
+   "s4"
+  ],
+  [
+   371,
+   399,
+   "s5"
+  ],
+  [
+   401,
+   539,
+   "s6"
+  ],
+  [
+   544,
+   561,
+   "s7"
+  ],
+  [
+   563,
+   655,
+   "s8"
+  ],
+  [
+   660,
+   666,
+   "s9"
+  ],
+  [
+   668,
+   726,
+   "s10"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": "informal",
+ "output": "---\ntitle: Your first week with Contoso Sync\ndescription: A quick tour for new team members.\nformality: informal\nauthor: Kim\n---\n\n# <a id=\"your-first-week-with-contoso-sync\"></a>ÜYOUR ÜFIRST ÜWEEK ÜWITH ÜCONTOSO ÜSYNC\n\nÜWELCOME ÜABOARD! ÜTHIS ÜPAGE ÜSHOWS ÜYOU ÜEVERYTHING ÜYOU ÜNEED ÜTO ÜGET ÜGOING.\n\n## <a id=\"day-1-install-the-app\"></a>ÜDAY 1: ÜINSTALL ÜTHE ÜAPP\n\nÜGRAB ÜTHE ÜINSTALLER ÜFROM ÜTHE ÜINTRANET ÜAND ÜRUN ÜIT. ÜSIGN ÜIN ÜWITH ÜYOUR ÜNEW ÜWORK ÜACCOUNT, ÜAND ÜYOU'ÜRE ÜDONE.\n\n## <a id=\"day-2-find-your-team-folder\"></a>ÜDAY 2: ÜFIND ÜYOUR ÜTEAM ÜFOLDER\n\nÜYOUR ÜMANAGER ÜHAS ÜALREADY ÜSHARED ÜTHE ÜTEAM ÜFOLDER ÜWITH ÜYOU. ÜLOOK ÜFOR ÜIT ÜUNDER **ÜSHARED ÜWITH ÜME** ÜAND ÜPIN ÜIT ÜSO ÜIT ÜSHOWS ÜUP ÜIN ÜFILE ÜEXPLORER.\n\n## <a id=\"day-3-try-it-out\"></a>ÜDAY 3: ÜTRY ÜIT ÜOUT\n\nÜDROP ÜA ÜFILE ÜINTO ÜTHE ÜFOLDER ÜAND ÜWATCH ÜIT ÜSYNC. ÜASK ÜA ÜCOLLEAGUE ÜTO ÜOPEN ÜIT. ÜPRETTY ÜNEAT, ÜHUH?\n\n## <a id=\"stuck\"></a>ÜSTUCK?\n\nÜPING ÜTHE ÜHELP ÜDESK ÜIN ÜTHE #ÜIT-ÜHELP ÜCHANNEL. ÜTHEY'ÜRE ÜQUICK.\n",
+ "reverted": [],
+ "anchors": [
+  "your-first-week-with-contoso-sync",
+  "day-1-install-the-app",
+  "day-2-find-your-team-folder",
+  "day-3-try-it-out",
+  "stuck"
+ ]
+}

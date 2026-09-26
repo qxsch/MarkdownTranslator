@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/tables-complex.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜPLAN ÜCOMPARISON\n\n| ÜFEATURE | ÜFREE | ÜTEAM | ÜENTERPRISE |\n|:---|:---:|:---:|---:|\n| ÜSTORAGE ÜPER ÜUSER | 5 ÜGB | 1 ÜTB | ÜUNLIMITED |\n| **ÜVERSION ÜHISTORY** | 30 ÜDAYS | 180 ÜDAYS | ÜCUSTOM |\n| ÜADMIN ÜCENTER | ✗ | ✓ | ✓ |\n| [ÜAUDIT ÜLOG](#audit-log) | ✗ | 90 ÜDAYS | 10 ÜYEARS |\n| ÜAPI ÜACCESS (`/v2/*`) | ÜREAD ÜONLY | ÜREAD ÜAND ÜWRITE | ÜREAD ÜAND ÜWRITE |\n| ÜSUPPORT | ÜCOMMUNITY ÜFORUM | ÜE-ÜMAIL, ÜNEXT ÜBUSINESS ÜDAY | ÜPHONE, *24/7*, ÜWITH ÜA ÜNAMED ÜCONTACT |\n\n## ÜAUDIT ÜLOG\n\n| ÜEVENT | ÜLOGGED ÜFIELDS | ÜEXAMPLE |\n|---|---|---|\n| ÜFILE ÜSHARED | ÜUSER, ÜFILE, ÜRECIPIENT | `alice@contoso.example` ÜSHARED `plan.docx` |\n| ÜLINK ÜCREATED | ÜUSER, ÜFILE, ÜLINK ÜTYPE | ÜANONYMOUS ÜLINK, ÜEXPIRES ÜIN 7 ÜDAYS |\n| ÜSIGN-ÜIN ÜFAILED | ÜUSER, ÜIP ÜADDRESS, ÜREASON | ÜWRONG ÜPASSWORD<br>ÜACCOUNT ÜLOCKED |\n| ÜSETTING ÜCHANGED | ÜADMIN, ÜSETTING, ÜOLD ÜVALUE, ÜNEW ÜVALUE | `retention`: 30 → 90 |\n\nÜEMPTY ÜCELLS ÜAND ÜA ÜSINGLE-ÜCOLUMN ÜTABLE:\n\n| ÜNOTES |\n|---|\n| ÜTHE ÜENTERPRISE ÜPLAN ÜREQUIRES ÜA ÜYEARLY ÜCONTRACT. |\n| |\n| ÜPRICES ÜEXCLUDE ÜVAT. |\n",
+ "reverted": [],
+ "anchors": []
+}

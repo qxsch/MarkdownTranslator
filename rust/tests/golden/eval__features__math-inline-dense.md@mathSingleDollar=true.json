@@ -1,0 +1,505 @@
+{
+ "file": "eval/features/math-inline-dense.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": true,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Queueing model for uploads",
+   "original": "Queueing model for uploads",
+   "sourceText": "Queueing model for uploads",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Queueing model for uploads\"",
+   "masked": "Each upload worker <x1/> serves requests at rate <x2/>, and requests arrive at rate <x3/>. The utilization is <x4/>, which must stay below $1$ for the queue to be stable.",
+   "original": "Each upload worker $w$ serves requests at rate $\\mu$, and requests arrive at rate $\\lambda$. The utilization is $\\rho = \\lambda / \\mu$, which must stay below $1$ for the queue to be stable.",
+   "sourceText": "Each upload worker  serves requests at rate , and requests arrive at rate . The utilization is , which must stay below $1$ for the queue to be stable.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$w$",
+    "x2": "$\\mu$",
+    "x3": "$\\lambda$",
+    "x4": "$\\rho = \\lambda / \\mu$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:\\lambda\nmath:\\mu\nmath:\\rho = \\lambda / \\mu\nmath:w"
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Queueing model for uploads\"",
+   "masked": "Key formulas",
+   "original": "Key formulas",
+   "sourceText": "Key formulas",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Queueing model for uploads > Key formulas\"",
+   "masked": "Mean number of requests in the system: <x1/>",
+   "original": "Mean number of requests in the system: $L = \\frac{\\rho}{1 - \\rho}$",
+   "sourceText": "Mean number of requests in the system: ",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$L = \\frac{\\rho}{1 - \\rho}$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:L = \\frac{\\rho}{1 - \\rho}"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Queueing model for uploads > Key formulas\"",
+   "masked": "Mean time in the system: <x1/>",
+   "original": "Mean time in the system: $W = \\frac{1}{\\mu - \\lambda}$",
+   "sourceText": "Mean time in the system: ",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$W = \\frac{1}{\\mu - \\lambda}$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:W = \\frac{1}{\\mu - \\lambda}"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Queueing model for uploads > Key formulas\"",
+   "masked": "Probability that a request waits: <x1/> for <x2/> workers in the simplified model",
+   "original": "Probability that a request waits: $P_{wait} = \\rho^k$ for $k$ workers in the simplified model",
+   "sourceText": "Probability that a request waits:  for  workers in the simplified model",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$P_{wait} = \\rho^k$",
+    "x2": "$k$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:P_{wait} = \\rho^k\nmath:k"
+  },
+  {
+   "id": "s7",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table header; columns: \"Symbol\", \"Meaning\", \"Typical value\"",
+   "masked": "Symbol",
+   "original": "Symbol",
+   "sourceText": "Symbol",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table header; columns: \"Symbol\", \"Meaning\", \"Typical value\"",
+   "masked": "Meaning",
+   "original": "Meaning",
+   "sourceText": "Meaning",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table header; columns: \"Symbol\", \"Meaning\", \"Typical value\"",
+   "masked": "Typical value",
+   "original": "Typical value",
+   "sourceText": "Typical value",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table column \"Meaning\", row \"\\lambda\"",
+   "masked": "Arrival rate",
+   "original": "Arrival rate",
+   "sourceText": "Arrival rate",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table column \"Typical value\", row \"\\lambda\"",
+   "masked": "120 requests per second",
+   "original": "120 requests per second",
+   "sourceText": "120 requests per second",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table column \"Meaning\", row \"\\mu\"",
+   "masked": "Service rate per worker",
+   "original": "Service rate per worker",
+   "sourceText": "Service rate per worker",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s13",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table column \"Typical value\", row \"\\mu\"",
+   "masked": "40 requests per second",
+   "original": "40 requests per second",
+   "sourceText": "40 requests per second",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table column \"Meaning\", row \"k\"",
+   "masked": "Number of workers",
+   "original": "Number of workers",
+   "sourceText": "Number of workers",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s15",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Queueing model for uploads > Key formulas\"; table column \"Meaning\", row \"\\rho\"",
+   "masked": "Utilization",
+   "original": "Utilization",
+   "sourceText": "Utilization",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Queueing model for uploads > Key formulas\"",
+   "masked": "With <x1/> workers and the values above, <x2/>, so the queue is stable.",
+   "original": "With $k = 4$ workers and the values above, $\\rho = 120 / (4 \\cdot 40) = 0.75$, so the queue is stable.",
+   "sourceText": "With  workers and the values above, , so the queue is stable.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$k = 4$",
+    "x2": "$\\rho = 120 / (4 \\cdot 40) = 0.75$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:\\rho = 120 / (4 \\cdot 40) = 0.75\nmath:k = 4"
+  },
+  {
+   "id": "s17",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Queueing model for uploads\"",
+   "masked": "Tuning",
+   "original": "Tuning",
+   "sourceText": "Tuning",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s18",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Queueing model for uploads > Tuning\"",
+   "masked": "If the latency target is <x1/> ms, add workers until <x2/> requests per second. Doubling <x3/> halves <x4/> but increases the cost linearly.",
+   "original": "If the latency target is $W \\le 50$ ms, add workers until $\\mu_{total} - \\lambda \\ge 20$ requests per second. Doubling $k$ halves $\\rho$ but increases the cost linearly.",
+   "sourceText": "If the latency target is  ms, add workers until  requests per second. Doubling  halves  but increases the cost linearly.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$W \\le 50$",
+    "x2": "$\\mu_{total} - \\lambda \\ge 20$",
+    "x3": "$k$",
+    "x4": "$\\rho$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:W \\le 50\nmath:\\mu_{total} - \\lambda \\ge 20\nmath:\\rho\nmath:k"
+  },
+  {
+   "id": "s19",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Queueing model for uploads > Tuning\"",
+   "masked": "The variance of the service time, <x1/>, matters too: by the Pollaczek-Khinchine formula the waiting time grows with <x2/>, where <x3/> is the coefficient of variation.",
+   "original": "The variance of the service time, $\\sigma_s^2$, matters too: by the Pollaczek-Khinchine formula the waiting time grows with $1 + c_s^2$, where $c_s$ is the coefficient of variation.",
+   "sourceText": "The variance of the service time, , matters too: by the Pollaczek-Khinchine formula the waiting time grows with , where  is the coefficient of variation.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$\\sigma_s^2$",
+    "x2": "$1 + c_s^2$",
+    "x3": "$c_s$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:1 + c_s^2\nmath:\\sigma_s^2\nmath:c_s"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   28,
+   "s1"
+  ],
+  [
+   30,
+   219,
+   "s2"
+  ],
+  [
+   224,
+   236,
+   "s3"
+  ],
+  [
+   240,
+   306,
+   "s4"
+  ],
+  [
+   309,
+   363,
+   "s5"
+  ],
+  [
+   366,
+   459,
+   "s6"
+  ],
+  [
+   463,
+   469,
+   "s7"
+  ],
+  [
+   472,
+   479,
+   "s8"
+  ],
+  [
+   482,
+   495,
+   "s9"
+  ],
+  [
+   526,
+   538,
+   "s10"
+  ],
+  [
+   541,
+   564,
+   "s11"
+  ],
+  [
+   577,
+   600,
+   "s12"
+  ],
+  [
+   603,
+   625,
+   "s13"
+  ],
+  [
+   636,
+   653,
+   "s14"
+  ],
+  [
+   671,
+   682,
+   "s15"
+  ],
+  [
+   695,
+   797,
+   "s16"
+  ],
+  [
+   802,
+   808,
+   "s17"
+  ],
+  [
+   810,
+   979,
+   "s18"
+  ],
+  [
+   981,
+   1162,
+   "s19"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"queueing-model-for-uploads\"></a>ÜQUEUEING ÜMODEL ÜFOR ÜUPLOADS\n\nÜEACH ÜUPLOAD ÜWORKER $w$ ÜSERVES ÜREQUESTS ÜAT ÜRATE $\\mu$, ÜAND ÜREQUESTS ÜARRIVE ÜAT ÜRATE $\\lambda$. ÜTHE ÜUTILIZATION ÜIS $\\rho = \\lambda / \\mu$, ÜWHICH ÜMUST ÜSTAY ÜBELOW $1$ ÜFOR ÜTHE ÜQUEUE ÜTO ÜBE ÜSTABLE.\n\n## <a id=\"key-formulas\"></a>ÜKEY ÜFORMULAS\n\n- ÜMEAN ÜNUMBER ÜOF ÜREQUESTS ÜIN ÜTHE ÜSYSTEM: $L = \\frac{\\rho}{1 - \\rho}$\n- ÜMEAN ÜTIME ÜIN ÜTHE ÜSYSTEM: $W = \\frac{1}{\\mu - \\lambda}$\n- ÜPROBABILITY ÜTHAT ÜA ÜREQUEST ÜWAITS: $P_{wait} = \\rho^k$ ÜFOR $k$ ÜWORKERS ÜIN ÜTHE ÜSIMPLIFIED ÜMODEL\n\n| ÜSYMBOL | ÜMEANING | ÜTYPICAL ÜVALUE |\n|---|---|---|\n| $\\lambda$ | ÜARRIVAL ÜRATE | 120 ÜREQUESTS ÜPER ÜSECOND |\n| $\\mu$ | ÜSERVICE ÜRATE ÜPER ÜWORKER | 40 ÜREQUESTS ÜPER ÜSECOND |\n| $k$ | ÜNUMBER ÜOF ÜWORKERS | 4 |\n| $\\rho$ | ÜUTILIZATION | $0.75$ |\n\nÜWITH $k = 4$ ÜWORKERS ÜAND ÜTHE ÜVALUES ÜABOVE, $\\rho = 120 / (4 \\cdot 40) = 0.75$, ÜSO ÜTHE ÜQUEUE ÜIS ÜSTABLE.\n\n## <a id=\"tuning\"></a>ÜTUNING\n\nÜIF ÜTHE ÜLATENCY ÜTARGET ÜIS $W \\le 50$ ÜMS, ÜADD ÜWORKERS ÜUNTIL $\\mu_{total} - \\lambda \\ge 20$ ÜREQUESTS ÜPER ÜSECOND. ÜDOUBLING $k$ ÜHALVES $\\rho$ ÜBUT ÜINCREASES ÜTHE ÜCOST ÜLINEARLY.\n\nÜTHE ÜVARIANCE ÜOF ÜTHE ÜSERVICE ÜTIME, $\\sigma_s^2$, ÜMATTERS ÜTOO: ÜBY ÜTHE ÜPOLLACZEK-ÜKHINCHINE ÜFORMULA ÜTHE ÜWAITING ÜTIME ÜGROWS ÜWITH $1 + c_s^2$, ÜWHERE $c_s$ ÜIS ÜTHE ÜCOEFFICIENT ÜOF ÜVARIATION.\n",
+ "reverted": [],
+ "anchors": [
+  "queueing-model-for-uploads",
+  "key-formulas",
+  "tuning"
+ ]
+}

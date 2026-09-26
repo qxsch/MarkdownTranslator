@@ -1,0 +1,406 @@
+{
+ "file": "eval/features/docstrings-rest.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: sharing",
+   "original": "Python SDK reference: sharing",
+   "sourceText": " SDK reference: sharing",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "Share a file or folder with other people.",
+   "original": "Share a file or folder with other people.",
+   "sourceText": "Share a file or folder with other people.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "Recipients get an e-mail with a link. External recipients must verify their address before they can open the link.",
+   "original": "Recipients get an e-mail with a link. External recipients must verify\n    their address before they can open the link.",
+   "sourceText": "Recipients get an e-mail with a link. External recipients must verify their address before they can open the link.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 73,
+    "firstColumn": 4,
+    "prefix": "    ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>Path of the file or folder, relative to the sync root.",
+   "original": ":param path: Path of the file or folder, relative to the sync root.",
+   "sourceText": "Path of the file or folder, relative to the sync root.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":param path: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>str",
+   "original": ":type path: str",
+   "sourceText": "str",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":type path: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>E-mail addresses of the people to share with.",
+   "original": ":param recipients: E-mail addresses of the people to share with.",
+   "sourceText": "E-mail addresses of the people to share with.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":param recipients: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>list[str]",
+   "original": ":type recipients: list[str]",
+   "sourceText": "list[str]",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":type recipients: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>Either <x2/> or <x3/>.",
+   "original": ":param role: Either ``\"viewer\"`` or ``\"editor\"``.",
+   "sourceText": "Either  or .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":param role: ",
+    "x2": "``\"viewer\"``",
+    "x3": "``\"editor\"``"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>When the link stops working. <x2/> means never.",
+   "original": ":param expires: When the link stops working. ``None`` means never.",
+   "sourceText": "When the link stops working.  means never.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":param expires: ",
+    "x2": "``None``"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>The created sharing link.",
+   "original": ":returns: The created sharing link.",
+   "sourceText": "The created sharing link.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":returns: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>If you aren't the owner of the item.",
+   "original": ":raises PermissionError: If you aren't the owner of the item.",
+   "sourceText": "If you aren't the owner of the item.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":raises PermissionError: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/>Links to folders include all subfolders.",
+   "original": ".. note:: Links to folders include all subfolders.",
+   "sourceText": "Links to folders include all subfolders.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ".. note:: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: sharing\"; python code block",
+   "masked": "<x1/> Editors can delete files for everyone.",
+   "original": ".. warning::\n       Editors can delete files for everyone.",
+   "sourceText": " Editors can delete files for everyone.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ".. warning::"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 45,
+    "firstColumn": 4,
+    "prefix": "       ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   31,
+   "s1"
+  ],
+  [
+   108,
+   149,
+   "s2"
+  ],
+  [
+   155,
+   273,
+   "s3"
+  ],
+  [
+   279,
+   346,
+   "s4"
+  ],
+  [
+   351,
+   366,
+   "s5"
+  ],
+  [
+   371,
+   435,
+   "s6"
+  ],
+  [
+   440,
+   467,
+   "s7"
+  ],
+  [
+   472,
+   521,
+   "s8"
+  ],
+  [
+   526,
+   592,
+   "s9"
+  ],
+  [
+   597,
+   632,
+   "s10"
+  ],
+  [
+   659,
+   720,
+   "s11"
+  ],
+  [
+   726,
+   776,
+   "s12"
+  ],
+  [
+   782,
+   840,
+   "s13"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-sharing\"></a>Python ÜSDK ÜREFERENCE: ÜSHARING\n\n```python\ndef share(path, recipients, role=\"viewer\", expires=None):\n    \"\"\"ÜSHARE ÜA ÜFILE ÜOR ÜFOLDER ÜWITH ÜOTHER ÜPEOPLE.\n\n    ÜRECIPIENTS ÜGET ÜAN ÜE-ÜMAIL ÜWITH ÜA ÜLINK. ÜEXTERNAL ÜRECIPIENTS\n    ÜMUST ÜVERIFY ÜTHEIR ÜADDRESS ÜBEFORE ÜTHEY ÜCAN ÜOPEN ÜTHE ÜLINK.\n\n    :param path: ÜPATH ÜOF ÜTHE ÜFILE ÜOR ÜFOLDER, ÜRELATIVE ÜTO ÜTHE ÜSYNC ÜROOT.\n    :type path: ÜSTR\n    :param recipients: ÜE-ÜMAIL ÜADDRESSES ÜOF ÜTHE ÜPEOPLE ÜTO ÜSHARE ÜWITH.\n    :type recipients: ÜLIST[ÜSTR]\n    :param role: ÜEITHER ``\"viewer\"`` ÜOR ``\"editor\"``.\n    :param expires: ÜWHEN ÜTHE ÜLINK ÜSTOPS ÜWORKING. ``None`` ÜMEANS ÜNEVER.\n    :returns: ÜTHE ÜCREATED ÜSHARING ÜLINK.\n    :rtype: ShareLink\n    :raises PermissionError: ÜIF ÜYOU ÜAREN'ÜT ÜTHE ÜOWNER ÜOF ÜTHE ÜITEM.\n\n    .. note:: ÜLINKS ÜTO ÜFOLDERS ÜINCLUDE ÜALL ÜSUBFOLDERS.\n\n    .. warning:: ÜEDITORS ÜCAN ÜDELETE ÜFILES\n       ÜFOR ÜEVERYONE.\n\n    .. versionadded:: 3.1\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-sharing"
+ ]
+}

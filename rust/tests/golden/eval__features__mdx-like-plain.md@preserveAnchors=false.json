@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/mdx-like-plain.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜTEMPLATE ÜPLACEHOLDERS\n\nÜTEMPLATES ÜUSE ÜCURLY ÜBRACES ÜFOR ÜPLACEHOLDERS. ÜFOR ÜEXAMPLE, {name} ÜIS ÜREPLACED ÜWITH ÜTHE ÜUSER'ÜS ÜNAME ÜAND {date} ÜWITH ÜTODAY'ÜS ÜDATE.\n\nÜA ÜCOMPARISON ÜSUCH ÜAS 1 < 2 ÜOR ÜA < ÜB ÜIS ÜPLAIN ÜTEXT ÜIN Markdown, ÜAND ÜSO ÜIS ÜAN ÜARROW ÜLIKE <- ÜOR ->.\n\nÜWRITE {{double braces}} ÜTO ÜSHOW ÜA ÜLITERAL ÜBRACE ÜIN ÜTHE ÜOUTPUT.\n\nÜGENERIC ÜTYPES ÜSUCH ÜAS ÜLIST<string> ÜAND ÜMAP<ÜK, ÜV> ÜAPPEAR ÜIN ÜTHE ÜSDK ÜREFERENCE.\n\nÜTHE ÜE-ÜMAIL ÜSUBJECT ÜIS \"ÜWELCOME, {firstName}!\" ÜBY ÜDEFAULT. ÜYOU ÜCAN ÜCHANGE ÜIT ÜTO ÜANYTHING, ÜFOR ÜEXAMPLE \"ÜHI {firstName}, ÜYOUR ÜFOLDER {folder} ÜIS ÜREADY\".\n\nÜAN ÜHTML-ÜLIKE ÜWORD ÜSUCH ÜAS <placeholder> ÜIN ÜPROSE ÜISN'ÜT ÜA ÜTAG ÜIN ÜTHE ÜRENDERED ÜPAGE.\n",
+ "reverted": [],
+ "anchors": []
+}

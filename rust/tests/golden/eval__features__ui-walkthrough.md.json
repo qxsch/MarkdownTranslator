@@ -1,0 +1,218 @@
+{
+ "file": "eval/features/ui-walkthrough.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Admin center walkthrough",
+   "original": "Admin center walkthrough",
+   "sourceText": "Admin center walkthrough",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Admin center walkthrough\"",
+   "masked": "To change the default retention, go to <g1>Settings</g1> &gt; <g2>Data</g2> &gt; <g3>Retention</g3> and select <g4>Edit</g4>.",
+   "original": "To change the default retention, go to **Settings** > **Data** > **Retention** and select **Edit**.",
+   "sourceText": "To change the default retention, go to Settings > Data > Retention and select Edit.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong",
+    "g3": "strong: strong",
+    "g4": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong\nstrong\nstrong"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Admin center walkthrough\"",
+   "masked": "To add a user, select <g1>Users</g1> &gt; <g2>Active users</g2> &gt; <g3>Add a user</g3>. Fill in the <g4>First name</g4>, <g5>Last name</g5> and <g6>Username</g6> boxes, then select <g7>Next</g7>.",
+   "original": "To add a user, select **Users** > **Active users** > **Add a user**. Fill in the **First name**, **Last name** and **Username** boxes, then select **Next**.",
+   "sourceText": "To add a user, select Users > Active users > Add a user. Fill in the First name, Last name and Username boxes, then select Next.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong",
+    "g3": "strong: strong",
+    "g4": "strong: strong",
+    "g5": "strong: strong",
+    "g6": "strong: strong",
+    "g7": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong\nstrong\nstrong\nstrong\nstrong\nstrong"
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Admin center walkthrough\"",
+   "masked": "In the <g1>Assign licenses</g1> step, select <g2>Team</g2>. If the option is unavailable, you've run out of licenses. Select <g3>Buy more</g3> to add seats.",
+   "original": "In the **Assign licenses** step, select **Team**. If the option is unavailable, you've run out of licenses. Select **Buy more** to add seats.",
+   "sourceText": "In the Assign licenses step, select Team. If the option is unavailable, you've run out of licenses. Select Buy more to add seats.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong",
+    "g3": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong\nstrong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Admin center walkthrough\"",
+   "masked": "On the <g1>Optional settings</g1> page, you can assign a role. Leave <g2>User (no admin center access)</g2> selected for most people.",
+   "original": "On the **Optional settings** page, you can assign a role. Leave **User (no admin center access)** selected for most people.",
+   "sourceText": "On the Optional settings page, you can assign a role. Leave User (no admin center access) selected for most people.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Admin center walkthrough\"",
+   "masked": "Select <g1>Finish adding</g1>. The user gets an e-mail with the subject <g2>Your Contoso Sync account is ready</g2>.",
+   "original": "Select **Finish adding**. The user gets an e-mail with the subject *Your Contoso Sync account is ready*.",
+   "sourceText": "Select Finish adding. The user gets an e-mail with the subject Your Contoso Sync account is ready.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Admin center walkthrough\"",
+   "masked": "To remove a user, select the user, then <g1>Delete user</g1>. Deleted users can be restored for 30 days from <g2>Users</g2> &gt; <g3>Deleted users</g3>.",
+   "original": "To remove a user, select the user, then **Delete user**. Deleted users can be restored for 30 days from **Users** > **Deleted users**.",
+   "sourceText": "To remove a user, select the user, then Delete user. Deleted users can be restored for 30 days from Users > Deleted users.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong",
+    "g3": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong\nstrong"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   26,
+   "s1"
+  ],
+  [
+   28,
+   127,
+   "s2"
+  ],
+  [
+   129,
+   285,
+   "s3"
+  ],
+  [
+   287,
+   428,
+   "s4"
+  ],
+  [
+   430,
+   553,
+   "s5"
+  ],
+  [
+   555,
+   659,
+   "s6"
+  ],
+  [
+   661,
+   795,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"admin-center-walkthrough\"></a>ÜADMIN ÜCENTER ÜWALKTHROUGH\n\nÜTO ÜCHANGE ÜTHE ÜDEFAULT ÜRETENTION, ÜGO ÜTO **ÜSETTINGS** > **ÜDATA** > **ÜRETENTION** ÜAND ÜSELECT **ÜEDIT**.\n\nÜTO ÜADD ÜA ÜUSER, ÜSELECT **ÜUSERS** > **ÜACTIVE ÜUSERS** > **ÜADD ÜA ÜUSER**. ÜFILL ÜIN ÜTHE **ÜFIRST ÜNAME**, **ÜLAST ÜNAME** ÜAND **ÜUSERNAME** ÜBOXES, ÜTHEN ÜSELECT **ÜNEXT**.\n\nÜIN ÜTHE **ÜASSIGN ÜLICENSES** ÜSTEP, ÜSELECT **ÜTEAM**. ÜIF ÜTHE ÜOPTION ÜIS ÜUNAVAILABLE, ÜYOU'ÜVE ÜRUN ÜOUT ÜOF ÜLICENSES. ÜSELECT **ÜBUY ÜMORE** ÜTO ÜADD ÜSEATS.\n\nÜON ÜTHE **ÜOPTIONAL ÜSETTINGS** ÜPAGE, ÜYOU ÜCAN ÜASSIGN ÜA ÜROLE. ÜLEAVE **ÜUSER (ÜNO ÜADMIN ÜCENTER ÜACCESS)** ÜSELECTED ÜFOR ÜMOST ÜPEOPLE.\n\nÜSELECT **ÜFINISH ÜADDING**. ÜTHE ÜUSER ÜGETS ÜAN ÜE-ÜMAIL ÜWITH ÜTHE ÜSUBJECT *ÜYOUR ÜCONTOSO ÜSYNC ÜACCOUNT ÜIS ÜREADY*.\n\nÜTO ÜREMOVE ÜA ÜUSER, ÜSELECT ÜTHE ÜUSER, ÜTHEN **ÜDELETE ÜUSER**. ÜDELETED ÜUSERS ÜCAN ÜBE ÜRESTORED ÜFOR 30 ÜDAYS ÜFROM **ÜUSERS** > **ÜDELETED ÜUSERS**.\n",
+ "reverted": [],
+ "anchors": [
+  "admin-center-walkthrough"
+ ]
+}

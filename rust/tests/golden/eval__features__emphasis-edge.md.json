@@ -1,0 +1,326 @@
+{
+ "file": "eval/features/emphasis-edge.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Formatting edge cases",
+   "original": "Formatting edge cases",
+   "sourceText": "Formatting edge cases",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "This sentence has <g1>bold text with <g2>nested italics</g2> inside</g1> and ends normally.",
+   "original": "This sentence has **bold text with *nested italics* inside** and ends normally.",
+   "sourceText": "This sentence has bold text with nested italics inside and ends normally.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "Intraword emphasis: un<g1>believ</g1>able and <x2/> and <x3/> stays.",
+   "original": "Intraword emphasis: un**believ**able and snake_case_names_stay and file_name.txt stays.",
+   "sourceText": "Intraword emphasis: unbelievable and  and  stays.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "snake_case_names_stay",
+    "x3": "file_name.txt",
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "Mixed <g1><g2>bold and italic</g2></g1> text, <g3>struck-through words</g3> and <x4/> in one line.",
+   "original": "Mixed ***bold and italic*** text, ~~struck-through words~~ and `inline code` in one line.",
+   "sourceText": "Mixed bold and italic text, struck-through words and  in one line.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x4": "`inline code`",
+    "g1": "emphasis: emphasis",
+    "g2": "strong: strong",
+    "g3": "delete: delete"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:inline code\ndelete\nemphasis\nstrong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "<g1>Bold at the start</g1> of a sentence and <g2>italic at the end</g2>.",
+   "original": "**Bold at the start** of a sentence and *italic at the end*.",
+   "sourceText": "Bold at the start of a sentence and italic at the end.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "A sentence with a <g1>bold <g2>link</g2></g1> inside.",
+   "original": "A sentence with a **bold [link](https://example.com)** inside.",
+   "sourceText": "A sentence with a bold link inside.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "link: link to https://example.com"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:https://example.com\nstrong"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "Multiple spans: <g1>Open</g1>, <g2>Edit</g2> and <g3>Save</g3> are on the <g4>File</g4> menu.",
+   "original": "Multiple spans: **Open**, **Edit** and **Save** are on the **File** menu.",
+   "sourceText": "Multiple spans: Open, Edit and Save are on the File menu.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong",
+    "g3": "strong: strong",
+    "g4": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong\nstrong\nstrong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "Underscore emphasis: <g1>this is emphasized</g1> and <g2>this is strong</g2>.",
+   "original": "Underscore emphasis: _this is emphasized_ and __this is strong__.",
+   "sourceText": "Underscore emphasis: this is emphasized and this is strong.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "emphasis: emphasis",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "A literal asterisk <x1/> and a literal underscore <x2/> must stay escaped.",
+   "original": "A literal asterisk \\* and a literal underscore \\_ must stay escaped.",
+   "sourceText": "A literal asterisk  and a literal underscore  must stay escaped.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "*",
+    "x2": "_"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "Adjacent spans: <g1>one</g1><g2>two</g2> and <x3/><g4>bold</g4>.",
+   "original": "Adjacent spans: **one**_two_ and `code`**bold**.",
+   "sourceText": "Adjacent spans: onetwo and bold.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x3": "`code`",
+    "g1": "strong: strong",
+    "g2": "emphasis: emphasis",
+    "g4": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:code\nemphasis\nstrong\nstrong"
+  },
+  {
+   "id": "s11",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Formatting edge cases\"",
+   "masked": "An emphasized file name: <g1><x2/></g1> and a bold path: <g3><x4/></g3>.",
+   "original": "An emphasized file name: *settings.json* and a bold path: **C:\\Temp\\sync**.",
+   "sourceText": "An emphasized file name:  and a bold path: .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "settings.json",
+    "x4": "C:\\Temp\\sync",
+    "g1": "emphasis: emphasis",
+    "g3": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   23,
+   "s1"
+  ],
+  [
+   25,
+   104,
+   "s2"
+  ],
+  [
+   106,
+   193,
+   "s3"
+  ],
+  [
+   195,
+   284,
+   "s4"
+  ],
+  [
+   286,
+   346,
+   "s5"
+  ],
+  [
+   348,
+   410,
+   "s6"
+  ],
+  [
+   412,
+   485,
+   "s7"
+  ],
+  [
+   487,
+   552,
+   "s8"
+  ],
+  [
+   554,
+   622,
+   "s9"
+  ],
+  [
+   624,
+   672,
+   "s10"
+  ],
+  [
+   674,
+   749,
+   "s11"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"formatting-edge-cases\"></a>ÜFORMATTING ÜEDGE ÜCASES\n\nÜTHIS ÜSENTENCE ÜHAS **ÜBOLD ÜTEXT ÜWITH *ÜNESTED ÜITALICS* ÜINSIDE** ÜAND ÜENDS ÜNORMALLY.\n\nÜINTRAWORD ÜEMPHASIS: ÜUN**ÜBELIEV**ÜABLE ÜAND snake_case_names_stay ÜAND file_name.txt ÜSTAYS.\n\nÜMIXED ***ÜBOLD ÜAND ÜITALIC*** ÜTEXT, ~~ÜSTRUCK-ÜTHROUGH ÜWORDS~~ ÜAND `inline code` ÜIN ÜONE ÜLINE.\n\n**ÜBOLD ÜAT ÜTHE ÜSTART** ÜOF ÜA ÜSENTENCE ÜAND *ÜITALIC ÜAT ÜTHE ÜEND*.\n\nÜA ÜSENTENCE ÜWITH ÜA **ÜBOLD [ÜLINK](https://example.com)** ÜINSIDE.\n\nÜMULTIPLE ÜSPANS: **ÜOPEN**, **ÜEDIT** ÜAND **ÜSAVE** ÜARE ÜON ÜTHE **ÜFILE** ÜMENU.\n\nÜUNDERSCORE ÜEMPHASIS: _ÜTHIS ÜIS ÜEMPHASIZED_ ÜAND __ÜTHIS ÜIS ÜSTRONG__.\n\nÜA ÜLITERAL ÜASTERISK \\* ÜAND ÜA ÜLITERAL ÜUNDERSCORE \\_ ÜMUST ÜSTAY ÜESCAPED.\n\nÜADJACENT ÜSPANS: **ÜONE**_ÜTWO_ ÜAND `code`**ÜBOLD**.\n\nÜAN ÜEMPHASIZED ÜFILE ÜNAME: *settings.json* ÜAND ÜA ÜBOLD ÜPATH: **C:\\Temp\\sync**.\n",
+ "reverted": [],
+ "anchors": [
+  "formatting-edge-cases"
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "file": "eval/features/code-comments-mixed-langs.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Infrastructure and service code",
+   "original": "Infrastructure and service code",
+   "sourceText": "Infrastructure and service code",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Infrastructure and service code\"",
+   "masked": "Go:",
+   "original": "Go:",
+   "sourceText": "Go:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Infrastructure and service code\"",
+   "masked": "Rust:",
+   "original": "Rust:",
+   "sourceText": "Rust:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Infrastructure and service code\"",
+   "masked": "Java:",
+   "original": "Java:",
+   "sourceText": "Java:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Infrastructure and service code\"",
+   "masked": "SQL:",
+   "original": "SQL:",
+   "sourceText": "SQL:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   33,
+   "s1"
+  ],
+  [
+   35,
+   38,
+   "s2"
+  ],
+  [
+   234,
+   239,
+   "s3"
+  ],
+  [
+   394,
+   399,
+   "s4"
+  ],
+  [
+   590,
+   594,
+   "s5"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"infrastructure-and-service-code\"></a>ÜINFRASTRUCTURE ÜAND ÜSERVICE ÜCODE\n\nÜGO:\n\n```go\npackage main\n\n// Config holds the settings that are read at startup.\ntype Config struct {\n\tEndpoint string // URL of the sync service\n\tWorkers  int    // number of parallel uploads\n}\n```\n\nÜRUST:\n\n```rust\n/// Computes the hash of a block.\nfn hash_block(data: &[u8]) -> [u8; 32] {\n    // SHA-256 is fast enough for 4 MB blocks\n    sha256(data)\n}\n```\n\nÜJAVA:\n\n```java\n/**\n * Listens for changes and queues them for upload.\n */\npublic class ChangeListener {\n    // Changes are batched every 500 ms\n    private static final int BATCH_MS = 500;\n}\n```\n\nÜSQL:\n\n```sql\n-- Find devices that have not synced for a week\nSELECT device_id, last_sync\nFROM devices\nWHERE last_sync < DATEADD(day, -7, GETUTCDATE()); /* UTC on purpose */\n```\n\nYAML:\n\n```yaml\n# Settings for the sync agent\nagent:\n  workers: 8 # one per CPU core is a good start\n  log_level: info\n```\n\nBicep:\n\n```bicep\n// Storage account for the sync data\nresource storage 'Microsoft.Storage/storageAccounts@2023-05-01' = {\n  name: 'ctsync${uniqueString(resourceGroup().id)}'\n  location: location // same region as the resource group\n  kind: 'StorageV2'\n  sku: { name: 'Standard_ZRS' }\n}\n```\n\nDockerfile:\n\n```dockerfile\n# Small base image for the agent\nFROM node:24-slim\n# Install only production dependencies\nRUN npm ci --omit=dev\n```\n\nTerraform:\n\n```hcl\n# Resource group for all sync resources\nresource \"azurerm_resource_group\" \"sync\" {\n  name     = \"rg-sync\"\n  location = \"westeurope\" # keep data in the EU\n}\n```\n",
+ "reverted": [],
+ "anchors": [
+  "infrastructure-and-service-code"
+ ]
+}

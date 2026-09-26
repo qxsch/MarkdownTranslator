@@ -1,0 +1,357 @@
+{
+ "file": "test/fixtures/dialects.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Dialects",
+   "original": "Dialects",
+   "sourceText": "Dialects",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"",
+   "masked": "Costs $5 and $10 per unit, and the formula <x1/> stays.",
+   "original": "Costs $5 and $10 per unit, and the formula $$e = mc^2$$ stays.",
+   "sourceText": "Costs $5 and $10 per unit, and the formula  stays.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$$e = mc^2$$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "math:e = mc^2"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"; inside \"note\" admonition/directive; admonition title",
+   "masked": "Custom title",
+   "original": "Custom title",
+   "sourceText": "Custom title",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"; inside \"note\" admonition/directive",
+   "masked": "Some <g1>important</g1> text.",
+   "original": "Some **important** text.",
+   "sourceText": "Some important text.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"",
+   "masked": "<x1/><g2>Pro tip</g2><x3/><g4>Use the cache.</g4><x5/><x6/>",
+   "original": ":::tip Pro tip\nUse the cache.\n:::",
+   "sourceText": "Pro tipUse the cache.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":::tip ",
+    "x3": "line break [break]",
+    "x5": "line break [break]",
+    "x6": ":::",
+    "g2": "html: directive title",
+    "g4": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 g2 x3 g4 x5 x6"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "label",
+   "textContext": "markdown",
+   "note": "\"youtube\" directive label",
+   "structure": "section \"Dialects\"; \"youtube\" directive label",
+   "masked": "Intro video",
+   "original": "Intro video",
+   "sourceText": "Intro video",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"",
+   "masked": "<x1/><g2>Architecture diagram</g2><x3/>",
+   "original": ":::image type=\"content\" source=\"media/arch.png\" alt-text=\"Architecture diagram\":::",
+   "sourceText": "Architecture diagram",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":::image type=\"content\" source=\"media/arch.png\" alt-text=\"",
+    "x3": "\":::",
+    "g2": "html: alt-text attribute value [quote \"]"
+   },
+   "tagGroups": [
+    "contiguous: x1 g2 x3",
+    "ordered: x1 g2 x3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"",
+   "masked": "<x1/> only text.",
+   "original": "Windows only text.",
+   "sourceText": " only text.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Windows"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph in a blockquote",
+   "structure": "section \"Dialects\"; inside \"zone-end\" admonition/directive",
+   "masked": "<x1/><x2/><g3>Keep this note.</g3>",
+   "original": "[!NOTE]\n> Keep this note.",
+   "sourceText": "Keep this note.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[!NOTE]",
+    "x2": "line break [break]",
+    "g3": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 x2 g3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"; inside \"zone-end\" admonition/directive",
+   "masked": "<x1/><g2>shared prerequisites</g2>]",
+   "original": "[!INCLUDE [shared prerequisites](../includes/prereqs.md)]",
+   "sourceText": "shared prerequisites]",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[!INCLUDE ",
+    "g2": "link: link to ../includes/prereqs.md"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:../includes/prereqs.md"
+  },
+  {
+   "id": "s11",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"; inside \"zone-end\" admonition/directive",
+   "masked": "<x1/><g2>Architecture overview</g2><x3/>",
+   "original": "{{< figure src=\"images/overview.png\" title=\"Architecture overview\" >}}",
+   "sourceText": "Architecture overview",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{< figure src=\"images/overview.png\" title=\"",
+    "x3": "\" >}}",
+    "g2": "html: title attribute value [quote \"]"
+   },
+   "tagGroups": [
+    "contiguous: x1 g2 x3",
+    "ordered: x1 g2 x3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Dialects\"; inside \"zone-end\" admonition/directive",
+   "masked": "<x1/><x2/><g3>Do not delete the resource group.</g3><x4/><x5/>",
+   "original": "{{% notice warning %}}\nDo not delete the resource group.\n{{% /notice %}}",
+   "sourceText": "Do not delete the resource group.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{% notice warning %}}",
+    "x2": "line break [break]",
+    "x4": "line break [break]",
+    "x5": "{{% /notice %}}",
+    "g3": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 x2 g3 x4 x5"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   10,
+   "s1"
+  ],
+  [
+   12,
+   74,
+   "s2"
+  ],
+  [
+   106,
+   118,
+   "s3"
+  ],
+  [
+   120,
+   144,
+   "s4"
+  ],
+  [
+   150,
+   183,
+   "s5"
+  ],
+  [
+   195,
+   206,
+   "s6"
+  ],
+  [
+   218,
+   300,
+   "s7"
+  ],
+  [
+   327,
+   345,
+   "s8"
+  ],
+  [
+   362,
+   387,
+   "s9"
+  ],
+  [
+   389,
+   446,
+   "s10"
+  ],
+  [
+   448,
+   518,
+   "s11"
+  ],
+  [
+   520,
+   592,
+   "s12"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"dialects\"></a>ÜDIALECTS\n\nÜCOSTS $5 ÜAND $10 ÜPER ÜUNIT, ÜAND ÜTHE ÜFORMULA $$e = mc^2$$ ÜSTAYS.\n\n$$\n\\sum_{i=1}^n i\n$$\n\n:::note[ÜCUSTOM ÜTITLE]\nÜSOME **ÜIMPORTANT** ÜTEXT.\n:::\n\n:::tip ÜPRO ÜTIP\nÜUSE ÜTHE ÜCACHE.\n:::\n\n::youtube[ÜINTRO ÜVIDEO]{#abc123}\n\n:::image type=\"content\" source=\"media/arch.png\" alt-text=\"ÜARCHITECTURE ÜDIAGRAM\":::\n\n:::zone pivot=\"windows\"\n\nWindows ÜONLY ÜTEXT.\n\n:::zone-end\n\n> [!NOTE]\n> ÜKEEP ÜTHIS ÜNOTE.\n\n[!INCLUDE [ÜSHARED ÜPREREQUISITES](../includes/prereqs.md)]\n\n{{< figure src=\"images/overview.png\" title=\"ÜARCHITECTURE ÜOVERVIEW\" >}}\n\n{{% notice warning %}}\nÜDO ÜNOT ÜDELETE ÜTHE ÜRESOURCE ÜGROUP.\n{{% /notice %}}\n",
+ "reverted": [],
+ "anchors": [
+  "dialects"
+ ]
+}

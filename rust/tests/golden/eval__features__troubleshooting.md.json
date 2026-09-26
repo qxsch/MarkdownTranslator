@@ -1,0 +1,481 @@
+{
+ "file": "eval/features/troubleshooting.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Troubleshooting",
+   "original": "Troubleshooting",
+   "sourceText": "Troubleshooting",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Troubleshooting\"",
+   "masked": "Use this page when sync doesn't work as expected.",
+   "original": "Use this page when sync doesn't work as expected.",
+   "sourceText": "Use this page when sync doesn't work as expected.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Troubleshooting\"",
+   "masked": "Error <x1/>: \"Can't connect to the server\"",
+   "original": "Error 0x8004de40: \"Can't connect to the server\"",
+   "sourceText": "Error : \"Can't connect to the server\"",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "0x8004de40"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Troubleshooting > Error 0x8004de40: \"Can't connect to the server\"\"",
+   "masked": "<g1>Cause:</g1> A proxy or firewall blocks the connection.",
+   "original": "**Cause:** A proxy or firewall blocks the connection.",
+   "sourceText": "Cause: A proxy or firewall blocks the connection.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Troubleshooting > Error 0x8004de40: \"Can't connect to the server\"\"",
+   "masked": "<g1>Solution:</g1>",
+   "original": "**Solution:**",
+   "sourceText": "Solution:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Troubleshooting > Error 0x8004de40: \"Can't connect to the server\"\"; list introduced by \"Solution:\"",
+   "masked": "Check that <x1/> is reachable on port 443.",
+   "original": "Check that `sync.contoso.example` is reachable on port 443.",
+   "sourceText": "Check that  is reachable on port 443.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`sync.contoso.example`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:sync.contoso.example"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Troubleshooting > Error 0x8004de40: \"Can't connect to the server\"\"; list introduced by \"Solution:\"",
+   "masked": "If you use a proxy, set the <x1/> environment variable.",
+   "original": "If you use a proxy, set the `HTTPS_PROXY` environment variable.",
+   "sourceText": "If you use a proxy, set the  environment variable.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`HTTPS_PROXY`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:HTTPS_PROXY"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Troubleshooting > Error 0x8004de40: \"Can't connect to the server\"\"; list introduced by \"Solution:\"",
+   "masked": "Restart the client with <x1/>.",
+   "original": "Restart the client with `ctsync restart`.",
+   "sourceText": "Restart the client with .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`ctsync restart`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:ctsync restart"
+  },
+  {
+   "id": "s9",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Troubleshooting\"",
+   "masked": "Files stay in the \"Pending\" state",
+   "original": "Files stay in the \"Pending\" state",
+   "sourceText": "Files stay in the \"Pending\" state",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Troubleshooting > Files stay in the \"Pending\" state\"",
+   "masked": "This usually happens when a file is open in another program. Close the program, then wait a few minutes. If the file is still pending, check the log:",
+   "original": "This usually happens when a file is open in another program. Close the program, then wait a few minutes. If the file is still pending, check the log:",
+   "sourceText": "This usually happens when a file is open in another program. Close the program, then wait a few minutes. If the file is still pending, check the log:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Troubleshooting\"",
+   "masked": "Sync is slow",
+   "original": "Sync is slow",
+   "sourceText": "Sync is slow",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Troubleshooting > Sync is slow\"",
+   "masked": "Large files are uploaded in blocks of 4 MB. A 10 GB file takes a while.",
+   "original": "Large files are uploaded in blocks of 4 MB. A 10 GB file takes a while.",
+   "sourceText": "Large files are uploaded in blocks of 4 MB. A 10 GB file takes a while.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s13",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Troubleshooting > Sync is slow\"",
+   "masked": "Antivirus software can scan every file twice. Exclude the sync folder from real-time scanning.",
+   "original": "Antivirus software can scan every file twice. Exclude the sync folder from real-time scanning.",
+   "sourceText": "Antivirus software can scan every file twice. Exclude the sync folder from real-time scanning.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Troubleshooting > Sync is slow\"",
+   "masked": "Check the bandwidth limit under <g1>Settings</g1> &gt; <g2>Network</g2>.",
+   "original": "Check the bandwidth limit under **Settings** > **Network**.",
+   "sourceText": "Check the bandwidth limit under Settings > Network.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s15",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Troubleshooting\"",
+   "masked": "The app crashes at startup",
+   "original": "The app crashes at startup",
+   "sourceText": "The app crashes at startup",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Troubleshooting > The app crashes at startup\"",
+   "masked": "Delete the settings file <x1/> in <x2/> and start the app again. Your files aren't affected.",
+   "original": "Delete the settings file `settings.json` in `%APPDATA%\\ContosoSync` and start the app again. Your files aren't affected.",
+   "sourceText": "Delete the settings file  in  and start the app again. Your files aren't affected.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`settings.json`",
+    "x2": "`%APPDATA%\\ContosoSync`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:%APPDATA%\\ContosoSync\ncode:settings.json"
+  },
+  {
+   "id": "s17",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Troubleshooting\"",
+   "masked": "Still stuck?",
+   "original": "Still stuck?",
+   "sourceText": "Still stuck?",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s18",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Troubleshooting > Still stuck?\"",
+   "masked": "Collect diagnostics with <x1/> and attach the file <x2/> to a support request.",
+   "original": "Collect diagnostics with `ctsync diag --zip` and attach the file `diag.zip` to a support request.",
+   "sourceText": "Collect diagnostics with  and attach the file  to a support request.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`ctsync diag --zip`",
+    "x2": "`diag.zip`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:ctsync diag --zip\ncode:diag.zip"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   17,
+   "s1"
+  ],
+  [
+   19,
+   68,
+   "s2"
+  ],
+  [
+   73,
+   120,
+   "s3"
+  ],
+  [
+   122,
+   175,
+   "s4"
+  ],
+  [
+   177,
+   190,
+   "s5"
+  ],
+  [
+   195,
+   254,
+   "s6"
+  ],
+  [
+   258,
+   321,
+   "s7"
+  ],
+  [
+   325,
+   366,
+   "s8"
+  ],
+  [
+   371,
+   404,
+   "s9"
+  ],
+  [
+   406,
+   555,
+   "s10"
+  ],
+  [
+   648,
+   660,
+   "s11"
+  ],
+  [
+   664,
+   735,
+   "s12"
+  ],
+  [
+   738,
+   832,
+   "s13"
+  ],
+  [
+   835,
+   894,
+   "s14"
+  ],
+  [
+   899,
+   925,
+   "s15"
+  ],
+  [
+   927,
+   1047,
+   "s16"
+  ],
+  [
+   1052,
+   1064,
+   "s17"
+  ],
+  [
+   1066,
+   1163,
+   "s18"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"troubleshooting\"></a>ÜTROUBLESHOOTING\n\nÜUSE ÜTHIS ÜPAGE ÜWHEN ÜSYNC ÜDOESN'ÜT ÜWORK ÜAS ÜEXPECTED.\n\n## <a id=\"error-0x8004de40-cant-connect-to-the-server\"></a>ÜERROR 0x8004de40: \"ÜCAN'ÜT ÜCONNECT ÜTO ÜTHE ÜSERVER\"\n\n**ÜCAUSE:** ÜA ÜPROXY ÜOR ÜFIREWALL ÜBLOCKS ÜTHE ÜCONNECTION.\n\n**ÜSOLUTION:**\n\n1. ÜCHECK ÜTHAT `sync.contoso.example` ÜIS ÜREACHABLE ÜON ÜPORT 443.\n2. ÜIF ÜYOU ÜUSE ÜA ÜPROXY, ÜSET ÜTHE `HTTPS_PROXY` ÜENVIRONMENT ÜVARIABLE.\n3. ÜRESTART ÜTHE ÜCLIENT ÜWITH `ctsync restart`.\n\n## <a id=\"files-stay-in-the-pending-state\"></a>ÜFILES ÜSTAY ÜIN ÜTHE \"ÜPENDING\" ÜSTATE\n\nÜTHIS ÜUSUALLY ÜHAPPENS ÜWHEN ÜA ÜFILE ÜIS ÜOPEN ÜIN ÜANOTHER ÜPROGRAM. ÜCLOSE ÜTHE ÜPROGRAM, ÜTHEN ÜWAIT ÜA ÜFEW ÜMINUTES. ÜIF ÜTHE ÜFILE ÜIS ÜSTILL ÜPENDING, ÜCHECK ÜTHE ÜLOG:\n\n```powershell\nGet-Content \"$env:LOCALAPPDATA\\ContosoSync\\logs\\ctsync.log\" -Tail 50\n```\n\n## <a id=\"sync-is-slow\"></a>ÜSYNC ÜIS ÜSLOW\n\n- ÜLARGE ÜFILES ÜARE ÜUPLOADED ÜIN ÜBLOCKS ÜOF 4 ÜMB. ÜA 10 ÜGB ÜFILE ÜTAKES ÜA ÜWHILE.\n- ÜANTIVIRUS ÜSOFTWARE ÜCAN ÜSCAN ÜEVERY ÜFILE ÜTWICE. ÜEXCLUDE ÜTHE ÜSYNC ÜFOLDER ÜFROM ÜREAL-ÜTIME ÜSCANNING.\n- ÜCHECK ÜTHE ÜBANDWIDTH ÜLIMIT ÜUNDER **ÜSETTINGS** > **ÜNETWORK**.\n\n## <a id=\"the-app-crashes-at-startup\"></a>ÜTHE ÜAPP ÜCRASHES ÜAT ÜSTARTUP\n\nÜDELETE ÜTHE ÜSETTINGS ÜFILE `settings.json` ÜIN `%APPDATA%\\ContosoSync` ÜAND ÜSTART ÜTHE ÜAPP ÜAGAIN. ÜYOUR ÜFILES ÜAREN'ÜT ÜAFFECTED.\n\n## <a id=\"still-stuck\"></a>ÜSTILL ÜSTUCK?\n\nÜCOLLECT ÜDIAGNOSTICS ÜWITH `ctsync diag --zip` ÜAND ÜATTACH ÜTHE ÜFILE `diag.zip` ÜTO ÜA ÜSUPPORT ÜREQUEST.\n",
+ "reverted": [],
+ "anchors": [
+  "troubleshooting",
+  "error-0x8004de40-cant-connect-to-the-server",
+  "files-stay-in-the-pending-state",
+  "sync-is-slow",
+  "the-app-crashes-at-startup",
+  "still-stuck"
+ ]
+}

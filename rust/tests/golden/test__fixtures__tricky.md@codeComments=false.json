@@ -1,0 +1,388 @@
+{
+ "file": "test/fixtures/tricky.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Tricky document",
+   "original": "Tricky document",
+   "sourceText": "Tricky document",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link/image title (tooltip)",
+   "structure": "section \"Tricky document\"",
+   "masked": "with a title",
+   "original": "with a title",
+   "sourceText": "with a title",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tricky document\"",
+   "masked": "This paragraph is soft wrapped over several lines so that the translator has to re-wrap the translated text to a similar width without breaking inline <x1/> or <g2>link targets</g2> in the middle of the paragraph.",
+   "original": "This paragraph is soft wrapped over several lines so that the translator has to\nre-wrap the translated text to a similar width without breaking inline `code\nspans` or [link targets](https://example.com/a/b \"with a title\") in the middle of\nthe paragraph.",
+   "sourceText": "This paragraph is soft wrapped over several lines so that the translator has to re-wrap the translated text to a similar width without breaking inline  or link targets in the middle of the paragraph.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [
+    "s2"
+   ],
+   "tags": {
+    "x1": "`code spans`",
+    "g2": "link: link to https://example.com/a/b"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 81,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:code\nspans\nlink:https://example.com/a/b"
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph in a blockquote",
+   "structure": "section \"Tricky document\"",
+   "masked": "A quoted paragraph that is also wrapped over multiple lines, with <g1>bold text</g1> and a file named <x2/> inside the quote.",
+   "original": "A quoted paragraph that is also wrapped over\n> multiple lines, with **bold text** and a file named\n> settings.local.json inside the quote.",
+   "sourceText": "A quoted paragraph that is also wrapped over multiple lines, with bold text and a file named  inside the quote.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "settings.local.json",
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 53,
+    "firstColumn": 2,
+    "prefix": "> ",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tricky document\"",
+   "masked": "A list item with a nested paragraph",
+   "original": "A list item with a nested paragraph",
+   "sourceText": "A list item with a nested paragraph",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Tricky document\"",
+   "masked": "and a second paragraph that continues on another line.",
+   "original": "and a second paragraph that\n  continues on another line.",
+   "sourceText": "and a second paragraph that continues on another line.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 40,
+    "firstColumn": 2,
+    "prefix": "  ",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tricky document\"",
+   "masked": "A shortcut reference to <g1>Contoso</g1> and a collapsed one to <g2>Fabrikam</g2>.",
+   "original": "A shortcut reference to [Contoso] and a collapsed one to [Fabrikam][].",
+   "sourceText": "A shortcut reference to Contoso and a collapsed one to Fabrikam.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link [Contoso] [ref Contoso]",
+    "g2": "link: link [Fabrikam] [ref Fabrikam]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "linkref:contoso\nlinkref:fabrikam"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tricky document\"",
+   "masked": "<x1/>, <x2/> and <x3/> must survive, as must <x4/> and <x5/>.",
+   "original": "Snake_case_identifier, camelCaseName and PascalCaseType must survive, as must Get-AzContext and v1.2.3.",
+   "sourceText": ",  and  must survive, as must  and .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Snake_case_identifier",
+    "x2": "camelCaseName",
+    "x3": "PascalCaseType",
+    "x4": "Get-AzContext",
+    "x5": "v1.2.3"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Tricky document\"",
+   "masked": "Name",
+   "original": "Name",
+   "sourceText": "Name",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Tricky document\"",
+   "masked": "Meaning",
+   "original": "Meaning",
+   "sourceText": "Meaning",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Tricky document\"",
+   "masked": "Alpha",
+   "original": "Alpha",
+   "sourceText": "Alpha",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Tricky document\"",
+   "masked": "The first letter of the alphabet",
+   "original": "The first letter of the alphabet",
+   "sourceText": "The first letter of the alphabet",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Tricky document\"",
+   "masked": "Click to expand the details",
+   "original": "Click to expand the details",
+   "sourceText": "Click to expand the details",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Tricky document\"",
+   "masked": "Hidden content with a <g1>link</g1> back to the top.",
+   "original": "Hidden content with a [link](#tricky-document) back to the top.",
+   "sourceText": "Hidden content with a link back to the top.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #tricky-document"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#tricky-document"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   17,
+   "s1"
+  ],
+  [
+   19,
+   272,
+   "s3"
+  ],
+  [
+   276,
+   414,
+   "s4"
+  ],
+  [
+   489,
+   524,
+   "s5"
+  ],
+  [
+   528,
+   584,
+   "s6"
+  ],
+  [
+   703,
+   773,
+   "s7"
+  ],
+  [
+   775,
+   878,
+   "s8"
+  ],
+  [
+   898,
+   902,
+   "s9"
+  ],
+  [
+   911,
+   918,
+   "s10"
+  ],
+  [
+   939,
+   944,
+   "s11"
+  ],
+  [
+   953,
+   985,
+   "s12"
+  ],
+  [
+   1025,
+   1052,
+   "s13"
+  ],
+  [
+   1064,
+   1127,
+   "s14"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "[Contoso]: https://contoso.com\n[Fabrikam]: https://fabrikam.com",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"tricky-document\"></a>ÜTRICKY ÜDOCUMENT\n\nÜTHIS ÜPARAGRAPH ÜIS ÜSOFT ÜWRAPPED ÜOVER ÜSEVERAL ÜLINES ÜSO ÜTHAT ÜTHE\nÜTRANSLATOR ÜHAS ÜTO ÜRE-ÜWRAP ÜTHE ÜTRANSLATED ÜTEXT ÜTO ÜA ÜSIMILAR ÜWIDTH\nÜWITHOUT ÜBREAKING ÜINLINE `code\nspans` ÜOR [ÜLINK ÜTARGETS](https://example.com/a/b \"ÜWITH ÜA ÜTITLE\") ÜIN ÜTHE\nÜMIDDLE ÜOF ÜTHE ÜPARAGRAPH.\n\n> ÜA ÜQUOTED ÜPARAGRAPH ÜTHAT ÜIS ÜALSO ÜWRAPPED\n> ÜOVER ÜMULTIPLE ÜLINES, ÜWITH **ÜBOLD ÜTEXT** ÜAND\n> ÜA ÜFILE ÜNAMED settings.local.json ÜINSIDE ÜTHE\n> ÜQUOTE.\n>\n> ```js\n> // comment inside a quoted code block\n> const x = 1;\n> ```\n\n- ÜA ÜLIST ÜITEM ÜWITH ÜA ÜNESTED ÜPARAGRAPH\n\n  ÜAND ÜA ÜSECOND ÜPARAGRAPH ÜTHAT\n  ÜCONTINUES ÜON ÜANOTHER ÜLINE.\n\n  ```yaml\n  # yaml comment in a list item\n  key: value # trailing comment\n  url: \"http://example.com/#anchor\"\n  ```\n\nÜA ÜSHORTCUT ÜREFERENCE ÜTO [ÜCONTOSO][Contoso] ÜAND ÜA ÜCOLLAPSED ÜONE ÜTO [ÜFABRIKAM][Fabrikam].\n\nSnake_case_identifier, camelCaseName ÜAND PascalCaseType ÜMUST ÜSURVIVE, ÜAS ÜMUST Get-AzContext ÜAND v1.2.3.\n\n<table>\n  <tr><th>ÜNAME</th><th>ÜMEANING</th></tr>\n  <tr><td>ÜALPHA</td><td>ÜTHE ÜFIRST ÜLETTER ÜOF ÜTHE ÜALPHABET</td></tr>\n</table>\n\n<details>\n<summary>ÜCLICK ÜTO ÜEXPAND ÜTHE ÜDETAILS</summary>\n\nÜHIDDEN ÜCONTENT ÜWITH ÜA [ÜLINK](#tricky-document) ÜBACK ÜTO ÜTHE ÜTOP.\n\n</details>\n\n```csharp\n/// <summary>\n/// Gets the value of the <see cref=\"Foo\"/> property.\n/// </summary>\n/// <param name=\"id\">The identifier of the item.</param>\npublic int Get(int id) => id; // returns the id\n```\n\n```java\n/**\n * Computes the total price.\n *\n * @param items the items in the cart\n * @return the total price including tax\n */\nint total(List<Item> items) { return 0; }\n```\n\n```sql\n-- Select the active users\nSELECT * FROM users WHERE name = 'O''Brien -- not a comment';\n```\n\n[Contoso]: https://contoso.com\n[Fabrikam]: https://fabrikam.com\n",
+ "reverted": [],
+ "anchors": [
+  "tricky-document"
+ ]
+}

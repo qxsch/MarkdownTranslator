@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/frontmatter-docs.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: ÜMONITOR ÜSYNC ÜHEALTH\ntitleSuffix: ÜCONTOSO ÜSYNC ÜDOCUMENTATION\ndescription: ÜUSE ÜTHE ÜHEALTH ÜDASHBOARD ÜAND ÜALERTS ÜTO ÜFIND ÜSYNC ÜPROBLEMS ÜBEFORE ÜYOUR ÜUSERS ÜNOTICE ÜTHEM.\nms.date: 08/14/2026\nms.topic: how-to\nms.service: contoso-sync\nms.custom: devx-track-powershell\nauthor: contoso-docs\nms.author: docsteam\nms.reviewer: sre-team\nms.collection: [admin, monitoring]\nzone_pivot_groups: operating-systems\n---\n\n# ÜMONITOR ÜSYNC ÜHEALTH\n\nÜTHE ÜHEALTH ÜDASHBOARD ÜSHOWS ÜTHE ÜSYNC ÜSTATE ÜOF ÜALL ÜDEVICES ÜIN ÜYOUR ÜORGANIZATION.\n\n## ÜSET ÜUP ÜALERTS\n\n1. ÜIN ÜTHE ÜADMIN ÜCENTER, ÜSELECT **ÜHEALTH** > **ÜALERTS**.\n2. ÜSELECT **ÜNEW ÜALERT ÜRULE**.\n3. ÜCHOOSE ÜA ÜCONDITION, ÜFOR ÜEXAMPLE *ÜMORE ÜTHAN 5% ÜOF ÜDEVICES ÜHAVE ÜERRORS*.\n4. ÜADD ÜAN ÜACTION ÜGROUP ÜAND ÜSELECT **ÜCREATE**.\n\n## ÜQUERY ÜTHE ÜDATA\n\nÜYOU ÜCAN ÜALSO ÜQUERY ÜTHE ÜDATA ÜWITH PowerShell:\n\n```powershell\n# ÜGET ÜDEVICES ÜTHAT ÜHAVEN'ÜT ÜSYNCED ÜFOR ÜTHREE ÜDAYS\nGet-CtSyncDevice -LastSyncBefore (Get-Date).AddDays(-3)\n```\n",
+ "reverted": [],
+ "anchors": []
+}

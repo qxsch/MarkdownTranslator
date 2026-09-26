@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/mdx-jsx-attrs.mdx",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜSHARING ÜROLES\n\n<RoleCard role=\"viewer\" title=\"ÜVIEWER\" description=\"ÜCAN ÜOPEN ÜAND ÜDOWNLOAD ÜFILES.\" icon=\"eye\" />\n\n<RoleCard role=\"editor\" title=\"ÜEDITOR\" description=\"ÜCAN ÜCHANGE, ÜADD ÜAND ÜDELETE ÜFILES.\" icon=\"pencil\" />\n\n<Admonition type=\"tip\" title=\"ÜLEAST ÜPRIVILEGE\">\n  ÜGIVE ÜPEOPLE ÜTHE **ÜLOWEST** ÜROLE ÜTHAT ÜLETS ÜTHEM ÜDO ÜTHEIR ÜWORK.\n</Admonition>\n\n<Steps>\n  <Step title=\"ÜSELECT ÜTHE ÜFOLDER\">ÜRIGHT-ÜCLICK ÜTHE ÜFOLDER ÜIN ÜFILE\nÜEXPLORER.</Step> <Step title=\"ÜCHOOSE ÜA ÜROLE\">ÜPICK *ÜVIEWER* ÜOR *ÜEDITOR*\nÜFROM ÜTHE ÜLIST.</Step> <Step title=\"ÜSEND ÜTHE ÜINVITATION\">ÜSELECT\n**ÜSEND**.</Step>\n</Steps>\n\n<Image src=\"/img/share-dialog.png\" alt=\"ÜTHE ÜSHARE ÜDIALOG ÜWITH ÜTWO ÜRECIPIENTS\" width={600} />\n",
+ "reverted": [],
+ "anchors": []
+}

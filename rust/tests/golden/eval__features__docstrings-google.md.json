@@ -1,0 +1,404 @@
+{
+ "file": "eval/features/docstrings-google.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: uploads",
+   "original": "Python SDK reference: uploads",
+   "sourceText": " SDK reference: uploads",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "Upload a file to the sync share.",
+   "original": "Upload a file to the sync share.",
+   "sourceText": "Upload a file to the sync share.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "The upload is retried with exponential backoff when the service returns a transient error.",
+   "original": "The upload is retried with exponential backoff when the service\n    returns a transient error.",
+   "sourceText": "The upload is retried with exponential backoff when the service returns a transient error.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 67,
+    "firstColumn": 4,
+    "prefix": "    ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>Local path of the file to upload.",
+   "original": "path (str): Local path of the file to upload.",
+   "sourceText": "Local path of the file to upload.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "path (str): "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>How many times to retry a failed block.",
+   "original": "retries (int): How many times to retry a failed block.",
+   "sourceText": "How many times to retry a failed block.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "retries (int): "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>Replace an existing file with the same name. Defaults to False.",
+   "original": "overwrite (bool, optional): Replace an existing file with the\n            same name. Defaults to False.",
+   "sourceText": "Replace an existing file with the same name. Defaults to False.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "overwrite (bool, optional): "
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 69,
+    "firstColumn": 8,
+    "prefix": "            ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>Details about the uploaded file, including its version number.",
+   "original": "UploadResult: Details about the uploaded file, including its\n        version number.",
+   "sourceText": "Details about the uploaded file, including its version number.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "UploadResult: "
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 68,
+    "firstColumn": 8,
+    "prefix": "        ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>If the local file doesn't exist.",
+   "original": "FileNotFoundError: If the local file doesn't exist.",
+   "sourceText": "If the local file doesn't exist.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "FileNotFoundError: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>If the share is full.",
+   "original": "QuotaExceededError: If the share is full.",
+   "sourceText": "If the share is full.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "QuotaExceededError: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "Upload a report and print its version.",
+   "original": "Upload a report and print its version.",
+   "sourceText": "Upload a report and print its version.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "Result of an upload.",
+   "original": "Result of an upload.",
+   "sourceText": "Result of an upload.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>Version number assigned by the server.",
+   "original": "version (int): Version number assigned by the server.",
+   "sourceText": "Version number assigned by the server.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "version (int): "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: uploads\"; python code block",
+   "masked": "<x1/>Size of the uploaded file in bytes.",
+   "original": "size (int): Size of the uploaded file in bytes.",
+   "sourceText": "Size of the uploaded file in bytes.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "size (int): "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   31,
+   "s1"
+  ],
+  [
+   96,
+   128,
+   "s2"
+  ],
+  [
+   134,
+   228,
+   "s3"
+  ],
+  [
+   248,
+   293,
+   "s4"
+  ],
+  [
+   302,
+   356,
+   "s5"
+  ],
+  [
+   365,
+   468,
+   "s6"
+  ],
+  [
+   491,
+   575,
+   "s7"
+  ],
+  [
+   597,
+   648,
+   "s8"
+  ],
+  [
+   657,
+   698,
+   "s9"
+  ],
+  [
+   721,
+   759,
+   "s10"
+  ],
+  [
+   884,
+   904,
+   "s11"
+  ],
+  [
+   930,
+   983,
+   "s12"
+  ],
+  [
+   992,
+   1039,
+   "s13"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-uploads\"></a>Python ÜSDK ÜREFERENCE: ÜUPLOADS\n\n```python\ndef upload(path, retries=3, overwrite=False):\n    \"\"\"ÜUPLOAD ÜA ÜFILE ÜTO ÜTHE ÜSYNC ÜSHARE.\n\n    ÜTHE ÜUPLOAD ÜIS ÜRETRIED ÜWITH ÜEXPONENTIAL ÜBACKOFF ÜWHEN\n    ÜTHE ÜSERVICE ÜRETURNS ÜA ÜTRANSIENT ÜERROR.\n\n    Args:\n        path (str): ÜLOCAL ÜPATH ÜOF ÜTHE ÜFILE ÜTO ÜUPLOAD.\n        retries (int): ÜHOW ÜMANY ÜTIMES ÜTO ÜRETRY ÜA ÜFAILED ÜBLOCK.\n        overwrite (bool, optional): ÜREPLACE ÜAN ÜEXISTING ÜFILE\n            ÜWITH ÜTHE ÜSAME ÜNAME. ÜDEFAULTS ÜTO ÜFALSE.\n\n    Returns:\n        UploadResult: ÜDETAILS ÜABOUT ÜTHE ÜUPLOADED ÜFILE,\n        ÜINCLUDING ÜITS ÜVERSION ÜNUMBER.\n\n    Raises:\n        FileNotFoundError: ÜIF ÜTHE ÜLOCAL ÜFILE ÜDOESN'ÜT ÜEXIST.\n        QuotaExceededError: ÜIF ÜTHE ÜSHARE ÜIS ÜFULL.\n\n    Example:\n        ÜUPLOAD ÜA ÜREPORT ÜAND ÜPRINT ÜITS ÜVERSION.\n\n        >>> result = upload(\"report.pdf\")\n        >>> print(result.version)\n        1\n    \"\"\"\n\n\nclass UploadResult:\n    \"\"\"ÜRESULT ÜOF ÜAN ÜUPLOAD.\n\n    Attributes:\n        version (int): ÜVERSION ÜNUMBER ÜASSIGNED ÜBY ÜTHE ÜSERVER.\n        size (int): ÜSIZE ÜOF ÜTHE ÜUPLOADED ÜFILE ÜIN ÜBYTES.\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-uploads"
+ ]
+}

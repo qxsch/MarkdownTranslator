@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/docstrings-rest.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# Python ÜSDK ÜREFERENCE: ÜSHARING\n\n```python\ndef share(path, recipients, role=\"viewer\", expires=None):\n    \"\"\"ÜSHARE ÜA ÜFILE ÜOR ÜFOLDER ÜWITH ÜOTHER ÜPEOPLE.\n\n    ÜRECIPIENTS ÜGET ÜAN ÜE-ÜMAIL ÜWITH ÜA ÜLINK. ÜEXTERNAL ÜRECIPIENTS\n    ÜMUST ÜVERIFY ÜTHEIR ÜADDRESS ÜBEFORE ÜTHEY ÜCAN ÜOPEN ÜTHE ÜLINK.\n\n    :param path: ÜPATH ÜOF ÜTHE ÜFILE ÜOR ÜFOLDER, ÜRELATIVE ÜTO ÜTHE ÜSYNC ÜROOT.\n    :type path: ÜSTR\n    :param recipients: ÜE-ÜMAIL ÜADDRESSES ÜOF ÜTHE ÜPEOPLE ÜTO ÜSHARE ÜWITH.\n    :type recipients: ÜLIST[ÜSTR]\n    :param role: ÜEITHER ``\"viewer\"`` ÜOR ``\"editor\"``.\n    :param expires: ÜWHEN ÜTHE ÜLINK ÜSTOPS ÜWORKING. ``None`` ÜMEANS ÜNEVER.\n    :returns: ÜTHE ÜCREATED ÜSHARING ÜLINK.\n    :rtype: ShareLink\n    :raises PermissionError: ÜIF ÜYOU ÜAREN'ÜT ÜTHE ÜOWNER ÜOF ÜTHE ÜITEM.\n\n    .. note:: ÜLINKS ÜTO ÜFOLDERS ÜINCLUDE ÜALL ÜSUBFOLDERS.\n\n    .. warning:: ÜEDITORS ÜCAN ÜDELETE ÜFILES\n       ÜFOR ÜEVERYONE.\n\n    .. versionadded:: 3.1\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": []
+}

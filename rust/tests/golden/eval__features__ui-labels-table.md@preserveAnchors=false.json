@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/ui-labels-table.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜTOOLBAR ÜREFERENCE\n\nÜTHE ÜEDITOR ÜTOOLBAR ÜCONTAINS ÜTHE ÜFOLLOWING ÜBUTTONS.\n\n| ÜBUTTON | ÜSHORTCUT | ÜWHAT ÜIT ÜDOES |\n|---|---|---|\n| ÜRUN | ÜF5 | ÜSTARTS ÜTHE ÜCURRENT ÜSCRIPT |\n| ÜSTOP | ÜSHIFT+ÜF5 | ÜENDS ÜTHE ÜRUNNING ÜSCRIPT |\n| ÜSTEP | ÜF10 | ÜRUNS ÜTHE ÜNEXT ÜLINE |\n| ÜBREAK | ÜCTRL+ÜB | ÜSETS ÜA ÜBREAKPOINT ÜON ÜTHE ÜCURRENT ÜLINE |\n| ÜCLEAR | ÜCTRL+ÜL | ÜEMPTIES ÜTHE ÜOUTPUT ÜPANE |\n| ÜSAVE | ÜCTRL+ÜS | ÜWRITES ÜTHE ÜFILE ÜTO ÜDISK |\n| ÜOPEN | ÜCTRL+ÜO | ÜOPENS ÜA ÜFILE |\n| ÜSHARE | ÜNONE | ÜCOPIES ÜA ÜLINK ÜTO ÜTHE ÜSCRIPT |\n| ÜRECORD | ÜCTRL+ÜR | ÜRECORDS ÜA ÜMACRO |\n| ÜPLAY | ÜCTRL+ÜP | ÜPLAYS ÜTHE ÜLAST ÜMACRO |\n\n## ÜSTATUS ÜBAR\n\n| ÜITEM | ÜVALUES | ÜMEANING |\n|---|---|---|\n| ÜMODE | ÜEDIT, ÜREAD | ÜWHETHER ÜTHE ÜFILE ÜCAN ÜBE ÜCHANGED |\n| ÜLINE | 1 ÜTO 99999 | ÜCURRENT ÜLINE |\n| ÜBRANCH | ÜMAIN | ÜCURRENT ÜGIT ÜBRANCH |\n| ÜSYNC | ÜUP ÜTO ÜDATE, ÜBEHIND, ÜAHEAD | ÜSTATE ÜCOMPARED ÜWITH ÜTHE ÜREMOTE |\n",
+ "reverted": [],
+ "anchors": []
+}

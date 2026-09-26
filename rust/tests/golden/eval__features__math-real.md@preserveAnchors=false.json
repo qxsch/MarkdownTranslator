@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/math-real.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜHOW ÜTHE ÜSCHEDULER ÜPICKS ÜA ÜSERVER\n\nÜTHE ÜSCHEDULER ÜESTIMATES ÜTHE ÜLOAD ÜOF ÜEACH ÜSERVER $s$ ÜAS ÜA ÜWEIGHTED ÜSUM ÜOF ÜITS ÜCPU ÜUSAGE $c_s$ ÜAND ÜITS ÜQUEUE ÜLENGTH $q_s$:\n\n$$\nL_s = \\alpha \\cdot c_s + (1 - \\alpha) \\cdot \\frac{q_s}{q_{\\max}}\n$$\n\nÜTHE ÜWEIGHT $\\alpha$ ÜIS ÜBETWEEN $0$ ÜAND $1$. ÜWITH $\\alpha = 0.7$, ÜCPU ÜUSAGE ÜDOMINATES.\n\nÜA ÜNEW ÜJOB ÜGOES ÜTO ÜTHE ÜSERVER ÜWITH ÜTHE ÜSMALLEST ÜLOAD, $\\arg\\min_s L_s$. ÜIF ÜTWO ÜSERVERS ÜHAVE ÜTHE ÜSAME ÜLOAD, ÜTHE ÜONE ÜWITH ÜTHE ÜLOWER ÜINDEX $i$ ÜWINS.\n\nÜTHE ÜEXPECTED ÜWAITING ÜTIME ÜGROWS ÜWITH $\\frac{1}{1 - \\rho}$, ÜWHERE $\\rho$ ÜIS ÜTHE ÜUTILIZATION. ÜFOR $\\rho \\to 1$ ÜTHE ÜWAITING ÜTIME ÜIS ÜUNBOUNDED.\n\nÜINLINE ÜDISPLAY ÜMATH ÜALSO ÜWORKS: $$E = mc^2$$ ÜIS ÜTHE ÜCLASSIC ÜEXAMPLE.\n\nÜTHE ÜVARIANCE ÜIS $\\sigma^2 = \\frac{1}{n}\\sum_{i=1}^{n}(x_i - \\mu)^2$.\n",
+ "reverted": [],
+ "anchors": []
+}

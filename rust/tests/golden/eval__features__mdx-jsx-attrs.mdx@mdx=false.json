@@ -1,0 +1,472 @@
+{
+ "file": "eval/features/mdx-jsx-attrs.mdx",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Sharing roles",
+   "original": "Sharing roles",
+   "sourceText": "Sharing roles",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <rolecard>, HTML title attribute",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Viewer",
+   "original": "Viewer",
+   "sourceText": "Viewer",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"Sharing roles\"",
+   "masked": "<x1/>",
+   "original": "<RoleCard role=\"viewer\" title=\"Viewer\" description=\"Can open and download files.\" icon=\"eye\" />",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s2"
+   ],
+   "tags": {
+    "x1": "<RoleCard role=\"viewer\" title=\"Viewer\" description=\"Can open and download fil..."
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <rolecard>, HTML title attribute",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Editor",
+   "original": "Editor",
+   "sourceText": "Editor",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"Sharing roles\"",
+   "masked": "<x1/>",
+   "original": "<RoleCard role=\"editor\" title=\"Editor\" description=\"Can change, add and delete files.\" icon=\"pencil\" />",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s4"
+   ],
+   "tags": {
+    "x1": "<RoleCard role=\"editor\" title=\"Editor\" description=\"Can change, add and delet..."
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <admonition>, HTML title attribute",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Least privilege",
+   "original": "Least privilege",
+   "sourceText": "Least privilege",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"Sharing roles\"",
+   "masked": "<x1/>",
+   "original": "<Admonition type=\"tip\" title=\"Least privilege\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s6"
+   ],
+   "tags": {
+    "x1": "<Admonition type=\"tip\" title=\"Least privilege\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Give people the **lowest** role that lets them do their work.",
+   "original": "Give people the **lowest** role that lets them do their work.",
+   "sourceText": "Give people the **lowest** role that lets them do their work.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <step>, HTML title attribute",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Select the folder",
+   "original": "Select the folder",
+   "sourceText": "Select the folder",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"Sharing roles\"",
+   "masked": "<x1/>",
+   "original": "<Step title=\"Select the folder\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s9"
+   ],
+   "tags": {
+    "x1": "<Step title=\"Select the folder\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Right-click the folder in File Explorer.",
+   "original": "Right-click the folder in File Explorer.",
+   "sourceText": "Right-click the folder in File Explorer.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <step>, HTML title attribute",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Choose a role",
+   "original": "Choose a role",
+   "sourceText": "Choose a role",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"Sharing roles\"",
+   "masked": "<x1/>",
+   "original": "<Step title=\"Choose a role\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s12"
+   ],
+   "tags": {
+    "x1": "<Step title=\"Choose a role\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s14",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Pick *Viewer* or *Editor* from the list.",
+   "original": "Pick *Viewer* or *Editor* from the list.",
+   "sourceText": "Pick *Viewer* or *Editor* from the list.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s15",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <step>, HTML title attribute",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Send the invitation",
+   "original": "Send the invitation",
+   "sourceText": "Send the invitation",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s16",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"Sharing roles\"",
+   "masked": "<x1/>",
+   "original": "<Step title=\"Send the invitation\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s15"
+   ],
+   "tags": {
+    "x1": "<Step title=\"Send the invitation\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s17",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Sharing roles\"",
+   "masked": "Select **Send**.",
+   "original": "Select **Send**.",
+   "sourceText": "Select **Send**.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s18",
+   "kind": "alt",
+   "textContext": "attr",
+   "note": "inline HTML <img>, HTML alt attribute",
+   "structure": "section \"Sharing roles\"",
+   "masked": "The share dialog with two recipients",
+   "original": "The share dialog with two recipients",
+   "sourceText": "The share dialog with two recipients",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s19",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Sharing roles\"",
+   "masked": "<x1/>",
+   "original": "<Image src=\"/img/share-dialog.png\" alt=\"The share dialog with two recipients\" width={600} />",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s18"
+   ],
+   "tags": {
+    "x1": "<Image src=\"/img/share-dialog.png\" alt=\"The share dialog with two recipients\"..."
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   15,
+   "s1"
+  ],
+  [
+   17,
+   112,
+   "s3"
+  ],
+  [
+   114,
+   217,
+   "s5"
+  ],
+  [
+   219,
+   266,
+   "s7"
+  ],
+  [
+   269,
+   330,
+   "s8"
+  ],
+  [
+   356,
+   388,
+   "s10"
+  ],
+  [
+   388,
+   428,
+   "s11"
+  ],
+  [
+   438,
+   466,
+   "s13"
+  ],
+  [
+   466,
+   506,
+   "s14"
+  ],
+  [
+   516,
+   550,
+   "s16"
+  ],
+  [
+   550,
+   566,
+   "s17"
+  ],
+  [
+   584,
+   676,
+   "s19"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"sharing-roles\"></a>ÜSHARING ÜROLES\n\n<RoleCard role=\"viewer\" title=\"ÜVIEWER\" description=\"Can open and download files.\" icon=\"eye\" />\n\n<RoleCard role=\"editor\" title=\"ÜEDITOR\" description=\"Can change, add and delete files.\" icon=\"pencil\" />\n\n<Admonition type=\"tip\" title=\"ÜLEAST ÜPRIVILEGE\">\n  ÜGIVE ÜPEOPLE ÜTHE **ÜLOWEST** ÜROLE ÜTHAT ÜLETS ÜTHEM ÜDO ÜTHEIR ÜWORK.\n</Admonition>\n\n<Steps>\n  <Step title=\"ÜSELECT ÜTHE ÜFOLDER\">ÜRIGHT-ÜCLICK ÜTHE ÜFOLDER ÜIN ÜFILE ÜEXPLORER.</Step>\n  <Step title=\"ÜCHOOSE ÜA ÜROLE\">ÜPICK *ÜVIEWER* ÜOR *ÜEDITOR* ÜFROM ÜTHE ÜLIST.</Step>\n  <Step title=\"ÜSEND ÜTHE ÜINVITATION\">ÜSELECT **ÜSEND**.</Step>\n</Steps>\n\n<Image src=\"/img/share-dialog.png\" alt=\"ÜTHE ÜSHARE ÜDIALOG ÜWITH ÜTWO ÜRECIPIENTS\" width={600} />\n",
+ "reverted": [],
+ "anchors": [
+  "sharing-roles"
+ ]
+}

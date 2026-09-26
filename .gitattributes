@@ -1,4 +1,8 @@
 # Keep evaluation and test fixtures byte-exact (line endings are part of what is tested).
 eval/features/** -text
+eval/corpus/** -text
 test/fixtures/** -text
 evaluation/translations/** -text
+# The Rust port's parity inputs and the golden files recorded from the TypeScript implementation.
+rust/tests/fixtures/** -text
+rust/tests/golden/** -text

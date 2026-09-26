@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/settings-short-values.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜSETTINGS ÜREFERENCE\n\n## ÜGENERAL\n\n| ÜSETTING | ÜVALUES | ÜDEFAULT |\n|---|---|---|\n| ÜSTART ÜWITH Windows | ÜON, ÜOFF | ÜON |\n| ÜLANGUAGE | ÜAUTOMATIC, ÜENGLISH, ÜGERMAN, ÜFRENCH | ÜAUTOMATIC |\n| ÜTHEME | ÜLIGHT, ÜDARK, ÜSYSTEM | ÜSYSTEM |\n| ÜUPDATES | ÜAUTOMATIC, ÜNOTIFY, ÜNEVER | ÜAUTOMATIC |\n\n## ÜNETWORK\n\n| ÜSETTING | ÜVALUES | ÜDEFAULT |\n|---|---|---|\n| ÜUPLOAD ÜLIMIT | ÜNONE, ÜFIXED, ÜADAPTIVE | ÜADAPTIVE |\n| ÜDOWNLOAD ÜLIMIT | ÜNONE, ÜFIXED | ÜNONE |\n| ÜPROXY | ÜNONE, ÜSYSTEM, ÜMANUAL | ÜSYSTEM |\n| ÜMETERED ÜNETWORKS | ÜPAUSE, ÜCONTINUE | ÜPAUSE |\n\n## ÜFILES\n\n| ÜSETTING | ÜVALUES | ÜDEFAULT |\n|---|---|---|\n| ÜFILES ÜON ÜDEMAND | ÜON, ÜOFF | ÜON |\n| ÜFREE ÜUP ÜSPACE | ÜNEVER, ÜAFTER 30 ÜDAYS, ÜAFTER 60 ÜDAYS | ÜNEVER |\n| ÜCONFLICTS | ÜKEEP ÜBOTH, ÜKEEP ÜNEWEST, ÜASK | ÜKEEP ÜBOTH |\n| ÜHIDDEN ÜFILES | ÜSYNC, ÜSKIP | ÜSKIP |\n\n## ÜPRIVACY\n\n| ÜSETTING | ÜVALUES | ÜDEFAULT |\n|---|---|---|\n| ÜDIAGNOSTIC ÜDATA | ÜREQUIRED, ÜOPTIONAL | ÜREQUIRED |\n| ÜCRASH ÜREPORTS | ÜSEND, ÜASK, ÜNEVER | ÜASK |\n",
+ "reverted": [],
+ "anchors": []
+}

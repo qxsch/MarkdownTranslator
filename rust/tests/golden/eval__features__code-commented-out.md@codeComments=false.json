@@ -1,0 +1,71 @@
+{
+ "file": "eval/features/code-commented-out.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Debugging notes",
+   "original": "Debugging notes",
+   "sourceText": "Debugging notes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Debugging notes\"",
+   "masked": "Some comments contain code that is switched off. It must stay exactly as it is.",
+   "original": "Some comments contain code that is switched off. It must stay exactly as it is.",
+   "sourceText": "Some comments contain code that is switched off. It must stay exactly as it is.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   17,
+   "s1"
+  ],
+  [
+   19,
+   98,
+   "s2"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"debugging-notes\"></a>ÜDEBUGGING ÜNOTES\n\nÜSOME ÜCOMMENTS ÜCONTAIN ÜCODE ÜTHAT ÜIS ÜSWITCHED ÜOFF. ÜIT ÜMUST ÜSTAY ÜEXACTLY ÜAS ÜIT ÜIS.\n\n```python\ndef sync(folder):\n    # print(folder.files)\n    # folder.refresh(force=True)\n    # Refresh only when the folder changed since the last run\n    if folder.changed:\n        folder.refresh()\n    # return None\n    return folder.state\n```\n\n```javascript\nfunction start() {\n  // console.log('starting', config);\n  // await client.reset();\n  // Start the watcher after the first full scan\n  watcher.start();\n  // if (debug) { dumpState(); }\n}\n```\n\n```bash\n# export CTSYNC_DEBUG=1\n# ctsync reset --force\n# Show the status of every folder\nctsync status\n```\n\n```csharp\n// var client = new SyncClient(uri);\n// client.Dispose();\n// Reuse the shared client instead of creating a new one\nvar client = SyncClientFactory.Shared;\n```\n\n```ts\n// eslint-disable-next-line @typescript-eslint/no-explicit-any\nconst raw: any = JSON.parse(text);\n// @ts-expect-error: the SDK types are out of date\nclient.legacyUpload(raw);\n```\n",
+ "reverted": [],
+ "anchors": [
+  "debugging-notes"
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/math-prices-edge.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜBILLING ÜEXAMPLES\n\nÜMOST ÜCUSTOMERS ÜPAY ÜBETWEEN $4 ÜAND $12 ÜPER ÜUSER ÜEACH ÜMONTH. ÜTHE ÜTEAM ÜPLAN ÜIS $5/ÜMONTH ÜPER ÜUSER, ÜAND ÜTHE ÜENTERPRISE ÜPLAN ÜIS $1,299.99 ÜPER ÜYEAR ÜFOR ÜUP ÜTO 20 ÜUSERS.\n\nÜA ÜPRICE ÜRANGE ÜSUCH ÜAS $5-$10 ÜIS ÜSHOWN ÜON ÜTHE ÜPRICING ÜPAGE. ÜDISCOUNTS ÜOF ÜUS$20 ÜAPPLY ÜTO ÜYEARLY ÜCONTRACTS, ÜAND ÜTHE ÜSETUP ÜFEE ÜOF $0 ÜIS ÜWAIVED ÜFOR ÜNONPROFITS.\n\nÜIF ÜYOU ÜDOWNGRADE, ÜYOU ÜPAY $3 ÜLESS ÜPER ÜUSER ÜAND ÜSAVE $36 ÜPER ÜYEAR.\n\nÜSCRIPTS ÜCAN ÜREAD ÜYOUR ÜPLAN ÜWITH `ctsync billing show` ÜAND ÜSTORE ÜTHE ÜTOTAL ÜIN $TOTAL, ÜOR ÜEXPORT ÜIT ÜTO $HOME/billing.csv ÜFOR ÜACCOUNTING.\n\nÜINVOICES ÜLIST ÜAMOUNTS ÜLIKE $49.00 ÜAND $149.00 ÜSEPARATELY ÜFOR ÜEACH ÜWORKSPACE.\n",
+ "reverted": [],
+ "anchors": []
+}

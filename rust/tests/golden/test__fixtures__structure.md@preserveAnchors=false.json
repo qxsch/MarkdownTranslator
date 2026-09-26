@@ -1,0 +1,15 @@
+{
+ "file": "test/fixtures/structure.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜSETTINGS\n\n## ÜCONFIGURE ÜTHE ÜAPP\n\nÜBEFORE ÜYOU ÜDEPLOY, ÜCONSIDER ÜTHE ÜFOLLOWING ÜQUESTIONS:\n\n- ÜWHICH ÜREGION ÜIS ÜCLOSEST ÜTO ÜYOUR ÜUSERS?\n- ÜDO ÜYOU ÜNEED ÜA ÜPRIVATE ÜENDPOINT?\n\n| ÜSETTING | ÜDEFAULT | ÜDESCRIPTION |\n|---------|---------|-------------|\n| `retries` | 3 | ÜNUMBER ÜOF ÜATTEMPTS |\n| `mode` | ÜRUN | ÜSTART ÜBEHAVIOR |\n\n```python\n# x = compute(y)\n# ÜRETURNS ÜTHE ÜVALUE (ÜOR ÜNONE);\nprint(\"hi\")  # ÜPRINT ÜTHE ÜGREETING\n\n\ndef load(path):\n    \"\"\"ÜLOAD ÜTHE ÜCONFIGURATION ÜFILE.\n\n    ÜRETURNS ÜTHE ÜPARSED ÜSETTINGS.\n    \"\"\"\n    return path\n```\n\n```typescript\n// const total = sum(items);\n// ÜCREATE ÜTHE ÜCLIENT (ÜSEE ÜDOCS).\nconst client = create();\n```\n\n```bash\n# rm -rf build\n# ÜINSTALL ÜTHE ÜDEPENDENCIES\nnpm ci\n```\n",
+ "reverted": [],
+ "anchors": []
+}

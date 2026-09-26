@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/html-mixed.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜKEYBOARD ÜSHORTCUTS ÜAND ÜADVANCED ÜOPTIONS\n\nÜPRESS <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> ÜTO ÜOPEN ÜTHE ÜCOMMAND ÜPALETTE.\n\n<details>\n<summary>ÜSHOW ÜALL ÜSHORTCUTS</summary>\n\n| ÜSHORTCUT | ÜACTION |\n|---|---|\n| <kbd>Ctrl</kbd>+<kbd>S</kbd> | ÜSAVE ÜTHE ÜFILE |\n| <kbd>F2</kbd> | ÜRENAME ÜTHE ÜSELECTED ÜFILE |\n\n</details>\n\n<div class=\"warning\">\n  <p>ÜCHANGING ÜTHESE ÜOPTIONS ÜCAN <strong>ÜSLOW ÜDOWN</strong> ÜSYNC. ÜONLY ÜCHANGE ÜTHEM ÜWHEN ÜSUPPORT ÜASKS ÜYOU ÜTO.</p>\n</div>\n\n<table>\n  <tr><th>ÜOPTION</th><th>ÜEFFECT</th></tr>\n  <tr><td><code>max_workers</code></td><td>ÜNUMBER ÜOF ÜPARALLEL ÜUPLOADS</td></tr>\n  <tr><td><code>chunk_size</code></td><td>ÜSIZE ÜOF ÜEACH ÜUPLOAD ÜBLOCK ÜIN ÜBYTES</td></tr>\n</table>\n\n<p align=\"center\">\n  <img src=\"images/logo.svg\" alt=\"ÜCONTOSO ÜSYNC ÜLOGO\" width=\"120\">\n</p>\n\nÜTEXT ÜWITH ÜAN ÜINLINE <span style=\"color:red\">ÜRED ÜWARNING</span> ÜAND ÜA ÜLINE<br>ÜBREAK.\n\n<!-- This comment is for editors and must not change. -->\n",
+ "reverted": [],
+ "anchors": []
+}

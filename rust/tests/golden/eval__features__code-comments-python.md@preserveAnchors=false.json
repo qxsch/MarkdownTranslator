@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/code-comments-python.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜUSING ÜTHE Python ÜSDK\n\n```python\nimport os\nfrom contoso_sync import SyncClient\n\n# ÜREAD ÜTHE ÜENDPOINT ÜFROM ÜTHE ÜENVIRONMENT ÜSO ÜTHAT ÜTHE ÜSCRIPT ÜWORKS ÜIN ÜEVERY ÜSTAGE\nclient = SyncClient(endpoint=os.environ[\"CTSYNC_ENDPOINT\"])\n\n# ÜUPLOAD ÜEVERY ÜCSV ÜFILE ÜIN ÜTHE ÜCURRENT ÜFOLDER\nfor name in os.listdir(\".\"):\n    if name.endswith(\".csv\"):  # ÜSKIP ÜEVERYTHING ÜELSE\n        client.upload(name)\n\n# ÜWAIT ÜUNTIL ÜTHE ÜSERVER ÜHAS ÜPROCESSED ÜALL\n# ÜUPLOADS. ÜTHIS ÜCAN ÜTAKE ÜA ÜFEW ÜMINUTES ÜFOR\n# ÜLARGE ÜFILES.\nclient.wait()\n```\n\nÜHANDLE ÜERRORS ÜEXPLICITLY:\n\n```python\ntry:\n    client.upload(\"big.iso\")\nexcept QuotaExceededError:\n    # ÜTHE ÜSTORAGE ÜIS ÜFULL: ÜTELL ÜTHE ÜUSER ÜINSTEAD ÜOF ÜRETRYING\n    print(\"Storage quota exceeded\")\n```\n",
+ "reverted": [],
+ "anchors": []
+}

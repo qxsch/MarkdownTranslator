@@ -1,0 +1,391 @@
+{
+ "file": "eval/features/html-mixed.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Keyboard shortcuts and advanced options",
+   "original": "Keyboard shortcuts and advanced options",
+   "sourceText": "Keyboard shortcuts and advanced options",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Press <x1/>+<x2/>+<x3/> to open the command palette.",
+   "original": "Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to open the command palette.",
+   "sourceText": "Press ++ to open the command palette.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "<kbd>Ctrl</kbd>",
+    "x2": "<kbd>Shift</kbd>",
+    "x3": "<kbd>P</kbd>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "html:</kbd>\nhtml:</kbd>\nhtml:</kbd>\nhtml:<kbd>\nhtml:<kbd>\nhtml:<kbd>"
+  },
+  {
+   "id": "s3",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Show all shortcuts",
+   "original": "Show all shortcuts",
+   "sourceText": "Show all shortcuts",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Keyboard shortcuts and advanced options\"; table header; columns: \"Shortcut\", \"Action\"",
+   "masked": "Shortcut",
+   "original": "Shortcut",
+   "sourceText": "Shortcut",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Keyboard shortcuts and advanced options\"; table header; columns: \"Shortcut\", \"Action\"",
+   "masked": "Action",
+   "original": "Action",
+   "sourceText": "Action",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Keyboard shortcuts and advanced options\"; table column \"Action\", row \"<kbd>Ctrl</kbd>+<kbd>S</kbd>\"",
+   "masked": "Save the file",
+   "original": "Save the file",
+   "sourceText": "Save the file",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Keyboard shortcuts and advanced options\"; table column \"Action\", row \"<kbd>F2</kbd>\"",
+   "masked": "Rename the selected file",
+   "original": "Rename the selected file",
+   "sourceText": "Rename the selected file",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Changing these options can <g1>slow down</g1> sync. Only change them when support asks you to.",
+   "original": "Changing these options can <strong>slow down</strong> sync. Only change them when support asks you to.",
+   "sourceText": "Changing these options can slow down sync. Only change them when support asks you to.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "html: <strong>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Option",
+   "original": "Option",
+   "sourceText": "Option",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Effect",
+   "original": "Effect",
+   "sourceText": "Effect",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Number of parallel uploads",
+   "original": "Number of parallel uploads",
+   "sourceText": "Number of parallel uploads",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Size of each upload block in bytes",
+   "original": "Size of each upload block in bytes",
+   "sourceText": "Size of each upload block in bytes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "alt",
+   "textContext": "attr",
+   "note": "inline HTML <img>, HTML alt attribute",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Contoso Sync logo",
+   "original": "Contoso Sync logo",
+   "sourceText": "Contoso Sync logo",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s14",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "<x1/>",
+   "original": "<img src=\"images/logo.svg\" alt=\"Contoso Sync logo\" width=\"120\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s13"
+   ],
+   "tags": {
+    "x1": "<img src=\"images/logo.svg\" alt=\"Contoso Sync logo\" width=\"120\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Keyboard shortcuts and advanced options\"",
+   "masked": "Text with an inline <g1>red warning</g1> and a line<x2/>break.",
+   "original": "Text with an inline <span style=\"color:red\">red warning</span> and a line<br>break.",
+   "sourceText": "Text with an inline red warning and a linebreak.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "<br>",
+    "g1": "html: <span style=\"color:red\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "html:</span>\nhtml:<br>\nhtml:<span style=\"color:red\">"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   41,
+   "s1"
+  ],
+  [
+   43,
+   123,
+   "s2"
+  ],
+  [
+   144,
+   162,
+   "s3"
+  ],
+  [
+   176,
+   184,
+   "s4"
+  ],
+  [
+   187,
+   193,
+   "s5"
+  ],
+  [
+   239,
+   252,
+   "s6"
+  ],
+  [
+   273,
+   297,
+   "s7"
+  ],
+  [
+   340,
+   442,
+   "s8"
+  ],
+  [
+   473,
+   479,
+   "s9"
+  ],
+  [
+   488,
+   494,
+   "s10"
+  ],
+  [
+   548,
+   574,
+   "s11"
+  ],
+  [
+   627,
+   661,
+   "s12"
+  ],
+  [
+   703,
+   766,
+   "s14"
+  ],
+  [
+   773,
+   856,
+   "s15"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"keyboard-shortcuts-and-advanced-options\"></a>ÜKEYBOARD ÜSHORTCUTS ÜAND ÜADVANCED ÜOPTIONS\n\nÜPRESS <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> ÜTO ÜOPEN ÜTHE ÜCOMMAND ÜPALETTE.\n\n<details>\n<summary>ÜSHOW ÜALL ÜSHORTCUTS</summary>\n\n| ÜSHORTCUT | ÜACTION |\n|---|---|\n| <kbd>Ctrl</kbd>+<kbd>S</kbd> | ÜSAVE ÜTHE ÜFILE |\n| <kbd>F2</kbd> | ÜRENAME ÜTHE ÜSELECTED ÜFILE |\n\n</details>\n\n<div class=\"warning\">\n  <p>ÜCHANGING ÜTHESE ÜOPTIONS ÜCAN <strong>ÜSLOW ÜDOWN</strong> ÜSYNC. ÜONLY ÜCHANGE ÜTHEM ÜWHEN ÜSUPPORT ÜASKS ÜYOU ÜTO.</p>\n</div>\n\n<table>\n  <tr><th>ÜOPTION</th><th>ÜEFFECT</th></tr>\n  <tr><td><code>max_workers</code></td><td>ÜNUMBER ÜOF ÜPARALLEL ÜUPLOADS</td></tr>\n  <tr><td><code>chunk_size</code></td><td>ÜSIZE ÜOF ÜEACH ÜUPLOAD ÜBLOCK ÜIN ÜBYTES</td></tr>\n</table>\n\n<p align=\"center\">\n  <img src=\"images/logo.svg\" alt=\"ÜCONTOSO ÜSYNC ÜLOGO\" width=\"120\">\n</p>\n\nÜTEXT ÜWITH ÜAN ÜINLINE <span style=\"color:red\">ÜRED ÜWARNING</span> ÜAND ÜA ÜLINE<br>ÜBREAK.\n\n<!-- This comment is for editors and must not change. -->\n",
+ "reverted": [],
+ "anchors": [
+  "keyboard-shortcuts-and-advanced-options"
+ ]
+}

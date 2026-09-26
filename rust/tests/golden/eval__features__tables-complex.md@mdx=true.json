@@ -1,0 +1,12 @@
+{
+ "file": "eval/features/tables-complex.md",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "error": "extract: Expected a closing tag for `<br>` (18:61-18:65) before the end of `tableData`"
+}

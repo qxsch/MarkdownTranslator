@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/escapes-entities.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜESCAPES ÜAND ÜENTITIES\n\nÜUSE \\`ÜBACKTICKS\\` ÜLITERALLY, ÜAND ÜWRITE \\[ÜBRACKETS\\] ÜWITHOUT ÜCREATING ÜA ÜLINK.\n\nÜHTML ÜENTITIES: &copy; 2026 ÜCONTOSO, &nbsp;ÜNON-ÜBREAKING ÜSPACE, &lt;ÜTAG&gt; ÜAND &amp; ÜAMPERSAND.\n\nÜNUMERIC ÜENTITIES: &#8364; (ÜEURO) ÜAND &#x2192; (ÜARROW).\n\nÜA ÜBACKSLASH ÜAT ÜTHE ÜEND ÜOF ÜA ÜLINE\\\nÜCREATES ÜA ÜHARD ÜLINE ÜBREAK.\n\nÜSPECIAL ÜCHARACTERS: 50% ÜOFF, #ÜHASHTAG, @mention, 1 < 2 > 0, ÜA | ÜB.\n\nÜLITERAL ÜHTML-ÜLIKE ÜTEXT ÜIN ÜCODE: `<div>` ÜAND `&amp;`.\n\nÜTHE ÜPRICE ÜIS 10&nbsp;€ ÜPER ÜMONTH.\n\nÜESCAPED ÜPIPES ÜIN ÜA ÜTABLE:\n\n| ÜPATTERN | ÜMEANING |\n|---|---|\n| `a\\|b` | ÜEITHER ÜA ÜOR ÜB |\n| \\* | ÜANY ÜCHARACTER |\n",
+ "reverted": [],
+ "anchors": []
+}

@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/images-alt.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜIMAGES\n\n![ÜSCREENSHOT ÜOF ÜTHE ÜSETTINGS ÜPAGE ÜWITH ÜTHE ÜNETWORK ÜTAB ÜSELECTED](images/settings-network.png)\n\n![ÜTHE ÜFILE sync-status.png ÜSHOWS ÜTHE ÜGREEN ÜICON](images/sync-status.png \"ÜSYNC ÜSTATUS ÜICON\")\n\n![](images/decorative-line.png)\n\n![ÜLOGO](logo.svg)\n\nÜREFERENCE-ÜSTYLE ÜIMAGE: ![ÜDIAGRAM ÜOF ÜTHE ÜRETENTION ÜFLOW][retention-diagram]\n\nÜINLINE ÜIMAGE ÜIN ÜA ÜSENTENCE: ÜSELECT ÜTHE ![ÜGEAR ÜICON](images/gear.svg) ÜTO ÜOPEN ÜTHE ÜSETTINGS.\n\n![ÜCHART: ÜUPLOADS ÜPER ÜHOUR, ÜPEAK ÜAT 14:00](charts/uploads_per_hour.jpeg)\n\n[retention-diagram]: diagrams/retention-flow.drawio.png \"ÜRETENTION ÜFLOW\"\n",
+ "reverted": [],
+ "anchors": []
+}

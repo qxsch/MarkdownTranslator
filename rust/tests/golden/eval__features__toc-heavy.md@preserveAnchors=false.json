@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/toc-heavy.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜSECURITY ÜBASELINE\n\n## ÜCONTENTS\n\n- [ÜOVERVIEW](#overview)\n- [ÜIDENTITY](#identity)\n  - [ÜMULTIFACTOR ÜAUTHENTICATION](#multifactor-authentication)\n  - [ÜCONDITIONAL ÜACCESS](#conditional-access)\n- [ÜDATA ÜPROTECTION](#data-protection)\n  - [ÜENCRYPTION](#encryption)\n  - [ÜSHARING ÜLINKS](#sharing-links)\n- [ÜMONITORING](#monitoring)\n\n## ÜOVERVIEW\n\nÜTHIS ÜBASELINE ÜLISTS ÜTHE ÜRECOMMENDED ÜSECURITY ÜSETTINGS ÜFOR ÜCONTOSO ÜSYNC.\n\n## ÜIDENTITY\n\n### ÜMULTIFACTOR ÜAUTHENTICATION\n\nÜREQUIRE ÜMULTIFACTOR ÜAUTHENTICATION ÜFOR ÜALL ÜUSERS.\n\n### ÜCONDITIONAL ÜACCESS\n\nÜALLOW ÜSIGN-ÜIN ÜONLY ÜFROM ÜMANAGED ÜDEVICES.\n\n## ÜDATA ÜPROTECTION\n\n### ÜENCRYPTION\n\nÜENCRYPTION ÜAT ÜREST ÜIS ÜALWAYS ÜON. ÜCUSTOMER-ÜMANAGED ÜKEYS ÜARE ÜOPTIONAL.\n\n### ÜSHARING ÜLINKS\n\nÜSET ÜTHE ÜDEFAULT ÜLINK ÜTYPE ÜTO **ÜPEOPLE ÜIN ÜYOUR ÜORGANIZATION**. ÜANONYMOUS ÜLINKS ÜSHOULD ÜEXPIRE ÜAFTER 7 ÜDAYS.\n\n## ÜMONITORING\n\nÜSEND ÜTHE ÜAUDIT ÜLOG ÜTO ÜYOUR ÜSIEM. ÜREVIEW [ÜSHARING ÜLINKS](#sharing-links) ÜEVERY ÜMONTH.\n",
+ "reverted": [],
+ "anchors": []
+}

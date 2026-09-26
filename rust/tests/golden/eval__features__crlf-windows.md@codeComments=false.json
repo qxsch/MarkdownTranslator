@@ -1,0 +1,208 @@
+{
+ "file": "eval/features/crlf-windows.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> line endings",
+   "original": "Windows line endings",
+   "sourceText": " line endings",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Windows"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Windows line endings\"",
+   "masked": "This file uses CRLF line endings. They must survive translation byte for byte.",
+   "original": "This file uses CRLF line endings. They must survive translation byte for byte.",
+   "sourceText": "This file uses CRLF line endings. They must survive translation byte for byte.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Windows line endings\"",
+   "masked": "Steps",
+   "original": "Steps",
+   "sourceText": "Steps",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Windows line endings > Steps\"",
+   "masked": "Open <g1>Control Panel</g1>.",
+   "original": "Open **Control Panel**.",
+   "sourceText": "Open Control Panel.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Windows line endings > Steps\"",
+   "masked": "Select <g1>Programs</g1> &gt; <g2>Uninstall a program</g2>.",
+   "original": "Select **Programs** > **Uninstall a program**.",
+   "sourceText": "Select Programs > Uninstall a program.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Windows line endings > Steps\"",
+   "masked": "Select <g1>Contoso Sync</g1> and then <g2>Uninstall</g2>.",
+   "original": "Select *Contoso Sync* and then **Uninstall**.",
+   "sourceText": "Select Contoso Sync and then Uninstall.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "emphasis: emphasis",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis\nstrong"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph in a blockquote",
+   "structure": "section \"Windows line endings > Steps\"",
+   "masked": "<x1/><x2/><g3>Your files in the cloud aren't deleted.</g3>",
+   "original": "[!NOTE]\r\n> Your files in the cloud aren't deleted.",
+   "sourceText": "Your files in the cloud aren't deleted.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[!NOTE]",
+    "x2": "line break [break]",
+    "g3": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 x2 g3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   22,
+   "s1"
+  ],
+  [
+   26,
+   104,
+   "s2"
+  ],
+  [
+   111,
+   116,
+   "s3"
+  ],
+  [
+   123,
+   146,
+   "s4"
+  ],
+  [
+   151,
+   197,
+   "s5"
+  ],
+  [
+   202,
+   247,
+   "s6"
+  ],
+  [
+   364,
+   414,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"windows-line-endings\"></a>Windows ÜLINE ÜENDINGS\r\n\r\nÜTHIS ÜFILE ÜUSES ÜCRLF ÜLINE ÜENDINGS. ÜTHEY ÜMUST ÜSURVIVE ÜTRANSLATION ÜBYTE ÜFOR ÜBYTE.\r\n\r\n## <a id=\"steps\"></a>ÜSTEPS\r\n\r\n1. ÜOPEN **ÜCONTROL ÜPANEL**.\r\n2. ÜSELECT **ÜPROGRAMS** > **ÜUNINSTALL ÜA ÜPROGRAM**.\r\n3. ÜSELECT *ÜCONTOSO ÜSYNC* ÜAND ÜTHEN **ÜUNINSTALL**.\r\n\r\n```powershell\r\n# Remove the leftover data folder\r\nRemove-Item -Recurse \"$env:LOCALAPPDATA\\ContosoSync\"\r\n```\r\n\r\n> [!NOTE]\r\n> ÜYOUR ÜFILES ÜIN ÜTHE ÜCLOUD ÜAREN'ÜT ÜDELETED.\r\n",
+ "reverted": [],
+ "anchors": [
+  "windows-line-endings",
+  "steps"
+ ]
+}

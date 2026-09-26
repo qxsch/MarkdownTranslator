@@ -1,0 +1,123 @@
+{
+ "file": "eval/features/code-comments-shell.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Scripts for administrators",
+   "original": "Scripts for administrators",
+   "sourceText": "Scripts for administrators",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Scripts for administrators\"",
+   "masked": "A Bash script that checks every device:",
+   "original": "A Bash script that checks every device:",
+   "sourceText": "A Bash script that checks every device:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Scripts for administrators\"",
+   "masked": "The same check in <x1/>:",
+   "original": "The same check in PowerShell:",
+   "sourceText": "The same check in :",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "PowerShell"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Scripts for administrators\"",
+   "masked": "A <x1/> batch file:",
+   "original": "A Windows batch file:",
+   "sourceText": "A  batch file:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Windows"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   28,
+   "s1"
+  ],
+  [
+   30,
+   69,
+   "s2"
+  ],
+  [
+   382,
+   411,
+   "s3"
+  ],
+  [
+   839,
+   860,
+   "s4"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"scripts-for-administrators\"></a>ÜSCRIPTS ÜFOR ÜADMINISTRATORS\n\nÜA ÜBASH ÜSCRIPT ÜTHAT ÜCHECKS ÜEVERY ÜDEVICE:\n\n```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\n# Stop on the first device that fails\nfor host in $(cat hosts.txt); do\n  ssh \"$host\" ctsync status --json > \"status-$host.json\"  # one file per device\ndone\n\n# Print a summary\njq -s 'map(.state) | group_by(.) | map({state: .[0], count: length})' status-*.json\n```\n\nÜTHE ÜSAME ÜCHECK ÜIN PowerShell:\n\n```powershell\n<#\n.SYNOPSIS\n  Collects the sync status from all devices.\n.DESCRIPTION\n  Reads the device names from hosts.txt and writes one JSON file per device.\n#>\nparam([string]$HostFile = 'hosts.txt')\n\n# Collect the results in a list\n$results = foreach ($h in Get-Content $HostFile) {\n    Invoke-Command -ComputerName $h { ctsync status --json }  # runs remotely\n}\n$results | ConvertTo-Json | Set-Content summary.json\n```\n\nÜA Windows ÜBATCH ÜFILE:\n\n```bat\n@echo off\nREM Restart the sync service\nnet stop ContosoSync\nnet start ContosoSync\n:: Done\n```\n",
+ "reverted": [],
+ "anchors": [
+  "scripts-for-administrators"
+ ]
+}

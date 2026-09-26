@@ -1,0 +1,191 @@
+{
+ "file": "eval/features/docstrings-doctest.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: paths",
+   "original": "Python SDK reference: paths",
+   "sourceText": " SDK reference: paths",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: paths\"; python code block",
+   "masked": "Return the canonical form of a sync path.",
+   "original": "Return the canonical form of a sync path.",
+   "sourceText": "Return the canonical form of a sync path.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: paths\"; python code block",
+   "masked": "Backslashes become forward slashes and duplicate separators are removed.",
+   "original": "Backslashes become forward slashes and duplicate separators are\n    removed.",
+   "sourceText": "Backslashes become forward slashes and duplicate separators are removed.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 67,
+    "firstColumn": 4,
+    "prefix": "    ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: paths\"; python code block",
+   "masked": "Use it before you compare two paths<x1/>",
+   "original": "Use it before you compare two paths::",
+   "sourceText": "Use it before you compare two paths",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "::"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: paths\"; python code block",
+   "masked": "The function never touches the file system.",
+   "original": "The function never touches the file system.",
+   "sourceText": "The function never touches the file system.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK reference: paths\"; python code block",
+   "masked": "Check whether a file name is hidden on the current platform.",
+   "original": "Check whether a file name is hidden on the current platform.",
+   "sourceText": "Check whether a file name is hidden on the current platform.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "'''",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   29,
+   "s1"
+  ],
+  [
+   69,
+   110,
+   "s2"
+  ],
+  [
+   116,
+   192,
+   "s3"
+  ],
+  [
+   295,
+   332,
+   "s4"
+  ],
+  [
+   411,
+   454,
+   "s5"
+  ],
+  [
+   493,
+   553,
+   "s6"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-paths\"></a>Python ÜSDK ÜREFERENCE: ÜPATHS\n\n```python\ndef normalize(path):\n    \"\"\"ÜRETURN ÜTHE ÜCANONICAL ÜFORM ÜOF ÜA ÜSYNC ÜPATH.\n\n    ÜBACKSLASHES ÜBECOME ÜFORWARD ÜSLASHES ÜAND ÜDUPLICATE\n    ÜSEPARATORS ÜARE ÜREMOVED.\n\n    >>> normalize(\"docs\\\\\\\\reports//2026\")\n    'docs/reports/2026'\n    >>> normalize(\"\")\n    ''\n\n    ÜUSE ÜIT ÜBEFORE ÜYOU ÜCOMPARE ÜTWO ÜPATHS::\n\n        if normalize(a) == normalize(b):\n            print(\"same file\")\n\n    ÜTHE ÜFUNCTION ÜNEVER ÜTOUCHES ÜTHE ÜFILE ÜSYSTEM.\n    \"\"\"\n\n\ndef is_hidden(name):\n    '''ÜCHECK ÜWHETHER ÜA ÜFILE ÜNAME ÜIS ÜHIDDEN ÜON ÜTHE ÜCURRENT ÜPLATFORM.'''\n    return name.startswith(\".\")\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-paths"
+ ]
+}

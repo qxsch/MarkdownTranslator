@@ -1,0 +1,15 @@
+{
+ "file": "rust/tests/fixtures/gfm-table-rows.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜTABLE ÜROWS ÜWITHOUT ÜA ÜLEADING ÜPIPE\n\nÜBODY ÜROWS ÜMAY ÜSTART ÜWITH ÜCHARACTERS ÜTHAT ÜOPEN ÜOTHER ÜCONSTRUCTS; ÜTHEY ÜSTAY ÜROWS ÜUNLESS ÜTHAT ÜCONSTRUCT ÜMATCHES.\n\n| ÜNAME | ÜMEANING |\n| ---- | ------- |\nÜITEM | ÜSTARTS ÜWITH ÜTHE ÜLETTER ÜI\nÜEXAMPLE | ÜSTARTS ÜWITH ÜTHE ÜLETTER ÜE\n`code` | ÜSTARTS ÜWITH ÜA ÜBACKTICK\n~~ÜSTRUCK~~ | ÜSTARTS ÜWITH ÜA ÜTILDE\n*ÜEMPHASIS* | ÜSTARTS ÜWITH ÜAN ÜASTERISK\n**ÜSTRONG** | ÜSTARTS ÜWITH ÜTWO ÜASTERISKS\n_ÜEMPHASIS_ | ÜSTARTS ÜWITH ÜAN ÜUNDERSCORE\n#ÜHASH | ÜSTARTS ÜWITH ÜA ÜNUMBER ÜSIGN\n{braces} | ÜSTARTS ÜWITH ÜA ÜBRACE\n$x$ | ÜSTARTS ÜWITH ÜA ÜDOLLAR ÜSIGN\nÜPLAIN | ÜA ÜCONTROL ÜROW\n\nÜOPTION | ÜEFFECT\n--- | ---\nÜIMPORT-ÜMAP | ÜNOT ÜAN ÜIMPORT ÜSTATEMENT\nÜEXPORT-ÜREADY | ÜNOT ÜAN ÜEXPORT ÜSTATEMENT\nÜINDEXED | ÜSTILL ÜA ÜROW\n## ÜHEADING | ÜA ÜHEADING ÜENDS ÜTHE ÜTABLE\n\nÜAFTER ÜTHE ÜHEADING, ÜA ÜPARAGRAPH.\n\n> ÜQUOTE | ÜCELL\n> --- | ---\n> ÜINSIDE | ÜA ÜBLOCK ÜQUOTE\n> `quoted` | ÜWITH ÜA ÜCODE ÜSPAN\n\n- ÜKEY | ÜVALUE\n  --- | ---\n  ÜENTRY | ÜIN ÜA ÜLIST ÜITEM\n  *ÜNESTED* | ÜWITH ÜEMPHASIS\n\nÜTEXT ÜAFTER ÜTHE ÜTABLES.\n",
+ "reverted": [],
+ "anchors": []
+}

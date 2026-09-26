@@ -6,3 +6,4 @@ dist/
 eval/results/
 *.log
 out/
+rust/target/

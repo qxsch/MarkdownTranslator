@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/links-and-references.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜLINKS ÜAND ÜREFERENCES\n\nÜREAD ÜTHE [ÜINSTALLATION ÜGUIDE][install] ÜFIRST, ÜTHEN ÜTHE [ÜCONFIGURATION ÜGUIDE][configuration guide].\n\nÜAUTOLINKS ÜSUCH ÜAS <https://contoso.example/status> ÜAND ÜBARE URLs ÜLIKE https://contoso.example/docs ÜSTAY ÜUNCHANGED.\n\nÜCONTACT [ÜTHE ÜSUPPORT ÜTEAM](mailto:support@contoso.example \"ÜSEND ÜAN ÜE-ÜMAIL ÜTO ÜSUPPORT\") ÜIF ÜYOU ÜNEED ÜHELP.\n\nÜA ÜSHORTCUT ÜREFERENCE ÜTO [ÜCONTOSO ÜSYNC][Contoso Sync] ÜAND ÜA ÜCOLLAPSED ÜONE ÜTO [ÜCONTOSO ÜPORTAL][Contoso Portal].\n\nÜLINKS ÜWITH ÜFORMATTING: [**ÜTHE ÜADMIN ÜCENTER**](https://admin.contoso.example) ÜAND [`ctsync status`](cli-reference.md#commands).\n\nÜA ÜLINK ÜWITH ÜA ÜTITLE: [ÜPRICING](https://contoso.example/pricing \"ÜCOMPARE ÜTHE ÜPLANS\").\n\nÜAN ÜIMAGE ÜLINK: [![ÜBUILD ÜSTATUS](https://ci.example/badge.svg)](https://ci.example/build)\n\n[install]: https://contoso.example/install \"ÜINSTALLATION ÜGUIDE\"\n[configuration guide]: ./configure.md\n[Contoso Sync]: https://contoso.example/sync\n[Contoso Portal]: https://portal.contoso.example \"ÜOPEN ÜTHE ÜPORTAL\"\n",
+ "reverted": [],
+ "anchors": []
+}

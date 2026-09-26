@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/math-prices.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜPRICING\n\nÜTHE ÜTEAM ÜPLAN ÜCOSTS $5 ÜPER ÜUSER ÜAND ÜMONTH, ÜAND ÜTHE ÜENTERPRISE ÜPLAN ÜCOSTS $12 ÜPER ÜUSER ÜAND ÜMONTH.\n\nÜSTORAGE ÜADD-ÜONS ÜCOST $2 ÜFOR 100 ÜGB ÜAND $15 ÜFOR 1 ÜTB.\n\nÜIF ÜYOU ÜPAY ÜYEARLY, ÜYOU ÜSAVE $10 ÜPER ÜUSER, ÜSO ÜTHE ÜTEAM ÜPLAN ÜCOSTS $50 ÜAND ÜNOT $60.\n\nÜSHELL ÜUSERS ÜCAN ÜREAD ÜTHE ÜPRICE ÜFROM ÜTHE ÜAPI ÜWITH `curl -s $API/prices | jq .team` ÜAND ÜSTORE ÜIT ÜIN $PRICE ÜFOR ÜLATER.\n\nÜEDUCATION ÜCUSTOMERS ÜGET ÜA 50% ÜDISCOUNT: $2.50 ÜINSTEAD ÜOF $5.\n\nÜPRICES ÜIN ÜOTHER ÜCURRENCIES ÜARE ÜSHOWN ÜAT ÜCHECKOUT. ÜTAXES ÜSUCH ÜAS ÜVAT ÜARE ÜADDED ÜWHERE ÜREQUIRED.\n\nÜCOMPARE: ÜBETWEEN $5 ÜAND $12 ÜPER ÜSEAT, ÜDEPENDING ÜON ÜTHE ÜPLAN.\n",
+ "reverted": [],
+ "anchors": []
+}

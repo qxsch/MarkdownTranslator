@@ -1,0 +1,218 @@
+{
+ "file": "eval/features/math-prices.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Pricing",
+   "original": "Pricing",
+   "sourceText": "Pricing",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Pricing\"",
+   "masked": "The Team plan costs $5 per user and month, and the Enterprise plan costs $12 per user and month.",
+   "original": "The Team plan costs $5 per user and month, and the Enterprise plan costs $12 per user and month.",
+   "sourceText": "The Team plan costs $5 per user and month, and the Enterprise plan costs $12 per user and month.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Pricing\"",
+   "masked": "Storage add-ons cost $2 for 100 GB and $15 for 1 TB.",
+   "original": "Storage add-ons cost $2 for 100 GB and $15 for 1 TB.",
+   "sourceText": "Storage add-ons cost $2 for 100 GB and $15 for 1 TB.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Pricing\"",
+   "masked": "If you pay yearly, you save $10 per user, so the Team plan costs $50 and not $60.",
+   "original": "If you pay yearly, you save $10 per user, so the Team plan costs $50 and not $60.",
+   "sourceText": "If you pay yearly, you save $10 per user, so the Team plan costs $50 and not $60.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Pricing\"",
+   "masked": "Shell users can read the price from the API with <x1/> and store it in <x2/> for later.",
+   "original": "Shell users can read the price from the API with `curl -s $API/prices | jq .team` and store it in $PRICE for later.",
+   "sourceText": "Shell users can read the price from the API with  and store it in  for later.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`curl -s $API/prices | jq .team`",
+    "x2": "$PRICE"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:curl -s $API/prices | jq .team"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Pricing\"",
+   "masked": "Education customers get a 50% discount: $2.50 instead of $5.",
+   "original": "Education customers get a 50% discount: $2.50 instead of $5.",
+   "sourceText": "Education customers get a 50% discount: $2.50 instead of $5.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Pricing\"",
+   "masked": "Prices in other currencies are shown at checkout. Taxes such as VAT are added where required.",
+   "original": "Prices in other currencies are shown at checkout. Taxes such as VAT are added where required.",
+   "sourceText": "Prices in other currencies are shown at checkout. Taxes such as VAT are added where required.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Pricing\"",
+   "masked": "Compare: between $5 and $12 per seat, depending on the plan.",
+   "original": "Compare: between $5 and $12 per seat, depending on the plan.",
+   "sourceText": "Compare: between $5 and $12 per seat, depending on the plan.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   9,
+   "s1"
+  ],
+  [
+   11,
+   107,
+   "s2"
+  ],
+  [
+   109,
+   161,
+   "s3"
+  ],
+  [
+   163,
+   244,
+   "s4"
+  ],
+  [
+   246,
+   361,
+   "s5"
+  ],
+  [
+   363,
+   423,
+   "s6"
+  ],
+  [
+   425,
+   518,
+   "s7"
+  ],
+  [
+   520,
+   580,
+   "s8"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"pricing\"></a>ÜPRICING\n\nÜTHE ÜTEAM ÜPLAN ÜCOSTS $5 ÜPER ÜUSER ÜAND ÜMONTH, ÜAND ÜTHE ÜENTERPRISE ÜPLAN ÜCOSTS $12 ÜPER ÜUSER ÜAND ÜMONTH.\n\nÜSTORAGE ÜADD-ÜONS ÜCOST $2 ÜFOR 100 ÜGB ÜAND $15 ÜFOR 1 ÜTB.\n\nÜIF ÜYOU ÜPAY ÜYEARLY, ÜYOU ÜSAVE $10 ÜPER ÜUSER, ÜSO ÜTHE ÜTEAM ÜPLAN ÜCOSTS $50 ÜAND ÜNOT $60.\n\nÜSHELL ÜUSERS ÜCAN ÜREAD ÜTHE ÜPRICE ÜFROM ÜTHE ÜAPI ÜWITH `curl -s $API/prices | jq .team` ÜAND ÜSTORE ÜIT ÜIN $PRICE ÜFOR ÜLATER.\n\nÜEDUCATION ÜCUSTOMERS ÜGET ÜA 50% ÜDISCOUNT: $2.50 ÜINSTEAD ÜOF $5.\n\nÜPRICES ÜIN ÜOTHER ÜCURRENCIES ÜARE ÜSHOWN ÜAT ÜCHECKOUT. ÜTAXES ÜSUCH ÜAS ÜVAT ÜARE ÜADDED ÜWHERE ÜREQUIRED.\n\nÜCOMPARE: ÜBETWEEN $5 ÜAND $12 ÜPER ÜSEAT, ÜDEPENDING ÜON ÜTHE ÜPLAN.\n",
+ "reverted": [],
+ "anchors": [
+  "pricing"
+ ]
+}

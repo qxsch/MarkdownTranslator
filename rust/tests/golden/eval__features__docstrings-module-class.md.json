@@ -1,0 +1,215 @@
+{
+ "file": "eval/features/docstrings-module-class.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK internals",
+   "original": "Python SDK internals",
+   "sourceText": " SDK internals",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK internals\"; python code block",
+   "masked": "Helpers for the local cache.",
+   "original": "Helpers for the local cache.",
+   "sourceText": "Helpers for the local cache.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK internals\"; python code block",
+   "masked": "The cache stores block hashes so that unchanged blocks are not uploaded again.",
+   "original": "The cache stores block hashes so that unchanged blocks are not uploaded again.",
+   "sourceText": "The cache stores block hashes so that unchanged blocks are not uploaded again.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK internals\"; python code block",
+   "masked": "A persistent map from block hash to upload state.",
+   "original": "A persistent map from block hash to upload state.",
+   "sourceText": "A persistent map from block hash to upload state.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK internals\"; python code block",
+   "masked": "Open or create the cache database at <x1/>.",
+   "original": "Open or create the cache database at ``path``.",
+   "sourceText": "Open or create the cache database at .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "``path``"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK internals\"; python code block",
+   "masked": "Return True if the block with this digest was uploaded before.",
+   "original": "Return True if the block with this digest was uploaded before.",
+   "sourceText": "Return True if the block with this digest was uploaded before.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Python SDK internals\"; python code block",
+   "masked": "The digest is a hex string such as <x1/>; raw strings keep the backslash.",
+   "original": "The digest is a hex string such as ``a3f\\x00``; raw strings keep the backslash.",
+   "sourceText": "The digest is a hex string such as ; raw strings keep the backslash.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "``a3f\\x00``"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   22,
+   "s1"
+  ],
+  [
+   37,
+   65,
+   "s2"
+  ],
+  [
+   67,
+   145,
+   "s3"
+  ],
+  [
+   193,
+   242,
+   "s4"
+  ],
+  [
+   288,
+   334,
+   "s5"
+  ],
+  [
+   420,
+   482,
+   "s6"
+  ],
+  [
+   492,
+   571,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-internals\"></a>Python ÜSDK ÜINTERNALS\n\n```python\n\"\"\"ÜHELPERS ÜFOR ÜTHE ÜLOCAL ÜCACHE.\n\nÜTHE ÜCACHE ÜSTORES ÜBLOCK ÜHASHES ÜSO ÜTHAT ÜUNCHANGED ÜBLOCKS ÜARE ÜNOT ÜUPLOADED ÜAGAIN.\n\"\"\"\n\nimport sqlite3\n\n\nclass BlockCache:\n    \"\"\"ÜA ÜPERSISTENT ÜMAP ÜFROM ÜBLOCK ÜHASH ÜTO ÜUPLOAD ÜSTATE.\"\"\"\n\n    def __init__(self, path):\n        \"\"\"ÜOPEN ÜOR ÜCREATE ÜTHE ÜCACHE ÜDATABASE ÜAT ``path``.\"\"\"\n        self._db = sqlite3.connect(path)\n\n    def seen(self, digest):\n        r\"\"\"ÜRETURN ÜTRUE ÜIF ÜTHE ÜBLOCK ÜWITH ÜTHIS ÜDIGEST ÜWAS ÜUPLOADED ÜBEFORE.\n\n        ÜTHE ÜDIGEST ÜIS ÜA ÜHEX ÜSTRING ÜSUCH ÜAS ``a3f\\x00``; ÜRAW ÜSTRINGS ÜKEEP ÜTHE ÜBACKSLASH.\n        \"\"\"\n        row = self._db.execute(\"SELECT 1 FROM blocks WHERE digest = ?\", (digest,)).fetchone()\n        return row is not None\n\n    def clear(self):\n        message = f\"\"\"Clearing {self._db} is not a docstring and must stay unchanged.\"\"\"\n        self._db.execute(\"DELETE FROM blocks\")\n        return message\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-internals"
+ ]
+}

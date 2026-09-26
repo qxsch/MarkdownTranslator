@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/docstrings-doctest.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# Python ÜSDK ÜREFERENCE: ÜPATHS\n\n```python\ndef normalize(path):\n    \"\"\"ÜRETURN ÜTHE ÜCANONICAL ÜFORM ÜOF ÜA ÜSYNC ÜPATH.\n\n    ÜBACKSLASHES ÜBECOME ÜFORWARD ÜSLASHES ÜAND ÜDUPLICATE\n    ÜSEPARATORS ÜARE ÜREMOVED.\n\n    >>> normalize(\"docs\\\\\\\\reports//2026\")\n    'docs/reports/2026'\n    >>> normalize(\"\")\n    ''\n\n    ÜUSE ÜIT ÜBEFORE ÜYOU ÜCOMPARE ÜTWO ÜPATHS::\n\n        if normalize(a) == normalize(b):\n            print(\"same file\")\n\n    ÜTHE ÜFUNCTION ÜNEVER ÜTOUCHES ÜTHE ÜFILE ÜSYSTEM.\n    \"\"\"\n\n\ndef is_hidden(name):\n    '''ÜCHECK ÜWHETHER ÜA ÜFILE ÜNAME ÜIS ÜHIDDEN ÜON ÜTHE ÜCURRENT ÜPLATFORM.'''\n    return name.startswith(\".\")\n```\n",
+ "reverted": [],
+ "anchors": []
+}

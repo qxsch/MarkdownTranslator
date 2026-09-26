@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/identifiers-env.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜENVIRONMENT ÜAND ÜIDENTIFIERS\n\nÜSET `CTSYNC_HOME` ÜTO ÜCHANGE ÜTHE ÜDATA ÜFOLDER. ÜON Windows, ÜTHE ÜDEFAULT ÜIS `%LOCALAPPDATA%\\ContosoSync`; ÜON Linux ÜIT'ÜS `$HOME/.ctsync`.\n\nÜTHE ÜCLIENT ÜREADS ÜTHE ÜPROXY ÜFROM HTTPS_PROXY ÜAND ÜIGNORES NO_PROXY ÜENTRIES ÜTHAT ÜCONTAIN ÜWILDCARDS.\n\nÜUSE ÜTHE ÜCMDLET Get-CtSyncStatus ÜTO ÜCHECK ÜTHE ÜSTATE ÜFROM PowerShell, ÜOR ÜCALL ÜTHE ÜMETHOD getSyncStatus() ÜFROM ÜTHE JavaScript ÜSDK. ÜTHE Python ÜSDK ÜNAMES ÜIT get_sync_status.\n\nÜTHE ÜFLAG --max-retries ÜACCEPTS ÜVALUES ÜFROM 0 ÜTO 10. ÜTHE ÜOPTION maxRetries ÜIN `config.toml` ÜDOES ÜTHE ÜSAME.\n\nÜCONNECTION ÜSTRINGS ÜLOOK ÜLIKE `Endpoint=https://sync.contoso.example;SharedAccessKey=<key>`. ÜREPLACE `${TENANT_ID}` ÜWITH ÜYOUR ÜTENANT ÜID, ÜFOR ÜEXAMPLE 00000000-0000-0000-0000-000000000000.\n\nÜVERSION 3.2.0-beta.1 ÜINTRODUCED ÜTHE ÜSETTING `upload.parallelism`; ÜVERSION v3.2.1 ÜRAISED ÜITS ÜDEFAULT ÜTO 8.\n",
+ "reverted": [],
+ "anchors": []
+}

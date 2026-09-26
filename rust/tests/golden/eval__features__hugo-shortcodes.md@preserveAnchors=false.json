@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/hugo-shortcodes.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: \"ÜARCHITECTURE\"\nweight: 20\n---\n\n# ÜARCHITECTURE\n\n{{< figure src=\"images/architecture.png\" title=\"ÜHOW ÜTHE ÜCLIENT ÜTALKS ÜTO ÜTHE ÜSERVICE\" alt=\"ÜARCHITECTURE ÜDIAGRAM\" >}}\n\nÜTHE ÜCLIENT ÜUPLOADS ÜCHANGES ÜTO ÜTHE ÜGATEWAY. ÜTHE ÜGATEWAY ÜWRITES ÜTHEM ÜTO ÜTHE ÜQUEUE.\n\n{{% notice info %}}\nÜTHE ÜGATEWAY ÜIS ÜSTATELESS, ÜSO ÜYOU ÜCAN ÜRUN ÜAS ÜMANY ÜINSTANCES ÜAS ÜYOU ÜNEED.\n{{% /notice %}}\n\n{{< tabs >}}\n{{< tab name=\"Linux\" >}}\nÜINSTALL ÜTHE ÜPACKAGE ÜWITH `apt install ctsync`.\n{{< /tab >}}\n{{< tab name=\"Windows\" >}}\nÜINSTALL ÜTHE ÜPACKAGE ÜWITH `winget install Contoso.Sync`.\n{{< /tab >}}\n{{< /tabs >}}\n\n{{< youtube id=\"abc123\" title=\"ÜARCHITECTURE ÜWALKTHROUGH\" >}}\n\nÜSEE ÜALSO {{< ref \"operations/scaling.md\" >}} ÜFOR ÜSCALING ÜGUIDANCE.\n",
+ "reverted": [],
+ "anchors": []
+}

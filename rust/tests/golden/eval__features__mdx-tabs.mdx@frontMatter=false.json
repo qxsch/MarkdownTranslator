@@ -1,0 +1,245 @@
+{
+ "file": "eval/features/mdx-tabs.mdx",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": false,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Install the client",
+   "original": "Install the client",
+   "sourceText": "Install the client",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"",
+   "masked": "Pick your operating system.",
+   "original": "Pick your operating system.",
+   "sourceText": "Pick your operating system.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"; inside <Tabs> component; inside <TabItem> component",
+   "masked": "Install the <g1>client</g1> with winget: <x2/>.",
+   "original": "Install the **client** with winget: `winget install Contoso.Sync`.",
+   "sourceText": "Install the client with winget: .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "`winget install Contoso.Sync`",
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:winget install Contoso.Sync\nstrong"
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"; inside <Tabs> component; inside <TabItem> component",
+   "masked": "Install the client with Homebrew: <x1/>.",
+   "original": "Install the client with Homebrew: `brew install --cask contoso-sync`.",
+   "sourceText": "Install the client with Homebrew: .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`brew install --cask contoso-sync`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:brew install --cask contoso-sync"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"; inside <Tabs> component; inside <TabItem> component",
+   "masked": "Download the package from the release page.",
+   "original": "Download the package from the release page.",
+   "sourceText": "Download the package from the release page.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "<Callout> component, HTML title attribute",
+   "structure": "section \"Install the client\"",
+   "masked": "Restart required",
+   "original": "Restart required",
+   "sourceText": "Restart required",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "html",
+   "textContext": "html",
+   "note": "<Callout> component attributes",
+   "structure": "section \"Install the client\"",
+   "masked": "<x1/>",
+   "original": "<Callout type=\"warning\" title=\"Restart required\">",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s6"
+   ],
+   "tags": {
+    "x1": "<Callout type=\"warning\" title=\"Restart required\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"; inside <Callout> component",
+   "masked": "After the installation, restart your computer.",
+   "original": "After the installation, restart your computer.",
+   "sourceText": "After the installation, restart your computer.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Install the client\"",
+   "masked": "The current version is <x1/>.",
+   "original": "The current version is {props.version}.",
+   "sourceText": "The current version is .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{props.version}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "expr:props.version"
+  }
+ ],
+ "replacements": [
+  [
+   108,
+   126,
+   "s1"
+  ],
+  [
+   128,
+   155,
+   "s2"
+  ],
+  [
+   229,
+   295,
+   "s3"
+  ],
+  [
+   351,
+   420,
+   "s4"
+  ],
+  [
+   478,
+   521,
+   "s5"
+  ],
+  [
+   544,
+   593,
+   "s7"
+  ],
+  [
+   594,
+   640,
+   "s8"
+  ],
+  [
+   653,
+   692,
+   "s9"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: Install the client\n---\n\nimport Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';\n\n# <a id=\"install-the-client\"></a>ÜINSTALL ÜTHE ÜCLIENT\n\nÜPICK ÜYOUR ÜOPERATING ÜSYSTEM.\n\n<Tabs groupId=\"os\">\n  <TabItem value=\"win\" label=\"Windows\" default>\n    ÜINSTALL ÜTHE **ÜCLIENT** ÜWITH ÜWINGET: `winget install Contoso.Sync`.\n  </TabItem>\n  <TabItem value=\"mac\" label=\"macOS\">\n    ÜINSTALL ÜTHE ÜCLIENT ÜWITH ÜHOMEBREW: `brew install --cask contoso-sync`.\n  </TabItem>\n  <TabItem value=\"linux\" label=\"Linux\">\n    ÜDOWNLOAD ÜTHE ÜPACKAGE ÜFROM ÜTHE ÜRELEASE ÜPAGE.\n  </TabItem>\n</Tabs>\n\n<Callout type=\"warning\" title=\"ÜRESTART ÜREQUIRED\">\nÜAFTER ÜTHE ÜINSTALLATION, ÜRESTART ÜYOUR ÜCOMPUTER.\n</Callout>\n\nÜTHE ÜCURRENT ÜVERSION ÜIS {props.version}.\n",
+ "reverted": [],
+ "anchors": [
+  "install-the-client"
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "file": "test/fixtures/component.mdx",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "import Tabs from '@theme/Tabs';\n\n# ÜMDX ÜGUIDE\n\n<Tabs groupId=\"os\">\n  <Tab label=\"Windows\" value=\"win\">\n    ÜINSTALL ÜTHE **ÜTOOL** ÜWITH ÜWINGET.\n  </Tab>\n</Tabs>\n\nÜUSE <Highlight color=\"#25c2a0\">ÜGREEN ÜTEXT</Highlight> ÜAND {props.version}.\n\n<Callout title=\"ÜHEADS ÜUP\" type=\"warning\" />\n\nexport const meta = { title: 'Not translated' };\n",
+ "reverted": [],
+ "anchors": []
+}

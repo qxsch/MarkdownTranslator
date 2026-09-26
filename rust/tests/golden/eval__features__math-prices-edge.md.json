@@ -1,0 +1,171 @@
+{
+ "file": "eval/features/math-prices-edge.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Billing examples",
+   "original": "Billing examples",
+   "sourceText": "Billing examples",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Billing examples\"",
+   "masked": "Most customers pay between $4 and $12 per user each month. The Team plan is $5/month per user, and the Enterprise plan is $1,299.99 per year for up to 20 users.",
+   "original": "Most customers pay between $4 and $12 per user each month. The Team plan is $5/month per user, and the Enterprise plan is $1,299.99 per year for up to 20 users.",
+   "sourceText": "Most customers pay between $4 and $12 per user each month. The Team plan is $5/month per user, and the Enterprise plan is $1,299.99 per year for up to 20 users.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Billing examples\"",
+   "masked": "A price range such as $5-$10 is shown on the pricing page. Discounts of US$20 apply to yearly contracts, and the setup fee of $0 is waived for nonprofits.",
+   "original": "A price range such as $5-$10 is shown on the pricing page. Discounts of US$20 apply to yearly contracts, and the setup fee of $0 is waived for nonprofits.",
+   "sourceText": "A price range such as $5-$10 is shown on the pricing page. Discounts of US$20 apply to yearly contracts, and the setup fee of $0 is waived for nonprofits.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Billing examples\"",
+   "masked": "If you downgrade, you pay $3 less per user and save $36 per year.",
+   "original": "If you downgrade, you pay $3 less per user and save $36 per year.",
+   "sourceText": "If you downgrade, you pay $3 less per user and save $36 per year.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Billing examples\"",
+   "masked": "Scripts can read your plan with <x1/> and store the total in <x2/>, or export it to <x3/> for accounting.",
+   "original": "Scripts can read your plan with `ctsync billing show` and store the total in $TOTAL, or export it to $HOME/billing.csv for accounting.",
+   "sourceText": "Scripts can read your plan with  and store the total in , or export it to  for accounting.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`ctsync billing show`",
+    "x2": "$TOTAL",
+    "x3": "$HOME/billing.csv"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:ctsync billing show"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Billing examples\"",
+   "masked": "Invoices list amounts like $49.00 and $149.00 separately for each workspace.",
+   "original": "Invoices list amounts like $49.00 and $149.00 separately for each workspace.",
+   "sourceText": "Invoices list amounts like $49.00 and $149.00 separately for each workspace.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   18,
+   "s1"
+  ],
+  [
+   20,
+   180,
+   "s2"
+  ],
+  [
+   182,
+   336,
+   "s3"
+  ],
+  [
+   338,
+   403,
+   "s4"
+  ],
+  [
+   405,
+   539,
+   "s5"
+  ],
+  [
+   541,
+   617,
+   "s6"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"billing-examples\"></a>ÜBILLING ÜEXAMPLES\n\nÜMOST ÜCUSTOMERS ÜPAY ÜBETWEEN $4 ÜAND $12 ÜPER ÜUSER ÜEACH ÜMONTH. ÜTHE ÜTEAM ÜPLAN ÜIS $5/ÜMONTH ÜPER ÜUSER, ÜAND ÜTHE ÜENTERPRISE ÜPLAN ÜIS $1,299.99 ÜPER ÜYEAR ÜFOR ÜUP ÜTO 20 ÜUSERS.\n\nÜA ÜPRICE ÜRANGE ÜSUCH ÜAS $5-$10 ÜIS ÜSHOWN ÜON ÜTHE ÜPRICING ÜPAGE. ÜDISCOUNTS ÜOF ÜUS$20 ÜAPPLY ÜTO ÜYEARLY ÜCONTRACTS, ÜAND ÜTHE ÜSETUP ÜFEE ÜOF $0 ÜIS ÜWAIVED ÜFOR ÜNONPROFITS.\n\nÜIF ÜYOU ÜDOWNGRADE, ÜYOU ÜPAY $3 ÜLESS ÜPER ÜUSER ÜAND ÜSAVE $36 ÜPER ÜYEAR.\n\nÜSCRIPTS ÜCAN ÜREAD ÜYOUR ÜPLAN ÜWITH `ctsync billing show` ÜAND ÜSTORE ÜTHE ÜTOTAL ÜIN $TOTAL, ÜOR ÜEXPORT ÜIT ÜTO $HOME/billing.csv ÜFOR ÜACCOUNTING.\n\nÜINVOICES ÜLIST ÜAMOUNTS ÜLIKE $49.00 ÜAND $149.00 ÜSEPARATELY ÜFOR ÜEACH ÜWORKSPACE.\n",
+ "reverted": [],
+ "anchors": [
+  "billing-examples"
+ ]
+}

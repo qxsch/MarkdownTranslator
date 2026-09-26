@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/mdx-expressions.mdx",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "import { Chart } from '../components/Chart';\nexport const meta = { owner: 'sre-team', reviewed: '2026-08-14' };\n\n# ÜSYNC ÜSTATISTICS\n\nÜTHIS ÜPAGE ÜSHOWS ÜLIVE ÜDATA. ÜIT ÜWAS ÜLAST ÜREVIEWED ÜON {meta.reviewed}.\n\n<Chart source=\"/api/stats/uploads\" title=\"ÜUPLOADS ÜPER ÜHOUR\" height={320} />\n\nÜTHE ÜCHART ÜABOVE ÜUPDATES ÜEVERY {60} ÜSECONDS. ÜHOVER ÜOVER ÜA ÜBAR ÜTO ÜSEE ÜTHE ÜEXACT ÜVALUE.\n\n{/* Editors: the next section is generated, don't edit it by hand. */}\n\n## ÜTOP ÜFOLDERS\n\nÜTHE ÜFOLDERS ÜWITH ÜTHE ÜMOST ÜCHANGES ÜTODAY ÜARE ÜLISTED ÜBELOW.\n\n<FolderTable limit={10} sortBy=\"changes\" emptyText=\"ÜNO ÜCHANGES ÜTODAY\" />\n\nÜVALUES ÜARE ÜROUNDED ÜTO {2} ÜDECIMAL ÜPLACES.\n",
+ "reverted": [],
+ "anchors": []
+}

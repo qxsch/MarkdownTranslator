@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/ambiguous-words.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜWORKING ÜWITH ÜRECORDS\n\n## ÜMATCH\n\nÜSELECT **ÜMATCH** ÜTO ÜFIND ÜRECORDS ÜWITH ÜTHE ÜSAME ÜE-ÜMAIL ÜADDRESS. ÜMATCHES ÜARE ÜSHOWN ÜIN ÜA ÜTABLE.\n\n## ÜSCALE\n\nÜUSE **ÜSCALE** ÜTO ÜCHANGE ÜTHE ÜNUMBER ÜOF ÜWORKERS. ÜA ÜHIGHER ÜSCALE ÜPROCESSES ÜMORE ÜRECORDS ÜAT ÜTHE ÜSAME ÜTIME.\n\n## ÜTABLE\n\n- **ÜFREEZE**: ÜKEEPS ÜTHE ÜFIRST ÜCOLUMN ÜVISIBLE ÜWHILE ÜYOU ÜSCROLL.\n- **ÜDROP**: ÜREMOVES ÜTHE ÜTABLE ÜAND ÜALL ÜRECORDS ÜIN ÜIT.\n- **ÜSORT**: ÜORDERS ÜTHE ÜROWS ÜBY ÜTHE ÜSELECTED ÜCOLUMN.\n- **ÜFILTER**: ÜSHOWS ÜONLY ÜROWS ÜTHAT ÜMEET ÜA ÜCONDITION.\n\n## ÜRECORD\n\n1. ÜSELECT **ÜRECORD**.\n2. ÜPERFORM ÜTHE ÜSTEPS ÜTHAT ÜYOU ÜWANT ÜTO ÜREPEAT.\n3. ÜSELECT **ÜSTOP**.\n\nÜTHE ÜRECORDED ÜSTEPS ÜARE ÜSAVED ÜAS ÜA ÜMACRO.\n\n## ÜPARK\n\nÜWHEN ÜA ÜRECORD ÜCAN'ÜT ÜBE ÜPROCESSED, ÜIT'ÜS ÜPARKED. ÜPARKED ÜRECORDS ÜWAIT ÜIN ÜA ÜSEPARATE ÜQUEUE ÜUNTIL ÜYOU ÜSELECT **ÜRELEASE**.\n\n## ÜCLOSE\n\n**ÜCLOSE** ÜENDS ÜTHE ÜPERIOD. ÜAFTER ÜYOU ÜCLOSE ÜA ÜPERIOD, ÜRECORDS ÜIN ÜIT ÜARE ÜREAD-ÜONLY.\n\n## ÜPOST\n\n**ÜPOST** ÜSENDS ÜTHE ÜRECORD ÜTO ÜTHE ÜLEDGER. ÜYOU ÜCAN'ÜT ÜUNDO ÜA ÜPOST, ÜBUT ÜYOU ÜCAN ÜPOST ÜA ÜREVERSAL.\n",
+ "reverted": [],
+ "anchors": []
+}

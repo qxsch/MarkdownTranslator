@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/filenames-paths.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜFILES ÜAND ÜFOLDERS\n\nÜTHE ÜCLIENT ÜSTORES ÜITS ÜSETTINGS ÜIN `settings.json` ÜAND ÜITS ÜLOGS ÜIN ÜTHE `logs` ÜFOLDER. ÜON Windows, ÜTHE ÜFULL ÜPATH ÜIS `C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log`; ÜON Linux ÜIT'ÜS `~/.local/share/ctsync/ctsync.log`.\n\nÜTO ÜRESET ÜTHE ÜCLIENT, ÜDELETE settings.json ÜAND ÜRESTART. ÜDON'ÜT ÜDELETE sync.db, ÜBECAUSE ÜIT ÜCONTAINS ÜTHE ÜLIST ÜOF ÜSYNCED ÜFILES.\n\nÜOPEN ÜTHE ÜFILE README.md ÜIN ÜTHE ÜROOT ÜOF ÜTHE ÜREPOSITORY ÜAND ÜFOLLOW ÜTHE ÜSTEPS. ÜTHE ÜSCRIPT ./scripts/install.sh ÜINSTALLS ÜTHE ÜDEPENDENCIES, ÜAND deploy.ps1 ÜPUBLISHES ÜTHE ÜBUILD ÜTO ÜTHE ÜFOLDER dist/.\n\nÜIMAGES ÜSUCH ÜAS logo.png, banner@2x.jpg ÜAND icons/app.ico ÜARE ÜCOPIED ÜAS ÜIS.\n\n| ÜFILE | ÜPURPOSE |\n|---|---|\n| `config.toml` | ÜMAIN ÜCONFIGURATION |\n| `ignore.txt` | ÜPATTERNS ÜTO ÜEXCLUDE |\n| `Dockerfile` | ÜCONTAINER ÜBUILD |\n| `.env.example` | ÜTEMPLATE ÜFOR ÜENVIRONMENT ÜVARIABLES |\n\nÜLOG ÜFILES ÜOLDER ÜTHAN ÜSEVEN ÜDAYS ÜARE ÜCOMPRESSED ÜTO `ctsync-2026-08-01.log.gz`.\n",
+ "reverted": [],
+ "anchors": []
+}

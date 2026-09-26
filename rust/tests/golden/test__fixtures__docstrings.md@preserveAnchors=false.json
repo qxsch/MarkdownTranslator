@@ -1,0 +1,15 @@
+{
+ "file": "test/fixtures/docstrings.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜDOCSTRINGS\n\n```python\ndef upload(path, retries=3):\n    \"\"\"ÜUPLOAD ÜA ÜFILE ÜTO ÜTHE ÜSTORAGE ÜACCOUNT.\n\n    ÜTHE ÜUPLOAD ÜIS ÜRETRIED ÜWHEN ÜTHE ÜSERVICE ÜIS ÜBUSY.\n\n    Args:\n        path (str): ÜLOCAL ÜPATH ÜOF ÜTHE ÜFILE ÜTO ÜUPLOAD.\n        retries (int): ÜHOW ÜMANY ÜTIMES ÜTO ÜRETRY.\n\n    Returns:\n        bool: ÜTRUE ÜIF ÜTHE ÜUPLOAD ÜSUCCEEDED.\n\n    Raises:\n        ValueError: ÜIF ÜTHE ÜPATH ÜDOES ÜNOT ÜEXIST.\n\n    Examples:\n        ÜUPLOAD ÜA ÜSINGLE ÜFILE.\n\n        >>> upload(\"data.csv\")\n        True\n\n        ÜOR ÜUSE ÜTHE ÜCOMMAND ÜLINE::\n\n            python upload.py data.csv --retries 5\n            python upload.py other.csv\n\n        ÜTHEN ÜCHECK ÜTHE ÜRESULT.\n\n    .. note:: ÜLARGE ÜFILES ÜARE ÜUPLOADED ÜIN ÜBLOCKS.\n    \"\"\"\n\n\ndef download(name):\n    \"\"\"ÜDOWNLOAD ÜA ÜBLOB.\n\n    Parameters\n    ----------\n    name : str\n        ÜNAME ÜOF ÜTHE ÜBLOB ÜTO ÜDOWNLOAD.\n\n    Returns\n    -------\n    bytes\n        ÜTHE ÜCONTENT ÜOF ÜTHE ÜBLOB.\n\n    Notes\n    -----\n    ÜUSES ``Range`` ÜREQUESTS ÜFOR ÜLARGE ÜBLOBS.\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": []
+}

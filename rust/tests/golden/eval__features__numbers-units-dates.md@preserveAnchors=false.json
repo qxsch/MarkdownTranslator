@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/numbers-units-dates.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜLIMITS ÜAND ÜQUOTAS\n\n| ÜLIMIT | ÜVALUE |\n|---|---|\n| ÜMAXIMUM ÜFILE ÜSIZE | 250 ÜGB |\n| ÜMAXIMUM ÜPATH ÜLENGTH | 400 ÜCHARACTERS |\n| ÜFILES ÜPER ÜSHARE | 30,000,000 |\n| ÜREQUESTS ÜPER ÜMINUTE | 1,200 ÜPER ÜUSER |\n| ÜUPLOAD ÜSPEED | ÜUP ÜTO 1.5 ÜGBIT/ÜS |\n\nÜTHE ÜSERVICE ÜPROCESSES 3.5 ÜMILLION ÜFILES ÜPER ÜHOUR ÜAT ÜPEAK. ÜTHE ÜLAST ÜMAINTENANCE ÜWINDOW ÜWAS ÜON 14 ÜAUGUST 2026 ÜFROM 01:00 ÜTO 03:30 ÜUTC.\n\nÜRETENTION ÜCAN ÜBE ÜSET ÜBETWEEN 1 ÜAND 3,650 ÜDAYS. ÜTHE ÜDEFAULT ÜOF 93 ÜDAYS ÜMATCHES ÜTHE ÜRECYCLE ÜBIN.\n\nÜVERSION 3.2 ÜREDUCED ÜTHE ÜAVERAGE ÜSYNC ÜDELAY ÜFROM 2.4 ÜS ÜTO 0.8 ÜS, ÜWHICH ÜIS 66.7% ÜFASTER.\n\nÜPLANS ÜSTART ÜAT 4.50 ÜEUR ÜPER ÜUSER ÜPER ÜMONTH, ÜBILLED ÜANNUALLY (54 ÜEUR ÜPER ÜYEAR).\n",
+ "reverted": [],
+ "anchors": []
+}

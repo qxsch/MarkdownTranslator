@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/cli-reference.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# `ctsync` ÜCOMMAND ÜREFERENCE\n\n`ctsync` ÜIS ÜTHE ÜCOMMAND-ÜLINE ÜCOMPANION ÜOF ÜCONTOSO ÜSYNC.\n\n## ÜSYNOPSIS\n\n```\nctsync <command> [--profile <name>] [--verbose]\n```\n\n## ÜCOMMANDS\n\n| ÜCOMMAND | ÜDESCRIPTION |\n|---|---|\n| `ctsync status` | ÜSHOWS ÜTHE ÜSYNC ÜSTATE ÜOF ÜEVERY ÜFOLDER |\n| `ctsync pause --minutes 30` | ÜPAUSES ÜSYNC ÜFOR ÜTHE ÜGIVEN ÜTIME |\n| `ctsync resume` | ÜRESUMES ÜA ÜPAUSED ÜSYNC |\n| `ctsync reset --force` | ÜDELETES ÜTHE ÜLOCAL ÜCACHE ÜAND ÜDOWNLOADS ÜEVERYTHING ÜAGAIN |\n| `ctsync logs --tail` | ÜSTREAMS ÜTHE ÜLOG ÜFILE `ctsync.log` |\n\n## ÜGLOBAL ÜOPTIONS\n\n- `--profile <name>`: ÜUSES ÜTHE ÜNAMED ÜPROFILE ÜFROM `~/.ctsync/config.toml`.\n- `--verbose`: ÜPRINTS ÜDEBUG ÜOUTPUT. ÜCOMBINE ÜIT ÜWITH `--no-color` ÜWHEN ÜYOU ÜREDIRECT ÜOUTPUT ÜTO ÜA ÜFILE.\n- `--json`: ÜPRINTS ÜMACHINE-ÜREADABLE ÜOUTPUT.\n\n## ÜEXIT ÜCODES\n\n| ÜCODE | ÜMEANING |\n|---|---|\n| 0 | ÜSUCCESS |\n| 1 | ÜGENERAL ÜERROR |\n| 3 | ÜNOT ÜSIGNED ÜIN |\n| 7 | ÜTHE ÜFOLDER ÜIS ÜLOCKED ÜBY ÜANOTHER ÜPROCESS |\n\n## ÜEXAMPLES\n\nÜPAUSE ÜSYNC ÜDURING ÜA ÜPRESENTATION:\n\n```bash\nctsync pause --minutes 60\n```\n\nÜCHECK ÜTHE ÜSTATE ÜOF ÜA ÜSINGLE ÜFOLDER ÜAND ÜSAVE ÜIT ÜAS JSON:\n\n```bash\nctsync status --json > status.json\n```\n",
+ "reverted": [],
+ "anchors": []
+}

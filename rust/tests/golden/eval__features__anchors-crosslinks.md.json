@@ -1,0 +1,381 @@
+{
+ "file": "eval/features/anchors-crosslinks.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Administrator guide",
+   "original": "Administrator guide",
+   "sourceText": "Administrator guide",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Administrator guide\"",
+   "masked": "This guide links to its own sections a lot. Start with <g1>Plan the rollout</g1>, then read <g2>Assign licenses</g2>.",
+   "original": "This guide links to its own sections a lot. Start with [Plan the rollout](#plan-the-rollout), then read [Assign licenses](#assign-licenses).",
+   "sourceText": "This guide links to its own sections a lot. Start with Plan the rollout, then read Assign licenses.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #plan-the-rollout",
+    "g2": "link: link to #assign-licenses"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#assign-licenses\nlink:#plan-the-rollout"
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Administrator guide\"",
+   "masked": "Plan the rollout",
+   "original": "Plan the rollout",
+   "sourceText": "Plan the rollout",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Administrator guide > Plan the rollout\"",
+   "masked": "Decide which groups get the client first. See <g1>Pilot groups</g1> for recommendations and <g2>Roll back</g2> if something goes wrong.",
+   "original": "Decide which groups get the client first. See [Pilot groups](#pilot-groups) for recommendations and [Roll back](#roll-back) if something goes wrong.",
+   "sourceText": "Decide which groups get the client first. See Pilot groups for recommendations and Roll back if something goes wrong.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #pilot-groups",
+    "g2": "link: link to #roll-back"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#pilot-groups\nlink:#roll-back"
+  },
+  {
+   "id": "s5",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Administrator guide > Plan the rollout\"",
+   "masked": "Pilot groups",
+   "original": "Pilot groups",
+   "sourceText": "Pilot groups",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Administrator guide > Plan the rollout > Pilot groups\"",
+   "masked": "Start with a group of 20 to 50 users. Their feedback helps you tune the <g1>default settings</g1>.",
+   "original": "Start with a group of 20 to 50 users. Their feedback helps you tune the [default settings](#default-settings).",
+   "sourceText": "Start with a group of 20 to 50 users. Their feedback helps you tune the default settings.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #default-settings"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#default-settings"
+  },
+  {
+   "id": "s7",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Administrator guide\"",
+   "masked": "Assign licenses",
+   "original": "Assign licenses",
+   "sourceText": "Assign licenses",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Administrator guide > Assign licenses\"",
+   "masked": "Licenses are assigned per user. Group-based assignment is described in <g1>Automate assignment</g1>.",
+   "original": "Licenses are assigned per user. Group-based assignment is described in [Automate assignment](#automate-assignment).",
+   "sourceText": "Licenses are assigned per user. Group-based assignment is described in Automate assignment.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #automate-assignment"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#automate-assignment"
+  },
+  {
+   "id": "s9",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Administrator guide > Assign licenses\"",
+   "masked": "Automate assignment",
+   "original": "Automate assignment",
+   "sourceText": "Automate assignment",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Administrator guide > Assign licenses > Automate assignment\"",
+   "masked": "Use the admin API to assign licenses from your HR system. The API is described in the <g1>error reference</g1>.",
+   "original": "Use the admin API to assign licenses from your HR system. The API is described in the [error reference](api-errors-table.md#handling-conflicts).",
+   "sourceText": "Use the admin API to assign licenses from your HR system. The API is described in the error reference.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to api-errors-table.md#handling-conflicts"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:api-errors-table.md#handling-conflicts"
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Administrator guide\"",
+   "masked": "Default settings",
+   "original": "Default settings",
+   "sourceText": "Default settings",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Administrator guide > Default settings\"",
+   "masked": "Push default settings with your device management tool. Settings that users can't change are marked as <g1>locked</g1>.",
+   "original": "Push default settings with your device management tool. Settings that users can't change are marked as **locked**.",
+   "sourceText": "Push default settings with your device management tool. Settings that users can't change are marked as locked.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s13",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Administrator guide\"",
+   "masked": "Roll back",
+   "original": "Roll back",
+   "sourceText": "Roll back",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Administrator guide > Roll back\"",
+   "masked": "To roll back, uninstall the client and remove the policy. Files stay in the cloud. Go back to the <g1>top</g1>.",
+   "original": "To roll back, uninstall the client and remove the policy. Files stay in the cloud. Go back to the [top](#administrator-guide).",
+   "sourceText": "To roll back, uninstall the client and remove the policy. Files stay in the cloud. Go back to the top.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #administrator-guide"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#administrator-guide"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   21,
+   "s1"
+  ],
+  [
+   23,
+   163,
+   "s2"
+  ],
+  [
+   168,
+   184,
+   "s3"
+  ],
+  [
+   186,
+   334,
+   "s4"
+  ],
+  [
+   340,
+   352,
+   "s5"
+  ],
+  [
+   354,
+   464,
+   "s6"
+  ],
+  [
+   469,
+   484,
+   "s7"
+  ],
+  [
+   486,
+   601,
+   "s8"
+  ],
+  [
+   607,
+   626,
+   "s9"
+  ],
+  [
+   628,
+   772,
+   "s10"
+  ],
+  [
+   777,
+   793,
+   "s11"
+  ],
+  [
+   795,
+   909,
+   "s12"
+  ],
+  [
+   914,
+   923,
+   "s13"
+  ],
+  [
+   925,
+   1051,
+   "s14"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"administrator-guide\"></a>ÜADMINISTRATOR ÜGUIDE\n\nÜTHIS ÜGUIDE ÜLINKS ÜTO ÜITS ÜOWN ÜSECTIONS ÜA ÜLOT. ÜSTART ÜWITH [ÜPLAN ÜTHE ÜROLLOUT](#plan-the-rollout), ÜTHEN ÜREAD [ÜASSIGN ÜLICENSES](#assign-licenses).\n\n## <a id=\"plan-the-rollout\"></a>ÜPLAN ÜTHE ÜROLLOUT\n\nÜDECIDE ÜWHICH ÜGROUPS ÜGET ÜTHE ÜCLIENT ÜFIRST. ÜSEE [ÜPILOT ÜGROUPS](#pilot-groups) ÜFOR ÜRECOMMENDATIONS ÜAND [ÜROLL ÜBACK](#roll-back) ÜIF ÜSOMETHING ÜGOES ÜWRONG.\n\n### <a id=\"pilot-groups\"></a>ÜPILOT ÜGROUPS\n\nÜSTART ÜWITH ÜA ÜGROUP ÜOF 20 ÜTO 50 ÜUSERS. ÜTHEIR ÜFEEDBACK ÜHELPS ÜYOU ÜTUNE ÜTHE [ÜDEFAULT ÜSETTINGS](#default-settings).\n\n## <a id=\"assign-licenses\"></a>ÜASSIGN ÜLICENSES\n\nÜLICENSES ÜARE ÜASSIGNED ÜPER ÜUSER. ÜGROUP-ÜBASED ÜASSIGNMENT ÜIS ÜDESCRIBED ÜIN [ÜAUTOMATE ÜASSIGNMENT](#automate-assignment).\n\n### <a id=\"automate-assignment\"></a>ÜAUTOMATE ÜASSIGNMENT\n\nÜUSE ÜTHE ÜADMIN ÜAPI ÜTO ÜASSIGN ÜLICENSES ÜFROM ÜYOUR ÜHR ÜSYSTEM. ÜTHE ÜAPI ÜIS ÜDESCRIBED ÜIN ÜTHE [ÜERROR ÜREFERENCE](api-errors-table.md#handling-conflicts).\n\n## <a id=\"default-settings\"></a>ÜDEFAULT ÜSETTINGS\n\nÜPUSH ÜDEFAULT ÜSETTINGS ÜWITH ÜYOUR ÜDEVICE ÜMANAGEMENT ÜTOOL. ÜSETTINGS ÜTHAT ÜUSERS ÜCAN'ÜT ÜCHANGE ÜARE ÜMARKED ÜAS **ÜLOCKED**.\n\n## <a id=\"roll-back\"></a>ÜROLL ÜBACK\n\nÜTO ÜROLL ÜBACK, ÜUNINSTALL ÜTHE ÜCLIENT ÜAND ÜREMOVE ÜTHE ÜPOLICY. ÜFILES ÜSTAY ÜIN ÜTHE ÜCLOUD. ÜGO ÜBACK ÜTO ÜTHE [ÜTOP](#administrator-guide).\n",
+ "reverted": [],
+ "anchors": [
+  "administrator-guide",
+  "plan-the-rollout",
+  "pilot-groups",
+  "assign-licenses",
+  "automate-assignment",
+  "default-settings",
+  "roll-back"
+ ]
+}

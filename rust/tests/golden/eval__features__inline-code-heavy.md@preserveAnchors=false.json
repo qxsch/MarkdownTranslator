@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/inline-code-heavy.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜCONFIGURE ÜTHE ÜUPLOAD ÜQUEUE\n\nÜTHE `UploadQueue` ÜCLASS ÜEXPOSES `maxParallel`, `retryDelayMs` ÜAND `onProgress`. ÜSET `maxParallel` ÜTO `0` ÜTO ÜUSE ÜTHE ÜNUMBER ÜOF ÜCPU ÜCORES.\n\nÜCALL `queue.pause()` ÜBEFORE ÜYOU ÜCALL `queue.flush()`, ÜOTHERWISE `flush()` ÜTHROWS `QueueBusyError`.\n\nÜTHE ÜEVENTS `upload:start`, `upload:done` ÜAND `upload:error` ÜARE ÜEMITTED ÜIN ÜTHAT ÜORDER. ÜLISTEN ÜTO `upload:error` ÜWITH `queue.on('upload:error', handler)`.\n\nÜIF `retryDelayMs` ÜIS `null`, ÜTHE ÜDEFAULT ÜOF `500` ÜIS ÜUSED. ÜVALUES ÜABOVE `60000` ÜARE ÜCAPPED.\n\nÜTHE `--queue-size` ÜFLAG ÜAND ÜTHE `CTSYNC_QUEUE_SIZE` ÜVARIABLE ÜOVERRIDE `queueSize` ÜIN `config.toml`.\n",
+ "reverted": [],
+ "anchors": []
+}

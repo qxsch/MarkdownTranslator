@@ -1,0 +1,332 @@
+{
+ "file": "eval/features/filenames-paths.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Files and folders",
+   "original": "Files and folders",
+   "sourceText": "Files and folders",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Files and folders\"",
+   "masked": "The client stores its settings in <x1/> and its logs in the <x2/> folder. On <x3/>, the full path is <x4/>; on <x5/> it's <x6/>.",
+   "original": "The client stores its settings in `settings.json` and its logs in the `logs` folder. On Windows, the full path is `C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log`; on Linux it's `~/.local/share/ctsync/ctsync.log`.",
+   "sourceText": "The client stores its settings in  and its logs in the  folder. On , the full path is ; on  it's .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`settings.json`",
+    "x2": "`logs`",
+    "x3": "Windows",
+    "x4": "`C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log`",
+    "x5": "Linux",
+    "x6": "`~/.local/share/ctsync/ctsync.log`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log\ncode:logs\ncode:settings.json\ncode:~/.local/share/ctsync/ctsync.log"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Files and folders\"",
+   "masked": "To reset the client, delete <x1/> and restart. Don't delete <x2/>, because it contains the list of synced files.",
+   "original": "To reset the client, delete settings.json and restart. Don't delete sync.db, because it contains the list of synced files.",
+   "sourceText": "To reset the client, delete  and restart. Don't delete , because it contains the list of synced files.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "settings.json",
+    "x2": "sync.db"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Files and folders\"",
+   "masked": "Open the file <x1/> in the root of the repository and follow the steps. The script <x2/> installs the dependencies, and <x3/> publishes the build to the folder <x4/>.",
+   "original": "Open the file README.md in the root of the repository and follow the steps. The script ./scripts/install.sh installs the dependencies, and deploy.ps1 publishes the build to the folder dist/.",
+   "sourceText": "Open the file  in the root of the repository and follow the steps. The script  installs the dependencies, and  publishes the build to the folder .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "README.md",
+    "x2": "./scripts/install.sh",
+    "x3": "deploy.ps1",
+    "x4": "dist/"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Files and folders\"",
+   "masked": "Images such as <x1/>, <x2/> and <x3/> are copied as is.",
+   "original": "Images such as logo.png, banner@2x.jpg and icons/app.ico are copied as is.",
+   "sourceText": "Images such as ,  and  are copied as is.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "logo.png",
+    "x2": "banner@2x.jpg",
+    "x3": "icons/app.ico"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:mailto:banner@2x.jpg"
+  },
+  {
+   "id": "s6",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Files and folders\"; table header; columns: \"File\", \"Purpose\"",
+   "masked": "File",
+   "original": "File",
+   "sourceText": "File",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Files and folders\"; table header; columns: \"File\", \"Purpose\"",
+   "masked": "Purpose",
+   "original": "Purpose",
+   "sourceText": "Purpose",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Files and folders\"; table column \"Purpose\", row \"config.toml\"",
+   "masked": "Main configuration",
+   "original": "Main configuration",
+   "sourceText": "Main configuration",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Files and folders\"; table column \"Purpose\", row \"ignore.txt\"",
+   "masked": "Patterns to exclude",
+   "original": "Patterns to exclude",
+   "sourceText": "Patterns to exclude",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Files and folders\"; table column \"Purpose\", row \"Dockerfile\"",
+   "masked": "Container build",
+   "original": "Container build",
+   "sourceText": "Container build",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Files and folders\"; table column \"Purpose\", row \".env.example\"",
+   "masked": "Template for environment variables",
+   "original": "Template for environment variables",
+   "sourceText": "Template for environment variables",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Files and folders\"",
+   "masked": "Log files older than seven days are compressed to <x1/>.",
+   "original": "Log files older than seven days are compressed to `ctsync-2026-08-01.log.gz`.",
+   "sourceText": "Log files older than seven days are compressed to .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`ctsync-2026-08-01.log.gz`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:ctsync-2026-08-01.log.gz"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   19,
+   "s1"
+  ],
+  [
+   21,
+   245,
+   "s2"
+  ],
+  [
+   247,
+   369,
+   "s3"
+  ],
+  [
+   371,
+   561,
+   "s4"
+  ],
+  [
+   563,
+   637,
+   "s5"
+  ],
+  [
+   641,
+   645,
+   "s6"
+  ],
+  [
+   648,
+   655,
+   "s7"
+  ],
+  [
+   686,
+   704,
+   "s8"
+  ],
+  [
+   724,
+   743,
+   "s9"
+  ],
+  [
+   763,
+   778,
+   "s10"
+  ],
+  [
+   800,
+   834,
+   "s11"
+  ],
+  [
+   838,
+   915,
+   "s12"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"files-and-folders\"></a>ÜFILES ÜAND ÜFOLDERS\n\nÜTHE ÜCLIENT ÜSTORES ÜITS ÜSETTINGS ÜIN `settings.json` ÜAND ÜITS ÜLOGS ÜIN ÜTHE `logs` ÜFOLDER. ÜON Windows, ÜTHE ÜFULL ÜPATH ÜIS `C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log`; ÜON Linux ÜIT'ÜS `~/.local/share/ctsync/ctsync.log`.\n\nÜTO ÜRESET ÜTHE ÜCLIENT, ÜDELETE settings.json ÜAND ÜRESTART. ÜDON'ÜT ÜDELETE sync.db, ÜBECAUSE ÜIT ÜCONTAINS ÜTHE ÜLIST ÜOF ÜSYNCED ÜFILES.\n\nÜOPEN ÜTHE ÜFILE README.md ÜIN ÜTHE ÜROOT ÜOF ÜTHE ÜREPOSITORY ÜAND ÜFOLLOW ÜTHE ÜSTEPS. ÜTHE ÜSCRIPT ./scripts/install.sh ÜINSTALLS ÜTHE ÜDEPENDENCIES, ÜAND deploy.ps1 ÜPUBLISHES ÜTHE ÜBUILD ÜTO ÜTHE ÜFOLDER dist/.\n\nÜIMAGES ÜSUCH ÜAS logo.png, banner@2x.jpg ÜAND icons/app.ico ÜARE ÜCOPIED ÜAS ÜIS.\n\n| ÜFILE | ÜPURPOSE |\n|---|---|\n| `config.toml` | ÜMAIN ÜCONFIGURATION |\n| `ignore.txt` | ÜPATTERNS ÜTO ÜEXCLUDE |\n| `Dockerfile` | ÜCONTAINER ÜBUILD |\n| `.env.example` | ÜTEMPLATE ÜFOR ÜENVIRONMENT ÜVARIABLES |\n\nÜLOG ÜFILES ÜOLDER ÜTHAN ÜSEVEN ÜDAYS ÜARE ÜCOMPRESSED ÜTO `ctsync-2026-08-01.log.gz`.\n",
+ "reverted": [],
+ "anchors": [
+  "files-and-folders"
+ ]
+}

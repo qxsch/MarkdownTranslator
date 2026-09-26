@@ -1,0 +1,412 @@
+{
+ "file": "eval/features/mixed-everything.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Build a sync report with the <x1/> SDK",
+   "original": "Build a sync report with the Python SDK",
+   "sourceText": "Build a sync report with the  SDK",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"description\"",
+   "structure": "front matter \"description\"",
+   "masked": "Combine the SDK, a scheduled job and a small formula to report storage growth.",
+   "original": "Combine the SDK, a scheduled job and a small formula to report storage growth.",
+   "sourceText": "Combine the SDK, a scheduled job and a small formula to report storage growth.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Build a sync report with the <x1/> SDK",
+   "original": "Build a sync report with the Python SDK",
+   "sourceText": "Build a sync report with the  SDK",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph in a blockquote",
+   "structure": "section \"Build a sync report with the Python SDK\"",
+   "masked": "<x1/><x2/><g3>This sample needs version 3.2 or later of the </g3><x4/> package.",
+   "original": "[!NOTE]\n> This sample needs version 3.2 or later of the `contoso-sync` package.",
+   "sourceText": "This sample needs version 3.2 or later of the  package.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[!NOTE]",
+    "x2": "line break [break]",
+    "x4": "`contoso-sync`",
+    "g3": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 x2 g3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:contoso-sync"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Build a sync report with the Python SDK\"",
+   "masked": "The growth rate <x1/> between two days is <x2/>. The report costs nothing to run, but storage beyond the quota costs $0.02 per GB.",
+   "original": "The growth rate $g$ between two days is $g = \\frac{b_t - b_{t-1}}{b_{t-1}}$. The report costs nothing to run, but storage beyond the quota costs $0.02 per GB.",
+   "sourceText": "The growth rate  between two days is . The report costs nothing to run, but storage beyond the quota costs $0.02 per GB.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$g$",
+    "x2": "$g = \\frac{b_t - b_{t-1}}{b_{t-1}}$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Build a sync report with the Python SDK\"",
+   "masked": "Write the script",
+   "original": "Write the script",
+   "sourceText": "Write the script",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Build a sync report with the Python SDK\"",
+   "masked": "Schedule it",
+   "original": "Schedule it",
+   "sourceText": "Schedule it",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"; table header; columns: \"Platform\", \"Scheduler\", \"Example\"",
+   "masked": "Platform",
+   "original": "Platform",
+   "sourceText": "Platform",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"; table header; columns: \"Platform\", \"Scheduler\", \"Example\"",
+   "masked": "Scheduler",
+   "original": "Scheduler",
+   "sourceText": "Scheduler",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"; table header; columns: \"Platform\", \"Scheduler\", \"Example\"",
+   "masked": "Example",
+   "original": "Example",
+   "sourceText": "Example",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"; table column \"Scheduler\", row \"Windows\"",
+   "masked": "Task Scheduler",
+   "original": "Task Scheduler",
+   "sourceText": "Task Scheduler",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"; table column \"Example\", row \"Windows\"",
+   "masked": "Run <x1/> daily at 06:00",
+   "original": "Run `python report.py` daily at 06:00",
+   "sourceText": "Run  daily at 06:00",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`python report.py`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:python report.py"
+  },
+  {
+   "id": "s13",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"; table column \"Scheduler\", row \"Linux\"",
+   "masked": "cron",
+   "original": "cron",
+   "sourceText": "cron",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"",
+   "masked": "<x1/><g2>Keep it simple</g2><x3/><g4>Start with a daily run. Hourly runs rarely add value for storage trends.</g4><x5/><x6/>",
+   "original": ":::tip Keep it simple\nStart with a daily run. Hourly runs rarely add value for storage trends.\n:::",
+   "sourceText": "Keep it simpleStart with a daily run. Hourly runs rarely add value for storage trends.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":::tip ",
+    "x3": "line break [break]",
+    "x5": "line break [break]",
+    "x6": ":::",
+    "g2": "html: directive title",
+    "g4": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 g2 x3 g4 x5 x6"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Build a sync report with the Python SDK > Schedule it\"",
+   "masked": "See <g1>Write the script</g1> if the numbers look wrong.",
+   "original": "See [Write the script](#write-the-script) if the numbers look wrong.",
+   "sourceText": "See Write the script if the numbers look wrong.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #write-the-script"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#write-the-script"
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   50,
+   "s1"
+  ],
+  [
+   64,
+   142,
+   "s2"
+  ],
+  [
+   150,
+   189,
+   "s3"
+  ],
+  [
+   193,
+   272,
+   "s4"
+  ],
+  [
+   274,
+   432,
+   "s5"
+  ],
+  [
+   437,
+   453,
+   "s6"
+  ],
+  [
+   969,
+   980,
+   "s7"
+  ],
+  [
+   984,
+   992,
+   "s8"
+  ],
+  [
+   995,
+   1004,
+   "s9"
+  ],
+  [
+   1007,
+   1014,
+   "s10"
+  ],
+  [
+   1043,
+   1057,
+   "s11"
+  ],
+  [
+   1060,
+   1097,
+   "s12"
+  ],
+  [
+   1110,
+   1114,
+   "s13"
+  ],
+  [
+   1155,
+   1253,
+   "s14"
+  ],
+  [
+   1255,
+   1323,
+   "s15"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: ÜBUILD ÜA ÜSYNC ÜREPORT ÜWITH ÜTHE Python ÜSDK\ndescription: ÜCOMBINE ÜTHE ÜSDK, ÜA ÜSCHEDULED ÜJOB ÜAND ÜA ÜSMALL ÜFORMULA ÜTO ÜREPORT ÜSTORAGE ÜGROWTH.\n---\n\n# <a id=\"build-a-sync-report-with-the-python-sdk\"></a>ÜBUILD ÜA ÜSYNC ÜREPORT ÜWITH ÜTHE Python ÜSDK\n\n> [!NOTE]\n> ÜTHIS ÜSAMPLE ÜNEEDS ÜVERSION 3.2 ÜOR ÜLATER ÜOF ÜTHE `contoso-sync` ÜPACKAGE.\n\nÜTHE ÜGROWTH ÜRATE $g$ ÜBETWEEN ÜTWO ÜDAYS ÜIS $g = \\frac{b_t - b_{t-1}}{b_{t-1}}$. ÜTHE ÜREPORT ÜCOSTS ÜNOTHING ÜTO ÜRUN, ÜBUT ÜSTORAGE ÜBEYOND ÜTHE ÜQUOTA ÜCOSTS $0.02 ÜPER ÜGB.\n\n## <a id=\"write-the-script\"></a>ÜWRITE ÜTHE ÜSCRIPT\n\n```python\nfrom contoso_sync import SyncClient\n\n\ndef daily_growth(client, share):\n    \"\"\"Return the storage growth of a share for each day.\n\n    Args:\n        client (SyncClient): An authenticated client.\n        share (str): Name of the share.\n\n    Returns:\n        list[float]: One growth rate per day, oldest first.\n    \"\"\"\n    # Fetch the last 30 days; the API returns newest first\n    rows = client.usage(share, days=30)[::-1]\n    return [(b.bytes - a.bytes) / a.bytes for a, b in zip(rows, rows[1:])]\n```\n\n## <a id=\"schedule-it\"></a>ÜSCHEDULE ÜIT\n\n| ÜPLATFORM | ÜSCHEDULER | ÜEXAMPLE |\n|---|---|---|\n| Windows | ÜTASK ÜSCHEDULER | ÜRUN `python report.py` ÜDAILY ÜAT 06:00 |\n| Linux | ÜCRON | `0 6 * * * python3 /opt/report.py` |\n\n:::tip ÜKEEP ÜIT ÜSIMPLE\nÜSTART ÜWITH ÜA ÜDAILY ÜRUN. ÜHOURLY ÜRUNS ÜRARELY ÜADD ÜVALUE ÜFOR ÜSTORAGE ÜTRENDS.\n:::\n\nÜSEE [ÜWRITE ÜTHE ÜSCRIPT](#write-the-script) ÜIF ÜTHE ÜNUMBERS ÜLOOK ÜWRONG.\n",
+ "reverted": [],
+ "anchors": [
+  "build-a-sync-report-with-the-python-sdk",
+  "write-the-script",
+  "schedule-it"
+ ]
+}

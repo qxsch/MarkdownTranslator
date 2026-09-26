@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/math-mixed.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜCAPACITY ÜPLANNING\n\nÜA ÜSINGLE ÜGATEWAY ÜHANDLES ÜABOUT $r = 400$ ÜREQUESTS ÜPER ÜSECOND. ÜFOR ÜA ÜPEAK ÜLOAD ÜOF $R$ ÜREQUESTS ÜPER ÜSECOND ÜYOU ÜNEED $n = \\lceil R / r \\rceil$ ÜGATEWAYS.\n\nÜEACH ÜGATEWAY ÜCOSTS $120 ÜPER ÜMONTH. ÜFOR 2,000 ÜREQUESTS ÜPER ÜSECOND, ÜYOU ÜNEED 5 ÜGATEWAYS, ÜWHICH ÜCOSTS $600 ÜPER ÜMONTH.\n\nÜBLOCK ÜMATH ÜFOR ÜTHE ÜSTORAGE ÜESTIMATE:\n\n$$\nS = u \\cdot f \\cdot (1 + v)\n$$\n\nÜWHERE $u$ ÜIS ÜTHE ÜNUMBER ÜOF ÜUSERS, $f$ ÜTHE ÜAVERAGE ÜDATA ÜPER ÜUSER ÜAND $v$ ÜTHE ÜSHARE ÜOF ÜOLD ÜVERSIONS.\n\nÜWITH 500 ÜUSERS, 20 ÜGB ÜEACH ÜAND $v = 0.3$, ÜYOU ÜNEED 13 ÜTB. ÜAT $20 ÜPER ÜTB, ÜSTORAGE ÜCOSTS $260 ÜPER ÜMONTH.\n",
+ "reverted": [],
+ "anchors": []
+}

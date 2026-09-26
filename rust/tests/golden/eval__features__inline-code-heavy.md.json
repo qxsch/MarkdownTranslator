@@ -1,0 +1,195 @@
+{
+ "file": "eval/features/inline-code-heavy.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Configure the upload queue",
+   "original": "Configure the upload queue",
+   "sourceText": "Configure the upload queue",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure the upload queue\"",
+   "masked": "The <x1/> class exposes <x2/>, <x3/> and <x4/>. Set <x5/> to <x6/> to use the number of CPU cores.",
+   "original": "The `UploadQueue` class exposes `maxParallel`, `retryDelayMs` and `onProgress`. Set `maxParallel` to `0` to use the number of CPU cores.",
+   "sourceText": "The  class exposes ,  and . Set  to  to use the number of CPU cores.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`UploadQueue`",
+    "x2": "`maxParallel`",
+    "x3": "`retryDelayMs`",
+    "x4": "`onProgress`",
+    "x5": "`maxParallel`",
+    "x6": "`0`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:0\ncode:UploadQueue\ncode:maxParallel\ncode:maxParallel\ncode:onProgress\ncode:retryDelayMs"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure the upload queue\"",
+   "masked": "Call <x1/> before you call <x2/>, otherwise <x3/> throws <x4/>.",
+   "original": "Call `queue.pause()` before you call `queue.flush()`, otherwise `flush()` throws `QueueBusyError`.",
+   "sourceText": "Call  before you call , otherwise  throws .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`queue.pause()`",
+    "x2": "`queue.flush()`",
+    "x3": "`flush()`",
+    "x4": "`QueueBusyError`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:QueueBusyError\ncode:flush()\ncode:queue.flush()\ncode:queue.pause()"
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure the upload queue\"",
+   "masked": "The events <x1/>, <x2/> and <x3/> are emitted in that order. Listen to <x4/> with <x5/>.",
+   "original": "The events `upload:start`, `upload:done` and `upload:error` are emitted in that order. Listen to `upload:error` with `queue.on('upload:error', handler)`.",
+   "sourceText": "The events ,  and  are emitted in that order. Listen to  with .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`upload:start`",
+    "x2": "`upload:done`",
+    "x3": "`upload:error`",
+    "x4": "`upload:error`",
+    "x5": "`queue.on('upload:error', handler)`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:queue.on('upload:error', handler)\ncode:upload:done\ncode:upload:error\ncode:upload:error\ncode:upload:start"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure the upload queue\"",
+   "masked": "If <x1/> is <x2/>, the default of <x3/> is used. Values above <x4/> are capped.",
+   "original": "If `retryDelayMs` is `null`, the default of `500` is used. Values above `60000` are capped.",
+   "sourceText": "If  is , the default of  is used. Values above  are capped.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`retryDelayMs`",
+    "x2": "`null`",
+    "x3": "`500`",
+    "x4": "`60000`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:500\ncode:60000\ncode:null\ncode:retryDelayMs"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure the upload queue\"",
+   "masked": "The <x1/> flag and the <x2/> variable override <x3/> in <x4/>.",
+   "original": "The `--queue-size` flag and the `CTSYNC_QUEUE_SIZE` variable override `queueSize` in `config.toml`.",
+   "sourceText": "The  flag and the  variable override  in .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`--queue-size`",
+    "x2": "`CTSYNC_QUEUE_SIZE`",
+    "x3": "`queueSize`",
+    "x4": "`config.toml`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:--queue-size\ncode:CTSYNC_QUEUE_SIZE\ncode:config.toml\ncode:queueSize"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   28,
+   "s1"
+  ],
+  [
+   30,
+   166,
+   "s2"
+  ],
+  [
+   168,
+   266,
+   "s3"
+  ],
+  [
+   268,
+   421,
+   "s4"
+  ],
+  [
+   423,
+   514,
+   "s5"
+  ],
+  [
+   516,
+   615,
+   "s6"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"configure-the-upload-queue\"></a>ÜCONFIGURE ÜTHE ÜUPLOAD ÜQUEUE\n\nÜTHE `UploadQueue` ÜCLASS ÜEXPOSES `maxParallel`, `retryDelayMs` ÜAND `onProgress`. ÜSET `maxParallel` ÜTO `0` ÜTO ÜUSE ÜTHE ÜNUMBER ÜOF ÜCPU ÜCORES.\n\nÜCALL `queue.pause()` ÜBEFORE ÜYOU ÜCALL `queue.flush()`, ÜOTHERWISE `flush()` ÜTHROWS `QueueBusyError`.\n\nÜTHE ÜEVENTS `upload:start`, `upload:done` ÜAND `upload:error` ÜARE ÜEMITTED ÜIN ÜTHAT ÜORDER. ÜLISTEN ÜTO `upload:error` ÜWITH `queue.on('upload:error', handler)`.\n\nÜIF `retryDelayMs` ÜIS `null`, ÜTHE ÜDEFAULT ÜOF `500` ÜIS ÜUSED. ÜVALUES ÜABOVE `60000` ÜARE ÜCAPPED.\n\nÜTHE `--queue-size` ÜFLAG ÜAND ÜTHE `CTSYNC_QUEUE_SIZE` ÜVARIABLE ÜOVERRIDE `queueSize` ÜIN `config.toml`.\n",
+ "reverted": [],
+ "anchors": [
+  "configure-the-upload-queue"
+ ]
+}

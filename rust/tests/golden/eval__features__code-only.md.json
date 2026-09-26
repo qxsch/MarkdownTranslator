@@ -1,0 +1,21 @@
+{
+ "file": "eval/features/code-only.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [],
+ "replacements": [],
+ "notes": [
+  "code block \"json\" left untouched (no comment parser for this language)"
+ ],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "```json\n{\n  \"workers\": 8,\n  \"retries\": 3,\n  \"endpoint\": \"https://sync.contoso.example\"\n}\n```\n\n```bash\nctsync config import settings.json\n```\n",
+ "reverted": [],
+ "anchors": []
+}

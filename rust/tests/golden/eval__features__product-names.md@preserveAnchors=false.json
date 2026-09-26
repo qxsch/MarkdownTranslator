@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/product-names.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜCONTOSO ÜSYNC ÜWITH Microsoft 365\n\nÜCONTOSO ÜSYNC ÜWORKS ÜWITH Microsoft ÜTEAMS, SharePoint ÜAND OneDrive. ÜFILES ÜTHAT ÜYOU ÜSYNC ÜWITH ÜCONTOSO ÜSYNC ÜCAN ÜBE ÜOPENED ÜIN ÜWORD, ÜEXCEL ÜAND PowerPoint ÜFOR ÜTHE ÜWEB.\n\nAzure ÜACTIVE ÜDIRECTORY ÜIS ÜNOW ÜCALLED Microsoft Entra ID. ÜSIGN ÜIN ÜWITH ÜYOUR Entra ID ÜACCOUNT.\n\nÜUSE GitHub Actions ÜOR Azure ÜPIPELINES ÜTO ÜDEPLOY ÜTHE ÜAGENT. ÜTHE Docker ÜIMAGE ÜIS ÜPUBLISHED ÜTO GitHub ÜCONTAINER ÜREGISTRY.\n\nKubernetes ÜUSERS ÜCAN ÜDEPLOY ÜTHE ÜHELM ÜCHART `contoso/sync-agent`. ÜIT ÜWORKS ÜON Azure Kubernetes Service, ÜAMAZON ÜEKS ÜAND ÜGOOGLE Kubernetes ÜENGINE.\n\nVisual Studio Code ÜHAS ÜAN ÜEXTENSION ÜCALLED *ÜCONTOSO ÜSYNC ÜEXPLORER*.\n",
+ "reverted": [],
+ "anchors": []
+}

@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/admonitions-github.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜUPGRADE ÜTO ÜVERSION 4\n\n> [!NOTE]\n> ÜVERSION 4 ÜREQUIRES .NET 8 ÜOR ÜLATER.\n\n> [!TIP]\n> ÜRUN `ctsync doctor` ÜFIRST. ÜIT ÜLISTS ÜEVERYTHING ÜTHAT ÜBLOCKS ÜTHE ÜUPGRADE.\n\n> [!IMPORTANT]\n> **ÜBACK ÜUP** ÜTHE ÜFILE `config.toml` ÜBEFORE ÜYOU ÜSTART. ÜTHE ÜUPGRADE ÜREWRITES ÜIT.\n\n> [!WARNING]\n> ÜDON'ÜT ÜCLOSE ÜTHE ÜAPP ÜWHILE ÜTHE ÜDATABASE ÜIS ÜMIGRATED. ÜIT ÜCAN ÜTAKE ÜUP ÜTO ÜAN ÜHOUR ÜFOR ÜLARGE ÜLIBRARIES.\n\n> [!CAUTION]\n> ÜDOWNGRADING ÜTO ÜVERSION 3 **ÜDELETES** ÜALL ÜFILES ÜTHAT ÜYOU ÜCREATED ÜIN ÜVERSION 4.\n\n## ÜSTEPS\n\n1. ÜDOWNLOAD ÜTHE ÜNEW ÜVERSION.\n2. ÜCLOSE ÜALL ÜOFFICE ÜAPPS.\n3. ÜRUN ÜTHE ÜINSTALLER.\n\n> ÜTHIS ÜIS ÜA ÜREGULAR ÜQUOTE. ÜIT ÜISN'ÜT ÜAN ÜALERT, ÜBUT ÜIT ÜSHOULD ÜBE ÜTRANSLATED ÜAS ÜWELL.\n>\n> > ÜA ÜNESTED ÜQUOTE ÜWITH ÜA [ÜLINK](https://example.com).\n",
+ "reverted": [],
+ "anchors": []
+}

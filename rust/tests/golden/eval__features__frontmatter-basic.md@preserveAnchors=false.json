@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/frontmatter-basic.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: ÜSHARE ÜA ÜFOLDER\ndescription: ÜLEARN ÜHOW ÜTO ÜSHARE ÜA ÜFOLDER ÜWITH ÜPEOPLE ÜINSIDE ÜAND ÜOUTSIDE ÜYOUR ÜORGANIZATION.\nkeywords:\n  - ÜSHARING\n  - ÜPERMISSIONS\n  - ÜEXTERNAL ÜUSERS\ndate: 2026-08-14\nslug: share-a-folder\ndraft: false\n---\n\n# ÜSHARE ÜA ÜFOLDER\n\nÜRIGHT-ÜCLICK ÜTHE ÜFOLDER ÜAND ÜSELECT **ÜSHARE**. ÜENTER ÜTHE ÜNAMES ÜOR ÜE-ÜMAIL ÜADDRESSES ÜOF ÜTHE ÜPEOPLE ÜYOU ÜWANT ÜTO ÜSHARE ÜWITH.\n\n## ÜPERMISSIONS\n\n- **ÜCAN ÜVIEW**: ÜPEOPLE ÜCAN ÜOPEN ÜAND ÜDOWNLOAD ÜFILES.\n- **ÜCAN ÜEDIT**: ÜPEOPLE ÜCAN ÜALSO ÜCHANGE, ÜADD ÜAND ÜDELETE ÜFILES.\n- **ÜOWNER**: ÜPEOPLE ÜCAN ÜALSO ÜMANAGE ÜSHARING.\n\n## ÜEXTERNAL ÜUSERS\n\nÜEXTERNAL ÜUSERS ÜGET ÜAN ÜE-ÜMAIL ÜWITH ÜA ÜLINK. ÜTHEY ÜMUST ÜVERIFY ÜTHEIR ÜE-ÜMAIL ÜADDRESS ÜWITH ÜA ÜONE-ÜTIME ÜCODE.\n",
+ "reverted": [],
+ "anchors": []
+}

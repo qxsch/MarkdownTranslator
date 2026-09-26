@@ -1,0 +1,219 @@
+{
+ "file": "eval/features/identifiers-env.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Environment and identifiers",
+   "original": "Environment and identifiers",
+   "sourceText": "Environment and identifiers",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Environment and identifiers\"",
+   "masked": "Set <x1/> to change the data folder. On <x2/>, the default is <x3/>; on <x4/> it's <x5/>.",
+   "original": "Set `CTSYNC_HOME` to change the data folder. On Windows, the default is `%LOCALAPPDATA%\\ContosoSync`; on Linux it's `$HOME/.ctsync`.",
+   "sourceText": "Set  to change the data folder. On , the default is ; on  it's .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`CTSYNC_HOME`",
+    "x2": "Windows",
+    "x3": "`%LOCALAPPDATA%\\ContosoSync`",
+    "x4": "Linux",
+    "x5": "`$HOME/.ctsync`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:$HOME/.ctsync\ncode:%LOCALAPPDATA%\\ContosoSync\ncode:CTSYNC_HOME"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Environment and identifiers\"",
+   "masked": "The client reads the proxy from <x1/> and ignores <x2/> entries that contain wildcards.",
+   "original": "The client reads the proxy from HTTPS_PROXY and ignores NO_PROXY entries that contain wildcards.",
+   "sourceText": "The client reads the proxy from  and ignores  entries that contain wildcards.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "HTTPS_PROXY",
+    "x2": "NO_PROXY"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Environment and identifiers\"",
+   "masked": "Use the cmdlet <x1/> to check the state from <x2/>, or call the method <x3/> from the <x4/> SDK. The <x5/> SDK names it <x6/>.",
+   "original": "Use the cmdlet Get-CtSyncStatus to check the state from PowerShell, or call the method getSyncStatus() from the JavaScript SDK. The Python SDK names it get_sync_status.",
+   "sourceText": "Use the cmdlet  to check the state from , or call the method  from the  SDK. The  SDK names it .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Get-CtSyncStatus",
+    "x2": "PowerShell",
+    "x3": "getSyncStatus()",
+    "x4": "JavaScript",
+    "x5": "Python",
+    "x6": "get_sync_status"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Environment and identifiers\"",
+   "masked": "The flag <x1/> accepts values from 0 to 10. The option <x2/> in <x3/> does the same.",
+   "original": "The flag --max-retries accepts values from 0 to 10. The option maxRetries in `config.toml` does the same.",
+   "sourceText": "The flag  accepts values from 0 to 10. The option  in  does the same.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "--max-retries",
+    "x2": "maxRetries",
+    "x3": "`config.toml`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:config.toml"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Environment and identifiers\"",
+   "masked": "Connection strings look like <x1/>. Replace <x2/> with your tenant ID, for example <x3/>.",
+   "original": "Connection strings look like `Endpoint=https://sync.contoso.example;SharedAccessKey=<key>`. Replace `${TENANT_ID}` with your tenant ID, for example 00000000-0000-0000-0000-000000000000.",
+   "sourceText": "Connection strings look like . Replace  with your tenant ID, for example .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`Endpoint=https://sync.contoso.example;SharedAccessKey=<key>`",
+    "x2": "`${TENANT_ID}`",
+    "x3": "00000000-0000-0000-0000-000000000000"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:${TENANT_ID}\ncode:Endpoint=https://sync.contoso.example;SharedAccessKey=<key>"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Environment and identifiers\"",
+   "masked": "Version <x1/> introduced the setting <x2/>; version <x3/> raised its default to 8.",
+   "original": "Version 3.2.0-beta.1 introduced the setting `upload.parallelism`; version v3.2.1 raised its default to 8.",
+   "sourceText": "Version  introduced the setting ; version  raised its default to 8.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "3.2.0-beta.1",
+    "x2": "`upload.parallelism`",
+    "x3": "v3.2.1"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:upload.parallelism"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   29,
+   "s1"
+  ],
+  [
+   31,
+   163,
+   "s2"
+  ],
+  [
+   165,
+   261,
+   "s3"
+  ],
+  [
+   263,
+   431,
+   "s4"
+  ],
+  [
+   433,
+   538,
+   "s5"
+  ],
+  [
+   540,
+   725,
+   "s6"
+  ],
+  [
+   727,
+   832,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"environment-and-identifiers\"></a>ÜENVIRONMENT ÜAND ÜIDENTIFIERS\n\nÜSET `CTSYNC_HOME` ÜTO ÜCHANGE ÜTHE ÜDATA ÜFOLDER. ÜON Windows, ÜTHE ÜDEFAULT ÜIS `%LOCALAPPDATA%\\ContosoSync`; ÜON Linux ÜIT'ÜS `$HOME/.ctsync`.\n\nÜTHE ÜCLIENT ÜREADS ÜTHE ÜPROXY ÜFROM HTTPS_PROXY ÜAND ÜIGNORES NO_PROXY ÜENTRIES ÜTHAT ÜCONTAIN ÜWILDCARDS.\n\nÜUSE ÜTHE ÜCMDLET Get-CtSyncStatus ÜTO ÜCHECK ÜTHE ÜSTATE ÜFROM PowerShell, ÜOR ÜCALL ÜTHE ÜMETHOD getSyncStatus() ÜFROM ÜTHE JavaScript ÜSDK. ÜTHE Python ÜSDK ÜNAMES ÜIT get_sync_status.\n\nÜTHE ÜFLAG --max-retries ÜACCEPTS ÜVALUES ÜFROM 0 ÜTO 10. ÜTHE ÜOPTION maxRetries ÜIN `config.toml` ÜDOES ÜTHE ÜSAME.\n\nÜCONNECTION ÜSTRINGS ÜLOOK ÜLIKE `Endpoint=https://sync.contoso.example;SharedAccessKey=<key>`. ÜREPLACE `${TENANT_ID}` ÜWITH ÜYOUR ÜTENANT ÜID, ÜFOR ÜEXAMPLE 00000000-0000-0000-0000-000000000000.\n\nÜVERSION 3.2.0-beta.1 ÜINTRODUCED ÜTHE ÜSETTING `upload.parallelism`; ÜVERSION v3.2.1 ÜRAISED ÜITS ÜDEFAULT ÜTO 8.\n",
+ "reverted": [],
+ "anchors": [
+  "environment-and-identifiers"
+ ]
+}

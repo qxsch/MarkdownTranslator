@@ -1,0 +1,49 @@
+{
+ "file": "eval/features/docstrings-doctest.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "<x1/> SDK reference: paths",
+   "original": "Python SDK reference: paths",
+   "sourceText": " SDK reference: paths",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   29,
+   "s1"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"python-sdk-reference-paths\"></a>Python ÜSDK ÜREFERENCE: ÜPATHS\n\n```python\ndef normalize(path):\n    \"\"\"Return the canonical form of a sync path.\n\n    Backslashes become forward slashes and duplicate separators are\n    removed.\n\n    >>> normalize(\"docs\\\\\\\\reports//2026\")\n    'docs/reports/2026'\n    >>> normalize(\"\")\n    ''\n\n    Use it before you compare two paths::\n\n        if normalize(a) == normalize(b):\n            print(\"same file\")\n\n    The function never touches the file system.\n    \"\"\"\n\n\ndef is_hidden(name):\n    '''Check whether a file name is hidden on the current platform.'''\n    return name.startswith(\".\")\n```\n",
+ "reverted": [],
+ "anchors": [
+  "python-sdk-reference-paths"
+ ]
+}

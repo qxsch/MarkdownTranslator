@@ -1,0 +1,232 @@
+{
+ "file": "eval/features/line-breaks.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Line breaks and headings",
+   "original": "Line breaks and headings",
+   "sourceText": "Line breaks and headings",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Line breaks and headings\"",
+   "masked": "This paragraph ends with two spaces<x1/>so this line starts after a hard break.",
+   "original": "This paragraph ends with two spaces  \nso this line starts after a hard break.",
+   "sourceText": "This paragraph ends with two spacesso this line starts after a hard break.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "line break [break]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "break"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Line breaks and headings\"",
+   "masked": "This one uses a backslash<x1/>for the same effect.",
+   "original": "This one uses a backslash\\\nfor the same effect.",
+   "sourceText": "This one uses a backslashfor the same effect.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "line break [break]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "break"
+  },
+  {
+   "id": "s4",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Line breaks and headings\"",
+   "masked": "Setext level two",
+   "original": "Setext level two",
+   "sourceText": "Setext level two",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Line breaks and headings > Setext level two\"",
+   "masked": "A long paragraph that is wrapped in the source file at a fixed width so that each line is shorter than eighty characters, which is common in repositories that follow a strict style guide for <x1/> files.",
+   "original": "A long paragraph that is wrapped in the source file at a fixed width so that\neach line is shorter than eighty characters, which is common in repositories\nthat follow a strict style guide for Markdown files.",
+   "sourceText": "A long paragraph that is wrapped in the source file at a fixed width so that each line is shorter than eighty characters, which is common in repositories that follow a strict style guide for  files.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Markdown"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 76,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Line breaks and headings > Setext level two\"",
+   "masked": "A second paragraph with very short lines.",
+   "original": "A second paragraph\nwith very short\nlines.",
+   "sourceText": "A second paragraph with very short lines.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 40,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Line breaks and headings > Setext level two\"",
+   "masked": "Thematic breaks with asterisks and with underscores:",
+   "original": "Thematic breaks with asterisks and with underscores:",
+   "sourceText": "Thematic breaks with asterisks and with underscores:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Line breaks and headings > Setext level two\"",
+   "masked": "Final sentence.",
+   "original": "Final sentence.",
+   "sourceText": "Final sentence.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   0,
+   24,
+   "s1"
+  ],
+  [
+   51,
+   128,
+   "s2"
+  ],
+  [
+   130,
+   177,
+   "s3"
+  ],
+  [
+   179,
+   195,
+   "s4"
+  ],
+  [
+   214,
+   420,
+   "s5"
+  ],
+  [
+   422,
+   463,
+   "s6"
+  ],
+  [
+   472,
+   524,
+   "s7"
+  ],
+  [
+   603,
+   618,
+   "s8"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "<a id=\"line-breaks-and-headings\"></a>ÜLINE ÜBREAKS ÜAND ÜHEADINGS\n========================\n\nÜTHIS ÜPARAGRAPH ÜENDS ÜWITH ÜTWO ÜSPACES  \nÜSO ÜTHIS ÜLINE ÜSTARTS ÜAFTER ÜA ÜHARD ÜBREAK.\n\nÜTHIS ÜONE ÜUSES ÜA ÜBACKSLASH\\\nÜFOR ÜTHE ÜSAME ÜEFFECT.\n\n<a id=\"setext-level-two\"></a>ÜSETEXT ÜLEVEL ÜTWO\n----------------\n\nÜA ÜLONG ÜPARAGRAPH ÜTHAT ÜIS ÜWRAPPED ÜIN ÜTHE ÜSOURCE ÜFILE ÜAT ÜA ÜFIXED\nÜWIDTH ÜSO ÜTHAT ÜEACH ÜLINE ÜIS ÜSHORTER ÜTHAN ÜEIGHTY ÜCHARACTERS, ÜWHICH\nÜIS ÜCOMMON ÜIN ÜREPOSITORIES ÜTHAT ÜFOLLOW ÜA ÜSTRICT ÜSTYLE ÜGUIDE ÜFOR\nMarkdown ÜFILES.\n\nÜA ÜSECOND ÜPARAGRAPH ÜWITH ÜVERY ÜSHORT\nÜLINES.\n\n* * *\n\nÜTHEMATIC ÜBREAKS ÜWITH ÜASTERISKS ÜAND ÜWITH ÜUNDERSCORES:\n\n___\n\n    This is an indented code block.\n    It must stay exactly as it is.\n\nÜFINAL ÜSENTENCE.\n",
+ "reverted": [],
+ "anchors": [
+  "line-breaks-and-headings",
+  "setext-level-two"
+ ]
+}

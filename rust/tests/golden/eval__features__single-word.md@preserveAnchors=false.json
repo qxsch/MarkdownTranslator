@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/single-word.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜSAVE\n",
+ "reverted": [],
+ "anchors": []
+}

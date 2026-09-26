@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/troubleshooting.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜTROUBLESHOOTING\n\nÜUSE ÜTHIS ÜPAGE ÜWHEN ÜSYNC ÜDOESN'ÜT ÜWORK ÜAS ÜEXPECTED.\n\n## ÜERROR 0x8004de40: \"ÜCAN'ÜT ÜCONNECT ÜTO ÜTHE ÜSERVER\"\n\n**ÜCAUSE:** ÜA ÜPROXY ÜOR ÜFIREWALL ÜBLOCKS ÜTHE ÜCONNECTION.\n\n**ÜSOLUTION:**\n\n1. ÜCHECK ÜTHAT `sync.contoso.example` ÜIS ÜREACHABLE ÜON ÜPORT 443.\n2. ÜIF ÜYOU ÜUSE ÜA ÜPROXY, ÜSET ÜTHE `HTTPS_PROXY` ÜENVIRONMENT ÜVARIABLE.\n3. ÜRESTART ÜTHE ÜCLIENT ÜWITH `ctsync restart`.\n\n## ÜFILES ÜSTAY ÜIN ÜTHE \"ÜPENDING\" ÜSTATE\n\nÜTHIS ÜUSUALLY ÜHAPPENS ÜWHEN ÜA ÜFILE ÜIS ÜOPEN ÜIN ÜANOTHER ÜPROGRAM. ÜCLOSE ÜTHE ÜPROGRAM, ÜTHEN ÜWAIT ÜA ÜFEW ÜMINUTES. ÜIF ÜTHE ÜFILE ÜIS ÜSTILL ÜPENDING, ÜCHECK ÜTHE ÜLOG:\n\n```powershell\nGet-Content \"$env:LOCALAPPDATA\\ContosoSync\\logs\\ctsync.log\" -Tail 50\n```\n\n## ÜSYNC ÜIS ÜSLOW\n\n- ÜLARGE ÜFILES ÜARE ÜUPLOADED ÜIN ÜBLOCKS ÜOF 4 ÜMB. ÜA 10 ÜGB ÜFILE ÜTAKES ÜA ÜWHILE.\n- ÜANTIVIRUS ÜSOFTWARE ÜCAN ÜSCAN ÜEVERY ÜFILE ÜTWICE. ÜEXCLUDE ÜTHE ÜSYNC ÜFOLDER ÜFROM ÜREAL-ÜTIME ÜSCANNING.\n- ÜCHECK ÜTHE ÜBANDWIDTH ÜLIMIT ÜUNDER **ÜSETTINGS** > **ÜNETWORK**.\n\n## ÜTHE ÜAPP ÜCRASHES ÜAT ÜSTARTUP\n\nÜDELETE ÜTHE ÜSETTINGS ÜFILE `settings.json` ÜIN `%APPDATA%\\ContosoSync` ÜAND ÜSTART ÜTHE ÜAPP ÜAGAIN. ÜYOUR ÜFILES ÜAREN'ÜT ÜAFFECTED.\n\n## ÜSTILL ÜSTUCK?\n\nÜCOLLECT ÜDIAGNOSTICS ÜWITH `ctsync diag --zip` ÜAND ÜATTACH ÜTHE ÜFILE `diag.zip` ÜTO ÜA ÜSUPPORT ÜREQUEST.\n",
+ "reverted": [],
+ "anchors": []
+}

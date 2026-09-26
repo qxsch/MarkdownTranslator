@@ -1,0 +1,296 @@
+{
+ "file": "eval/features/glossary-terms.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Glossary",
+   "original": "Glossary",
+   "sourceText": "Glossary",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Share</g1> : A cloud folder that several people can access.",
+   "original": "**Share**\n: A cloud folder that several people can access.",
+   "sourceText": "Share : A cloud folder that several people can access.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 48,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Pin</g1> : Keeps a file on the device, even when files on demand is turned on.",
+   "original": "**Pin**\n: Keeps a file on the device, even when files on demand is turned on.",
+   "sourceText": "Pin : Keeps a file on the device, even when files on demand is turned on.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 69,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Placeholder</g1> : A file entry that shows the name and size but has no content on the device yet.",
+   "original": "**Placeholder**\n: A file entry that shows the name and size but has no content on the device yet.",
+   "sourceText": "Placeholder : A file entry that shows the name and size but has no content on the device yet.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 81,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Conflict copy</g1> : A second version of a file that is created when two people change the file at the same time. Its name ends with <x2/>.",
+   "original": "**Conflict copy**\n: A second version of a file that is created when two people change the file at the same time. Its name ends with `-conflict`.",
+   "sourceText": "Conflict copy : A second version of a file that is created when two people change the file at the same time. Its name ends with .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "`-conflict`",
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 126,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:-conflict\nstrong"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Tenant</g1> : The organization that owns the accounts and the storage.",
+   "original": "**Tenant**\n: The organization that owns the accounts and the storage.",
+   "sourceText": "Tenant : The organization that owns the accounts and the storage.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 58,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Seat</g1> : A paid license for one user.",
+   "original": "**Seat**\n: A paid license for one user.",
+   "sourceText": "Seat : A paid license for one user.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 40,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Drain</g1> : Stops accepting new uploads on a server so that it can be updated.",
+   "original": "**Drain**\n: Stops accepting new uploads on a server so that it can be updated.",
+   "sourceText": "Drain : Stops accepting new uploads on a server so that it can be updated.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 68,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Glossary\"",
+   "masked": "<g1>Throttle</g1> : Slows down requests from a client that sends too many.",
+   "original": "**Throttle**\n: Slows down requests from a client that sends too many.",
+   "sourceText": "Throttle : Slows down requests from a client that sends too many.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 56,
+    "firstColumn": 0,
+    "prefix": "",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   10,
+   "s1"
+  ],
+  [
+   12,
+   70,
+   "s2"
+  ],
+  [
+   72,
+   149,
+   "s3"
+  ],
+  [
+   151,
+   248,
+   "s4"
+  ],
+  [
+   250,
+   394,
+   "s5"
+  ],
+  [
+   396,
+   465,
+   "s6"
+  ],
+  [
+   467,
+   506,
+   "s7"
+  ],
+  [
+   508,
+   586,
+   "s8"
+  ],
+  [
+   588,
+   657,
+   "s9"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"glossary\"></a>ÜGLOSSARY\n\n**ÜSHARE** : ÜA ÜCLOUD ÜFOLDER ÜTHAT ÜSEVERAL\nÜPEOPLE ÜCAN ÜACCESS.\n\n**ÜPIN** : ÜKEEPS ÜA ÜFILE ÜON ÜTHE ÜDEVICE, ÜEVEN ÜWHEN ÜFILES ÜON\nÜDEMAND ÜIS ÜTURNED ÜON.\n\n**ÜPLACEHOLDER** : ÜA ÜFILE ÜENTRY ÜTHAT ÜSHOWS ÜTHE ÜNAME ÜAND ÜSIZE ÜBUT ÜHAS\nÜNO ÜCONTENT ÜON ÜTHE ÜDEVICE ÜYET.\n\n**ÜCONFLICT ÜCOPY** : ÜA ÜSECOND ÜVERSION ÜOF ÜA ÜFILE ÜTHAT ÜIS ÜCREATED ÜWHEN ÜTWO ÜPEOPLE ÜCHANGE ÜTHE ÜFILE ÜAT ÜTHE ÜSAME\nÜTIME. ÜITS ÜNAME ÜENDS ÜWITH `-conflict`.\n\n**ÜTENANT** : ÜTHE ÜORGANIZATION ÜTHAT ÜOWNS ÜTHE\nÜACCOUNTS ÜAND ÜTHE ÜSTORAGE.\n\n**ÜSEAT** : ÜA ÜPAID ÜLICENSE ÜFOR ÜONE\nÜUSER.\n\n**ÜDRAIN** : ÜSTOPS ÜACCEPTING ÜNEW ÜUPLOADS ÜON ÜA ÜSERVER ÜSO\nÜTHAT ÜIT ÜCAN ÜBE ÜUPDATED.\n\n**ÜTHROTTLE** : ÜSLOWS ÜDOWN ÜREQUESTS ÜFROM ÜA ÜCLIENT\nÜTHAT ÜSENDS ÜTOO ÜMANY.\n",
+ "reverted": [],
+ "anchors": [
+  "glossary"
+ ]
+}

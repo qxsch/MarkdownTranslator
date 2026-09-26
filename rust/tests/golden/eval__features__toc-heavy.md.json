@@ -1,0 +1,628 @@
+{
+ "file": "eval/features/toc-heavy.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Security baseline",
+   "original": "Security baseline",
+   "sourceText": "Security baseline",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Security baseline\"",
+   "masked": "Contents",
+   "original": "Contents",
+   "sourceText": "Contents",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"",
+   "masked": "<g1>Overview</g1>",
+   "original": "[Overview](#overview)",
+   "sourceText": "Overview",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #overview"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#overview"
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"",
+   "masked": "<g1>Identity</g1>",
+   "original": "[Identity](#identity)",
+   "sourceText": "Identity",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #identity"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#identity"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"; list introduced by \"Identity\"",
+   "masked": "<g1>Multifactor authentication</g1>",
+   "original": "[Multifactor authentication](#multifactor-authentication)",
+   "sourceText": "Multifactor authentication",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #multifactor-authentication"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#multifactor-authentication"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"; list introduced by \"Identity\"",
+   "masked": "<g1>Conditional access</g1>",
+   "original": "[Conditional access](#conditional-access)",
+   "sourceText": "Conditional access",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #conditional-access"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#conditional-access"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"",
+   "masked": "<g1>Data protection</g1>",
+   "original": "[Data protection](#data-protection)",
+   "sourceText": "Data protection",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #data-protection"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#data-protection"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"; list introduced by \"Data protection\"",
+   "masked": "<g1>Encryption</g1>",
+   "original": "[Encryption](#encryption)",
+   "sourceText": "Encryption",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #encryption"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#encryption"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"; list introduced by \"Data protection\"",
+   "masked": "<g1>Sharing links</g1>",
+   "original": "[Sharing links](#sharing-links)",
+   "sourceText": "Sharing links",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #sharing-links"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#sharing-links"
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Security baseline > Contents\"",
+   "masked": "<g1>Monitoring</g1>",
+   "original": "[Monitoring](#monitoring)",
+   "sourceText": "Monitoring",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #monitoring"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#monitoring"
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Security baseline\"",
+   "masked": "Overview",
+   "original": "Overview",
+   "sourceText": "Overview",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Security baseline > Overview\"",
+   "masked": "This baseline lists the recommended security settings for Contoso Sync.",
+   "original": "This baseline lists the recommended security settings for Contoso Sync.",
+   "sourceText": "This baseline lists the recommended security settings for Contoso Sync.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s13",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Security baseline\"",
+   "masked": "Identity",
+   "original": "Identity",
+   "sourceText": "Identity",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Security baseline > Identity\"",
+   "masked": "Multifactor authentication",
+   "original": "Multifactor authentication",
+   "sourceText": "Multifactor authentication",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Security baseline > Identity > Multifactor authentication\"",
+   "masked": "Require multifactor authentication for all users.",
+   "original": "Require multifactor authentication for all users.",
+   "sourceText": "Require multifactor authentication for all users.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Security baseline > Identity\"",
+   "masked": "Conditional access",
+   "original": "Conditional access",
+   "sourceText": "Conditional access",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s17",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Security baseline > Identity > Conditional access\"",
+   "masked": "Allow sign-in only from managed devices.",
+   "original": "Allow sign-in only from managed devices.",
+   "sourceText": "Allow sign-in only from managed devices.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s18",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Security baseline\"",
+   "masked": "Data protection",
+   "original": "Data protection",
+   "sourceText": "Data protection",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s19",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Security baseline > Data protection\"",
+   "masked": "Encryption",
+   "original": "Encryption",
+   "sourceText": "Encryption",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s20",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Security baseline > Data protection > Encryption\"",
+   "masked": "Encryption at rest is always on. Customer-managed keys are optional.",
+   "original": "Encryption at rest is always on. Customer-managed keys are optional.",
+   "sourceText": "Encryption at rest is always on. Customer-managed keys are optional.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s21",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Security baseline > Data protection\"",
+   "masked": "Sharing links",
+   "original": "Sharing links",
+   "sourceText": "Sharing links",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s22",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Security baseline > Data protection > Sharing links\"",
+   "masked": "Set the default link type to <g1>People in your organization</g1>. Anonymous links should expire after 7 days.",
+   "original": "Set the default link type to **People in your organization**. Anonymous links should expire after 7 days.",
+   "sourceText": "Set the default link type to People in your organization. Anonymous links should expire after 7 days.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s23",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Security baseline\"",
+   "masked": "Monitoring",
+   "original": "Monitoring",
+   "sourceText": "Monitoring",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s24",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Security baseline > Monitoring\"",
+   "masked": "Send the audit log to your SIEM. Review <g1>sharing links</g1> every month.",
+   "original": "Send the audit log to your SIEM. Review [sharing links](#sharing-links) every month.",
+   "sourceText": "Send the audit log to your SIEM. Review sharing links every month.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to #sharing-links"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#sharing-links"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   19,
+   "s1"
+  ],
+  [
+   24,
+   32,
+   "s2"
+  ],
+  [
+   36,
+   57,
+   "s3"
+  ],
+  [
+   60,
+   81,
+   "s4"
+  ],
+  [
+   86,
+   143,
+   "s5"
+  ],
+  [
+   148,
+   189,
+   "s6"
+  ],
+  [
+   192,
+   227,
+   "s7"
+  ],
+  [
+   232,
+   257,
+   "s8"
+  ],
+  [
+   262,
+   293,
+   "s9"
+  ],
+  [
+   296,
+   321,
+   "s10"
+  ],
+  [
+   326,
+   334,
+   "s11"
+  ],
+  [
+   336,
+   407,
+   "s12"
+  ],
+  [
+   412,
+   420,
+   "s13"
+  ],
+  [
+   426,
+   452,
+   "s14"
+  ],
+  [
+   454,
+   503,
+   "s15"
+  ],
+  [
+   509,
+   527,
+   "s16"
+  ],
+  [
+   529,
+   569,
+   "s17"
+  ],
+  [
+   574,
+   589,
+   "s18"
+  ],
+  [
+   595,
+   605,
+   "s19"
+  ],
+  [
+   607,
+   675,
+   "s20"
+  ],
+  [
+   681,
+   694,
+   "s21"
+  ],
+  [
+   696,
+   801,
+   "s22"
+  ],
+  [
+   806,
+   816,
+   "s23"
+  ],
+  [
+   818,
+   902,
+   "s24"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"security-baseline\"></a>ÜSECURITY ÜBASELINE\n\n## <a id=\"contents\"></a>ÜCONTENTS\n\n- [ÜOVERVIEW](#overview)\n- [ÜIDENTITY](#identity)\n  - [ÜMULTIFACTOR ÜAUTHENTICATION](#multifactor-authentication)\n  - [ÜCONDITIONAL ÜACCESS](#conditional-access)\n- [ÜDATA ÜPROTECTION](#data-protection)\n  - [ÜENCRYPTION](#encryption)\n  - [ÜSHARING ÜLINKS](#sharing-links)\n- [ÜMONITORING](#monitoring)\n\n## <a id=\"overview\"></a>ÜOVERVIEW\n\nÜTHIS ÜBASELINE ÜLISTS ÜTHE ÜRECOMMENDED ÜSECURITY ÜSETTINGS ÜFOR ÜCONTOSO ÜSYNC.\n\n## <a id=\"identity\"></a>ÜIDENTITY\n\n### <a id=\"multifactor-authentication\"></a>ÜMULTIFACTOR ÜAUTHENTICATION\n\nÜREQUIRE ÜMULTIFACTOR ÜAUTHENTICATION ÜFOR ÜALL ÜUSERS.\n\n### <a id=\"conditional-access\"></a>ÜCONDITIONAL ÜACCESS\n\nÜALLOW ÜSIGN-ÜIN ÜONLY ÜFROM ÜMANAGED ÜDEVICES.\n\n## <a id=\"data-protection\"></a>ÜDATA ÜPROTECTION\n\n### <a id=\"encryption\"></a>ÜENCRYPTION\n\nÜENCRYPTION ÜAT ÜREST ÜIS ÜALWAYS ÜON. ÜCUSTOMER-ÜMANAGED ÜKEYS ÜARE ÜOPTIONAL.\n\n### <a id=\"sharing-links\"></a>ÜSHARING ÜLINKS\n\nÜSET ÜTHE ÜDEFAULT ÜLINK ÜTYPE ÜTO **ÜPEOPLE ÜIN ÜYOUR ÜORGANIZATION**. ÜANONYMOUS ÜLINKS ÜSHOULD ÜEXPIRE ÜAFTER 7 ÜDAYS.\n\n## <a id=\"monitoring\"></a>ÜMONITORING\n\nÜSEND ÜTHE ÜAUDIT ÜLOG ÜTO ÜYOUR ÜSIEM. ÜREVIEW [ÜSHARING ÜLINKS](#sharing-links) ÜEVERY ÜMONTH.\n",
+ "reverted": [],
+ "anchors": [
+  "security-baseline",
+  "contents",
+  "overview",
+  "identity",
+  "multifactor-authentication",
+  "conditional-access",
+  "data-protection",
+  "encryption",
+  "sharing-links",
+  "monitoring"
+ ]
+}

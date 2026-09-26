@@ -1,0 +1,12 @@
+{
+ "file": "eval/features/html-attributes.md",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "error": "extract: Unexpected closing tag `</figure>`, expected corresponding closing tag for `<img>` (15:3-15:69)"
+}

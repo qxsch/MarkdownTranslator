@@ -1,0 +1,286 @@
+{
+ "file": "eval/features/admonitions-docusaurus.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Configure retention",
+   "original": "Configure retention",
+   "sourceText": "Configure retention",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Configure retention",
+   "original": "Configure retention",
+   "sourceText": "Configure retention",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure retention\"; inside \"note\" admonition/directive",
+   "masked": "Retention applies to deleted files and to old versions.",
+   "original": "Retention applies to deleted files and to old versions.",
+   "sourceText": "Retention applies to deleted files and to old versions.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure retention\"",
+   "masked": "<x1/><g2>Save space</g2><x3/><g4>Set a short retention for folders with large media files.</g4><x5/><x6/>",
+   "original": ":::tip Save space\nSet a short retention for folders with large media files.\n:::",
+   "sourceText": "Save spaceSet a short retention for folders with large media files.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":::tip ",
+    "x3": "line break [break]",
+    "x5": "line break [break]",
+    "x6": ":::",
+    "g2": "html: directive title",
+    "g4": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 g2 x3 g4 x5 x6"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure retention\"; inside \"info\" admonition/directive; admonition title",
+   "masked": "Retention and legal hold",
+   "original": "Retention and legal hold",
+   "sourceText": "Retention and legal hold",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure retention\"; inside \"info\" admonition/directive",
+   "masked": "Files on <g1>legal hold</g1> are kept even when the retention period ends.",
+   "original": "Files on **legal hold** are kept even when the retention period ends.",
+   "sourceText": "Files on legal hold are kept even when the retention period ends.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure retention\"; inside \"warning\" admonition/directive",
+   "masked": "The retention setting affects <g1>all</g1> members of the share.",
+   "original": "The retention setting affects **all** members of the share.",
+   "sourceText": "The retention setting affects all members of the share.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure retention\"",
+   "masked": "<x1/><g2>Irreversible</g2><x3/><g4>Files that are deleted by the retention policy can't be restored.</g4><x5/><x6/>",
+   "original": ":::danger Irreversible\nFiles that are deleted by the retention policy can't be restored.\n:::",
+   "sourceText": "IrreversibleFiles that are deleted by the retention policy can't be restored.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ":::danger ",
+    "x3": "line break [break]",
+    "x5": "line break [break]",
+    "x6": ":::",
+    "g2": "html: directive title",
+    "g4": "html: text between directive lines"
+   },
+   "tagGroups": [
+    "ordered: x1 g2 x3 g4 x5 x6"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Configure retention\"",
+   "masked": "Choose a period",
+   "original": "Choose a period",
+   "sourceText": "Choose a period",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Configure retention > Choose a period\"",
+   "masked": "Most teams keep versions for 30 days. Regulated industries often need 7 years.",
+   "original": "Most teams keep versions for 30 days. Regulated industries often need 7 years.",
+   "sourceText": "Most teams keep versions for 30 days. Regulated industries often need 7 years.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   30,
+   "s1"
+  ],
+  [
+   58,
+   77,
+   "s2"
+  ],
+  [
+   87,
+   142,
+   "s3"
+  ],
+  [
+   148,
+   227,
+   "s4"
+  ],
+  [
+   237,
+   261,
+   "s5"
+  ],
+  [
+   263,
+   332,
+   "s6"
+  ],
+  [
+   350,
+   409,
+   "s7"
+  ],
+  [
+   416,
+   508,
+   "s8"
+  ],
+  [
+   513,
+   528,
+   "s9"
+  ],
+  [
+   530,
+   608,
+   "s10"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: ÜCONFIGURE ÜRETENTION\nsidebar_position: 3\n---\n\n# <a id=\"configure-retention\"></a>ÜCONFIGURE ÜRETENTION\n\n:::note\nÜRETENTION ÜAPPLIES ÜTO ÜDELETED ÜFILES ÜAND ÜTO ÜOLD ÜVERSIONS.\n:::\n\n:::tip ÜSAVE ÜSPACE\nÜSET ÜA ÜSHORT ÜRETENTION ÜFOR ÜFOLDERS ÜWITH ÜLARGE ÜMEDIA ÜFILES.\n:::\n\n:::info[ÜRETENTION ÜAND ÜLEGAL ÜHOLD]\nÜFILES ÜON **ÜLEGAL ÜHOLD** ÜARE ÜKEPT ÜEVEN ÜWHEN ÜTHE ÜRETENTION ÜPERIOD ÜENDS.\n:::\n\n:::warning\n\nÜTHE ÜRETENTION ÜSETTING ÜAFFECTS **ÜALL** ÜMEMBERS ÜOF ÜTHE ÜSHARE.\n\n:::\n\n:::danger ÜIRREVERSIBLE\nÜFILES ÜTHAT ÜARE ÜDELETED ÜBY ÜTHE ÜRETENTION ÜPOLICY ÜCAN'ÜT ÜBE ÜRESTORED.\n:::\n\n## <a id=\"choose-a-period\"></a>ÜCHOOSE ÜA ÜPERIOD\n\nÜMOST ÜTEAMS ÜKEEP ÜVERSIONS ÜFOR 30 ÜDAYS. ÜREGULATED ÜINDUSTRIES ÜOFTEN ÜNEED 7 ÜYEARS.\n",
+ "reverted": [],
+ "anchors": [
+  "configure-retention",
+  "choose-a-period"
+ ]
+}

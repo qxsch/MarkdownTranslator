@@ -1,0 +1,198 @@
+{
+ "file": "eval/features/code-commented-out.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Debugging notes",
+   "original": "Debugging notes",
+   "sourceText": "Debugging notes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Debugging notes\"",
+   "masked": "Some comments contain code that is switched off. It must stay exactly as it is.",
+   "original": "Some comments contain code that is switched off. It must stay exactly as it is.",
+   "sourceText": "Some comments contain code that is switched off. It must stay exactly as it is.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"Debugging notes\"; python code block",
+   "masked": "Refresh only when the folder changed since the last run",
+   "original": "Refresh only when the folder changed since the last run",
+   "sourceText": "Refresh only when the folder changed since the last run",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"Debugging notes\"; python code block",
+   "masked": "return None",
+   "original": "return None",
+   "sourceText": "return None",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "javascript source code comment",
+   "structure": "section \"Debugging notes\"; javascript code block",
+   "masked": "Start the watcher after the first full scan",
+   "original": "Start the watcher after the first full scan",
+   "sourceText": "Start the watcher after the first full scan",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bash source code comment",
+   "structure": "section \"Debugging notes\"; bash code block",
+   "masked": "ctsync reset <x1/> Show the status of every folder",
+   "original": "ctsync reset --force\n# Show the status of every folder",
+   "sourceText": "ctsync reset  Show the status of every folder",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "--force"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 40,
+    "firstColumn": 2,
+    "prefix": "# ",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "csharp source code comment",
+   "structure": "section \"Debugging notes\"; csharp code block",
+   "masked": "Reuse the shared client instead of creating a new one",
+   "original": "Reuse the shared client instead of creating a new one",
+   "sourceText": "Reuse the shared client instead of creating a new one",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   17,
+   "s1"
+  ],
+  [
+   19,
+   98,
+   "s2"
+  ],
+  [
+   193,
+   248,
+   "s3"
+  ],
+  [
+   303,
+   314,
+   "s4"
+  ],
+  [
+   447,
+   490,
+   "s5"
+  ],
+  [
+   584,
+   638,
+   "s6"
+  ],
+  [
+   729,
+   782,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"debugging-notes\"></a>ÜDEBUGGING ÜNOTES\n\nÜSOME ÜCOMMENTS ÜCONTAIN ÜCODE ÜTHAT ÜIS ÜSWITCHED ÜOFF. ÜIT ÜMUST ÜSTAY ÜEXACTLY ÜAS ÜIT ÜIS.\n\n```python\ndef sync(folder):\n    # print(folder.files)\n    # folder.refresh(force=True)\n    # ÜREFRESH ÜONLY ÜWHEN ÜTHE ÜFOLDER ÜCHANGED ÜSINCE ÜTHE ÜLAST ÜRUN\n    if folder.changed:\n        folder.refresh()\n    # ÜRETURN ÜNONE\n    return folder.state\n```\n\n```javascript\nfunction start() {\n  // console.log('starting', config);\n  // await client.reset();\n  // ÜSTART ÜTHE ÜWATCHER ÜAFTER ÜTHE ÜFIRST ÜFULL ÜSCAN\n  watcher.start();\n  // if (debug) { dumpState(); }\n}\n```\n\n```bash\n# export CTSYNC_DEBUG=1\n# ÜCTSYNC ÜRESET --force ÜSHOW ÜTHE\n# ÜSTATUS ÜOF ÜEVERY ÜFOLDER\nctsync status\n```\n\n```csharp\n// var client = new SyncClient(uri);\n// client.Dispose();\n// ÜREUSE ÜTHE ÜSHARED ÜCLIENT ÜINSTEAD ÜOF ÜCREATING ÜA ÜNEW ÜONE\nvar client = SyncClientFactory.Shared;\n```\n\n```ts\n// eslint-disable-next-line @typescript-eslint/no-explicit-any\nconst raw: any = JSON.parse(text);\n// @ts-expect-error: the SDK types are out of date\nclient.legacyUpload(raw);\n```\n",
+ "reverted": [],
+ "anchors": [
+  "debugging-notes"
+ ]
+}

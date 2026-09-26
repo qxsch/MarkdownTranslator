@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/release-notes.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜRELEASE ÜNOTES\n\n## ÜVERSION 3.2.0 (2026-08-14)\n\n### ÜNEW ÜFEATURES\n\n- **ÜSELECTIVE ÜSYNC ÜFOR ÜSUBFOLDERS.** ÜYOU ÜCAN ÜNOW ÜEXCLUDE ÜSINGLE ÜSUBFOLDERS ÜINSTEAD ÜOF ÜWHOLE ÜSHARES.\n- ÜA ÜNEW `--dry-run` ÜFLAG ÜFOR `ctsync reset` ÜSHOWS ÜWHAT ÜWOULD ÜBE ÜDELETED.\n- ÜDARK ÜMODE ÜFOLLOWS ÜTHE ÜSYSTEM ÜSETTING.\n\n### ÜFIXED ÜISSUES\n\n- ÜFIXED ÜA ÜCRASH ÜWHEN ÜA ÜFILE ÜNAME ÜCONTAINED ÜAN ÜEMOJI.\n- ÜTHE ÜTRAY ÜICON ÜNO ÜLONGER ÜFLICKERS ÜDURING ÜLARGE ÜUPLOADS.\n- ÜRENAMING ÜA ÜFOLDER ÜWHILE ÜIT ÜWAS ÜSYNCING ÜCREATED ÜA ÜDUPLICATE. ÜTHIS ÜIS ÜFIXED.\n\n### ÜKNOWN ÜISSUES\n\n- ÜON macOS 14.1, ÜNOTIFICATIONS ÜMAY ÜAPPEAR ÜTWICE. ÜUPDATE ÜTO 14.2 ÜTO ÜFIX ÜTHIS.\n\n## ÜVERSION 3.1.4 (2026-06-02)\n\n- ÜSECURITY ÜUPDATE ÜFOR ÜCVE-2026-1234. ÜUPDATE ÜAS ÜSOON ÜAS ÜPOSSIBLE.\n- ÜIMPROVED ÜUPLOAD ÜSPEED ÜBY ÜUP ÜTO 30% ÜON ÜSLOW ÜCONNECTIONS.\n\n## ÜVERSION 3.1.0 (2026-04-20)\n\n### ÜBREAKING ÜCHANGES\n\n- ÜTHE ÜCONFIGURATION ÜFILE ÜMOVED ÜFROM `config.ini` ÜTO `config.toml`. ÜTHE ÜAPP ÜMIGRATES ÜIT ÜAUTOMATICALLY ÜON ÜFIRST ÜSTART.\n- ÜSUPPORT ÜFOR Windows 10 ÜVERSION 1809 ÜENDED.\n",
+ "reverted": [],
+ "anchors": []
+}

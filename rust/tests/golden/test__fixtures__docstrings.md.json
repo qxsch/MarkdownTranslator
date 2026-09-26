@@ -1,0 +1,439 @@
+{
+ "file": "test/fixtures/docstrings.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Docstrings",
+   "original": "Docstrings",
+   "sourceText": "Docstrings",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "Upload a file to the storage account.",
+   "original": "Upload a file to the storage account.",
+   "sourceText": "Upload a file to the storage account.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "The upload is retried when the service is busy.",
+   "original": "The upload is retried when the service is busy.",
+   "sourceText": "The upload is retried when the service is busy.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "<x1/>Local path of the file to upload.",
+   "original": "path (str): Local path of the file to upload.",
+   "sourceText": "Local path of the file to upload.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "path (str): "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "<x1/>How many times to retry.",
+   "original": "retries (int): How many times to retry.",
+   "sourceText": "How many times to retry.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "retries (int): "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "<x1/>True if the upload succeeded.",
+   "original": "bool: True if the upload succeeded.",
+   "sourceText": "True if the upload succeeded.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "bool: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "<x1/>If the path does not exist.",
+   "original": "ValueError: If the path does not exist.",
+   "sourceText": "If the path does not exist.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "ValueError: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "Upload a single file.",
+   "original": "Upload a single file.",
+   "sourceText": "Upload a single file.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "Or use the command line<x1/>",
+   "original": "Or use the command line::",
+   "sourceText": "Or use the command line",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "::"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "Then check the result.",
+   "original": "Then check the result.",
+   "sourceText": "Then check the result.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "<x1/>Large files are uploaded in blocks.",
+   "original": ".. note:: Large files are uploaded in blocks.",
+   "sourceText": "Large files are uploaded in blocks.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": ".. note:: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "Download a blob.",
+   "original": "Download a blob.",
+   "sourceText": "Download a blob.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "Name of the blob to download.",
+   "original": "Name of the blob to download.",
+   "sourceText": "Name of the blob to download.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s14",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "The content of the blob.",
+   "original": "The content of the blob.",
+   "sourceText": "The content of the blob.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s15",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python docstring",
+   "structure": "section \"Docstrings\"; python code block",
+   "masked": "Uses <x1/> requests for large blobs.",
+   "original": "Uses ``Range`` requests for large blobs.",
+   "sourceText": "Uses  requests for large blobs.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "``Range``"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "\"\"\"",
+    "\\"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   12,
+   "s1"
+  ],
+  [
+   60,
+   97,
+   "s2"
+  ],
+  [
+   103,
+   150,
+   "s3"
+  ],
+  [
+   170,
+   215,
+   "s4"
+  ],
+  [
+   224,
+   263,
+   "s5"
+  ],
+  [
+   286,
+   321,
+   "s6"
+  ],
+  [
+   343,
+   382,
+   "s7"
+  ],
+  [
+   406,
+   427,
+   "s8"
+  ],
+  [
+   482,
+   507,
+   "s9"
+  ],
+  [
+   607,
+   629,
+   "s10"
+  ],
+  [
+   635,
+   680,
+   "s11"
+  ],
+  [
+   718,
+   734,
+   "s12"
+  ],
+  [
+   789,
+   818,
+   "s13"
+  ],
+  [
+   862,
+   886,
+   "s14"
+  ],
+  [
+   912,
+   952,
+   "s15"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"docstrings\"></a>ÜDOCSTRINGS\n\n```python\ndef upload(path, retries=3):\n    \"\"\"ÜUPLOAD ÜA ÜFILE ÜTO ÜTHE ÜSTORAGE ÜACCOUNT.\n\n    ÜTHE ÜUPLOAD ÜIS ÜRETRIED ÜWHEN ÜTHE ÜSERVICE ÜIS ÜBUSY.\n\n    Args:\n        path (str): ÜLOCAL ÜPATH ÜOF ÜTHE ÜFILE ÜTO ÜUPLOAD.\n        retries (int): ÜHOW ÜMANY ÜTIMES ÜTO ÜRETRY.\n\n    Returns:\n        bool: ÜTRUE ÜIF ÜTHE ÜUPLOAD ÜSUCCEEDED.\n\n    Raises:\n        ValueError: ÜIF ÜTHE ÜPATH ÜDOES ÜNOT ÜEXIST.\n\n    Examples:\n        ÜUPLOAD ÜA ÜSINGLE ÜFILE.\n\n        >>> upload(\"data.csv\")\n        True\n\n        ÜOR ÜUSE ÜTHE ÜCOMMAND ÜLINE::\n\n            python upload.py data.csv --retries 5\n            python upload.py other.csv\n\n        ÜTHEN ÜCHECK ÜTHE ÜRESULT.\n\n    .. note:: ÜLARGE ÜFILES ÜARE ÜUPLOADED ÜIN ÜBLOCKS.\n    \"\"\"\n\n\ndef download(name):\n    \"\"\"ÜDOWNLOAD ÜA ÜBLOB.\n\n    Parameters\n    ----------\n    name : str\n        ÜNAME ÜOF ÜTHE ÜBLOB ÜTO ÜDOWNLOAD.\n\n    Returns\n    -------\n    bytes\n        ÜTHE ÜCONTENT ÜOF ÜTHE ÜBLOB.\n\n    Notes\n    -----\n    ÜUSES ``Range`` ÜREQUESTS ÜFOR ÜLARGE ÜBLOBS.\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "docstrings"
+ ]
+}

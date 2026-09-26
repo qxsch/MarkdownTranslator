@@ -1,0 +1,15 @@
+{
+ "file": "eval/corpus/settings-reference.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜSETTINGS ÜREFERENCE\n\nÜTHIS ÜPAGE ÜLISTS ÜTHE ÜOPTIONS ÜON ÜTHE **ÜSETTINGS** ÜPAGE ÜOF ÜTHE ÜPORTAL ÜAND ÜIN ÜTHE ÜCONFIGURATION ÜFILE.\n\n## ÜGENERAL\n\n| ÜOPTION | ÜVALUES | ÜDEFAULT | ÜDESCRIPTION |\n|--------|--------|---------|-------------|\n| ÜMODE | ÜRUN, ÜTEST, ÜOFF | ÜRUN | ÜCONTROLS ÜWHETHER ÜJOBS ÜRUN, ÜONLY ÜSIMULATE, ÜOR ÜARE ÜPAUSED. |\n| ÜRETRY | ÜYES, ÜNO | ÜYES | ÜRETRIES ÜA ÜFAILED ÜJOB ÜONCE ÜAFTER ÜA ÜSHORT ÜDELAY. |\n| ÜSCHEDULE | ÜDAILY, ÜWEEKLY | ÜDAILY | ÜHOW ÜOFTEN ÜTHE ÜCLEANUP ÜJOB ÜRUNS. |\n| ÜOWNER | ÜANY ÜUSER | ÜCURRENT ÜUSER | ÜRECEIVES ÜALERTS ÜWHEN ÜA ÜJOB ÜFAILS. |\n| ÜSCOPE | ÜPROJECT, ÜACCOUNT | ÜPROJECT | ÜWHERE ÜTHE ÜSETTING ÜAPPLIES. |\n\nÜTO ÜCHANGE ÜAN ÜOPTION, ÜSELECT **ÜEDIT**, ÜCHOOSE ÜA ÜVALUE, ÜAND ÜTHEN ÜSELECT **ÜSAVE**. ÜSELECT **ÜCANCEL** ÜTO ÜDISCARD ÜYOUR ÜCHANGES.\n\n## ÜNOTIFICATIONS\n\nÜCHOOSE ÜWHICH ÜEVENTS ÜTRIGGER ÜA ÜNOTIFICATION:\n\n- ÜJOB ÜFAILED\n- ÜJOB ÜSUCCEEDED ÜAFTER ÜA ÜRETRY\n- ÜQUOTA ÜNEARLY ÜREACHED\n\n| ÜCHANNEL | ÜSUPPORTED | ÜNOTES |\n|---------|-----------|-------|\n| ÜEMAIL | ÜYES | ÜSENT ÜTO ÜTHE ÜOWNER. |\n| ÜTEAMS | ÜYES | ÜREQUIRES ÜA ÜWEBHOOK. |\n| ÜSMS | ÜNO | ÜPLANNED. |\n\n## ÜACTIONS\n\n| ÜBUTTON | ÜRESULT |\n|--------|--------|\n| **ÜRUN ÜNOW** | ÜSTARTS ÜTHE ÜJOB ÜIMMEDIATELY. |\n| **ÜPAUSE** | ÜSTOPS ÜNEW ÜRUNS; ÜRUNNING ÜJOBS ÜFINISH. |\n| **ÜRESET** | ÜRESTORES ÜTHE ÜDEFAULT ÜVALUES. |\n| **ÜEXPORT** | ÜDOWNLOADS ÜTHE ÜSETTINGS ÜAS ÜA ÜFILE. |\n\n> [!WARNING]\n> **ÜRESET** ÜCAN'ÜT ÜBE ÜUNDONE.\n",
+ "reverted": [],
+ "anchors": []
+}

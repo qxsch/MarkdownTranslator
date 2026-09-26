@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/ui-walkthrough.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜADMIN ÜCENTER ÜWALKTHROUGH\n\nÜTO ÜCHANGE ÜTHE ÜDEFAULT ÜRETENTION, ÜGO ÜTO **ÜSETTINGS** > **ÜDATA** > **ÜRETENTION** ÜAND ÜSELECT **ÜEDIT**.\n\nÜTO ÜADD ÜA ÜUSER, ÜSELECT **ÜUSERS** > **ÜACTIVE ÜUSERS** > **ÜADD ÜA ÜUSER**. ÜFILL ÜIN ÜTHE **ÜFIRST ÜNAME**, **ÜLAST ÜNAME** ÜAND **ÜUSERNAME** ÜBOXES, ÜTHEN ÜSELECT **ÜNEXT**.\n\nÜIN ÜTHE **ÜASSIGN ÜLICENSES** ÜSTEP, ÜSELECT **ÜTEAM**. ÜIF ÜTHE ÜOPTION ÜIS ÜUNAVAILABLE, ÜYOU'ÜVE ÜRUN ÜOUT ÜOF ÜLICENSES. ÜSELECT **ÜBUY ÜMORE** ÜTO ÜADD ÜSEATS.\n\nÜON ÜTHE **ÜOPTIONAL ÜSETTINGS** ÜPAGE, ÜYOU ÜCAN ÜASSIGN ÜA ÜROLE. ÜLEAVE **ÜUSER (ÜNO ÜADMIN ÜCENTER ÜACCESS)** ÜSELECTED ÜFOR ÜMOST ÜPEOPLE.\n\nÜSELECT **ÜFINISH ÜADDING**. ÜTHE ÜUSER ÜGETS ÜAN ÜE-ÜMAIL ÜWITH ÜTHE ÜSUBJECT *ÜYOUR ÜCONTOSO ÜSYNC ÜACCOUNT ÜIS ÜREADY*.\n\nÜTO ÜREMOVE ÜA ÜUSER, ÜSELECT ÜTHE ÜUSER, ÜTHEN **ÜDELETE ÜUSER**. ÜDELETED ÜUSERS ÜCAN ÜBE ÜRESTORED ÜFOR 30 ÜDAYS ÜFROM **ÜUSERS** > **ÜDELETED ÜUSERS**.\n",
+ "reverted": [],
+ "anchors": []
+}

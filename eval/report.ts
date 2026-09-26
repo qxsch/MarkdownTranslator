@@ -84,6 +84,8 @@ interface Results {
     judgePanel?: { id: string; provider: string; model: string; family: string }[];
     features: string[];
     config: { translateDeployment: string; reviewDeployment: string; translateReasoning: string; reviewReasoning: string; defaults: Record<string, boolean> };
+    /** Version string of the implementation under test (the Rust binary); absent for runs of the TypeScript pipeline. */
+    implementation?: string;
   };
   records: RecordRow[];
   judgements: JudgementRow[];
@@ -483,7 +485,7 @@ export function buildReport(resultsFile: string, outDir = process.env.EVAL_REPOR
   const langList = meta.langs.join(', ');
   const status = !previous ? 'first run with this output folder, no regression baseline yet' : regressions.length ? `${regressions.length} regression(s) against ${previous.commit} (${previous.createdAt.slice(0, 10)})` : `no regressions against ${previous.commit} (${previous.createdAt.slice(0, 10)})`;
   L.push('# Translation quality evaluation', '');
-  L.push(`Run ${meta.createdAt.slice(0, 16).replace('T', ' ')} UTC, commit \`${meta.commit}\`. ${meta.docs.length} English documents translated into ${langList}. Translator: Foundry deployment \`${meta.config.translateDeployment}\` (reasoning ${meta.config.translateReasoning}), review \`${meta.config.reviewDeployment}\` (reasoning ${meta.config.reviewReasoning}). Judges: ${panelInfo.map((j) => `\`${j.id}\` (${j.provider}, ${j.family})`).join(', ')}.`, '');
+  L.push(`Run ${meta.createdAt.slice(0, 16).replace('T', ' ')} UTC, commit \`${meta.commit}\`. ${meta.docs.length} English documents translated into ${langList}${meta.implementation ? ` by \`${meta.implementation}\`` : ''}. Translator: Foundry deployment \`${meta.config.translateDeployment}\` (reasoning ${meta.config.translateReasoning}), review \`${meta.config.reviewDeployment}\` (reasoning ${meta.config.reviewReasoning}). Judges: ${panelInfo.map((j) => `\`${j.id}\` (${j.provider}, ${j.family})`).join(', ')}.`, '');
   L.push('## Summary', '');
   L.push(`- Regression status: **${status}**.`);
   L.push(`- Default configuration: ${pct(scorecard.keepPass)} of protected strings kept verbatim, ${pct(scorecard.translatePass)} of expected phrases translated, ${pct(scorecard.cleanDocuments)} of documents without any defect, ${scorecard.structureBroken} structure breaks, ${scorecard.codeChanged} changed code blocks, ${scorecard.errors} failed documents.`);

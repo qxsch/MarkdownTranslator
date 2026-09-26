@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/msdocs-syntax.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: ÜCONNECT ÜA ÜSTORAGE ÜACCOUNT\ndescription: ÜLEARN ÜHOW ÜTO ÜCONNECT ÜAN ÜEXISTING ÜSTORAGE ÜACCOUNT ÜTO ÜCONTOSO ÜSYNC.\nms.date: 08/14/2026\nms.topic: how-to\nauthor: contoso-docs\nms.author: docsteam\nms.service: contoso-sync\n---\n\n# ÜCONNECT ÜA ÜSTORAGE ÜACCOUNT\n\n[!INCLUDE [ÜPREREQUISITES ÜFOR ÜALL ÜHOW-ÜTO ÜGUIDES](../includes/prereqs.md)]\n\n:::image type=\"content\" source=\"media/connect-storage/overview.png\" alt-text=\"ÜDIAGRAM ÜTHAT ÜSHOWS ÜTHE ÜCLIENT, ÜTHE ÜSYNC ÜSERVICE ÜAND ÜTHE ÜSTORAGE ÜACCOUNT.\":::\n\n## ÜCHOOSE ÜYOUR ÜPLATFORM\n\n::: zone pivot=\"portal\"\n\n1. ÜSIGN ÜIN ÜTO ÜTHE ÜPORTAL.\n2. ÜSELECT **ÜSTORAGE** > **ÜCONNECT**.\n3. ÜENTER ÜTHE ÜACCOUNT ÜNAME ÜAND ÜSELECT **ÜSAVE**.\n\n::: zone-end\n\n::: zone pivot=\"cli\"\n\nÜRUN ÜTHE ÜFOLLOWING ÜCOMMAND:\n\n```azurecli\nctsync storage connect --account mystorage --container sync\n```\n\n::: zone-end\n\n> [!div class=\"nextstepaction\"] >\n[ÜCONFIGURE ÜRETENTION](retention.md)\n\n[!VIDEO https://learn.example/embed/connect-storage]\n",
+ "reverted": [],
+ "anchors": []
+}

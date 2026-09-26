@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/tutorial-long.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜTUTORIAL: ÜAUTOMATE ÜBACKUPS ÜWITH ÜCONTOSO ÜSYNC\n\nÜIN ÜTHIS ÜTUTORIAL, ÜYOU ÜSET ÜUP ÜA ÜNIGHTLY ÜBACKUP ÜOF ÜA ÜPROJECT ÜFOLDER, ÜTEST ÜA ÜRESTORE ÜAND ÜGET ÜNOTIFIED ÜWHEN ÜSOMETHING ÜFAILS.\n\n## ÜPART 1: ÜPREPARE ÜTHE ÜFOLDER\n\nÜCREATE ÜA ÜFOLDER ÜNAMED `projects` ÜIN ÜYOUR ÜHOME ÜDIRECTORY. ÜMOVE ÜTHE ÜFILES ÜTHAT ÜYOU ÜWANT ÜTO ÜBACK ÜUP ÜINTO ÜIT. ÜAVOID ÜFOLDERS ÜTHAT ÜCONTAIN ÜBUILD ÜOUTPUT, ÜSUCH ÜAS `node_modules` ÜOR `bin`, ÜBECAUSE ÜTHEY ÜCHANGE ÜOFTEN ÜAND ÜUSE ÜA ÜLOT ÜOF ÜSPACE.\n\nÜNEXT, ÜADD ÜA ÜFILE ÜNAMED `.ctsyncignore` ÜTO ÜEXCLUDE ÜPATTERNS:\n\n```text\nnode_modules/\nbin/\n*.tmp\n```\n\n## ÜPART 2: ÜCREATE ÜTHE ÜBACKUP ÜJOB\n\n1. ÜOPEN **ÜSETTINGS** > **ÜBACKUPS**.\n2. ÜSELECT **ÜNEW ÜJOB**.\n3. ÜENTER ÜA ÜNAME, ÜFOR ÜEXAMPLE *ÜNIGHTLY ÜPROJECTS*.\n4. ÜUNDER **ÜSCHEDULE**, ÜSELECT **ÜDAILY** ÜAND ÜSET ÜTHE ÜTIME ÜTO 02:00.\n5. ÜUNDER **ÜKEEP**, ÜSELECT ÜHOW ÜMANY ÜVERSIONS ÜTO ÜKEEP. ÜSEVEN ÜIS ÜA ÜGOOD ÜSTART.\n6. ÜSELECT **ÜCREATE**.\n\nÜTHE ÜJOB ÜAPPEARS ÜIN ÜTHE ÜLIST ÜWITH ÜTHE ÜSTATUS **ÜSCHEDULED**.\n\n## ÜPART 3: ÜTEST ÜA ÜRESTORE\n\nÜA ÜBACKUP ÜIS ÜONLY ÜUSEFUL ÜIF ÜYOU ÜCAN ÜRESTORE ÜIT. ÜDELETE ÜA ÜTEST ÜFILE, ÜTHEN:\n\n1. ÜSELECT ÜTHE ÜJOB ÜAND ÜTHEN **ÜRESTORE**.\n2. ÜPICK ÜYESTERDAY'ÜS ÜVERSION.\n3. ÜCHOOSE **ÜRESTORE ÜTO ÜORIGINAL ÜLOCATION**.\n\nÜTHE ÜFILE ÜREAPPEARS ÜWITHIN ÜA ÜFEW ÜSECONDS.\n\n## ÜPART 4: ÜGET ÜNOTIFIED\n\nÜUNDER **ÜNOTIFICATIONS**, ÜTURN ÜON **ÜE-ÜMAIL ÜME ÜWHEN ÜA ÜJOB ÜFAILS**. ÜYOU ÜCAN ÜALSO ÜSEND ÜEVENTS ÜTO ÜA ÜWEBHOOK:\n\n```json\n{\n  \"webhook\": \"https://hooks.example.com/backup\",\n  \"events\": [\"job.failed\", \"job.succeeded\"]\n}\n```\n\n## ÜCLEAN ÜUP\n\nÜIF ÜYOU ÜDON'ÜT ÜWANT ÜTO ÜKEEP ÜTHE ÜJOB, ÜSELECT ÜIT ÜAND ÜTHEN **ÜDELETE**. ÜDELETING ÜTHE ÜJOB ÜDOESN'ÜT ÜDELETE ÜEXISTING ÜBACKUPS; ÜTHEY ÜEXPIRE ÜACCORDING ÜTO ÜTHE ÜRETENTION ÜSETTING.\n\n## ÜSUMMARY\n\nÜYOU ÜCREATED ÜA ÜSCHEDULED ÜBACKUP, ÜTESTED ÜA ÜRESTORE ÜAND ÜSET ÜUP ÜNOTIFICATIONS. ÜCONTINUE ÜWITH [ÜSHARE ÜA ÜFOLDER ÜWITH ÜYOUR ÜTEAM](share.md).\n",
+ "reverted": [],
+ "anchors": []
+}

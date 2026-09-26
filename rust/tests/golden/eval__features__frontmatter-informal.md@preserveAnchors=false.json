@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/frontmatter-informal.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: ÜYOUR ÜFIRST ÜWEEK ÜWITH ÜCONTOSO ÜSYNC\ndescription: ÜA ÜQUICK ÜTOUR ÜFOR ÜNEW ÜTEAM ÜMEMBERS.\nformality: informal\nauthor: Kim\n---\n\n# ÜYOUR ÜFIRST ÜWEEK ÜWITH ÜCONTOSO ÜSYNC\n\nÜWELCOME ÜABOARD! ÜTHIS ÜPAGE ÜSHOWS ÜYOU ÜEVERYTHING ÜYOU ÜNEED ÜTO ÜGET ÜGOING.\n\n## ÜDAY 1: ÜINSTALL ÜTHE ÜAPP\n\nÜGRAB ÜTHE ÜINSTALLER ÜFROM ÜTHE ÜINTRANET ÜAND ÜRUN ÜIT. ÜSIGN ÜIN ÜWITH ÜYOUR ÜNEW ÜWORK ÜACCOUNT, ÜAND ÜYOU'ÜRE ÜDONE.\n\n## ÜDAY 2: ÜFIND ÜYOUR ÜTEAM ÜFOLDER\n\nÜYOUR ÜMANAGER ÜHAS ÜALREADY ÜSHARED ÜTHE ÜTEAM ÜFOLDER ÜWITH ÜYOU. ÜLOOK ÜFOR ÜIT ÜUNDER **ÜSHARED ÜWITH ÜME** ÜAND ÜPIN ÜIT ÜSO ÜIT ÜSHOWS ÜUP ÜIN ÜFILE ÜEXPLORER.\n\n## ÜDAY 3: ÜTRY ÜIT ÜOUT\n\nÜDROP ÜA ÜFILE ÜINTO ÜTHE ÜFOLDER ÜAND ÜWATCH ÜIT ÜSYNC. ÜASK ÜA ÜCOLLEAGUE ÜTO ÜOPEN ÜIT. ÜPRETTY ÜNEAT, ÜHUH?\n\n## ÜSTUCK?\n\nÜPING ÜTHE ÜHELP ÜDESK ÜIN ÜTHE #ÜIT-ÜHELP ÜCHANNEL. ÜTHEY'ÜRE ÜQUICK.\n",
+ "reverted": [],
+ "anchors": []
+}

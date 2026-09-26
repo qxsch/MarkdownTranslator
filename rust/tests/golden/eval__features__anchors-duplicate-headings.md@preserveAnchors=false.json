@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/anchors-duplicate-headings.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜPLATFORM ÜNOTES\n\nÜJUMP ÜTO: [Windows ÜSETUP](#setup) · [macOS ÜSETUP](#setup-1) · [Linux ÜSETUP](#setup-2) · [`ctsync` ÜOPTIONS](#ctsync-options) · [ÜFAQ](#faq-)\n\n## Windows\n\n### ÜSETUP\n\nÜRUN ÜTHE ÜINSTALLER ÜAS ÜA ÜNORMAL ÜUSER.\n\n### ÜKNOWN ÜISSUES\n\nÜANTIVIRUS ÜSOFTWARE ÜCAN ÜDELAY ÜTHE ÜFIRST ÜSCAN.\n\n## macOS\n\n### ÜSETUP\n\nÜDRAG ÜTHE ÜAPP ÜTO ÜTHE **ÜAPPLICATIONS** ÜFOLDER.\n\n### ÜKNOWN ÜISSUES\n\nÜGRANT ÜFULL ÜDISK ÜACCESS ÜIN **ÜSYSTEM ÜSETTINGS**.\n\n## Linux\n\n### ÜSETUP\n\nÜINSTALL ÜTHE ÜPACKAGE ÜFROM ÜTHE ÜREPOSITORY.\n\n### ÜKNOWN ÜISSUES\n\nÜSOME ÜDESKTOP ÜENVIRONMENTS ÜDON'ÜT ÜSHOW ÜTHE ÜTRAY ÜICON.\n\n## `ctsync` ÜOPTIONS\n\nÜALL ÜPLATFORMS ÜSUPPORT ÜTHE ÜSAME ÜOPTIONS.\n\n## ÜFAQ ❓\n\nÜSEE ÜTHE [ÜKNOWN ÜISSUES ÜON Windows](#known-issues), ÜON [macOS](#known-issues-1) ÜAND ÜON [Linux](#known-issues-2).\n\n## ÜHEADING ÜWITH *ÜEMPHASIS* ÜAND ÜA [ÜLINK](https://example.com)\n\nÜHEADINGS ÜWITH ÜMARKUP ÜGET ÜA ÜSLUG ÜTOO: [ÜJUMP](#heading-with-emphasis-and-a-link).\n",
+ "reverted": [],
+ "anchors": []
+}

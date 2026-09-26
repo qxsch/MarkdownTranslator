@@ -1,0 +1,419 @@
+{
+ "file": "eval/corpus/blog.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "I finally ditched my flaky CI pipeline 🎉",
+   "original": "I finally ditched my flaky CI pipeline 🎉",
+   "sourceText": "I finally ditched my flaky CI pipeline 🎉",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉\"",
+   "masked": "Okay, confession time: for months our build pipeline was a total mess. Every other run blew up for no reason, and we all just hit \"re-run\" and crossed our fingers. Sound familiar? Yeah, I thought so.",
+   "original": "Okay, confession time: for months our build pipeline was a total mess. Every other run blew up for no reason, and we all just hit \"re-run\" and crossed our fingers. Sound familiar? Yeah, I thought so.",
+   "sourceText": "Okay, confession time: for months our build pipeline was a total mess. Every other run blew up for no reason, and we all just hit \"re-run\" and crossed our fingers. Sound familiar? Yeah, I thought so.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉\"",
+   "masked": "Last week I finally had enough and sat down to fix it for good. Spoiler: it wasn't rocket science, but it took a bit of detective work. Here's what I learned, so you don't have to go down the same rabbit hole.",
+   "original": "Last week I finally had enough and sat down to fix it for good. Spoiler: it wasn't rocket science, but it took a bit of detective work. Here's what I learned, so you don't have to go down the same rabbit hole.",
+   "sourceText": "Last week I finally had enough and sat down to fix it for good. Spoiler: it wasn't rocket science, but it took a bit of detective work. Here's what I learned, so you don't have to go down the same rabbit hole.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉\"",
+   "masked": "The usual suspects",
+   "original": "The usual suspects",
+   "sourceText": "The usual suspects",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > The usual suspects\"",
+   "masked": "First things first, I rounded up the usual suspects:",
+   "original": "First things first, I rounded up the usual suspects:",
+   "sourceText": "First things first, I rounded up the usual suspects:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > The usual suspects\"; list introduced by \"First things first, I rounded up the usual suspects:\"",
+   "masked": "<g1>Tests that depend on each other.</g1> One test leaves junk in the database, and the next one trips over it. Classic.",
+   "original": "**Tests that depend on each other.** One test leaves junk in the database, and the next one trips over it. Classic.",
+   "sourceText": "Tests that depend on each other. One test leaves junk in the database, and the next one trips over it. Classic.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > The usual suspects\"; list introduced by \"First things first, I rounded up the usual suspects:\"",
+   "masked": "<g1>Timeouts that are way too tight.</g1> Our shared runners are slow on Monday mornings (everybody's pushing at once), so a 30-second limit was basically a coin flip.",
+   "original": "**Timeouts that are way too tight.** Our shared runners are slow on Monday mornings (everybody's pushing at once), so a 30-second limit was basically a coin flip.",
+   "sourceText": "Timeouts that are way too tight. Our shared runners are slow on Monday mornings (everybody's pushing at once), so a 30-second limit was basically a coin flip.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > The usual suspects\"; list introduced by \"First things first, I rounded up the usual suspects:\"",
+   "masked": "<g1>Caches nobody understood.</g1> We cached <x2/> with a key that never changed, so stale packages kept sneaking back in.",
+   "original": "**Caches nobody understood.** We cached `node_modules` with a key that never changed, so stale packages kept sneaking back in.",
+   "sourceText": "Caches nobody understood. We cached  with a key that never changed, so stale packages kept sneaking back in.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "`node_modules`",
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:node_modules\nstrong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > The usual suspects\"",
+   "masked": "Honestly, the cache thing was the real kicker. Once I changed the key to include the hash of <x1/>, half of the random failures just vanished into thin air.",
+   "original": "Honestly, the cache thing was the real kicker. Once I changed the key to include the hash of `package-lock.json`, half of the random failures just vanished into thin air.",
+   "sourceText": "Honestly, the cache thing was the real kicker. Once I changed the key to include the hash of , half of the random failures just vanished into thin air.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`package-lock.json`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:package-lock.json"
+  },
+  {
+   "id": "s10",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉\"",
+   "masked": "Making it stick",
+   "original": "Making it stick",
+   "sourceText": "Making it stick",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > Making it stick\"",
+   "masked": "Fixing stuff is one thing, keeping it fixed is another. So I added a tiny script that flags any test that fails and then passes on retry:",
+   "original": "Fixing stuff is one thing, keeping it fixed is another. So I added a tiny script that flags any test that fails and then passes on retry:",
+   "sourceText": "Fixing stuff is one thing, keeping it fixed is another. So I added a tiny script that flags any test that fails and then passes on retry:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > Making it stick\"; python code block",
+   "masked": "Flag tests that only pass on the second attempt",
+   "original": "Flag tests that only pass on the second attempt",
+   "sourceText": "Flag tests that only pass on the second attempt",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > Making it stick\"; python code block",
+   "masked": "classic flake",
+   "original": "classic flake",
+   "sourceText": "classic flake",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > Making it stick\"",
+   "masked": "Now flaky tests show up in a dashboard instead of quietly wasting everyone's time. Peer pressure works wonders, by the way: nobody wants their name next to the flakiest test of the week. 😅",
+   "original": "Now flaky tests show up in a dashboard instead of quietly wasting everyone's time. Peer pressure works wonders, by the way: nobody wants their name next to the flakiest test of the week. 😅",
+   "sourceText": "Now flaky tests show up in a dashboard instead of quietly wasting everyone's time. Peer pressure works wonders, by the way: nobody wants their name next to the flakiest test of the week. 😅",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s15",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉\"",
+   "masked": "Was it worth it?",
+   "original": "Was it worth it?",
+   "sourceText": "Was it worth it?",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"I finally ditched my flaky CI pipeline 🎉 > Was it worth it?\"",
+   "masked": "Absolutely. Our success rate went from roughly 70% to over 98%, and people actually trust the red and green lights again. If your pipeline is driving you up the wall, give these tricks a shot and let me know how it goes!",
+   "original": "Absolutely. Our success rate went from roughly 70% to over 98%, and people actually trust the red and green lights again. If your pipeline is driving you up the wall, give these tricks a shot and let me know how it goes!",
+   "sourceText": "Absolutely. Our success rate went from roughly 70% to over 98%, and people actually trust the red and green lights again. If your pipeline is driving you up the wall, give these tricks a shot and let me know how it goes!",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   45,
+   "s1"
+  ],
+  [
+   47,
+   246,
+   "s2"
+  ],
+  [
+   248,
+   457,
+   "s3"
+  ],
+  [
+   462,
+   480,
+   "s4"
+  ],
+  [
+   482,
+   534,
+   "s5"
+  ],
+  [
+   538,
+   653,
+   "s6"
+  ],
+  [
+   656,
+   818,
+   "s7"
+  ],
+  [
+   821,
+   947,
+   "s8"
+  ],
+  [
+   949,
+   1119,
+   "s9"
+  ],
+  [
+   1124,
+   1139,
+   "s10"
+  ],
+  [
+   1141,
+   1278,
+   "s11"
+  ],
+  [
+   1292,
+   1339,
+   "s12"
+  ],
+  [
+   1428,
+   1441,
+   "s13"
+  ],
+  [
+   1447,
+   1638,
+   "s14"
+  ],
+  [
+   1643,
+   1659,
+   "s15"
+  ],
+  [
+   1661,
+   1881,
+   "s16"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"i-finally-ditched-my-flaky-ci-pipeline-\"></a>ÜI ÜFINALLY ÜDITCHED ÜMY ÜFLAKY ÜCI ÜPIPELINE 🎉\n\nÜOKAY, ÜCONFESSION ÜTIME: ÜFOR ÜMONTHS ÜOUR ÜBUILD ÜPIPELINE ÜWAS ÜA ÜTOTAL ÜMESS. ÜEVERY ÜOTHER ÜRUN ÜBLEW ÜUP ÜFOR ÜNO ÜREASON, ÜAND ÜWE ÜALL ÜJUST ÜHIT \"ÜRE-ÜRUN\" ÜAND ÜCROSSED ÜOUR ÜFINGERS. ÜSOUND ÜFAMILIAR? ÜYEAH, ÜI ÜTHOUGHT ÜSO.\n\nÜLAST ÜWEEK ÜI ÜFINALLY ÜHAD ÜENOUGH ÜAND ÜSAT ÜDOWN ÜTO ÜFIX ÜIT ÜFOR ÜGOOD. ÜSPOILER: ÜIT ÜWASN'ÜT ÜROCKET ÜSCIENCE, ÜBUT ÜIT ÜTOOK ÜA ÜBIT ÜOF ÜDETECTIVE ÜWORK. ÜHERE'ÜS ÜWHAT ÜI ÜLEARNED, ÜSO ÜYOU ÜDON'ÜT ÜHAVE ÜTO ÜGO ÜDOWN ÜTHE ÜSAME ÜRABBIT ÜHOLE.\n\n## <a id=\"the-usual-suspects\"></a>ÜTHE ÜUSUAL ÜSUSPECTS\n\nÜFIRST ÜTHINGS ÜFIRST, ÜI ÜROUNDED ÜUP ÜTHE ÜUSUAL ÜSUSPECTS:\n\n- **ÜTESTS ÜTHAT ÜDEPEND ÜON ÜEACH ÜOTHER.** ÜONE ÜTEST ÜLEAVES ÜJUNK ÜIN ÜTHE ÜDATABASE, ÜAND ÜTHE ÜNEXT ÜONE ÜTRIPS ÜOVER ÜIT. ÜCLASSIC.\n- **ÜTIMEOUTS ÜTHAT ÜARE ÜWAY ÜTOO ÜTIGHT.** ÜOUR ÜSHARED ÜRUNNERS ÜARE ÜSLOW ÜON ÜMONDAY ÜMORNINGS (ÜEVERYBODY'ÜS ÜPUSHING ÜAT ÜONCE), ÜSO ÜA 30-ÜSECOND ÜLIMIT ÜWAS ÜBASICALLY ÜA ÜCOIN ÜFLIP.\n- **ÜCACHES ÜNOBODY ÜUNDERSTOOD.** ÜWE ÜCACHED `node_modules` ÜWITH ÜA ÜKEY ÜTHAT ÜNEVER ÜCHANGED, ÜSO ÜSTALE ÜPACKAGES ÜKEPT ÜSNEAKING ÜBACK ÜIN.\n\nÜHONESTLY, ÜTHE ÜCACHE ÜTHING ÜWAS ÜTHE ÜREAL ÜKICKER. ÜONCE ÜI ÜCHANGED ÜTHE ÜKEY ÜTO ÜINCLUDE ÜTHE ÜHASH ÜOF `package-lock.json`, ÜHALF ÜOF ÜTHE ÜRANDOM ÜFAILURES ÜJUST ÜVANISHED ÜINTO ÜTHIN ÜAIR.\n\n## <a id=\"making-it-stick\"></a>ÜMAKING ÜIT ÜSTICK\n\nÜFIXING ÜSTUFF ÜIS ÜONE ÜTHING, ÜKEEPING ÜIT ÜFIXED ÜIS ÜANOTHER. ÜSO ÜI ÜADDED ÜA ÜTINY ÜSCRIPT ÜTHAT ÜFLAGS ÜANY ÜTEST ÜTHAT ÜFAILS ÜAND ÜTHEN ÜPASSES ÜON ÜRETRY:\n\n```python\n# ÜFLAG ÜTESTS ÜTHAT ÜONLY ÜPASS ÜON ÜTHE ÜSECOND ÜATTEMPT\ndef is_flaky(results):\n    return results[0] == \"failed\" and results[-1] == \"passed\"  # ÜCLASSIC ÜFLAKE\n```\n\nÜNOW ÜFLAKY ÜTESTS ÜSHOW ÜUP ÜIN ÜA ÜDASHBOARD ÜINSTEAD ÜOF ÜQUIETLY ÜWASTING ÜEVERYONE'ÜS ÜTIME. ÜPEER ÜPRESSURE ÜWORKS ÜWONDERS, ÜBY ÜTHE ÜWAY: ÜNOBODY ÜWANTS ÜTHEIR ÜNAME ÜNEXT ÜTO ÜTHE ÜFLAKIEST ÜTEST ÜOF ÜTHE ÜWEEK. 😅\n\n## <a id=\"was-it-worth-it\"></a>ÜWAS ÜIT ÜWORTH ÜIT?\n\nÜABSOLUTELY. ÜOUR ÜSUCCESS ÜRATE ÜWENT ÜFROM ÜROUGHLY 70% ÜTO ÜOVER 98%, ÜAND ÜPEOPLE ÜACTUALLY ÜTRUST ÜTHE ÜRED ÜAND ÜGREEN ÜLIGHTS ÜAGAIN. ÜIF ÜYOUR ÜPIPELINE ÜIS ÜDRIVING ÜYOU ÜUP ÜTHE ÜWALL, ÜGIVE ÜTHESE ÜTRICKS ÜA ÜSHOT ÜAND ÜLET ÜME ÜKNOW ÜHOW ÜIT ÜGOES!\n",
+ "reverted": [],
+ "anchors": [
+  "i-finally-ditched-my-flaky-ci-pipeline-",
+  "the-usual-suspects",
+  "making-it-stick",
+  "was-it-worth-it"
+ ]
+}

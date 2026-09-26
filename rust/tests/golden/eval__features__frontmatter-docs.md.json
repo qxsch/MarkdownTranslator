@@ -1,0 +1,348 @@
+{
+ "file": "eval/features/frontmatter-docs.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Monitor sync health",
+   "original": "Monitor sync health",
+   "sourceText": "Monitor sync health",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"titleSuffix\"",
+   "structure": "front matter \"titleSuffix\"",
+   "masked": "Contoso Sync documentation",
+   "original": "Contoso Sync documentation",
+   "sourceText": "Contoso Sync documentation",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"description\"",
+   "structure": "front matter \"description\"",
+   "masked": "Use the health dashboard and alerts to find sync problems before your users notice them.",
+   "original": "Use the health dashboard and alerts to find sync problems before your users notice them.",
+   "sourceText": "Use the health dashboard and alerts to find sync problems before your users notice them.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Monitor sync health",
+   "original": "Monitor sync health",
+   "sourceText": "Monitor sync health",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Monitor sync health\"",
+   "masked": "The health dashboard shows the sync state of all devices in your organization.",
+   "original": "The health dashboard shows the sync state of all devices in your organization.",
+   "sourceText": "The health dashboard shows the sync state of all devices in your organization.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Monitor sync health\"",
+   "masked": "Set up alerts",
+   "original": "Set up alerts",
+   "sourceText": "Set up alerts",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Monitor sync health > Set up alerts\"",
+   "masked": "In the admin center, select <g1>Health</g1> &gt; <g2>Alerts</g2>.",
+   "original": "In the admin center, select **Health** > **Alerts**.",
+   "sourceText": "In the admin center, select Health > Alerts.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong",
+    "g2": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Monitor sync health > Set up alerts\"",
+   "masked": "Select <g1>New alert rule</g1>.",
+   "original": "Select **New alert rule**.",
+   "sourceText": "Select New alert rule.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Monitor sync health > Set up alerts\"",
+   "masked": "Choose a condition, for example <g1>More than 5% of devices have errors</g1>.",
+   "original": "Choose a condition, for example *More than 5% of devices have errors*.",
+   "sourceText": "Choose a condition, for example More than 5% of devices have errors.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "emphasis: emphasis"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "emphasis"
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Monitor sync health > Set up alerts\"",
+   "masked": "Add an action group and select <g1>Create</g1>.",
+   "original": "Add an action group and select **Create**.",
+   "sourceText": "Add an action group and select Create.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Monitor sync health\"",
+   "masked": "Query the data",
+   "original": "Query the data",
+   "sourceText": "Query the data",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Monitor sync health > Query the data\"",
+   "masked": "You can also query the data with <x1/>:",
+   "original": "You can also query the data with PowerShell:",
+   "sourceText": "You can also query the data with :",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "PowerShell"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s13",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "powershell source code comment",
+   "structure": "section \"Monitor sync health > Query the data\"; powershell code block",
+   "masked": "Get devices that haven't synced for three days",
+   "original": "Get devices that haven't synced for three days",
+   "sourceText": "Get devices that haven't synced for three days",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   30,
+   "s1"
+  ],
+  [
+   44,
+   70,
+   "s2"
+  ],
+  [
+   84,
+   172,
+   "s3"
+  ],
+  [
+   410,
+   429,
+   "s4"
+  ],
+  [
+   431,
+   509,
+   "s5"
+  ],
+  [
+   514,
+   527,
+   "s6"
+  ],
+  [
+   532,
+   584,
+   "s7"
+  ],
+  [
+   588,
+   614,
+   "s8"
+  ],
+  [
+   618,
+   688,
+   "s9"
+  ],
+  [
+   692,
+   734,
+   "s10"
+  ],
+  [
+   739,
+   753,
+   "s11"
+  ],
+  [
+   755,
+   799,
+   "s12"
+  ],
+  [
+   817,
+   863,
+   "s13"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: ÜMONITOR ÜSYNC ÜHEALTH\ntitleSuffix: ÜCONTOSO ÜSYNC ÜDOCUMENTATION\ndescription: ÜUSE ÜTHE ÜHEALTH ÜDASHBOARD ÜAND ÜALERTS ÜTO ÜFIND ÜSYNC ÜPROBLEMS ÜBEFORE ÜYOUR ÜUSERS ÜNOTICE ÜTHEM.\nms.date: 08/14/2026\nms.topic: how-to\nms.service: contoso-sync\nms.custom: devx-track-powershell\nauthor: contoso-docs\nms.author: docsteam\nms.reviewer: sre-team\nms.collection: [admin, monitoring]\nzone_pivot_groups: operating-systems\n---\n\n# <a id=\"monitor-sync-health\"></a>ÜMONITOR ÜSYNC ÜHEALTH\n\nÜTHE ÜHEALTH ÜDASHBOARD ÜSHOWS ÜTHE ÜSYNC ÜSTATE ÜOF ÜALL ÜDEVICES ÜIN ÜYOUR ÜORGANIZATION.\n\n## <a id=\"set-up-alerts\"></a>ÜSET ÜUP ÜALERTS\n\n1. ÜIN ÜTHE ÜADMIN ÜCENTER, ÜSELECT **ÜHEALTH** > **ÜALERTS**.\n2. ÜSELECT **ÜNEW ÜALERT ÜRULE**.\n3. ÜCHOOSE ÜA ÜCONDITION, ÜFOR ÜEXAMPLE *ÜMORE ÜTHAN 5% ÜOF ÜDEVICES ÜHAVE ÜERRORS*.\n4. ÜADD ÜAN ÜACTION ÜGROUP ÜAND ÜSELECT **ÜCREATE**.\n\n## <a id=\"query-the-data\"></a>ÜQUERY ÜTHE ÜDATA\n\nÜYOU ÜCAN ÜALSO ÜQUERY ÜTHE ÜDATA ÜWITH PowerShell:\n\n```powershell\n# ÜGET ÜDEVICES ÜTHAT ÜHAVEN'ÜT ÜSYNCED ÜFOR ÜTHREE ÜDAYS\nGet-CtSyncDevice -LastSyncBefore (Get-Date).AddDays(-3)\n```\n",
+ "reverted": [],
+ "anchors": [
+  "monitor-sync-health",
+  "set-up-alerts",
+  "query-the-data"
+ ]
+}

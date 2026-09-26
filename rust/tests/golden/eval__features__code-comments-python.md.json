@@ -1,0 +1,198 @@
+{
+ "file": "eval/features/code-comments-python.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Using the <x1/> SDK",
+   "original": "Using the Python SDK",
+   "sourceText": "Using the  SDK",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Python"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"Using the Python SDK\"; python code block",
+   "masked": "Read the endpoint from the environment so that the script works in every stage",
+   "original": "Read the endpoint from the environment so that the script works in every stage",
+   "sourceText": "Read the endpoint from the environment so that the script works in every stage",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"Using the Python SDK\"; python code block",
+   "masked": "Upload every CSV file in the current folder",
+   "original": "Upload every CSV file in the current folder",
+   "sourceText": "Upload every CSV file in the current folder",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"Using the Python SDK\"; python code block",
+   "masked": "skip everything else",
+   "original": "skip everything else",
+   "sourceText": "skip everything else",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"Using the Python SDK\"; python code block",
+   "masked": "Wait until the server has processed all uploads. This can take a few minutes for large files.",
+   "original": "Wait until the server has processed all uploads.\n# This can take a few minutes for large files.",
+   "sourceText": "Wait until the server has processed all uploads. This can take a few minutes for large files.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 50,
+    "firstColumn": 2,
+    "prefix": "# ",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Using the Python SDK\"",
+   "masked": "Handle errors explicitly:",
+   "original": "Handle errors explicitly:",
+   "sourceText": "Handle errors explicitly:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "python source code comment",
+   "structure": "section \"Using the Python SDK\"; python code block",
+   "masked": "The storage is full: tell the user instead of retrying",
+   "original": "The storage is full: tell the user instead of retrying",
+   "sourceText": "The storage is full: tell the user instead of retrying",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   22,
+   "s1"
+  ],
+  [
+   83,
+   161,
+   "s2"
+  ],
+  [
+   225,
+   268,
+   "s3"
+  ],
+  [
+   331,
+   351,
+   "s4"
+  ],
+  [
+   383,
+   478,
+   "s5"
+  ],
+  [
+   498,
+   523,
+   "s6"
+  ],
+  [
+   602,
+   656,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"using-the-python-sdk\"></a>ÜUSING ÜTHE Python ÜSDK\n\n```python\nimport os\nfrom contoso_sync import SyncClient\n\n# ÜREAD ÜTHE ÜENDPOINT ÜFROM ÜTHE ÜENVIRONMENT ÜSO ÜTHAT ÜTHE ÜSCRIPT ÜWORKS ÜIN ÜEVERY ÜSTAGE\nclient = SyncClient(endpoint=os.environ[\"CTSYNC_ENDPOINT\"])\n\n# ÜUPLOAD ÜEVERY ÜCSV ÜFILE ÜIN ÜTHE ÜCURRENT ÜFOLDER\nfor name in os.listdir(\".\"):\n    if name.endswith(\".csv\"):  # ÜSKIP ÜEVERYTHING ÜELSE\n        client.upload(name)\n\n# ÜWAIT ÜUNTIL ÜTHE ÜSERVER ÜHAS ÜPROCESSED ÜALL\n# ÜUPLOADS. ÜTHIS ÜCAN ÜTAKE ÜA ÜFEW ÜMINUTES ÜFOR\n# ÜLARGE ÜFILES.\nclient.wait()\n```\n\nÜHANDLE ÜERRORS ÜEXPLICITLY:\n\n```python\ntry:\n    client.upload(\"big.iso\")\nexcept QuotaExceededError:\n    # ÜTHE ÜSTORAGE ÜIS ÜFULL: ÜTELL ÜTHE ÜUSER ÜINSTEAD ÜOF ÜRETRYING\n    print(\"Storage quota exceeded\")\n```\n",
+ "reverted": [],
+ "anchors": [
+  "using-the-python-sdk"
+ ]
+}

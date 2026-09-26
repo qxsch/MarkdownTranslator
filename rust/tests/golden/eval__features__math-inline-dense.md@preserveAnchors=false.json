@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/math-inline-dense.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜQUEUEING ÜMODEL ÜFOR ÜUPLOADS\n\nÜEACH ÜUPLOAD ÜWORKER $w$ ÜSERVES ÜREQUESTS ÜAT ÜRATE $\\mu$, ÜAND ÜREQUESTS ÜARRIVE ÜAT ÜRATE $\\lambda$. ÜTHE ÜUTILIZATION ÜIS $\\rho = \\lambda / \\mu$, ÜWHICH ÜMUST ÜSTAY ÜBELOW $1$ ÜFOR ÜTHE ÜQUEUE ÜTO ÜBE ÜSTABLE.\n\n## ÜKEY ÜFORMULAS\n\n- ÜMEAN ÜNUMBER ÜOF ÜREQUESTS ÜIN ÜTHE ÜSYSTEM: $L = \\frac{\\rho}{1 - \\rho}$\n- ÜMEAN ÜTIME ÜIN ÜTHE ÜSYSTEM: $W = \\frac{1}{\\mu - \\lambda}$\n- ÜPROBABILITY ÜTHAT ÜA ÜREQUEST ÜWAITS: $P_{wait} = \\rho^k$ ÜFOR $k$ ÜWORKERS ÜIN ÜTHE ÜSIMPLIFIED ÜMODEL\n\n| ÜSYMBOL | ÜMEANING | ÜTYPICAL ÜVALUE |\n|---|---|---|\n| $\\lambda$ | ÜARRIVAL ÜRATE | 120 ÜREQUESTS ÜPER ÜSECOND |\n| $\\mu$ | ÜSERVICE ÜRATE ÜPER ÜWORKER | 40 ÜREQUESTS ÜPER ÜSECOND |\n| $k$ | ÜNUMBER ÜOF ÜWORKERS | 4 |\n| $\\rho$ | ÜUTILIZATION | $0.75$ |\n\nÜWITH $k = 4$ ÜWORKERS ÜAND ÜTHE ÜVALUES ÜABOVE, $\\rho = 120 / (4 \\cdot 40) = 0.75$, ÜSO ÜTHE ÜQUEUE ÜIS ÜSTABLE.\n\n## ÜTUNING\n\nÜIF ÜTHE ÜLATENCY ÜTARGET ÜIS $W \\le 50$ ÜMS, ÜADD ÜWORKERS ÜUNTIL $\\mu_{total} - \\lambda \\ge 20$ ÜREQUESTS ÜPER ÜSECOND. ÜDOUBLING $k$ ÜHALVES $\\rho$ ÜBUT ÜINCREASES ÜTHE ÜCOST ÜLINEARLY.\n\nÜTHE ÜVARIANCE ÜOF ÜTHE ÜSERVICE ÜTIME, $\\sigma_s^2$, ÜMATTERS ÜTOO: ÜBY ÜTHE ÜPOLLACZEK-ÜKHINCHINE ÜFORMULA ÜTHE ÜWAITING ÜTIME ÜGROWS ÜWITH $1 + c_s^2$, ÜWHERE $c_s$ ÜIS ÜTHE ÜCOEFFICIENT ÜOF ÜVARIATION.\n",
+ "reverted": [],
+ "anchors": []
+}

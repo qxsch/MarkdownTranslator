@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/mdx-tabs.mdx",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: ÜINSTALL ÜTHE ÜCLIENT\n---\n\nimport Tabs from '@theme/Tabs';\nimport TabItem from '@theme/TabItem';\n\n# ÜINSTALL ÜTHE ÜCLIENT\n\nÜPICK ÜYOUR ÜOPERATING ÜSYSTEM.\n\n<Tabs groupId=\"os\">\n  <TabItem value=\"win\" label=\"Windows\" default>\n    ÜINSTALL ÜTHE **ÜCLIENT** ÜWITH ÜWINGET: `winget install Contoso.Sync`.\n  </TabItem>\n  <TabItem value=\"mac\" label=\"macOS\">\n    ÜINSTALL ÜTHE ÜCLIENT ÜWITH ÜHOMEBREW: `brew install --cask contoso-sync`.\n  </TabItem>\n  <TabItem value=\"linux\" label=\"Linux\">\n    ÜDOWNLOAD ÜTHE ÜPACKAGE ÜFROM ÜTHE ÜRELEASE ÜPAGE.\n  </TabItem>\n</Tabs>\n\n<Callout type=\"warning\" title=\"ÜRESTART ÜREQUIRED\">\nÜAFTER ÜTHE ÜINSTALLATION, ÜRESTART ÜYOUR ÜCOMPUTER.\n</Callout>\n\nÜTHE ÜCURRENT ÜVERSION ÜIS {props.version}.\n",
+ "reverted": [],
+ "anchors": []
+}

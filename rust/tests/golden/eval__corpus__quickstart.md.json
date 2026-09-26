@@ -1,0 +1,967 @@
+{
+ "file": "eval/corpus/quickstart.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"title\"",
+   "structure": "front matter \"title\"",
+   "masked": "Quickstart - Deploy a containerized web API to <x1/>",
+   "original": "Quickstart - Deploy a containerized web API to Azure Container Apps",
+   "sourceText": "Quickstart - Deploy a containerized web API to ",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure Container Apps"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s2",
+   "kind": "frontmatter",
+   "textContext": "yaml",
+   "note": "front matter \"description\"",
+   "structure": "front matter \"description\"",
+   "masked": "Build a container image, push it to <x1/> and run it on <x2/> with a managed identity.",
+   "original": "Build a container image, push it to Azure Container Registry and run it on Azure Container Apps with a managed identity.",
+   "sourceText": "Build a container image, push it to  and run it on  with a managed identity.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure Container Registry",
+    "x2": "Azure Container Apps"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Quickstart: Deploy a containerized web API",
+   "original": "Quickstart: Deploy a containerized web API",
+   "sourceText": "Quickstart: Deploy a containerized web API",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "In this quickstart, you build a container image for a small web API, push the image to <x1/> and run it on <x2/>. The app authenticates to other <x3/> services with a managed identity, so no secrets are stored in code or configuration.",
+   "original": "In this quickstart, you build a container image for a small web API, push the image to Azure Container Registry and run it on Azure Container Apps. The app authenticates to other Azure services with a managed identity, so no secrets are stored in code or configuration.",
+   "sourceText": "In this quickstart, you build a container image for a small web API, push the image to  and run it on . The app authenticates to other  services with a managed identity, so no secrets are stored in code or configuration.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure Container Registry",
+    "x2": "Azure Container Apps",
+    "x3": "Azure"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph in a blockquote",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "<x1/><x2/><g3>The resources you create in this quickstart incur costs. When you no longer need them, delete the resource group as described in </g3><g4>Clean up resources</g4>.",
+   "original": "[!IMPORTANT]\n> The resources you create in this quickstart incur costs. When you no longer need them, delete the resource group as described in [Clean up resources](#clean-up-resources).",
+   "sourceText": "The resources you create in this quickstart incur costs. When you no longer need them, delete the resource group as described in Clean up resources.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[!IMPORTANT]",
+    "x2": "line break [break]",
+    "g3": "html: text between directive lines",
+    "g4": "link: link to #clean-up-resources"
+   },
+   "tagGroups": [
+    "ordered: x1 x2 g3"
+   ],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:#clean-up-resources"
+  },
+  {
+   "id": "s6",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "Prerequisites",
+   "original": "Prerequisites",
+   "sourceText": "Prerequisites",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Prerequisites\"",
+   "masked": "An <x1/> subscription. If you don't have one, create a free account before you begin.",
+   "original": "An Azure subscription. If you don't have one, create a free account before you begin.",
+   "sourceText": "An  subscription. If you don't have one, create a free account before you begin.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Prerequisites\"",
+   "masked": "The Az <x1/> module 12.0 or later. Run <x2/> to check your version.",
+   "original": "The Az PowerShell module 12.0 or later. Run `Get-Module -ListAvailable Az` to check your version.",
+   "sourceText": "The Az  module 12.0 or later. Run  to check your version.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "PowerShell",
+    "x2": "`Get-Module -ListAvailable Az`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:Get-Module -ListAvailable Az"
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Prerequisites\"",
+   "masked": "<x1/> Desktop, running and signed in.",
+   "original": "Docker Desktop, running and signed in.",
+   "sourceText": " Desktop, running and signed in.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Docker"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Prerequisites\"",
+   "masked": "A clone of the sample repository, which contains the <x1/> and the <x2/> folder.",
+   "original": "A clone of the sample repository, which contains the `Dockerfile` and the `src/` folder.",
+   "sourceText": "A clone of the sample repository, which contains the  and the  folder.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`Dockerfile`",
+    "x2": "`src/`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:Dockerfile\ncode:src/"
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "Build the image",
+   "original": "Build the image",
+   "sourceText": "Build the image",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Build the image\"",
+   "masked": "Open a terminal in the root folder of the repository and build the image. The build copies the compiled output into a minimal runtime image, which reduces the attack surface and speeds up cold starts.",
+   "original": "Open a terminal in the root folder of the repository and build the image. The build copies the compiled output into a minimal runtime image, which reduces the attack surface and speeds up cold starts.",
+   "sourceText": "Open a terminal in the root folder of the repository and build the image. The build copies the compiled output into a minimal runtime image, which reduces the attack surface and speeds up cold starts.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s13",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "powershell source code comment",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Build the image\"; powershell code block",
+   "masked": "Build the image and tag it with the registry name",
+   "original": "Build the image and tag it with the registry name",
+   "sourceText": "Build the image and tag it with the registry name",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s14",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "powershell source code comment",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Build the image\"; powershell code block",
+   "masked": "Sign in to the registry with your <x1/> Entra identity",
+   "original": "Sign in to the registry with your Microsoft Entra identity",
+   "sourceText": "Sign in to the registry with your  Entra identity",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Microsoft"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Build the image\"",
+   "masked": "If the build fails with a permissions error, make sure that <x1/> Desktop is running and that your user belongs to the <x2/> group.",
+   "original": "If the build fails with a permissions error, make sure that Docker Desktop is running and that your user belongs to the `docker-users` group.",
+   "sourceText": "If the build fails with a permissions error, make sure that  Desktop is running and that your user belongs to the  group.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Docker",
+    "x2": "`docker-users`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:docker-users"
+  },
+  {
+   "id": "s16",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "Configure the app",
+   "original": "Configure the app",
+   "sourceText": "Configure the app",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s17",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"",
+   "masked": "The API reads its settings from environment variables. The following table lists the variables that you must set before you deploy.",
+   "original": "The API reads its settings from environment variables. The following table lists the variables that you must set before you deploy.",
+   "sourceText": "The API reads its settings from environment variables. The following table lists the variables that you must set before you deploy.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s18",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table header; columns: \"Variable\", \"Required\", \"Description\"",
+   "masked": "Variable",
+   "original": "Variable",
+   "sourceText": "Variable",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s19",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table header; columns: \"Variable\", \"Required\", \"Description\"",
+   "masked": "Required",
+   "original": "Required",
+   "sourceText": "Required",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s20",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table header; columns: \"Variable\", \"Required\", \"Description\"",
+   "masked": "Description",
+   "original": "Description",
+   "sourceText": "Description",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s21",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table column \"Required\", row \"ORDERS_DB_ENDPOINT\"",
+   "masked": "Yes",
+   "original": "Yes",
+   "sourceText": "Yes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s22",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table column \"Description\", row \"ORDERS_DB_ENDPOINT\"",
+   "masked": "Endpoint of the <x1/> Cosmos DB account that stores the orders.",
+   "original": "Endpoint of the Azure Cosmos DB account that stores the orders.",
+   "sourceText": "Endpoint of the  Cosmos DB account that stores the orders.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s23",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table column \"Required\", row \"AZURE_CLIENT_ID\"",
+   "masked": "Yes",
+   "original": "Yes",
+   "sourceText": "Yes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s24",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table column \"Description\", row \"AZURE_CLIENT_ID\"",
+   "masked": "Client ID of the user-assigned managed identity.",
+   "original": "Client ID of the user-assigned managed identity.",
+   "sourceText": "Client ID of the user-assigned managed identity.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s25",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table column \"Required\", row \"LOG_LEVEL\"",
+   "masked": "No",
+   "original": "No",
+   "sourceText": "No",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s26",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; table column \"Description\", row \"LOG_LEVEL\"",
+   "masked": "Minimum severity that is written to the log. Defaults to <x1/>.",
+   "original": "Minimum severity that is written to the log. Defaults to `info`.",
+   "sourceText": "Minimum severity that is written to the log. Defaults to .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`info`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:info"
+  },
+  {
+   "id": "s27",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; typescript code block",
+   "masked": "Resolve the credential once at startup; it is reused for every request.",
+   "original": "Resolve the credential once at startup; it is reused for every request.",
+   "sourceText": "Resolve the credential once at startup; it is reused for every request.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s28",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Configure the app\"; typescript code block",
+   "masked": "The client caches tokens and refreshes them automatically shortly before they expire.",
+   "original": "The client caches tokens and refreshes them\n   automatically shortly before they expire.",
+   "sourceText": "The client caches tokens and refreshes them automatically shortly before they expire.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 46,
+    "firstColumn": 3,
+    "prefix": "   ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s29",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "Deploy the container app",
+   "original": "Deploy the container app",
+   "sourceText": "Deploy the container app",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s30",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Deploy the container app\"",
+   "masked": "Run the following command to create the container app. It can take a few minutes until the first revision is ready and receives traffic.",
+   "original": "Run the following command to create the container app. It can take a few minutes until the first revision is ready and receives traffic.",
+   "sourceText": "Run the following command to create the container app. It can take a few minutes until the first revision is ready and receives traffic.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s31",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bash source code comment",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Deploy the container app\"; bash code block",
+   "masked": "Create the app with external ingress on port 8080",
+   "original": "Create the app with external ingress on port 8080",
+   "sourceText": "Create the app with external ingress on port 8080",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s32",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Deploy the container app\"",
+   "masked": "After the deployment has finished, open the URL shown in the output. You should see the health status of the API. If the page doesn't load, check the revision logs in the <x1/> portal under <g2>Monitoring</g2> &gt; <g3>Log stream</g3>.",
+   "original": "After the deployment has finished, open the URL shown in the output. You should see the health status of the API. If the page doesn't load, check the revision logs in the Azure portal under **Monitoring** > **Log stream**.",
+   "sourceText": "After the deployment has finished, open the URL shown in the output. You should see the health status of the API. If the page doesn't load, check the revision logs in the  portal under Monitoring > Log stream.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Azure",
+    "g2": "strong: strong",
+    "g3": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong\nstrong"
+  },
+  {
+   "id": "s33",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "Clean up resources",
+   "original": "Clean up resources",
+   "sourceText": "Clean up resources",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s34",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Clean up resources\"",
+   "masked": "When you're finished, delete the resource group to avoid ongoing charges. Deleting the resource group removes all resources that it contains, and this action can't be undone.",
+   "original": "When you're finished, delete the resource group to avoid ongoing charges. Deleting the resource group removes all resources that it contains, and this action can't be undone.",
+   "sourceText": "When you're finished, delete the resource group to avoid ongoing charges. Deleting the resource group removes all resources that it contains, and this action can't be undone.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s35",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Quickstart: Deploy a containerized web API\"",
+   "masked": "Next steps",
+   "original": "Next steps",
+   "sourceText": "Next steps",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s36",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Next steps\"",
+   "masked": "Learn how to <g1>scale your app</g1> based on HTTP traffic or queue length.",
+   "original": "Learn how to [scale your app](scale.md) based on HTTP traffic or queue length.",
+   "sourceText": "Learn how to scale your app based on HTTP traffic or queue length.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to scale.md"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:scale.md"
+  },
+  {
+   "id": "s37",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Quickstart: Deploy a containerized web API > Next steps\"",
+   "masked": "Set up a CI/CD pipeline with <x1/> to deploy every change automatically.",
+   "original": "Set up a CI/CD pipeline with GitHub Actions to deploy every change automatically.",
+   "sourceText": "Set up a CI/CD pipeline with  to deploy every change automatically.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "GitHub Actions"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   11,
+   78,
+   "s1"
+  ],
+  [
+   92,
+   212,
+   "s2"
+  ],
+  [
+   220,
+   262,
+   "s3"
+  ],
+  [
+   264,
+   533,
+   "s4"
+  ],
+  [
+   537,
+   723,
+   "s5"
+  ],
+  [
+   728,
+   741,
+   "s6"
+  ],
+  [
+   745,
+   830,
+   "s7"
+  ],
+  [
+   833,
+   930,
+   "s8"
+  ],
+  [
+   933,
+   971,
+   "s9"
+  ],
+  [
+   974,
+   1062,
+   "s10"
+  ],
+  [
+   1067,
+   1082,
+   "s11"
+  ],
+  [
+   1084,
+   1284,
+   "s12"
+  ],
+  [
+   1302,
+   1351,
+   "s13"
+  ],
+  [
+   1410,
+   1468,
+   "s14"
+  ],
+  [
+   1519,
+   1660,
+   "s15"
+  ],
+  [
+   1665,
+   1682,
+   "s16"
+  ],
+  [
+   1684,
+   1815,
+   "s17"
+  ],
+  [
+   1819,
+   1827,
+   "s18"
+  ],
+  [
+   1830,
+   1838,
+   "s19"
+  ],
+  [
+   1841,
+   1852,
+   "s20"
+  ],
+  [
+   1918,
+   1921,
+   "s21"
+  ],
+  [
+   1924,
+   1987,
+   "s22"
+  ],
+  [
+   2012,
+   2015,
+   "s23"
+  ],
+  [
+   2018,
+   2066,
+   "s24"
+  ],
+  [
+   2085,
+   2087,
+   "s25"
+  ],
+  [
+   2090,
+   2154,
+   "s26"
+  ],
+  [
+   2175,
+   2246,
+   "s27"
+  ],
+  [
+   2344,
+   2432,
+   "s28"
+  ],
+  [
+   2519,
+   2543,
+   "s29"
+  ],
+  [
+   2545,
+   2681,
+   "s30"
+  ],
+  [
+   2693,
+   2742,
+   "s31"
+  ],
+  [
+   2903,
+   3125,
+   "s32"
+  ],
+  [
+   3130,
+   3148,
+   "s33"
+  ],
+  [
+   3150,
+   3324,
+   "s34"
+  ],
+  [
+   3329,
+   3339,
+   "s35"
+  ],
+  [
+   3343,
+   3421,
+   "s36"
+  ],
+  [
+   3424,
+   3505,
+   "s37"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "---\ntitle: ÜQUICKSTART - ÜDEPLOY ÜA ÜCONTAINERIZED ÜWEB ÜAPI ÜTO Azure Container Apps\ndescription: ÜBUILD ÜA ÜCONTAINER ÜIMAGE, ÜPUSH ÜIT ÜTO Azure Container Registry ÜAND ÜRUN ÜIT ÜON Azure Container Apps ÜWITH ÜA ÜMANAGED ÜIDENTITY.\n---\n\n# <a id=\"quickstart-deploy-a-containerized-web-api\"></a>ÜQUICKSTART: ÜDEPLOY ÜA ÜCONTAINERIZED ÜWEB ÜAPI\n\nÜIN ÜTHIS ÜQUICKSTART, ÜYOU ÜBUILD ÜA ÜCONTAINER ÜIMAGE ÜFOR ÜA ÜSMALL ÜWEB ÜAPI, ÜPUSH ÜTHE ÜIMAGE ÜTO Azure Container Registry ÜAND ÜRUN ÜIT ÜON Azure Container Apps. ÜTHE ÜAPP ÜAUTHENTICATES ÜTO ÜOTHER Azure ÜSERVICES ÜWITH ÜA ÜMANAGED ÜIDENTITY, ÜSO ÜNO ÜSECRETS ÜARE ÜSTORED ÜIN ÜCODE ÜOR ÜCONFIGURATION.\n\n> [!IMPORTANT]\n> ÜTHE ÜRESOURCES ÜYOU ÜCREATE ÜIN ÜTHIS ÜQUICKSTART ÜINCUR ÜCOSTS. ÜWHEN ÜYOU ÜNO ÜLONGER ÜNEED ÜTHEM, ÜDELETE ÜTHE ÜRESOURCE ÜGROUP ÜAS ÜDESCRIBED ÜIN [ÜCLEAN ÜUP ÜRESOURCES](#clean-up-resources).\n\n## <a id=\"prerequisites\"></a>ÜPREREQUISITES\n\n- ÜAN Azure ÜSUBSCRIPTION. ÜIF ÜYOU ÜDON'ÜT ÜHAVE ÜONE, ÜCREATE ÜA ÜFREE ÜACCOUNT ÜBEFORE ÜYOU ÜBEGIN.\n- ÜTHE ÜAZ PowerShell ÜMODULE 12.0 ÜOR ÜLATER. ÜRUN `Get-Module -ListAvailable Az` ÜTO ÜCHECK ÜYOUR ÜVERSION.\n- Docker ÜDESKTOP, ÜRUNNING ÜAND ÜSIGNED ÜIN.\n- ÜA ÜCLONE ÜOF ÜTHE ÜSAMPLE ÜREPOSITORY, ÜWHICH ÜCONTAINS ÜTHE `Dockerfile` ÜAND ÜTHE `src/` ÜFOLDER.\n\n## <a id=\"build-the-image\"></a>ÜBUILD ÜTHE ÜIMAGE\n\nÜOPEN ÜA ÜTERMINAL ÜIN ÜTHE ÜROOT ÜFOLDER ÜOF ÜTHE ÜREPOSITORY ÜAND ÜBUILD ÜTHE ÜIMAGE. ÜTHE ÜBUILD ÜCOPIES ÜTHE ÜCOMPILED ÜOUTPUT ÜINTO ÜA ÜMINIMAL ÜRUNTIME ÜIMAGE, ÜWHICH ÜREDUCES ÜTHE ÜATTACK ÜSURFACE ÜAND ÜSPEEDS ÜUP ÜCOLD ÜSTARTS.\n\n```powershell\n# ÜBUILD ÜTHE ÜIMAGE ÜAND ÜTAG ÜIT ÜWITH ÜTHE ÜREGISTRY ÜNAME\ndocker build -t contosoacr.azurecr.io/orders-api:1.0 .\n\n# ÜSIGN ÜIN ÜTO ÜTHE ÜREGISTRY ÜWITH ÜYOUR Microsoft ÜENTRA ÜIDENTITY\nConnect-AzContainerRegistry -Name contosoacr\n```\n\nÜIF ÜTHE ÜBUILD ÜFAILS ÜWITH ÜA ÜPERMISSIONS ÜERROR, ÜMAKE ÜSURE ÜTHAT Docker ÜDESKTOP ÜIS ÜRUNNING ÜAND ÜTHAT ÜYOUR ÜUSER ÜBELONGS ÜTO ÜTHE `docker-users` ÜGROUP.\n\n## <a id=\"configure-the-app\"></a>ÜCONFIGURE ÜTHE ÜAPP\n\nÜTHE ÜAPI ÜREADS ÜITS ÜSETTINGS ÜFROM ÜENVIRONMENT ÜVARIABLES. ÜTHE ÜFOLLOWING ÜTABLE ÜLISTS ÜTHE ÜVARIABLES ÜTHAT ÜYOU ÜMUST ÜSET ÜBEFORE ÜYOU ÜDEPLOY.\n\n| ÜVARIABLE | ÜREQUIRED | ÜDESCRIPTION |\n|----------|----------|-------------|\n| `ORDERS_DB_ENDPOINT` | ÜYES | ÜENDPOINT ÜOF ÜTHE Azure ÜCOSMOS ÜDB ÜACCOUNT ÜTHAT ÜSTORES ÜTHE ÜORDERS. |\n| `AZURE_CLIENT_ID` | ÜYES | ÜCLIENT ÜID ÜOF ÜTHE ÜUSER-ÜASSIGNED ÜMANAGED ÜIDENTITY. |\n| `LOG_LEVEL` | ÜNO | ÜMINIMUM ÜSEVERITY ÜTHAT ÜIS ÜWRITTEN ÜTO ÜTHE ÜLOG. ÜDEFAULTS ÜTO `info`. |\n\n```typescript\n// ÜRESOLVE ÜTHE ÜCREDENTIAL ÜONCE ÜAT ÜSTARTUP; ÜIT ÜIS ÜREUSED ÜFOR ÜEVERY ÜREQUEST.\nconst credential = new ManagedIdentityCredential({ clientId: process.env.AZURE_CLIENT_ID });\n\n/* ÜTHE ÜCLIENT ÜCACHES ÜTOKENS ÜAND\n   ÜREFRESHES ÜTHEM ÜAUTOMATICALLY ÜSHORTLY\n   ÜBEFORE ÜTHEY ÜEXPIRE. */\nconst client = new CosmosClient({ endpoint, aadCredentials: credential });\n```\n\n## <a id=\"deploy-the-container-app\"></a>ÜDEPLOY ÜTHE ÜCONTAINER ÜAPP\n\nÜRUN ÜTHE ÜFOLLOWING ÜCOMMAND ÜTO ÜCREATE ÜTHE ÜCONTAINER ÜAPP. ÜIT ÜCAN ÜTAKE ÜA ÜFEW ÜMINUTES ÜUNTIL ÜTHE ÜFIRST ÜREVISION ÜIS ÜREADY ÜAND ÜRECEIVES ÜTRAFFIC.\n\n```bash\n# ÜCREATE ÜTHE ÜAPP ÜWITH ÜEXTERNAL ÜINGRESS ÜON ÜPORT 8080\naz containerapp create --name orders-api --resource-group rg-orders \\\n  --image contosoacr.azurecr.io/orders-api:1.0 --ingress external --target-port 8080\n```\n\nÜAFTER ÜTHE ÜDEPLOYMENT ÜHAS ÜFINISHED, ÜOPEN ÜTHE ÜURL ÜSHOWN ÜIN ÜTHE ÜOUTPUT. ÜYOU ÜSHOULD ÜSEE ÜTHE ÜHEALTH ÜSTATUS ÜOF ÜTHE ÜAPI. ÜIF ÜTHE ÜPAGE ÜDOESN'ÜT ÜLOAD, ÜCHECK ÜTHE ÜREVISION ÜLOGS ÜIN ÜTHE Azure ÜPORTAL ÜUNDER **ÜMONITORING** > **ÜLOG ÜSTREAM**.\n\n## <a id=\"clean-up-resources\"></a>ÜCLEAN ÜUP ÜRESOURCES\n\nÜWHEN ÜYOU'ÜRE ÜFINISHED, ÜDELETE ÜTHE ÜRESOURCE ÜGROUP ÜTO ÜAVOID ÜONGOING ÜCHARGES. ÜDELETING ÜTHE ÜRESOURCE ÜGROUP ÜREMOVES ÜALL ÜRESOURCES ÜTHAT ÜIT ÜCONTAINS, ÜAND ÜTHIS ÜACTION ÜCAN'ÜT ÜBE ÜUNDONE.\n\n## <a id=\"next-steps\"></a>ÜNEXT ÜSTEPS\n\n- ÜLEARN ÜHOW ÜTO [ÜSCALE ÜYOUR ÜAPP](scale.md) ÜBASED ÜON ÜHTTP ÜTRAFFIC ÜOR ÜQUEUE ÜLENGTH.\n- ÜSET ÜUP ÜA ÜCI/ÜCD ÜPIPELINE ÜWITH GitHub Actions ÜTO ÜDEPLOY ÜEVERY ÜCHANGE ÜAUTOMATICALLY.\n",
+ "reverted": [],
+ "anchors": [
+  "quickstart-deploy-a-containerized-web-api",
+  "prerequisites",
+  "build-the-image",
+  "configure-the-app",
+  "deploy-the-container-app",
+  "clean-up-resources",
+  "next-steps"
+ ]
+}

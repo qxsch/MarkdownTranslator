@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/glossary-terms.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜGLOSSARY\n\n**ÜSHARE** : ÜA ÜCLOUD ÜFOLDER ÜTHAT ÜSEVERAL\nÜPEOPLE ÜCAN ÜACCESS.\n\n**ÜPIN** : ÜKEEPS ÜA ÜFILE ÜON ÜTHE ÜDEVICE, ÜEVEN ÜWHEN ÜFILES ÜON\nÜDEMAND ÜIS ÜTURNED ÜON.\n\n**ÜPLACEHOLDER** : ÜA ÜFILE ÜENTRY ÜTHAT ÜSHOWS ÜTHE ÜNAME ÜAND ÜSIZE ÜBUT ÜHAS\nÜNO ÜCONTENT ÜON ÜTHE ÜDEVICE ÜYET.\n\n**ÜCONFLICT ÜCOPY** : ÜA ÜSECOND ÜVERSION ÜOF ÜA ÜFILE ÜTHAT ÜIS ÜCREATED ÜWHEN ÜTWO ÜPEOPLE ÜCHANGE ÜTHE ÜFILE ÜAT ÜTHE ÜSAME\nÜTIME. ÜITS ÜNAME ÜENDS ÜWITH `-conflict`.\n\n**ÜTENANT** : ÜTHE ÜORGANIZATION ÜTHAT ÜOWNS ÜTHE\nÜACCOUNTS ÜAND ÜTHE ÜSTORAGE.\n\n**ÜSEAT** : ÜA ÜPAID ÜLICENSE ÜFOR ÜONE\nÜUSER.\n\n**ÜDRAIN** : ÜSTOPS ÜACCEPTING ÜNEW ÜUPLOADS ÜON ÜA ÜSERVER ÜSO\nÜTHAT ÜIT ÜCAN ÜBE ÜUPDATED.\n\n**ÜTHROTTLE** : ÜSLOWS ÜDOWN ÜREQUESTS ÜFROM ÜA ÜCLIENT\nÜTHAT ÜSENDS ÜTOO ÜMANY.\n",
+ "reverted": [],
+ "anchors": []
+}

@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/frontmatter-nested.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: \"ÜRESTORE ÜDELETED ÜFILES\"\nsummary: |\n  ÜDELETED ÜFILES ÜSTAY ÜIN ÜTHE ÜRECYCLE ÜBIN ÜFOR 93 ÜDAYS.\n  ÜAFTER ÜTHAT, ÜONLY ÜAN ÜADMINISTRATOR ÜCAN ÜRESTORE ÜTHEM.\ndescription: >\n  ÜTHIS ÜARTICLE ÜEXPLAINS ÜHOW ÜTO ÜRESTORE ÜDELETED ÜFILES ÜFROM ÜTHE\n  ÜRECYCLE ÜBIN ÜAND ÜHOW ÜTO ÜRESTORE ÜAN ÜEARLIER ÜVERSION ÜOF ÜA\n  ÜFILE.\nseo:\n  title: 'ÜRESTORE ÜDELETED ÜFILES: ÜSTEP-ÜBY-ÜSTEP ÜGUIDE'\n  og_description: \"ÜGET ÜBACK ÜFILES ÜTHAT ÜYOU ÜDELETED ÜBY ÜACCIDENT.\"\n  canonical: https://contoso.example/docs/restore\nnav:\n  - title: ÜRECYCLE ÜBIN\n    url: /docs/restore#recycle-bin\n  - title: ÜVERSION ÜHISTORY\n    url: /docs/restore#version-history\nimage: images/restore-hero.png\ntags: [restore, recycle-bin]\nrelated_ids: [1042, 1043]\n---\n\n# ÜRESTORE ÜDELETED ÜFILES\n\n## ÜRECYCLE ÜBIN\n\nÜOPEN ÜTHE ÜRECYCLE ÜBIN ÜIN ÜTHE ÜWEB ÜAPP, ÜSELECT ÜTHE ÜFILES ÜAND ÜSELECT **ÜRESTORE**.\n\n## ÜVERSION ÜHISTORY\n\nÜRIGHT-ÜCLICK ÜA ÜFILE ÜAND ÜSELECT **ÜVERSION ÜHISTORY**. ÜSELECT ÜA ÜVERSION ÜAND ÜTHEN **ÜRESTORE**.\n",
+ "reverted": [],
+ "anchors": []
+}

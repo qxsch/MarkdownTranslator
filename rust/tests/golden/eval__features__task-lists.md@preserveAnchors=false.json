@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/task-lists.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜMIGRATION ÜTASKS\n\n## ÜBEFORE ÜTHE ÜMIGRATION\n\n- [x] ÜEXPORT ÜTHE ÜLIST ÜOF ÜSHARES\n- [x] ÜINFORM ÜALL ÜUSERS ÜBY ÜE-ÜMAIL\n- [ ] ÜREMOVE ÜSHARES ÜTHAT ÜNOBODY ÜUSED ÜIN ÜTHE ÜLAST ÜYEAR\n- [ ] ÜCHECK ÜTHAT ÜEVERY ÜSHARE ÜHAS ÜAN ÜOWNER\n\n## ÜDURING ÜTHE ÜMIGRATION\n\n- [ ] ÜFREEZE ÜCHANGES ÜON ÜTHE ÜOLD ÜSERVER\n- [ ] ÜRUN `ctsync migrate --source \\\\oldserver\\shares`\n  - [ ] ÜWATCH ÜTHE ÜPROGRESS ÜIN ÜTHE ÜADMIN ÜCENTER\n  - [ ] ÜNOTE ÜANY ÜFILES ÜTHAT ÜFAIL\n- [ ] ÜCOMPARE ÜTHE ÜFILE ÜCOUNTS\n\n## ÜAFTER ÜTHE ÜMIGRATION\n\n1. [ ] ÜTURN ÜOFF ÜTHE ÜOLD ÜSERVER ÜAFTER ÜTWO ÜWEEKS\n2. [ ] ÜARCHIVE ÜTHE ÜMIGRATION ÜLOG `migrate.log`\n3. [x] ÜCELEBRATE\n",
+ "reverted": [],
+ "anchors": []
+}

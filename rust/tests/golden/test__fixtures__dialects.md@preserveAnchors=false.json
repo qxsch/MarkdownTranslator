@@ -1,0 +1,15 @@
+{
+ "file": "test/fixtures/dialects.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜDIALECTS\n\nÜCOSTS $5 ÜAND $10 ÜPER ÜUNIT, ÜAND ÜTHE ÜFORMULA $$e = mc^2$$ ÜSTAYS.\n\n$$\n\\sum_{i=1}^n i\n$$\n\n:::note[ÜCUSTOM ÜTITLE]\nÜSOME **ÜIMPORTANT** ÜTEXT.\n:::\n\n:::tip ÜPRO ÜTIP\nÜUSE ÜTHE ÜCACHE.\n:::\n\n::youtube[ÜINTRO ÜVIDEO]{#abc123}\n\n:::image type=\"content\" source=\"media/arch.png\" alt-text=\"ÜARCHITECTURE ÜDIAGRAM\":::\n\n:::zone pivot=\"windows\"\n\nWindows ÜONLY ÜTEXT.\n\n:::zone-end\n\n> [!NOTE]\n> ÜKEEP ÜTHIS ÜNOTE.\n\n[!INCLUDE [ÜSHARED ÜPREREQUISITES](../includes/prereqs.md)]\n\n{{< figure src=\"images/overview.png\" title=\"ÜARCHITECTURE ÜOVERVIEW\" >}}\n\n{{% notice warning %}}\nÜDO ÜNOT ÜDELETE ÜTHE ÜRESOURCE ÜGROUP.\n{{% /notice %}}\n",
+ "reverted": [],
+ "anchors": []
+}

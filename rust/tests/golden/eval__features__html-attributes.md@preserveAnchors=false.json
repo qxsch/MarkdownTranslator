@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/html-attributes.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜACCESSIBLE ÜCONTENT\n\n<img src=\"images/dashboard.png\" alt=\"ÜDASHBOARD ÜWITH ÜTHREE ÜCHARTS ÜTHAT ÜSHOW ÜUPLOAD ÜVOLUME ÜPER ÜDAY\" title=\"ÜTHE ÜDASHBOARD\">\n\n<a href=\"https://contoso.example/help\" title=\"ÜOPEN ÜTHE ÜHELP ÜCENTER ÜIN ÜA ÜNEW ÜTAB\" aria-label=\"ÜHELP ÜCENTER\">ÜHELP</a>\n\n<button type=\"button\" aria-label=\"ÜCLOSE ÜTHE ÜDIALOG\" data-action=\"close\">×</button>\n\n<input type=\"search\" placeholder=\"ÜSEARCH ÜFILES\" aria-describedby=\"search-hint\">\n<p id=\"search-hint\">ÜTYPE ÜAT ÜLEAST ÜTHREE ÜCHARACTERS.</p>\n\n<abbr title=\"ÜTRANSPORT ÜLAYER ÜSECURITY\">ÜTLS</abbr> ÜPROTECTS ÜEVERY ÜCONNECTION.\n\n<figure>\n  <img src=\"images/flow.svg\" alt=\"ÜFLOW ÜCHART ÜOF ÜTHE ÜUPLOAD ÜPROCESS\">\n  <figcaption>ÜTHE ÜUPLOAD ÜPROCESS ÜFROM ÜTHE ÜCLIENT ÜTO ÜTHE ÜSTORAGE ÜACCOUNT.</figcaption>\n</figure>\n\n<video src=\"media/intro.mp4\" controls title=\"ÜINTRODUCTION ÜVIDEO\"></video>\n",
+ "reverted": [],
+ "anchors": []
+}

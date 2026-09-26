@@ -1,0 +1,412 @@
+{
+ "file": "eval/features/code-comments-js.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Using the <x1/> SDK",
+   "original": "Using the JavaScript SDK",
+   "sourceText": "Using the  SDK",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "JavaScript"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Using the JavaScript SDK\"",
+   "masked": "Install the package and create a client:",
+   "original": "Install the package and create a client:",
+   "sourceText": "Install the package and create a client:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "javascript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; javascript code block",
+   "masked": "Create one client per process and reuse it.",
+   "original": "Create one client per process and reuse it.",
+   "sourceText": "Create one client per process and reuse it.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "javascript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; javascript code block",
+   "masked": "Upload a file. The promise resolves when the last block has been confirmed by the server.",
+   "original": "Upload a file. The promise resolves when the last block\n * has been confirmed by the server.",
+   "sourceText": "Upload a file. The promise resolves when the last block has been confirmed by the server.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": {
+    "width": 58,
+    "firstColumn": 3,
+    "prefix": " * ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "javascript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; javascript code block",
+   "masked": "overwrite existing versions",
+   "original": "overwrite existing versions",
+   "sourceText": "overwrite existing versions",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Using the JavaScript SDK\"",
+   "masked": "<x1/> users get full type information:",
+   "original": "TypeScript users get full type information:",
+   "sourceText": " users get full type information:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "TypeScript"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; typescript code block",
+   "masked": "Options for a folder watch.",
+   "original": "Options for a folder watch.",
+   "sourceText": "Options for a folder watch.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; typescript code block",
+   "masked": "<x1/>The folder to watch, relative to the sync root.",
+   "original": "@param path The folder to watch, relative to the sync root.",
+   "sourceText": "The folder to watch, relative to the sync root.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "@param path "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; typescript code block",
+   "masked": "<x1/>Whether subfolders are included.",
+   "original": "@param recursive Whether subfolders are included.",
+   "sourceText": "Whether subfolders are included.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "@param recursive "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; typescript code block",
+   "masked": "<x1/>A handle that stops the watch when disposed.",
+   "original": "@returns A handle that stops the watch when disposed.",
+   "sourceText": "A handle that stops the watch when disposed.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "@returns "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s11",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; typescript code block",
+   "masked": "<x1/>support glob patterns",
+   "original": "TODO: support glob patterns",
+   "sourceText": "support glob patterns",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "TODO: "
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "typescript source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; typescript code block",
+   "masked": "Retry three times with exponential backoff",
+   "original": "Retry three times with exponential backoff",
+   "sourceText": "Retry three times with exponential backoff",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s13",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Using the JavaScript SDK\"",
+   "masked": "React components can use the hook:",
+   "original": "React components can use the hook:",
+   "sourceText": "React components can use the hook:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "tsx source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; tsx code block",
+   "masked": "Re-renders whenever the sync state changes",
+   "original": "Re-renders whenever the sync state changes",
+   "sourceText": "Re-renders whenever the sync state changes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s15",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "tsx source code comment",
+   "structure": "section \"Using the JavaScript SDK\"; tsx code block",
+   "masked": "label shown to the user",
+   "original": "label shown to the user",
+   "sourceText": "label shown to the user",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [
+    "*/"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   26,
+   "s1"
+  ],
+  [
+   28,
+   68,
+   "s2"
+  ],
+  [
+   132,
+   175,
+   "s3"
+  ],
+  [
+   257,
+   349,
+   "s4"
+  ],
+  [
+   413,
+   440,
+   "s5"
+  ],
+  [
+   446,
+   489,
+   "s6"
+  ],
+  [
+   512,
+   539,
+   "s7"
+  ],
+  [
+   543,
+   602,
+   "s8"
+  ],
+  [
+   606,
+   655,
+   "s9"
+  ],
+  [
+   659,
+   712,
+   "s10"
+  ],
+  [
+   790,
+   817,
+   "s11"
+  ],
+  [
+   868,
+   910,
+   "s12"
+  ],
+  [
+   984,
+   1018,
+   "s13"
+  ],
+  [
+   1062,
+   1104,
+   "s14"
+  ],
+  [
+   1215,
+   1238,
+   "s15"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"using-the-javascript-sdk\"></a>ÜUSING ÜTHE JavaScript ÜSDK\n\nÜINSTALL ÜTHE ÜPACKAGE ÜAND ÜCREATE ÜA ÜCLIENT:\n\n```javascript\nimport { SyncClient } from '@contoso/sync';\n\n// ÜCREATE ÜONE ÜCLIENT ÜPER ÜPROCESS ÜAND ÜREUSE ÜIT.\nconst client = new SyncClient({ endpoint: process.env.CTSYNC_ENDPOINT });\n\n/*\n * ÜUPLOAD ÜA ÜFILE. ÜTHE ÜPROMISE ÜRESOLVES ÜWHEN ÜTHE\n * ÜLAST ÜBLOCK ÜHAS ÜBEEN ÜCONFIRMED ÜBY ÜTHE ÜSERVER.\n */\nawait client.upload('report.pdf', { overwrite: true }); // ÜOVERWRITE ÜEXISTING ÜVERSIONS\n```\n\nTypeScript ÜUSERS ÜGET ÜFULL ÜTYPE ÜINFORMATION:\n\n```typescript\n/**\n * ÜOPTIONS ÜFOR ÜA ÜFOLDER ÜWATCH.\n * @param path ÜTHE ÜFOLDER ÜTO ÜWATCH, ÜRELATIVE ÜTO ÜTHE ÜSYNC ÜROOT.\n * @param recursive ÜWHETHER ÜSUBFOLDERS ÜARE ÜINCLUDED.\n * @returns ÜA ÜHANDLE ÜTHAT ÜSTOPS ÜTHE ÜWATCH ÜWHEN ÜDISPOSED.\n */\nexport function watch(path: string, recursive = true): Disposable {\n  // TODO: ÜSUPPORT ÜGLOB ÜPATTERNS\n  return client.watch(path, { recursive });\n}\n\n// ÜRETRY ÜTHREE ÜTIMES ÜWITH ÜEXPONENTIAL ÜBACKOFF\nconst policy: RetryPolicy = { retries: 3, backoff: 'exponential' };\n```\n\nÜREACT ÜCOMPONENTS ÜCAN ÜUSE ÜTHE ÜHOOK:\n\n```tsx\nexport function SyncBadge() {\n  // ÜRE-ÜRENDERS ÜWHENEVER ÜTHE ÜSYNC ÜSTATE ÜCHANGES\n  const state = useSyncState();\n  return <Badge color={state === 'ok' ? 'green' : 'red'}>{state}</Badge>; {/* ÜLABEL ÜSHOWN ÜTO ÜTHE ÜUSER */}\n}\n```\n",
+ "reverted": [],
+ "anchors": [
+  "using-the-javascript-sdk"
+ ]
+}

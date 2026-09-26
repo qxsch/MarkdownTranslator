@@ -1,0 +1,504 @@
+{
+ "file": "eval/features/release-notes.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Release notes",
+   "original": "Release notes",
+   "sourceText": "Release notes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Release notes\"",
+   "masked": "Version <x1/> (2026-08-14)",
+   "original": "Version 3.2.0 (2026-08-14)",
+   "sourceText": "Version  (2026-08-14)",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "3.2.0"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14)\"",
+   "masked": "New features",
+   "original": "New features",
+   "sourceText": "New features",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14) > New features\"",
+   "masked": "<g1>Selective sync for subfolders.</g1> You can now exclude single subfolders instead of whole shares.",
+   "original": "**Selective sync for subfolders.** You can now exclude single subfolders instead of whole shares.",
+   "sourceText": "Selective sync for subfolders. You can now exclude single subfolders instead of whole shares.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "strong: strong"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "strong"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14) > New features\"",
+   "masked": "A new <x1/> flag for <x2/> shows what would be deleted.",
+   "original": "A new `--dry-run` flag for `ctsync reset` shows what would be deleted.",
+   "sourceText": "A new  flag for  shows what would be deleted.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`--dry-run`",
+    "x2": "`ctsync reset`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:--dry-run\ncode:ctsync reset"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14) > New features\"",
+   "masked": "Dark mode follows the system setting.",
+   "original": "Dark mode follows the system setting.",
+   "sourceText": "Dark mode follows the system setting.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14)\"",
+   "masked": "Fixed issues",
+   "original": "Fixed issues",
+   "sourceText": "Fixed issues",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14) > Fixed issues\"",
+   "masked": "Fixed a crash when a file name contained an emoji.",
+   "original": "Fixed a crash when a file name contained an emoji.",
+   "sourceText": "Fixed a crash when a file name contained an emoji.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14) > Fixed issues\"",
+   "masked": "The tray icon no longer flickers during large uploads.",
+   "original": "The tray icon no longer flickers during large uploads.",
+   "sourceText": "The tray icon no longer flickers during large uploads.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14) > Fixed issues\"",
+   "masked": "Renaming a folder while it was syncing created a duplicate. This is fixed.",
+   "original": "Renaming a folder while it was syncing created a duplicate. This is fixed.",
+   "sourceText": "Renaming a folder while it was syncing created a duplicate. This is fixed.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14)\"",
+   "masked": "Known issues",
+   "original": "Known issues",
+   "sourceText": "Known issues",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.2.0 (2026-08-14) > Known issues\"",
+   "masked": "On <x1/> 14.1, notifications may appear twice. Update to 14.2 to fix this.",
+   "original": "On macOS 14.1, notifications may appear twice. Update to 14.2 to fix this.",
+   "sourceText": "On  14.1, notifications may appear twice. Update to 14.2 to fix this.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "macOS"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s13",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Release notes\"",
+   "masked": "Version <x1/> (2026-06-02)",
+   "original": "Version 3.1.4 (2026-06-02)",
+   "sourceText": "Version  (2026-06-02)",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "3.1.4"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s14",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.1.4 (2026-06-02)\"",
+   "masked": "Security update for CVE-2026-1234. Update as soon as possible.",
+   "original": "Security update for CVE-2026-1234. Update as soon as possible.",
+   "sourceText": "Security update for CVE-2026-1234. Update as soon as possible.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s15",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.1.4 (2026-06-02)\"",
+   "masked": "Improved upload speed by up to 30% on slow connections.",
+   "original": "Improved upload speed by up to 30% on slow connections.",
+   "sourceText": "Improved upload speed by up to 30% on slow connections.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s16",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Release notes\"",
+   "masked": "Version <x1/> (2026-04-20)",
+   "original": "Version 3.1.0 (2026-04-20)",
+   "sourceText": "Version  (2026-04-20)",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "3.1.0"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s17",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 3",
+   "structure": "section \"Release notes > Version 3.1.0 (2026-04-20)\"",
+   "masked": "Breaking changes",
+   "original": "Breaking changes",
+   "sourceText": "Breaking changes",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s18",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.1.0 (2026-04-20) > Breaking changes\"",
+   "masked": "The configuration file moved from <x1/> to <x2/>. The app migrates it automatically on first start.",
+   "original": "The configuration file moved from `config.ini` to `config.toml`. The app migrates it automatically on first start.",
+   "sourceText": "The configuration file moved from  to . The app migrates it automatically on first start.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`config.ini`",
+    "x2": "`config.toml`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:config.ini\ncode:config.toml"
+  },
+  {
+   "id": "s19",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Release notes > Version 3.1.0 (2026-04-20) > Breaking changes\"",
+   "masked": "Support for <x1/> 10 version 1809 ended.",
+   "original": "Support for Windows 10 version 1809 ended.",
+   "sourceText": "Support for  10 version 1809 ended.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Windows"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   15,
+   "s1"
+  ],
+  [
+   20,
+   46,
+   "s2"
+  ],
+  [
+   52,
+   64,
+   "s3"
+  ],
+  [
+   68,
+   165,
+   "s4"
+  ],
+  [
+   168,
+   238,
+   "s5"
+  ],
+  [
+   241,
+   278,
+   "s6"
+  ],
+  [
+   284,
+   296,
+   "s7"
+  ],
+  [
+   300,
+   350,
+   "s8"
+  ],
+  [
+   353,
+   407,
+   "s9"
+  ],
+  [
+   410,
+   484,
+   "s10"
+  ],
+  [
+   490,
+   502,
+   "s11"
+  ],
+  [
+   506,
+   580,
+   "s12"
+  ],
+  [
+   585,
+   611,
+   "s13"
+  ],
+  [
+   615,
+   677,
+   "s14"
+  ],
+  [
+   680,
+   735,
+   "s15"
+  ],
+  [
+   740,
+   766,
+   "s16"
+  ],
+  [
+   772,
+   788,
+   "s17"
+  ],
+  [
+   792,
+   906,
+   "s18"
+  ],
+  [
+   909,
+   951,
+   "s19"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"release-notes\"></a>ÜRELEASE ÜNOTES\n\n## <a id=\"version-320-2026-08-14\"></a>ÜVERSION 3.2.0 (2026-08-14)\n\n### <a id=\"new-features\"></a>ÜNEW ÜFEATURES\n\n- **ÜSELECTIVE ÜSYNC ÜFOR ÜSUBFOLDERS.** ÜYOU ÜCAN ÜNOW ÜEXCLUDE ÜSINGLE ÜSUBFOLDERS ÜINSTEAD ÜOF ÜWHOLE ÜSHARES.\n- ÜA ÜNEW `--dry-run` ÜFLAG ÜFOR `ctsync reset` ÜSHOWS ÜWHAT ÜWOULD ÜBE ÜDELETED.\n- ÜDARK ÜMODE ÜFOLLOWS ÜTHE ÜSYSTEM ÜSETTING.\n\n### <a id=\"fixed-issues\"></a>ÜFIXED ÜISSUES\n\n- ÜFIXED ÜA ÜCRASH ÜWHEN ÜA ÜFILE ÜNAME ÜCONTAINED ÜAN ÜEMOJI.\n- ÜTHE ÜTRAY ÜICON ÜNO ÜLONGER ÜFLICKERS ÜDURING ÜLARGE ÜUPLOADS.\n- ÜRENAMING ÜA ÜFOLDER ÜWHILE ÜIT ÜWAS ÜSYNCING ÜCREATED ÜA ÜDUPLICATE. ÜTHIS ÜIS ÜFIXED.\n\n### <a id=\"known-issues\"></a>ÜKNOWN ÜISSUES\n\n- ÜON macOS 14.1, ÜNOTIFICATIONS ÜMAY ÜAPPEAR ÜTWICE. ÜUPDATE ÜTO 14.2 ÜTO ÜFIX ÜTHIS.\n\n## <a id=\"version-314-2026-06-02\"></a>ÜVERSION 3.1.4 (2026-06-02)\n\n- ÜSECURITY ÜUPDATE ÜFOR ÜCVE-2026-1234. ÜUPDATE ÜAS ÜSOON ÜAS ÜPOSSIBLE.\n- ÜIMPROVED ÜUPLOAD ÜSPEED ÜBY ÜUP ÜTO 30% ÜON ÜSLOW ÜCONNECTIONS.\n\n## <a id=\"version-310-2026-04-20\"></a>ÜVERSION 3.1.0 (2026-04-20)\n\n### <a id=\"breaking-changes\"></a>ÜBREAKING ÜCHANGES\n\n- ÜTHE ÜCONFIGURATION ÜFILE ÜMOVED ÜFROM `config.ini` ÜTO `config.toml`. ÜTHE ÜAPP ÜMIGRATES ÜIT ÜAUTOMATICALLY ÜON ÜFIRST ÜSTART.\n- ÜSUPPORT ÜFOR Windows 10 ÜVERSION 1809 ÜENDED.\n",
+ "reverted": [],
+ "anchors": [
+  "release-notes",
+  "version-320-2026-08-14",
+  "new-features",
+  "fixed-issues",
+  "known-issues",
+  "version-314-2026-06-02",
+  "version-310-2026-04-20",
+  "breaking-changes"
+ ]
+}

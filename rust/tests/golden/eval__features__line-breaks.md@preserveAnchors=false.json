@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/line-breaks.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "ÜLINE ÜBREAKS ÜAND ÜHEADINGS\n========================\n\nÜTHIS ÜPARAGRAPH ÜENDS ÜWITH ÜTWO ÜSPACES  \nÜSO ÜTHIS ÜLINE ÜSTARTS ÜAFTER ÜA ÜHARD ÜBREAK.\n\nÜTHIS ÜONE ÜUSES ÜA ÜBACKSLASH\\\nÜFOR ÜTHE ÜSAME ÜEFFECT.\n\nÜSETEXT ÜLEVEL ÜTWO\n----------------\n\nÜA ÜLONG ÜPARAGRAPH ÜTHAT ÜIS ÜWRAPPED ÜIN ÜTHE ÜSOURCE ÜFILE ÜAT ÜA ÜFIXED\nÜWIDTH ÜSO ÜTHAT ÜEACH ÜLINE ÜIS ÜSHORTER ÜTHAN ÜEIGHTY ÜCHARACTERS, ÜWHICH\nÜIS ÜCOMMON ÜIN ÜREPOSITORIES ÜTHAT ÜFOLLOW ÜA ÜSTRICT ÜSTYLE ÜGUIDE ÜFOR\nMarkdown ÜFILES.\n\nÜA ÜSECOND ÜPARAGRAPH ÜWITH ÜVERY ÜSHORT\nÜLINES.\n\n* * *\n\nÜTHEMATIC ÜBREAKS ÜWITH ÜASTERISKS ÜAND ÜWITH ÜUNDERSCORES:\n\n___\n\n    This is an indented code block.\n    It must stay exactly as it is.\n\nÜFINAL ÜSENTENCE.\n",
+ "reverted": [],
+ "anchors": []
+}

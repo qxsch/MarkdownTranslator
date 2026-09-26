@@ -1,0 +1,268 @@
+{
+ "file": "eval/features/mdx-expressions.mdx",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Sync statistics",
+   "original": "Sync statistics",
+   "sourceText": "Sync statistics",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Sync statistics\"",
+   "masked": "This page shows live data. It was last reviewed on <x1/>.",
+   "original": "This page shows live data. It was last reviewed on {meta.reviewed}.",
+   "sourceText": "This page shows live data. It was last reviewed on .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{meta.reviewed}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "expr:meta.reviewed"
+  },
+  {
+   "id": "s3",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "<Chart> component, HTML title attribute",
+   "structure": "section \"Sync statistics\"",
+   "masked": "Uploads per hour",
+   "original": "Uploads per hour",
+   "sourceText": "Uploads per hour",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "html",
+   "textContext": "html",
+   "note": "<Chart> component attributes",
+   "structure": "section \"Sync statistics\"",
+   "masked": "<x1/>",
+   "original": "<Chart source=\"/api/stats/uploads\" title=\"Uploads per hour\" height={320} />",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s3"
+   ],
+   "tags": {
+    "x1": "<Chart source=\"/api/stats/uploads\" title=\"Uploads per hour\" height={320} />"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Sync statistics\"",
+   "masked": "The chart above updates every <x1/> seconds. Hover over a bar to see the exact value.",
+   "original": "The chart above updates every {60} seconds. Hover over a bar to see the exact value.",
+   "sourceText": "The chart above updates every  seconds. Hover over a bar to see the exact value.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{60}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "expr:60"
+  },
+  {
+   "id": "s6",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Sync statistics\"",
+   "masked": "Top folders",
+   "original": "Top folders",
+   "sourceText": "Top folders",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Sync statistics > Top folders\"",
+   "masked": "The folders with the most changes today are listed below.",
+   "original": "The folders with the most changes today are listed below.",
+   "sourceText": "The folders with the most changes today are listed below.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "<FolderTable> component, HTML emptytext attribute",
+   "structure": "section \"Sync statistics > Top folders\"",
+   "masked": "No changes today",
+   "original": "No changes today",
+   "sourceText": "No changes today",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "html",
+   "textContext": "html",
+   "note": "<FolderTable> component attributes",
+   "structure": "section \"Sync statistics > Top folders\"",
+   "masked": "<x1/>",
+   "original": "<FolderTable limit={10} sortBy=\"changes\" emptyText=\"No changes today\" />",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s8"
+   ],
+   "tags": {
+    "x1": "<FolderTable limit={10} sortBy=\"changes\" emptyText=\"No changes today\" />"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Sync statistics > Top folders\"",
+   "masked": "Values are rounded to <x1/> decimal places.",
+   "original": "Values are rounded to {2} decimal places.",
+   "sourceText": "Values are rounded to  decimal places.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{2}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "expr:2"
+  }
+ ],
+ "replacements": [
+  [
+   115,
+   130,
+   "s1"
+  ],
+  [
+   132,
+   199,
+   "s2"
+  ],
+  [
+   201,
+   276,
+   "s4"
+  ],
+  [
+   278,
+   362,
+   "s5"
+  ],
+  [
+   439,
+   450,
+   "s6"
+  ],
+  [
+   452,
+   509,
+   "s7"
+  ],
+  [
+   511,
+   583,
+   "s9"
+  ],
+  [
+   585,
+   626,
+   "s10"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "import { Chart } from '../components/Chart';\nexport const meta = { owner: 'sre-team', reviewed: '2026-08-14' };\n\n# <a id=\"sync-statistics\"></a>ÜSYNC ÜSTATISTICS\n\nÜTHIS ÜPAGE ÜSHOWS ÜLIVE ÜDATA. ÜIT ÜWAS ÜLAST ÜREVIEWED ÜON {meta.reviewed}.\n\n<Chart source=\"/api/stats/uploads\" title=\"ÜUPLOADS ÜPER ÜHOUR\" height={320} />\n\nÜTHE ÜCHART ÜABOVE ÜUPDATES ÜEVERY {60} ÜSECONDS. ÜHOVER ÜOVER ÜA ÜBAR ÜTO ÜSEE ÜTHE ÜEXACT ÜVALUE.\n\n{/* Editors: the next section is generated, don't edit it by hand. */}\n\n## <a id=\"top-folders\"></a>ÜTOP ÜFOLDERS\n\nÜTHE ÜFOLDERS ÜWITH ÜTHE ÜMOST ÜCHANGES ÜTODAY ÜARE ÜLISTED ÜBELOW.\n\n<FolderTable limit={10} sortBy=\"changes\" emptyText=\"ÜNO ÜCHANGES ÜTODAY\" />\n\nÜVALUES ÜARE ÜROUNDED ÜTO {2} ÜDECIMAL ÜPLACES.\n",
+ "reverted": [],
+ "anchors": [
+  "sync-statistics",
+  "top-folders"
+ ]
+}

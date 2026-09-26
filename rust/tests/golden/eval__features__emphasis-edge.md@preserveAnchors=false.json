@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/emphasis-edge.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜFORMATTING ÜEDGE ÜCASES\n\nÜTHIS ÜSENTENCE ÜHAS **ÜBOLD ÜTEXT ÜWITH *ÜNESTED ÜITALICS* ÜINSIDE** ÜAND ÜENDS ÜNORMALLY.\n\nÜINTRAWORD ÜEMPHASIS: ÜUN**ÜBELIEV**ÜABLE ÜAND snake_case_names_stay ÜAND file_name.txt ÜSTAYS.\n\nÜMIXED ***ÜBOLD ÜAND ÜITALIC*** ÜTEXT, ~~ÜSTRUCK-ÜTHROUGH ÜWORDS~~ ÜAND `inline code` ÜIN ÜONE ÜLINE.\n\n**ÜBOLD ÜAT ÜTHE ÜSTART** ÜOF ÜA ÜSENTENCE ÜAND *ÜITALIC ÜAT ÜTHE ÜEND*.\n\nÜA ÜSENTENCE ÜWITH ÜA **ÜBOLD [ÜLINK](https://example.com)** ÜINSIDE.\n\nÜMULTIPLE ÜSPANS: **ÜOPEN**, **ÜEDIT** ÜAND **ÜSAVE** ÜARE ÜON ÜTHE **ÜFILE** ÜMENU.\n\nÜUNDERSCORE ÜEMPHASIS: _ÜTHIS ÜIS ÜEMPHASIZED_ ÜAND __ÜTHIS ÜIS ÜSTRONG__.\n\nÜA ÜLITERAL ÜASTERISK \\* ÜAND ÜA ÜLITERAL ÜUNDERSCORE \\_ ÜMUST ÜSTAY ÜESCAPED.\n\nÜADJACENT ÜSPANS: **ÜONE**_ÜTWO_ ÜAND `code`**ÜBOLD**.\n\nÜAN ÜEMPHASIZED ÜFILE ÜNAME: *settings.json* ÜAND ÜA ÜBOLD ÜPATH: **C:\\Temp\\sync**.\n",
+ "reverted": [],
+ "anchors": []
+}

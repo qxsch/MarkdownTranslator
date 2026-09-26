@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/anchors-crosslinks.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜADMINISTRATOR ÜGUIDE\n\nÜTHIS ÜGUIDE ÜLINKS ÜTO ÜITS ÜOWN ÜSECTIONS ÜA ÜLOT. ÜSTART ÜWITH [ÜPLAN ÜTHE ÜROLLOUT](#plan-the-rollout), ÜTHEN ÜREAD [ÜASSIGN ÜLICENSES](#assign-licenses).\n\n## ÜPLAN ÜTHE ÜROLLOUT\n\nÜDECIDE ÜWHICH ÜGROUPS ÜGET ÜTHE ÜCLIENT ÜFIRST. ÜSEE [ÜPILOT ÜGROUPS](#pilot-groups) ÜFOR ÜRECOMMENDATIONS ÜAND [ÜROLL ÜBACK](#roll-back) ÜIF ÜSOMETHING ÜGOES ÜWRONG.\n\n### ÜPILOT ÜGROUPS\n\nÜSTART ÜWITH ÜA ÜGROUP ÜOF 20 ÜTO 50 ÜUSERS. ÜTHEIR ÜFEEDBACK ÜHELPS ÜYOU ÜTUNE ÜTHE [ÜDEFAULT ÜSETTINGS](#default-settings).\n\n## ÜASSIGN ÜLICENSES\n\nÜLICENSES ÜARE ÜASSIGNED ÜPER ÜUSER. ÜGROUP-ÜBASED ÜASSIGNMENT ÜIS ÜDESCRIBED ÜIN [ÜAUTOMATE ÜASSIGNMENT](#automate-assignment).\n\n### ÜAUTOMATE ÜASSIGNMENT\n\nÜUSE ÜTHE ÜADMIN ÜAPI ÜTO ÜASSIGN ÜLICENSES ÜFROM ÜYOUR ÜHR ÜSYSTEM. ÜTHE ÜAPI ÜIS ÜDESCRIBED ÜIN ÜTHE [ÜERROR ÜREFERENCE](api-errors-table.md#handling-conflicts).\n\n## ÜDEFAULT ÜSETTINGS\n\nÜPUSH ÜDEFAULT ÜSETTINGS ÜWITH ÜYOUR ÜDEVICE ÜMANAGEMENT ÜTOOL. ÜSETTINGS ÜTHAT ÜUSERS ÜCAN'ÜT ÜCHANGE ÜARE ÜMARKED ÜAS **ÜLOCKED**.\n\n## ÜROLL ÜBACK\n\nÜTO ÜROLL ÜBACK, ÜUNINSTALL ÜTHE ÜCLIENT ÜAND ÜREMOVE ÜTHE ÜPOLICY. ÜFILES ÜSTAY ÜIN ÜTHE ÜCLOUD. ÜGO ÜBACK ÜTO ÜTHE [ÜTOP](#administrator-guide).\n",
+ "reverted": [],
+ "anchors": []
+}

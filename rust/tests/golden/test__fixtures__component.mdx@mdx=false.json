@@ -1,0 +1,195 @@
+{
+ "file": "test/fixtures/component.mdx",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": null,
+   "masked": "import Tabs from '<x1/>';",
+   "original": "import Tabs from '@theme/Tabs';",
+   "sourceText": "import Tabs from '';",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "@theme/Tabs"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "MDX guide",
+   "original": "MDX guide",
+   "sourceText": "MDX guide",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML text",
+   "structure": "section \"MDX guide\"",
+   "masked": "Install the **tool** with winget.",
+   "original": "Install the **tool** with winget.",
+   "sourceText": "Install the **tool** with winget.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"MDX guide\"",
+   "masked": "Use <g1>green text</g1> and <x2/>.",
+   "original": "Use <Highlight color=\"#25c2a0\">green text</Highlight> and {props.version}.",
+   "sourceText": "Use green text and .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x2": "{props.version}",
+    "g1": "html: <Highlight color=\"#25c2a0\">"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "html:</Highlight>\nhtml:<Highlight color=\"#25c2a0\">"
+  },
+  {
+   "id": "s5",
+   "kind": "attr",
+   "textContext": "attr",
+   "note": "HTML <callout>, HTML title attribute",
+   "structure": "section \"MDX guide\"",
+   "masked": "Heads up",
+   "original": "Heads up",
+   "sourceText": "Heads up",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "html",
+   "textContext": "html",
+   "note": "HTML tag",
+   "structure": "section \"MDX guide\"",
+   "masked": "<x1/>",
+   "original": "<Callout title=\"Heads up\" type=\"warning\" />",
+   "sourceText": "",
+   "passive": true,
+   "embedded": false,
+   "dependents": [
+    "s5"
+   ],
+   "tags": {
+    "x1": "<Callout title=\"Heads up\" type=\"warning\" />"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"MDX guide\"",
+   "masked": "export const meta = { title: 'Not translated' };",
+   "original": "export const meta = { title: 'Not translated' };",
+   "sourceText": "export const meta = { title: 'Not translated' };",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   0,
+   31,
+   "s1"
+  ],
+  [
+   35,
+   44,
+   "s2"
+  ],
+  [
+   106,
+   139,
+   "s3"
+  ],
+  [
+   158,
+   232,
+   "s4"
+  ],
+  [
+   234,
+   277,
+   "s6"
+  ],
+  [
+   279,
+   327,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "ÜIMPORT ÜTABS ÜFROM '@theme/Tabs';\n\n# <a id=\"mdx-guide\"></a>ÜMDX ÜGUIDE\n\n<Tabs groupId=\"os\">\n  <Tab label=\"Windows\" value=\"win\">\n    ÜINSTALL ÜTHE **ÜTOOL** ÜWITH ÜWINGET.\n  </Tab>\n</Tabs>\n\nÜUSE <Highlight color=\"#25c2a0\">ÜGREEN ÜTEXT</Highlight> ÜAND {props.version}.\n\n<Callout title=\"ÜHEADS ÜUP\" type=\"warning\" />\n\nÜEXPORT ÜCONST ÜMETA = { ÜTITLE: 'ÜNOT ÜTRANSLATED' };\n",
+ "reverted": [],
+ "anchors": [
+  "mdx-guide"
+ ]
+}

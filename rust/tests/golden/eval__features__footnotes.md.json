@@ -1,0 +1,256 @@
+{
+ "file": "eval/features/footnotes.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Performance results",
+   "original": "Performance results",
+   "sourceText": "Performance results",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Performance results\"",
+   "masked": "Sync throughput improved by 40%<x1/> compared with the previous release. The test used the standard benchmark<x2/> on three machines.",
+   "original": "Sync throughput improved by 40%[^1] compared with the previous release. The test used the standard benchmark[^bench] on three machines.",
+   "sourceText": "Sync throughput improved by 40% compared with the previous release. The test used the standard benchmark on three machines.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[^1]",
+    "x2": "[^bench]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "fn:1\nfn:bench"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Performance results\"",
+   "masked": "Latency stayed below 200 ms for 99% of requests<x1/>.",
+   "original": "Latency stayed below 200 ms for 99% of requests[^p99].",
+   "sourceText": "Latency stayed below 200 ms for 99% of requests.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[^p99]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "fn:p99"
+  },
+  {
+   "id": "s4",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 2",
+   "structure": "section \"Performance results\"",
+   "masked": "Method",
+   "original": "Method",
+   "sourceText": "Method",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Performance results > Method\"",
+   "masked": "Each run started with an empty cache.<x1/> We repeated every measurement five times and report the median.",
+   "original": "Each run started with an empty cache.[^cache] We repeated every measurement five times and report the median.",
+   "sourceText": "Each run started with an empty cache. We repeated every measurement five times and report the median.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "[^cache]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "fn:cache"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "footnote",
+   "structure": "section \"Performance results > Method\"; footnote",
+   "masked": "Measured on a 1 Gbit/s connection with 10,000 files of 1 MB each.",
+   "original": "Measured on a 1 Gbit/s connection with 10,000 files of 1 MB each.",
+   "sourceText": "Measured on a 1 Gbit/s connection with 10,000 files of 1 MB each.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "footnote",
+   "structure": "section \"Performance results > Method\"; footnote",
+   "masked": "The benchmark is described in <x1/>. It creates files with random content.",
+   "original": "The benchmark is described in `bench/README.md`. It creates files with random content.",
+   "sourceText": "The benchmark is described in . It creates files with random content.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`bench/README.md`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:bench/README.md"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "footnote",
+   "structure": "section \"Performance results > Method\"; footnote",
+   "masked": "The 99th percentile, measured at the gateway.",
+   "original": "The 99th percentile, measured at the gateway.",
+   "sourceText": "The 99th percentile, measured at the gateway.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "footnote",
+   "structure": "section \"Performance results > Method\"; footnote",
+   "masked": "To clear the cache, run <x1/>. A second paragraph in the footnote explains why a cold cache matters: the first scan reads every file.",
+   "original": "To clear the cache, run `ctsync reset --cache-only`.\n    A second paragraph in the footnote explains why a cold cache matters: the first scan reads every file.",
+   "sourceText": "To clear the cache, run . A second paragraph in the footnote explains why a cold cache matters: the first scan reads every file.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`ctsync reset --cache-only`"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 106,
+    "firstColumn": 10,
+    "prefix": "    ",
+    "eol": "\n"
+   },
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:ctsync reset --cache-only"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   21,
+   "s1"
+  ],
+  [
+   23,
+   158,
+   "s2"
+  ],
+  [
+   160,
+   214,
+   "s3"
+  ],
+  [
+   219,
+   225,
+   "s4"
+  ],
+  [
+   227,
+   336,
+   "s5"
+  ],
+  [
+   344,
+   409,
+   "s6"
+  ],
+  [
+   420,
+   506,
+   "s7"
+  ],
+  [
+   515,
+   560,
+   "s8"
+  ],
+  [
+   571,
+   730,
+   "s9"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "[^1]: x\n[^bench]: x\n[^p99]: x\n[^cache]: x",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"performance-results\"></a>ÜPERFORMANCE ÜRESULTS\n\nÜSYNC ÜTHROUGHPUT ÜIMPROVED ÜBY 40%[^1] ÜCOMPARED ÜWITH ÜTHE ÜPREVIOUS ÜRELEASE. ÜTHE ÜTEST ÜUSED ÜTHE ÜSTANDARD ÜBENCHMARK[^bench] ÜON ÜTHREE ÜMACHINES.\n\nÜLATENCY ÜSTAYED ÜBELOW 200 ÜMS ÜFOR 99% ÜOF ÜREQUESTS[^p99].\n\n## <a id=\"method\"></a>ÜMETHOD\n\nÜEACH ÜRUN ÜSTARTED ÜWITH ÜAN ÜEMPTY ÜCACHE.[^cache] ÜWE ÜREPEATED ÜEVERY ÜMEASUREMENT ÜFIVE ÜTIMES ÜAND ÜREPORT ÜTHE ÜMEDIAN.\n\n[^1]: ÜMEASURED ÜON ÜA 1 ÜGBIT/ÜS ÜCONNECTION ÜWITH 10,000 ÜFILES ÜOF 1 ÜMB ÜEACH.\n[^bench]: ÜTHE ÜBENCHMARK ÜIS ÜDESCRIBED ÜIN `bench/README.md`. ÜIT ÜCREATES ÜFILES ÜWITH ÜRANDOM ÜCONTENT.\n[^p99]: ÜTHE 99ÜTH ÜPERCENTILE, ÜMEASURED ÜAT ÜTHE ÜGATEWAY.\n[^cache]: ÜTO ÜCLEAR ÜTHE ÜCACHE, ÜRUN `ctsync reset --cache-only`. ÜA ÜSECOND ÜPARAGRAPH ÜIN ÜTHE\n    ÜFOOTNOTE ÜEXPLAINS ÜWHY ÜA ÜCOLD ÜCACHE ÜMATTERS: ÜTHE ÜFIRST ÜSCAN ÜREADS ÜEVERY ÜFILE.\n",
+ "reverted": [],
+ "anchors": [
+  "performance-results",
+  "method"
+ ]
+}

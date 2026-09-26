@@ -1,0 +1,325 @@
+{
+ "file": "eval/features/code-comments-shell.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Scripts for administrators",
+   "original": "Scripts for administrators",
+   "sourceText": "Scripts for administrators",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Scripts for administrators\"",
+   "masked": "A Bash script that checks every device:",
+   "original": "A Bash script that checks every device:",
+   "sourceText": "A Bash script that checks every device:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bash source code comment",
+   "structure": "section \"Scripts for administrators\"; bash code block",
+   "masked": "Stop on the first device that fails",
+   "original": "Stop on the first device that fails",
+   "sourceText": "Stop on the first device that fails",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bash source code comment",
+   "structure": "section \"Scripts for administrators\"; bash code block",
+   "masked": "one file per device",
+   "original": "one file per device",
+   "sourceText": "one file per device",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bash source code comment",
+   "structure": "section \"Scripts for administrators\"; bash code block",
+   "masked": "Print a summary",
+   "original": "Print a summary",
+   "sourceText": "Print a summary",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Scripts for administrators\"",
+   "masked": "The same check in <x1/>:",
+   "original": "The same check in PowerShell:",
+   "sourceText": "The same check in :",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "PowerShell"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "powershell source code comment",
+   "structure": "section \"Scripts for administrators\"; powershell code block",
+   "masked": ".SYNOPSIS Collects the sync status from all devices. .DESCRIPTION Reads the device names from <x1/> and writes one <x2/> file per device.",
+   "original": ".SYNOPSIS\n  Collects the sync status from all devices.\n.DESCRIPTION\n  Reads the device names from hosts.txt and writes one JSON file per device.",
+   "sourceText": ".SYNOPSIS Collects the sync status from all devices. .DESCRIPTION Reads the device names from  and writes one  file per device.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "hosts.txt",
+    "x2": "JSON"
+   },
+   "tagGroups": [],
+   "wrap": {
+    "width": 76,
+    "firstColumn": 0,
+    "prefix": "  ",
+    "eol": "\n"
+   },
+   "forbidden": [
+    "#>"
+   ],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s8",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "powershell source code comment",
+   "structure": "section \"Scripts for administrators\"; powershell code block",
+   "masked": "Collect the results in a list",
+   "original": "Collect the results in a list",
+   "sourceText": "Collect the results in a list",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "powershell source code comment",
+   "structure": "section \"Scripts for administrators\"; powershell code block",
+   "masked": "runs remotely",
+   "original": "runs remotely",
+   "sourceText": "runs remotely",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Scripts for administrators\"",
+   "masked": "A <x1/> batch file:",
+   "original": "A Windows batch file:",
+   "sourceText": "A  batch file:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Windows"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bat source code comment",
+   "structure": "section \"Scripts for administrators\"; bat code block",
+   "masked": "Restart the sync service",
+   "original": "Restart the sync service",
+   "sourceText": "Restart the sync service",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bat source code comment",
+   "structure": "section \"Scripts for administrators\"; bat code block",
+   "masked": "Done",
+   "original": "Done",
+   "sourceText": "Done",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   28,
+   "s1"
+  ],
+  [
+   30,
+   69,
+   "s2"
+  ],
+  [
+   120,
+   155,
+   "s3"
+  ],
+  [
+   249,
+   268,
+   "s4"
+  ],
+  [
+   277,
+   292,
+   "s5"
+  ],
+  [
+   382,
+   411,
+   "s6"
+  ],
+  [
+   430,
+   574,
+   "s7"
+  ],
+  [
+   620,
+   649,
+   "s8"
+  ],
+  [
+   765,
+   778,
+   "s9"
+  ],
+  [
+   839,
+   860,
+   "s10"
+  ],
+  [
+   883,
+   907,
+   "s11"
+  ],
+  [
+   954,
+   958,
+   "s12"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"scripts-for-administrators\"></a>ÜSCRIPTS ÜFOR ÜADMINISTRATORS\n\nÜA ÜBASH ÜSCRIPT ÜTHAT ÜCHECKS ÜEVERY ÜDEVICE:\n\n```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\n# ÜSTOP ÜON ÜTHE ÜFIRST ÜDEVICE ÜTHAT ÜFAILS\nfor host in $(cat hosts.txt); do\n  ssh \"$host\" ctsync status --json > \"status-$host.json\"  # ÜONE ÜFILE ÜPER ÜDEVICE\ndone\n\n# ÜPRINT ÜA ÜSUMMARY\njq -s 'map(.state) | group_by(.) | map({state: .[0], count: length})' status-*.json\n```\n\nÜTHE ÜSAME ÜCHECK ÜIN PowerShell:\n\n```powershell\n<#\n.ÜSYNOPSIS ÜCOLLECTS ÜTHE ÜSYNC ÜSTATUS ÜFROM ÜALL ÜDEVICES. .ÜDESCRIPTION\n  ÜREADS ÜTHE ÜDEVICE ÜNAMES ÜFROM hosts.txt ÜAND ÜWRITES ÜONE JSON ÜFILE\n  ÜPER ÜDEVICE.\n#>\nparam([string]$HostFile = 'hosts.txt')\n\n# ÜCOLLECT ÜTHE ÜRESULTS ÜIN ÜA ÜLIST\n$results = foreach ($h in Get-Content $HostFile) {\n    Invoke-Command -ComputerName $h { ctsync status --json }  # ÜRUNS ÜREMOTELY\n}\n$results | ConvertTo-Json | Set-Content summary.json\n```\n\nÜA Windows ÜBATCH ÜFILE:\n\n```bat\n@echo off\nREM ÜRESTART ÜTHE ÜSYNC ÜSERVICE\nnet stop ContosoSync\nnet start ContosoSync\n:: ÜDONE\n```\n",
+ "reverted": [],
+ "anchors": [
+  "scripts-for-administrators"
+ ]
+}

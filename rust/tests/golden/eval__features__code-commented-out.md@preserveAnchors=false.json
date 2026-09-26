@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/code-commented-out.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜDEBUGGING ÜNOTES\n\nÜSOME ÜCOMMENTS ÜCONTAIN ÜCODE ÜTHAT ÜIS ÜSWITCHED ÜOFF. ÜIT ÜMUST ÜSTAY ÜEXACTLY ÜAS ÜIT ÜIS.\n\n```python\ndef sync(folder):\n    # print(folder.files)\n    # folder.refresh(force=True)\n    # ÜREFRESH ÜONLY ÜWHEN ÜTHE ÜFOLDER ÜCHANGED ÜSINCE ÜTHE ÜLAST ÜRUN\n    if folder.changed:\n        folder.refresh()\n    # ÜRETURN ÜNONE\n    return folder.state\n```\n\n```javascript\nfunction start() {\n  // console.log('starting', config);\n  // await client.reset();\n  // ÜSTART ÜTHE ÜWATCHER ÜAFTER ÜTHE ÜFIRST ÜFULL ÜSCAN\n  watcher.start();\n  // if (debug) { dumpState(); }\n}\n```\n\n```bash\n# export CTSYNC_DEBUG=1\n# ÜCTSYNC ÜRESET --force ÜSHOW ÜTHE\n# ÜSTATUS ÜOF ÜEVERY ÜFOLDER\nctsync status\n```\n\n```csharp\n// var client = new SyncClient(uri);\n// client.Dispose();\n// ÜREUSE ÜTHE ÜSHARED ÜCLIENT ÜINSTEAD ÜOF ÜCREATING ÜA ÜNEW ÜONE\nvar client = SyncClientFactory.Shared;\n```\n\n```ts\n// eslint-disable-next-line @typescript-eslint/no-explicit-any\nconst raw: any = JSON.parse(text);\n// @ts-expect-error: the SDK types are out of date\nclient.legacyUpload(raw);\n```\n",
+ "reverted": [],
+ "anchors": []
+}

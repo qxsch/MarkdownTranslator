@@ -1,0 +1,249 @@
+{
+ "file": "eval/features/images-alt.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Images",
+   "original": "Images",
+   "sourceText": "Images",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Images\"",
+   "masked": "<g1>Screenshot of the settings page with the Network tab selected</g1>",
+   "original": "![Screenshot of the settings page with the Network tab selected](images/settings-network.png)",
+   "sourceText": "Screenshot of the settings page with the Network tab selected",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "image: image images/settings-network.png"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "image:images/settings-network.png"
+  },
+  {
+   "id": "s3",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link/image title (tooltip)",
+   "structure": "section \"Images\"",
+   "masked": "Sync status icon",
+   "original": "Sync status icon",
+   "sourceText": "Sync status icon",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Images\"",
+   "masked": "<g1>The file <x2/> shows the green icon</g1>",
+   "original": "![The file sync-status.png shows the green icon](images/sync-status.png \"Sync status icon\")",
+   "sourceText": "The file  shows the green icon",
+   "passive": false,
+   "embedded": false,
+   "dependents": [
+    "s3"
+   ],
+   "tags": {
+    "x2": "sync-status.png",
+    "g1": "image: image images/sync-status.png"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "image:images/sync-status.png"
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Images\"",
+   "masked": "<g1>Logo</g1>",
+   "original": "![Logo](logo.svg)",
+   "sourceText": "Logo",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "image: image logo.svg"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "image:logo.svg"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Images\"",
+   "masked": "Reference-style image: <g1>Diagram of the retention flow</g1>",
+   "original": "Reference-style image: ![Diagram of the retention flow][retention-diagram]",
+   "sourceText": "Reference-style image: Diagram of the retention flow",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "image: image"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "imageref:retention-diagram"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Images\"",
+   "masked": "Inline image in a sentence: select the <g1>gear icon</g1> to open the settings.",
+   "original": "Inline image in a sentence: select the ![gear icon](images/gear.svg) to open the settings.",
+   "sourceText": "Inline image in a sentence: select the gear icon to open the settings.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "image: image images/gear.svg"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "image:images/gear.svg"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Images\"",
+   "masked": "<g1>Chart: uploads per hour, peak at 14:00</g1>",
+   "original": "![Chart: uploads per hour, peak at 14:00](charts/uploads_per_hour.jpeg)",
+   "sourceText": "Chart: uploads per hour, peak at 14:00",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "image: image charts/uploads_per_hour.jpeg"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "image:charts/uploads_per_hour.jpeg"
+  },
+  {
+   "id": "s9",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link title (tooltip)",
+   "structure": "section \"Images\"",
+   "masked": "Retention flow",
+   "original": "Retention flow",
+   "sourceText": "Retention flow",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   8,
+   "s1"
+  ],
+  [
+   10,
+   103,
+   "s2"
+  ],
+  [
+   105,
+   196,
+   "s4"
+  ],
+  [
+   231,
+   248,
+   "s5"
+  ],
+  [
+   250,
+   324,
+   "s6"
+  ],
+  [
+   326,
+   416,
+   "s7"
+  ],
+  [
+   418,
+   489,
+   "s8"
+  ],
+  [
+   548,
+   562,
+   "s9"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "[retention-diagram]: diagrams/retention-flow.drawio.png \"Retention flow\"",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"images\"></a>ÜIMAGES\n\n![ÜSCREENSHOT ÜOF ÜTHE ÜSETTINGS ÜPAGE ÜWITH ÜTHE ÜNETWORK ÜTAB ÜSELECTED](images/settings-network.png)\n\n![ÜTHE ÜFILE sync-status.png ÜSHOWS ÜTHE ÜGREEN ÜICON](images/sync-status.png \"ÜSYNC ÜSTATUS ÜICON\")\n\n![](images/decorative-line.png)\n\n![ÜLOGO](logo.svg)\n\nÜREFERENCE-ÜSTYLE ÜIMAGE: ![ÜDIAGRAM ÜOF ÜTHE ÜRETENTION ÜFLOW][retention-diagram]\n\nÜINLINE ÜIMAGE ÜIN ÜA ÜSENTENCE: ÜSELECT ÜTHE ![ÜGEAR ÜICON](images/gear.svg) ÜTO ÜOPEN ÜTHE ÜSETTINGS.\n\n![ÜCHART: ÜUPLOADS ÜPER ÜHOUR, ÜPEAK ÜAT 14:00](charts/uploads_per_hour.jpeg)\n\n[retention-diagram]: diagrams/retention-flow.drawio.png \"ÜRETENTION ÜFLOW\"\n",
+ "reverted": [],
+ "anchors": [
+  "images"
+ ]
+}

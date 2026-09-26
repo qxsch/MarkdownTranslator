@@ -1,0 +1,82 @@
+[package]
+name = "mdtranslate"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Structure-preserving Markdown translator backed by Azure AI Foundry (GPT) and Azure Translator"
+license = "MIT"
+
+[[bin]]
+name = "mdtranslate"
+path = "src/main.rs"
+
+[dependencies]
+markdown = "1.0.0"
+fancy-regex = "0.19"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+sha2 = "0.10"
+saphyr-parser = "0.0.6"
+
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "process"] }
+futures = "0.3"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "charset", "http2"] }
+rand = "0.8"
+# MDX expressions and ESM are validated like acorn does in the TypeScript implementation.
+oxc_parser = "0.151"
+oxc_allocator = "0.151"
+oxc_span = "0.151"
+oxc_ast = "0.151"
+
+# Grammar versions follow @vscode/tree-sitter-wasm 0.3.1, which the TypeScript implementation uses
+# (c-sharp, cpp, rust, powershell and ini are built from git there; the latest crates are used here).
+tree-sitter = { version = "=0.25.10", optional = true }
+tree-sitter-javascript = { version = "=0.25.0", optional = true }
+tree-sitter-typescript = { version = "=0.23.2", optional = true }
+tree-sitter-python = { version = "=0.25.0", optional = true }
+tree-sitter-bash = { version = "=0.25.1", optional = true }
+tree-sitter-c-sharp = { version = "=0.23.5", optional = true }
+tree-sitter-cpp = { version = "=0.23.4", optional = true }
+tree-sitter-css = { version = "=0.25.0", optional = true }
+tree-sitter-go = { version = "=0.25.0", optional = true }
+tree-sitter-java = { version = "=0.23.5", optional = true }
+tree-sitter-php = { version = "=0.24.2", optional = true }
+tree-sitter-ruby = { version = "=0.23.1", optional = true }
+tree-sitter-rust = { version = "=0.24.2", optional = true }
+tree-sitter-powershell = { version = "=0.25.10", optional = true }
+tree-sitter-ini = { version = "=1.4.0", optional = true }
+
+[target.'cfg(target_env = "musl")'.dependencies]
+# musl's allocator is slow under contention; mimalloc is compiled in statically.
+mimalloc = "0.1"
+
+[features]
+default = ["grammars"]
+grammars = [
+    "dep:tree-sitter",
+    "dep:tree-sitter-javascript",
+    "dep:tree-sitter-typescript",
+    "dep:tree-sitter-python",
+    "dep:tree-sitter-bash",
+    "dep:tree-sitter-c-sharp",
+    "dep:tree-sitter-cpp",
+    "dep:tree-sitter-css",
+    "dep:tree-sitter-go",
+    "dep:tree-sitter-java",
+    "dep:tree-sitter-php",
+    "dep:tree-sitter-ruby",
+    "dep:tree-sitter-rust",
+    "dep:tree-sitter-powershell",
+    "dep:tree-sitter-ini",
+]
+
+[patch.crates-io]
+# markdown-rs 1.0.0 plus a GFM table fix that micromark parity needs (see vendor/markdown/README.md).
+markdown = { path = "vendor/markdown" }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = true

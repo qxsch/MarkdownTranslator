@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/code-no-lang.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜOUTPUT ÜSAMPLES\n\nÜA ÜFENCE ÜWITHOUT ÜA ÜLANGUAGE:\n\n```\nctsync status\nFolder        State     Files\nDocuments     Synced    1,204\nPictures      Pending   37\n```\n\nÜA ÜTILDE ÜFENCE:\n\n~~~\n[2026-08-14 10:02:11] INFO  Upload started: report.pdf\n[2026-08-14 10:02:14] WARN  Slow connection detected\n~~~\n\nÜA ÜFENCE ÜWITH ÜAN ÜUNKNOWN ÜLANGUAGE:\n\n```ctsyncrc\n# This comment is in an unknown format and must stay unchanged\nworkers = 8\n```\n\nÜAN ÜINDENTED ÜBLOCK:\n\n    # Indented code is never translated\n    ctsync reset --force\n\nÜA ÜFENCE ÜINSIDE ÜA ÜLIST:\n\n1. ÜRUN ÜTHE ÜCOMMAND:\n\n   ```bash\n   # ÜSHOW ÜTHE ÜVERSION\n   ctsync --version\n   ```\n\n2. ÜCHECK ÜTHAT ÜTHE ÜOUTPUT ÜSTARTS ÜWITH `3.`.\n\nÜA ÜFENCE ÜINSIDE ÜA ÜQUOTE:\n\n> ```text\n> Keep this text exactly as it is.\n> ```\n",
+ "reverted": [],
+ "anchors": []
+}

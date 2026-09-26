@@ -1,28 +1,28 @@
 /**
  * Measures translation quality of pipeline variants with blind, position-swapped pairwise judging (MQM-style).
+ * The variants are produced by the Rust binary (rust/, see eval/rust.ts); judging uses the Foundry chat client.
  *
+ *   cargo build --release --manifest-path rust/Cargo.toml
  *   npx tsx eval/run.ts                      # defaults below
  *   EVAL_LANGS=de,fr EVAL_DOCS=blog.md npx tsx eval/run.ts
  */
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 if (existsSync('.env')) process.loadEnvFile('.env');
 delete process.env.MDT_CACHE_DIR;
 
 const { loadConfig } = await import('../src/config.js');
-const { MarkdownTranslator } = await import('../src/pipeline.js');
-const { extract } = await import('../src/markdown/extract.js');
-const { renderSegment } = await import('../src/markdown/render.js');
-const { assembleDocument } = await import('../src/assemble.js');
-const { translateDocument, reviewPass } = await import('../src/translate/engine.js');
-type Outcome = import('../src/translate/engine.js').SegmentOutcome;
-type Segment = import('../src/markdown/types.js').Segment;
-type Extraction = import('../src/markdown/types.js').Extraction;
+const { ChatClient } = await import('../src/azure/openai.js');
+const { AzureAuth, Semaphore } = await import('../src/azure/http.js');
+const rust = await import('./rust.js');
+type Outcome = import('./rust.js').RustOutcome;
+type Segment = import('./rust.js').RustSegment;
 
 const cfg = loadConfig();
-const t = await MarkdownTranslator.create({ ...cfg, cacheDir: undefined });
-const deps = { cfg: t.cfg, chat: t.chat, nmt: t.nmt, cache: t.cache };
+const judgeChat = new ChatClient(cfg, new AzureAuth(cfg), new Semaphore(cfg.maxConcurrency));
+const catalog = await rust.languages();
 
 const LANGS = (process.env.EVAL_LANGS ?? 'de,fr,sv,pl,fi,mt').split(',');
 const PRIMARY = process.env.EVAL_PRIMARY ?? 'translate';
@@ -46,6 +46,8 @@ const WEIGHT = { minor: 1, major: 5, critical: 10 } as const;
 interface Run {
   tm: Map<string, string>;
   outcomes: Map<string, Outcome>;
+  /** Each segment rendered on its own (single line), as produced by the binary. */
+  rendered: Map<string, string>;
   reverted: number;
   keptSource: number;
   seconds: number;
@@ -53,9 +55,10 @@ interface Run {
 
 interface Job {
   doc: string;
+  file: string;
   lang: string;
-  ex: Extraction;
   segs: Segment[];
+  analysis: unknown;
   runs: Partial<Record<Variant, Run>>;
   formality: 'formal' | 'informal';
 }
@@ -102,36 +105,34 @@ interface JudgeResult {
 }
 
 const oneLine = (s: string) => s.replace(/\s*\r?\n\s*/g, ' ');
-const render = (job: Job, seg: Segment, v: Variant) => oneLine(renderSegment(seg, job.runs[v]!.tm, job.ex.byId, { wrap: false }));
+const render = (job: Job, seg: Segment, v: Variant) => oneLine(job.runs[v]!.rendered.get(seg.id) ?? seg.original);
 const words = (s: string) => s.split(/\s+/).filter((w) => /\p{L}/u.test(w)).length;
 
-async function runVariant(job: Job, v: Variant, base: Parameters<typeof translateDocument>[1]): Promise<Run> {
+async function runVariant(job: Job, v: Variant): Promise<Run> {
   const started = Date.now();
-  let res: { tm: Map<string, string>; outcomes: Map<string, Outcome> };
+  const common = { formality: job.formality, analysis: job.analysis ?? null, sourceLanguage: 'en', reportSegments: true } as const;
+  let rep: import('./rust.js').RustReport;
   if (v === 'gpt+review') {
+    // Review pass over the gpt translations, as a separate step.
     const g = job.runs.gpt!;
-    res = { tm: new Map(g.tm), outcomes: new Map([...g.outcomes].map(([k, o]) => [k, { ...o }])) };
-    await reviewPass(deps, base, res.tm, res.outcomes, job.segs.filter((s) => res.tm.has(s.id)));
+    rep = await rust.translate(job.file, job.lang, { review: true }, { ...common, memory: { tm: [...g.tm], outcomes: [...g.outcomes.values()], review: true } });
   } else {
-    res = await translateDocument(deps, {
-      ...base,
-      engine: v === 'nmt' ? 'nmt' : 'gpt',
-      review: false,
-      translateDeployment: v === 'alt' ? ALT : PRIMARY,
-      structuralContext: v !== 'noctx',
-    });
+    rep = await rust.translate(job.file, job.lang, { review: false, structuralContext: v !== 'noctx' }, { ...common, engine: v === 'nmt' ? 'nmt' : 'gpt', translateDeployment: v === 'alt' ? ALT : PRIMARY });
   }
-  const assembled = assembleDocument(job.ex, res.tm, { wrap: true, preserveAnchors: true });
+  const l = rep.languages[0];
+  const outcomes = new Map(l.outcomes.map((o) => [o.id, o]));
   return {
-    ...res,
-    reverted: assembled.reverted.length,
-    keptSource: [...res.outcomes.values()].filter((o) => o.via === 'source').length,
+    tm: new Map(l.tm),
+    outcomes,
+    rendered: new Map((l.segmentsDetail ?? []).map((s) => [s.id, s.rendered])),
+    reverted: l.revertedForStructure.length,
+    keptSource: [...outcomes.values()].filter((o) => o.via === 'source').length,
     seconds: (Date.now() - started) / 1000,
   };
 }
 
 async function judge(job: Job, judgeDeployment: string, a: Variant, b: Variant, segs: Segment[]) {
-  const lang = t.catalog.languages.get(job.lang)!;
+  const lang = catalog.languages.get(job.lang.toLowerCase())!;
   const system = `You are a senior ${lang.name} translator and localization QA lead. You evaluate translations of technical documentation from English into ${lang.name} using MQM error annotation.
 For each segment you get the English source and two candidate translations, A and B. Markup, code and placeholders are identical by construction; judge only the language.
 Annotate every error in each candidate with category and severity (minor: small imperfection; major: changes meaning or clearly wrong/unnatural; critical: misleading or unusable). Then decide which candidate is better overall ("tie" if their quality is equal).
@@ -139,7 +140,7 @@ Register expected for this document: ${job.formality === 'informal' ? lang.infor
 Locale style: ${lang.style ?? ''}
 Be strict, precise and consistent. Do not reward length or literalness.`;
   const payload = segs.map((s) => ({ id: s.id, kind: s.kind, source: oneLine(s.original), A: render(job, s, a), B: render(job, s, b) }));
-  const res = await t.chat.json<JudgeResult>(
+  const res = await judgeChat.json<JudgeResult>(
     judgeDeployment,
     [
       { role: 'system', content: system },
@@ -166,31 +167,25 @@ function binomialP(k: number, n: number): number {
 
 // ------------------------------------------------------------------ translate
 
+const unknownLangs = LANGS.filter((c) => !catalog.languages.has(c.toLowerCase()));
+if (unknownLangs.length) throw new Error(`unknown EVAL_LANGS ${unknownLangs.join(', ')}`);
 const jobs: Job[] = [];
 for (const doc of DOCS) {
-  const content = readFileSync(new URL(doc, corpusDir), 'utf8');
-  const ex = extract(content, t.glossary.doNotTranslate);
-  const analysis = await t.analyze(doc, ex.source);
+  const file = fileURLToPath(new URL(doc, corpusDir));
+  const ex = await rust.extraction(file, {});
+  const segs = ex.segments.filter((s) => !s.passive);
+  const analysis = (segs.length ? await rust.analyze(file) : undefined) as { register?: string } | undefined;
   const formality = ex.frontmatterFormality ?? (analysis?.register === 'informal' ? 'informal' : 'formal');
-  console.log(`${doc}: ${ex.segments.filter((s) => !s.passive).length} segments, register=${analysis?.register} -> ${formality}`);
-  for (const code of LANGS) {
-    const job: Job = { doc, lang: code, ex, segs: ex.segments.filter((s) => !s.passive), runs: {}, formality };
-    jobs.push(job);
-    (job as Job & { analysis: unknown }).analysis = analysis;
-  }
+  console.log(`${doc}: ${segs.length} segments, register=${analysis?.register} -> ${formality}`);
+  for (const code of LANGS) jobs.push({ doc, file, lang: code, segs, analysis, runs: {}, formality });
 }
 
 await Promise.all(
   jobs.map(async (job) => {
-    const lang = t.catalog.languages.get(job.lang)!;
-    const base = {
-      docName: job.doc, ex: job.ex, lang, sourceLanguage: 'English', sourceLanguageCode: 'en',
-      analysis: (job as Job & { analysis?: never }).analysis, formality: job.formality, glossary: t.glossary, engine: 'gpt' as const, review: false,
-    };
     const first = VARIANTS.filter((v) => v !== 'gpt+review');
-    const runs = await Promise.all(first.map((v) => runVariant(job, v, base)));
+    const runs = await Promise.all(first.map((v) => runVariant(job, v)));
     first.forEach((v, i) => (job.runs[v] = runs[i]));
-    if (VARIANTS.includes('gpt+review')) job.runs['gpt+review'] = await runVariant(job, 'gpt+review', base);
+    if (VARIANTS.includes('gpt+review')) job.runs['gpt+review'] = await runVariant(job, 'gpt+review');
     console.log(`translated ${job.doc} -> ${job.lang}`);
   }),
 );
@@ -311,7 +306,7 @@ const reviewEdits = jobs.reduce((n, j) => n + [...(j.runs['gpt+review']?.outcome
 
 mkdirSync(new URL('./results/', import.meta.url), { recursive: true });
 const file = join(new URL('./results/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'), `eval-${new Date().toISOString().replace(/[:.]/g, '-')}.json`);
-writeFileSync(file, JSON.stringify({ langs: LANGS, docs: DOCS, judges: JUDGES, primary: PRIMARY, alt: ALT, summary, structure, reviewEdits, usage: t.chat.usage.toJSON(), tallies, examples }, null, 2));
+writeFileSync(file, JSON.stringify({ langs: LANGS, docs: DOCS, judges: JUDGES, primary: PRIMARY, alt: ALT, implementation: await rust.version(), summary, structure, reviewEdits, usage: { translator: rust.usage(), judges: judgeChat.usage.toJSON() }, tallies, examples }, null, 2));
 
 console.log('\n=== structure ===');
 console.table(structure);

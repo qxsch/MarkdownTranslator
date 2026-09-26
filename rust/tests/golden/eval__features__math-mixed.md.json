@@ -1,0 +1,177 @@
+{
+ "file": "eval/features/math-mixed.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Capacity planning",
+   "original": "Capacity planning",
+   "sourceText": "Capacity planning",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Capacity planning\"",
+   "masked": "A single gateway handles about <x1/> requests per second. For a peak load of <x2/> requests per second you need <x3/> gateways.",
+   "original": "A single gateway handles about $r = 400$ requests per second. For a peak load of $R$ requests per second you need $n = \\lceil R / r \\rceil$ gateways.",
+   "sourceText": "A single gateway handles about  requests per second. For a peak load of  requests per second you need  gateways.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$r = 400$",
+    "x2": "$R$",
+    "x3": "$n = \\lceil R / r \\rceil$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Capacity planning\"",
+   "masked": "Each gateway costs $120 per month. For 2,000 requests per second, you need 5 gateways, which costs $600 per month.",
+   "original": "Each gateway costs $120 per month. For 2,000 requests per second, you need 5 gateways, which costs $600 per month.",
+   "sourceText": "Each gateway costs $120 per month. For 2,000 requests per second, you need 5 gateways, which costs $600 per month.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Capacity planning\"",
+   "masked": "Block math for the storage estimate:",
+   "original": "Block math for the storage estimate:",
+   "sourceText": "Block math for the storage estimate:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Capacity planning\"",
+   "masked": "where <x1/> is the number of users, <x2/> the average data per user and <x3/> the share of old versions.",
+   "original": "where $u$ is the number of users, $f$ the average data per user and $v$ the share of old versions.",
+   "sourceText": "where  is the number of users,  the average data per user and  the share of old versions.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$u$",
+    "x2": "$f$",
+    "x3": "$v$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Capacity planning\"",
+   "masked": "With 500 users, 20 GB each and <x1/>, you need 13 TB. At $20 per TB, storage costs $260 per month.",
+   "original": "With 500 users, 20 GB each and $v = 0.3$, you need 13 TB. At $20 per TB, storage costs $260 per month.",
+   "sourceText": "With 500 users, 20 GB each and , you need 13 TB. At $20 per TB, storage costs $260 per month.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "$v = 0.3$"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   19,
+   "s1"
+  ],
+  [
+   21,
+   170,
+   "s2"
+  ],
+  [
+   172,
+   286,
+   "s3"
+  ],
+  [
+   288,
+   324,
+   "s4"
+  ],
+  [
+   361,
+   459,
+   "s5"
+  ],
+  [
+   461,
+   563,
+   "s6"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"capacity-planning\"></a>ÜCAPACITY ÜPLANNING\n\nÜA ÜSINGLE ÜGATEWAY ÜHANDLES ÜABOUT $r = 400$ ÜREQUESTS ÜPER ÜSECOND. ÜFOR ÜA ÜPEAK ÜLOAD ÜOF $R$ ÜREQUESTS ÜPER ÜSECOND ÜYOU ÜNEED $n = \\lceil R / r \\rceil$ ÜGATEWAYS.\n\nÜEACH ÜGATEWAY ÜCOSTS $120 ÜPER ÜMONTH. ÜFOR 2,000 ÜREQUESTS ÜPER ÜSECOND, ÜYOU ÜNEED 5 ÜGATEWAYS, ÜWHICH ÜCOSTS $600 ÜPER ÜMONTH.\n\nÜBLOCK ÜMATH ÜFOR ÜTHE ÜSTORAGE ÜESTIMATE:\n\n$$\nS = u \\cdot f \\cdot (1 + v)\n$$\n\nÜWHERE $u$ ÜIS ÜTHE ÜNUMBER ÜOF ÜUSERS, $f$ ÜTHE ÜAVERAGE ÜDATA ÜPER ÜUSER ÜAND $v$ ÜTHE ÜSHARE ÜOF ÜOLD ÜVERSIONS.\n\nÜWITH 500 ÜUSERS, 20 ÜGB ÜEACH ÜAND $v = 0.3$, ÜYOU ÜNEED 13 ÜTB. ÜAT $20 ÜPER ÜTB, ÜSTORAGE ÜCOSTS $260 ÜPER ÜMONTH.\n",
+ "reverted": [],
+ "anchors": [
+  "capacity-planning"
+ ]
+}

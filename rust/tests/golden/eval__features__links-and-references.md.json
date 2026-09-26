@@ -1,0 +1,327 @@
+{
+ "file": "eval/features/links-and-references.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Links and references",
+   "original": "Links and references",
+   "sourceText": "Links and references",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Links and references\"",
+   "masked": "Read the <g1>installation guide</g1> first, then the <g2>configuration guide</g2>.",
+   "original": "Read the [installation guide][install] first, then the [configuration guide][].",
+   "sourceText": "Read the installation guide first, then the configuration guide.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link [install]",
+    "g2": "link: link [configuration guide] [ref configuration guide]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "linkref:configuration guide\nlinkref:install"
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Links and references\"",
+   "masked": "Autolinks such as <x1/> and bare <x2/> like <x3/> stay unchanged.",
+   "original": "Autolinks such as <https://contoso.example/status> and bare URLs like https://contoso.example/docs stay unchanged.",
+   "sourceText": "Autolinks such as  and bare  like  stay unchanged.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "<https://contoso.example/status>",
+    "x2": "URLs",
+    "x3": "https://contoso.example/docs"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:https://contoso.example/docs\nlink:https://contoso.example/status"
+  },
+  {
+   "id": "s4",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link/image title (tooltip)",
+   "structure": "section \"Links and references\"",
+   "masked": "Send an e-mail to support",
+   "original": "Send an e-mail to support",
+   "sourceText": "Send an e-mail to support",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Links and references\"",
+   "masked": "Contact <g1>the support team</g1> if you need help.",
+   "original": "Contact [the support team](mailto:support@contoso.example \"Send an e-mail to support\") if you need help.",
+   "sourceText": "Contact the support team if you need help.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [
+    "s4"
+   ],
+   "tags": {
+    "g1": "link: link to mailto:support@contoso.example"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:mailto:support@contoso.example"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Links and references\"",
+   "masked": "A shortcut reference to <g1>Contoso Sync</g1> and a collapsed one to <g2>Contoso Portal</g2>.",
+   "original": "A shortcut reference to [Contoso Sync] and a collapsed one to [Contoso Portal][].",
+   "sourceText": "A shortcut reference to Contoso Sync and a collapsed one to Contoso Portal.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link [Contoso Sync] [ref Contoso Sync]",
+    "g2": "link: link [Contoso Portal] [ref Contoso Portal]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "linkref:contoso portal\nlinkref:contoso sync"
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Links and references\"",
+   "masked": "Links with formatting: <g1><g2>the admin center</g2></g1> and <g3><x4/></g3>.",
+   "original": "Links with formatting: [**the admin center**](https://admin.contoso.example) and [`ctsync status`](cli-reference.md#commands).",
+   "sourceText": "Links with formatting: the admin center and .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x4": "`ctsync status`",
+    "g1": "link: link to https://admin.contoso.example",
+    "g2": "strong: strong",
+    "g3": "link: link to cli-reference.md#commands"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:ctsync status\nlink:cli-reference.md#commands\nlink:https://admin.contoso.example\nstrong"
+  },
+  {
+   "id": "s8",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link/image title (tooltip)",
+   "structure": "section \"Links and references\"",
+   "masked": "Compare the plans",
+   "original": "Compare the plans",
+   "sourceText": "Compare the plans",
+   "passive": false,
+   "embedded": true,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Links and references\"",
+   "masked": "A link with a title: <g1>pricing</g1>.",
+   "original": "A link with a title: [pricing](https://contoso.example/pricing \"Compare the plans\").",
+   "sourceText": "A link with a title: pricing.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [
+    "s8"
+   ],
+   "tags": {
+    "g1": "link: link to https://contoso.example/pricing"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "link:https://contoso.example/pricing"
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Links and references\"",
+   "masked": "An image link: <g1><g2>Build status</g2></g1>",
+   "original": "An image link: [![Build status](https://ci.example/badge.svg)](https://ci.example/build)",
+   "sourceText": "An image link: Build status",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "g1": "link: link to https://ci.example/build",
+    "g2": "image: image https://ci.example/badge.svg"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "image:https://ci.example/badge.svg\nlink:https://ci.example/build"
+  },
+  {
+   "id": "s11",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link title (tooltip)",
+   "structure": "section \"Links and references\"",
+   "masked": "Installation guide",
+   "original": "Installation guide",
+   "sourceText": "Installation guide",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  },
+  {
+   "id": "s12",
+   "kind": "title",
+   "textContext": "mdtitle",
+   "note": "link title (tooltip)",
+   "structure": "section \"Links and references\"",
+   "masked": "Open the portal",
+   "original": "Open the portal",
+   "sourceText": "Open the portal",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": "\"",
+   "inlineSignature": null
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   22,
+   "s1"
+  ],
+  [
+   24,
+   103,
+   "s2"
+  ],
+  [
+   105,
+   219,
+   "s3"
+  ],
+  [
+   221,
+   325,
+   "s5"
+  ],
+  [
+   327,
+   408,
+   "s6"
+  ],
+  [
+   410,
+   536,
+   "s7"
+  ],
+  [
+   538,
+   622,
+   "s9"
+  ],
+  [
+   624,
+   712,
+   "s10"
+  ],
+  [
+   758,
+   776,
+   "s11"
+  ],
+  [
+   911,
+   926,
+   "s12"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "[install]: https://contoso.example/install \"Installation guide\"\n[configuration guide]: ./configure.md\n[Contoso Sync]: https://contoso.example/sync\n[Contoso Portal]: https://portal.contoso.example \"Open the portal\"",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"links-and-references\"></a>ÜLINKS ÜAND ÜREFERENCES\n\nÜREAD ÜTHE [ÜINSTALLATION ÜGUIDE][install] ÜFIRST, ÜTHEN ÜTHE [ÜCONFIGURATION ÜGUIDE][configuration guide].\n\nÜAUTOLINKS ÜSUCH ÜAS <https://contoso.example/status> ÜAND ÜBARE URLs ÜLIKE https://contoso.example/docs ÜSTAY ÜUNCHANGED.\n\nÜCONTACT [ÜTHE ÜSUPPORT ÜTEAM](mailto:support@contoso.example \"ÜSEND ÜAN ÜE-ÜMAIL ÜTO ÜSUPPORT\") ÜIF ÜYOU ÜNEED ÜHELP.\n\nÜA ÜSHORTCUT ÜREFERENCE ÜTO [ÜCONTOSO ÜSYNC][Contoso Sync] ÜAND ÜA ÜCOLLAPSED ÜONE ÜTO [ÜCONTOSO ÜPORTAL][Contoso Portal].\n\nÜLINKS ÜWITH ÜFORMATTING: [**ÜTHE ÜADMIN ÜCENTER**](https://admin.contoso.example) ÜAND [`ctsync status`](cli-reference.md#commands).\n\nÜA ÜLINK ÜWITH ÜA ÜTITLE: [ÜPRICING](https://contoso.example/pricing \"ÜCOMPARE ÜTHE ÜPLANS\").\n\nÜAN ÜIMAGE ÜLINK: [![ÜBUILD ÜSTATUS](https://ci.example/badge.svg)](https://ci.example/build)\n\n[install]: https://contoso.example/install \"ÜINSTALLATION ÜGUIDE\"\n[configuration guide]: ./configure.md\n[Contoso Sync]: https://contoso.example/sync\n[Contoso Portal]: https://portal.contoso.example \"ÜOPEN ÜTHE ÜPORTAL\"\n",
+ "reverted": [],
+ "anchors": [
+  "links-and-references"
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "file": "eval/features/math-real.md",
+ "options": {
+  "mdx": true,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "error": "extract: Could not parse expression with acorn"
+}

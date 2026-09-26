@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/code-comments-shell.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜSCRIPTS ÜFOR ÜADMINISTRATORS\n\nÜA ÜBASH ÜSCRIPT ÜTHAT ÜCHECKS ÜEVERY ÜDEVICE:\n\n```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\n# ÜSTOP ÜON ÜTHE ÜFIRST ÜDEVICE ÜTHAT ÜFAILS\nfor host in $(cat hosts.txt); do\n  ssh \"$host\" ctsync status --json > \"status-$host.json\"  # ÜONE ÜFILE ÜPER ÜDEVICE\ndone\n\n# ÜPRINT ÜA ÜSUMMARY\njq -s 'map(.state) | group_by(.) | map({state: .[0], count: length})' status-*.json\n```\n\nÜTHE ÜSAME ÜCHECK ÜIN PowerShell:\n\n```powershell\n<#\n.ÜSYNOPSIS ÜCOLLECTS ÜTHE ÜSYNC ÜSTATUS ÜFROM ÜALL ÜDEVICES. .ÜDESCRIPTION\n  ÜREADS ÜTHE ÜDEVICE ÜNAMES ÜFROM hosts.txt ÜAND ÜWRITES ÜONE JSON ÜFILE\n  ÜPER ÜDEVICE.\n#>\nparam([string]$HostFile = 'hosts.txt')\n\n# ÜCOLLECT ÜTHE ÜRESULTS ÜIN ÜA ÜLIST\n$results = foreach ($h in Get-Content $HostFile) {\n    Invoke-Command -ComputerName $h { ctsync status --json }  # ÜRUNS ÜREMOTELY\n}\n$results | ConvertTo-Json | Set-Content summary.json\n```\n\nÜA Windows ÜBATCH ÜFILE:\n\n```bat\n@echo off\nREM ÜRESTART ÜTHE ÜSYNC ÜSERVICE\nnet stop ContosoSync\nnet start ContosoSync\n:: ÜDONE\n```\n",
+ "reverted": [],
+ "anchors": []
+}

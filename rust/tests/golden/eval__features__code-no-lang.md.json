@@ -1,0 +1,268 @@
+{
+ "file": "eval/features/code-no-lang.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Output samples",
+   "original": "Output samples",
+   "sourceText": "Output samples",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Output samples\"",
+   "masked": "A fence without a language:",
+   "original": "A fence without a language:",
+   "sourceText": "A fence without a language:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Output samples\"",
+   "masked": "A tilde fence:",
+   "original": "A tilde fence:",
+   "sourceText": "A tilde fence:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Output samples\"",
+   "masked": "A fence with an unknown language:",
+   "original": "A fence with an unknown language:",
+   "sourceText": "A fence with an unknown language:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Output samples\"",
+   "masked": "An indented block:",
+   "original": "An indented block:",
+   "sourceText": "An indented block:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Output samples\"",
+   "masked": "A fence inside a list:",
+   "original": "A fence inside a list:",
+   "sourceText": "A fence inside a list:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Output samples\"; list introduced by \"A fence inside a list:\"",
+   "masked": "Run the command:",
+   "original": "Run the command:",
+   "sourceText": "Run the command:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s8",
+   "kind": "comment",
+   "textContext": "comment",
+   "note": "bash source code comment",
+   "structure": "section \"Output samples\"; list introduced by \"A fence inside a list:\"; bash code block",
+   "masked": "Show the version",
+   "original": "Show the version",
+   "sourceText": "Show the version",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": null
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "list item",
+   "structure": "section \"Output samples\"; list introduced by \"A fence inside a list:\"",
+   "masked": "Check that the output starts with <x1/>.",
+   "original": "Check that the output starts with `3.`.",
+   "sourceText": "Check that the output starts with .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`3.`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:3."
+  },
+  {
+   "id": "s10",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Output samples\"",
+   "masked": "A fence inside a quote:",
+   "original": "A fence inside a quote:",
+   "sourceText": "A fence inside a quote:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   16,
+   "s1"
+  ],
+  [
+   18,
+   45,
+   "s2"
+  ],
+  [
+   157,
+   171,
+   "s3"
+  ],
+  [
+   290,
+   323,
+   "s4"
+  ],
+  [
+   417,
+   435,
+   "s5"
+  ],
+  [
+   503,
+   525,
+   "s6"
+  ],
+  [
+   530,
+   546,
+   "s7"
+  ],
+  [
+   564,
+   580,
+   "s8"
+  ],
+  [
+   612,
+   651,
+   "s9"
+  ],
+  [
+   653,
+   676,
+   "s10"
+  ]
+ ],
+ "notes": [
+  "code block \"ctsyncrc\" left untouched (no comment parser for this language)",
+  "code block \"text\" left untouched (no comment parser for this language)"
+ ],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"output-samples\"></a>ÜOUTPUT ÜSAMPLES\n\nÜA ÜFENCE ÜWITHOUT ÜA ÜLANGUAGE:\n\n```\nctsync status\nFolder        State     Files\nDocuments     Synced    1,204\nPictures      Pending   37\n```\n\nÜA ÜTILDE ÜFENCE:\n\n~~~\n[2026-08-14 10:02:11] INFO  Upload started: report.pdf\n[2026-08-14 10:02:14] WARN  Slow connection detected\n~~~\n\nÜA ÜFENCE ÜWITH ÜAN ÜUNKNOWN ÜLANGUAGE:\n\n```ctsyncrc\n# This comment is in an unknown format and must stay unchanged\nworkers = 8\n```\n\nÜAN ÜINDENTED ÜBLOCK:\n\n    # Indented code is never translated\n    ctsync reset --force\n\nÜA ÜFENCE ÜINSIDE ÜA ÜLIST:\n\n1. ÜRUN ÜTHE ÜCOMMAND:\n\n   ```bash\n   # ÜSHOW ÜTHE ÜVERSION\n   ctsync --version\n   ```\n\n2. ÜCHECK ÜTHAT ÜTHE ÜOUTPUT ÜSTARTS ÜWITH `3.`.\n\nÜA ÜFENCE ÜINSIDE ÜA ÜQUOTE:\n\n> ```text\n> Keep this text exactly as it is.\n> ```\n",
+ "reverted": [],
+ "anchors": [
+  "output-samples"
+ ]
+}

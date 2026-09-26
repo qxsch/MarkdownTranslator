@@ -1,0 +1,358 @@
+{
+ "file": "eval/features/escapes-entities.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Escapes and entities",
+   "original": "Escapes and entities",
+   "sourceText": "Escapes and entities",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "Use <x1/>backticks<x2/> literally, and write <x3/>brackets<x4/> without creating a link.",
+   "original": "Use \\`backticks\\` literally, and write \\[brackets\\] without creating a link.",
+   "sourceText": "Use backticks literally, and write brackets without creating a link.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`",
+    "x2": "`",
+    "x3": "[",
+    "x4": "]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "HTML entities: <x1/> 2026 Contoso, <x2/>non-breaking space, <x3/>tag<x4/> and <x5/> ampersand.",
+   "original": "HTML entities: &copy; 2026 Contoso, &nbsp;non-breaking space, &lt;tag&gt; and &amp; ampersand.",
+   "sourceText": "HTML entities:  2026 Contoso, non-breaking space, tag and  ampersand.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "&copy;",
+    "x2": "&nbsp;",
+    "x3": "&lt;",
+    "x4": "&gt;",
+    "x5": "&amp;"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "Numeric entities: <x1/> (euro) and <x2/> (arrow).",
+   "original": "Numeric entities: &#8364; (euro) and &#x2192; (arrow).",
+   "sourceText": "Numeric entities:  (euro) and  (arrow).",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "&#8364;",
+    "x2": "&#x2192;"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "A backslash at the end of a line<x1/>creates a hard line break.",
+   "original": "A backslash at the end of a line\\\ncreates a hard line break.",
+   "sourceText": "A backslash at the end of a linecreates a hard line break.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "line break [break]"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "break"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "Special characters: 50% off, #hashtag, <x1/>, 1 &lt; 2 &gt; 0, a | b.",
+   "original": "Special characters: 50% off, #hashtag, @mention, 1 < 2 > 0, a | b.",
+   "sourceText": "Special characters: 50% off, #hashtag, , 1 < 2 > 0, a | b.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "@mention"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "Literal HTML-like text in code: <x1/> and <x2/>.",
+   "original": "Literal HTML-like text in code: `<div>` and `&amp;`.",
+   "sourceText": "Literal HTML-like text in code:  and .",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "`<div>`",
+    "x2": "`&amp;`"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "code:&amp;\ncode:<div>"
+  },
+  {
+   "id": "s8",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "The price is 10<x1/>€ per month.",
+   "original": "The price is 10&nbsp;€ per month.",
+   "sourceText": "The price is 10€ per month.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "&nbsp;"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s9",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Escapes and entities\"",
+   "masked": "Escaped pipes in a table:",
+   "original": "Escaped pipes in a table:",
+   "sourceText": "Escaped pipes in a table:",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s10",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Escapes and entities\"; table header; columns: \"Pattern\", \"Meaning\"",
+   "masked": "Pattern",
+   "original": "Pattern",
+   "sourceText": "Pattern",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s11",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table header cell",
+   "structure": "section \"Escapes and entities\"; table header; columns: \"Pattern\", \"Meaning\"",
+   "masked": "Meaning",
+   "original": "Meaning",
+   "sourceText": "Meaning",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s12",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Escapes and entities\"; table column \"Meaning\", row \"a|b\"",
+   "masked": "Either a or b",
+   "original": "Either a or b",
+   "sourceText": "Either a or b",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s13",
+   "kind": "cell",
+   "textContext": "cell",
+   "note": "table cell",
+   "structure": "section \"Escapes and entities\"; table column \"Meaning\", row \"*\"",
+   "masked": "Any character",
+   "original": "Any character",
+   "sourceText": "Any character",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   22,
+   "s1"
+  ],
+  [
+   24,
+   100,
+   "s2"
+  ],
+  [
+   102,
+   196,
+   "s3"
+  ],
+  [
+   198,
+   252,
+   "s4"
+  ],
+  [
+   254,
+   314,
+   "s5"
+  ],
+  [
+   316,
+   382,
+   "s6"
+  ],
+  [
+   384,
+   436,
+   "s7"
+  ],
+  [
+   438,
+   473,
+   "s8"
+  ],
+  [
+   475,
+   500,
+   "s9"
+  ],
+  [
+   504,
+   511,
+   "s10"
+  ],
+  [
+   514,
+   521,
+   "s11"
+  ],
+  [
+   545,
+   558,
+   "s12"
+  ],
+  [
+   568,
+   581,
+   "s13"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"escapes-and-entities\"></a>ÜESCAPES ÜAND ÜENTITIES\n\nÜUSE \\`ÜBACKTICKS\\` ÜLITERALLY, ÜAND ÜWRITE \\[ÜBRACKETS\\] ÜWITHOUT ÜCREATING ÜA ÜLINK.\n\nÜHTML ÜENTITIES: &copy; 2026 ÜCONTOSO, &nbsp;ÜNON-ÜBREAKING ÜSPACE, &lt;ÜTAG&gt; ÜAND &amp; ÜAMPERSAND.\n\nÜNUMERIC ÜENTITIES: &#8364; (ÜEURO) ÜAND &#x2192; (ÜARROW).\n\nÜA ÜBACKSLASH ÜAT ÜTHE ÜEND ÜOF ÜA ÜLINE\\\nÜCREATES ÜA ÜHARD ÜLINE ÜBREAK.\n\nÜSPECIAL ÜCHARACTERS: 50% ÜOFF, #ÜHASHTAG, @mention, 1 < 2 > 0, ÜA | ÜB.\n\nÜLITERAL ÜHTML-ÜLIKE ÜTEXT ÜIN ÜCODE: `<div>` ÜAND `&amp;`.\n\nÜTHE ÜPRICE ÜIS 10&nbsp;€ ÜPER ÜMONTH.\n\nÜESCAPED ÜPIPES ÜIN ÜA ÜTABLE:\n\n| ÜPATTERN | ÜMEANING |\n|---|---|\n| `a\\|b` | ÜEITHER ÜA ÜOR ÜB |\n| \\* | ÜANY ÜCHARACTER |\n",
+ "reverted": [],
+ "anchors": [
+  "escapes-and-entities"
+ ]
+}

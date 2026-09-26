@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/mixed-everything.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "---\ntitle: ÜBUILD ÜA ÜSYNC ÜREPORT ÜWITH ÜTHE Python ÜSDK\ndescription: ÜCOMBINE ÜTHE ÜSDK, ÜA ÜSCHEDULED ÜJOB ÜAND ÜA ÜSMALL ÜFORMULA ÜTO ÜREPORT ÜSTORAGE ÜGROWTH.\n---\n\n# ÜBUILD ÜA ÜSYNC ÜREPORT ÜWITH ÜTHE Python ÜSDK\n\n> [!NOTE]\n> ÜTHIS ÜSAMPLE ÜNEEDS ÜVERSION 3.2 ÜOR ÜLATER ÜOF ÜTHE `contoso-sync` ÜPACKAGE.\n\nÜTHE ÜGROWTH ÜRATE $g$ ÜBETWEEN ÜTWO ÜDAYS ÜIS $g = \\frac{b_t - b_{t-1}}{b_{t-1}}$. ÜTHE ÜREPORT ÜCOSTS ÜNOTHING ÜTO ÜRUN, ÜBUT ÜSTORAGE ÜBEYOND ÜTHE ÜQUOTA ÜCOSTS $0.02 ÜPER ÜGB.\n\n## ÜWRITE ÜTHE ÜSCRIPT\n\n```python\nfrom contoso_sync import SyncClient\n\n\ndef daily_growth(client, share):\n    \"\"\"ÜRETURN ÜTHE ÜSTORAGE ÜGROWTH ÜOF ÜA ÜSHARE ÜFOR ÜEACH ÜDAY.\n\n    Args:\n        client (SyncClient): ÜAN ÜAUTHENTICATED ÜCLIENT.\n        share (str): ÜNAME ÜOF ÜTHE ÜSHARE.\n\n    Returns:\n        ÜLIST[ÜFLOAT]: ÜONE ÜGROWTH ÜRATE ÜPER ÜDAY, ÜOLDEST ÜFIRST.\n    \"\"\"\n    # ÜFETCH ÜTHE ÜLAST 30 ÜDAYS; ÜTHE ÜAPI ÜRETURNS ÜNEWEST ÜFIRST\n    rows = client.usage(share, days=30)[::-1]\n    return [(b.bytes - a.bytes) / a.bytes for a, b in zip(rows, rows[1:])]\n```\n\n## ÜSCHEDULE ÜIT\n\n| ÜPLATFORM | ÜSCHEDULER | ÜEXAMPLE |\n|---|---|---|\n| Windows | ÜTASK ÜSCHEDULER | ÜRUN `python report.py` ÜDAILY ÜAT 06:00 |\n| Linux | ÜCRON | `0 6 * * * python3 /opt/report.py` |\n\n:::tip ÜKEEP ÜIT ÜSIMPLE\nÜSTART ÜWITH ÜA ÜDAILY ÜRUN. ÜHOURLY ÜRUNS ÜRARELY ÜADD ÜVALUE ÜFOR ÜSTORAGE ÜTRENDS.\n:::\n\nÜSEE [ÜWRITE ÜTHE ÜSCRIPT](#write-the-script) ÜIF ÜTHE ÜNUMBERS ÜLOOK ÜWRONG.\n",
+ "reverted": [],
+ "anchors": []
+}

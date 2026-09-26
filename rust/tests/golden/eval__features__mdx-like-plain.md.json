@@ -1,0 +1,206 @@
+{
+ "file": "eval/features/mdx-like-plain.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Template placeholders",
+   "original": "Template placeholders",
+   "sourceText": "Template placeholders",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s2",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Template placeholders\"",
+   "masked": "Templates use curly braces for placeholders. For example, <x1/> is replaced with the user's name and <x2/> with today's date.",
+   "original": "Templates use curly braces for placeholders. For example, {name} is replaced with the user's name and {date} with today's date.",
+   "sourceText": "Templates use curly braces for placeholders. For example,  is replaced with the user's name and  with today's date.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{name}",
+    "x2": "{date}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s3",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Template placeholders\"",
+   "masked": "A comparison such as 1 &lt; 2 or a &lt; b is plain text in <x1/>, and so is an arrow like &lt;- or -&gt;.",
+   "original": "A comparison such as 1 < 2 or a < b is plain text in Markdown, and so is an arrow like <- or ->.",
+   "sourceText": "A comparison such as 1 < 2 or a < b is plain text in , and so is an arrow like <- or ->.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "Markdown"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s4",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Template placeholders\"",
+   "masked": "Write <x1/> to show a literal brace in the output.",
+   "original": "Write {{double braces}} to show a literal brace in the output.",
+   "sourceText": "Write  to show a literal brace in the output.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{{double braces}}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s5",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Template placeholders\"",
+   "masked": "Generic types such as List<x1/> and Map&lt;K, V&gt; appear in the SDK reference.",
+   "original": "Generic types such as List<string> and Map<K, V> appear in the SDK reference.",
+   "sourceText": "Generic types such as List and Map<K, V> appear in the SDK reference.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "<string>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "html:<string>"
+  },
+  {
+   "id": "s6",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Template placeholders\"",
+   "masked": "The e-mail subject is \"Welcome, <x1/>!\" by default. You can change it to anything, for example \"Hi <x2/>, your folder <x3/> is ready\".",
+   "original": "The e-mail subject is \"Welcome, {firstName}!\" by default. You can change it to anything, for example \"Hi {firstName}, your folder {folder} is ready\".",
+   "sourceText": "The e-mail subject is \"Welcome, !\" by default. You can change it to anything, for example \"Hi , your folder  is ready\".",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "{firstName}",
+    "x2": "{firstName}",
+    "x3": "{folder}"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  },
+  {
+   "id": "s7",
+   "kind": "paragraph",
+   "textContext": "markdown",
+   "note": "paragraph",
+   "structure": "section \"Template placeholders\"",
+   "masked": "An HTML-like word such as <x1/> in prose isn't a tag in the rendered page.",
+   "original": "An HTML-like word such as <placeholder> in prose isn't a tag in the rendered page.",
+   "sourceText": "An HTML-like word such as  in prose isn't a tag in the rendered page.",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {
+    "x1": "<placeholder>"
+   },
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": "html:<placeholder>"
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   23,
+   "s1"
+  ],
+  [
+   25,
+   152,
+   "s2"
+  ],
+  [
+   154,
+   250,
+   "s3"
+  ],
+  [
+   252,
+   314,
+   "s4"
+  ],
+  [
+   316,
+   393,
+   "s5"
+  ],
+  [
+   395,
+   544,
+   "s6"
+  ],
+  [
+   546,
+   628,
+   "s7"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"template-placeholders\"></a>ÜTEMPLATE ÜPLACEHOLDERS\n\nÜTEMPLATES ÜUSE ÜCURLY ÜBRACES ÜFOR ÜPLACEHOLDERS. ÜFOR ÜEXAMPLE, {name} ÜIS ÜREPLACED ÜWITH ÜTHE ÜUSER'ÜS ÜNAME ÜAND {date} ÜWITH ÜTODAY'ÜS ÜDATE.\n\nÜA ÜCOMPARISON ÜSUCH ÜAS 1 < 2 ÜOR ÜA < ÜB ÜIS ÜPLAIN ÜTEXT ÜIN Markdown, ÜAND ÜSO ÜIS ÜAN ÜARROW ÜLIKE <- ÜOR ->.\n\nÜWRITE {{double braces}} ÜTO ÜSHOW ÜA ÜLITERAL ÜBRACE ÜIN ÜTHE ÜOUTPUT.\n\nÜGENERIC ÜTYPES ÜSUCH ÜAS ÜLIST<string> ÜAND ÜMAP<ÜK, ÜV> ÜAPPEAR ÜIN ÜTHE ÜSDK ÜREFERENCE.\n\nÜTHE ÜE-ÜMAIL ÜSUBJECT ÜIS \"ÜWELCOME, {firstName}!\" ÜBY ÜDEFAULT. ÜYOU ÜCAN ÜCHANGE ÜIT ÜTO ÜANYTHING, ÜFOR ÜEXAMPLE \"ÜHI {firstName}, ÜYOUR ÜFOLDER {folder} ÜIS ÜREADY\".\n\nÜAN ÜHTML-ÜLIKE ÜWORD ÜSUCH ÜAS <placeholder> ÜIN ÜPROSE ÜISN'ÜT ÜA ÜTAG ÜIN ÜTHE ÜRENDERED ÜPAGE.\n",
+ "reverted": [],
+ "anchors": [
+  "template-placeholders"
+ ]
+}

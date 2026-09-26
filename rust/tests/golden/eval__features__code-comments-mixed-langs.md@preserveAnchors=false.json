@@ -1,0 +1,15 @@
+{
+ "file": "eval/features/code-comments-mixed-langs.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": true,
+  "frontMatter": true,
+  "preserveAnchors": false
+ },
+ "sameExtractionAsDefault": true,
+ "output": "# ÜINFRASTRUCTURE ÜAND ÜSERVICE ÜCODE\n\nÜGO:\n\n```go\npackage main\n\n// ÜCONFIG ÜHOLDS ÜTHE ÜSETTINGS ÜTHAT ÜARE ÜREAD ÜAT ÜSTARTUP.\ntype Config struct {\n\tEndpoint string // ÜURL ÜOF ÜTHE ÜSYNC ÜSERVICE\n\tWorkers  int    // ÜNUMBER ÜOF ÜPARALLEL ÜUPLOADS\n}\n```\n\nÜRUST:\n\n```rust\n/// ÜCOMPUTES ÜTHE ÜHASH ÜOF ÜA ÜBLOCK.\nfn hash_block(data: &[u8]) -> [u8; 32] {\n    // ÜSHA-256 ÜIS ÜFAST ÜENOUGH ÜFOR 4 ÜMB ÜBLOCKS\n    sha256(data)\n}\n```\n\nÜJAVA:\n\n```java\n/**\n * ÜLISTENS ÜFOR ÜCHANGES ÜAND ÜQUEUES ÜTHEM ÜFOR ÜUPLOAD.\n */\npublic class ChangeListener {\n    // ÜCHANGES ÜARE ÜBATCHED ÜEVERY 500 ÜMS\n    private static final int BATCH_MS = 500;\n}\n```\n\nÜSQL:\n\n```sql\n-- ÜFIND ÜDEVICES ÜTHAT ÜHAVE ÜNOT ÜSYNCED ÜFOR ÜA ÜWEEK\nSELECT device_id, last_sync\nFROM devices\nWHERE last_sync < DATEADD(day, -7, GETUTCDATE()); /* ÜUTC ÜON ÜPURPOSE */\n```\n\nYAML:\n\n```yaml\n# ÜSETTINGS ÜFOR ÜTHE ÜSYNC ÜAGENT\nagent:\n  workers: 8 # ÜONE ÜPER ÜCPU ÜCORE ÜIS ÜA ÜGOOD ÜSTART\n  log_level: info\n```\n\nBicep:\n\n```bicep\n// ÜSTORAGE ÜACCOUNT ÜFOR ÜTHE ÜSYNC ÜDATA\nresource storage 'Microsoft.Storage/storageAccounts@2023-05-01' = {\n  name: 'ctsync${uniqueString(resourceGroup().id)}'\n  location: location // ÜSAME ÜREGION ÜAS ÜTHE ÜRESOURCE ÜGROUP\n  kind: 'StorageV2'\n  sku: { name: 'Standard_ZRS' }\n}\n```\n\nDockerfile:\n\n```dockerfile\n# ÜSMALL ÜBASE ÜIMAGE ÜFOR ÜTHE ÜAGENT\nFROM node:24-slim\n# ÜINSTALL ÜONLY ÜPRODUCTION ÜDEPENDENCIES\nRUN npm ci --omit=dev\n```\n\nTerraform:\n\n```hcl\n# ÜRESOURCE ÜGROUP ÜFOR ÜALL ÜSYNC ÜRESOURCES\nresource \"azurerm_resource_group\" \"sync\" {\n  name     = \"rg-sync\"\n  location = \"westeurope\" # ÜKEEP ÜDATA ÜIN ÜTHE ÜEU\n}\n```\n",
+ "reverted": [],
+ "anchors": []
+}

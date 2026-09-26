@@ -1,0 +1,47 @@
+{
+ "file": "test/fixtures/docstrings.md",
+ "options": {
+  "mdx": false,
+  "mathSingleDollar": false,
+  "docstrings": true,
+  "codeComments": false,
+  "frontMatter": true,
+  "preserveAnchors": true
+ },
+ "segments": [
+  {
+   "id": "s1",
+   "kind": "heading",
+   "textContext": "markdown",
+   "note": "heading level 1",
+   "structure": null,
+   "masked": "Docstrings",
+   "original": "Docstrings",
+   "sourceText": "Docstrings",
+   "passive": false,
+   "embedded": false,
+   "dependents": [],
+   "tags": {},
+   "tagGroups": [],
+   "wrap": null,
+   "forbidden": [],
+   "quote": null,
+   "inlineSignature": ""
+  }
+ ],
+ "replacements": [
+  [
+   2,
+   12,
+   "s1"
+  ]
+ ],
+ "notes": [],
+ "definitionsText": "",
+ "frontmatterFormality": null,
+ "output": "# <a id=\"docstrings\"></a>ÜDOCSTRINGS\n\n```python\ndef upload(path, retries=3):\n    \"\"\"Upload a file to the storage account.\n\n    The upload is retried when the service is busy.\n\n    Args:\n        path (str): Local path of the file to upload.\n        retries (int): How many times to retry.\n\n    Returns:\n        bool: True if the upload succeeded.\n\n    Raises:\n        ValueError: If the path does not exist.\n\n    Examples:\n        Upload a single file.\n\n        >>> upload(\"data.csv\")\n        True\n\n        Or use the command line::\n\n            python upload.py data.csv --retries 5\n            python upload.py other.csv\n\n        Then check the result.\n\n    .. note:: Large files are uploaded in blocks.\n    \"\"\"\n\n\ndef download(name):\n    \"\"\"Download a blob.\n\n    Parameters\n    ----------\n    name : str\n        Name of the blob to download.\n\n    Returns\n    -------\n    bytes\n        The content of the blob.\n\n    Notes\n    -----\n    Uses ``Range`` requests for large blobs.\n    \"\"\"\n```\n",
+ "reverted": [],
+ "anchors": [
+  "docstrings"
+ ]
+}
