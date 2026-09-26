@@ -37,8 +37,10 @@ export function validateSegment(seg: Segment, translated: string, ex: Extraction
     return [`render failed: ${(e as Error).message}`];
   }
   if (seg.inlineSignature !== undefined) {
+    // Container prefixes after kept line breaks (blockquote "> ", list indentation) belong to the parent block, not to this paragraph.
+    const flat = rendered.replace(/(\r?\n)(?:[ \t]*>)*[ \t]*/g, '$1');
     // Headings and cells never start a line, so shield them from block-start interpretation.
-    const probe = seg.kind === 'paragraph' ? rendered : `x ${rendered}`;
+    const probe = seg.kind === 'paragraph' ? flat : `x ${flat}`;
     const root = parseMarkdown(`${probe}\n\n${ex.definitionsText}`, ex.parseOptions);
     const first = root.children[0];
     if (!first || first.type !== 'paragraph') return ['translation turns into a different Markdown block (e.g. list or heading); rephrase the start'];

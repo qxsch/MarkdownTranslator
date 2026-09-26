@@ -122,6 +122,15 @@ describe('3. Markdown dialects', () => {
     expect(checkTags(seg, `<x${xs[0]}/><g${pair}>Überblick</g${pair}><x${xs[1]}/>`)).toEqual([]);
   });
 
+  it('validates GitHub alerts with inline formatting inside blockquotes', () => {
+    const ex = extract("> [!WARNING]\n> **Reset** can't be undone.\n", []);
+    const seg = ex.segments.find((s) => !s.passive)!;
+    expect(validateSegment(seg, seg.masked.replace('Reset', 'Zurücksetzen').replace("can't be undone", 'kann nicht rückgängig gemacht werden'), ex, LANG)).toEqual([]);
+    const out = assembleDocument(ex, pseudoMap(ex), { wrap: true, preserveAnchors: true });
+    expect(out.reverted).toEqual([]);
+    expect(out.text).toBe(`> [!WARNING]\n> **${pseudoWords('Reset')}** ${pseudoWords("can't be undone")}.\n`);
+  });
+
   it('keeps fence line order in Docusaurus admonitions', () => {
     const seg = r.ex.segments.find((s) => s.masked.includes('Pro tip'))!;
     const bad = seg.masked.replace(/(<g\d+>Pro tip<\/g\d+>)(<x\d+\/>)(<g\d+>Use the cache\.<\/g\d+>)/, '$3$2$1');

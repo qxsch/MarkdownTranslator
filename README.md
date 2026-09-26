@@ -93,6 +93,19 @@ Impact of the review pass by language:
 
 The reviewer changed about 10% of the segments and fixed real errors (mistranslated idioms, wrong verb mood, missing words, literal calques). The independent judge (GPT-5.6-sol, not the reviewer model) also scored it 38 / 0. Cost: about twice the time and tokens (39 s to 74 s per document). Structure: 0 reverted blocks, 0 segments kept in the source language, 0 fallbacks across 72 document translations.
 
+Impact of structural context (`MDT_STRUCTURAL_CONTEXT`), measured separately on 4 documents (the 3 above plus a table-heavy settings reference) in the same 6 languages, without the review pass:
+
+| Scope | Won / lost | Error score with / without | Significance (sign test) |
+|---|---|---|---|
+| Overall | 185 / 128 | 3.02 / 3.68 | p = 0.002 |
+| Judge GPT-5.5 | 115 / 66 | 2.45 / 3.38 | p < 0.001 |
+| Judge GPT-5.6-sol | 70 / 62 | 3.59 / 3.98 | p = 0.54 (not significant) |
+| Quickstart (procedures, tables, UI) | 73 / 30 | 2.11 / 4.40 | p < 0.001 |
+| Settings reference (tables of short values) | 28 / 28 | 6.95 / 5.67 | none |
+| Blog post, concepts (prose) | 84 / 70 | about equal | none |
+
+Structural context is on by default: overall it wins significantly and lowers the error score by about 18%, with the clearest gain in step-by-step documentation. The effect is smaller and less certain than the review pass: one judge does not see a significant difference, and pure prose and tables of short values show no gain. Turn it off with `MDT_STRUCTURAL_CONTEXT=false` if your own evaluation shows no benefit (`EVAL_VARIANTS=gpt,noctx npx tsx eval/run.ts`).
+
 Caveats: LLM judges instead of human linguists, and a small corpus. Re-run the evaluation on your own documents before relying on the numbers.
 
 ## Deploy the Azure side

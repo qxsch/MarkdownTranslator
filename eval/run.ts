@@ -214,6 +214,8 @@ interface Tally {
 }
 const tallies: Tally[] = [];
 const examples: unknown[] = [];
+const judgeTotal = jobs.length * COMPARISONS.length * JUDGES.length;
+let judgeDone = 0;
 
 await Promise.all(
   jobs.flatMap((job) =>
@@ -235,6 +237,8 @@ await Promise.all(
             console.error(`judge failed ${judgeDep} ${job.doc} ${job.lang}: ${(e as Error).message}`);
             tally.ties += batch.length;
             continue;
+          } finally {
+            if (i + 20 >= differing.length) console.log(`judged ${++judgeDone}/${judgeTotal}: ${tally.comparison} ${judgeDep} ${job.doc} ${job.lang}`);
           }
           const f = new Map(first.map((r) => [r.id, r]));
           const s2 = new Map(second.map((r) => [r.id, r]));
