@@ -31,6 +31,8 @@ export interface TranslateTask {
   review: boolean;
   translateDeployment?: string;
   reviewDeployment?: string;
+  /** Include each segment's structural position in model requests (default: config). */
+  structuralContext?: boolean;
 }
 
 export interface SegmentOutcome {
@@ -92,13 +94,14 @@ export async function translateDocument(deps: EngineDeps, task: TranslateTask): 
   const reviewDeployment = task.reviewDeployment ?? cfg.reviewDeployment;
   const useGpt = task.engine === 'gpt' && chat.available;
   const review = task.review && useGpt;
+  const withStructure = task.structuralContext ?? cfg.structuralContext;
   const glossaryKey = TranslationCache.key([task.glossary, task.analysis?.doNotTranslate ?? [], task.analysis?.terminology ?? []]);
   const index = new Map(segs.map((s, i) => [s.id, i]));
   const keyOf = (seg: Segment) => {
     const i = index.get(seg.id)!;
     return TranslationCache.key([
       PROMPT_VERSION, task.engine, useGpt ? translateDeployment : 'nmt', review ? reviewDeployment : '', task.lang.code, task.formality,
-      seg.kind, seg.note, seg.masked, segs[i - 1]?.masked ?? '', segs[i + 1]?.masked ?? '', glossaryKey,
+      seg.kind, seg.note, seg.masked, segs[i - 1]?.masked ?? '', segs[i + 1]?.masked ?? '', glossaryKey, withStructure ? seg.structure ?? '' : false,
     ]);
   };
 
@@ -124,7 +127,7 @@ export async function translateDocument(deps: EngineDeps, task: TranslateTask): 
     const callBatch = async (batch: Segment[], retryInfo?: Map<string, Failure>): Promise<Failure[]> => {
       const payload = batch.map((s) => {
         const f = retryInfo?.get(s.id);
-        return f ? { ...segmentPayload(s), previousAttempt: f.attempt ?? null, problems: f.errors } : segmentPayload(s);
+        return f ? { ...segmentPayload(s, withStructure), previousAttempt: f.attempt ?? null, problems: f.errors } : segmentPayload(s, withStructure);
       });
       const intro = retryInfo
         ? 'These segments failed automatic validation. Translate them again and fix the listed problems.'
@@ -212,7 +215,7 @@ export async function reviewPass(deps: EngineDeps, task: TranslateTask, tm: Map<
   const context = documentContext({ analysis: task.analysis, docName: task.docName, source: task.ex.source, maxChars: cfg.contextMaxChars });
   await Promise.all(
     batches(toReview, cfg.batchMaxSegments, cfg.batchMaxChars).map(async (batch) => {
-      const payload = batch.map((s) => ({ ...segmentPayload(s), translation: tm.get(s.id) }));
+      const payload = batch.map((s) => ({ ...segmentPayload(s, task.structuralContext ?? cfg.structuralContext), translation: tm.get(s.id) }));
       let res: ReviewResponse;
       try {
         res = await chat.json<ReviewResponse>(

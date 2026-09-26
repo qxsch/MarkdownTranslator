@@ -53,14 +53,22 @@ What is translated and what is kept:
 | `<code>`, `<kbd>`, `<pre>`, `<script>`, `translate="no"`, HTML comments | Unchanged |
 | File names and paths (`test.jpeg`, `./scripts/deploy.ps1`, `C:\temp`), URLs, e-mail, variables (`$HOME`, `%APPDATA%`, `${VAR}`), CLI flags, versions, GUIDs, identifiers (`camelCase`, `snake_case`, `Get-AzContext`), glossary terms | Unchanged, also inside backticks, image references and attributes |
 | Fenced code | Code bytes unchanged; comments translated (line and block comments, JSDoc/XML doc tags kept). Parsed with tree-sitter (JS, TS, Python, Bash, PowerShell, C#, C/C++, Java, Go, Rust, Ruby, PHP, CSS, INI) or a lexer (Bicep, Terraform, SQL, KQL, YAML, TOML, Dockerfile, XML/HTML, and more) |
-| Commented-out code, lint/pragma directives, shebangs, license headers, Python docstrings | Unchanged |
-| Front matter | Only `title`, `description`, `summary` and similar prose keys |
+| Commented-out code, lint/pragma directives, shebangs, license headers | Unchanged. Commented-out code is detected by parsing the comment text with the block's own tree-sitter grammar (plus heuristics for lexer-only languages) |
+| Python docstrings | Unchanged by default (detected with tree-sitter and listed in the report); set `MDT_DOCSTRINGS=translate` or `?docstrings=true` to translate them, quotes and indentation are kept |
+| Front matter | Parsed as YAML: prose keys (`title`, `description`, `summary`, ...) at any depth (`seo.title`, `nav[].title`), `keywords` lists, plain, quoted, folded (`>`) and literal (`\|`) scalars. Indicators, indentation and quoting style are kept |
+| Math | `$$...$$` inline and block math unchanged; single `$...$` only with `MDT_MATH_SINGLE_DOLLAR=true` (off by default so prices like "$5 and $10" stay prose) |
+| Admonitions and directives | `:::note[Title]`, `::leaf[label]{attrs}` (remark-directive), Docusaurus `:::tip Title` and GitHub alerts `> [!NOTE]`: fences and names unchanged, titles and content translated, line structure kept |
+| Microsoft Docs syntax | `[!INCLUDE [title](path)]`, `:::image ... alt-text="..." :::`, `:::zone pivot="..."`: only the include title and `alt-text` are translated |
+| Hugo shortcodes | `{{< figure title="..." >}}`, `{{% notice %}}`: shortcode names and paths unchanged, `title` / `alt` / `caption` values translated |
+| MDX (`.mdx` files) | Parsed as MDX: `import`/`export` and `{expressions}` unchanged; text inside JSX components and prose attributes (`label`, `title`, `alt`, ...) translated |
 | Headings | Translated; an empty `<a id="old-slug"></a>` is inserted so existing `#old-slug` links keep working |
 | Shortcut references `[Contoso]` | Become `[Übersetzt][Contoso]` only when the label text changed |
 
+Each segment also carries its position in the document (section path, table column and row, the sentence that introduces a list, the surrounding admonition or component). With `MDT_STRUCTURAL_CONTEXT=true` (default) this is sent to the model so short, ambiguous segments such as a table cell "Run" or a button label are translated in the right sense.
+
 Formality is discovered per document (a front matter `formality: informal` key or the request option overrides it); the default is formal. Per-language rules such as German "Sie", Swedish "du", European Portuguese vocabulary or French punctuation live in [config/languages.json](config/languages.json).
 
-Every translated segment passes validation before it is used: all tags present exactly once and correctly nested, no comment terminators such as `*/` inside comments, length ratio sanity check, and a re-parse proving the inline structure is unchanged. After splicing, the whole document is parsed again and compared node by node with the source. A block that would change the structure is reverted to the source text and listed in the report, so the output is always valid.
+Every translated segment passes validation before it is used: all tags present exactly once and correctly nested, directive and shortcode tags in their original order, no quotes leaking into attribute values, no comment terminators such as `*/` inside comments, length ratio sanity check, and a re-parse proving the inline structure is unchanged. After splicing, the whole document is parsed again and compared node by node with the source. A block that would change the structure is reverted to the source text and listed in the report, so the output is always valid.
 
 ## Measured quality (impact of the reviewer)
 
@@ -290,6 +298,8 @@ Same body; translates into several languages in parallel. Without `to` all `defa
 | `engine` | `gpt`, `nmt` | `nmt` uses only Azure Translator |
 | `sourceLanguage` | BCP-47, e.g. `en` | Skip source language detection |
 | `doNotTranslate` | comma-separated terms | Additional protected terms |
+| `structuralContext` | `true`, `false` | Send segment positions to the model (default `MDT_STRUCTURAL_CONTEXT`) |
+| `docstrings` | `true`, `false` | Translate Python docstrings (default `MDT_DOCSTRINGS`) |
 | `includeReport` | `true` | Wrap the response: `{ "files": {...}, "report": [...], "usage": {...} }` (multi-language: `{ "translations": {...}, ... }`) |
 
 Report entry per file and language: `formality`, `segments`, `via` (gpt, nmt, cache, source), `retried`, `reviewEdits`, `keptSource` (segments left untranslated, with reasons), `revertedForStructure`, `anchorsAdded`, `untranslatedWarnings`, `notes`, `error`.
@@ -343,6 +353,9 @@ $r.report | Format-Table file, language, segments, reviewEdits
 | `MDT_NMT_FALLBACK` | `true` | Azure Translator fallback on or off |
 | `MDT_PRESERVE_ANCHORS` | `true` | Insert anchors for the original heading slugs |
 | `MDT_SOURCE_LANGUAGE` | detected | Fixed source language |
+| `MDT_STRUCTURAL_CONTEXT` | `true` | Send each segment's position (section, table column/row, list lead-in) to the model |
+| `MDT_DOCSTRINGS` | `off` | `translate` to translate Python docstrings |
+| `MDT_MATH_SINGLE_DOLLAR` | `false` | Treat `$...$` as inline math |
 | `MDT_MAX_CONCURRENCY` | `16` | Parallel model calls |
 | `MDT_BATCH_MAX_SEGMENTS` | `40` | Segments per model call |
 | `MDT_BATCH_MAX_CHARS` | `12000` | Characters per model call |
@@ -364,7 +377,7 @@ Glossary: `doNotTranslate` terms are always protected; `terms` maps source terms
 
 ```powershell
 npm install
-npm test                                              # 91 byte-identity and validation tests, offline
+npm test                                              # byte-identity, dialect, front matter and code tests, offline
 npm run dev                                           # API on :8080 with the local .env
 npx tsx scripts/translate.ts de,fr path\to\file.md    # translate files to .\out
 npx tsx eval/run.ts                                   # quality evaluation (EVAL_LANGS, EVAL_DOCS, EVAL_JUDGES)

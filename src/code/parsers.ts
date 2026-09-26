@@ -33,6 +33,9 @@ interface TsNode {
   startIndex: number;
   endIndex: number;
   parent: TsNode | null;
+  hasError: boolean;
+  namedChildren: (TsNode | null)[];
+  childForFieldName(name: string): TsNode | null;
   descendantsOfType(types: string | string[]): (TsNode | null)[];
 }
 interface TsParser {
@@ -56,20 +59,57 @@ export async function initCodeParsers(): Promise<void> {
 }
 
 function treeSitterComments(grammar: string, code: string): CommentRange[] {
+  return withTree(grammar, code, (root) =>
+    root
+      .descendantsOfType(COMMENT_TYPES)
+      .filter((n): n is TsNode => !!n && !(n.parent && COMMENT_TYPES.includes(n.parent.type)))
+      .map((n) => ({ start: n.startIndex, end: n.endIndex }))
+      .sort((a, b) => a.start - b.start),
+  ) ?? [];
+}
+
+function withTree<T>(grammar: string, code: string, fn: (root: TsNode) => T): T | undefined {
   if (!tsModule) throw new Error('initCodeParsers() must be awaited first');
   const parser = new tsModule.Parser();
   parser.setLanguage(tsLanguages.get(grammar));
   const tree = parser.parse(code);
-  if (!tree) return [];
+  if (!tree) return undefined;
   try {
-    return tree.rootNode
-      .descendantsOfType(COMMENT_TYPES)
-      .filter((n): n is TsNode => !!n && !(n.parent && COMMENT_TYPES.includes(n.parent.type)))
-      .map((n) => ({ start: n.startIndex, end: n.endIndex }))
-      .sort((a, b) => a.start - b.start);
+    return fn(tree.rootNode);
   } finally {
     tree.delete();
   }
+}
+
+const langKey = (lang: string) => lang.trim().toLowerCase().replace(/^\{?\.?/, '').split(/[\s{,]/)[0];
+
+/** True when the grammar of `lang` parses `text` without errors, false when it rejects it, null without a grammar. */
+export function parsesAsCode(lang: string, text: string): boolean | null {
+  const grammar = TS_GRAMMARS[langKey(lang)];
+  if (!grammar) return null;
+  return withTree(grammar, text, (root) => !root.hasError && root.namedChildren.length > 0) ?? null;
+}
+
+/** Python docstrings: the first statement of a module, class or function when it is a triple-quoted string. */
+export function findDocstrings(lang: string, code: string): CommentRange[] {
+  if (TS_GRAMMARS[langKey(lang)] !== 'python') return [];
+  return (
+    withTree('python', code, (root) => {
+      const bodies: TsNode[] = [root];
+      for (const def of root.descendantsOfType(['function_definition', 'class_definition'])) {
+        const body = def?.childForFieldName('body');
+        if (body) bodies.push(body);
+      }
+      const out: CommentRange[] = [];
+      for (const body of bodies) {
+        const first = body.namedChildren.find((c) => c && c.type !== 'comment');
+        const str = first?.type === 'expression_statement' ? first.namedChildren[0] : null;
+        if (str?.type !== 'string') continue;
+        if (/^[rRuUbB]{0,2}("""|''')/.test(code.slice(str.startIndex, str.startIndex + 5))) out.push({ start: str.startIndex, end: str.endIndex });
+      }
+      return out.sort((a, b) => a.start - b.start);
+    }) ?? []
+  );
 }
 
 // ---------------------------------------------------------------- lexer fallback
@@ -215,13 +255,15 @@ export function isSupportedCodeLanguage(lang: string): boolean {
   return key in TS_GRAMMARS || key in LEX_ALIASES;
 }
 
-/** Code with comments removed and whitespace collapsed; used to prove code bytes were not altered. */
+/** Code with comments (and docstrings) removed and whitespace collapsed; used to prove code bytes were not altered. */
 export function codeFingerprint(lang: string, code: string): string | null {
-  const comments = findComments(lang, code);
-  if (!comments) return null;
+  const found = findComments(lang, code);
+  if (!found) return null;
+  const comments = [...found, ...findDocstrings(lang, code)].sort((a, b) => a.start - b.start);
   let out = '';
   let pos = 0;
   for (const c of comments) {
+    if (c.start < pos) continue;
     out += code.slice(pos, c.start) + ' ';
     pos = c.end;
   }

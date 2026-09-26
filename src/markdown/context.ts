@@ -2,6 +2,7 @@ import { MaskBuilder } from '../mask/masking.js';
 import { renderSegment } from './render.js';
 import { TRANSLATABLE_ATTRS, parseAttributes } from './htmlAttrs.js';
 import type { RenderOptions, Replacement, Segment, SegmentKind, TMap, TextContext, WrapSpec } from './types.js';
+import type { ParseOptions } from './parse.js';
 
 export interface SegmentOptions {
   kind: SegmentKind;
@@ -19,17 +20,26 @@ export interface SegmentOptions {
   force?: boolean;
 }
 
+export interface ExtractOptions {
+  parse?: ParseOptions;
+  /** Translate Python docstrings (off by default; they are string literals, not comments). */
+  docstrings?: boolean;
+}
+
 export class ExtractContext {
   readonly segments: Segment[] = [];
   readonly byId = new Map<string, Segment>();
   readonly replacements: Replacement[] = [];
   readonly notes: string[] = [];
+  /** Structural position applied to segments created from now on. */
+  structure: string | undefined;
   private counter = 0;
 
   constructor(
     readonly source: string,
     readonly dnt: readonly string[],
     readonly eol: string,
+    readonly options: ExtractOptions = {},
   ) {}
 
   builder(): MaskBuilder {
@@ -50,6 +60,8 @@ export class ExtractContext {
       original: o.original,
       sourceText: mb.sourceText,
       note: o.note,
+      structure: this.structure,
+      tagGroups: mb.tagGroups.length ? mb.tagGroups : undefined,
       wrap: o.wrap,
       forbidden: o.forbidden,
       quote: o.quote,

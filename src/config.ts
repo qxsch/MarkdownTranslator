@@ -52,6 +52,10 @@ export interface AppConfig {
   glossaryFile: string;
   preserveAnchors: boolean;
   sourceLanguage?: string;
+  /** Send each segment's position (section, table column/row, list lead-in) to the model. */
+  structuralContext: boolean;
+  mathSingleDollar: boolean;
+  docstrings: boolean;
 }
 
 export function loadConfig(): AppConfig {
@@ -84,6 +88,9 @@ export function loadConfig(): AppConfig {
     glossaryFile: env('MDT_GLOSSARY_FILE') ?? join(root, 'config', 'glossary.json'),
     preserveAnchors: bool('MDT_PRESERVE_ANCHORS', true),
     sourceLanguage: env('MDT_SOURCE_LANGUAGE'),
+    structuralContext: bool('MDT_STRUCTURAL_CONTEXT', true),
+    mathSingleDollar: bool('MDT_MATH_SINGLE_DOLLAR', false),
+    docstrings: /^(translate|on|true|1)$/i.test(env('MDT_DOCSTRINGS') ?? 'off'),
   };
 }
 

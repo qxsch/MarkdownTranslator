@@ -1,5 +1,5 @@
 import { findProtected } from './protect.js';
-import type { Pair, PairKind, Placeholder, Segment, TMap, TextContext } from '../markdown/types.js';
+import type { Pair, PairKind, Placeholder, Segment, TMap, TagGroup, TextContext } from '../markdown/types.js';
 
 export const xmlEscape = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 export const xmlUnescape = (s: string) =>
@@ -9,6 +9,10 @@ const MD_ESCAPE = /\\[!-/:-@[-`{-~]/g;
 const ENTITY = /&(?:[A-Za-z][A-Za-z0-9]{1,31}|#\d{1,7}|#[xX][0-9a-fA-F]{1,6});/g;
 /** Line break inside running text plus the container prefix (blockquote markers / indentation) that follows it. */
 const SOFT_BREAK = /[ \t]*(\r?\n)((?:[ \t]*>)*[ \t]*)/g;
+/** Human-readable attribute values inside shortcodes and directive lines. */
+const ATTR_VALUE = /\b(alt|alt-text|title|caption|label|summary)(\s*=\s*)(["'])(.*?)\3/g;
+/** Lines that are structure on their own: `:::note Title`, `:::image ... :::`, `:::`, `[!NOTE]`, `{{% notice %}}`. */
+const FENCE_LINE = /^(?::{3,}|\[![A-Za-z]+\]\s*$|\{\{[<%][^\n]*[>%]\}\}\s*$)/;
 
 export type EscapeMode = 'markdown' | 'html' | 'none';
 
@@ -21,6 +25,7 @@ export class MaskBuilder {
   private parts: string[] = [];
   readonly placeholders = new Map<number, Placeholder>();
   readonly pairs = new Map<number, Pair>();
+  readonly tagGroups: TagGroup[] = [];
   softBreak: SoftBreakInfo | null = null;
   private n = 0;
   /** Plain (decoded) source text, used to decide which markup characters need escaping on output. */
@@ -65,16 +70,86 @@ export class MaskBuilder {
 
   /** Adds raw source text: protects identifiers/paths/escapes and turns line breaks into spaces. */
   source(raw: string, mode: EscapeMode) {
+    const lines: string[] = [];
+    const breaks: RegExpExecArray[] = [];
     let last = 0;
     SOFT_BREAK.lastIndex = 0;
     let m: RegExpExecArray | null;
     while ((m = SOFT_BREAK.exec(raw))) {
-      this.sourceLine(raw.slice(last, m.index), mode);
-      if (!this.softBreak) this.softBreak = { eol: m[1], prefix: m[2] };
-      this.text(' ');
+      lines.push(raw.slice(last, m.index));
+      breaks.push(m);
       last = m.index + m[0].length;
     }
-    this.sourceLine(raw.slice(last), mode);
+    lines.push(raw.slice(last));
+    const isFence = lines.map((l) => FENCE_LINE.test(l));
+    const hasFence = isFence.some(Boolean);
+    const fences: string[] = [];
+    let run: number | null = null;
+    const closeRun = () => {
+      if (run !== null) this.close(run);
+      run = null;
+    };
+    lines.forEach((line, i) => {
+      if (i > 0) {
+        const brk = breaks[i - 1];
+        if (isFence[i] || isFence[i - 1]) {
+          // Line breaks around fence lines are structure and must stay where they are.
+          closeRun();
+          fences.push(`x${this.placeholder(brk[0], 'line break', true)}`);
+        } else {
+          if (!this.softBreak) this.softBreak = { eol: brk[1], prefix: brk[2] };
+          this.text(' ');
+        }
+      }
+      if (isFence[i]) {
+        closeRun();
+        fences.push(...this.fenceLine(line, mode));
+      } else {
+        // Anchor each text run between fence lines in a pair so moving text across fences is detectable.
+        if (hasFence && run === null && line) {
+          run = this.open('html', '', '', 'text between directive lines');
+          fences.push(`g${run}`);
+        }
+        this.sourceLine(line, mode);
+      }
+    });
+    closeRun();
+    if (fences.length > 1) this.tagGroups.push({ tokens: fences, contiguous: false });
+  }
+
+  /** `:::name Title` keeps the fence and translates the title; `:::image alt-text="..." :::` translates only prose attributes. */
+  private fenceLine(line: string, mode: EscapeMode): string[] {
+    if (!line.startsWith(':::') || /\w[\w-]*\s*=\s*["']/.test(line)) return this.attributed(line);
+    const m = /^(:{3,}\s*[A-Za-z][\w-]*\s*)(.*)$/.exec(line);
+    if (m && /\p{L}/u.test(m[2]) && !/:{3,}\s*$/.test(m[2])) {
+      const x = this.placeholder(m[1], m[1]);
+      const g = this.open('html', '', '', 'directive title');
+      this.sourceLine(m[2], mode);
+      this.close(g);
+      return [`x${x}`, `g${g}`];
+    }
+    return [`x${this.placeholder(line, line)}`];
+  }
+
+  /** Protected token with translatable attribute values (Hugo shortcodes, Docs directives). Returns the tag ids. */
+  attributed(raw: string): string[] {
+    const values = [...raw.matchAll(ATTR_VALUE)].filter((v) => /\p{L}/u.test(v[4]));
+    if (!values.length) return [`x${this.placeholder(raw, raw)}`];
+    const tokens: string[] = [];
+    let pos = 0;
+    for (const v of values) {
+      const start = v.index! + v[1].length + v[2].length + 1;
+      tokens.push(`x${this.placeholder(raw.slice(pos, start), raw.slice(pos, start))}`);
+      const g = this.open('html', '', '', `${v[1]} attribute value`);
+      this.pairs.get(g)!.quote = v[3];
+      tokens.push(`g${g}`);
+      this.sourceLine(v[4], 'none');
+      this.close(g);
+      pos = start + v[4].length;
+    }
+    tokens.push(`x${this.placeholder(raw.slice(pos), raw.slice(pos))}`);
+    this.tagGroups.push({ tokens, contiguous: true });
+    return tokens;
   }
 
   private sourceLine(raw: string, mode: EscapeMode) {
@@ -92,7 +167,8 @@ export class MaskBuilder {
       if (s.start < pos) continue;
       this.text(raw.slice(pos, s.start));
       const bytes = raw.slice(s.start, s.end);
-      this.placeholder(bytes, s.kind === 'escape' ? bytes.slice(1) : bytes);
+      if ('rule' in s && s.rule === 'template' && /^\{\{[<%]/.test(bytes)) this.attributed(bytes);
+      else this.placeholder(bytes, s.kind === 'escape' ? bytes.slice(1) : bytes);
       pos = s.end;
     }
     this.text(raw.slice(pos));
@@ -165,7 +241,49 @@ export function checkTags(seg: Segment, translated: string): string[] {
     if (!seenOpen.has(n) || !seenClose.has(n)) errors.push(`pair <g${n}>…</g${n}> missing`);
   }
   if (stack.length) errors.push(`unclosed tags: ${stack.map((n) => `<g${n}>`).join(', ')}`);
+  errors.push(...checkTagGroups(seg, tokens));
   return [...new Set(errors)];
+}
+
+const tokenKey = (t: MaskToken) => (t.t === 'x' ? `x${t.n}` : t.t === 'open' ? `g${t.n}` : t.t === 'close' ? `/g${t.n}` : '');
+
+/** Order constraints for fence lines and attribute values; quotes must not leak into attribute values. */
+function checkTagGroups(seg: Segment, tokens: MaskToken[]): string[] {
+  const errors: string[] = [];
+  const inside: number[] = [];
+  for (const t of tokens) {
+    if (t.t === 'open') inside.push(t.n);
+    else if (t.t === 'close') inside.pop();
+    else if (t.t === 'text') {
+      for (const n of inside) {
+        const q = seg.pairs.get(n)?.quote;
+        if (q && xmlUnescape(t.v).includes(q)) errors.push(`text inside <g${n}> must not contain ${q}`);
+      }
+    }
+  }
+  for (const group of seg.tagGroups ?? []) {
+    const keys = tokens.map(tokenKey);
+    const positions = group.tokens.map((k) => keys.indexOf(k));
+    if (positions.some((p, i) => p === -1 || (i > 0 && p <= positions[i - 1]))) {
+      errors.push(`keep ${group.tokens.map((k) => `<${k}${k.startsWith('x') ? '/' : ''}>`).join(' ')} in their original order`);
+      continue;
+    }
+    if (!group.contiguous) continue;
+    // Contiguous: nothing but the attribute text (inside <gN>…</gN>) may appear between the group's tags.
+    let i = positions[0];
+    let ok = true;
+    for (const k of group.tokens) {
+      if (tokenKey(tokens[i]) !== k) {
+        ok = false;
+        break;
+      }
+      i = k.startsWith('g') ? keys.indexOf(`/${k}`, i) + 1 : i + 1;
+    }
+    if (!ok) {
+      errors.push(`do not move text into or out of the attribute values ${group.tokens.filter((k) => k.startsWith('g')).map((k) => `<${k}>`).join(', ')}`);
+    }
+  }
+  return errors;
 }
 
 export function plainText(masked: string): string {

@@ -2,7 +2,7 @@ import type { Code } from 'mdast';
 import type { ExtractContext } from '../markdown/context.js';
 import { buildLineMap } from '../markdown/lineMap.js';
 import { endOf, startOf } from '../markdown/parse.js';
-import { findComments, type CommentRange } from './parsers.js';
+import { findComments, findDocstrings, parsesAsCode, type CommentRange } from './parsers.js';
 
 interface Line {
   bodyStart: number;
@@ -23,6 +23,8 @@ const BLOCK_OPENERS: [RegExp, string][] = [
   [/^\{-/, '-}'],
   [/^--\[=*\[/, ']]'],
   [/^=begin\b/, '=end'],
+  [/^[rRuUbB]{0,2}"""/, '"""'],
+  [/^[rRuUbB]{0,2}'''/, "'''"],
 ];
 
 const DIRECTIVE =
@@ -53,6 +55,20 @@ function looksLikeCode(text: string): boolean {
   if (/^<\/?[A-Za-z][^>]*>$/.test(s)) return true;
   const sym = (s.match(/[{}()[\];=<>$|&]/g) ?? []).length;
   return sym / s.length > 0.15;
+}
+
+/**
+ * Commented-out code detection. With a grammar for the language, text the grammar rejects is prose;
+ * text it accepts is code when the heuristics agree or it carries a strong code signal.
+ */
+export function isCode(lang: string, text: string): boolean {
+  const s = text.trim();
+  if (!s) return false;
+  const heuristic = looksLikeCode(s);
+  const valid = parsesAsCode(lang, s);
+  if (valid === null) return heuristic;
+  if (!valid) return false;
+  return heuristic || (/[(){}[\];=]|=>|::|->/.test(s) && !/[.!?]$/.test(s));
 }
 
 function shape(code: string, c: CommentRange): CommentShape | null {
@@ -129,11 +145,15 @@ export function processCodeBlock(ctx: ExtractContext, node: Code) {
   const lang = node.lang ?? '';
   if (!lang) return;
   const value = node.value;
-  const comments = findComments(lang, value);
-  if (comments === null) {
+  const found = findComments(lang, value);
+  if (found === null) {
     ctx.notes.push(`code block "${lang}" left untouched (no comment parser for this language)`);
     return;
   }
+  const docstrings = findDocstrings(lang, value);
+  if (docstrings.length && !ctx.options.docstrings) ctx.notes.push(`${docstrings.length} docstring(s) in "${lang}" code left untranslated (MDT_DOCSTRINGS=off)`);
+  const docstringStarts = new Set(ctx.options.docstrings ? docstrings.map((d) => d.start) : []);
+  const comments = [...found, ...(ctx.options.docstrings ? docstrings : [])].sort((a, b) => a.start - b.start);
   if (!comments.length) return;
   const fenceLineEnd = src.indexOf('\n', s);
   if (fenceLineEnd === -1) return;
@@ -151,17 +171,18 @@ export function processCodeBlock(ctx: ExtractContext, node: Code) {
     const firstText = value.slice(group[0].start, lines[0].bodyEnd).trim();
     if (DIRECTIVE.test(value.slice(lines[0].bodyStart, lines[0].bodyEnd)) || /^#!/.test(firstText)) continue;
     let inExample = false;
-    for (const para of paragraphs(value, lines)) {
+    const docstring = docstringStarts.has(group[0].start);
+    for (const para of paragraphs(value, lines, lang)) {
       const text = para.map((l) => value.slice(l.bodyStart, l.bodyEnd)).join(' ');
       if (/^@example\b/.test(text)) inExample = true;
       else if (/^@\w/.test(text)) inExample = false;
-      if (inExample || DIRECTIVE.test(text) || looksLikeCode(text)) continue;
-      commentSegment(ctx, value, map, para, lang, closer);
+      if (inExample || DIRECTIVE.test(text) || /^(?:>>>|\.\.\.)(?:\s|$)/.test(text) || isCode(lang, text)) continue;
+      commentSegment(ctx, value, map, para, lang, closer, docstring);
     }
   }
 }
 
-function paragraphs(value: string, lines: Line[]): Line[][] {
+function paragraphs(value: string, lines: Line[], lang: string): Line[][] {
   const out: Line[][] = [];
   let cur: Line[] = [];
   const flush = () => {
@@ -174,16 +195,19 @@ function paragraphs(value: string, lines: Line[]): Line[][] {
       flush();
       continue;
     }
-    const startsBlock = /^(?:@\w|[-*+•]\s|\d+[.)]\s|\||>|:\w+.*:|\\\w|```|~~~|<\w)/.test(body) || looksLikeCode(body);
+    const code = isCode(lang, body);
+    // Lines that are only a doc tag (<summary>, </remarks>) delimit paragraphs.
+    const tagOnly = /^<\/?[A-Za-z][^>]*>$/.test(body.trim());
+    const startsBlock = /^(?:@\w|[-*+•]\s|\d+[.)]\s|\||>|:\w+.*:|\\\w|```|~~~|<\w)/.test(body) || code || tagOnly;
     if (startsBlock || (cur.length && Math.abs(l.indent - cur[0].indent) >= 2)) flush();
     cur.push(l);
-    if (looksLikeCode(body)) flush();
+    if (code || tagOnly) flush();
   }
   flush();
   return out;
 }
 
-function commentSegment(ctx: ExtractContext, value: string, map: (v: number) => number, para: Line[], lang: string, closer?: string) {
+function commentSegment(ctx: ExtractContext, value: string, map: (v: number) => number, para: Line[], lang: string, closer?: string, docstring = false) {
   const src = ctx.source;
   const from = map(para[0].bodyStart);
   const to = map(para[para.length - 1].bodyEnd);
@@ -216,11 +240,13 @@ function commentSegment(ctx: ExtractContext, value: string, map: (v: number) => 
   }
   const forbidden = closer ? [closer] : [];
   if (closer === '-->') forbidden.push('--');
+  // Backslashes would start escape sequences inside a (non-raw) Python string.
+  if (docstring) forbidden.push('\\');
   const seg = ctx.segment(mb, {
     kind: 'comment',
     textContext: 'comment',
     original: src.slice(from, to),
-    note: `${lang} source code comment`,
+    note: docstring ? `${lang} docstring` : `${lang} source code comment`,
     wrap,
     forbidden,
   });

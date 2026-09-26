@@ -31,12 +31,16 @@ const JUDGES = (process.env.EVAL_JUDGES ?? `${ALT},${PRIMARY}`).split(',');
 const corpusDir = new URL('./corpus/', import.meta.url);
 const DOCS = (process.env.EVAL_DOCS?.split(',') ?? readdirSync(corpusDir).filter((f) => f.endsWith('.md'))).sort();
 
-type Variant = 'nmt' | 'gpt' | 'gpt+review' | 'alt';
-const COMPARISONS: [Variant, Variant][] = [
+type Variant = 'nmt' | 'gpt' | 'gpt+review' | 'alt' | 'noctx';
+const ALL_VARIANTS: Variant[] = ['nmt', 'gpt', 'gpt+review', 'alt', 'noctx'];
+const VARIANTS = (process.env.EVAL_VARIANTS?.split(',') as Variant[] | undefined) ?? ALL_VARIANTS;
+// 'gpt' sends structural context; 'noctx' is the same pipeline without it.
+const COMPARISONS = ([
   ['gpt', 'nmt'],
   ['gpt+review', 'gpt'],
   ['alt', 'gpt'],
-];
+  ['gpt', 'noctx'],
+] as [Variant, Variant][]).filter(([x, y]) => VARIANTS.includes(x) && VARIANTS.includes(y));
 const WEIGHT = { minor: 1, major: 5, critical: 10 } as const;
 
 interface Run {
@@ -114,6 +118,7 @@ async function runVariant(job: Job, v: Variant, base: Parameters<typeof translat
       engine: v === 'nmt' ? 'nmt' : 'gpt',
       review: false,
       translateDeployment: v === 'alt' ? ALT : PRIMARY,
+      structuralContext: v !== 'noctx',
     });
   }
   const assembled = assembleDocument(job.ex, res.tm, { wrap: true, preserveAnchors: true });
@@ -182,9 +187,10 @@ await Promise.all(
       docName: job.doc, ex: job.ex, lang, sourceLanguage: 'English', sourceLanguageCode: 'en',
       analysis: (job as Job & { analysis?: never }).analysis, formality: job.formality, glossary: t.glossary, engine: 'gpt' as const, review: false,
     };
-    const [nmt, gpt, alt] = await Promise.all([runVariant(job, 'nmt', base), runVariant(job, 'gpt', base), runVariant(job, 'alt', base)]);
-    Object.assign(job.runs, { nmt, gpt, alt });
-    job.runs['gpt+review'] = await runVariant(job, 'gpt+review', base);
+    const first = VARIANTS.filter((v) => v !== 'gpt+review');
+    const runs = await Promise.all(first.map((v) => runVariant(job, v, base)));
+    first.forEach((v, i) => (job.runs[v] = runs[i]));
+    if (VARIANTS.includes('gpt+review')) job.runs['gpt+review'] = await runVariant(job, 'gpt+review', base);
     console.log(`translated ${job.doc} -> ${job.lang}`);
   }),
 );
@@ -286,7 +292,7 @@ for (const [x, y] of COMPARISONS) {
   };
 }
 const structure = Object.fromEntries(
-  (['nmt', 'gpt', 'gpt+review', 'alt'] as Variant[]).map((v) => [
+  VARIANTS.map((v) => [
     v,
     {
       reverted: jobs.reduce((n, j) => n + j.runs[v]!.reverted, 0),
@@ -297,7 +303,7 @@ const structure = Object.fromEntries(
     },
   ]),
 );
-const reviewEdits = jobs.reduce((n, j) => n + [...j.runs['gpt+review']!.outcomes.values()].filter((o) => o.review).length, 0);
+const reviewEdits = jobs.reduce((n, j) => n + [...(j.runs['gpt+review']?.outcomes.values() ?? [])].filter((o) => o.review).length, 0);
 
 mkdirSync(new URL('./results/', import.meta.url), { recursive: true });
 const file = join(new URL('./results/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'), `eval-${new Date().toISOString().replace(/[:.]/g, '-')}.json`);

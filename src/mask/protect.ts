@@ -56,6 +56,8 @@ interface Rule {
 const RULES: Rule[] = [
   // GitHub / Microsoft Docs alerts and directives: > [!NOTE], > [!div class="..."]
   { name: 'alert', re: /\[![A-Za-z]+(?:\s[^\]\n]*)?\]/g },
+  // Microsoft Docs includes and embeds: [!INCLUDE [title](path)], [!VIDEO url]
+  { name: 'docsinclude', re: /\[!(?:INCLUDE|VIDEO|div|code)\b\s*/gi },
   { name: 'url', re: /\b(?:https?|ftp|ftps|sftp|file|ssh|git|s3|wss?|abfss?|wasbs?|vscode|mailto|tel|data|urn):(?:\/\/)?[^\s<>"'`]+[^\s<>"'`.,;:!?)\]}]/gi },
   { name: 'www', re: /\bwww\.[\w-]+(?:\.[\w-]+)+(?:\/[^\s<>"'`]*[^\s<>"'`.,;:!?)\]}])?/gi },
   { name: 'email', re: /\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b/g },

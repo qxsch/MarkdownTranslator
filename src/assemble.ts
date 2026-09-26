@@ -14,13 +14,13 @@ export class StructureError extends Error {}
  * Blocks that would change the structure are reverted to the source text (and reported).
  */
 export function assembleDocument(ex: Extraction, tm: TMap, o: AssembleOptions): { text: string; reverted: string[]; anchors: string[] } {
-  const source = skeleton(ex.source);
+  const source = skeleton(ex.source, ex.parseOptions);
   const work = new Map(tm);
   const reverted: string[] = [];
   const opts: RenderOptions = { wrap: o.wrap };
   const render = () => {
     const text = applyTranslations(ex, work, opts);
-    return { text, sk: skeleton(text) };
+    return { text, sk: skeleton(text, ex.parseOptions) };
   };
   let { text, sk } = render();
   let diff = compareSkeletons(source, sk);
@@ -43,7 +43,7 @@ export function assembleDocument(ex: Extraction, tm: TMap, o: AssembleOptions): 
   if (diff !== -1) throw new StructureError(`translated document failed the structure check near: ${sk[diff]?.sig.slice(0, 120) ?? 'end of document'}`);
   let anchors: string[] = [];
   if (o.preserveAnchors) {
-    const r = preserveAnchors(ex.source, text);
+    const r = preserveAnchors(ex.source, text, ex.parseOptions);
     text = r.text;
     anchors = r.added;
   }

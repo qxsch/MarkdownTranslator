@@ -38,6 +38,8 @@ function options(q: Record<string, string | undefined>): TranslateOptions {
     o.engine = q.engine;
   }
   if (q.doNotTranslate) o.doNotTranslate = q.doNotTranslate.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 200);
+  if (q.structuralContext) o.structuralContext = /^(1|true|yes)$/i.test(q.structuralContext);
+  if (q.docstrings) o.docstrings = /^(1|true|yes|translate)$/i.test(q.docstrings);
   return o;
 }
 

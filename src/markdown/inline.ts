@@ -2,7 +2,7 @@ import type { Nodes, PhrasingContent } from 'mdast';
 import type { MaskBuilder } from '../mask/masking.js';
 import type { ExtractContext } from './context.js';
 import { endOf, startOf } from './parse.js';
-import { NO_TRANSLATE_ELEMENTS, VOID_ELEMENTS, hasNoTranslateMarker, isClosingTag, isSelfClosing, tagName, tagSkeleton } from './htmlAttrs.js';
+import { NO_TRANSLATE_ELEMENTS, TRANSLATABLE_ATTRS, VOID_ELEMENTS, hasNoTranslateMarker, isClosingTag, isSelfClosing, tagName, tagSkeleton } from './htmlAttrs.js';
 import type { TMap } from './types.js';
 
 /** Index of the `]` matching the `[` at `open`, honoring escapes and code spans; -1 if none. */
@@ -110,6 +110,23 @@ export function walkPhrasing(ctx: ExtractContext, nodes: PhrasingContent[], from
       case 'imageReference':
         imageLike(ctx, node, mb, deps);
         break;
+      case 'mdxJsxTextElement': {
+        const tagEnd = node.children.length ? startOf(node.children[0]) : e;
+        const tag = src.slice(s, tagEnd);
+        if ((node.name && NO_TRANSLATE_ELEMENTS.has(node.name.toLowerCase())) || hasNoTranslateMarker(tag) || !node.children.length) {
+          const t = node.children.length ? { render: () => src.slice(s, e), ids: [] as string[] } : ctx.tagWithAttributes(tag, `<${node.name}> component`);
+          deps.push(...t.ids);
+          mb.placeholder(t.render, src.slice(s, e));
+          break;
+        }
+        const ce = endOf(node.children[node.children.length - 1]);
+        const t = ctx.tagWithAttributes(tag, `<${node.name}> component`);
+        deps.push(...t.ids);
+        const n = mb.open('html', t.render, src.slice(ce, e), `<${node.name}> component`);
+        walkPhrasing(ctx, node.children, tagEnd, ce, mb, deps);
+        mb.close(n);
+        break;
+      }
       case 'html': {
         const tag = src.slice(s, e);
         const closeIdx = htmlPairs.get(i);
@@ -203,6 +220,17 @@ function imageLike(ctx: ExtractContext, node: Extract<PhrasingContent, { type: '
   mb.close(n);
 }
 
+/** JSX element name and attributes, with translatable attribute values blanked. */
+export function jsxSkeleton(n: { name?: string | null; attributes: unknown[] }): string {
+  const attrs = n.attributes.map((a) => {
+    const at = a as { type: string; name?: string; value?: unknown };
+    if (at.type !== 'mdxJsxAttribute') return `{${String((at.value as string) ?? '')}}`;
+    const v = typeof at.value === 'string' ? (TRANSLATABLE_ATTRS.has(at.name!.toLowerCase()) ? '…' : at.value) : at.value == null ? '' : `{${String((at.value as { value?: string }).value)}}`;
+    return `${at.name}=${v}`;
+  });
+  return `${n.name ?? ''} ${attrs.join(' ')}`;
+}
+
 /** Order-independent signature of the inline structure (everything except text). */
 export function inlineSignature(nodes: readonly Nodes[], cell = false): string {
   const items: string[] = [];
@@ -232,6 +260,15 @@ export function inlineSignature(nodes: readonly Nodes[], cell = false): string {
       case 'html':
         items.push(`html:${tagSkeleton(n.value)}`);
         return;
+      case 'inlineMath':
+        items.push(`math:${n.value}`);
+        return;
+      case 'mdxTextExpression':
+        items.push(`expr:${n.value}`);
+        return;
+      case 'mdxJsxTextElement':
+        items.push(`jsx:${jsxSkeleton(n)}`);
+        break;
       default:
         items.push(n.type);
     }

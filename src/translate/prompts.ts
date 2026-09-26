@@ -1,7 +1,7 @@
 import type { Glossary, LanguageConfig } from '../config.js';
 import type { Segment } from '../markdown/types.js';
 
-export const PROMPT_VERSION = 'v3';
+export const PROMPT_VERSION = 'v4';
 
 export interface DocAnalysis {
   sourceLanguage: string;
@@ -82,6 +82,7 @@ const TAG_RULES = `Segment format:
 - Segments contain inline markup tags. <gN>…</gN> wraps formatted text (bold, italic, link text, HTML element content). <xN/> stands for content that must not change (code, file names, paths, URLs, variables, line breaks, escapes).
 - Keep every tag exactly once, with the same number. You may move tags and reorder words so the sentence is natural in the target language; the text inside <gN>…</gN> must be the translation of the source text inside that same pair.
 - The "tags" map shows what each tag stands for. Use it only for grammar (gender, case, articles, prepositions); never copy or translate its content into the text.
+- A "structure" field, when present, tells where the segment sits (section path, table column and row, the sentence that introduces a list, the surrounding component). Use it to pick the right meaning and form (e.g. a short UI label vs. a verb, consistent column terminology); never copy it into the text.
 - Output plain text plus the tags. Do not add Markdown, HTML, backticks, asterisks, underscores, brackets or new line breaks. Keep &lt; &gt; &amp; as written.`;
 
 function formalityGuidance(lang: LanguageConfig, formality: 'formal' | 'informal'): string {
@@ -128,11 +129,18 @@ ${terms ? `Required terminology:\n${terms}\n` : ''}${p.analysis?.terminology.len
 Return JSON {"translations":[{"id":"…","text":"…"}]} with exactly one entry per input segment id.`;
 }
 
-export function segmentPayload(seg: Segment) {
+export function segmentPayload(seg: Segment, withStructure = false) {
   const tags: Record<string, string> = {};
   for (const p of seg.placeholders.values()) tags[`x${p.n}`] = p.hint;
   for (const p of seg.pairs.values()) tags[`g${p.n}`] = `${p.kind}: ${p.hint}`;
-  return { id: seg.id, kind: seg.kind, context: seg.note, text: seg.masked, ...(Object.keys(tags).length ? { tags } : {}) };
+  return {
+    id: seg.id,
+    kind: seg.kind,
+    context: seg.note,
+    ...(withStructure && seg.structure ? { structure: seg.structure } : {}),
+    text: seg.masked,
+    ...(Object.keys(tags).length ? { tags } : {}),
+  };
 }
 
 export function documentContext(p: { analysis?: DocAnalysis; docName: string; source: string; maxChars: number }): string {

@@ -1,6 +1,6 @@
 import GithubSlugger from 'github-slugger';
 import type { Heading, Nodes } from 'mdast';
-import { parseMarkdown, startOf } from './parse.js';
+import { parseMarkdown, startOf, type ParseOptions } from './parse.js';
 
 interface HeadingInfo {
   text: string;
@@ -15,7 +15,7 @@ function textOf(n: Nodes): string {
   return '';
 }
 
-function headings(text: string): HeadingInfo[] {
+function headings(text: string, opts: ParseOptions): HeadingInfo[] {
   const out: HeadingInfo[] = [];
   const visit = (n: Nodes) => {
     if (n.type === 'heading') {
@@ -25,13 +25,15 @@ function headings(text: string): HeadingInfo[] {
       out.push({
         text: plain,
         contentStart: startOf(h.children[0]),
-        hasExplicitId: h.children.some((c) => c.type === 'html' && /<a\s[^>]*\b(?:id|name)\s*=/i.test(c.value)) || /\{#[\w-]+\}\s*$/.test(plain),
+        hasExplicitId:
+          h.children.some((c) => (c.type === 'html' && /<a\s[^>]*\b(?:id|name)\s*=/i.test(c.value)) || (c.type === 'mdxJsxTextElement' && c.name === 'a' && c.attributes.some((a) => a.type === 'mdxJsxAttribute' && (a.name === 'id' || a.name === 'name')))) ||
+          /\{#[\w-]+\}\s*$/.test(plain),
       });
       return;
     }
     if ('children' in n) for (const c of n.children as Nodes[]) visit(c);
   };
-  visit(parseMarkdown(text));
+  visit(parseMarkdown(text, opts));
   return out;
 }
 
@@ -40,9 +42,9 @@ function headings(text: string): HeadingInfo[] {
  * by inserting an empty HTML anchor with the original slug at the start of each changed heading.
  * The anchor has no text, so it does not change the new heading's own slug.
  */
-export function preserveAnchors(source: string, output: string): { text: string; added: string[] } {
-  const a = headings(source);
-  const b = headings(output);
+export function preserveAnchors(source: string, output: string, opts: ParseOptions = {}): { text: string; added: string[] } {
+  const a = headings(source, opts);
+  const b = headings(output, opts);
   if (a.length !== b.length) return { text: output, added: [] };
   const oldSlugger = new GithubSlugger();
   const newSlugger = new GithubSlugger();

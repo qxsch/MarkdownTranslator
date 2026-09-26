@@ -39,7 +39,7 @@ export function validateSegment(seg: Segment, translated: string, ex: Extraction
   if (seg.inlineSignature !== undefined) {
     // Headings and cells never start a line, so shield them from block-start interpretation.
     const probe = seg.kind === 'paragraph' ? rendered : `x ${rendered}`;
-    const root = parseMarkdown(`${probe}\n\n${ex.definitionsText}`);
+    const root = parseMarkdown(`${probe}\n\n${ex.definitionsText}`, ex.parseOptions);
     const first = root.children[0];
     if (!first || first.type !== 'paragraph') return ['translation turns into a different Markdown block (e.g. list or heading); rephrase the start'];
     const sig = inlineSignature(first.children, seg.kind === 'cell');

@@ -11,6 +11,8 @@ import { translateDocument, type Engine, type SegmentOutcome } from './translate
 import { ANALYSIS_SCHEMA, ANALYSIS_SYSTEM, type DocAnalysis } from './translate/prompts.js';
 
 export interface TranslateOptions {
+  structuralContext?: boolean;
+  docstrings?: boolean;
   formality?: 'formal' | 'informal';
   sourceLanguage?: string;
   review?: boolean;
@@ -108,7 +110,10 @@ export class MarkdownTranslator {
 
     await Promise.all(
       Object.entries(files).map(async ([file, content]) => {
-        const ex = extract(content, dnt);
+        const ex = extract(content, dnt, {
+          parse: { mdx: /\.mdx$/i.test(file), mathSingleDollar: this.cfg.mathSingleDollar },
+          docstrings: opts.docstrings ?? this.cfg.docstrings,
+        });
         result.extractions[file] = ex;
         const translatable = ex.segments.some((s) => !s.passive);
         const analysis = translatable && (opts.engine ?? 'gpt') === 'gpt' ? await this.analyze(file, ex.source) : undefined;
@@ -132,7 +137,7 @@ export class MarkdownTranslator {
                 {
                   docName: file, ex, lang, sourceLanguage: languageName(sourceCode), sourceLanguageCode: sourceCode.split('-')[0], analysis, formality,
                   glossary: this.glossary, engine: opts.engine ?? 'gpt', review: opts.review ?? this.cfg.review,
-                  translateDeployment: opts.translateDeployment, reviewDeployment: opts.reviewDeployment,
+                  translateDeployment: opts.translateDeployment, reviewDeployment: opts.reviewDeployment, structuralContext: opts.structuralContext,
                 },
               );
               result.outcomes[file][lang.code] = outcomes;

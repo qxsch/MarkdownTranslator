@@ -1,3 +1,5 @@
+import type { ParseOptions } from './parse.js';
+
 /** Translated masked text per segment id; a missing entry means "keep source". */
 export type TMap = ReadonlyMap<string, string>;
 
@@ -5,6 +7,7 @@ export type SegmentKind =
   | 'paragraph'
   | 'heading'
   | 'cell'
+  | 'label'
   | 'alt'
   | 'title'
   | 'attr'
@@ -34,6 +37,14 @@ export interface Pair {
   /** For [label] / [label][] references: original label and closing bytes, kept when the label is unchanged. */
   refLabel?: string;
   closeOriginal?: string;
+  /** Quote character of the attribute value this pair wraps; it must not appear in the translation. */
+  quote?: string;
+}
+
+/** Tags (e.g. "x3", "g4") whose order must survive translation; contiguous groups also allow no text between them. */
+export interface TagGroup {
+  tokens: string[];
+  contiguous: boolean;
 }
 
 export interface WrapSpec {
@@ -60,6 +71,10 @@ export interface Segment {
   sourceText: string;
   /** Human-readable context passed to the model (e.g. "table cell", "python comment"). */
   note: string;
+  /** Position in the document (section path, table column/row, list lead-in), optional model context. */
+  structure?: string;
+  /** Tag order constraints (fence lines, attribute values inside shortcodes). */
+  tagGroups?: TagGroup[];
   wrap?: WrapSpec;
   /** Substrings that must not appear in translated text (e.g. comment terminators). */
   forbidden?: string[];
@@ -107,4 +122,5 @@ export interface Extraction {
   /** Link/footnote definitions, appended when validating isolated inline content. */
   definitionsText: string;
   frontmatterFormality?: 'formal' | 'informal';
+  parseOptions: ParseOptions;
 }
