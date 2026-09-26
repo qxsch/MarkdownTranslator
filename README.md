@@ -2,13 +2,20 @@
 
 Translates Markdown files into the 24 official EU languages (configurable, e.g. Chinese or Japanese can be added) while keeping every byte that is not translatable text identical: Markdown syntax, HTML tags, file names, paths, URLs, inline code and source code. Code comments inside fenced code blocks are translated, the code itself is not.
 
-It runs as a Docker container with a small REST API and uses Azure services:
+It comes in two forms that produce the same translations:
+
+| Component | Code | Use it for |
+|---|---|---|
+| **REST API** in a Docker container (TypeScript, Node.js) | [src/](src/) | A translation service, for example on Azure Container Apps with managed identity: [Build the image](#build-the-image), [REST API](#rest-api) |
+| **`mdtranslate`** command-line tool (Rust) | [rust/](rust/) | Scripts and CI pipelines: one statically linked executable for Linux x64 and Windows x64, no Node.js or container needed: [Command-line tool (Rust)](#command-line-tool-rust) |
+
+The command-line tool is a port of `src/`: it extracts and reassembles documents byte for byte like the REST API (checked in CI). Both use the same prompts, feature switches, segment cache and Azure services:
 
 | Service | Role |
 |---|---|
 | Microsoft Foundry, GPT-5.5 (EU data zone) | Document analysis, translation, review pass |
 | Azure Translator (same Foundry resource) | Fallback for segments that fail validation |
-| Azure Container Apps + Container Registry (optional) | Hosting with managed identity |
+| Azure Container Apps + Container Registry (optional) | Hosting the REST API with managed identity |
 
 ## Contents
 
@@ -16,12 +23,18 @@ It runs as a Docker container with a small REST API and uses Azure services:
 - [Measured quality (impact of the reviewer)](#measured-quality-impact-of-the-reviewer)
 - [Feature switches](#feature-switches)
 - [Deploy the Azure side](#deploy-the-azure-side)
-- [Build the image](#build-the-image)
-- [Run the container](#run-the-container)
-- [Authentication and managed identity](#authentication-and-managed-identity)
-- [Test against the container](#test-against-the-container)
-- [REST API](#rest-api)
-- [Command-line binary (Rust)](#command-line-binary-rust)
+- REST API container
+  - [Build the image](#build-the-image)
+  - [Run the container](#run-the-container)
+  - [Authentication and managed identity](#authentication-and-managed-identity)
+  - [Test against the container](#test-against-the-container)
+  - [REST API](#rest-api)
+- [Command-line tool (Rust)](#command-line-tool-rust)
+  - [Get the binary](#get-the-binary)
+  - [Usage](#usage)
+  - [Options](#options)
+  - [Azure access](#azure-access)
+  - [Exit codes](#exit-codes)
 - [Configuration reference](#configuration-reference)
 - [Evaluation and tests](#evaluation-and-tests)
 - [Project layout](#project-layout)
@@ -114,13 +127,13 @@ Caveats: LLM judges instead of human linguists, and a small corpus. Re-run the e
 
 ## Feature switches
 
-Every feature can be switched per request with a query parameter and per deployment with an environment variable. The request value wins over the environment variable. Query values: `true`/`false`, `1`/`0`, `yes`/`no`, `on`/`off`; anything else returns 400.
+Every feature can be switched per request (a query parameter of the REST API, or an option of the command-line tool) and per deployment with an environment variable. The request or command-line value wins over the environment variable. Query values: `true`/`false`, `1`/`0`, `yes`/`no`, `on`/`off`; anything else returns 400. On the command line the same names are options: `-review`, `-no-review` or `-review=false`.
 
 Rule for the defaults: a feature that changes translation quality is on only if the evaluation shows a significant improvement. Features with a measured degradation or no significant improvement are off and must be enabled explicitly. Features that implement a correctness requirement (code comments, docstrings, front matter, anchors) are on because turning them off leaves text untranslated or breaks links.
 
 Evidence: the feature evaluation in [evaluation/README.md](evaluation/README.md) (68 documents, German and French, four judges from two model families; each switch flipped alone against the defaults). "Won / lost" counts blocks where the judge panel preferred the output with the feature on or off; the error score is MQM penalty points per 100 source words; "problems" are deterministic defects (protected content changed, expected text left in English, structure, code or link breaks).
 
-| Query parameter | Environment variable | Default | What it does | Evidence for the default |
+| Switch (query parameter or `-option`) | Environment variable | Default | What it does | Evidence for the default |
 |---|---|---|---|---|
 | `review` | `MDT_REVIEW` | on | Second GPT pass (reasoning high) that checks every translation against the source and fixes errors | Won 203, lost 7 (p < 0.001); error score 2.71 with vs 29.00 without; also 183 / 7 for the independent (Anthropic) judge. About doubles tokens |
 | `structuralContext` | `MDT_STRUCTURAL_CONTEXT` | **off** | Sends each segment's position (section, table column and row, list lead-in, admonition) to the model | No significant improvement with the review pass on: won 108, lost 128 (p 0.43), error score 3.35 with vs 2.75 without, about 14% more tokens; the independent judge sees 43 / 49. Earlier gains were measured without the review pass |
@@ -132,7 +145,7 @@ Evidence: the feature evaluation in [evaluation/README.md](evaluation/README.md)
 | `mdx` | none | on for `.mdx` files | Parses the file as MDX (JSX, `{expressions}`, `import`/`export`) | `.mdx` files: won 7, lost 3, problems 0 vs 16. Forced on `.md` files: won 5, lost 146, problems 328 vs 22, so it follows the file extension |
 | `mathSingleDollar` | `MDT_MATH_SINGLE_DOLLAR` | off | Parses `$...$` as inline math, following Pandoc's rules (opening `$` followed by a non-space, closing `$` after a non-space and not before a digit) plus a formula check (LaTeX command, operator, sub/superscript or a single variable) | Formulas are protected with the switch off as well, so the switch changed only 1 of 136 translations with no measurable difference. The first version turned prices such as "$5 and $10" into math (measured degradation) |
 
-Other options that are not on/off switches: `engine=nmt` (Azure Translator only, error score 26.35 vs 2.09, not recommended), `formality`, `sourceLanguage`, `doNotTranslate`. The alternative model deployment (`MDT_TRANSLATE_DEPLOYMENT`, GPT-5.6-sol) is not the default: no independent improvement and a regression in Polish.
+Other options that are not on/off switches: `engine=nmt` (Azure Translator only, error score 26.35 vs 2.09, not recommended), `formality`, `sourceLanguage`, `doNotTranslate`; on the command line `-engine nmt`, `-formality`, `-sourceLanguage`, `-doNotTranslate`. The alternative model deployment (`MDT_TRANSLATE_DEPLOYMENT`, GPT-5.6-sol) is not the default: no independent improvement and a regression in Polish.
 
 Example: fastest run for a Python API reference that keeps docstrings and code untouched:
 
@@ -140,11 +153,13 @@ Example: fastest run for a Python API reference that keeps docstrings and code u
 POST /translate/de?review=false&docstrings=false&codeComments=false
 ```
 
-With the test script: `./send-file.ps1 -InFile .\api.md -Target de -Disable review,docstrings -Enable mathSingleDollar`.
+With the test script: `./send-file.ps1 -InFile .\api.md -Target de -Disable review,docstrings -Enable mathSingleDollar`. With the command-line tool: `mdtranslate -sourceFile api.md -targetFile api.de.md -lang de -no-review -no-docstrings -no-codeComments`.
 
 ## Deploy the Azure side
 
 Requirements: Az PowerShell (`Az.Accounts`, `Az.Resources`, `Az.CognitiveServices`, `Az.ContainerRegistry`), Bicep CLI, Docker.
+
+Both components need the Foundry resource (step 1). Step 2 only hosts the REST API; the command-line tool runs wherever you start it and signs in with an API key or a Microsoft Entra identity (see [Azure access](#azure-access)).
 
 [infra/main.bicep](infra/main.bicep) creates:
 
@@ -380,24 +395,77 @@ $r.translations.fr.'main.md'
 $r.report | Format-Table file, language, segments, reviewEdits
 ```
 
-## Command-line binary (Rust)
+## Command-line tool (Rust)
 
-[`rust/`](rust/) contains the translator as a single self-contained executable, without Node.js or a container: statically linked for Linux x64 (musl) and Windows x64. It is a port of `src/` that produces byte-identical extractions and assembled documents (golden files checked in CI). It uses the same prompts, cache, Foundry and Translator calls, and `MDT_*` switches. It does not include the REST API.
+`mdtranslate` ([rust/](rust/)) translates files from the command line without Node.js, Docker or a server: one executable, statically linked for Linux x64 (musl) and Windows x64. It is a port of `src/` that extracts and reassembles documents byte for byte like the REST API (golden files checked in CI), with the same prompts, segment cache, Foundry and Translator calls and feature switches. It has no HTTP API; use the container for that.
+
+### Get the binary
+
+- Download: the [rust workflow](.github/workflows/rust.yml) builds the artifacts `mdtranslate-x86_64-unknown-linux-musl` and `mdtranslate-x86_64-pc-windows-msvc` on pushes to `main` and on pull requests.
+- Build: with Rust from [rustup.rs](https://rustup.rs), `cargo build --release --manifest-path rust/Cargo.toml` creates `rust/target/release/mdtranslate` (`.exe` on Windows). The static release builds for both platforms (`cargo zigbuild` for Linux, which also works on Windows) are described in [rust/README.md](rust/README.md#building).
+
+### Usage
 
 ```bash
-cargo build --release --manifest-path rust/Cargo.toml       # or download the CI artifact
 mdtranslate -sourceFile guide.md -targetFile guide.de.md -lang de
-cat guide.md | mdtranslate -lang fr -no-review > guide.fr.md
-mdtranslate -sourceFile guide.md -targetFile 'out/{lang}/guide.md' -lang de,fr,it -structuralContext
+cat guide.md | mdtranslate -lang fr > guide.fr.md
+mdtranslate -sourceFile guide.md -targetFile 'out/{lang}/guide.md' -lang de,fr,it -reportFile out/report.json
+mdtranslate -sourceFile api.md -lang de -no-review -no-docstrings > api.de.md
+mdtranslate -listLanguages
 ```
 
-- Without `-sourceFile` the document is read from stdin, and without `-targetFile` the translation goes to stdout (`-` also means stdin and stdout). Without `-sourceFile`, stdin has to bring a document: nothing piped in or empty input prints the usage (exit code 1). An explicit empty source (`-sourceFile empty.md`, or `-sourceFile -` with empty input) gives an empty translation. Stdout carries only the translation (and `-help`); progress and errors go to stderr.
-- Every feature switch works as an option (`-review`, `-no-review`, `-review=false`) or as the environment variable listed in [Feature switches](#feature-switches). The command line wins.
-- Exit codes: `0` translated, `1` usage, configuration or input error, `2` failed (the source was written unchanged), `3` partially translated.
+- Without `-sourceFile` the document is read from stdin, and without `-targetFile` the translation goes to stdout (`-` means the same explicitly). With several languages, `-targetFile` must be a file name containing `{lang}`; missing folders are created.
+- Without `-sourceFile`, stdin has to bring a document: nothing piped in, or empty input, prints the usage (exit code 1), since options were probably forgotten. An explicit empty source (`-sourceFile empty.md`, or `-sourceFile -` with empty input) gives an empty translation without calling any service.
+- stdout carries only the translation (and `-help`). Progress, warnings and errors go to stderr; errors are printed also with `-quiet`.
 
-All options, authentication, the static builds and the parity tooling are described in [rust/README.md](rust/README.md).
+### Options
+
+| Option | Purpose |
+|---|---|
+| `-sourceFile <file>`, `-targetFile <file>` | Input and output (default: stdin and stdout) |
+| `-lang <codes>` | Target languages, comma-separated, from [config/languages.json](config/languages.json) (`-listLanguages` prints them) |
+| `-review`, `-no-review`, `-review=false`, ... | The [feature switches](#feature-switches); they override the `MDT_*` environment variables |
+| `-engine gpt\|nmt\|pseudo` | Model translation (default), Azure Translator only, or an offline pseudo translation for tests (`MDT_ENGINE`) |
+| `-formality formal\|informal`, `-sourceLanguage <code>`, `-doNotTranslate <a,b>` | Register, source language and extra protected terms, as in the REST API |
+| `-translateDeployment`, `-reviewDeployment`, `-analysisDeployment` | Foundry deployments (`MDT_*_DEPLOYMENT`) |
+| `-reportFile <file>` | JSON report per language: segment outcomes, retries, review edits, translation memory, token usage |
+| `-cacheDir <dir>` | Segment cache (`MDT_CACHE_DIR`), same format as the container's |
+| `-envFile <file>` | Read variables from a `.env` file; variables set in the environment win |
+| `-quiet`, `-help`, `-version` | No progress output; usage (stdout); version (stderr) |
+
+`mdtranslate -help` and [rust/README.md](rust/README.md) list all options, including the inspection modes (`-dumpExtraction`, `-analyzeOnly`) and assembly from a saved translation memory (`-tmFile`).
+
+### Azure access
+
+The tool reads the same variables as the container (see [Configuration reference](#configuration-reference)): `AZURE_OPENAI_ENDPOINT`, `AZURE_TRANSLATOR_ENDPOINT` and, for key auth, `AZURE_AI_API_KEY`. Without a key it signs in with Microsoft Entra ID and uses the first credential that works:
+
+1. `AZURE_AI_ACCESS_TOKEN` (a pre-acquired token)
+2. the user-assigned managed identity in `AZURE_CLIENT_ID`
+3. a service principal (`AZURE_TENANT_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET`) or workload identity (`AZURE_FEDERATED_TOKEN_FILE`)
+4. the managed identity of the machine (Container Apps, App Service, Functions, Cloud Shell, VMs)
+5. your developer login: Azure CLI (`az login`), Azure PowerShell (`Connect-AzAccount`), Azure Developer CLI
+
+The identity needs `Cognitive Services OpenAI User` and `Cognitive Services User` on the Foundry resource, like the container's (see [Authentication and managed identity](#authentication-and-managed-identity)).
+
+```powershell
+$env:AZURE_OPENAI_ENDPOINT = 'https://<account>.openai.azure.com'
+$env:AZURE_TRANSLATOR_ENDPOINT = 'https://<account>.cognitiveservices.azure.com'
+Connect-AzAccount
+mdtranslate -sourceFile .\docs\guide.md -targetFile .\docs\guide.de.md -lang de
+```
+
+### Exit codes
+
+| Code | Meaning |
+|---|---|
+| 0 | Translated |
+| 1 | Usage, configuration or input error: unknown option, no input, missing source file, invalid MDX, unknown language, no service configured |
+| 2 | Failed, the source was written unchanged: the structure check failed, or no segment could be translated (for example the service was unreachable or rejected the credentials) |
+| 3 | Partially translated: some segments stayed in the source language (details on stderr and in `-reportFile`) |
 
 ## Configuration reference
+
+The container and the command-line tool read the same variables; `MDT_API_KEY`, `MDT_BODY_LIMIT_BYTES`, `PORT` and `LOG_LEVEL` apply only to the container. The command-line tool also reads `MDT_ENGINE` (`gpt`, `nmt` or `pseudo`), `MDT_FORMALITY` (`formal` or `informal`), `MDT_MDX` and `MDT_MAX_ATTEMPTS` (attempts per Azure request, default 6).
 
 | Variable | Default | Description |
 |---|---|---|
@@ -441,7 +509,7 @@ Glossary: `doNotTranslate` terms are always protected; `terms` maps source terms
 
 ## Evaluation and tests
 
-Everything in this section runs on your machine; no container is needed, and the evaluator is never part of the container image. The implementation under test is the Rust binary ([rust/](rust/)): the evaluator runs it for every translation, derived variant, extraction fingerprint and document analysis, and the binary calls your Foundry resource directly. The deterministic checks and the judges stay in TypeScript. The latest evaluation (German and French) is committed in [evaluation/README.md](evaluation/README.md) with charts, measurement tables, the translated corpus and the regression history.
+Everything in this section runs on your machine; no container is needed, and the evaluator is never part of the container image. The evaluator tests one implementation: the Rust binary ([rust/](rust/)) by default, or the TypeScript pipeline in [src/](src/) with `EVAL_IMPL=typescript` (any other value means Rust). The implementation under test does every translation, derived variant, extraction fingerprint and document analysis and calls your Foundry resource directly; both return the same report shapes, so the deterministic checks (TypeScript), the judges and the statistics are the same for either. The latest evaluation (German and French) is committed in [evaluation/README.md](evaluation/README.md) with charts, measurement tables, the translated corpus and the regression history.
 
 | Layer | Command | Needs | What it proves |
 |---|---|---|---|
@@ -456,7 +524,7 @@ Everything in this section runs on your machine; no container is needed, and the
 ```powershell
 npm install
 npm install --prefix eval          # evaluator-only dependencies (GitHub Copilot SDK); skip if you use Foundry judges only
-cargo build --release --manifest-path rust/Cargo.toml   # the binary under test (Rust from https://rustup.rs); rebuild after changes
+cargo build --release --manifest-path rust/Cargo.toml   # the Rust binary under test (Rust from https://rustup.rs); rebuild after changes; not needed with EVAL_IMPL=typescript
 Connect-AzAccount -Tenant <tenant-id>
 ```
 
@@ -476,6 +544,9 @@ $env:EVAL_REPORT_DIR = 'evaluation-es-it-pl'                      # keep a separ
 $env:EVAL_JUDGES = 'translate-alt,translate,copilot:claude-opus-5.5,copilot:gpt-6-sol'
 npm run eval:features
 
+$env:EVAL_IMPL = 'typescript'                                     # evaluate the TypeScript pipeline instead of the Rust binary
+npm run eval:features
+
 npm run eval:report                                               # rebuild the report from the newest raw results
 Remove-Item Env:EVAL_*                                            # back to the defaults
 ```
@@ -492,8 +563,9 @@ Remove-Item Env:EVAL_*                                            # back to the 
 | `EVAL_COPILOT_CONCURRENCY` | `4` | Parallel Copilot judge sessions |
 | `EVAL_COPILOT_TIMEOUT_MS` | `600000` | Timeout per Copilot judgement |
 | `EVAL_TRANSLATOR_FAMILY` | `openai` | Model family of the translator; judges of another family form the "independent judges" view |
-| `MDT_RUST_BIN` | `rust/target/release/mdtranslate` | The binary under test, e.g. a CI artifact |
-| `EVAL_PARALLEL` | `8` | Binary processes running at once; `MDT_MAX_CONCURRENCY` (16) is split between them |
+| `EVAL_IMPL` | `rust` | Implementation under test: `typescript` evaluates the pipeline in `src/`; anything else (also a typo, with a warning) the Rust binary. Saved outputs of `EVAL_OUT` are reused only for the same implementation |
+| `MDT_RUST_BIN` | `rust/target/release/mdtranslate` | The Rust binary under test, e.g. a CI artifact |
+| `EVAL_PARALLEL` | `8` | Rust only: binary processes running at once; `MDT_MAX_CONCURRENCY` (16) is split between them |
 | `MDT_REQUEST_TIMEOUT_MS` | `600000` | Timeout per Foundry call; 240000 recovers faster from stalled calls in long runs |
 
 A full run (66 documents, 2 languages, 9 switches, 4 judges) takes roughly one to two hours.
@@ -551,7 +623,7 @@ npx tsx scripts/translate.ts de,fr path\to\file.md    # translate files to .\out
 | `config/` | Languages and glossary |
 | `infra/` | Bicep and parameters |
 | `test/` | Unit tests and fixtures |
-| `eval/` | Evaluation harness (host only): feature evaluation, judges (Foundry, GitHub Copilot SDK), statistics, charts, report |
+| `eval/` | Evaluation harness (host only): feature evaluation of the Rust binary or the TypeScript pipeline (`EVAL_IMPL`), judges (Foundry, GitHub Copilot SDK), statistics, charts, report |
 | `eval/features/` | Evaluation corpus (66 documents) and expectations |
 | `evaluation/` | Latest evaluation report with charts, data, translations and regression history |
 | `run-container.ps1`, `send-file.ps1` | Local container helpers |

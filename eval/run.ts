@@ -1,8 +1,9 @@
 /**
  * Measures translation quality of pipeline variants with blind, position-swapped pairwise judging (MQM-style).
- * The variants are produced by the Rust binary (rust/, see eval/rust.ts); judging uses the Foundry chat client.
+ * The variants come from the implementation under test (the Rust binary by default, the TypeScript pipeline with
+ * EVAL_IMPL=typescript, see eval/implementation.ts); judging uses the Foundry chat client.
  *
- *   cargo build --release --manifest-path rust/Cargo.toml
+ *   cargo build --release --manifest-path rust/Cargo.toml    # for the Rust binary
  *   npx tsx eval/run.ts                      # defaults below
  *   EVAL_LANGS=de,fr EVAL_DOCS=blog.md npx tsx eval/run.ts
  */
@@ -16,13 +17,13 @@ delete process.env.MDT_CACHE_DIR;
 const { loadConfig } = await import('../src/config.js');
 const { ChatClient } = await import('../src/azure/openai.js');
 const { AzureAuth, Semaphore } = await import('../src/azure/http.js');
-const rust = await import('./rust.js');
-type Outcome = import('./rust.js').RustOutcome;
-type Segment = import('./rust.js').RustSegment;
+const impl = await import('./implementation.js');
+type Outcome = import('./implementation.js').Outcome;
+type Segment = import('./implementation.js').SegmentInfo;
 
 const cfg = loadConfig();
 const judgeChat = new ChatClient(cfg, new AzureAuth(cfg), new Semaphore(cfg.maxConcurrency));
-const catalog = await rust.languages();
+const catalog = await impl.languages();
 
 const LANGS = (process.env.EVAL_LANGS ?? 'de,fr,sv,pl,fi,mt').split(',');
 const PRIMARY = process.env.EVAL_PRIMARY ?? 'translate';
@@ -46,7 +47,7 @@ const WEIGHT = { minor: 1, major: 5, critical: 10 } as const;
 interface Run {
   tm: Map<string, string>;
   outcomes: Map<string, Outcome>;
-  /** Each segment rendered on its own (single line), as produced by the binary. */
+  /** Each segment rendered on its own (single line), as produced by the implementation. */
   rendered: Map<string, string>;
   reverted: number;
   keptSource: number;
@@ -111,13 +112,13 @@ const words = (s: string) => s.split(/\s+/).filter((w) => /\p{L}/u.test(w)).leng
 async function runVariant(job: Job, v: Variant): Promise<Run> {
   const started = Date.now();
   const common = { formality: job.formality, analysis: job.analysis ?? null, sourceLanguage: 'en', reportSegments: true } as const;
-  let rep: import('./rust.js').RustReport;
+  let rep: import('./implementation.js').Report;
   if (v === 'gpt+review') {
     // Review pass over the gpt translations, as a separate step.
     const g = job.runs.gpt!;
-    rep = await rust.translate(job.file, job.lang, { review: true }, { ...common, memory: { tm: [...g.tm], outcomes: [...g.outcomes.values()], review: true } });
+    rep = await impl.translate(job.file, job.lang, { review: true }, { ...common, memory: { tm: [...g.tm], outcomes: [...g.outcomes.values()], review: true } });
   } else {
-    rep = await rust.translate(job.file, job.lang, { review: false, structuralContext: v !== 'noctx' }, { ...common, engine: v === 'nmt' ? 'nmt' : 'gpt', translateDeployment: v === 'alt' ? ALT : PRIMARY });
+    rep = await impl.translate(job.file, job.lang, { review: false, structuralContext: v !== 'noctx' }, { ...common, engine: v === 'nmt' ? 'nmt' : 'gpt', translateDeployment: v === 'alt' ? ALT : PRIMARY });
   }
   const l = rep.languages[0];
   const outcomes = new Map(l.outcomes.map((o) => [o.id, o]));
@@ -172,9 +173,9 @@ if (unknownLangs.length) throw new Error(`unknown EVAL_LANGS ${unknownLangs.join
 const jobs: Job[] = [];
 for (const doc of DOCS) {
   const file = fileURLToPath(new URL(doc, corpusDir));
-  const ex = await rust.extraction(file, {});
+  const ex = await impl.extraction(file, {});
   const segs = ex.segments.filter((s) => !s.passive);
-  const analysis = (segs.length ? await rust.analyze(file) : undefined) as { register?: string } | undefined;
+  const analysis = (segs.length ? await impl.analyze(file) : undefined) as { register?: string } | undefined;
   const formality = ex.frontmatterFormality ?? (analysis?.register === 'informal' ? 'informal' : 'formal');
   console.log(`${doc}: ${segs.length} segments, register=${analysis?.register} -> ${formality}`);
   for (const code of LANGS) jobs.push({ doc, file, lang: code, segs, analysis, runs: {}, formality });
@@ -306,7 +307,7 @@ const reviewEdits = jobs.reduce((n, j) => n + [...(j.runs['gpt+review']?.outcome
 
 mkdirSync(new URL('./results/', import.meta.url), { recursive: true });
 const file = join(new URL('./results/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'), `eval-${new Date().toISOString().replace(/[:.]/g, '-')}.json`);
-writeFileSync(file, JSON.stringify({ langs: LANGS, docs: DOCS, judges: JUDGES, primary: PRIMARY, alt: ALT, implementation: await rust.version(), summary, structure, reviewEdits, usage: { translator: rust.usage(), judges: judgeChat.usage.toJSON() }, tallies, examples }, null, 2));
+writeFileSync(file, JSON.stringify({ langs: LANGS, docs: DOCS, judges: JUDGES, primary: PRIMARY, alt: ALT, implementation: await impl.version(), summary, structure, reviewEdits, usage: { translator: impl.usage(), judges: judgeChat.usage.toJSON() }, tallies, examples }, null, 2));
 
 console.log('\n=== structure ===');
 console.table(structure);

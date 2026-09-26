@@ -1,8 +1,6 @@
 /**
- * Bridge from the evaluation framework to the Rust implementation (rust/): translations, extraction
- * fingerprints, document analyses and assembly all come from the `mdtranslate` binary. The TypeScript code in
- * src/ is only used for the independent checks (structure, code, links, English left behind) and for the
- * Foundry judges.
+ * The Rust implementation (rust/) behind the interface of eval/implementation.ts, the default for EVAL_IMPL:
+ * translations, extraction fingerprints, document analyses and assembly all come from the `mdtranslate` binary.
  *
  * Build the binary first:  cargo build --release --manifest-path rust/Cargo.toml
  * Or point to one:         MDT_RUST_BIN=/path/to/mdtranslate
@@ -13,94 +11,10 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'no
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import type { ExtractionDump, LanguageConfig, Report, Switches, TranslateOptions, Usage } from './implementation.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 export const RUST_BIN = process.env.MDT_RUST_BIN ?? join(root, 'rust', 'target', 'release', process.platform === 'win32' ? 'mdtranslate.exe' : 'mdtranslate');
-
-export interface Switches {
-  review: boolean;
-  structuralContext: boolean;
-  nmtFallback: boolean;
-  preserveAnchors: boolean;
-  codeComments: boolean;
-  docstrings: boolean;
-  frontMatter: boolean;
-  mdx: boolean;
-  mathSingleDollar: boolean;
-}
-
-export interface RustSegment {
-  id: string;
-  kind: string;
-  textContext: string;
-  note: string;
-  structure: string | null;
-  masked: string;
-  original: string;
-  passive: boolean;
-}
-
-export interface RustExtraction {
-  segments: RustSegment[];
-  notes: string[];
-  frontmatterFormality: 'formal' | 'informal' | null;
-}
-
-export interface RustOutcome {
-  id: string;
-  kind: string;
-  via: 'cache' | 'gpt' | 'nmt' | 'source' | 'pseudo' | 'tm';
-  retries: number;
-  errors?: string[];
-  review?: { category: string; severity: string; explanation: string; before?: string };
-  untranslated?: boolean;
-}
-
-export interface RustLanguageReport {
-  language: string;
-  segments: number;
-  via: Record<string, number>;
-  retried: number;
-  reviewEdits: number;
-  revertedForStructure: string[];
-  anchorsAdded: string[];
-  keptSource: { id: string; errors: string[] }[];
-  notes: string[];
-  error?: string;
-  tm: [string, string][];
-  outcomes: RustOutcome[];
-  segmentsDetail?: { id: string; kind: string; note: string; masked: string; original: string; rendered: string }[];
-}
-
-interface Usage {
-  promptTokens: number;
-  completionTokens: number;
-  calls: number;
-}
-
-export interface RustReport {
-  file: string;
-  engine: string;
-  seconds: number;
-  sourceLanguage: string;
-  formality: 'formal' | 'informal';
-  analysis: unknown;
-  languages: RustLanguageReport[];
-  usage: { byDeployment: Record<string, Usage>; byPurpose: Record<string, Usage> };
-  /** Translated document (read from the target file). */
-  text: string;
-}
-
-export interface LanguageConfig {
-  code: string;
-  name: string;
-  translator?: string;
-  formal: string;
-  informal: string;
-  style?: string;
-  wrap?: 'words' | 'none';
-  lengthRatio?: [number, number];
-}
 
 class Pool {
   private active = 0;
@@ -159,11 +73,11 @@ export async function languages(): Promise<{ defaultTargets: string[]; languages
   return { defaultTargets: raw.defaultTargets, languages: new Map(raw.languages.map((l) => [l.code.toLowerCase(), l])) };
 }
 
-export async function extraction(file: string, s: Partial<Switches>): Promise<RustExtraction> {
-  return JSON.parse((await run(['-sourceFile', file, '-targetFile', '-', '-dumpExtraction', ...switchArgs(s)])).stdout) as RustExtraction;
+export async function extraction(file: string, s: Partial<Switches>): Promise<ExtractionDump> {
+  return JSON.parse((await run(['-sourceFile', file, '-targetFile', '-', '-dumpExtraction', ...switchArgs(s)])).stdout) as ExtractionDump;
 }
 
-function addUsage(u: RustReport['usage'] | undefined) {
+function addUsage(u: Report['usage'] | undefined) {
   for (const [dep, x] of Object.entries(u?.byDeployment ?? {})) {
     const t = (totals[dep] ??= { promptTokens: 0, completionTokens: 0, calls: 0 });
     t.promptTokens += x.promptTokens;
@@ -177,7 +91,7 @@ export function usage(): Record<string, Usage> {
   return totals;
 }
 
-export function tokens(rep: RustReport, purpose: 'translations' | 'review' | 'analysis'): number {
+export function tokens(rep: Report, purpose: 'translations' | 'review' | 'analysis'): number {
   const u = rep.usage?.byPurpose?.[purpose];
   return u ? u.promptTokens + u.completionTokens : 0;
 }
@@ -189,26 +103,13 @@ export async function analyze(file: string): Promise<unknown> {
     console.warn(`document analysis of ${file} failed, continuing without it: ${res.stderr.trim()}`);
     return undefined;
   }
-  const out = JSON.parse(res.stdout) as { analysis: unknown; usage: RustReport['usage'] };
+  const out = JSON.parse(res.stdout) as { analysis: unknown; usage: Report['usage'] };
   addUsage(out.usage);
   return out.analysis ?? undefined;
 }
 
-export interface TranslateOptions {
-  formality: 'formal' | 'informal';
-  analysis?: unknown;
-  sourceLanguage?: string;
-  cacheDir?: string;
-  engine?: 'gpt' | 'nmt' | 'pseudo';
-  translateDeployment?: string;
-  reviewDeployment?: string;
-  reportSegments?: boolean;
-  /** Assemble from this translation memory instead of translating. */
-  memory?: { tm: [string, string][]; outcomes: RustOutcome[]; review?: boolean };
-}
-
 /** Translates (or, with `memory`, assembles) one document into one language. */
-export async function translate(file: string, lang: string, s: Partial<Switches>, o: TranslateOptions): Promise<RustReport> {
+export async function translate(file: string, lang: string, s: Partial<Switches>, o: TranslateOptions): Promise<Report> {
   const dir = mkdtempSync(join(tmpdir(), 'mdt-eval-'));
   try {
     const target = join(dir, 'out.md');
@@ -229,7 +130,7 @@ export async function translate(file: string, lang: string, s: Partial<Switches>
       if (o.memory.review) args.push('-reviewTm');
     }
     await run(args);
-    const rep = JSON.parse(readFileSync(report, 'utf8')) as RustReport;
+    const rep = JSON.parse(readFileSync(report, 'utf8')) as Report;
     rep.text = readFileSync(target, 'utf8');
     addUsage(rep.usage);
     return rep;

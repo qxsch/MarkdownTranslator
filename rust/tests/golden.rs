@@ -99,6 +99,30 @@ fn golden_files_match_typescript() {
             failures.push(format!("{name}{d}"));
         }
     }
+    // rust/tools/golden.ts only records a flipped switch when it changes the TypeScript result. Where no file exists,
+    // the flip left the TypeScript result exactly as the default, so the Rust result must not change either.
+    const FLIPS: [&str; 6] = ["mdx", "mathSingleDollar", "docstrings", "codeComments", "frontMatter", "preserveAnchors"];
+    for path in &files {
+        let name = path.file_name().unwrap().to_string_lossy().to_string();
+        if name.contains('@') || only.as_ref().is_some_and(|o| !name.contains(o.as_str())) {
+            continue;
+        }
+        let expected: Value = serde_json::from_str(&std::fs::read_to_string(path).unwrap()).unwrap();
+        let src = std::fs::read_to_string(root.join(expected["file"].as_str().unwrap())).unwrap();
+        let default = normalize(golden(&src, &dnt, &variant(&expected["options"])));
+        let stem = name.trim_end_matches(".json");
+        for flip in FLIPS {
+            let mut options = expected["options"].clone();
+            let flipped = !options[flip].as_bool().unwrap_or(false);
+            options[flip] = Value::Bool(flipped);
+            if dir.join(format!("{stem}@{flip}={flipped}.json")).exists() {
+                continue;
+            }
+            if let Some(d) = diff("", &default, &normalize(golden(&src, &dnt, &variant(&options)))) {
+                failures.push(format!("{stem}@{flip}={flipped} changes the Rust result but not the TypeScript result (first: default, second: flipped){d}"));
+            }
+        }
+    }
     if !failures.is_empty() {
         panic!("{} of {} golden files differ:\n\n{}", failures.len(), files.len(), failures.join("\n\n"));
     }

@@ -84,7 +84,7 @@ interface Results {
     judgePanel?: { id: string; provider: string; model: string; family: string }[];
     features: string[];
     config: { translateDeployment: string; reviewDeployment: string; translateReasoning: string; reviewReasoning: string; defaults: Record<string, boolean> };
-    /** Version string of the implementation under test (the Rust binary); absent for runs of the TypeScript pipeline. */
+    /** Version string of the implementation under test (the Rust binary, or the TypeScript pipeline with EVAL_IMPL=typescript); absent in runs from before it was recorded. */
     implementation?: string;
   };
   records: RecordRow[];

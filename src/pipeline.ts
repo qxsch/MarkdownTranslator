@@ -183,12 +183,12 @@ export class UnknownLanguageError extends Error {
   }
 }
 
-function sameLanguage(a: string, b: string): boolean {
+export function sameLanguage(a: string, b: string): boolean {
   const base = (x: string) => x.toLowerCase().split(/[-_]/)[0];
   return base(a) === base(b);
 }
 
-function languageName(code: string): string {
+export function languageName(code: string): string {
   try {
     return displayNames.of(code) ?? code;
   } catch {

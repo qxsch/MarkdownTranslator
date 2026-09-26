@@ -148,7 +148,8 @@ The TypeScript code stays the reference.
 `test/fixtures` and [`tests/fixtures`](tests/fixtures) (regression inputs for the port): extracted segments,
 masked text, hints, wrap specs, inline signatures, replacement offsets (bytes), and the assembled pseudo
 translation. Each fixture has the default switches, plus each switch flipped where that changes anything.
-`cargo test` must reproduce all of it byte for byte.
+`cargo test` must reproduce all of it byte for byte. Where flipping a switch leaves the TypeScript result
+unchanged (so no file is recorded for it), the test checks that it leaves the Rust result unchanged too.
 
 `golden.ts --check --dir` also finds identical results on 1,313 of 1,313 real-world pages:
 
@@ -180,7 +181,8 @@ How the port matches the JavaScript libraries:
     ([`vendor/markdown`](vendor/markdown/README.md), a five-line patch to 1.0.0).
 - **Block directives** (`:::note[Title]{.cls}` containers and `::leaf[...]` leaves) are not in markdown-rs.
   They are parsed in two passes: fences are found with micromark-extension-directive's rules, then replaced by
-  same-length thematic breaks, and the tree is regrouped.
+  same-length thematic breaks, and the tree is regrouped. In MDX, a fence's attribute block (`{#id .cls}`)
+  belongs to the directive, as in micromark, and is not validated as a JavaScript expression.
 - **HTML**: a parse5-compatible fragment parser with source locations. It covers implied end tags, raw-text
   elements, tables (implicit `tbody`, foster parenting), active formatting reconstruction and the adoption
   agency algorithm, and it matches parse5 on every probe.
@@ -206,14 +208,18 @@ Known, deliberate differences:
 
 ## Evaluation
 
-The evaluation framework stays in TypeScript ([`eval`](../eval)), but the implementation under test is this
-binary. `eval/rust.ts` runs it for translation, assembly of derived variants (`-tmFile`), extraction
-fingerprints (`-dumpExtraction`) and document analysis (`-analyzeOnly`). The TypeScript code only provides the
-independent checks and the Foundry judge client.
+The evaluation framework stays in TypeScript ([`eval`](../eval)). By default the implementation under test is this
+binary: `eval/rust.ts` runs it for translation, assembly of derived variants (`-tmFile`), extraction
+fingerprints (`-dumpExtraction`) and document analysis (`-analyzeOnly`). With `EVAL_IMPL=typescript`,
+`eval/typescript.ts` runs the same steps with the TypeScript pipeline instead, behind the same interface
+(`eval/implementation.ts`), so both can be evaluated and compared. With the mock server
+(`rust/tools/mock-azure.ts`), whose answers are deterministic, a run of both over five documents and all nine
+switches gave byte-identical outputs.
 
 ```powershell
 cargo build --release --manifest-path rust/Cargo.toml
 npx tsx eval/features.ts          # MDT_RUST_BIN=<path> to test another build; EVAL_PARALLEL processes (default 8)
+$env:EVAL_IMPL = 'typescript'; npx tsx eval/features.ts          # the TypeScript pipeline in src/
 ```
 
 ## Layout

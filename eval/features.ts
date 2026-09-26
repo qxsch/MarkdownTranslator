@@ -3,12 +3,13 @@
  * exactly one switch flipped; both outputs are checked deterministically (expectations in eval/features/expect.json,
  * code bytes, structure, links, English left behind) and judged blind (position-swapped, two judges, MQM style).
  *
- * The implementation under test is the Rust binary (rust/, see eval/rust.ts): it translates, assembles, fingerprints
- * extractions and analyzes documents. The TypeScript code in src/ only provides the independent checks and the
- * Foundry judge client.
+ * The implementation under test translates, assembles, fingerprints extractions and analyzes documents: the Rust
+ * binary (rust/, eval/rust.ts) by default, or the TypeScript pipeline in src/ with EVAL_IMPL=typescript
+ * (eval/typescript.ts). The TypeScript code in src/ also provides the independent checks and the Foundry judge client.
  *
- *   cargo build --release --manifest-path rust/Cargo.toml
+ *   cargo build --release --manifest-path rust/Cargo.toml    # for the Rust binary
  *   npx tsx eval/features.ts
+ *   EVAL_IMPL=typescript npx tsx eval/features.ts
  *   EVAL_LANGS=de EVAL_DOCS=faq.md,math-prices.md EVAL_FEATURES=review,mathSingleDollar npx tsx eval/features.ts
  *   EVAL_OUT=eval/results/features-<stamp> npx tsx eval/features.ts   # reuse translations of an earlier run
  *
@@ -34,23 +35,23 @@ const { ChatClient } = await import('../src/azure/openai.js');
 const { AzureAuth, Semaphore } = await import('../src/azure/http.js');
 const { toString } = await import('mdast-util-to-string');
 const { createJudges } = await import('./judges.js');
-const rust = await import('./rust.js');
+const impl = await import('./implementation.js');
 type Judge = import('./judges.js').Judge;
 const { default: GithubSlugger } = await import('github-slugger');
-type Outcome = import('./rust.js').RustOutcome;
-type RustExtraction = import('./rust.js').RustExtraction;
-type RustReport = import('./rust.js').RustReport;
+type Outcome = import('./implementation.js').Outcome;
+type ExtractionDump = import('./implementation.js').ExtractionDump;
+type Report = import('./implementation.js').Report;
 type Extraction = import('../src/markdown/types.js').Extraction;
 type ParseOptions = import('../src/markdown/parse.js').ParseOptions;
-type LanguageConfig = import('./rust.js').LanguageConfig;
+type LanguageConfig = import('./implementation.js').LanguageConfig;
 
 const cfg = loadConfig();
 // The independent checks (code fingerprints, English left behind) run the TypeScript parsers.
 await initCodeParsers();
 const glossary = loadGlossary(cfg.glossaryFile);
 const judgeChat = new ChatClient(cfg, new AzureAuth(cfg), new Semaphore(cfg.maxConcurrency));
-const catalog = await rust.languages();
-const rustVersion = await rust.version();
+const catalog = await impl.languages();
+const implVersion = await impl.version();
 
 const FEATURES = ['review', 'structuralContext', 'nmtFallback', 'preserveAnchors', 'codeComments', 'docstrings', 'frontMatter', 'mdx', 'mathSingleDollar'] as const;
 type Feature = (typeof FEATURES)[number];
@@ -98,7 +99,7 @@ interface Job {
   src: string;
   analysis: unknown;
   formality: 'formal' | 'informal';
-  /** Segment cache of the Rust binary, shared by the baseline and the variants of this document and language. */
+  /** Segment cache of the implementation under test, shared by the baseline and the variants of this document and language. */
   cacheDir: string;
   base?: Run;
   variants: Partial<Record<Feature, Run>>;
@@ -108,28 +109,28 @@ interface Job {
 
 const docPath = (job: Job) => join(corpusDir, job.doc);
 
-const extractFor = (job: Job, s: Settings): Promise<RustExtraction> => rust.extraction(docPath(job), s);
+const extractFor = (job: Job, s: Settings): Promise<ExtractionDump> => impl.extraction(docPath(job), s);
 
-const fingerprint = (ex: RustExtraction) => ex.segments.map((s) => `${s.passive ? 'p' : ''}${s.kind}\u0001${s.masked}\u0001${s.structure ?? ''}`).join('\u0000');
+const fingerprint = (ex: ExtractionDump) => ex.segments.map((s) => `${s.passive ? 'p' : ''}${s.kind}\u0001${s.masked}\u0001${s.structure ?? ''}`).join('\u0000');
 
 function counts(outcomes: Map<string, Outcome>) {
   const via = [...outcomes.values()];
   return { keptSource: via.filter((o) => o.via === 'source').length, nmt: via.filter((o) => o.via === 'nmt').length, reviewEdits: via.filter((o) => o.review).length };
 }
 
-function fromReport(rep: RustReport, tokens?: Run['tokens']): Run {
+function fromReport(rep: Report, tokens?: Run['tokens']): Run {
   const l = rep.languages[0];
   const outcomes = new Map(l.outcomes.map((o) => [o.id, o]));
   return {
     text: rep.text, error: l.error, reverted: l.revertedForStructure.length, ...counts(outcomes), seconds: rep.seconds,
-    tokens: tokens ?? { translate: rust.tokens(rep, 'translations'), review: rust.tokens(rep, 'review') }, tm: new Map(l.tm), outcomes,
+    tokens: tokens ?? { translate: impl.tokens(rep, 'translations'), review: impl.tokens(rep, 'review') }, tm: new Map(l.tm), outcomes,
   };
 }
 
 async function translate(job: Job, s: Settings): Promise<Run> {
   const started = Date.now();
   try {
-    const rep = await rust.translate(docPath(job), job.lang.code, s, { formality: job.formality, analysis: job.analysis ?? null, sourceLanguage: 'en', cacheDir: job.cacheDir, engine: 'gpt' });
+    const rep = await impl.translate(docPath(job), job.lang.code, s, { formality: job.formality, analysis: job.analysis ?? null, sourceLanguage: 'en', cacheDir: job.cacheDir, engine: 'gpt' });
     return fromReport(rep);
   } catch (e) {
     // Same behaviour as the API: a file that fails is returned unchanged.
@@ -137,7 +138,7 @@ async function translate(job: Job, s: Settings): Promise<Run> {
   }
 }
 
-/** A variant computed exactly from the baseline's translation memory; the binary only assembles it. */
+/** A variant computed exactly from the baseline's translation memory; the implementation only assembles it. */
 async function derive(job: Job, f: Feature, s: Settings): Promise<Run> {
   const b = job.base!;
   const tm = new Map(b.tm);
@@ -151,18 +152,18 @@ async function derive(job: Job, f: Feature, s: Settings): Promise<Run> {
     for (const o of outcomes.values()) if (o.via === 'nmt') { tm.delete(o.id); o.via = 'source'; }
   }
   const started = Date.now();
-  const rep = await rust.translate(docPath(job), job.lang.code, s, { formality: job.formality, sourceLanguage: 'en', memory: { tm: [...tm], outcomes: [...outcomes.values()] } });
+  const rep = await impl.translate(docPath(job), job.lang.code, s, { formality: job.formality, sourceLanguage: 'en', memory: { tm: [...tm], outcomes: [...outcomes.values()] } });
   const run = fromReport(rep, f === 'review' ? { translate: b.tokens.translate, review: 0 } : b.tokens);
   return { ...run, ...counts(outcomes), seconds: (Date.now() - started) / 1000, tm, outcomes };
 }
 
 const runPath = (job: Job, variant: string) => join(OUT, job.lang.code, variant, job.doc);
 const sha = (s: string) => createHash('sha256').update(s).digest('hex');
-// Saved outputs are reused only while the binary extracts the document exactly as before and its prompts are unchanged
-// (the version string names the prompt version).
+// Saved outputs are reused only while the same implementation extracts the document exactly as before and its prompts
+// are unchanged (the version string names the implementation and the prompt version).
 const extractionKey = async (job: Job, s: Settings) => {
   try {
-    return sha(`${rustVersion}\u0000${fingerprint(await extractFor(job, s))}`);
+    return sha(`${implVersion}\u0000${fingerprint(await extractFor(job, s))}`);
   } catch {
     return 'error';
   }
@@ -198,9 +199,9 @@ const savedAnalyses: Record<string, { src: string; analysis: unknown }> = exists
 await Promise.all(
   DOCS.map(async (doc) => {
     const src = readFileSync(join(corpusDir, doc), 'utf8');
-    const ex = await rust.extraction(join(corpusDir, doc), defaults(doc));
+    const ex = await impl.extraction(join(corpusDir, doc), defaults(doc));
     const saved = savedAnalyses[doc]?.src === sha(src) ? savedAnalyses[doc] : undefined;
-    const analysis = (saved?.analysis ?? (ex.segments.some((s) => !s.passive) ? await rust.analyze(join(corpusDir, doc)) : undefined)) as { register?: string } | undefined;
+    const analysis = (saved?.analysis ?? (ex.segments.some((s) => !s.passive) ? await impl.analyze(join(corpusDir, doc)) : undefined)) as { register?: string } | undefined;
     savedAnalyses[doc] = { src: sha(src), analysis };
     analyses.set(doc, { analysis, formality: ex.frontmatterFormality ?? (analysis?.register === 'informal' ? 'informal' : 'formal') });
   }),
@@ -208,7 +209,7 @@ await Promise.all(
 mkdirSync(OUT, { recursive: true });
 writeFileSync(analysisFile, JSON.stringify(savedAnalyses));
 const panel = await createJudges(JUDGES, judgeChat);
-console.log(`corpus: ${DOCS.length} documents, languages ${LANGS.join(', ')}, features ${SELECTED.join(', ')}, judges ${JUDGES.join(', ')}; implementation ${rustVersion}; output ${OUT}`);
+console.log(`corpus: ${DOCS.length} documents, languages ${LANGS.join(', ')}, features ${SELECTED.join(', ')}, judges ${JUDGES.join(', ')}; implementation ${implVersion}; output ${OUT}`);
 
 const jobs: Job[] = DOCS.flatMap((doc) =>
   LANGS.map((code) => ({
@@ -235,7 +236,7 @@ await Promise.all(
         if (DERIVED.includes(f) && base[f] && job.base.tm) r = await derive(job, f, s);
         else if (f === 'structuralContext' || f === 'review') r = await translate(job, s);
         else {
-          let ex: RustExtraction | undefined;
+          let ex: ExtractionDump | undefined;
           try {
             ex = await extractFor(job, s);
           } catch {
@@ -716,11 +717,11 @@ try {
 }
 const meta = {
   createdAt: new Date().toISOString(), commit, langs: LANGS, docs: DOCS, judges: JUDGES, judgePanel: panel.judges.map((j) => ({ id: j.id, provider: j.provider, model: j.model, family: j.family })), features: SELECTED,
-  implementation: rustVersion,
+  implementation: implVersion,
   config: { translateDeployment: cfg.translateDeployment, reviewDeployment: cfg.reviewDeployment, translateReasoning: cfg.translateReasoning, reviewReasoning: cfg.reviewReasoning, defaults: defaults('x.md') },
 };
 const resultsFile = join(OUT, 'features.json');
-writeFileSync(resultsFile, JSON.stringify({ meta, summary, perDoc, records, judgements, defects, tallies, usage: { translator: rust.usage(), judges: judgeChat.usage.toJSON() }, examples }, null, 2));
+writeFileSync(resultsFile, JSON.stringify({ meta, summary, perDoc, records, judgements, defects, tallies, usage: { translator: impl.usage(), judges: judgeChat.usage.toJSON() }, examples }, null, 2));
 
 const rows = Object.entries(summary).map(([c, v]) => {
   const s = v as { affected: number; documents: number; quality: string; correctness: string; recommendation: string; problemsOn: number; problemsOff: number; judged: { overall: ReturnType<typeof summarize> } };
