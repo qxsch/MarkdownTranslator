@@ -24,6 +24,7 @@ const { MarkdownTranslator } = await import('../src/pipeline.js');
 const { extract } = await import('../src/markdown/extract.js');
 const { assembleDocument } = await import('../src/assemble.js');
 const { translateDocument } = await import('../src/translate/engine.js');
+const { PROMPT_VERSION } = await import('../src/translate/prompts.js');
 const { TranslationCache } = await import('../src/translate/cache.js');
 const { parseMarkdown } = await import('../src/markdown/parse.js');
 const { skeleton, compareSkeletons } = await import('../src/markdown/document.js');
@@ -157,10 +158,10 @@ function derive(job: Job, f: Feature, s: Settings): Run {
 
 const runPath = (job: Job, variant: string) => join(OUT, job.lang.code, variant, job.doc);
 const sha = (s: string) => createHash('sha256').update(s).digest('hex');
-// Saved outputs are reused only while the current code extracts the document exactly as before.
+// Saved outputs are reused only while the current code extracts the document exactly as before and prompts are unchanged.
 const extractionKey = (job: Job, s: Settings) => {
   try {
-    return sha(fingerprint(extractFor(job, s)));
+    return sha(`${PROMPT_VERSION}\u0000${fingerprint(extractFor(job, s))}`);
   } catch {
     return 'error';
   }

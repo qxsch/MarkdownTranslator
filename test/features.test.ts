@@ -13,6 +13,7 @@ import type { ExtractOptions } from '../src/markdown/context.js';
 import { LANG, pseudoMap, pseudoWords } from './helpers.js';
 import { BadRequest, options } from '../src/server.js';
 import { findDollarMath } from '../src/markdown/mathSpans.js';
+import { reviewPass } from '../src/translate/engine.js';
 
 await initCodeParsers();
 
@@ -231,6 +232,27 @@ describe('4. tree-sitter code decisions and docstrings', () => {
     for (const prose of ['Upload a file to the storage account.', 'Local path of the file to upload.', 'True if the upload succeeded.', 'Large files are uploaded in blocks.', 'Name of the blob to download.', 'The content of the blob.', 'Upload a single file.', 'Or use the command line', 'Then check the result.']) {
       expect(t).toContain(pseudoWords(prose));
     }
+  });
+
+  it('protects NumPy "See Also" entry prefixes including the colon', () => {
+    const ex = extract('```python\ndef f():\n    """Compute.\n\n    See Also\n    --------\n    quota_report : Compares usage with the quota.\n    """\n```\n', []);
+    const seg = ex.segments.find((s) => s.masked.includes('Compares'))!;
+    expect(seg.masked).toMatch(/^<x\d+\/>Compares usage with the quota\.$/);
+    expect([...seg.placeholders.values()][0].render(new Map())).toBe('quota_report : ');
+  });
+
+  it('never lets the review pass revert a code comment to English', async () => {
+    const ex = extract('1. Run:\n\n   ```bash\n   # Show the version\n   ctsync --version\n   ```\n', []);
+    const seg = ex.segments.find((s) => s.kind === 'comment')!;
+    const other = ex.segments.find((s) => s.kind !== 'comment' && !s.passive)!;
+    const tm = new Map([[seg.id, 'Version anzeigen'], [other.id, 'Ausführen:']]);
+    const outcomes = new Map([seg, other].map((s) => [s.id, { id: s.id, kind: s.kind, via: 'gpt' as const, retries: 0 }]));
+    const chat = { json: async () => ({ edits: [seg, other].map((s) => ({ id: s.id, category: 'x', severity: 'minor', explanation: 'revert', text: s.masked })) }) };
+    const cfg = { reviewDeployment: 'r', batchMaxSegments: 40, batchMaxChars: 12000, contextMaxChars: 60000, reviewReasoning: 'high', structuralContext: false };
+    await reviewPass({ cfg, chat } as never, { docName: 'd.md', ex, lang: LANG, sourceLanguage: 'English', formality: 'formal', glossary: { doNotTranslate: [], terms: {} } } as never, tm, outcomes as never, [seg, other]);
+    expect(tm.get(seg.id)).toBe('Version anzeigen');
+    // Prose may legitimately be restored (e.g. a product name the translator changed).
+    expect(tm.get(other.id)).toBe(other.masked);
   });
 
   it('keeps all code comments when codeComments is disabled', () => {

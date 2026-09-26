@@ -1,7 +1,7 @@
 import type { Glossary, LanguageConfig } from '../config.js';
 import type { Segment } from '../markdown/types.js';
 
-export const PROMPT_VERSION = 'v4';
+export const PROMPT_VERSION = 'v5';
 
 export interface DocAnalysis {
   sourceLanguage: string;
@@ -162,6 +162,8 @@ Register: ${formalityGuidance(p.lang, p.formality)}
 Locale style: ${p.lang.style ?? ''}
 ${terms ? `Required terminology:\n${terms}\n` : ''}
 ${TAG_RULES}
+
+Segments of kind "comment" are comments and docstrings taken from code blocks; translating them is intended (the code itself is never sent and stays unchanged). Never revert a correct translation to the source language.
 
 Only report segments that genuinely need a change. Do not make stylistic or preferential edits to translations that are already correct and natural. For each reported segment return the complete corrected translation in "text" (with all tags), the error category, severity and a one-line explanation.
 Return JSON {"edits":[…]}; an empty list when everything is correct.`;

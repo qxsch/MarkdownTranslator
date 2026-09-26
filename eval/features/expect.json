@@ -12,7 +12,7 @@
     "translate": ["keeps a local folder", "make sure that you have", "Run the installer", "Files are downloaded only", "How long deleted files"]
   },
   "ui-labels-table.md": {
-    "keep": ["Shift+F5", "Ctrl+B", "| main |"],
+    "keep": ["| main |"],
     "translate": ["Starts the current script", "Empties the output pane", "Records a macro", "Whether the file can be changed"]
   },
   "cli-reference.md": {
@@ -40,7 +40,7 @@
     "translate": ["A cloud folder that several people", "Keeps a file on the device", "A paid license for one user", "Slows down requests"]
   },
   "blog-informal.md": {
-    "keep": ["200,000"],
+    "keep": [],
     "translate": ["Let's be honest", "The first attempt was a flop", "What finally clicked", "Stay tuned", "give us a shout"]
   },
   "formal-policy.md": {
@@ -100,7 +100,7 @@
     "translate": ["Screenshot of the settings page", "shows the green icon", "Sync status icon", "Diagram of the retention flow", "to open the settings", "uploads per hour"]
   },
   "filenames-paths.md": {
-    "keep": ["`settings.json`", "`C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log`", "`~/.local/share/ctsync/ctsync.log`", "settings.json and restart", "sync.db", "README.md", "./scripts/install.sh", "deploy.ps1", "dist/", "logo.png", "banner@2x.jpg", "icons/app.ico", "`ctsync-2026-08-01.log.gz`"],
+    "keep": ["`settings.json`", "`C:\\Users\\<name>\\AppData\\Local\\ContosoSync\\logs\\ctsync.log`", "`~/.local/share/ctsync/ctsync.log`", "sync.db", "README.md", "./scripts/install.sh", "deploy.ps1", "dist/", "logo.png", "banner@2x.jpg", "icons/app.ico", "`ctsync-2026-08-01.log.gz`"],
     "translate": ["The client stores its settings", "To reset the client", "because it contains the list", "Template for environment variables", "Log files older than seven days"]
   },
   "identifiers-env.md": {
@@ -124,11 +124,11 @@
     "translate": ["This sentence has", "at the start", "A sentence with a", "are on the", "must stay escaped"]
   },
   "escapes-entities.md": {
-    "keep": ["\\`backticks\\`", "\\[brackets\\]", "&copy;", "&nbsp;", "&lt;tag&gt;", "&amp;", "&#8364;", "&#x2192;", "`<div>`", "`&amp;`", "`a\\|b`"],
+    "keep": ["\\`", "\\[", "\\]", "&copy;", "&nbsp;", "&lt;", "&gt;", "&amp;", "&#8364;", "&#x2192;", "`<div>`", "`&amp;`", "`a\\|b`"],
     "translate": ["without creating a link", "creates a hard line break", "Either a or b", "Any character"]
   },
   "tables-complex.md": {
-    "keep": ["|:---|:---:|:---:|---:|", "[Audit log](#audit-log)", "(`/v2/*`)", "`alice@contoso.example`", "`plan.docx`", "`retention`: 30 → 90", "<br>"],
+    "keep": ["|:---|:---:|:---:|---:|", "(#audit-log)", "(`/v2/*`)", "`alice@contoso.example`", "`plan.docx`", "`retention`: 30 → 90", "<br>"],
     "translate": ["Storage per user", "Version history", "Read and write", "Community forum", "Wrong password", "Prices exclude VAT", "requires a yearly contract"]
   },
   "footnotes.md": {

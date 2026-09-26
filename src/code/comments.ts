@@ -42,7 +42,8 @@ const DOC_SECTION = /^(?:Args|Arguments|Parameters|Params|Other Parameters|Keywo
 const DOC_UNDERLINE = /^[-=~^]{3,}\s*$/;
 const DOC_ENTRY_SECTIONS = /^(?:Args|Arguments|Parameters|Params|Other Parameters|Keyword Args|Keyword Arguments|Kwargs|Returns?|Yields?|Raises|Raise|Except(?:ions)?|Warns|Attributes|Methods)$/;
 /** Google entry `name (type): ` / `Type: ` or NumPy entry `name : type` (whole line). */
-const GOOGLE_ENTRY = /^\*{0,2}[A-Za-z_][\w.]*(?:\s*\([^)]*\))?:\s+/;
+// `name (type): ` (Google) and `name : ` (NumPy See Also); the whole prefix including the colon stays verbatim.
+const GOOGLE_ENTRY = /^\*{0,2}[A-Za-z_][\w.]*(?:\s*\([^)]*\))?\s*:\s+/;
 const NUMPY_ENTRY = /^\*{0,2}[A-Za-z_]\w*(?:\s*,\s*\*{0,2}[A-Za-z_]\w*)*\s+:\s+\S.*$/;
 /** A bare type line such as `bool`, `list[str]` or `int or None` (NumPy Returns/Yields). */
 const TYPE_LINE = /^[A-Za-z_][\w.]*(?:\[[^\]]*\])?(?:\s*(?:\||,|\bor\b)\s*[A-Za-z_][\w.]*(?:\[[^\]]*\])?)*$/;
@@ -218,7 +219,7 @@ function paragraphs(value: string, lines: Line[], lang: string, docstring = fals
   let literal = -1;
   const flush = (keep = false) => {
     if (cur.length) {
-      out.push({ lines: cur, keep: keep || keepCur, entry: docstring && DOC_ENTRY_SECTIONS.test(section) });
+      out.push({ lines: cur, keep: keep || keepCur, entry: docstring && (DOC_ENTRY_SECTIONS.test(section) || section === 'See Also') });
       const last = cur[cur.length - 1];
       if (docstring && !keepCur && /::$/.test(value.slice(last.bodyStart, last.bodyEnd).trimEnd())) literal = cur[0].col;
     }
@@ -277,7 +278,7 @@ function paragraphs(value: string, lines: Line[], lang: string, docstring = fals
         flush(true);
         continue;
       }
-      if (inEntries && GOOGLE_ENTRY.test(body) && cur.length) flush();
+      if ((inEntries || section === 'See Also') && GOOGLE_ENTRY.test(body) && cur.length) flush();
     }
     const code = isCode(lang, body);
     // Lines that are only a doc tag (<summary>, </remarks>) delimit paragraphs.

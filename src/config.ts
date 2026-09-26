@@ -90,7 +90,7 @@ export function loadConfig(): AppConfig {
     glossaryFile: env('MDT_GLOSSARY_FILE') ?? join(root, 'config', 'glossary.json'),
     preserveAnchors: bool('MDT_PRESERVE_ANCHORS', true),
     sourceLanguage: env('MDT_SOURCE_LANGUAGE'),
-    structuralContext: bool('MDT_STRUCTURAL_CONTEXT', true),
+    structuralContext: bool('MDT_STRUCTURAL_CONTEXT', false),
     mathSingleDollar: bool('MDT_MATH_SINGLE_DOLLAR', false),
     docstrings: !/^(off|false|0|no)$/i.test(env('MDT_DOCSTRINGS') ?? 'on'),
     codeComments: bool('MDT_CODE_COMMENTS', true),

@@ -240,6 +240,8 @@ export async function reviewPass(deps: EngineDeps, task: TranslateTask, tm: Map<
         if (!seg) continue;
         const text = sanitize(seg, edit.text);
         if (text === tm.get(seg.id) || validateSegment(seg, text, task.ex, task.lang).length) continue;
+        // Code comments are extracted because they are prose; restoring the English source is never a fix.
+        if (seg.kind === 'comment' && text === seg.masked && tm.get(seg.id) !== seg.masked) continue;
         const before = tm.get(seg.id);
         tm.set(seg.id, text);
         const o = outcomes.get(seg.id);
